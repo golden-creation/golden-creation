@@ -1,0 +1,1062 @@
+{
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (39).xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_kangaro_20260831\\kangaro products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\kangaro products - Updated Website Stock.xlsx",
+  "status_counts": {
+    "Matched": 59,
+    "Duplicate Busy SKU Summed": 2
+  },
+  "changed_rows": 51,
+  "rows": [
+    {
+      "row": 2,
+      "sku": "8879",
+      "title": "KANGARO STAPLER HP 45 DUAL",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1547,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO STAPLER HP45 DUAL 421",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "sku": "21364",
+      "title": "STAPLER KANGARO OFFER PACK",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 4524,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "STAPLER KANGARO OFFER PACK 1270",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "sku": "20949",
+      "title": "KANGARO STAPLER REMOVER SR 500",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 8,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1556,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO STAPLER REMOVER SR 500 280",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "sku": "21067",
+      "title": "MUNIX SCISSORS GL  2160",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2057,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "MUNIX SCISSORS GL  2160 154",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "sku": "20948",
+      "title": "KANGARO STAPLER HY2-10",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1548,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO STAPLER HY2-10 102",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "sku": "20944",
+      "title": "KANGARO MILES CUTTER PA901",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 12,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1512,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO MILES CUTTER PA901 35",
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "sku": "21076",
+      "title": "MUNIX SCISSORS SL 1183C2",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2075,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "MUNIX SCISSORS SL 1183C2 176",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "sku": "21075",
+      "title": "MUNIX SCISSORS SL 1150 C",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 17,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2071,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "MUNIX SCISSORS SL 1150 C 152",
+          "cl_qty": 17
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "sku": "21074",
+      "title": "MUNIX SCISSORS SL 1150 128MM",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 16,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2070,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "MUNIX SCISSORS SL 1150 128MM 52",
+          "cl_qty": 16
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "sku": "21073",
+      "title": "MUNIX SCISSORS SL 1145 120MM",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 10,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2069,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "MUNIX SCISSORS SL 1145 120MM 51",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "sku": "21069",
+      "title": "MUNIX SCISSORS GL 2170 169MM",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2059,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "MUNIX SCISSORS GL 2170 169MM  154",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "sku": "21068",
+      "title": "MUNIX SCISSORS GL 2150 126MM",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2058,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "MUNIX SCISSORS GL 2150 126MM 96",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "sku": "20946",
+      "title": "KANGARO PUNCH DP 500",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1527,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PUNCH DP 500 230",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "sku": "20945",
+      "title": "KANGARO PUNCH 2030 THREE HOLE",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1521,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PUNCH 2030 THREE HOLE 480\"",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "sku": "8846",
+      "title": "KANGARO PIN NO  23 X 17",
+      "brand": "Kangaro",
+      "old_qty": 76,
+      "new_qty": 123,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1517,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PIN NO. 23 X 17 52",
+          "cl_qty": 123
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "sku": "8843",
+      "title": "KANGARO STAPLER DS 45L",
+      "brand": "Kangaro",
+      "old_qty": 2,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1538,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO STAPLER DS 45L 615",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "sku": "8851",
+      "title": "KANGARO MILES CUTTER BLADE B184-10 PACK OF 10PCS",
+      "brand": "Kangaro",
+      "old_qty": 70,
+      "new_qty": 69,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1511,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO MILES CUTTER BLADE B184 10 74",
+          "cl_qty": 69
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "sku": "8855",
+      "title": "KANGARO PUNCH DP 600",
+      "brand": "Kangaro",
+      "old_qty": 67,
+      "new_qty": 36,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1529,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PUNCH DP 600 225",
+          "cl_qty": 36
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "sku": "8857",
+      "title": "KANGARO PUNCH DP 800",
+      "brand": "Kangaro",
+      "old_qty": 6,
+      "new_qty": 8,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1531,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PUNCH DP 800 1985",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 21,
+      "sku": "8862",
+      "title": "KANGARO PUNCH SINGLE HOLE",
+      "brand": "Kangaro",
+      "old_qty": 69,
+      "new_qty": 20,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1536,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO SINGLE HOLE PUNCH 110",
+          "cl_qty": 20
+        }
+      ]
+    },
+    {
+      "row": 22,
+      "sku": "8847",
+      "title": "KANGARO PIN NO 10",
+      "brand": "Kangaro",
+      "old_qty": 2333,
+      "new_qty": 2675,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1520,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PIN NO.10 12",
+          "cl_qty": 2675
+        }
+      ]
+    },
+    {
+      "row": 23,
+      "sku": "8848",
+      "title": "KANGARO PIN NO 23 X 8",
+      "brand": "Kangaro",
+      "old_qty": 47,
+      "new_qty": 79,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1518,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PIN NO. 23 X 8 28",
+          "cl_qty": 79
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "sku": "8849",
+      "title": "KANGARO PIN NO 23 X 10",
+      "brand": "Kangaro",
+      "old_qty": 36,
+      "new_qty": 60,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1516,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PIN NO. 23 X 10 34",
+          "cl_qty": 60
+        }
+      ]
+    },
+    {
+      "row": 25,
+      "sku": "8850",
+      "title": "KANGARO PIN NO 24 X 6",
+      "brand": "Kangaro",
+      "old_qty": 685,
+      "new_qty": 910,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1519,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PIN NO. 24 X 6 25",
+          "cl_qty": 910
+        }
+      ]
+    },
+    {
+      "row": 26,
+      "sku": "8853",
+      "title": "KANGARO PUNCH DP 480",
+      "brand": "Kangaro",
+      "old_qty": 78,
+      "new_qty": 93,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1526,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PUNCH DP 480 135",
+          "cl_qty": 93
+        }
+      ]
+    },
+    {
+      "row": 27,
+      "sku": "8854",
+      "title": "KANGARO PUNCH DP 700",
+      "brand": "Kangaro",
+      "old_qty": 4,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1530,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PUNCH DP 700 510",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "sku": "8861",
+      "title": "KANGARO PUNCH HEAVY DUTY HDP 4160 4 HOLE PUNCH",
+      "brand": "Kangaro",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1534,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PUNCH HDP 4160 5600",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 29,
+      "sku": "8852",
+      "title": "KANGARO PUNCH DP 280",
+      "brand": "Kangaro",
+      "old_qty": 68,
+      "new_qty": 64,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1525,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PUNCH DP 280 93",
+          "cl_qty": 64
+        }
+      ]
+    },
+    {
+      "row": 30,
+      "sku": "8859",
+      "title": "KANGARO PUNCH 2040 FOUR HOLE",
+      "brand": "Kangaro",
+      "old_qty": 2,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1522,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PUNCH 2040 FOUR HOLE 610",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 31,
+      "sku": "8863",
+      "title": "MUNIX SCISSORS PHS",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2062,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "MUNIX SCISSORS PHS 190  400",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 32,
+      "sku": "8869",
+      "title": "MUNIX SCISSORS SL 1143",
+      "brand": "Kangaro",
+      "old_qty": 50,
+      "new_qty": 49,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2068,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "MUNIX SCISSORS SL 1143 44",
+          "cl_qty": 49
+        }
+      ]
+    },
+    {
+      "row": 33,
+      "sku": "8871",
+      "title": "KANGARO STAPLER HEAVY DUTY DS 23S24FL",
+      "brand": "Kangaro",
+      "old_qty": 1,
+      "new_qty": 6,
+      "status": "Duplicate Busy SKU Summed",
+      "busy_matches": [
+        {
+          "busy_row": 1543,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO STAPLER HEAVY DUTY 23S24FL 2450",
+          "cl_qty": 1
+        },
+        {
+          "busy_row": 1545,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO STAPLER HEAVY DUTY HD 23S24 2175",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 34,
+      "sku": "8865",
+      "title": "KANGARO PUNCH FP 20",
+      "brand": "Kangaro",
+      "old_qty": 41,
+      "new_qty": 15,
+      "status": "Duplicate Busy SKU Summed",
+      "busy_matches": [
+        {
+          "busy_row": 1532,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PUNCH FP 20 110",
+          "cl_qty": 10
+        },
+        {
+          "busy_row": 1533,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PUNCH FP 20 90",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 35,
+      "sku": "8866",
+      "title": "KANGARO STAPLER NO 10",
+      "brand": "Kangaro",
+      "old_qty": 369,
+      "new_qty": 296,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1553,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO STAPLER NO 10 75",
+          "cl_qty": 296
+        }
+      ]
+    },
+    {
+      "row": 36,
+      "sku": "8867",
+      "title": "KANGARO STAPLER HD 10D",
+      "brand": "Kangaro",
+      "old_qty": 74,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1539,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO STAPLER HD 10D 124",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 37,
+      "sku": "8868",
+      "title": "KANGARO MILES CUTTER PN902 P",
+      "brand": "Kangaro",
+      "old_qty": 7,
+      "new_qty": 23,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1514,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO MILES CUTTER PN902  P  20",
+          "cl_qty": 23
+        }
+      ]
+    },
+    {
+      "row": 38,
+      "sku": "8870",
+      "title": "KANGARO STAPLER HEAVY DUTY HD 23S17",
+      "brand": "Kangaro",
+      "old_qty": 4,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1544,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO STAPLER HEAVY DUTY HD 23S17 1775",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 39,
+      "sku": "8872",
+      "title": "KANGARO STAPLER HAEVY DUTY DS-23 S 13QL",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1542,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO STAPLER HEAVY DUTY 23S13QL 1080",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 40,
+      "sku": "8875",
+      "title": "KANGARO STAPLER HD 10D STAR",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1540,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO STAPLER HD 10D STAR 133",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 41,
+      "sku": "8877",
+      "title": "KANGARO STAPLER HD 45",
+      "brand": "Kangaro",
+      "old_qty": 125,
+      "new_qty": 115,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1541,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO STAPLER HD 45 180",
+          "cl_qty": 115
+        }
+      ]
+    },
+    {
+      "row": 42,
+      "sku": "8880",
+      "title": "KANGARO STAPLER LE 10Y",
+      "brand": "Kangaro",
+      "old_qty": 4,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1550,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO STAPLER LE-10 Y 146",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 43,
+      "sku": "8881",
+      "title": "KANGARO STAPLER M-10",
+      "brand": "Kangaro",
+      "old_qty": 52,
+      "new_qty": 143,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1551,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO STAPLER M-10 53",
+          "cl_qty": 143
+        }
+      ]
+    },
+    {
+      "row": 44,
+      "sku": "8883",
+      "title": "KANGARO STAPLER REMOVER SR 100",
+      "brand": "Kangaro",
+      "old_qty": 36,
+      "new_qty": 12,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1554,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO STAPLER REMOVER SR 100 75",
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "row": 45,
+      "sku": "8878",
+      "title": "KANGARO STAPLER HP 45",
+      "brand": "Kangaro",
+      "old_qty": 27,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1546,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO STAPLER HP 45 335",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 46,
+      "sku": "8882",
+      "title": "KANGARO STAPLER MINI-10",
+      "brand": "Kangaro",
+      "old_qty": 4,
+      "new_qty": 174,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1552,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO STAPLER MINI-10 57",
+          "cl_qty": 174
+        }
+      ]
+    },
+    {
+      "row": 47,
+      "sku": "8884",
+      "title": "KANGARO PUNCH BLADE KC-320-120 PACK OF 2PCS",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 9,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1524,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PUNCH BLADE KC-320-120 2N 290",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 48,
+      "sku": "8894",
+      "title": "KANGARO MILES CUTTER PN1801 P",
+      "brand": "Kangaro",
+      "old_qty": 1,
+      "new_qty": 75,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1513,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO MILES CUTTER PN1801 P 40",
+          "cl_qty": 75
+        }
+      ]
+    },
+    {
+      "row": 49,
+      "sku": "8896",
+      "title": "MUNIX SCISSORS KR 9153 ZIG ZAG",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 8,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2061,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "MUNIX SCISSORS KR 9153 ZIG ZAG 59",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 50,
+      "sku": "8885",
+      "title": "KANGARO STAPLER REMOVER SR 300",
+      "brand": "Kangaro",
+      "old_qty": 16,
+      "new_qty": 16,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1555,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO STAPLER REMOVER SR 300 210",
+          "cl_qty": 16
+        }
+      ]
+    },
+    {
+      "row": 51,
+      "sku": "8889",
+      "title": "KANGARO MILES CUTTER SA903 Y",
+      "brand": "Kangaro",
+      "old_qty": 17,
+      "new_qty": 51,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1515,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO MILES CUTTER SA903 Y  60",
+          "cl_qty": 51
+        }
+      ]
+    },
+    {
+      "row": 52,
+      "sku": "8890",
+      "title": "MUNIX SCISSORS PL-3183C",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2067,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "MUNIX SCISSORS PL 3183C 285",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 53,
+      "sku": "8891",
+      "title": "MUNIX SCISSORS PL-3173C",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2065,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "MUNIX SCISSORS PL 3173C 240",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 54,
+      "sku": "8895",
+      "title": "MUNIX SCISSORS GL 2185 C1",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 14,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2060,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "MUNIX SCISSORS GL 2185 C1 310",
+          "cl_qty": 14
+        }
+      ]
+    },
+    {
+      "row": 55,
+      "sku": "8901",
+      "title": "MUNIX SCISSORS FL 1243",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2056,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "MUNIX SCISSORS FL 1243 71",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 56,
+      "sku": "8905",
+      "title": "MUNIX SCISSORS SL 1160",
+      "brand": "Kangaro",
+      "old_qty": 29,
+      "new_qty": 8,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2072,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "MUNIX SCISSORS SL 1160 76",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 57,
+      "sku": "8906",
+      "title": "MUNIX SCISSORS SL 1173",
+      "brand": "Kangaro",
+      "old_qty": 80,
+      "new_qty": 40,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2073,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "MUNIX SCISSORS SL 1173 115",
+          "cl_qty": 40
+        }
+      ]
+    },
+    {
+      "row": 58,
+      "sku": "8907",
+      "title": "MUNIX SCISSORS SL 1183",
+      "brand": "Kangaro",
+      "old_qty": 3,
+      "new_qty": 9,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2074,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "MUNIX SCISSORS SL 1183 C1 132",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 59,
+      "sku": "14715",
+      "title": "KANGARO PUNCH NXT-P10 8CM",
+      "brand": "Kangaro",
+      "old_qty": 3,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1535,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PUNCH NXT-P10 8CM 160",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 60,
+      "sku": "14713",
+      "title": "KANGARO STAPLER ICON+2BOX PIN",
+      "brand": "Kangaro",
+      "old_qty": 6,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1549,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO STAPLER ICON + 2 BOX PIN 112",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 61,
+      "sku": "19100",
+      "title": "KANGARO PUNCH DP 52",
+      "brand": "Kangaro",
+      "old_qty": 41,
+      "new_qty": 85,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1528,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PUNCH DP 52 112",
+          "cl_qty": 85
+        }
+      ]
+    },
+    {
+      "row": 62,
+      "sku": "8876",
+      "title": "KANGARO PUNCH BLADE KC-160-120 PACK OF 2PCS",
+      "brand": "Kangaro",
+      "old_qty": 0,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1523,
+          "item_group": "KANGARO - MUNIX  ",
+          "item_details": "KANGARO PUNCH BLADE KC-160-120 2N 380",
+          "cl_qty": 6
+        }
+      ]
+    }
+  ]
+}

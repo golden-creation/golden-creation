@@ -1,0 +1,352 @@
+{
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (40).xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_kaweco_20260831\\kaweco products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\kaweco products - Updated Website Stock.xlsx",
+  "status_counts": {
+    "Matched": 20
+  },
+  "changed_rows": 2,
+  "rows": [
+    {
+      "row": 2,
+      "sku": "30117",
+      "title": "KAWECO 10000167 STUDENT BLACK MEDIUM FOUNTAIN PEN",
+      "brand": "Kaweco",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1670,
+          "item_group": "KAWECO ",
+          "item_details": "KW 10000167 STUDENT BLACK M FP 6400",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "sku": "30121",
+      "title": "KAWECO 10001189 STUDENT TRANSPARENT MEDIUM NIB FOUNTAIN PEN",
+      "brand": "Kaweco",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1674,
+          "item_group": "KAWECO ",
+          "item_details": "KW 10001189 STUDENT TRANSPRENT M FP 6400",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "sku": "30118",
+      "title": "KAWECO 10000831 LILIPUT COPPER MEDIUM NIB FOUNTAIN PEN",
+      "brand": "Kaweco",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1671,
+          "item_group": "KAWECO ",
+          "item_details": "KW 10000831 LILIPUT COPPER M FP 12700",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "sku": "30119",
+      "title": "KAWECO 10000918 BRASS SPORT MEDIUM NIB FOUNTAIN PEN",
+      "brand": "Kaweco",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1672,
+          "item_group": "KAWECO ",
+          "item_details": "KW 10000918 BRASS SPORT M FP 11600",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "sku": "30120",
+      "title": "KAWECO 10001003 SUPRA BRASS MEDIUM NIB FOUNTAIN PEN",
+      "brand": "Kaweco",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1673,
+          "item_group": "KAWECO ",
+          "item_details": "KW 10001003 SUPRA BRASS M FP 13730",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "sku": "30122",
+      "title": "KAWECO 10001751 STUDENT 70S SOUL MEDIUM NIB FOUNTAIN PEN",
+      "brand": "Kaweco",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1675,
+          "item_group": "KAWECO ",
+          "item_details": "KW 10001751 STUDENT 70S SOUL M FP 8400",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "sku": "30123",
+      "title": "KAWECO 11000192 ARTSPORT MINERAL WHITE MEDIUM NIB FOUNTAIN PEN",
+      "brand": "Kaweco",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1677,
+          "item_group": "KAWECO ",
+          "item_details": "KW 11000192 ARTSPORT MIN. WHT M FP 14500",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "sku": "30124",
+      "title": "KAWECO 11000197 ARTSPORT HICKORY BROWN MEDIUM NIB FOUNTAIN PEN",
+      "brand": "Kaweco",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1678,
+          "item_group": "KAWECO ",
+          "item_details": "KW 11000197 ARTSPORT HICK BRN M FP 14500",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "sku": "30125",
+      "title": "KAWECO 11000222 COLLECTION LILIPUT BLUE MEDIUM NIB FOUNTAIN PEN",
+      "brand": "Kaweco",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1679,
+          "item_group": "KAWECO ",
+          "item_details": "KW 11000222 COL LILIPUT BLUE M FP 8200",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "sku": "30126",
+      "title": "KAWECO 11000341 PISTON SPORT BLACK MEDIUM NIB FOUNTAIN PEN",
+      "brand": "Kaweco",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1680,
+          "item_group": "KAWECO ",
+          "item_details": "KW 11000341 PISTON SPORT BLK M FP 20500",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "sku": "30127",
+      "title": "KAWECO 11000390 COLLECTION HONEY MEDIUM NIB FOUNTAIN PEN",
+      "brand": "Kaweco",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1682,
+          "item_group": "KAWECO ",
+          "item_details": "KW 11000390 COLLECTION HONEY M FP 4200",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "sku": "30275",
+      "title": "KAWECO 50ML PEARL BLACK INK BOTTLE",
+      "brand": "Kaweco",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1685,
+          "item_group": "KAWECO ",
+          "item_details": "KW INK BOTTLE PEARL BLACK 50ML 1350",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "sku": "30276",
+      "title": "KAWECO 50ML MIDNIGHT BLUE INK BOTTLE",
+      "brand": "Kaweco",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1684,
+          "item_group": "KAWECO ",
+          "item_details": "KW INK BOTTLE MIDNIGHT BLUE 50ML 1350",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "sku": "30277",
+      "title": "KAWECO PALM GREEN INK CARTRIDGES SET OF 6",
+      "brand": "Kaweco",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1687,
+          "item_group": "KAWECO ",
+          "item_details": "KW INK CARTRIDGES 6N PALM GRN 295",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "sku": "30278",
+      "title": "KAWECO RUBY RED INK CARTRIDGES SET OF 6",
+      "brand": "Kaweco",
+      "old_qty": 4,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1689,
+          "item_group": "KAWECO ",
+          "item_details": "KW INK CARTRIDGES 6N RUBY RED 295",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "sku": "30128",
+      "title": "KAWECO 11000432 PISTON SPORT NAVY BLUE BOLD NIB FOUNTAIN PEN",
+      "brand": "Kaweco",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1683,
+          "item_group": "KAWECO ",
+          "item_details": "KW 11000432 PISTON SPORT N BL B FP 20500",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "sku": "30279",
+      "title": "KAWECO MIDNIGHT BLUE INK CARTRIDGES SET OF 6",
+      "brand": "Kaweco",
+      "old_qty": 1,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1686,
+          "item_group": "KAWECO ",
+          "item_details": "KW INK CARTRIDGES 6N MIDNIGHT BLUE 295",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "sku": "30280",
+      "title": "KAWECO PEARL BLACK INK CARTRIDGES SET OF 6",
+      "brand": "Kaweco",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1688,
+          "item_group": "KAWECO ",
+          "item_details": "KW INK CARTRIDGES 6N PEARL BLACK 295",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "sku": "30281",
+      "title": "KAWECO 10001958 STANDARD CONVERTER",
+      "brand": "Kaweco",
+      "old_qty": 5,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1676,
+          "item_group": "KAWECO ",
+          "item_details": "KW 10001958 STANDARD CONVERTER 950",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 21,
+      "sku": "30282",
+      "title": "KAWECO 11000369 MINI FOLDABLE CONVERTER",
+      "brand": "Kaweco",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1681,
+          "item_group": "KAWECO ",
+          "item_details": "KW 11000369 MINI FOLDABLE CONVERTER 780",
+          "cl_qty": 0
+        }
+      ]
+    }
+  ]
+}

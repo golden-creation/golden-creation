@@ -1,0 +1,537 @@
+{
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (44).xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_pentonic_20260831\\pentonic products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\pentonic products - Updated Website Stock.xlsx",
+  "status_counts": {
+    "Matched": 22,
+    "No Busy Match": 15
+  },
+  "changed_rows": 21,
+  "rows": [
+    {
+      "row": 2,
+      "sku": "21166",
+      "title": "PENTONIC BALL PEN SET 12 COLOUR",
+      "brand": "Pentonic",
+      "old_qty": 10,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2777,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC BALL PEN SET 10 CLR  120",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "sku": "21167",
+      "title": "PENTONIC BRT REFILL BLUE",
+      "brand": "Pentonic",
+      "old_qty": 27,
+      "new_qty": 30,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2783,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC BRT REFILL BL 8",
+          "cl_qty": 30
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "sku": "21168",
+      "title": "PENTONIC FROST GEL PEN",
+      "brand": "Pentonic",
+      "old_qty": 99,
+      "new_qty": 122,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2787,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC FROST GEL PEN 10",
+          "cl_qty": 122
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "sku": "17091",
+      "title": "PENTONIC BALL PEN MULTI COLORS - BLACK",
+      "brand": "Pentonic",
+      "old_qty": 100,
+      "new_qty": 366,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2772,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC BALL PEN BLACK 10",
+          "cl_qty": 366
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "sku": "17092",
+      "title": "PENTONIC BALL PEN MULTI COLORS - BLUE",
+      "brand": "Pentonic",
+      "old_qty": 100,
+      "new_qty": 278,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2773,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC BALL PEN BLUE 10",
+          "cl_qty": 278
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "sku": "17094",
+      "title": "PENTONIC BALL PEN MULTI COLORS - PINK",
+      "brand": "Pentonic",
+      "old_qty": 100,
+      "new_qty": 296,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2775,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC BALL PEN PINK 10",
+          "cl_qty": 296
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "sku": "17095",
+      "title": "PENTONIC BALL PEN MULTI COLORS - RED",
+      "brand": "Pentonic",
+      "old_qty": 100,
+      "new_qty": 129,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2776,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC BALL PEN RED 10",
+          "cl_qty": 129
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "sku": "17097",
+      "title": "PENTONIC BALL PEN MULTI COLORS - VIOLET",
+      "brand": "Pentonic",
+      "old_qty": 100,
+      "new_qty": 70,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2778,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC BALL PEN VIOLET 10",
+          "cl_qty": 70
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "sku": "17286",
+      "title": "PENTONIC BALL PEN MULTI COLORS - GREEN",
+      "brand": "Pentonic",
+      "old_qty": 100,
+      "new_qty": 65,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2774,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC BALL PEN GREEN 10",
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "sku": "17360",
+      "title": "PENTONIC B-RT BALL PEN RED",
+      "brand": "Pentonic",
+      "old_qty": 133,
+      "new_qty": 131,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2782,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC BRT BALL PEN RED 20",
+          "cl_qty": 131
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "sku": "17361",
+      "title": "PENTONIC B-RT BALL PEN BLACK",
+      "brand": "Pentonic",
+      "old_qty": 199,
+      "new_qty": 194,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2780,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC BRT BALL PEN BLACK 20",
+          "cl_qty": 194
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "sku": "17361-C",
+      "title": "PENTONIC B-RT BALL PEN PACK OF 12PCS - BLACK",
+      "brand": "Pentonic",
+      "old_qty": 50,
+      "new_qty": 50,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 14,
+      "sku": "17362",
+      "title": "PENTONIC B-RT BALL PEN BLUE",
+      "brand": "Pentonic",
+      "old_qty": 326,
+      "new_qty": 305,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2781,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC BRT BALL PEN BLUE 20",
+          "cl_qty": 305
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "sku": "17366",
+      "title": "PENTONIC G-RT GEL PEN BLUE",
+      "brand": "Pentonic",
+      "old_qty": 105,
+      "new_qty": 90,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2793,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC GRT GEL PEN BLUE 40",
+          "cl_qty": 90
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "sku": "17367",
+      "title": "PENTONIC G-RT GEL PEN BLACK",
+      "brand": "Pentonic",
+      "old_qty": 48,
+      "new_qty": 43,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2792,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC GRT GEL PEN BLACK 40",
+          "cl_qty": 43
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "sku": "17428",
+      "title": "PENTONIC ASSORTED COLOR GEL PEN PACK OF 12PCS",
+      "brand": "Pentonic",
+      "old_qty": 32,
+      "new_qty": 26,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2770,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC ASSORTED 12 CLR GEL PEN 150",
+          "cl_qty": 26
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "sku": "17437",
+      "title": "PENTONIC GEL PEN - BLACK",
+      "brand": "Pentonic",
+      "old_qty": 100,
+      "new_qty": 157,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2788,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC GEL PEN BLACK 10",
+          "cl_qty": 157
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "sku": "17438",
+      "title": "PENTONIC GEL PEN - BLUE",
+      "brand": "Pentonic",
+      "old_qty": 100,
+      "new_qty": 676,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2789,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC GEL PEN BLUE 10",
+          "cl_qty": 676
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "sku": "17438-C",
+      "title": "PENTONIC GEL PEN PACK OF 10PCS - BLUE",
+      "brand": "Pentonic",
+      "old_qty": 20,
+      "new_qty": 20,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 21,
+      "sku": "17362-C",
+      "title": "PENTONIC B-RT BALL PEN PACK OF 12PCS - BLUE",
+      "brand": "Pentonic",
+      "old_qty": 50,
+      "new_qty": 50,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 22,
+      "sku": "17360-C",
+      "title": "PENTONIC B-RT BALL PEN PACK OF 12PCS - RED",
+      "brand": "Pentonic",
+      "old_qty": 50,
+      "new_qty": 50,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 23,
+      "sku": "17430",
+      "title": "PENTONIC B-RT BALL PEN 3 COLOR PCS SET",
+      "brand": "Pentonic",
+      "old_qty": 55,
+      "new_qty": 51,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2779,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC BRT 3 COLOUR SET BP 60",
+          "cl_qty": 51
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "sku": "17437-C",
+      "title": "PENTONIC GEL PEN PACK OF 10PCS - BLACK",
+      "brand": "Pentonic",
+      "old_qty": 20,
+      "new_qty": 20,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 25,
+      "sku": "17439-C",
+      "title": "PENTONIC GEL PEN PACK OF 10PCS - RED",
+      "brand": "Pentonic",
+      "old_qty": 20,
+      "new_qty": 20,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 26,
+      "sku": "17091-C",
+      "title": "PENTONIC BALL PEN PACK OF 10PCS - BLACK",
+      "brand": "Pentonic",
+      "old_qty": 50,
+      "new_qty": 50,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 27,
+      "sku": "17092-C",
+      "title": "PENTONIC BALL PEN PACK OF 10PCS - BLUE",
+      "brand": "Pentonic",
+      "old_qty": 50,
+      "new_qty": 50,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 28,
+      "sku": "17094-C",
+      "title": "PENTONIC BALL PEN PACK OF 10PCS - PINK",
+      "brand": "Pentonic",
+      "old_qty": 50,
+      "new_qty": 50,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 29,
+      "sku": "17439",
+      "title": "PENTONIC GEL PEN - RED",
+      "brand": "Pentonic",
+      "old_qty": 100,
+      "new_qty": 30,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2790,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC GEL PEN RED 10",
+          "cl_qty": 30
+        }
+      ]
+    },
+    {
+      "row": 30,
+      "sku": "17286-C",
+      "title": "PENTONIC BALL PEN PACK OF 10PCS - GREEN",
+      "brand": "Pentonic",
+      "old_qty": 50,
+      "new_qty": 50,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 31,
+      "sku": "17095-C",
+      "title": "PENTONIC BALL PEN PACK OF 10PCS - RED",
+      "brand": "Pentonic",
+      "old_qty": 50,
+      "new_qty": 50,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 32,
+      "sku": "17097-C",
+      "title": "PENTONIC BALL PEN PACK OF 10PCS - VIOLET",
+      "brand": "Pentonic",
+      "old_qty": 50,
+      "new_qty": 50,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 33,
+      "sku": "17474",
+      "title": "PENTONIC FROST BALL PEN - BLACK",
+      "brand": "Pentonic",
+      "old_qty": 50,
+      "new_qty": 50,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2784,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC FROST BALL PEN BLACK 10",
+          "cl_qty": 50
+        }
+      ]
+    },
+    {
+      "row": 34,
+      "sku": "17475",
+      "title": "PENTONIC FROST BALL PEN - BLUE",
+      "brand": "Pentonic",
+      "old_qty": 50,
+      "new_qty": 1189,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2785,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC FROST BALL PEN BLUE 10",
+          "cl_qty": 1189
+        }
+      ]
+    },
+    {
+      "row": 35,
+      "sku": "17476",
+      "title": "PENTONIC FROST BALL PEN - RED",
+      "brand": "Pentonic",
+      "old_qty": 50,
+      "new_qty": 91,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2786,
+          "item_group": "PENTONIC ",
+          "item_details": "PENTONIC FROST BALL PEN RED 10",
+          "cl_qty": 91
+        }
+      ]
+    },
+    {
+      "row": 36,
+      "sku": "17474-C",
+      "title": "PENTONIC FROST BALL PEN PACK OF 10PCS - BLACK",
+      "brand": "Pentonic",
+      "old_qty": 50,
+      "new_qty": 50,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 37,
+      "sku": "17475-C",
+      "title": "PENTONIC FROST BALL PEN PACK OF 10PCS - BLUE",
+      "brand": "Pentonic",
+      "old_qty": 50,
+      "new_qty": 50,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 38,
+      "sku": "17476-C",
+      "title": "PENTONIC FROST BALL PEN PACK OF 10PCS - RED",
+      "brand": "Pentonic",
+      "old_qty": 50,
+      "new_qty": 50,
+      "status": "No Busy Match",
+      "busy_matches": []
+    }
+  ]
+}

@@ -1,0 +1,1574 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (47).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "busy_sheet": "Sheet1",
+  "project_output": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_waterman_20260831\\waterman products - Updated Website Stock.xlsx",
+  "downloads_output": "C:\\Users\\My-PC-Win10\\Downloads\\waterman products - Updated Website Stock.xlsx",
+  "downloads_status": "copied",
+  "meta": {
+    "sheet_name": "Products",
+    "max_row": 51,
+    "max_column": 34,
+    "sku_col": 16,
+    "stock_col": 17,
+    "warehouse_col": 18,
+    "shop_col": 19
+  },
+  "summary": {
+    "website_sku_rows": 50,
+    "matched_direct": 50,
+    "duplicate_code_summed": 0,
+    "missing_in_busy": 0,
+    "base_code_available_no_exact_sku": 0,
+    "changed": 20,
+    "negative_new_qty": 0
+  },
+  "missing_in_busy": [],
+  "base_code_available_no_exact_sku": [],
+  "duplicate_code_summed": [],
+  "negative_new_qty": [],
+  "changed_rows": [
+    {
+      "row": 2,
+      "sku": "30090",
+      "base_sku": "30090",
+      "title": "WATERMAN CARENE DELUXE BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4876,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 18500,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 6,
+      "sku": "10966",
+      "base_sku": "10966",
+      "title": "WATERMAN EXPERT STAINLESS STEEL GT BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4891,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 6500,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 10,
+      "sku": "10989",
+      "base_sku": "10989",
+      "title": "WATERMAN HEMISPHERE MATT BLACK GT BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4901,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 5800,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 13,
+      "sku": "11003",
+      "base_sku": "11003",
+      "title": "WATERMAN HEMISPHERE STAINLESS STEEL GT BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4907,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 5500,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 16,
+      "sku": "11707",
+      "base_sku": "11707",
+      "title": "WATERMAN HEMISPHERE STAINLESS STEEL MATTE RED CT BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4911,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 5500,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 18,
+      "sku": "11714",
+      "base_sku": "11714",
+      "title": "WATERMAN CARENE DELUXE BLACK GT FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 4877,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 31500,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 22,
+      "sku": "11713",
+      "base_sku": "11713",
+      "title": "WATERMAN EXPERT BLACK GT ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4887,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 8500,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 24,
+      "sku": "9293",
+      "base_sku": "9293",
+      "title": "WATERMAN CARTRIDGE INK INTENSE BLACK  8C",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 4883,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 300,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 25,
+      "sku": "9295",
+      "base_sku": "9295",
+      "title": "WATERMAN CARTRIDGE INK SERENITY BLUE 8C",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4884,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 300,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 26,
+      "sku": "10957",
+      "base_sku": "10957",
+      "title": "WATERMAN EXPERT BLACK GT FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4885,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 9500,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 27,
+      "sku": "11711",
+      "base_sku": "11711",
+      "title": "WATERMAN EXPERT BLACK GT FOUNTAIN PEN F",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 4886,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 9500,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 30,
+      "sku": "30091",
+      "base_sku": "30091",
+      "title": "WATERMAN EXPERT STAINLESS STEEL GT ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4893,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 7900,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 34,
+      "sku": "10992",
+      "base_sku": "10992",
+      "title": "WATERMAN HEMISPHERE MATT BLACK GT ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4902,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 6600,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 36,
+      "sku": "10999",
+      "base_sku": "10999",
+      "title": "WATERMAN HEMISPHERE STAINLESS STEEL GT ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 4908,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 6300,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 40,
+      "sku": "9296",
+      "base_sku": "9296",
+      "title": "WATERMAN INK MYSTERIOUS BLUE  50ML",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 4917,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 43,
+      "sku": "9286",
+      "base_sku": "9286",
+      "title": "WATERMAN INK HARMONIOUS GREEN 50ML",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 4915,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 44,
+      "sku": "9290",
+      "base_sku": "9290",
+      "title": "WATERMAN INK SERENITY BLUE 50ML",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 4918,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 46,
+      "sku": "17494",
+      "base_sku": "17494",
+      "title": "WATERMAN REFILL BLACK MEDIUM BALL PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4925,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 47,
+      "sku": "9302",
+      "base_sku": "9302",
+      "title": "WATERMAN REFILL BLUE FINE BALL PEN  0.8MM",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 4926,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 12
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 48,
+      "sku": "17495",
+      "base_sku": "17495",
+      "title": "WATERMAN REFILL BLUE MEDIUM BALL PEN",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4928,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    }
+  ],
+  "rows": [
+    {
+      "row": 2,
+      "sku": "30090",
+      "base_sku": "30090",
+      "title": "WATERMAN CARENE DELUXE BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4876,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 18500,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 3,
+      "sku": "17490",
+      "base_sku": "17490",
+      "title": "WATERMAN CARENE L'ESSENCE DU BLUE CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 4880,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 23000,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 4,
+      "sku": "11709",
+      "base_sku": "11709",
+      "title": "WATERMAN EXPERT IVORY GT BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4888,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 8500,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 5,
+      "sku": "10955",
+      "base_sku": "10955",
+      "title": "WATERMAN EXPERT MARS BLACK GT BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4889,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 7700,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 6,
+      "sku": "10966",
+      "base_sku": "10966",
+      "title": "WATERMAN EXPERT STAINLESS STEEL GT BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4891,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 6500,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 7,
+      "sku": "11006",
+      "base_sku": "11006",
+      "title": "WATERMAN HEMISPHERE COLOR BLACK BLUE PM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4895,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 8000,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 8,
+      "sku": "11703",
+      "base_sku": "11703",
+      "title": "WATERMAN HEMISPHERE COLOR BLACK GREEN CT BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4896,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 8000,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 9,
+      "sku": "10982",
+      "base_sku": "10982",
+      "title": "WATERMAN HEMISPHERE MARS BLACK GT BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4898,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 7600,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 10,
+      "sku": "10989",
+      "base_sku": "10989",
+      "title": "WATERMAN HEMISPHERE MATT BLACK GT BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4901,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 5800,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 11,
+      "sku": "9278",
+      "base_sku": "9278",
+      "title": "WATERMAN HEMISPHERE METTALLIC BLUE CT BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4904,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 5500,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 12,
+      "sku": "11000",
+      "base_sku": "11000",
+      "title": "WATERMAN HEMISPHERE STAINLESS STEEL CT BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4905,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 5000,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 13,
+      "sku": "11003",
+      "base_sku": "11003",
+      "title": "WATERMAN HEMISPHERE STAINLESS STEEL GT BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4907,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 5500,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 14,
+      "sku": "11705",
+      "base_sku": "11705",
+      "title": "WATERMAN HEMISPHERE STAINLESS STEEL MATTE BLACK CT BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4909,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 5300,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 15,
+      "sku": "11696",
+      "base_sku": "11696",
+      "title": "WATERMAN HEMISPHERE STAINLESS STEEL MATTE BLUE CT BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4910,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 5000,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 16,
+      "sku": "11707",
+      "base_sku": "11707",
+      "title": "WATERMAN HEMISPHERE STAINLESS STEEL MATTE RED CT BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4911,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 5500,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 17,
+      "sku": "11730",
+      "base_sku": "11730",
+      "title": "WATERMAN PERSPECTIVE BLACK GT BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4920,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 7000,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 18,
+      "sku": "11714",
+      "base_sku": "11714",
+      "title": "WATERMAN CARENE DELUXE BLACK GT FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 4877,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 31500,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 19,
+      "sku": "17484",
+      "base_sku": "17484",
+      "title": "WATERMAN CARENE L'ESSENCE DU BLACK CT FOUNTAIN PEN FN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4878,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 36000,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 20,
+      "sku": "9281",
+      "base_sku": "9281",
+      "title": "WATERMAN ALLURE DELUXE BLUE CT FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4874,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 5200,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 21,
+      "sku": "9279",
+      "base_sku": "9279",
+      "title": "WATERMAN ALLURE DELUXE WHITE CT FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4875,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 5200,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 22,
+      "sku": "11713",
+      "base_sku": "11713",
+      "title": "WATERMAN EXPERT BLACK GT ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4887,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 8500,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 23,
+      "sku": "17489",
+      "base_sku": "17489",
+      "title": "WATERMAN CARENE L'ESSENCE DU BLACK CT FOUNTAIN PEN MD",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4879,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 36000,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 24,
+      "sku": "9293",
+      "base_sku": "9293",
+      "title": "WATERMAN CARTRIDGE INK INTENSE BLACK  8C",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 4883,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 300,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 25,
+      "sku": "9295",
+      "base_sku": "9295",
+      "title": "WATERMAN CARTRIDGE INK SERENITY BLUE 8C",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4884,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 300,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 26,
+      "sku": "10957",
+      "base_sku": "10957",
+      "title": "WATERMAN EXPERT BLACK GT FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4885,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 9500,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 27,
+      "sku": "11711",
+      "base_sku": "11711",
+      "title": "WATERMAN EXPERT BLACK GT FOUNTAIN PEN F",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 4886,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 9500,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 28,
+      "sku": "11698",
+      "base_sku": "11698",
+      "title": "WATERMAN HEMISPHERE  COLOR BLACK & BLUE CT ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4894,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 11000,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 29,
+      "sku": "11716",
+      "base_sku": "11716",
+      "title": "WATERMAN EXPERT PARIS SE DIX BLACK GT FOUNTAIN PEN F",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4890,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 23500,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 30,
+      "sku": "30091",
+      "base_sku": "30091",
+      "title": "WATERMAN EXPERT STAINLESS STEEL GT ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4893,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 7900,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 31,
+      "sku": "11700",
+      "base_sku": "11700",
+      "title": "WATERMAN HEMISPHERE COLOR BLACK GREEN CT FOUNTAIN PEN(M)",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4897,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 11000,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 32,
+      "sku": "30092",
+      "base_sku": "30092",
+      "title": "WATERMAN HEMISPHERE MARS BLACK GT FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4899,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 8100,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 33,
+      "sku": "11721",
+      "base_sku": "11721",
+      "title": "WATERMAN HEMISPHERE MARS BLACK GT ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4900,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 6900,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 34,
+      "sku": "10992",
+      "base_sku": "10992",
+      "title": "WATERMAN HEMISPHERE MATT BLACK GT ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4902,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 6600,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 35,
+      "sku": "10991",
+      "base_sku": "10991",
+      "title": "WATERMAN HEMISPHERE MATT BLACK GT FOUNTAIN PEN M",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4903,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 7800,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 36,
+      "sku": "10999",
+      "base_sku": "10999",
+      "title": "WATERMAN HEMISPHERE STAINLESS STEEL GT ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 4908,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 6300,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 37,
+      "sku": "9280",
+      "base_sku": "9280",
+      "title": "WATERMAN HEMISPHERE STAINLESS STEEL CT M FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4906,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 7000,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 38,
+      "sku": "9285",
+      "base_sku": "9285",
+      "title": "WATERMAN INK ABSOLUTE BROWN 50ML",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 4912,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 39,
+      "sku": "9283",
+      "base_sku": "9283",
+      "title": "WATERMAN INK INTENSE BLACK 50ML",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4916,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 40,
+      "sku": "9296",
+      "base_sku": "9296",
+      "title": "WATERMAN INK MYSTERIOUS BLUE  50ML",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 4917,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 41,
+      "sku": "9289",
+      "base_sku": "9289",
+      "title": "WATERMAN INK AUDACIOUS RED 50ML",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 4913,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 42,
+      "sku": "30093",
+      "base_sku": "30093",
+      "title": "WATERMAN INK BOTTLE INSPIRED BLUE 50 ML",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4914,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 43,
+      "sku": "9286",
+      "base_sku": "9286",
+      "title": "WATERMAN INK HARMONIOUS GREEN 50ML",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 4915,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 44,
+      "sku": "9290",
+      "base_sku": "9290",
+      "title": "WATERMAN INK SERENITY BLUE 50ML",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 4918,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 45,
+      "sku": "11726",
+      "base_sku": "11726",
+      "title": "WATERMAN REFILL BLACK FINE RB  0.8MM",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 4924,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 500,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 46,
+      "sku": "17494",
+      "base_sku": "17494",
+      "title": "WATERMAN REFILL BLACK MEDIUM BALL PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 4925,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 47,
+      "sku": "9302",
+      "base_sku": "9302",
+      "title": "WATERMAN REFILL BLUE FINE BALL PEN  0.8MM",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 4926,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 12
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 48,
+      "sku": "17495",
+      "base_sku": "17495",
+      "title": "WATERMAN REFILL BLUE MEDIUM BALL PEN",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4928,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 49,
+      "sku": "9297",
+      "base_sku": "9297",
+      "title": "WATERMAN INK TENDER PURPLE 50ML",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4919,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 500,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 50,
+      "sku": "9282",
+      "base_sku": "9282",
+      "title": "WATERMAN PHILEAS CHROME CT ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4921,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 4800,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 51,
+      "sku": "11728",
+      "base_sku": "11728",
+      "title": "WATERMAN REFILL BLUE FINE ROLLER BALL PEN  0.8MM",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 4927,
+          "item_group": "WATERMEN",
+          "item_name": "",
+          "mrp": 500,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    }
+  ]
+}

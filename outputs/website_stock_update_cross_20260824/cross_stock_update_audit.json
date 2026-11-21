@@ -1,0 +1,2626 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (21).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_cross_20260824\\cross products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\cross products - Updated Website Stock.xlsx",
+  "summary": {
+    "Matched": 128,
+    "Matched - Busy Duplicates Summed": 2
+  },
+  "rows": [
+    {
+      "website_row": 2,
+      "title": "CROSS AT0662-11 COVENTRY GOLD TRIM BALL PEN & WALLET",
+      "brand": "Cross",
+      "variant_sku": "8716",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 644,
+          "item_code": "8716",
+          "item_details": "CROSS AT0662-11 COVENTRY GT BP+WL B 3995",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 3,
+      "title": "CROSS AT0455-6 BAILEY MEDALIST ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12469",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 618,
+          "item_code": "12469",
+          "item_details": "CROSS AT0455-6 BAILEY MEDALIST RB 5925",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 4,
+      "title": "CROSS AT0115-18 CALAIS BLUE & LACQUER ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8703",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 599,
+          "item_code": "8703",
+          "item_details": "CROSS AT0115-18 CALAIS BL&LAQ RB 3840",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 5,
+      "title": "CROSS AT0555-2 EDGE BLACK ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8707",
+      "old_variant_inventory_qty": 5,
+      "new_variant_inventory_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 625,
+          "item_code": "8707",
+          "item_details": "CROSS AT0555-2 EDGE RB BLK 4650",
+          "item_group": "CROSS",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "website_row": 6,
+      "title": "CROSS AT0555-7 EDGE RED & CHROME ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8708",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 631,
+          "item_code": "8708",
+          "item_details": "CROSS AT0555-7 EDGE  RED&CH RB 4650",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 7,
+      "title": "CROSS AT0555-14 EDGE HAZELNUT & BLACK ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8709",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 623,
+          "item_code": "8709",
+          "item_details": "CROSS AT0555-14 EDGE HZT&BK RB 4870",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 8,
+      "title": "CROSS AT0745-2 BAILEY WHITE  ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8729",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 674,
+          "item_code": "8729",
+          "item_details": "CROSS AT0745-2 BAILEY LT WHITE  RB 2320",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 9,
+      "title": "CROSS AT0745-3 BAILEY LIGHT CHROME GRAY ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8730",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 676,
+          "item_code": "8730",
+          "item_details": "CROSS AT0745-3 BAILEY LT CH&GRY RB 2320",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 10,
+      "title": "CROSS AT0745-12 BAILEY GREEN & GOLD ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8733",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 669,
+          "item_code": "8733",
+          "item_details": "CROSS AT0745-12 BAILEY LT GRN&GD RB 2540",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 11,
+      "title": "CROSS 882-41 ATX BRUSHED BALL PEN BLACK",
+      "brand": "Cross",
+      "variant_sku": "8735",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 559,
+          "item_code": "8735",
+          "item_details": "CROSS 882-41 ATX BRUSHED BP BK 7010",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 12,
+      "title": "CROSS 414- CENTURY-II BLACK ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11859",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 556,
+          "item_code": "11859",
+          "item_details": "CROSS 414-1 CENTURY-II BLK RB 11710",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 13,
+      "title": "CROSS AT0085-115 GUNMETAL GRAY ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11861",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 580,
+          "item_code": "11861",
+          "item_details": "CROSS AT0085-115 RB GUNMETAL GRAY 10990",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 14,
+      "title": "CROSS 885-41 ATX BRUSHED BLACK ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11865",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 563,
+          "item_code": "11865",
+          "item_details": "CROSS 885-41 ATX BRUSHED BLACK RB 7980",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 15,
+      "title": "CROSS AT0085-77 CENTURY BLACK LACQUER ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11867",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 581,
+          "item_code": "11867",
+          "item_details": "CROSS AT0085-77 CENTURY BLK LACQ RB 4225",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 16,
+      "title": "CROSS AT0112-26 CALAIS  GRAY BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11869",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 593,
+          "item_code": "11869",
+          "item_details": "CROSS AT0112-26 CALAIS  GRAY BP 3530",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 17,
+      "title": "CROSS AT0085-110 CENTURY BLACK & GOLD ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11871",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 579,
+          "item_code": "11871",
+          "item_details": "CROSS AT0085-110 CENTURY BLK&G RB 7470",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 18,
+      "title": "CROSS AT0725-3 EDGE XSERIES RED ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11873",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 658,
+          "item_code": "11873",
+          "item_details": "CROSS AT0725-3 EDGE XSERIES RED RB 3925",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 19,
+      "title": "CROSS AT0745-4 BAILEY LIGHT BLUE ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11888",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 677,
+          "item_code": "11888",
+          "item_details": "CROSS AT0745-4 BAILEY LT BLUE RB 2320",
+          "item_group": "CROSS",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 20,
+      "title": "CROSS AT0745-10 BAILEY WHITE & GOLD ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11890",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 667,
+          "item_code": "11890",
+          "item_details": "CROSS AT0745-10 BAILEY LT W&G RB 2540",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 21,
+      "title": "CROSS AT0745-13 BAILEY LIGHT AR & GOLD ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11893",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 670,
+          "item_code": "11893",
+          "item_details": "CROSS AT0745-13 BAILEY LT  AR&GD RB 2540",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 22,
+      "title": "CROSS AT0625-2 CLICK MATTE BLACK ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11932",
+      "old_variant_inventory_qty": 7,
+      "new_variant_inventory_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 638,
+          "item_code": "11932",
+          "item_details": "CROSS AT0625-2 CLICK MATT BLK 3100",
+          "item_group": "CROSS",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "website_row": 23,
+      "title": "CROSS AT0745-11 BAILEY DARK RED & GOLD ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11934",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 668,
+          "item_code": "11934",
+          "item_details": "CROSS AT0745-11 BAILEY LT D.R&GD RB 2540",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 24,
+      "title": "CROSS AT0745-7 BAILEY LIGHT RED ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11936",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 678,
+          "item_code": "11936",
+          "item_details": "CROSS AT0745-7 BAILEY LT RED RB 2320",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 25,
+      "title": "CROSS AT0725-4 EDGE  COBALT BLUE ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11991",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 659,
+          "item_code": "11991",
+          "item_details": "CROSS AT0725-4 EDGE  COBALT BLUE RB 3925",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 26,
+      "title": "CROSS AT0665-11 COVENTRY BLACK ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11997",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 654,
+          "item_code": "11997",
+          "item_details": "CROSS AT0665-11 COVENTRY BLK RB 3430",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 27,
+      "title": "CROSS AT0665-10 COVENTRY RED ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12003",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 653,
+          "item_code": "12003",
+          "item_details": "CROSS AT0665-10 COVENTRY RED RB 3195",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 28,
+      "title": "CROSS AT0115-16 CALAIS CHROME CHROME TRIM ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12009",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 598,
+          "item_code": "12009",
+          "item_details": "CROSS AT0115-16 CALAIS CHROME CT RB 3840",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 29,
+      "title": "CROSS AT0555-3 EDGE BLUE ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12079",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 628,
+          "item_code": "12079",
+          "item_details": "CROSS AT0555-3 EDGE BLUE RB 4650",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 30,
+      "title": "CROSS AT0555-8 EDGE CHROME ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12081",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 632,
+          "item_code": "12081",
+          "item_details": "CROSS AT0555-8 EDGE CHROME 4650",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 31,
+      "title": "CROSS AT0555-6 EDGE PINK ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12083",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 630,
+          "item_code": "12083",
+          "item_details": "CROSS AT0555-6 EDGE PINK RB 4650",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 32,
+      "title": "CROSS AT0555-9 EDGE PURPLE ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12086",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 633,
+          "item_code": "12086",
+          "item_details": "CROSS AT0555-9 EDGE PURPLE RB 4650",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 33,
+      "title": "CROSS 3504 CENTURY II CHROME ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12088",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 554,
+          "item_code": "12088",
+          "item_details": "CROSS 3504 CENTURY II CHROME RB 8070",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 34,
+      "title": "CROSS AT0175-3 STRATFORD MATTE BLACK ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12093",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 607,
+          "item_code": "12093",
+          "item_details": "CROSS AT0175-3 STRATFORD MAT BLK RB 2995",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 35,
+      "title": "CROSS AT0175-2 STARTFORD CHROME ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12095",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 606,
+          "item_code": "12095",
+          "item_details": "CROSS AT0175-2 STARTFORD CHROME RB 3095",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 36,
+      "title": "CROSS AT0115-1 LUSTROUS CHROME ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12102",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 596,
+          "item_code": "12102",
+          "item_details": "CROSS AT0115-1 LUSTROUS CHROME RB 2945",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 37,
+      "title": "CROSS AT0455-21 BAILEY MATTE RED ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12397",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 617,
+          "item_code": "12397",
+          "item_details": "CROSS AT0455-21 BAILEY MATTE RED RB 4960",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 38,
+      "title": "CROSS AT0745-9 BAILEY LIGHT BLACK & GOLD ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12447",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 679,
+          "item_code": "12447",
+          "item_details": "CROSS AT0745-9 BAILEY LT BK&GD RB 2730",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 39,
+      "title": "CROSS AT0745-19 BAILEY LIGHT TRANSLUCENT GREEN ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12449",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 673,
+          "item_code": "12449",
+          "item_details": "CROSS AT0745-19 BAILEY LT TSP GN RB 3395",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 40,
+      "title": "CROSS AT0745-20 BAILEY LIGHT TRANSLUCENT PINK ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12452",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 675,
+          "item_code": "12452",
+          "item_details": "CROSS AT0745-20 BAILEY LT TSP PK RB 3395",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 41,
+      "title": "CROSS AT0745-18 BAILEY LIGHT TRANSLUCENT NAAVY BLUE ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12454",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 672,
+          "item_code": "12454",
+          "item_details": "CROSS AT0745-18 BAILEY LT TSP NB RB 3395",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 42,
+      "title": "CROSS AT0745-17 BAILEY LIGHT TRANSLUCENT CLEAR RESIN ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12456",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 671,
+          "item_code": "12456",
+          "item_details": "CROSS AT0745-17 BAILEY LT TSP CR RB 3395",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 43,
+      "title": "CROSS AT0745-1 BAILEY BLACK CHROME TRIM ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12461",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 666,
+          "item_code": "12461",
+          "item_details": "CROSS AT0745-1 BAILEY LT BLK CT RB 2320",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 44,
+      "title": "CROSS AT0555-20 EGDE MATTE BLACK GOLD TRIM 23KT GOLD PLATE ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "16522",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 626,
+          "item_code": "16522",
+          "item_details": "CROSS AT0555-20 EDGE BLK LAQ GT RB 6845",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 45,
+      "title": "CROSS AT0456-7MS/5  BAILEY FOUNTAIN PEN+ INK",
+      "brand": "Cross",
+      "variant_sku": "8706",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 620,
+          "item_code": "8706",
+          "item_details": "CROSS AT0456-7MS/5  BAILEY FP+INK 7495",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 46,
+      "title": "CROSS AT0746-1MS BAILEY BLACK CHROME TRIM FOUNTAIN PEN",
+      "brand": "Cross",
+      "variant_sku": "12399",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 686,
+          "item_code": "12399",
+          "item_details": "CROSS AT0746-1MS BAILEY BK CT FP 2790",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 47,
+      "title": "CROSS AT0746-9MF BAILEY BLACK GOLD TRIM FOUNTAIN PEN",
+      "brand": "Cross",
+      "variant_sku": "12401",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 688,
+          "item_code": "12401",
+          "item_details": "CROSS AT0746-9MF BAILEY LT BK GT FP 2920",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 48,
+      "title": "CROSS AT0746-10MF BAILEY WHITE & GOLD FOUNTAIN PEN",
+      "brand": "Cross",
+      "variant_sku": "12441",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 680,
+          "item_code": "12441",
+          "item_details": "CROSS AT0746-10MF BAILEY LT WT&G FP 2920",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 49,
+      "title": "CROSS AT0746-11MF BAILE LIGHT RED &GOLD TRIM  FOUNTAIN PEN",
+      "brand": "Cross",
+      "variant_sku": "12443",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 681,
+          "item_code": "12443",
+          "item_details": "CROSS AT0746-11MF BAILE LT RD&GT FP 2920",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 50,
+      "title": "CROSS AT0666-9FS CONVENTRY BLUE FOUNTAIN PEN",
+      "brand": "Cross",
+      "variant_sku": "12445",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 657,
+          "item_code": "12445",
+          "item_details": "CROSS AT0666-9FS CONVENTRY BLUE FP 3795",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 51,
+      "title": "CROSS AT0456-6MS BAILEY MEDALIST FOUNTAIN PEN",
+      "brand": "Cross",
+      "variant_sku": "12465",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 619,
+          "item_code": "12465",
+          "item_details": "CROSS AT0456-6MS BAILEY MEDALIST FP 6700",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 52,
+      "title": "CROSS 886-46MJ ATX TITANIUM GRAY FOUNTAIN PEN",
+      "brand": "Cross",
+      "variant_sku": "12471",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 569,
+          "item_code": "12471",
+          "item_details": "CROSS 886-46MJ ATX TITANIUM GRY FP 11195",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 53,
+      "title": "CROSS AT0746-18XS BAILEY TRANSLUCENT NAVY BLUE FOUNTAIN PEN",
+      "brand": "Cross",
+      "variant_sku": "12482",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 684,
+          "item_code": "12482",
+          "item_details": "CROSS AT0746-18XS BAILEY TSP NB FP 3795",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 54,
+      "title": "CROSS AT0666-11FF COVENTRY BLACK FOUNTAIN PEN",
+      "brand": "Cross",
+      "variant_sku": "11993",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 656,
+          "item_code": "11993",
+          "item_details": "CROSS AT0666-11FF COVENTRY BLK FP 3755",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 55,
+      "title": "CROSS AT0666-10FS COVENTRY RED FOUNTAIN PEN",
+      "brand": "Cross",
+      "variant_sku": "11995",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 655,
+          "item_code": "11995",
+          "item_details": "CROSS AT0666-10FS COVENTRY RED FP 3495",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 56,
+      "title": "CROSS 886-45MJ ATX MATTE BLUE FOUNTAIN PEN",
+      "brand": "Cross",
+      "variant_sku": "12467",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 568,
+          "item_code": "12467",
+          "item_details": "CROSS 886-45MJ ATX MATE BLUE FP 11195",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 57,
+      "title": "CROSS AT0746-12FF BAILEY DARK GREEN & GOLD FOUNTAIN PEN",
+      "brand": "Cross",
+      "variant_sku": "12475",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 682,
+          "item_code": "12475",
+          "item_details": "CROSS AT0746-12FF BAILEY LT GN&G FP 2920",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 58,
+      "title": "CROSS AT0746-17XS BAILEY TRANSLUCENT CLEAR RESIN FOUNTAIN PEN",
+      "brand": "Cross",
+      "variant_sku": "12477",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 683,
+          "item_code": "12477",
+          "item_details": "CROSS AT0746-17XS BAILEY TSP CR FP 3795",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 59,
+      "title": "CROSS AT0746-19XS BAILEY TRANSLUCENT GREEN FOUNTAIN PEN",
+      "brand": "Cross",
+      "variant_sku": "12483",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 685,
+          "item_code": "12483",
+          "item_details": "CROSS AT0746-19XS BAILEY TSP GRN FP 3795",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 60,
+      "title": "CROSS AT0746-20XF BAILEY TRANSLUCENT PINK FOUNTAIN PEN",
+      "brand": "Cross",
+      "variant_sku": "12484",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 687,
+          "item_code": "12484",
+          "item_details": "CROSS AT0746-20XF BAILEY TSP PK FP 3795",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 61,
+      "title": "CROSS AT0116-16 CALAIS FOUNTAIN PEN SATIN CHROME TRIM",
+      "brand": "Cross",
+      "variant_sku": "20260",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 601,
+          "item_code": "20260",
+          "item_details": "CROSS AT0116-16 CALAIS FP SATIN CH 4380",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 62,
+      "title": "CROSS AT0082WG-113 CENTURY WHITE & ROSE GOLD BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8699",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 575,
+          "item_code": "8699",
+          "item_details": "CROSS AT0082WG-113 CENTURY W&R.G 9530",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 63,
+      "title": "CROSS AT0082WG-115 GRAY & BLACK BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8700",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 576,
+          "item_code": "8700",
+          "item_details": "CROSS AT0082WG-115  BP GRY/BK 9530",
+          "item_group": "CROSS",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 64,
+      "title": "CROSS AT0662-2 CONVENTRY CHROME & GOLD BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8710",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 648,
+          "item_code": "8710",
+          "item_details": "CROSS AT0662-2 CONVENTRY CH&GD BP 3215",
+          "item_group": "CROSS",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 65,
+      "title": "CROSS AT0082WG-138 BLUE BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11854",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 577,
+          "item_code": "11854",
+          "item_details": "CROSS AT0082WG-138 BLUE BP 10120",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 66,
+      "title": "CROSS AT0112-1 CALAIS CHROME BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11863",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 583,
+          "item_code": "11863",
+          "item_details": "CROSS AT0112-1 CALAIS BP CHROME 2820",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 67,
+      "title": "CROSS AT0742-13 BAILEY LIGHT AMBER RESIN & GOLD BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8728",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 663,
+          "item_code": "8728",
+          "item_details": "CROSS AT0742-13 BAILEY LT AR&GD BP 2220",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 68,
+      "title": "CROSS 882-43 ATX BRUSHED CHROME BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8737",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 560,
+          "item_code": "8737",
+          "item_details": "CROSS 882-43 ATX BRUSHED CH BP 7010",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 69,
+      "title": "CROSS 3502 CENTURY CHROME BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8739",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 552,
+          "item_code": "8739",
+          "item_details": "CROSS 3502 CENTURY CHROME BP 3495",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 70,
+      "title": "CROSS 4502 CENTURY  10K GOLD FOILING BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8740",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 557,
+          "item_code": "8740",
+          "item_details": "CROSS 4502 CENTURY  10K GF BP 8040",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 71,
+      "title": "CROSS 2502 CENTURY BLACK CLASSIC BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11876",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 549,
+          "item_code": "11876",
+          "item_details": "CROSS 2502 CENTURY BLK CLASSIC BP 5545",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 72,
+      "title": "CROSS AT0082-123 CENTURY BS ROSE GOLD BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11878",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 572,
+          "item_code": "11878",
+          "item_details": "CROSS AT0082-123 CENTURY BS RG BP 5990",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 73,
+      "title": "CROSS AT0742-9 BAILEY BLACK & GOLD BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11880",
+      "old_variant_inventory_qty": 8,
+      "new_variant_inventory_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 665,
+          "item_code": "11880",
+          "item_details": "CROSS AT0742-9 BAILEY BLK&GD  2220",
+          "item_group": "CROSS",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "website_row": 74,
+      "title": "CROSS AT0662-10 CONVENTRY RED BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11882",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 640,
+          "item_code": "11882",
+          "item_details": "CROSS AT0662-10 CONVENTRY RED BP 2880",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 75,
+      "title": "CROSS AT0742-11 BAILEY DARK RED & GOLD BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11885",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 662,
+          "item_code": "11885",
+          "item_details": "CROSS AT0742-11 BAILEY LT DRD&GD BP 2230",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 76,
+      "title": "CROSS AT0112-2 CALAIS BLACK & CHROME BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11896",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched - Busy Duplicates Summed",
+      "busy_matches": [
+        {
+          "busy_row": 589,
+          "item_code": "11896",
+          "item_details": "CROSS AT0112-2 CALAIS BLK&CH BP 2880",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        },
+        {
+          "busy_row": 590,
+          "item_code": "11896",
+          "item_details": "CROSS AT0112-2 CALAIS CHROME&BLK BP 2995",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 77,
+      "title": "CROSS 3302 CENTURY MEDALIST BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11898",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 550,
+          "item_code": "11898",
+          "item_details": "CROSS 3302 CENTURY MEDALIST BP 5545",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 78,
+      "title": "CROSS 882-3 ATX GRAY BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11900",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 558,
+          "item_code": "11900",
+          "item_details": "CROSS 882-3 ATX GRY BP 4060",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 79,
+      "title": "CROSS AT0112-29 CALAIS LACQUER GRAY BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11902",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 594,
+          "item_code": "11902",
+          "item_details": "CROSS AT0112-29 CLAIS LACQ GRAY BP 5520",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 80,
+      "title": "CROSS AT0622-119 CLICK RED BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11904",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 634,
+          "item_code": "11904",
+          "item_details": "CROSS AT0622-119 CLICK RED BP 3320",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 81,
+      "title": "CROSS AT0112-25 CALAIS GREEN & BLACK BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11906",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 592,
+          "item_code": "11906",
+          "item_details": "CROSS AT0112-25 CALAIS  GRN&BK BP 3530",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 82,
+      "title": "CROSS AT0115-14 CALAI MATTE BLACK RALL BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11908",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 597,
+          "item_code": "11908",
+          "item_details": "CROSS AT0115-14 CALAI MATT BLK RB 3840",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 83,
+      "title": "CROSS AT0112-18 CALAIS MN BLUE LACQURER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11912",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 587,
+          "item_code": "11912",
+          "item_details": "CROSS AT0112-18 CALAIS MN BL LAQ BP 2415",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 84,
+      "title": "CROSS AT0625-I CLICK CHROME BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11916",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 639,
+          "item_code": "11916",
+          "item_details": "CROSS AT0625-I CLICK CH RB 3100",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 85,
+      "title": "CROSS AT0112-19 CALAIS RED & CHROME BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11918",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 588,
+          "item_code": "11918",
+          "item_details": "CROSS AT0112-19 CALAIS RED&CH BP 2860",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 86,
+      "title": "CROSS AT0082WG-139 CENTURY GREEN & BLACK BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11920",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 578,
+          "item_code": "11920",
+          "item_details": "CROSS AT0082WG-139 CENTURY GRN&BLK 10120",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 87,
+      "title": "CROSS 412WG-1 CENTURY-II LACQUER BLACK BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11974",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 555,
+          "item_code": "11974",
+          "item_details": "CROSS 412WG-1 CENTURY-II LAQ BK BP 10120",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 88,
+      "title": "CROSS AT0452-7 BAILEY BLACK BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11976",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 615,
+          "item_code": "11976",
+          "item_details": "CROSS AT0452-7 BAILEY LAQ BLK BP 4385",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 89,
+      "title": "CROSS AT0452-12 BAILEY BLUE BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11978",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 608,
+          "item_code": "11978",
+          "item_details": "CROSS AT0452-12 BAILEY LAQ BLUE BP 4385",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 90,
+      "title": "CROSS AT0082-156 CENTURY 23K GOLD BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11980",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 573,
+          "item_code": "11980",
+          "item_details": "CROSS AT0082-156 CENTURY 23K GOLD 10995",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 91,
+      "title": "CROSS 3502WG CENTURY-II CHROME BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11983",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 553,
+          "item_code": "11983",
+          "item_details": "CROSS 3502WG CENTURY-II CHROME BP 4380",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 92,
+      "title": "CROSS AT0452-6 BAILEY CHROME GOLD BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11985",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 613,
+          "item_code": "11985",
+          "item_details": "CROSS AT0452-6 BAILEY CH&GD BP 5275",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 93,
+      "title": "CROSS 3302WG CENTURY-II MEDALIST BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11987",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 551,
+          "item_code": "11987",
+          "item_details": "CROSS 3302WG CENTURY-II MEDALIST BP 6200",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 94,
+      "title": "CROSS AT0662-6 COVENTRY BLACK & CHROME BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "11999",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 649,
+          "item_code": "11999",
+          "item_details": "CROSS AT0662-6 COVENTRY BLK&CH BP 2445",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 95,
+      "title": "CROSS AT0662-9 COVENTRY BLUE BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12001",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 652,
+          "item_code": "12001",
+          "item_details": "CROSS AT0662-9 COVENTRY BLUE BP  2445",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 96,
+      "title": "CROSS AT0112-16 CALAIS CHROME BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12005",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 586,
+          "item_code": "12005",
+          "item_details": "CROSS AT0112-16 CALAIS CHROME BP 3090",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 97,
+      "title": "CROSS AT0112-14 CALAIS MATTE BLACK BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12007",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 584,
+          "item_code": "12007",
+          "item_details": "CROSS AT0112-14 CALAIS MAT BLK BP 3090",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 98,
+      "title": "CROSS AT0152-2 AVENTURA BLUE BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12073",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 604,
+          "item_code": "12073",
+          "item_details": "CROSS AT0152-2 AVENTURA BLUE BP 2495",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 99,
+      "title": "CROSS AT0152-1 AVENTURA BLACK BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12075",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 603,
+          "item_code": "12075",
+          "item_details": "CROSS AT0152-1 AVENTURA BLACK BP 2995",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 100,
+      "title": "CROSS AT0622-121 CLICK LIGHT BLUE BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12077",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 635,
+          "item_code": "12077",
+          "item_details": "CROSS AT0622-121 CLICK LT BLUE BP 3320",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 101,
+      "title": "CROSS AT0172-3 STRATFORD BLACK BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12091",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 605,
+          "item_code": "12091",
+          "item_details": "CROSS AT0172-3 STRATFORD BLACK BP 3250",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 102,
+      "title": "CROSS AT0452-21 BAILEY MATTE RED BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12395",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 610,
+          "item_code": "12395",
+          "item_details": "CROSS AT0452-21 BAILEY MATTE RED BP 4620",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 103,
+      "title": "CROSS AT0662-11 CONVENTRY BLACK GOLD BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12459",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 641,
+          "item_code": "12459",
+          "item_details": "CROSS AT0662-11 CONVENTRY BLACK BP  3215",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 104,
+      "title": "CROSS AT0662-14 COVENTRY METAL GREEN BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12463",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 645,
+          "item_code": "12463",
+          "item_details": "CROSS AT0662-14 COVENTRY MTL GN BP 3995",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 105,
+      "title": "CROSS AT0090-25 MULTIFUNCTION PEN BLUE",
+      "brand": "Cross",
+      "variant_sku": "12473",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 582,
+          "item_code": "12473",
+          "item_details": "CROSS AT0090-25 MULTIFUNTION PEN BL 8225",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 106,
+      "title": "CROSS AT0082-165 CENTURY LAVENDER BLUE BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12485",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 574,
+          "item_code": "12485",
+          "item_details": "CROSS AT0082-165 CENTURY LAV BL BP 10475",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 107,
+      "title": "CROSS AT0622-126 SATIN METALIC GREEN WITH BLACK BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "16520",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 637,
+          "item_code": "16520",
+          "item_details": "CROSS AT0622-126 METALIC GRN BLK BP 4195",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 108,
+      "title": "CROSS AT0622-125 METALIC RED WITH BLACK BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "16521",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 636,
+          "item_code": "16521",
+          "item_details": "CROSS AT0622-125 METALIC RED BLK BP 4195",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 109,
+      "title": "CROSS AT0662-7 COVENTRY BALL PEN CHROME TRIM",
+      "brand": "Cross",
+      "variant_sku": "20261",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 651,
+          "item_code": "20261",
+          "item_details": "CROSS AT0662-7 COVENTRY BP CH CT 2300",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 110,
+      "title": "CROSS AT0112-15  CALAIS MEDALIS BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "20259",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 585,
+          "item_code": "20259",
+          "item_details": "CROSS AT0112-15  CALAIS MEDALIS BP 4360",
+          "item_group": "CROSS",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 111,
+      "title": "CROSS AT0742-1 BLUE BOOK BLACK CHROME TRIM BALL PEN & NOTE BOOK",
+      "brand": "Cross",
+      "variant_sku": "12487",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 661,
+          "item_code": "12487",
+          "item_details": "CROSS AT0742-1 BLU BOOK BK CT BP+NB 3095",
+          "item_group": "CROSS",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 112,
+      "title": "CROSS AT0117-1MS CALAIS CHROME BALL PEN + FOUNTAIN PEN",
+      "brand": "Cross",
+      "variant_sku": "11914",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 602,
+          "item_code": "11914",
+          "item_details": "CROSS AT0117-1MS CALAIS CH BP+FP 5601",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 113,
+      "title": "CROSS AT0662-2 CONVENTRY BLACK BALL PEN+NOTE BOOK",
+      "brand": "Cross",
+      "variant_sku": "12030",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 646,
+          "item_code": "12030",
+          "item_details": "CROSS AT0662-2 CONVENTRY BLK BP+NB 3395",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 114,
+      "title": "CROSS AT0662-2 CONVENTRY CHROME BALL PEN +JUTE NOTE BOOK",
+      "brand": "Cross",
+      "variant_sku": "12036",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 647,
+          "item_code": "12036",
+          "item_details": "CROSS AT0662-2 CONVENTRY CH BP+JTNB 2945",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 115,
+      "title": "CROSS AT0662-6 PEN+CREDIT CARD HOLDER CB SET",
+      "brand": "Cross",
+      "variant_sku": "12039",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 650,
+          "item_code": "12039",
+          "item_details": "CROSS AT0662-6 PEN+CC HOLDER CB SET 3195",
+          "item_group": "CROSS",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "website_row": 116,
+      "title": "CROSS AT0662-11 CONVENTRY BLACK BALL PEN +NOTEBOOK",
+      "brand": "Cross",
+      "variant_sku": "8717",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 642,
+          "item_code": "8717",
+          "item_details": "CROSS AT0662-11 CONVENTRY BLK BP+NB 3395",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 117,
+      "title": "CROSS AT0662-11 COVENTRY BALL PEN+CHARGING CABLE",
+      "brand": "Cross",
+      "variant_sku": "8719",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 643,
+          "item_code": "8719",
+          "item_details": "CROSS AT0662-11 COVENTRY BP+CHARGE 3695",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 118,
+      "title": "CROSS REFIL 8521 GEL BLUE ROLLER BALL",
+      "brand": "Cross",
+      "variant_sku": "8752",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 19,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched - Busy Duplicates Summed",
+      "busy_matches": [
+        {
+          "busy_row": 719,
+          "item_code": "8752",
+          "item_details": "CROSS REFILL 8521 GEL BLUE RB 515",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        },
+        {
+          "busy_row": 720,
+          "item_code": "8752",
+          "item_details": "CROSS REFILL 8521 GEL BLUE RB 690",
+          "item_group": "CROSS",
+          "cl_qty": 17
+        }
+      ]
+    },
+    {
+      "website_row": 119,
+      "title": "CROSS REFIL 8511 BLUE (M) BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8745",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 713,
+          "item_code": "8745",
+          "item_details": "CROSS REFILL 8511 BLUE M BP 410",
+          "item_group": "CROSS",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 120,
+      "title": "CROSS REFIL 8518-4 MINI BLACK (M) BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8750",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 717,
+          "item_code": "8750",
+          "item_details": "CROSS REFILL 8518-4 MINI BLACK M BP 370",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 121,
+      "title": "CROSS REFIL 8523 GEL BLACK ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8753",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 721,
+          "item_code": "8753",
+          "item_details": "CROSS REFILL 8523 GEL BLACK RB 690",
+          "item_group": "CROSS",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 122,
+      "title": "CROSS REFIL 8513 BLACK BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8747",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 715,
+          "item_code": "8747",
+          "item_details": "CROSS REFILL 8513 BLACK MED BP 510",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 123,
+      "title": "CROSS REFIL 8514 BLACK FINE BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8749",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 716,
+          "item_code": "8749",
+          "item_details": "CROSS REFILL 8514 BLACK FINE BP 510",
+          "item_group": "CROSS",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 124,
+      "title": "CROSS REFIL 8910-2 GEL BLUE ROLLER BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "8755",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 723,
+          "item_code": "8755",
+          "item_details": "CROSS REFILL 8910-2 GEL BLUE RB 595",
+          "item_group": "CROSS",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "website_row": 125,
+      "title": "CROSS INK CARTRIDGES 8921 BLACK FOUNTAIN PEN",
+      "brand": "Cross",
+      "variant_sku": "12015",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 711,
+          "item_code": "12015",
+          "item_details": "CROSS INK CARTRIDGES 8921 BLACK FP 495",
+          "item_group": "CROSS",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 126,
+      "title": "CROSS REFIL 8518-5 MINI RED (M) BALL PEN",
+      "brand": "Cross",
+      "variant_sku": "12024",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 718,
+          "item_code": "12024",
+          "item_details": "CROSS REFILL 8518-5 MINI RED M BP 490",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 127,
+      "title": "CROSS REFIL 8910-1 GEL BLACK ROLLER BALL",
+      "brand": "Cross",
+      "variant_sku": "12019",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 722,
+          "item_code": "12019",
+          "item_details": "CROSS REFILL 8910-1 GEL BLACK RB 485",
+          "item_group": "CROSS",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 128,
+      "title": "CROSS INK CONVERTER 8751 FOUNTAIN PEN",
+      "brand": "Cross",
+      "variant_sku": "12021",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 712,
+          "item_code": "12021",
+          "item_details": "CROSS INK CONVERTER 8751 FP 660",
+          "item_group": "CROSS",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "website_row": 129,
+      "title": "CROSS INK 8945-1 INK BOTTEL BLUE 62.5ML",
+      "brand": "Cross",
+      "variant_sku": "19195",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 707,
+          "item_code": "19195",
+          "item_details": "CROSS INK 8945-1 INK BOTTLE BLUE 1550",
+          "item_group": "CROSS",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 130,
+      "title": "CROSS INK 8945-2 INK BOTTEL BLACK 62.5ML",
+      "brand": "Cross",
+      "variant_sku": "19198",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 708,
+          "item_code": "19198",
+          "item_details": "CROSS INK 8945-2 INK BOTTLE BLACK 1550",
+          "item_group": "CROSS",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 131,
+      "title": "CROSS REFILL 8512 BALL PEN BLUE",
+      "brand": "Cross",
+      "variant_sku": "20262",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 714,
+          "item_code": "20262",
+          "item_details": "CROSS REFILL 8512 BP BL F 370",
+          "item_group": "CROSS",
+          "cl_qty": 7
+        }
+      ]
+    }
+  ]
+}

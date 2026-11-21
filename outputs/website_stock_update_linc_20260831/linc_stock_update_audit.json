@@ -1,0 +1,1759 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (49).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "busy_sheet": "Sheet1",
+  "project_output": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_linc_20260831\\linc products - Updated Website Stock.xlsx",
+  "downloads_output": "C:\\Users\\My-PC-Win10\\Downloads\\linc products - Updated Website Stock.xlsx",
+  "downloads_status": "copied",
+  "meta": {
+    "sheet_name": "Products",
+    "max_row": 39,
+    "max_column": 34,
+    "sku_col": 16,
+    "stock_col": 17,
+    "warehouse_col": 18,
+    "shop_col": 19
+  },
+  "summary": {
+    "website_sku_rows": 38,
+    "matched_direct": 15,
+    "duplicate_code_summed": 0,
+    "missing_in_busy": 23,
+    "base_code_available_no_exact_sku": 23,
+    "changed": 10,
+    "negative_new_qty": 0
+  },
+  "missing_in_busy": [
+    {
+      "row": 2,
+      "sku": "21014-GC05",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN RED",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 3,
+      "sku": "21014-GC04",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN VIOLET",
+      "variant": "",
+      "old_qty": 37,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 4,
+      "sku": "21014-GC03",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN PINK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 6,
+      "sku": "21014-GC07",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN BLUE",
+      "variant": "",
+      "old_qty": 13,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 7,
+      "sku": "21014-GC06",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN BLACK",
+      "variant": "",
+      "old_qty": 13,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 8,
+      "sku": "21014-GC02",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN GREEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 14,
+      "sku": "21014-GC01",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN LIGHT GREEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 24,
+      "sku": "17277-C",
+      "base_sku": "17277",
+      "title": "LINC OCEAN GEL PEN PACK OF 10PCS - BLACK",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 25,
+      "sku": "17276-C",
+      "base_sku": "17276",
+      "title": "LINC OCEAN GEL PEN PACK OF 10PCS - BLUE",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 26,
+      "sku": "17282-C",
+      "base_sku": "17282",
+      "title": "LINC OCEAN GEL PEN PACK OF 10PCS - RED",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 27,
+      "sku": "9961-GC02",
+      "base_sku": "9961",
+      "title": "LINC EXECUTIVE GEL PEN - BLUE",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 28,
+      "sku": "9961-GC03",
+      "base_sku": "9961",
+      "title": "LINC EXECUTIVE GEL PEN - BLACK",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 29,
+      "sku": "9961-GC01",
+      "base_sku": "9961",
+      "title": "LINC EXECUTIVE GEL PEN - RED",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 30,
+      "sku": "17846-C",
+      "base_sku": "17846",
+      "title": "LINC MAXO FINE BALL PEN PACK OF 5PCS - BLACK",
+      "variant": "",
+      "old_qty": 40,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 31,
+      "sku": "17847-C",
+      "base_sku": "17847",
+      "title": "LINC MAXO FINE BALL PEN PACK OF 5PCS - BLUE",
+      "variant": "",
+      "old_qty": 50,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 32,
+      "sku": "17848-C",
+      "base_sku": "17848",
+      "title": "LINC MAXO FINE BALL PEN PACK OF 5PCS - RED",
+      "variant": "",
+      "old_qty": 50,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 33,
+      "sku": "21014-C-GC05",
+      "base_sku": "21014",
+      "title": "LINC GLYCER BALL PEN PACK OF 10 PCS - BLACK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 34,
+      "sku": "21014-C-GC04",
+      "base_sku": "21014",
+      "title": "LINC GLYCER BALL PEN PACK OF 10 PCS - BLUE",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 35,
+      "sku": "9967-C-GC02",
+      "base_sku": "9967",
+      "title": "LINC SIGNETTA BALL PEN PACK OF 10 PCS - BLACK",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 36,
+      "sku": "9967-C-GC01",
+      "base_sku": "9967",
+      "title": "LINC SIGNETTA BALL PEN PACK OF 10 PCS - BLUE",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 37,
+      "sku": "21014-C-GC03",
+      "base_sku": "21014",
+      "title": "LINC GLYCER BALL PEN PACK OF 10 PCS - GREEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 38,
+      "sku": "21014-C-GC02",
+      "base_sku": "21014",
+      "title": "LINC GLYCER BALL PEN PACK OF 10 PCS - PINK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 39,
+      "sku": "21014-C-GC01",
+      "base_sku": "21014",
+      "title": "LINC GLYCER BALL PEN PACK OF 10 PCS - VIOLET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    }
+  ],
+  "base_code_available_no_exact_sku": [
+    {
+      "row": 2,
+      "sku": "21014-GC05",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN RED",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "sku": "21014-GC04",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN VIOLET",
+      "variant": "",
+      "old_qty": 37,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "sku": "21014-GC03",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN PINK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "sku": "21014-GC07",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN BLUE",
+      "variant": "",
+      "old_qty": 13,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "sku": "21014-GC06",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN BLACK",
+      "variant": "",
+      "old_qty": 13,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "sku": "21014-GC02",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN GREEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "sku": "21014-GC01",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN LIGHT GREEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "sku": "17277-C",
+      "base_sku": "17277",
+      "title": "LINC OCEAN GEL PEN PACK OF 10PCS - BLACK",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1839,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 145
+        }
+      ]
+    },
+    {
+      "row": 25,
+      "sku": "17276-C",
+      "base_sku": "17276",
+      "title": "LINC OCEAN GEL PEN PACK OF 10PCS - BLUE",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1838,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 380
+        }
+      ]
+    },
+    {
+      "row": 26,
+      "sku": "17282-C",
+      "base_sku": "17282",
+      "title": "LINC OCEAN GEL PEN PACK OF 10PCS - RED",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1840,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 150
+        }
+      ]
+    },
+    {
+      "row": 27,
+      "sku": "9961-GC02",
+      "base_sku": "9961",
+      "title": "LINC EXECUTIVE GEL PEN - BLUE",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1820,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 20,
+          "cl_qty": 675
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "sku": "9961-GC03",
+      "base_sku": "9961",
+      "title": "LINC EXECUTIVE GEL PEN - BLACK",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1820,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 20,
+          "cl_qty": 675
+        }
+      ]
+    },
+    {
+      "row": 29,
+      "sku": "9961-GC01",
+      "base_sku": "9961",
+      "title": "LINC EXECUTIVE GEL PEN - RED",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1820,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 20,
+          "cl_qty": 675
+        }
+      ]
+    },
+    {
+      "row": 30,
+      "sku": "17846-C",
+      "base_sku": "17846",
+      "title": "LINC MAXO FINE BALL PEN PACK OF 5PCS - BLACK",
+      "variant": "",
+      "old_qty": 40,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1832,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 1023
+        }
+      ]
+    },
+    {
+      "row": 31,
+      "sku": "17847-C",
+      "base_sku": "17847",
+      "title": "LINC MAXO FINE BALL PEN PACK OF 5PCS - BLUE",
+      "variant": "",
+      "old_qty": 50,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1833,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 7,
+          "cl_qty": 778
+        }
+      ]
+    },
+    {
+      "row": 32,
+      "sku": "17848-C",
+      "base_sku": "17848",
+      "title": "LINC MAXO FINE BALL PEN PACK OF 5PCS - RED",
+      "variant": "",
+      "old_qty": 50,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1834,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 82
+        }
+      ]
+    },
+    {
+      "row": 33,
+      "sku": "21014-C-GC05",
+      "base_sku": "21014",
+      "title": "LINC GLYCER BALL PEN PACK OF 10 PCS - BLACK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 34,
+      "sku": "21014-C-GC04",
+      "base_sku": "21014",
+      "title": "LINC GLYCER BALL PEN PACK OF 10 PCS - BLUE",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 35,
+      "sku": "9967-C-GC02",
+      "base_sku": "9967",
+      "title": "LINC SIGNETTA BALL PEN PACK OF 10 PCS - BLACK",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1850,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 20,
+          "cl_qty": 86
+        }
+      ]
+    },
+    {
+      "row": 36,
+      "sku": "9967-C-GC01",
+      "base_sku": "9967",
+      "title": "LINC SIGNETTA BALL PEN PACK OF 10 PCS - BLUE",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1850,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 20,
+          "cl_qty": 86
+        }
+      ]
+    },
+    {
+      "row": 37,
+      "sku": "21014-C-GC03",
+      "base_sku": "21014",
+      "title": "LINC GLYCER BALL PEN PACK OF 10 PCS - GREEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 38,
+      "sku": "21014-C-GC02",
+      "base_sku": "21014",
+      "title": "LINC GLYCER BALL PEN PACK OF 10 PCS - PINK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 39,
+      "sku": "21014-C-GC01",
+      "base_sku": "21014",
+      "title": "LINC GLYCER BALL PEN PACK OF 10 PCS - VIOLET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    }
+  ],
+  "duplicate_code_summed": [],
+  "negative_new_qty": [],
+  "changed_rows": [
+    {
+      "row": 5,
+      "sku": "21013",
+      "base_sku": "21013",
+      "title": "LINC FASTER BLACK PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 33,
+      "busy_rows": [
+        {
+          "busy_row": 1821,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 5,
+          "cl_qty": 33
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 9,
+      "sku": "21015",
+      "base_sku": "21015",
+      "title": "LINC GLYCER 10X BALL PEN RED",
+      "variant": "",
+      "old_qty": 64,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 207,
+      "busy_rows": [
+        {
+          "busy_row": 1823,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 207
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 11,
+      "sku": "21018",
+      "base_sku": "21018",
+      "title": "LINC LAZOR ECO MATHEMATICAL BOX",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 1826,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 12,
+      "sku": "21019",
+      "base_sku": "21019",
+      "title": "LINC MAESTRO BALL PEN BLACK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 30,
+      "busy_rows": [
+        {
+          "busy_row": 1827,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 30
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 13,
+      "sku": "21036",
+      "base_sku": "21036",
+      "title": "LINC SHINE GLITTER RED",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 1849,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 15,
+      "sku": "21016",
+      "base_sku": "21016",
+      "title": "LINC INKLUSION PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 9,
+      "busy_rows": [
+        {
+          "busy_row": 1824,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 20,
+          "cl_qty": 9
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 16,
+      "sku": "21023",
+      "base_sku": "21023",
+      "title": "LINC MARKLINE PENCIL HB 10PC",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 48,
+      "busy_rows": [
+        {
+          "busy_row": 1831,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 48
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 17,
+      "sku": "21025",
+      "base_sku": "21025",
+      "title": "LINC MAXWELL BALL PEN BLUE",
+      "variant": "",
+      "old_qty": 400,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1233,
+      "busy_rows": [
+        {
+          "busy_row": 1835,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 1233
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 20,
+      "sku": "21038",
+      "base_sku": "21038",
+      "title": "LINC TYCOON LAZOR AXO BLACK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 25,
+      "busy_rows": [
+        {
+          "busy_row": 1852,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 20,
+          "cl_qty": 25
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 21,
+      "sku": "21037",
+      "base_sku": "21037",
+      "title": "LINC SOLUTION GEOMETRY BOX",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 1851,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 150,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    }
+  ],
+  "rows": [
+    {
+      "row": 2,
+      "sku": "21014-GC05",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN RED",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 0,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "sku": "21014-GC04",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN VIOLET",
+      "variant": "",
+      "old_qty": 37,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 37,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "sku": "21014-GC03",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN PINK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 0,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "sku": "21013",
+      "base_sku": "21013",
+      "title": "LINC FASTER BLACK PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 33,
+      "busy_rows": [
+        {
+          "busy_row": 1821,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 5,
+          "cl_qty": 33
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 6,
+      "sku": "21014-GC07",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN BLUE",
+      "variant": "",
+      "old_qty": 13,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 13,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "sku": "21014-GC06",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN BLACK",
+      "variant": "",
+      "old_qty": 13,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 13,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "sku": "21014-GC02",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN GREEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 0,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "sku": "21015",
+      "base_sku": "21015",
+      "title": "LINC GLYCER 10X BALL PEN RED",
+      "variant": "",
+      "old_qty": 64,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 207,
+      "busy_rows": [
+        {
+          "busy_row": 1823,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 207
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 10,
+      "sku": "21017",
+      "base_sku": "21017",
+      "title": "LINC KIDDY SET",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1825,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 11,
+      "sku": "21018",
+      "base_sku": "21018",
+      "title": "LINC LAZOR ECO MATHEMATICAL BOX",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 1826,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 12,
+      "sku": "21019",
+      "base_sku": "21019",
+      "title": "LINC MAESTRO BALL PEN BLACK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 30,
+      "busy_rows": [
+        {
+          "busy_row": 1827,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 30
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 13,
+      "sku": "21036",
+      "base_sku": "21036",
+      "title": "LINC SHINE GLITTER RED",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 1849,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 14,
+      "sku": "21014-GC01",
+      "base_sku": "21014",
+      "title": "LINC GLYCER 0.6MM BALL PEN LIGHT GREEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 0,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "sku": "21016",
+      "base_sku": "21016",
+      "title": "LINC INKLUSION PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 9,
+      "busy_rows": [
+        {
+          "busy_row": 1824,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 20,
+          "cl_qty": 9
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 16,
+      "sku": "21023",
+      "base_sku": "21023",
+      "title": "LINC MARKLINE PENCIL HB 10PC",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 48,
+      "busy_rows": [
+        {
+          "busy_row": 1831,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 48
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 17,
+      "sku": "21025",
+      "base_sku": "21025",
+      "title": "LINC MAXWELL BALL PEN BLUE",
+      "variant": "",
+      "old_qty": 400,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1233,
+      "busy_rows": [
+        {
+          "busy_row": 1835,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 1233
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 18,
+      "sku": "21026",
+      "base_sku": "21026",
+      "title": "LINC MEETING G1 BALL PEN BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1836,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 20,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 19,
+      "sku": "21027",
+      "base_sku": "21027",
+      "title": "LINC MORRIS 3 IN 1 BALL PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1837,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 20,
+      "sku": "21038",
+      "base_sku": "21038",
+      "title": "LINC TYCOON LAZOR AXO BLACK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 25,
+      "busy_rows": [
+        {
+          "busy_row": 1852,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 20,
+          "cl_qty": 25
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 21,
+      "sku": "21037",
+      "base_sku": "21037",
+      "title": "LINC SOLUTION GEOMETRY BOX",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 1851,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 150,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 22,
+      "sku": "9960",
+      "base_sku": "9960",
+      "title": "LINC BENSIA NON-SHARPENED PENCIL PACK OF 10PCS",
+      "variant": "",
+      "old_qty": 42,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 42,
+      "busy_rows": [
+        {
+          "busy_row": 1819,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 7,
+          "cl_qty": 42
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 23,
+      "sku": "10686",
+      "base_sku": "10686",
+      "title": "LINC GELTONIC GEL PEN ASSORTED",
+      "variant": "",
+      "old_qty": 21,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 21,
+      "busy_rows": [
+        {
+          "busy_row": 2791,
+          "item_group": "PENTONIC",
+          "item_name": "",
+          "mrp": 200,
+          "cl_qty": 21
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 24,
+      "sku": "17277-C",
+      "base_sku": "17277",
+      "title": "LINC OCEAN GEL PEN PACK OF 10PCS - BLACK",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 5,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1839,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 145
+        }
+      ]
+    },
+    {
+      "row": 25,
+      "sku": "17276-C",
+      "base_sku": "17276",
+      "title": "LINC OCEAN GEL PEN PACK OF 10PCS - BLUE",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 10,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1838,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 380
+        }
+      ]
+    },
+    {
+      "row": 26,
+      "sku": "17282-C",
+      "base_sku": "17282",
+      "title": "LINC OCEAN GEL PEN PACK OF 10PCS - RED",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 10,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1840,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 150
+        }
+      ]
+    },
+    {
+      "row": 27,
+      "sku": "9961-GC02",
+      "base_sku": "9961",
+      "title": "LINC EXECUTIVE GEL PEN - BLUE",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 100,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1820,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 20,
+          "cl_qty": 675
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "sku": "9961-GC03",
+      "base_sku": "9961",
+      "title": "LINC EXECUTIVE GEL PEN - BLACK",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 100,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1820,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 20,
+          "cl_qty": 675
+        }
+      ]
+    },
+    {
+      "row": 29,
+      "sku": "9961-GC01",
+      "base_sku": "9961",
+      "title": "LINC EXECUTIVE GEL PEN - RED",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 20,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1820,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 20,
+          "cl_qty": 675
+        }
+      ]
+    },
+    {
+      "row": 30,
+      "sku": "17846-C",
+      "base_sku": "17846",
+      "title": "LINC MAXO FINE BALL PEN PACK OF 5PCS - BLACK",
+      "variant": "",
+      "old_qty": 40,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 40,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1832,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 1023
+        }
+      ]
+    },
+    {
+      "row": 31,
+      "sku": "17847-C",
+      "base_sku": "17847",
+      "title": "LINC MAXO FINE BALL PEN PACK OF 5PCS - BLUE",
+      "variant": "",
+      "old_qty": 50,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 50,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1833,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 7,
+          "cl_qty": 778
+        }
+      ]
+    },
+    {
+      "row": 32,
+      "sku": "17848-C",
+      "base_sku": "17848",
+      "title": "LINC MAXO FINE BALL PEN PACK OF 5PCS - RED",
+      "variant": "",
+      "old_qty": 50,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 50,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1834,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 82
+        }
+      ]
+    },
+    {
+      "row": 33,
+      "sku": "21014-C-GC05",
+      "base_sku": "21014",
+      "title": "LINC GLYCER BALL PEN PACK OF 10 PCS - BLACK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 0,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 34,
+      "sku": "21014-C-GC04",
+      "base_sku": "21014",
+      "title": "LINC GLYCER BALL PEN PACK OF 10 PCS - BLUE",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 5,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 35,
+      "sku": "9967-C-GC02",
+      "base_sku": "9967",
+      "title": "LINC SIGNETTA BALL PEN PACK OF 10 PCS - BLACK",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 2,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1850,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 20,
+          "cl_qty": 86
+        }
+      ]
+    },
+    {
+      "row": 36,
+      "sku": "9967-C-GC01",
+      "base_sku": "9967",
+      "title": "LINC SIGNETTA BALL PEN PACK OF 10 PCS - BLUE",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 5,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1850,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 20,
+          "cl_qty": 86
+        }
+      ]
+    },
+    {
+      "row": 37,
+      "sku": "21014-C-GC03",
+      "base_sku": "21014",
+      "title": "LINC GLYCER BALL PEN PACK OF 10 PCS - GREEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 0,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 38,
+      "sku": "21014-C-GC02",
+      "base_sku": "21014",
+      "title": "LINC GLYCER BALL PEN PACK OF 10 PCS - PINK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 0,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    },
+    {
+      "row": 39,
+      "sku": "21014-C-GC01",
+      "base_sku": "21014",
+      "title": "LINC GLYCER BALL PEN PACK OF 10 PCS - VIOLET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 5,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1822,
+          "item_group": "LINC",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 168
+        }
+      ]
+    }
+  ]
+}

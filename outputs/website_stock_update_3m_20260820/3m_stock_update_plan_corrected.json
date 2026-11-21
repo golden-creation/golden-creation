@@ -1,0 +1,703 @@
+{
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "target_file": "C:\\Users\\My-PC-Win10\\Downloads\\3M Products for Website Stock.xlsx",
+  "sheet": "Products",
+  "sku_column": "P",
+  "website_stock_column": "Q",
+  "website_stock_header": "Variant Inventory Qty",
+  "target_rows": 23,
+  "matched_rows": 22,
+  "missing_rows": 0,
+  "ambiguous_rows": 1,
+  "changed_rows": 14,
+  "unchanged_rows": 8,
+  "duplicate_resolved_rows": 0,
+  "negative_new_qty_rows": 1,
+  "rows": [
+    {
+      "excel_row": 2,
+      "sku": "10121",
+      "handle": "10121",
+      "title": "3M 17002 HOOK",
+      "brand": "3M",
+      "old_variant_inventory_qty": 6,
+      "new_variant_inventory_qty": 0,
+      "chosen_busy_row": 10,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M 17002 HOOK 99",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 10,
+          "item_code": "10121",
+          "item_group": "3M",
+          "item_details": "3M 17002 HOOK 99",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "excel_row": 3,
+      "sku": "10120",
+      "handle": "10120",
+      "title": "3M 17001 HOOK",
+      "brand": "3M",
+      "old_variant_inventory_qty": 6,
+      "new_variant_inventory_qty": 6,
+      "chosen_busy_row": 9,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M 17001 HOOK 165",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 9,
+          "item_code": "10120",
+          "item_group": "3M",
+          "item_details": "3M 17001 HOOK 165",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "excel_row": 4,
+      "sku": "10122",
+      "handle": "10122",
+      "title": "3M 17004 HOOK",
+      "brand": "3M",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 4,
+      "chosen_busy_row": 11,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M 17004 HOOK 249",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 11,
+          "item_code": "10122",
+          "item_group": "3M",
+          "item_details": "3M 17004 HOOK 249",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "excel_row": 5,
+      "sku": "10123",
+      "handle": "10123",
+      "title": "3M 17066 HOOK",
+      "brand": "3M",
+      "old_variant_inventory_qty": 5,
+      "new_variant_inventory_qty": 5,
+      "chosen_busy_row": 12,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M 17066 HOOK 99",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 12,
+          "item_code": "10123",
+          "item_group": "3M",
+          "item_details": "3M 17066 HOOK 99",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "excel_row": 6,
+      "sku": "10127",
+      "handle": "10127",
+      "title": "3M DOUBLE TAPE 1.8 x 3M",
+      "brand": "3M",
+      "old_variant_inventory_qty": 17,
+      "new_variant_inventory_qty": 0,
+      "chosen_busy_row": 17,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M DOUBLE TAPE 1.8 x 3M 130",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 17,
+          "item_code": "10127",
+          "item_group": "3M",
+          "item_details": "3M DOUBLE TAPE 1.8 x 3M 130",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "excel_row": 7,
+      "sku": "10131",
+      "handle": "10131",
+      "title": "3M DOUBLE TAPE 2.4 x 3M",
+      "brand": "3M",
+      "old_variant_inventory_qty": 7,
+      "new_variant_inventory_qty": 2,
+      "chosen_busy_row": 18,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M DOUBLE TAPE 2.4 x 3M 165",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 18,
+          "item_code": "10131",
+          "item_group": "3M",
+          "item_details": "3M DOUBLE TAPE 2.4 x 3M 165",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "excel_row": 8,
+      "sku": "19107",
+      "handle": "19107",
+      "title": "3M DOUBLE TAPE EXTREME",
+      "brand": "3M",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": -1,
+      "chosen_busy_row": 19,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M DOUBLE TAPE EXTREME 320",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 19,
+          "item_code": "19107",
+          "item_group": "3M",
+          "item_details": "3M DOUBLE TAPE EXTREME 320",
+          "cl_qty": -1
+        }
+      ]
+    },
+    {
+      "excel_row": 9,
+      "sku": "10124",
+      "handle": "10124",
+      "title": "3M 17067 HOOK",
+      "brand": "3M",
+      "old_variant_inventory_qty": 6,
+      "new_variant_inventory_qty": 4,
+      "chosen_busy_row": 13,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M 17067 HOOK 169",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 13,
+          "item_code": "10124",
+          "item_group": "3M",
+          "item_details": "3M 17067 HOOK 169",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "excel_row": 10,
+      "sku": "10125",
+      "handle": "10125",
+      "title": "3M 17081 HOOK",
+      "brand": "3M",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 3,
+      "chosen_busy_row": 14,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M 17081 HOOK 199",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 14,
+          "item_code": "10125",
+          "item_group": "3M",
+          "item_details": "3M 17081 HOOK 199",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "excel_row": 11,
+      "sku": "10126",
+      "handle": "10126",
+      "title": "3M 17082 HOOKS",
+      "brand": "3M",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 4,
+      "chosen_busy_row": 15,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M 17082 HOOKS 149",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 15,
+          "item_code": "10126",
+          "item_group": "3M",
+          "item_details": "3M 17082 HOOKS 149",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "excel_row": 12,
+      "sku": "8527",
+      "handle": "8527",
+      "title": "3M DOUBLE TAPE 1.2 x 3M",
+      "brand": "3M",
+      "old_variant_inventory_qty": 17,
+      "new_variant_inventory_qty": 6,
+      "chosen_busy_row": 16,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M DOUBLE TAPE 1.2 x 3M 110",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 16,
+          "item_code": "8527",
+          "item_group": "3M",
+          "item_details": "3M DOUBLE TAPE 1.2 x 3M 110",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "excel_row": 13,
+      "sku": "8530",
+      "handle": "8530",
+      "title": "3M PAGE MARKERS 3 COLOUM",
+      "brand": "3M",
+      "old_variant_inventory_qty": 20,
+      "new_variant_inventory_qty": 6,
+      "chosen_busy_row": 20,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M PAGE MARKERS 3 COL 60",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 20,
+          "item_code": "8530",
+          "item_group": "3M",
+          "item_details": "3M PAGE MARKERS 3 COL 60",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "excel_row": 14,
+      "sku": "8526",
+      "handle": "8526",
+      "title": "3M PAGE MARKERS 4 COLOUM",
+      "brand": "3M",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "chosen_busy_row": 21,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M PAGE MARKERS 4 COL 70",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 21,
+          "item_code": "8526",
+          "item_group": "3M",
+          "item_details": "3M PAGE MARKERS 4 COL 70",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "excel_row": 15,
+      "sku": "8535",
+      "handle": "8535",
+      "title": "3M POST-IT FLAGS 3 COLOUM",
+      "brand": "3M",
+      "old_variant_inventory_qty": 21,
+      "new_variant_inventory_qty": 17,
+      "chosen_busy_row": 22,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M POST-IT FLAGS 3 COL 70",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 22,
+          "item_code": "8535",
+          "item_group": "3M",
+          "item_details": "3M POST-IT FLAGS 3 COL 70",
+          "cl_qty": 17
+        }
+      ]
+    },
+    {
+      "excel_row": 16,
+      "sku": "8534",
+      "handle": "8534",
+      "title": "3M POST-IT PADS 1.5 X2",
+      "brand": "3M",
+      "old_variant_inventory_qty": 17,
+      "new_variant_inventory_qty": 17,
+      "chosen_busy_row": 25,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M POST-IT PADS 1.5 X2 35",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 25,
+          "item_code": "8534",
+          "item_group": "3M",
+          "item_details": "3M POST-IT PADS 1.5 X2 35",
+          "cl_qty": 17
+        }
+      ]
+    },
+    {
+      "excel_row": 17,
+      "sku": "8533",
+      "handle": "8533",
+      "title": "3M POST-IT PADS 2X3",
+      "brand": "3M",
+      "old_variant_inventory_qty": 16,
+      "new_variant_inventory_qty": 15,
+      "chosen_busy_row": 26,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M POST-IT PADS 2X3 50",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 26,
+          "item_code": "8533",
+          "item_group": "3M",
+          "item_details": "3M POST-IT PADS 2X3 50",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "excel_row": 18,
+      "sku": "8532",
+      "handle": "8532",
+      "title": "3M POST-IT PADS 3X3",
+      "brand": "3M",
+      "old_variant_inventory_qty": 36,
+      "new_variant_inventory_qty": 19,
+      "chosen_busy_row": 27,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M POST-IT PADS 3X3 70",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 27,
+          "item_code": "8532",
+          "item_group": "3M",
+          "item_details": "3M POST-IT PADS 3X3 70",
+          "cl_qty": 19
+        }
+      ]
+    },
+    {
+      "excel_row": 19,
+      "sku": "8525",
+      "handle": "8525",
+      "title": "3M POST-IT PADS 3X4",
+      "brand": "3M",
+      "old_variant_inventory_qty": 11,
+      "new_variant_inventory_qty": 11,
+      "chosen_busy_row": 29,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M POST-IT PADS 3X4 100",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 29,
+          "item_code": "8525",
+          "item_group": "3M",
+          "item_details": "3M POST-IT PADS 3X4 100",
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "excel_row": 20,
+      "sku": "9427",
+      "handle": "9427",
+      "title": "3M POST-IT PADS 3X5",
+      "brand": "3M",
+      "old_variant_inventory_qty": 13,
+      "new_variant_inventory_qty": 13,
+      "chosen_busy_row": 30,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M POST-IT PADS 3X5 115",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 30,
+          "item_code": "9427",
+          "item_group": "3M",
+          "item_details": "3M POST-IT PADS 3X5 115",
+          "cl_qty": 13
+        }
+      ]
+    },
+    {
+      "excel_row": 21,
+      "sku": "10130",
+      "handle": "10130",
+      "title": "3M SCOTCH TAPE WITH DISPENSER",
+      "brand": "3M",
+      "old_variant_inventory_qty": 6,
+      "new_variant_inventory_qty": 17,
+      "chosen_busy_row": 31,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M SCOTCH TAPE WITH DISPENSER 185",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 31,
+          "item_code": "10130",
+          "item_group": "3M",
+          "item_details": "3M SCOTCH TAPE WITH DISPENSER 185",
+          "cl_qty": 17
+        }
+      ]
+    },
+    {
+      "excel_row": 22,
+      "sku": "8529",
+      "handle": "8529",
+      "title": "3M SCOTCH TAPE WITH OUT DISPENSER",
+      "brand": "3M",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 10,
+      "chosen_busy_row": 32,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M SCOTCH TAPE WITH OUT DISPENSER 170",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 32,
+          "item_code": "8529",
+          "item_group": "3M",
+          "item_details": "3M SCOTCH TAPE WITH OUT DISPENSER 170",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "excel_row": 23,
+      "sku": "19110",
+      "handle": "19110",
+      "title": "3M POST-IT PADS 3X3 MULTI COLOUM",
+      "brand": "3M",
+      "old_variant_inventory_qty": 43,
+      "new_variant_inventory_qty": 42,
+      "chosen_busy_row": 28,
+      "chosen_busy_item_group": "3M",
+      "chosen_busy_item_details": "3M POST-IT PADS 3X3 MULTI COL 75",
+      "candidate_count": 1,
+      "status": "Matched",
+      "match_reason": "single exact ITEM CODE match",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 28,
+          "item_code": "19110",
+          "item_group": "3M",
+          "item_details": "3M POST-IT PADS 3X3 MULTI COL 75",
+          "cl_qty": 42
+        }
+      ]
+    },
+    {
+      "excel_row": 24,
+      "sku": "8536",
+      "handle": "8536",
+      "title": "3M POST IT FLAGS 5 COLOR",
+      "brand": "3M",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": null,
+      "chosen_busy_row": "",
+      "chosen_busy_item_group": "",
+      "chosen_busy_item_details": "",
+      "candidate_count": 2,
+      "status": "Ambiguous Duplicate Busy Code",
+      "match_reason": "ambiguous duplicate ITEM CODE; no safe automatic update",
+      "candidate_busy_rows": [
+        {
+          "busy_row": 23,
+          "item_code": "8536",
+          "item_group": "3M",
+          "item_details": "3M POST-IT FLAGS 5 COL 65",
+          "cl_qty": 2
+        },
+        {
+          "busy_row": 24,
+          "item_code": "8536",
+          "item_group": "3M",
+          "item_details": "3M POST-IT FLAGS 5 COL 75",
+          "cl_qty": 17
+        }
+      ]
+    }
+  ],
+  "changed": [
+    {
+      "excel_row": 2,
+      "sku": "10121",
+      "title": "3M 17002 HOOK",
+      "old_qty": 6,
+      "new_qty": 0
+    },
+    {
+      "excel_row": 6,
+      "sku": "10127",
+      "title": "3M DOUBLE TAPE 1.8 x 3M",
+      "old_qty": 17,
+      "new_qty": 0
+    },
+    {
+      "excel_row": 7,
+      "sku": "10131",
+      "title": "3M DOUBLE TAPE 2.4 x 3M",
+      "old_qty": 7,
+      "new_qty": 2
+    },
+    {
+      "excel_row": 8,
+      "sku": "19107",
+      "title": "3M DOUBLE TAPE EXTREME",
+      "old_qty": 4,
+      "new_qty": -1
+    },
+    {
+      "excel_row": 9,
+      "sku": "10124",
+      "title": "3M 17067 HOOK",
+      "old_qty": 6,
+      "new_qty": 4
+    },
+    {
+      "excel_row": 11,
+      "sku": "10126",
+      "title": "3M 17082 HOOKS",
+      "old_qty": 1,
+      "new_qty": 4
+    },
+    {
+      "excel_row": 12,
+      "sku": "8527",
+      "title": "3M DOUBLE TAPE 1.2 x 3M",
+      "old_qty": 17,
+      "new_qty": 6
+    },
+    {
+      "excel_row": 13,
+      "sku": "8530",
+      "title": "3M PAGE MARKERS 3 COLOUM",
+      "old_qty": 20,
+      "new_qty": 6
+    },
+    {
+      "excel_row": 15,
+      "sku": "8535",
+      "title": "3M POST-IT FLAGS 3 COLOUM",
+      "old_qty": 21,
+      "new_qty": 17
+    },
+    {
+      "excel_row": 17,
+      "sku": "8533",
+      "title": "3M POST-IT PADS 2X3",
+      "old_qty": 16,
+      "new_qty": 15
+    },
+    {
+      "excel_row": 18,
+      "sku": "8532",
+      "title": "3M POST-IT PADS 3X3",
+      "old_qty": 36,
+      "new_qty": 19
+    },
+    {
+      "excel_row": 21,
+      "sku": "10130",
+      "title": "3M SCOTCH TAPE WITH DISPENSER",
+      "old_qty": 6,
+      "new_qty": 17
+    },
+    {
+      "excel_row": 22,
+      "sku": "8529",
+      "title": "3M SCOTCH TAPE WITH OUT DISPENSER",
+      "old_qty": 1,
+      "new_qty": 10
+    },
+    {
+      "excel_row": 23,
+      "sku": "19110",
+      "title": "3M POST-IT PADS 3X3 MULTI COLOUM",
+      "old_qty": 43,
+      "new_qty": 42
+    }
+  ],
+  "missing": [],
+  "ambiguous": [
+    {
+      "excel_row": 24,
+      "sku": "8536",
+      "title": "3M POST IT FLAGS 5 COLOR",
+      "brand": "3M",
+      "candidates": [
+        {
+          "busy_row": 23,
+          "item_code": "8536",
+          "item_group": "3M",
+          "item_details": "3M POST-IT FLAGS 5 COL 65",
+          "cl_qty": 2
+        },
+        {
+          "busy_row": 24,
+          "item_code": "8536",
+          "item_group": "3M",
+          "item_details": "3M POST-IT FLAGS 5 COL 75",
+          "cl_qty": 17
+        }
+      ]
+    }
+  ],
+  "duplicate_resolved": []
+}

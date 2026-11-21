@@ -1,0 +1,1 @@
+var e=`/assets/clock%20(1)-TJHZRWIw.png`;export{e as t};

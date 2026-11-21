@@ -1,0 +1,1 @@
+var e=`/assets/undo-BdK1ni-N.png`;export{e as t};

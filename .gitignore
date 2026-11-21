@@ -1,0 +1,17 @@
+**/node_modules/
+**/.env
+**/.env.*
+!**/.env.example
+
+**/local-*.log
+*.log
+*.pyc
+__pycache__/
+
+deploy-artifacts/
+tmp/
+tmp-invoice-render/
+*.tgz
+*.tar.gz
+tmp-gc-sample-invoice-techdev.pdf
+tmp-gc-sample-invoice.pdf

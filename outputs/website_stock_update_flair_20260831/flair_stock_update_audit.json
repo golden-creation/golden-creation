@@ -1,0 +1,556 @@
+{
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (32).xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_flair_20260831\\flair products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\flair products - Updated Website Stock.xlsx",
+  "status_counts": {
+    "Matched": 29,
+    "No Busy Match": 5
+  },
+  "changed_rows": 20,
+  "rows": [
+    {
+      "row": 2,
+      "sku": "20457",
+      "title": "FLAIR REFILL WRITO METER",
+      "brand": "Flair",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1161,
+          "item_group": "FLAIR ",
+          "item_details": "FL REFILL WRITO METER  10",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "sku": "20452",
+      "title": "FLAIR GLITTER GEL PEN BLUE",
+      "brand": "Flair",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1145,
+          "item_group": "FLAIR ",
+          "item_details": "FL GLITTER GP BL 100",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "sku": "20453",
+      "title": "FLAIR HI FASHION GEL PEN BLUE",
+      "brand": "Flair",
+      "old_qty": 32,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1147,
+          "item_group": "FLAIR ",
+          "item_details": "FL HI FASHION GP BL 10\"",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "sku": "20456",
+      "title": "FLAIR MASTER INK PEN",
+      "brand": "Flair",
+      "old_qty": 0,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1153,
+          "item_group": "FLAIR ",
+          "item_details": "FL MASTER INK PEN 100 \"",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "sku": "20459",
+      "title": "FLAIR SKIN  BALL PEN BLUE",
+      "brand": "Flair",
+      "old_qty": 0,
+      "new_qty": 57,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1166,
+          "item_group": "FLAIR ",
+          "item_details": "FL SKIN  BP BL 50",
+          "cl_qty": 57
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "sku": "20460",
+      "title": "FLAIR SLIM BALL PEN",
+      "brand": "Flair",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1167,
+          "item_group": "FLAIR ",
+          "item_details": "FL SLIM BALL PEN 60 \"",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "sku": "20461",
+      "title": "FLAIR WAX HIGHLIGTER",
+      "brand": "Flair",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1171,
+          "item_group": "FLAIR ",
+          "item_details": "FL WAX HIGHLIGTER 25",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "sku": "8808",
+      "title": "FLAIR INKY CARS FOUNTAIN PEN",
+      "brand": "Flair",
+      "old_qty": 37,
+      "new_qty": 34,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1134,
+          "item_group": "FLAIR ",
+          "item_details": "FL CARS INK FP 50",
+          "cl_qty": 34
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "sku": "8809",
+      "title": "FLAIR INKY NEON LIQUID INK FOUNTAIN PEN",
+      "brand": "Flair",
+      "old_qty": 37,
+      "new_qty": 37,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1154,
+          "item_group": "FLAIR ",
+          "item_details": "FL NEON INK FP 60",
+          "cl_qty": 37
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "sku": "8803",
+      "title": "FLAIR CARBONIX BALL PEN PACK OF 10PCS",
+      "brand": "Flair",
+      "old_qty": 843,
+      "new_qty": 838,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1133,
+          "item_group": "FLAIR ",
+          "item_details": "FL CARBONIX BP 10",
+          "cl_qty": 838
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "sku": "8805-C",
+      "title": "FLAIR EZEE CLICK PRO BALL PEN PACK OF 10PCS",
+      "brand": "Flair",
+      "old_qty": 8,
+      "new_qty": 8,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 13,
+      "sku": "8818",
+      "title": "FLAIR AIR 3IN1 BALL PEN BLACK,BLUE,RED INK",
+      "brand": "Flair",
+      "old_qty": 19,
+      "new_qty": 18,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1131,
+          "item_group": "FLAIR ",
+          "item_details": "FL AIR 3-1 BALL PEN 30",
+          "cl_qty": 18
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "sku": "8821",
+      "title": "FLAIR WRITO METER BALL PEN PACK OF 10PCS",
+      "brand": "Flair",
+      "old_qty": 568,
+      "new_qty": 155,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1175,
+          "item_group": "FLAIR ",
+          "item_details": "FL WRITO METER BALL PEN 25\"",
+          "cl_qty": 155
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "sku": "8810",
+      "title": "FLAIR JAZZ BALL PEN BLUE",
+      "brand": "Flair",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1149,
+          "item_group": "FLAIR ",
+          "item_details": "FL JAZZ BP BL 60",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "sku": "8814",
+      "title": "FLAIR POP GEL PEN",
+      "brand": "Flair",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1158,
+          "item_group": "FLAIR ",
+          "item_details": "FL POP GEL PEN 10",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "sku": "8817",
+      "title": "FLAIR TECHNO GEL PACK OF 10PCS",
+      "brand": "Flair",
+      "old_qty": 50,
+      "new_qty": 69,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1169,
+          "item_group": "FLAIR ",
+          "item_details": "FL TECHNO GEL PEN 15",
+          "cl_qty": 69
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "sku": "8822",
+      "title": "FLAIR WRITOMETER DLX GEL PEN PACK OF 10 PCS",
+      "brand": "Flair",
+      "old_qty": 1211,
+      "new_qty": 1063,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1176,
+          "item_group": "FLAIR ",
+          "item_details": "FL WRITO METER DLX GEL PEN 20",
+          "cl_qty": 1063
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "sku": "8823",
+      "title": "FLAIR WRITOMETER JUMBO BALL PEN PACK OF 10PCS",
+      "brand": "Flair",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1178,
+          "item_group": "FLAIR ",
+          "item_details": "FL WRITO METER JUMBO BALL PEN 30",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "sku": "8824",
+      "title": "FLAIR SUNNY 4 IN 1 BALL PEN",
+      "brand": "Flair",
+      "old_qty": 238,
+      "new_qty": 237,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1130,
+          "item_group": "FLAIR ",
+          "item_details": "FL 4 IN 1 SUNNY BP 30",
+          "cl_qty": 237
+        }
+      ]
+    },
+    {
+      "row": 21,
+      "sku": "17804-C",
+      "title": "FLAIR EZEE CLICK BALL PEN PACK OF 5 PCS - BLUE",
+      "brand": "Flair",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 22,
+      "sku": "17805-C",
+      "title": "FLAIR EZEE CLICK BALL PEN PACK OF 5 PCS - RED",
+      "brand": "Flair",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 23,
+      "sku": "19230",
+      "title": "FLAIR GOLD 3IN1 BALL PEN BLACK,BLUE,RED INK COLOR",
+      "brand": "Flair",
+      "old_qty": 10,
+      "new_qty": 9,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1146,
+          "item_group": "FLAIR ",
+          "item_details": "FL GOLD 3IN1 BALL PEN 50",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "sku": "19233",
+      "title": "FLAIR KIEMAYA BALL PEN",
+      "brand": "Flair",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1150,
+          "item_group": "FLAIR ",
+          "item_details": "FL KIEMAYA BALL PEN 60",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 25,
+      "sku": "8816-GC02",
+      "title": "FLAIR 1800 LIQUID INK PEN - BLACK",
+      "brand": "Flair",
+      "old_qty": 2,
+      "new_qty": 2,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 26,
+      "sku": "8816-GC01",
+      "title": "FLAIR 1800 LIQUID INK PEN - BLUE",
+      "brand": "Flair",
+      "old_qty": 5,
+      "new_qty": 5,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 27,
+      "sku": "19226",
+      "title": "FLAIR GLASS GEL BLUE PEN PACK OF 10PCS",
+      "brand": "Flair",
+      "old_qty": 63,
+      "new_qty": 52,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1144,
+          "item_group": "FLAIR ",
+          "item_details": "FL GLASS GP BL 10",
+          "cl_qty": 52
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "sku": "19236",
+      "title": "FLAIR WOODY BALL PEN PACK OF 10PCS",
+      "brand": "Flair",
+      "old_qty": 292,
+      "new_qty": 291,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1174,
+          "item_group": "FLAIR ",
+          "item_details": "FL WOODY BALL PEN",
+          "cl_qty": 291
+        }
+      ]
+    },
+    {
+      "row": 29,
+      "sku": "19238",
+      "title": "FLAIR RAPID GEL PEN PACK OF 10PCS",
+      "brand": "Flair",
+      "old_qty": 200,
+      "new_qty": 14,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1160,
+          "item_group": "FLAIR ",
+          "item_details": "FL RAPID GEL PEN 10",
+          "cl_qty": 14
+        }
+      ]
+    },
+    {
+      "row": 30,
+      "sku": "19259",
+      "title": "FLAIR NEON TRENDY GEL PEN SET PACK OF 5PCS",
+      "brand": "Flair",
+      "old_qty": 0,
+      "new_qty": 28,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1155,
+          "item_group": "FLAIR ",
+          "item_details": "FL NEON TRENDY GP SET 50",
+          "cl_qty": 28
+        }
+      ]
+    },
+    {
+      "row": 31,
+      "sku": "19243",
+      "title": "ZOOX X7 GEL PEN",
+      "brand": "Flair",
+      "old_qty": 31,
+      "new_qty": 31,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1180,
+          "item_group": "FLAIR ",
+          "item_details": "FL ZOOX X7 PEN 75",
+          "cl_qty": 31
+        }
+      ]
+    },
+    {
+      "row": 32,
+      "sku": "19245",
+      "title": "ZOOX H7 LIQUID INK RETRACTABLE PEN",
+      "brand": "Flair",
+      "old_qty": 18,
+      "new_qty": 14,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1179,
+          "item_group": "FLAIR ",
+          "item_details": "FL ZOOX H7 PEN 60",
+          "cl_qty": 14
+        }
+      ]
+    },
+    {
+      "row": 33,
+      "sku": "19251",
+      "title": "FLAIR TREK BALL PEN PACK OF 10PCS",
+      "brand": "Flair",
+      "old_qty": 281,
+      "new_qty": 205,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1170,
+          "item_group": "FLAIR ",
+          "item_details": "FL TREK BALL PEN 10",
+          "cl_qty": 205
+        }
+      ]
+    },
+    {
+      "row": 34,
+      "sku": "19254",
+      "title": "FLAIR WRITO METER EXECUTIVE BALL PEN",
+      "brand": "Flair",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1177,
+          "item_group": "FLAIR ",
+          "item_details": "FL WRITO METER EXECUTIVE BALL PEN 50",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 35,
+      "sku": "19256",
+      "title": "FLAIR SRX RETRACTABLE BALL PEN PACK OF 10PCS",
+      "brand": "Flair",
+      "old_qty": 196,
+      "new_qty": 124,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1168,
+          "item_group": "FLAIR ",
+          "item_details": "FL SRX BALL PEN 10",
+          "cl_qty": 124
+        }
+      ]
+    }
+  ]
+}

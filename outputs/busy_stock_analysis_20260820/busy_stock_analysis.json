@@ -1,0 +1,2748 @@
+{
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "shopify_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (7).xlsx",
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "max_row": 4983,
+      "max_column": 24,
+      "header_row": 1,
+      "headers": [
+        "ITEM CODE",
+        "Item Details",
+        "ITEM GROUP",
+        "Tax",
+        "BARCODE",
+        "Weight",
+        "Parent Group",
+        "Unit",
+        "MRP",
+        "DP",
+        "HSN CODE",
+        "Op.Qty",
+        "Op.Amt.",
+        "Purc.",
+        "Amt.In",
+        "Qty In(Others)",
+        "Amt.In(Others)",
+        "Sale",
+        "Amt.Out",
+        "Qty.Out (Others)",
+        "Amt.Out(Others)",
+        "Cl. Qty",
+        "REMARKS",
+        "Cl. Amt."
+      ],
+      "columns": {
+        "item_code": 0,
+        "item_group": 2,
+        "item_name": 1,
+        "cl_qty": 21
+      },
+      "data_row_count": 4981
+    }
+  ],
+  "primary_sheet": "Sheet1",
+  "primary_header_row": 1,
+  "primary_headers": [
+    "ITEM CODE",
+    "Item Details",
+    "ITEM GROUP",
+    "Tax",
+    "BARCODE",
+    "Weight",
+    "Parent Group",
+    "Unit",
+    "MRP",
+    "DP",
+    "HSN CODE",
+    "Op.Qty",
+    "Op.Amt.",
+    "Purc.",
+    "Amt.In",
+    "Qty In(Others)",
+    "Amt.In(Others)",
+    "Sale",
+    "Amt.Out",
+    "Qty.Out (Others)",
+    "Amt.Out(Others)",
+    "Cl. Qty",
+    "REMARKS",
+    "Cl. Amt."
+  ],
+  "columns": {
+    "item_code": 0,
+    "item_group": 2,
+    "item_name": 1,
+    "cl_qty": 21
+  },
+  "row_count": 4981,
+  "nonblank_item_code_rows": 4978,
+  "unique_item_codes": 4928,
+  "unique_leading_codes": 4925,
+  "item_group_count": 169,
+  "top_item_groups": [
+    [
+      "NEELGAGAN",
+      259
+    ],
+    [
+      "SCHOLAR",
+      241
+    ],
+    [
+      "PREMIUM",
+      202
+    ],
+    [
+      "SHEAFFER",
+      192
+    ],
+    [
+      "CROSS",
+      175
+    ],
+    [
+      "SOLO",
+      174
+    ],
+    [
+      "STAEDTLER",
+      163
+    ],
+    [
+      "OTHO",
+      129
+    ],
+    [
+      "PIERRE CARDIN",
+      128
+    ],
+    [
+      "FEVICOL",
+      125
+    ],
+    [
+      "UNIBALL",
+      116
+    ],
+    [
+      "PF NOTE BOOK",
+      111
+    ],
+    [
+      "CAMLIN",
+      106
+    ],
+    [
+      "SHIPRA",
+      96
+    ],
+    [
+      "LAMY",
+      89
+    ],
+    [
+      "DELI",
+      87
+    ],
+    [
+      "PILOT PREMIUM",
+      85
+    ],
+    [
+      "PORTRONICS",
+      84
+    ],
+    [
+      "CELLO",
+      68
+    ],
+    [
+      "KANGARO - MUNIX",
+      68
+    ],
+    [
+      "STICKY PAD",
+      67
+    ],
+    [
+      "NATARAJ",
+      61
+    ],
+    [
+      "INTELLIO",
+      56
+    ],
+    [
+      "WATERMEN",
+      56
+    ],
+    [
+      "PILOT NORMAL",
+      49
+    ],
+    [
+      "KEBICA",
+      48
+    ],
+    [
+      "HOPAX",
+      46
+    ],
+    [
+      "KORES",
+      44
+    ],
+    [
+      "ADDGEL",
+      42
+    ],
+    [
+      "CASIO",
+      40
+    ],
+    [
+      "PENTEL",
+      39
+    ],
+    [
+      "UNOMAX",
+      39
+    ],
+    [
+      "ASTER",
+      38
+    ],
+    [
+      "DOMS",
+      38
+    ],
+    [
+      "FLAIR",
+      36
+    ],
+    [
+      "VECTOR",
+      36
+    ],
+    [
+      "LINC",
+      35
+    ],
+    [
+      "ADWELL",
+      32
+    ],
+    [
+      "V CUBE",
+      32
+    ],
+    [
+      "VICTORONIX",
+      32
+    ],
+    [
+      "TORETO",
+      31
+    ],
+    [
+      "TAPE",
+      27
+    ],
+    [
+      "ELEPHANT",
+      27
+    ],
+    [
+      "GIFT ENVELOP PAPER BAGS",
+      27
+    ],
+    [
+      "SCHNEIDER",
+      27
+    ],
+    [
+      "SUPERIO",
+      27
+    ],
+    [
+      "JB9",
+      26
+    ],
+    [
+      "PAPER ENVELOP",
+      26
+    ],
+    [
+      "SCRIKSS",
+      26
+    ],
+    [
+      "LOGITECH",
+      25
+    ]
+  ],
+  "cl_qty_numeric_rows": 4981,
+  "cl_qty_non_numeric_rows": 0,
+  "cl_qty_blank_rows": 0,
+  "cl_qty_total": 317476.88,
+  "cl_qty_positive_rows": 4065,
+  "cl_qty_zero_rows": 853,
+  "cl_qty_negative_rows": 63,
+  "cl_qty_min": -200.0,
+  "cl_qty_max": 158738.44,
+  "duplicate_item_codes": [
+    {
+      "item_code": "8796",
+      "count": 3
+    },
+    {
+      "item_code": "9810",
+      "count": 3
+    },
+    {
+      "item_code": "8536",
+      "count": 2
+    },
+    {
+      "item_code": "16572",
+      "count": 2
+    },
+    {
+      "item_code": "9926",
+      "count": 2
+    },
+    {
+      "item_code": "11896",
+      "count": 2
+    },
+    {
+      "item_code": "8752",
+      "count": 2
+    },
+    {
+      "item_code": "20310",
+      "count": 2
+    },
+    {
+      "item_code": "20311",
+      "count": 2
+    },
+    {
+      "item_code": "17139",
+      "count": 2
+    },
+    {
+      "item_code": "8865",
+      "count": 2
+    },
+    {
+      "item_code": "8871",
+      "count": 2
+    },
+    {
+      "item_code": "12374",
+      "count": 2
+    },
+    {
+      "item_code": "12393",
+      "count": 2
+    },
+    {
+      "item_code": "10711",
+      "count": 2
+    },
+    {
+      "item_code": "10715",
+      "count": 2
+    },
+    {
+      "item_code": "8941",
+      "count": 2
+    },
+    {
+      "item_code": "9043",
+      "count": 2
+    },
+    {
+      "item_code": "17617",
+      "count": 2
+    },
+    {
+      "item_code": "17619",
+      "count": 2
+    },
+    {
+      "item_code": "17510",
+      "count": 2
+    },
+    {
+      "item_code": "30157",
+      "count": 2
+    },
+    {
+      "item_code": "17561",
+      "count": 2
+    },
+    {
+      "item_code": "17556",
+      "count": 2
+    },
+    {
+      "item_code": "17557",
+      "count": 2
+    },
+    {
+      "item_code": "8684",
+      "count": 2
+    },
+    {
+      "item_code": "12161",
+      "count": 2
+    },
+    {
+      "item_code": "12519",
+      "count": 2
+    },
+    {
+      "item_code": "17726",
+      "count": 2
+    },
+    {
+      "item_code": "9143",
+      "count": 2
+    },
+    {
+      "item_code": "9147",
+      "count": 2
+    },
+    {
+      "item_code": "9170",
+      "count": 2
+    },
+    {
+      "item_code": "9171",
+      "count": 2
+    },
+    {
+      "item_code": "9173",
+      "count": 2
+    },
+    {
+      "item_code": "9174",
+      "count": 2
+    },
+    {
+      "item_code": "9175",
+      "count": 2
+    },
+    {
+      "item_code": "9184",
+      "count": 2
+    },
+    {
+      "item_code": "9185",
+      "count": 2
+    },
+    {
+      "item_code": "12546",
+      "count": 2
+    },
+    {
+      "item_code": "19432",
+      "count": 2
+    },
+    {
+      "item_code": "9312",
+      "count": 2
+    },
+    {
+      "item_code": "12532",
+      "count": 2
+    },
+    {
+      "item_code": "12570",
+      "count": 2
+    },
+    {
+      "item_code": "30760",
+      "count": 2
+    },
+    {
+      "item_code": "8773",
+      "count": 2
+    },
+    {
+      "item_code": "9088",
+      "count": 2
+    },
+    {
+      "item_code": "NW",
+      "count": 2
+    },
+    {
+      "item_code": "9885",
+      "count": 2
+    }
+  ],
+  "duplicate_leading_codes": [
+    {
+      "leading_code": "8796",
+      "count": 3
+    },
+    {
+      "leading_code": "9810",
+      "count": 3
+    },
+    {
+      "leading_code": "8536",
+      "count": 2
+    },
+    {
+      "leading_code": "16572",
+      "count": 2
+    },
+    {
+      "leading_code": "9926",
+      "count": 2
+    },
+    {
+      "leading_code": "11896",
+      "count": 2
+    },
+    {
+      "leading_code": "8752",
+      "count": 2
+    },
+    {
+      "leading_code": "20310",
+      "count": 2
+    },
+    {
+      "leading_code": "20311",
+      "count": 2
+    },
+    {
+      "leading_code": "17139",
+      "count": 2
+    },
+    {
+      "leading_code": "8865",
+      "count": 2
+    },
+    {
+      "leading_code": "8871",
+      "count": 2
+    },
+    {
+      "leading_code": "12374",
+      "count": 2
+    },
+    {
+      "leading_code": "12393",
+      "count": 2
+    },
+    {
+      "leading_code": "10711",
+      "count": 2
+    },
+    {
+      "leading_code": "10715",
+      "count": 2
+    },
+    {
+      "leading_code": "8941",
+      "count": 2
+    },
+    {
+      "leading_code": "9043",
+      "count": 2
+    },
+    {
+      "leading_code": "17617",
+      "count": 2
+    },
+    {
+      "leading_code": "17619",
+      "count": 2
+    },
+    {
+      "leading_code": "17510",
+      "count": 2
+    },
+    {
+      "leading_code": "30157",
+      "count": 2
+    },
+    {
+      "leading_code": "17561",
+      "count": 2
+    },
+    {
+      "leading_code": "17556",
+      "count": 2
+    },
+    {
+      "leading_code": "17557",
+      "count": 2
+    },
+    {
+      "leading_code": "8684",
+      "count": 2
+    },
+    {
+      "leading_code": "12161",
+      "count": 2
+    },
+    {
+      "leading_code": "13427",
+      "count": 2
+    },
+    {
+      "leading_code": "12519",
+      "count": 2
+    },
+    {
+      "leading_code": "17726",
+      "count": 2
+    },
+    {
+      "leading_code": "9143",
+      "count": 2
+    },
+    {
+      "leading_code": "9147",
+      "count": 2
+    },
+    {
+      "leading_code": "9170",
+      "count": 2
+    },
+    {
+      "leading_code": "9171",
+      "count": 2
+    },
+    {
+      "leading_code": "9173",
+      "count": 2
+    },
+    {
+      "leading_code": "9174",
+      "count": 2
+    },
+    {
+      "leading_code": "9175",
+      "count": 2
+    },
+    {
+      "leading_code": "9184",
+      "count": 2
+    },
+    {
+      "leading_code": "9185",
+      "count": 2
+    },
+    {
+      "leading_code": "12546",
+      "count": 2
+    },
+    {
+      "leading_code": "19432",
+      "count": 2
+    },
+    {
+      "leading_code": "9312",
+      "count": 2
+    },
+    {
+      "leading_code": "12532",
+      "count": 2
+    },
+    {
+      "leading_code": "12570",
+      "count": 2
+    },
+    {
+      "leading_code": "30760",
+      "count": 2
+    },
+    {
+      "leading_code": "8773",
+      "count": 2
+    },
+    {
+      "leading_code": "9051",
+      "count": 2
+    },
+    {
+      "leading_code": "9088",
+      "count": 2
+    },
+    {
+      "leading_code": "9885",
+      "count": 2
+    }
+  ],
+  "blank_item_code_rows": [
+    {
+      "row": 1986,
+      "item_code": "",
+      "leading_code": "",
+      "item_group": "MB",
+      "item_name": "MB REFIL 825",
+      "cl_qty": -1
+    },
+    {
+      "row": 4441,
+      "item_code": "",
+      "leading_code": "",
+      "item_group": "STAEDTLER",
+      "item_name": "ST 364-23 TEXTS CLSC HIGHLIGHTER PNK 130",
+      "cl_qty": -1
+    },
+    {
+      "row": 4983,
+      "item_code": "",
+      "leading_code": "",
+      "item_group": "",
+      "item_name": "",
+      "cl_qty": 158738.44
+    }
+  ],
+  "negative_qty_sample_rows": [
+    {
+      "row": 19,
+      "item_code": "19107",
+      "leading_code": "19107",
+      "item_group": "3M",
+      "item_name": "3M DOUBLE TAPE EXTREME 320",
+      "cl_qty": -1
+    },
+    {
+      "row": 215,
+      "item_code": "16383",
+      "leading_code": "16383",
+      "item_group": "BAOKE",
+      "item_name": "BAOKE PEN",
+      "cl_qty": -15
+    },
+    {
+      "row": 219,
+      "item_code": "30396",
+      "leading_code": "30396",
+      "item_group": "BATCH",
+      "item_name": "BATCH",
+      "cl_qty": -200
+    },
+    {
+      "row": 304,
+      "item_code": "20176",
+      "leading_code": "20176",
+      "item_group": "CASIO",
+      "item_name": "CASIO SL 760 LC CARD SIZE CALCULATOR 250",
+      "cl_qty": -1
+    },
+    {
+      "row": 332,
+      "item_code": "20203",
+      "leading_code": "20203",
+      "item_group": "CELLO",
+      "item_name": "CELLO MAXRITER BALL PEN 10\"",
+      "cl_qty": -2
+    },
+    {
+      "row": 384,
+      "item_code": "19144",
+      "leading_code": "19144",
+      "item_group": "CENTURY",
+      "item_name": "CENTURY A4 75GSM PAPER 300",
+      "cl_qty": -13
+    },
+    {
+      "row": 727,
+      "item_code": "20266",
+      "leading_code": "20266",
+      "item_group": "DELI",
+      "item_name": "DELI 01302 STICKY NOTES 100 SHEET 60",
+      "cl_qty": -1
+    },
+    {
+      "row": 785,
+      "item_code": "20310",
+      "leading_code": "20310",
+      "item_group": "DELI",
+      "item_name": "DELI 908 PEN HOLDER 195",
+      "cl_qty": -5
+    },
+    {
+      "row": 904,
+      "item_code": "8796",
+      "leading_code": "8796",
+      "item_group": "DURACELL ULTRA",
+      "item_name": "DU ULTRA AA 8BL CELL 480",
+      "cl_qty": -0.5
+    },
+    {
+      "row": 925,
+      "item_code": "20419",
+      "leading_code": "20419",
+      "item_group": "ELEPHANT",
+      "item_name": "ELP 159634 1*3 STICKY NOTES NEON 125",
+      "cl_qty": -1
+    },
+    {
+      "row": 986,
+      "item_code": "10576",
+      "leading_code": "10576",
+      "item_group": "EVEREADY",
+      "item_name": "EVEREADY 1216 9V BATTERY 45",
+      "cl_qty": -3
+    },
+    {
+      "row": 990,
+      "item_code": "30367",
+      "leading_code": "30367",
+      "item_group": "EXECUTIVE PEN",
+      "item_name": "EXECUTIVE PEN",
+      "cl_qty": -10
+    },
+    {
+      "row": 1193,
+      "item_code": "16143",
+      "leading_code": "16143",
+      "item_group": "PREMIUM",
+      "item_name": "FOX PRO FP 105 3WAY ADAPTOR 425",
+      "cl_qty": -1
+    },
+    {
+      "row": 1196,
+      "item_code": "16145",
+      "leading_code": "16145",
+      "item_group": "PREMIUM",
+      "item_name": "FOX PRO FP 111 3WAY ADAPTOR USB 805",
+      "cl_qty": -1
+    },
+    {
+      "row": 1200,
+      "item_code": "30225",
+      "leading_code": "30225",
+      "item_group": "PREMIUM",
+      "item_name": "FRIDGE MAGNET ROUND MEDIUM EVIL EYE 95",
+      "cl_qty": -1
+    },
+    {
+      "row": 1201,
+      "item_code": "30226",
+      "leading_code": "30226",
+      "item_group": "PREMIUM",
+      "item_name": "FRIDGE MAGNET ROUND MEDIUM SMILY 95",
+      "cl_qty": -3
+    },
+    {
+      "row": 1203,
+      "item_code": "30228",
+      "leading_code": "30228",
+      "item_group": "PREMIUM",
+      "item_name": "FRIDGE MAGNET ROUND SMALL SMILY 40",
+      "cl_qty": -4
+    },
+    {
+      "row": 1351,
+      "item_code": "9096",
+      "leading_code": "9096",
+      "item_group": "HQ",
+      "item_name": "HQ 27031 A5 1SUBJECT NOTEBOOK BLUE 140",
+      "cl_qty": -5
+    },
+    {
+      "row": 1468,
+      "item_code": "20089",
+      "leading_code": "20089",
+      "item_group": "OTHO",
+      "item_name": "IR-100L MED-010 LAUNDRY PEN 95",
+      "cl_qty": -12
+    },
+    {
+      "row": 1474,
+      "item_code": "9339",
+      "leading_code": "9339",
+      "item_group": "JB9",
+      "item_name": "JB9 BINDER CLIP 15MM 50",
+      "cl_qty": -12
+    },
+    {
+      "row": 1570,
+      "item_code": "20961",
+      "leading_code": "20961",
+      "item_group": "KEBICA",
+      "item_name": "KE 2100 DUSTER 87",
+      "cl_qty": -4
+    },
+    {
+      "row": 1599,
+      "item_code": "20990",
+      "leading_code": "20990",
+      "item_group": "KEBICA",
+      "item_name": "KE PEN STAND 1185",
+      "cl_qty": -1
+    },
+    {
+      "row": 1614,
+      "item_code": "17218",
+      "leading_code": "17218",
+      "item_group": "PREMIUM",
+      "item_name": "KEY CHAIN 510* METAL 180",
+      "cl_qty": -2
+    },
+    {
+      "row": 1733,
+      "item_code": "30418",
+      "leading_code": "30418",
+      "item_group": "LAMY",
+      "item_name": "LAMY LOGO M16 204 BLUE BP M 1575",
+      "cl_qty": -1
+    },
+    {
+      "row": 1737,
+      "item_code": "30419",
+      "leading_code": "30419",
+      "item_group": "LAMY",
+      "item_name": "LAMY NOTO M16 283 BLUE BP M 1960",
+      "cl_qty": -1
+    },
+    {
+      "row": 1813,
+      "item_code": "30130",
+      "leading_code": "30130",
+      "item_group": "LEKHAN",
+      "item_name": "LEKHAN LM001 DIARY",
+      "cl_qty": -1
+    },
+    {
+      "row": 1981,
+      "item_code": "16855",
+      "leading_code": "16855",
+      "item_group": "MACRON",
+      "item_name": "MACARON MCR21 DOUBLE COLOR PENCIL 299",
+      "cl_qty": -1
+    },
+    {
+      "row": 1983,
+      "item_code": "16891",
+      "leading_code": "16891",
+      "item_group": "MACRON",
+      "item_name": "MACARON SM050-1 WHT CHAR PENCIL 345",
+      "cl_qty": -1
+    },
+    {
+      "row": 1986,
+      "item_code": "",
+      "leading_code": "",
+      "item_group": "MB",
+      "item_name": "MB REFIL 825",
+      "cl_qty": -1
+    },
+    {
+      "row": 2038,
+      "item_code": "8956",
+      "leading_code": "8956",
+      "item_group": "MONTEX",
+      "item_name": "MONTEX WINNER BP 10",
+      "cl_qty": -2
+    },
+    {
+      "row": 2039,
+      "item_code": "20767",
+      "leading_code": "20767",
+      "item_group": "MOUSE PAD",
+      "item_name": "MOUSE PAD LEKHANMART",
+      "cl_qty": -2
+    },
+    {
+      "row": 2082,
+      "item_code": "10647",
+      "leading_code": "10647",
+      "item_group": "BOARDS",
+      "item_name": "N/W BOARD MAGNETIC 2 X 3 1800",
+      "cl_qty": -3
+    },
+    {
+      "row": 2193,
+      "item_code": "9035",
+      "leading_code": "9035",
+      "item_group": "NEELGAGAN",
+      "item_name": "NG EXECUTIVE PAD A4 RULED 100 PG 86",
+      "cl_qty": -6
+    },
+    {
+      "row": 2282,
+      "item_code": "9000",
+      "leading_code": "9000",
+      "item_group": "NEELGAGAN",
+      "item_name": "NG OFFICE RECORD FILE NO 65 28",
+      "cl_qty": -6
+    },
+    {
+      "row": 2419,
+      "item_code": "9719",
+      "leading_code": "9719",
+      "item_group": "NATARAJ",
+      "item_name": "NT APSARA ABSOLUTE PREMIUM PENCILS 80",
+      "cl_qty": -4
+    },
+    {
+      "row": 2523,
+      "item_code": "16988",
+      "leading_code": "16988",
+      "item_group": "PREMIUM",
+      "item_name": "ORKEY OR-330-3 WHT BOARD MARKER 130",
+      "cl_qty": -2
+    },
+    {
+      "row": 2547,
+      "item_code": "20473",
+      "leading_code": "20473",
+      "item_group": "GIFT ENVELOP PAPER BAGS",
+      "item_name": "PAPER BAG SMALL 40",
+      "cl_qty": -2
+    },
+    {
+      "row": 2680,
+      "item_code": "12781",
+      "leading_code": "12781",
+      "item_group": "PIERRE CARDIN",
+      "item_name": "PC REFILL 666 BLACK RB 50",
+      "cl_qty": -7
+    },
+    {
+      "row": 2705,
+      "item_code": "12832",
+      "leading_code": "12832",
+      "item_group": "PIERRE CARDIN",
+      "item_name": "PC WHITE STALLION SET BP+CALSI 700",
+      "cl_qty": -1
+    },
+    {
+      "row": 2833,
+      "item_code": "30433",
+      "leading_code": "30433",
+      "item_group": "PF NOTE BOOK",
+      "item_name": "PF 1035 NOTEBOOK A5 475",
+      "cl_qty": -1
+    },
+    {
+      "row": 2863,
+      "item_code": "8663",
+      "leading_code": "8663",
+      "item_group": "STICKY PAD",
+      "item_name": "PF 22042 STICKY PAD 110",
+      "cl_qty": -2
+    },
+    {
+      "row": 2872,
+      "item_code": "8693",
+      "leading_code": "8693",
+      "item_group": "STICKY PAD",
+      "item_name": "PF 22060 STICKY PAD 47",
+      "cl_qty": -1
+    },
+    {
+      "row": 2873,
+      "item_code": "18245",
+      "leading_code": "18245",
+      "item_group": "STICKY PAD",
+      "item_name": "PF 22061 STICKY PAD 47",
+      "cl_qty": -1
+    },
+    {
+      "row": 2875,
+      "item_code": "8801",
+      "leading_code": "8801",
+      "item_group": "STICKY PAD",
+      "item_name": "PF 22063 STICKY PAD 54",
+      "cl_qty": -2
+    },
+    {
+      "row": 2897,
+      "item_code": "9445",
+      "leading_code": "9445",
+      "item_group": "STICKY PAD",
+      "item_name": "PF 9036 STICKY PAD RULED 3X3 280ST 290",
+      "cl_qty": -1
+    },
+    {
+      "row": 2904,
+      "item_code": "30707",
+      "leading_code": "30707",
+      "item_group": "PF FOLDER",
+      "item_name": "PF 9709 EXAMINATION BOARD 325",
+      "cl_qty": -5
+    },
+    {
+      "row": 2906,
+      "item_code": "9366",
+      "leading_code": "9366",
+      "item_group": "PF FOLDER",
+      "item_name": "PF 9711 A4 DISPLAY FOLDER 1025",
+      "cl_qty": -1
+    },
+    {
+      "row": 3022,
+      "item_code": "20864",
+      "leading_code": "20864",
+      "item_group": "PF CARD HOLDER KEY POUCH",
+      "item_name": "PF 9890 KEY JAR 50 PC 260",
+      "cl_qty": -1
+    },
+    {
+      "row": 3517,
+      "item_code": "21225",
+      "leading_code": "21225",
+      "item_group": "SANDISK",
+      "item_name": "SANDISK CZ71 32GB METAL PEN DRIVE 800",
+      "cl_qty": -2
+    },
+    {
+      "row": 3538,
+      "item_code": "30719",
+      "leading_code": "30719",
+      "item_group": "SAYA",
+      "item_name": "SAYA BUTTON BAG 50",
+      "cl_qty": -2
+    },
+    {
+      "row": 3964,
+      "item_code": "30564",
+      "leading_code": "30564",
+      "item_group": "SHEAFFER",
+      "item_name": "SH 9342 BRIGHT CHROME GOLD GT BP 4895",
+      "cl_qty": -10
+    },
+    {
+      "row": 4259,
+      "item_code": "14539*",
+      "leading_code": "14539",
+      "item_group": "SOLO",
+      "item_name": "SOLO MWSA3 MAGENTIC STICK PLAN WB 599",
+      "cl_qty": -1
+    },
+    {
+      "row": 4339,
+      "item_code": "20252",
+      "leading_code": "20252",
+      "item_group": "COBRA FILE",
+      "item_name": "SPRING COBRA FILE BLUE 110",
+      "cl_qty": -40
+    },
+    {
+      "row": 4407,
+      "item_code": "9758",
+      "leading_code": "9758",
+      "item_group": "STAEDTLER",
+      "item_name": "ST 334 C30P TRIPLUS FINELINER 30N 2425",
+      "cl_qty": -1
+    },
+    {
+      "row": 4441,
+      "item_code": "",
+      "leading_code": "",
+      "item_group": "STAEDTLER",
+      "item_name": "ST 364-23 TEXTS CLSC HIGHLIGHTER PNK 130",
+      "cl_qty": -1
+    },
+    {
+      "row": 4526,
+      "item_code": "20026",
+      "leading_code": "20026",
+      "item_group": "PREMIUM",
+      "item_name": "STEEL SCALE PREM",
+      "cl_qty": -3
+    },
+    {
+      "row": 4569,
+      "item_code": "9088",
+      "leading_code": "9088",
+      "item_group": "TAPE",
+      "item_name": "TAPE BROWN 48 MM X 65MTR 70.",
+      "cl_qty": -3
+    },
+    {
+      "row": 4587,
+      "item_code": "30031",
+      "leading_code": "30031",
+      "item_group": "PREMIUM",
+      "item_name": "TISSUE PAPER FOLDING TABLETS 50 N 225",
+      "cl_qty": -1
+    },
+    {
+      "row": 4611,
+      "item_code": "30410",
+      "leading_code": "30410",
+      "item_group": "TORETO",
+      "item_name": "TOR-991 65WT TP C TO TP C 1M CABLE 799",
+      "cl_qty": -1
+    },
+    {
+      "row": 4634,
+      "item_code": "9814*",
+      "leading_code": "9814",
+      "item_group": "UNIBALL",
+      "item_name": "UB 150 EYE 0.5MM RB GREEN 80",
+      "cl_qty": -2
+    },
+    {
+      "row": 4780,
+      "item_code": "9876*",
+      "leading_code": "9876",
+      "item_group": "UNOMAX",
+      "item_name": "UNOMAX TRITON 2X BP 10",
+      "cl_qty": -198
+    },
+    {
+      "row": 4864,
+      "item_code": "30250",
+      "leading_code": "30250",
+      "item_group": "PREMIUM",
+      "item_name": "VISITING CARD HOLDER 32 180",
+      "cl_qty": -2
+    },
+    {
+      "row": 4981,
+      "item_code": "30038",
+      "leading_code": "30038",
+      "item_group": "PREMIUM",
+      "item_name": "ZY-3264 SPACE TRAVEL STATIONERY SET 200",
+      "cl_qty": -1
+    }
+  ],
+  "extreme_positive_qty_rows": [
+    {
+      "row": 4983,
+      "item_code": "",
+      "leading_code": "",
+      "item_group": "",
+      "item_name": "",
+      "cl_qty": 158738.44
+    }
+  ],
+  "shopify_code_count": 3572,
+  "matched_code_count": 3571,
+  "busy_codes_not_in_shopify_count": 1354,
+  "shopify_codes_not_in_busy_count": 1,
+  "busy_rows_exact_shopify_identifier_match": 3450,
+  "busy_rows_leading_code_unique_match": 129,
+  "busy_rows_leading_code_ambiguous_match": 41,
+  "busy_rows_no_shopify_match": 1361,
+  "sample_leading_code_ambiguous": [
+    {
+      "row": 215,
+      "item_code": "16383",
+      "leading_code": "16383",
+      "item_group": "BAOKE",
+      "item_name": "BAOKE PEN",
+      "cl_qty": -15,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "16383-GC01",
+        "16383-GC02",
+        "16383-GC03",
+        "16383-GC04"
+      ]
+    },
+    {
+      "row": 332,
+      "item_code": "20203",
+      "leading_code": "20203",
+      "item_group": "CELLO",
+      "item_name": "CELLO MAXRITER BALL PEN 10\"",
+      "cl_qty": -2,
+      "candidate_sku_count": 2,
+      "candidate_skus": [
+        "20203-GC01",
+        "20203-GC02"
+      ]
+    },
+    {
+      "row": 1129,
+      "item_code": "8816",
+      "leading_code": "8816",
+      "item_group": "FLAIR",
+      "item_name": "FL 1800 LIQUIED INK PEN 30",
+      "cl_qty": 6,
+      "candidate_sku_count": 2,
+      "candidate_skus": [
+        "8816-GC01",
+        "8816-GC02"
+      ]
+    },
+    {
+      "row": 1494,
+      "item_code": "8831",
+      "leading_code": "8831",
+      "item_group": "JK PAPER",
+      "item_name": "JK A4 75GSM ECO CANVAS COLOR 375\"",
+      "cl_qty": 8,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "8831-GC01",
+        "8831-GC02",
+        "8831-GC03",
+        "8831-GC04"
+      ]
+    },
+    {
+      "row": 1820,
+      "item_code": "9961",
+      "leading_code": "9961",
+      "item_group": "LINC",
+      "item_name": "LINC EXECUTIVE GEL PEN BL/BLK/RD/GRN 20",
+      "cl_qty": 675,
+      "candidate_sku_count": 3,
+      "candidate_skus": [
+        "9961-GC01",
+        "9961-GC02",
+        "9961-GC03"
+      ]
+    },
+    {
+      "row": 1822,
+      "item_code": "21014",
+      "leading_code": "21014",
+      "item_group": "LINC",
+      "item_name": "LINC GLYCER 0.6MM BP 10",
+      "cl_qty": 168,
+      "candidate_sku_count": 12,
+      "candidate_skus": [
+        "21014-C-GC01",
+        "21014-C-GC02",
+        "21014-C-GC03",
+        "21014-C-GC04",
+        "21014-C-GC05",
+        "21014-GC01",
+        "21014-GC02",
+        "21014-GC03",
+        "21014-GC04",
+        "21014-GC05",
+        "21014-GC06",
+        "21014-GC07"
+      ]
+    },
+    {
+      "row": 1850,
+      "item_code": "9967",
+      "leading_code": "9967",
+      "item_group": "LINC",
+      "item_name": "LINC SIGNETTA BALL PEN 20",
+      "cl_qty": 86,
+      "candidate_sku_count": 2,
+      "candidate_skus": [
+        "9967-C-GC01",
+        "9967-C-GC02"
+      ]
+    },
+    {
+      "row": 1923,
+      "item_code": "18821",
+      "leading_code": "18821",
+      "item_group": "LUXOR",
+      "item_name": "LU 971 BROAD MARKER 10",
+      "cl_qty": 69,
+      "candidate_sku_count": 3,
+      "candidate_skus": [
+        "18821-C-GC01",
+        "18821-C-GC02",
+        "18821-C-GC03"
+      ]
+    },
+    {
+      "row": 1926,
+      "item_code": "18826",
+      "leading_code": "18826",
+      "item_group": "LUXOR",
+      "item_name": "LU 997N SUPER CHISEL MARKER 10",
+      "cl_qty": 77,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "18826-C-GC01",
+        "18826-C-GC02",
+        "18826-C-GC03",
+        "18826-C-GC04"
+      ]
+    },
+    {
+      "row": 2027,
+      "item_code": "8949",
+      "leading_code": "8949",
+      "item_group": "MONTEX",
+      "item_name": "MONTEX MEGA TOP BL/BK/RD BP 10",
+      "cl_qty": 114,
+      "candidate_sku_count": 3,
+      "candidate_skus": [
+        "8949-GC01",
+        "8949-GC02",
+        "8949-GC03"
+      ]
+    },
+    {
+      "row": 2748,
+      "item_code": "10382",
+      "leading_code": "10382",
+      "item_group": "PENTEL",
+      "item_name": "PENTEL ENERGEL MULTI COLOR PEN 0.7MM 40",
+      "cl_qty": 131,
+      "candidate_sku_count": 12,
+      "candidate_skus": [
+        "10382-GC01",
+        "10382-GC02",
+        "10382-GC03",
+        "10382-GC04",
+        "10382-GC05",
+        "10382-GC06",
+        "10382-GC07",
+        "10382-GC08",
+        "10382-GC09",
+        "10382-GC10",
+        "10382-GC11",
+        "10382-GC12"
+      ]
+    },
+    {
+      "row": 3072,
+      "item_code": "18994",
+      "leading_code": "18994",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1101 0.5 HI-TECPOINT PEN 50",
+      "cl_qty": 32,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "18994-GC01",
+        "18994-GC02",
+        "18994-GC03",
+        "18994-GC04"
+      ]
+    },
+    {
+      "row": 3073,
+      "item_code": "18871",
+      "leading_code": "18871",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1102 HI-TECPOINT V5 PEN 75",
+      "cl_qty": 116,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "18871-GC01",
+        "18871-GC02",
+        "18871-GC03",
+        "18871-GC04"
+      ]
+    },
+    {
+      "row": 3075,
+      "item_code": "18869",
+      "leading_code": "18869",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1103 HI-TECPOINT V7 PEN 75",
+      "cl_qty": 276,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "18869-GC01",
+        "18869-GC02",
+        "18869-GC03",
+        "18869-GC04"
+      ]
+    },
+    {
+      "row": 3076,
+      "item_code": "18867",
+      "leading_code": "18867",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1104 HI-TECPOINT V5 CARTAGE PEN 60",
+      "cl_qty": 65,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "18867-GC01",
+        "18867-GC02",
+        "18867-GC03",
+        "18867-GC04"
+      ]
+    },
+    {
+      "row": 3077,
+      "item_code": "18868",
+      "leading_code": "18868",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1105 HI-TECPOINT V7 CARTAGE PEN 80",
+      "cl_qty": 85,
+      "candidate_sku_count": 2,
+      "candidate_skus": [
+        "18868-GC01",
+        "18868-GC02"
+      ]
+    },
+    {
+      "row": 3078,
+      "item_code": "18712",
+      "leading_code": "18712",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1107 HI-TECPOINT V7 GRIP PEN 100",
+      "cl_qty": 65,
+      "candidate_sku_count": 6,
+      "candidate_skus": [
+        "18712-GC01",
+        "18712-GC02",
+        "18712-GC03",
+        "18712-GC04",
+        "18712-GC05",
+        "18712-GC06"
+      ]
+    },
+    {
+      "row": 3080,
+      "item_code": "18930",
+      "leading_code": "18930",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1108 HI-TECPOINT V10 GRIP PEN 100",
+      "cl_qty": 65,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "18930-GC01",
+        "18930-GC02",
+        "18930-GC03",
+        "18930-GC04"
+      ]
+    },
+    {
+      "row": 3081,
+      "item_code": "18984",
+      "leading_code": "18984",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1109 BROAD MARKER 70",
+      "cl_qty": 78,
+      "candidate_sku_count": 6,
+      "candidate_skus": [
+        "18984-GC01",
+        "18984-GC02",
+        "18984-GC03",
+        "18984-GC04",
+        "18984-GC05",
+        "18984-GC06"
+      ]
+    },
+    {
+      "row": 3083,
+      "item_code": "18715",
+      "leading_code": "18715",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1110 HI-TECPOINT V5 RT PEN 110",
+      "cl_qty": 225,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "18715-GC01",
+        "18715-GC02",
+        "18715-GC03",
+        "18715-GC04"
+      ]
+    },
+    {
+      "row": 3084,
+      "item_code": "18700",
+      "leading_code": "18700",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1111 HI-TECPOINT V7 RT PEN 110",
+      "cl_qty": 238,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "18700-GC01",
+        "18700-GC02",
+        "18700-GC03",
+        "18700-GC04"
+      ]
+    },
+    {
+      "row": 3085,
+      "item_code": "18996",
+      "leading_code": "18996",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1112 HI-TECPOINT V10 RT PEN 110",
+      "cl_qty": 72,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "18996-GC01",
+        "18996-GC02",
+        "18996-GC03",
+        "18996-GC04"
+      ]
+    },
+    {
+      "row": 3086,
+      "item_code": "18953",
+      "leading_code": "18953",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1113 V FOUNTAIN PEN 100",
+      "cl_qty": 73,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "18953-GC01",
+        "18953-GC02",
+        "18953-GC03",
+        "18953-GC04"
+      ]
+    },
+    {
+      "row": 3087,
+      "item_code": "18856",
+      "leading_code": "18856",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1114 V SIGN PEN 80",
+      "cl_qty": 37,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "18856-GC01",
+        "18856-GC02",
+        "18856-GC03",
+        "18856-GC04"
+      ]
+    },
+    {
+      "row": 3088,
+      "item_code": "18964",
+      "leading_code": "18964",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1115 FRIXION RT PEN 100",
+      "cl_qty": 88,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "18964-GC01",
+        "18964-GC02",
+        "18964-GC03",
+        "18964-GC04"
+      ]
+    },
+    {
+      "row": 3089,
+      "item_code": "18963",
+      "leading_code": "18963",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1116 FRIXION RB PEN 100",
+      "cl_qty": 22,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "18963-GC01",
+        "18963-GC02",
+        "18963-GC03",
+        "18963-GC04"
+      ]
+    },
+    {
+      "row": 3094,
+      "item_code": "19014",
+      "leading_code": "19014",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1121 REFILL V5 RT 60",
+      "cl_qty": 54,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "19014-GC01",
+        "19014-GC02",
+        "19014-GC03",
+        "19014-GC04"
+      ]
+    },
+    {
+      "row": 3095,
+      "item_code": "19012",
+      "leading_code": "19012",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1122 REFILL V7 RT 70",
+      "cl_qty": 72,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "19012-GC01",
+        "19012-GC02",
+        "19012-GC03",
+        "19012-GC04"
+      ]
+    },
+    {
+      "row": 3097,
+      "item_code": "19033",
+      "leading_code": "19033",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1124 MARKER CARTRIDGE 50",
+      "cl_qty": 38,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "19033-GC01",
+        "19033-GC02",
+        "19033-GC03",
+        "19033-GC04"
+      ]
+    },
+    {
+      "row": 3098,
+      "item_code": "19043",
+      "leading_code": "19043",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1127 CARTRIDGE V5,V7 2N 30",
+      "cl_qty": 35,
+      "candidate_sku_count": 2,
+      "candidate_skus": [
+        "19043-GC01",
+        "19043-GC02"
+      ]
+    },
+    {
+      "row": 3104,
+      "item_code": "30102",
+      "leading_code": "30102",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 1136 G2 GEL 0.7MM RB BL/BK PEN 100",
+      "cl_qty": 51,
+      "candidate_sku_count": 2,
+      "candidate_skus": [
+        "30102-GC01",
+        "30102-GC02"
+      ]
+    },
+    {
+      "row": 3205,
+      "item_code": "19188*",
+      "leading_code": "19188",
+      "item_group": "PILOT NORMAL",
+      "item_name": "PILOT 937 HI TECH INK BL15 20",
+      "cl_qty": 22,
+      "candidate_sku_count": 2,
+      "candidate_skus": [
+        "19188-GC01",
+        "19188-GC02"
+      ]
+    },
+    {
+      "row": 3797,
+      "item_code": "18763",
+      "leading_code": "18763",
+      "item_group": "SCHNEIDER",
+      "item_name": "SCHNEIDER 2721 HYBRID 0.3 BK,BL,GN,R 180",
+      "cl_qty": 4,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "18763-GC01",
+        "18763-GC02",
+        "18763-GC03",
+        "18763-GC04"
+      ]
+    },
+    {
+      "row": 3802,
+      "item_code": "18762",
+      "leading_code": "18762",
+      "item_group": "SCHNEIDER",
+      "item_name": "SCHNEIDER 2725 HYBRID 0.5 BK,BL,RD, 230",
+      "cl_qty": 16,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "18762-GC01",
+        "18762-GC02",
+        "18762-GC03",
+        "18762-GC04"
+      ]
+    },
+    {
+      "row": 3803,
+      "item_code": "18725",
+      "leading_code": "18725",
+      "item_group": "SCHNEIDER",
+      "item_name": "SCHNEIDER 2757 GLIDER RB BK,BL,RD,GN 60",
+      "cl_qty": 41,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "18725-GC01",
+        "18725-GC02",
+        "18725-GC03",
+        "18725-GC04"
+      ]
+    },
+    {
+      "row": 3805,
+      "item_code": "18750",
+      "leading_code": "18750",
+      "item_group": "SCHNEIDER",
+      "item_name": "SCHNEIDER 2920 GELAXY PEN BK,BL,GN,RD 30",
+      "cl_qty": 198,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "18750-GC01",
+        "18750-GC02",
+        "18750-GC03",
+        "18750-GC04"
+      ]
+    },
+    {
+      "row": 4176,
+      "item_code": "9620*",
+      "leading_code": "9620",
+      "item_group": "SOLO",
+      "item_name": "SOLO CH 101 L FOLDER 15",
+      "cl_qty": 1667,
+      "candidate_sku_count": 2,
+      "candidate_skus": [
+        "9620",
+        "9620-C"
+      ]
+    },
+    {
+      "row": 4184,
+      "item_code": "9632*",
+      "leading_code": "9632",
+      "item_group": "SOLO",
+      "item_name": "SOLO CH 202 ENVELOPE BAG WITH 11 HOLE 55",
+      "cl_qty": 104,
+      "candidate_sku_count": 2,
+      "candidate_skus": [
+        "9632",
+        "9632-C"
+      ]
+    },
+    {
+      "row": 4201,
+      "item_code": "9661",
+      "leading_code": "9661",
+      "item_group": "SOLO",
+      "item_name": "SOLO DL 102 DESK ORAGNISER 225",
+      "cl_qty": 19,
+      "candidate_sku_count": 3,
+      "candidate_skus": [
+        "9661-GC01",
+        "9661-GC02",
+        "9661-GC03"
+      ]
+    },
+    {
+      "row": 4447,
+      "item_code": "16719",
+      "leading_code": "16719",
+      "item_group": "STAEDTLER",
+      "item_name": "ST 421-45-17 ELANCE BP BRONZE PEN 545",
+      "cl_qty": 3,
+      "candidate_sku_count": 4,
+      "candidate_skus": [
+        "16719-GC01",
+        "16719-GC02",
+        "16719-GC03",
+        "16719-GC04"
+      ]
+    },
+    {
+      "row": 4777,
+      "item_code": "9884",
+      "leading_code": "9884",
+      "item_group": "UNOMAX",
+      "item_name": "UNOMAX SOFTRON 2X BP 10",
+      "cl_qty": 57,
+      "candidate_sku_count": 3,
+      "candidate_skus": [
+        "9884-C-GC01",
+        "9884-C-GC02",
+        "9884-C-GC03"
+      ]
+    }
+  ],
+  "sample_no_match_rows": [
+    {
+      "row": 3,
+      "item_code": "30032",
+      "leading_code": "30032",
+      "item_group": "PREMIUM",
+      "item_name": "18112 TABLE SPACE PENCIL SHARPENER 370",
+      "cl_qty": 0
+    },
+    {
+      "row": 4,
+      "item_code": "30033",
+      "leading_code": "30033",
+      "item_group": "PREMIUM",
+      "item_name": "18131 TABLE ROCKET PENCIL SHARPENER 270",
+      "cl_qty": 0
+    },
+    {
+      "row": 5,
+      "item_code": "30034",
+      "leading_code": "30034",
+      "item_group": "PREMIUM",
+      "item_name": "18137 TABLE SPACE PENCIL SHARPENER 270",
+      "cl_qty": 0
+    },
+    {
+      "row": 6,
+      "item_code": "30036",
+      "leading_code": "30036",
+      "item_group": "PREMIUM",
+      "item_name": "18143 TABLE ART PENCIL SHARPENER 590",
+      "cl_qty": 0
+    },
+    {
+      "row": 7,
+      "item_code": "30040",
+      "leading_code": "30040",
+      "item_group": "PREMIUM",
+      "item_name": "2021 STATIONERY SET 100",
+      "cl_qty": 0
+    },
+    {
+      "row": 33,
+      "item_code": "30035",
+      "leading_code": "30035",
+      "item_group": "PREMIUM",
+      "item_name": "8605 TABLE DINGB PENCIL SHARPENER 390",
+      "cl_qty": 0
+    },
+    {
+      "row": 34,
+      "item_code": "30363",
+      "leading_code": "30363",
+      "item_group": "COMPUTER ITEMS",
+      "item_name": "88A TONNER 450",
+      "cl_qty": 0
+    },
+    {
+      "row": 61,
+      "item_code": "20029",
+      "leading_code": "20029",
+      "item_group": "ADDGEL",
+      "item_name": "ADDGEL REFIL PBR 80\"",
+      "cl_qty": 0
+    },
+    {
+      "row": 66,
+      "item_code": "30736",
+      "leading_code": "30736",
+      "item_group": "ADDGEL",
+      "item_name": "ADDGEL REFILL GR-20 BLACK 25",
+      "cl_qty": 103
+    },
+    {
+      "row": 76,
+      "item_code": "30468",
+      "leading_code": "30468",
+      "item_group": "ADDGEL",
+      "item_name": "ADDGEL WHITEBOARD MARKER SET 4N 60",
+      "cl_qty": 0
+    },
+    {
+      "row": 79,
+      "item_code": "30541",
+      "leading_code": "30541",
+      "item_group": "ADDGEL",
+      "item_name": "ADDGEL WHITEBOARD MARK-ON MARKER GR 20",
+      "cl_qty": 71
+    },
+    {
+      "row": 93,
+      "item_code": "20031",
+      "leading_code": "20031",
+      "item_group": "JB9",
+      "item_name": "AEROTIX U PIN 35MM",
+      "cl_qty": 8
+    },
+    {
+      "row": 104,
+      "item_code": "20051",
+      "leading_code": "20051",
+      "item_group": "AMKETTE",
+      "item_name": "AMKETTE KWICK OPTICAL MOUSE PS2",
+      "cl_qty": 3
+    },
+    {
+      "row": 105,
+      "item_code": "20052",
+      "leading_code": "20052",
+      "item_group": "AMKETTE",
+      "item_name": "AMKETTE KWICK OPTICAL MOUSE USB\"",
+      "cl_qty": 2
+    },
+    {
+      "row": 106,
+      "item_code": "20053",
+      "leading_code": "20053",
+      "item_group": "ANALOG",
+      "item_name": "ANALOG KEY BOARD PS 2\"",
+      "cl_qty": 2
+    },
+    {
+      "row": 107,
+      "item_code": "20054",
+      "leading_code": "20054",
+      "item_group": "ANALOG",
+      "item_name": "ANALOG USB HUB\"",
+      "cl_qty": 2
+    },
+    {
+      "row": 117,
+      "item_code": "20064",
+      "leading_code": "20064",
+      "item_group": "OTHO",
+      "item_name": "APS 350ES SHARP PENCIL 0.5 YL 410",
+      "cl_qty": 1
+    },
+    {
+      "row": 123,
+      "item_code": "20001",
+      "leading_code": "20001",
+      "item_group": "PREMIUM",
+      "item_name": "ART & CRAFT SCISSORS 30",
+      "cl_qty": 65
+    },
+    {
+      "row": 135,
+      "item_code": "20917",
+      "leading_code": "20917",
+      "item_group": "INDEX FILE",
+      "item_name": "ASTA ASC B0I FILE 35",
+      "cl_qty": 12
+    },
+    {
+      "row": 174,
+      "item_code": "20132",
+      "leading_code": "20132",
+      "item_group": "ADWELL",
+      "item_name": "AW 252 REGISTER 296 PG 325",
+      "cl_qty": 2
+    },
+    {
+      "row": 175,
+      "item_code": "20133",
+      "leading_code": "20133",
+      "item_group": "ADWELL",
+      "item_name": "AW 253 REGISTER 296 PG 245",
+      "cl_qty": 0
+    },
+    {
+      "row": 176,
+      "item_code": "20134",
+      "leading_code": "20134",
+      "item_group": "ADWELL",
+      "item_name": "AW APDB-101 DRAWING NOTEBOOK WIRO A3 350",
+      "cl_qty": 9
+    },
+    {
+      "row": 178,
+      "item_code": "20135",
+      "leading_code": "20135",
+      "item_group": "ADWELL",
+      "item_name": "AW APDB-121 DRAWING NOTEBOOK WIRO A4 180",
+      "cl_qty": 5
+    },
+    {
+      "row": 201,
+      "item_code": "20142",
+      "leading_code": "20142",
+      "item_group": "ADWELL",
+      "item_name": "AW PREMIUM NOTEBOOK B6 95",
+      "cl_qty": 0
+    },
+    {
+      "row": 216,
+      "item_code": "20147",
+      "leading_code": "20147",
+      "item_group": "BAOKE",
+      "item_name": "BAOKE REFILL",
+      "cl_qty": 72
+    },
+    {
+      "row": 217,
+      "item_code": "30423",
+      "leading_code": "30423",
+      "item_group": "OTHO",
+      "item_name": "BAS IMP-2405 SC-S10S-N SIDE CLIP SML 20",
+      "cl_qty": 24
+    },
+    {
+      "row": 218,
+      "item_code": "30424",
+      "leading_code": "30424",
+      "item_group": "OTHO",
+      "item_name": "BAS IMP-2406 SC-L6S-N SIDE CLIP LARGE 35",
+      "cl_qty": 12
+    },
+    {
+      "row": 219,
+      "item_code": "30396",
+      "leading_code": "30396",
+      "item_group": "BATCH",
+      "item_name": "BATCH",
+      "cl_qty": -200
+    },
+    {
+      "row": 220,
+      "item_code": "20148",
+      "leading_code": "20148",
+      "item_group": "BATCH",
+      "item_name": "BATCH PLASTIC 1 NO'",
+      "cl_qty": 0
+    },
+    {
+      "row": 221,
+      "item_code": "20149",
+      "leading_code": "20149",
+      "item_group": "BATCH",
+      "item_name": "BATCH WITH DORI",
+      "cl_qty": 0
+    },
+    {
+      "row": 237,
+      "item_code": "20002",
+      "leading_code": "20002",
+      "item_group": "PREMIUM",
+      "item_name": "BEST 1407 TAPE DISPENSER 450",
+      "cl_qty": 1
+    },
+    {
+      "row": 238,
+      "item_code": "20918",
+      "leading_code": "20918",
+      "item_group": "TAPE",
+      "item_name": "BILT CRYSTAL CLEAR TAPE 18 X 33MM 50",
+      "cl_qty": 5
+    },
+    {
+      "row": 239,
+      "item_code": "20159",
+      "leading_code": "20159",
+      "item_group": "BILT",
+      "item_name": "BILTA4 MULTIPURPOSE PAPER 130 GSM 100ST\"",
+      "cl_qty": 2
+    },
+    {
+      "row": 241,
+      "item_code": "20003",
+      "leading_code": "20003",
+      "item_group": "PREMIUM",
+      "item_name": "BL  4-1 PEN BL-185\"",
+      "cl_qty": 153
+    },
+    {
+      "row": 242,
+      "item_code": "30364",
+      "leading_code": "30364",
+      "item_group": "PRINTED MATERIAL",
+      "item_name": "BOND PAPER 100GSM PRINTED 20SHEET",
+      "cl_qty": 0
+    },
+    {
+      "row": 243,
+      "item_code": "20004",
+      "leading_code": "20004",
+      "item_group": "PREMIUM",
+      "item_name": "BOSS PREM DAMPER 32",
+      "cl_qty": 3
+    },
+    {
+      "row": 244,
+      "item_code": "20919",
+      "leading_code": "20919",
+      "item_group": "INDEX FILE",
+      "item_name": "BOX FILE 320",
+      "cl_qty": 0
+    },
+    {
+      "row": 259,
+      "item_code": "20164",
+      "leading_code": "20164",
+      "item_group": "CARD HOLDER",
+      "item_name": "BUSINESS CARD HOLDER 120",
+      "cl_qty": 3
+    },
+    {
+      "row": 260,
+      "item_code": "20166",
+      "leading_code": "20166",
+      "item_group": "CARD HOLDER",
+      "item_name": "BUSINESS CARD HOLDER 480",
+      "cl_qty": 43
+    },
+    {
+      "row": 261,
+      "item_code": "20167",
+      "leading_code": "20167",
+      "item_group": "CARD HOLDER",
+      "item_name": "BUSINESS VISITING CARD HOLDER A4 FILE",
+      "cl_qty": 1
+    },
+    {
+      "row": 262,
+      "item_code": "30425",
+      "leading_code": "30425",
+      "item_group": "OTHO",
+      "item_name": "C-307 CERAMIC ROLLER REFILL 0.7 BLK 350",
+      "cl_qty": 1
+    },
+    {
+      "row": 264,
+      "item_code": "20169",
+      "leading_code": "20169",
+      "item_group": "CANON",
+      "item_name": "CANON 40/41COMBO\"",
+      "cl_qty": 1
+    },
+    {
+      "row": 265,
+      "item_code": "30544",
+      "leading_code": "30544",
+      "item_group": "CANON",
+      "item_name": "CANON INK GI-790 135ML BLACK 595",
+      "cl_qty": 0
+    },
+    {
+      "row": 266,
+      "item_code": "30545",
+      "leading_code": "30545",
+      "item_group": "CANON",
+      "item_name": "CANON INK GI-790 70ML CYAN 595",
+      "cl_qty": 0
+    },
+    {
+      "row": 267,
+      "item_code": "30546",
+      "leading_code": "30546",
+      "item_group": "CANON",
+      "item_name": "CANON INK GI-790 70ML MAGENTA 595",
+      "cl_qty": 0
+    },
+    {
+      "row": 268,
+      "item_code": "30547",
+      "leading_code": "30547",
+      "item_group": "CANON",
+      "item_name": "CANON INK GI-790 70ML YELLOW 595",
+      "cl_qty": 0
+    },
+    {
+      "row": 269,
+      "item_code": "20170",
+      "leading_code": "20170",
+      "item_group": "CANON",
+      "item_name": "CANON NPG-59 TONER BK CARTRIDGE 3482",
+      "cl_qty": 2
+    },
+    {
+      "row": 270,
+      "item_code": "20168",
+      "leading_code": "20168",
+      "item_group": "CARD HOLDER",
+      "item_name": "CARD ALBUM LEAF W/O BC 104L\"",
+      "cl_qty": 200
+    },
+    {
+      "row": 311,
+      "item_code": "20920",
+      "leading_code": "20920",
+      "item_group": "COMPUTER ITEMS",
+      "item_name": "CDR WRITEX SPRINDLE 50 PACK 650",
+      "cl_qty": 2
+    },
+    {
+      "row": 342,
+      "item_code": "20210",
+      "leading_code": "20210",
+      "item_group": "CELLO",
+      "item_name": "CELLO REFILL SIGNATURE  RB 50",
+      "cl_qty": 19
+    }
+  ],
+  "sample_rows": [
+    {
+      "row": 2,
+      "item_code": "16906",
+      "leading_code": "16906",
+      "item_group": "PREMIUM",
+      "item_name": "0957 TABLE CAR PENCIL SHARPENER 465",
+      "cl_qty": 0
+    },
+    {
+      "row": 3,
+      "item_code": "30032",
+      "leading_code": "30032",
+      "item_group": "PREMIUM",
+      "item_name": "18112 TABLE SPACE PENCIL SHARPENER 370",
+      "cl_qty": 0
+    },
+    {
+      "row": 4,
+      "item_code": "30033",
+      "leading_code": "30033",
+      "item_group": "PREMIUM",
+      "item_name": "18131 TABLE ROCKET PENCIL SHARPENER 270",
+      "cl_qty": 0
+    },
+    {
+      "row": 5,
+      "item_code": "30034",
+      "leading_code": "30034",
+      "item_group": "PREMIUM",
+      "item_name": "18137 TABLE SPACE PENCIL SHARPENER 270",
+      "cl_qty": 0
+    },
+    {
+      "row": 6,
+      "item_code": "30036",
+      "leading_code": "30036",
+      "item_group": "PREMIUM",
+      "item_name": "18143 TABLE ART PENCIL SHARPENER 590",
+      "cl_qty": 0
+    },
+    {
+      "row": 7,
+      "item_code": "30040",
+      "leading_code": "30040",
+      "item_group": "PREMIUM",
+      "item_name": "2021 STATIONERY SET 100",
+      "cl_qty": 0
+    },
+    {
+      "row": 8,
+      "item_code": "16894",
+      "leading_code": "16894",
+      "item_group": "PREMIUM",
+      "item_name": "3912 TWIST CRAYONS SET 200",
+      "cl_qty": 0
+    },
+    {
+      "row": 9,
+      "item_code": "10120",
+      "leading_code": "10120",
+      "item_group": "3M",
+      "item_name": "3M 17001 HOOK 165",
+      "cl_qty": 6
+    },
+    {
+      "row": 10,
+      "item_code": "10121",
+      "leading_code": "10121",
+      "item_group": "3M",
+      "item_name": "3M 17002 HOOK 99",
+      "cl_qty": 0
+    },
+    {
+      "row": 11,
+      "item_code": "10122",
+      "leading_code": "10122",
+      "item_group": "3M",
+      "item_name": "3M 17004 HOOK 249",
+      "cl_qty": 4
+    }
+  ],
+  "sample_unmatched_busy": [
+    {
+      "row": 2381,
+      "item_code": "9115",
+      "leading_code": "9115",
+      "item_group": "NIGHTINGALE",
+      "item_name": "NIGHTINGALE A5 PREMIUM NOTES NB R 190",
+      "cl_qty": 0
+    },
+    {
+      "row": 2493,
+      "item_code": "9214",
+      "leading_code": "9214",
+      "item_group": "ODYSSEY",
+      "item_name": "ODYSSEY LAQ BLK GT BP 2200",
+      "cl_qty": 0
+    },
+    {
+      "row": 2762,
+      "item_code": "9328",
+      "leading_code": "9328",
+      "item_group": "PENTEL",
+      "item_name": "PENTEL REFILL ENERGEL LR7 BLACK 20",
+      "cl_qty": 33
+    },
+    {
+      "row": 450,
+      "item_code": "9928",
+      "leading_code": "9928",
+      "item_group": "CAMLIN",
+      "item_name": "CML ARTIST OIL COLOUR 9ML 400",
+      "cl_qty": 2
+    },
+    {
+      "row": 1659,
+      "item_code": "10586",
+      "leading_code": "10586",
+      "item_group": "KORES",
+      "item_name": "KORES STATIONERY KIT 149",
+      "cl_qty": 9
+    },
+    {
+      "row": 1660,
+      "item_code": "10587",
+      "leading_code": "10587",
+      "item_group": "KORES",
+      "item_name": "KORES STATIONERY KIT 199",
+      "cl_qty": 18
+    },
+    {
+      "row": 1662,
+      "item_code": "10588",
+      "leading_code": "10588",
+      "item_group": "KORES",
+      "item_name": "KORES STATIONERY KIT 99",
+      "cl_qty": 19
+    },
+    {
+      "row": 3684,
+      "item_code": "15099",
+      "leading_code": "15099",
+      "item_group": "SCHOLAR",
+      "item_name": "SCH PHN2 A5 PHILO NOTEBOOK S PINK 399",
+      "cl_qty": 3
+    },
+    {
+      "row": 3685,
+      "item_code": "15100",
+      "leading_code": "15100",
+      "item_group": "SCHOLAR",
+      "item_name": "SCH PHN2 A5 PHILO NOTEBOOK SAND 399",
+      "cl_qty": 5
+    },
+    {
+      "row": 3686,
+      "item_code": "15101",
+      "leading_code": "15101",
+      "item_group": "SCHOLAR",
+      "item_name": "SCH PHN2 A5 PHILO NOTEBOOK SEA GREEN 399",
+      "cl_qty": 4
+    },
+    {
+      "row": 3687,
+      "item_code": "15102",
+      "leading_code": "15102",
+      "item_group": "SCHOLAR",
+      "item_name": "SCH PHN2 A5 PHILO NOTEBOOK TROP BLUE 399",
+      "cl_qty": 5
+    },
+    {
+      "row": 2771,
+      "item_code": "17087",
+      "leading_code": "17087",
+      "item_group": "PENTONIC",
+      "item_name": "PENTONIC BALL PEN BL/BK/RD/GN/PK 10",
+      "cl_qty": 105
+    },
+    {
+      "row": 3302,
+      "item_code": "17728",
+      "leading_code": "17728",
+      "item_group": "BETA NEO",
+      "item_name": "PR BETA NEO COATED CLIP BP 150",
+      "cl_qty": 36
+    },
+    {
+      "row": 1903,
+      "item_code": "18802",
+      "leading_code": "18802",
+      "item_group": "LUXOR",
+      "item_name": "LU 1851 HIGHLIGHTER 25",
+      "cl_qty": 238
+    },
+    {
+      "row": 1035,
+      "item_code": "19169",
+      "leading_code": "19169",
+      "item_group": "FEVICOL",
+      "item_name": "FC FEVICRYL CANVAS PAINTING KIT 249",
+      "cl_qty": 9
+    },
+    {
+      "row": 3371,
+      "item_code": "19352",
+      "leading_code": "19352",
+      "item_group": "LATITUDE",
+      "item_name": "PR LATITUDE SHINY CHROME GT BP 280",
+      "cl_qty": 5
+    },
+    {
+      "row": 123,
+      "item_code": "20001",
+      "leading_code": "20001",
+      "item_group": "PREMIUM",
+      "item_name": "ART & CRAFT SCISSORS 30",
+      "cl_qty": 65
+    },
+    {
+      "row": 237,
+      "item_code": "20002",
+      "leading_code": "20002",
+      "item_group": "PREMIUM",
+      "item_name": "BEST 1407 TAPE DISPENSER 450",
+      "cl_qty": 1
+    },
+    {
+      "row": 241,
+      "item_code": "20003",
+      "leading_code": "20003",
+      "item_group": "PREMIUM",
+      "item_name": "BL  4-1 PEN BL-185\"",
+      "cl_qty": 153
+    },
+    {
+      "row": 243,
+      "item_code": "20004",
+      "leading_code": "20004",
+      "item_group": "PREMIUM",
+      "item_name": "BOSS PREM DAMPER 32",
+      "cl_qty": 3
+    },
+    {
+      "row": 543,
+      "item_code": "20005",
+      "leading_code": "20005",
+      "item_group": "PREMIUM",
+      "item_name": "CORRECTION TAPE 12MTR ST804 40",
+      "cl_qty": 4
+    },
+    {
+      "row": 544,
+      "item_code": "20006",
+      "leading_code": "20006",
+      "item_group": "PREMIUM",
+      "item_name": "CORRECTION TAPE 8954 25MTR 80",
+      "cl_qty": 7
+    },
+    {
+      "row": 993,
+      "item_code": "20007",
+      "leading_code": "20007",
+      "item_group": "PREMIUM",
+      "item_name": "FANCY SHARPENERS 20",
+      "cl_qty": 285
+    },
+    {
+      "row": 1205,
+      "item_code": "20008",
+      "leading_code": "20008",
+      "item_group": "PREMIUM",
+      "item_name": "FS 6002 PEN STAND 150",
+      "cl_qty": 0
+    },
+    {
+      "row": 1690,
+      "item_code": "20009",
+      "leading_code": "20009",
+      "item_group": "PREMIUM",
+      "item_name": "LA OPALA DINNER SET 3000",
+      "cl_qty": 1
+    },
+    {
+      "row": 1796,
+      "item_code": "20010",
+      "leading_code": "20010",
+      "item_group": "PREMIUM",
+      "item_name": "LEAD PENCIL 2MM CLUTCH 50",
+      "cl_qty": 0
+    },
+    {
+      "row": 2092,
+      "item_code": "20011",
+      "leading_code": "20011",
+      "item_group": "PREMIUM",
+      "item_name": "NAIL CUTTER 33157 49\"",
+      "cl_qty": 7
+    },
+    {
+      "row": 2714,
+      "item_code": "20012",
+      "leading_code": "20012",
+      "item_group": "PREMIUM",
+      "item_name": "PEARL PAPER COASTER SET 435",
+      "cl_qty": 1
+    },
+    {
+      "row": 2715,
+      "item_code": "20013",
+      "leading_code": "20013",
+      "item_group": "PREMIUM",
+      "item_name": "PEARL PAPER COASTER WOODEN 425",
+      "cl_qty": 1
+    },
+    {
+      "row": 2716,
+      "item_code": "20014",
+      "leading_code": "20014",
+      "item_group": "PREMIUM",
+      "item_name": "PEN STAND PLASTIC  W/ ASS ITEM 60",
+      "cl_qty": 10
+    },
+    {
+      "row": 2717,
+      "item_code": "20015",
+      "leading_code": "20015",
+      "item_group": "PREMIUM",
+      "item_name": "PEN STAND PLASTIC 20",
+      "cl_qty": 8
+    },
+    {
+      "row": 3206,
+      "item_code": "20016",
+      "leading_code": "20016",
+      "item_group": "PREMIUM",
+      "item_name": "PL ARTIST PAD DRG BOOK 130GSM  85\"",
+      "cl_qty": 1
+    },
+    {
+      "row": 3207,
+      "item_code": "20017",
+      "leading_code": "20017",
+      "item_group": "PREMIUM",
+      "item_name": "PL SMALL PAPER BAG 60",
+      "cl_qty": 34
+    },
+    {
+      "row": 3208,
+      "item_code": "20018",
+      "leading_code": "20018",
+      "item_group": "PREMIUM",
+      "item_name": "PL WRITE & DRAW NB 60",
+      "cl_qty": 2
+    },
+    {
+      "row": 3481,
+      "item_code": "20020",
+      "leading_code": "20020",
+      "item_group": "RENAISSANCE",
+      "item_name": "RNS 198411 CHARCOAL BLISTER PACK 380",
+      "cl_qty": 0
+    },
+    {
+      "row": 4332,
+      "item_code": "20025",
+      "leading_code": "20025",
+      "item_group": "PREMIUM",
+      "item_name": "SPACE A6 ZIPPER  POUCH COMBO 235",
+      "cl_qty": 0
+    },
+    {
+      "row": 4526,
+      "item_code": "20026",
+      "leading_code": "20026",
+      "item_group": "PREMIUM",
+      "item_name": "STEEL SCALE PREM",
+      "cl_qty": -3
+    },
+    {
+      "row": 61,
+      "item_code": "20029",
+      "leading_code": "20029",
+      "item_group": "ADDGEL",
+      "item_name": "ADDGEL REFIL PBR 80\"",
+      "cl_qty": 0
+    },
+    {
+      "row": 93,
+      "item_code": "20031",
+      "leading_code": "20031",
+      "item_group": "JB9",
+      "item_name": "AEROTIX U PIN 35MM",
+      "cl_qty": 8
+    },
+    {
+      "row": 1472,
+      "item_code": "20032",
+      "leading_code": "20032",
+      "item_group": "JB9",
+      "item_name": "JB9 167 30MM MAGNET 105",
+      "cl_qty": 0
+    },
+    {
+      "row": 1480,
+      "item_code": "20033",
+      "leading_code": "20033",
+      "item_group": "JB9",
+      "item_name": "JB9 CALCULATOR 512 GT 290",
+      "cl_qty": 0
+    },
+    {
+      "row": 1481,
+      "item_code": "20034",
+      "leading_code": "20034",
+      "item_group": "JB9",
+      "item_name": "JB9 CALCULATOR 837 GT 472",
+      "cl_qty": 0
+    },
+    {
+      "row": 1482,
+      "item_code": "20036",
+      "leading_code": "20036",
+      "item_group": "JB9",
+      "item_name": "JB9 PEN STAND 445",
+      "cl_qty": 0
+    },
+    {
+      "row": 3027,
+      "item_code": "20038",
+      "leading_code": "20038",
+      "item_group": "JB9",
+      "item_name": "PF CLR BINDER CLIP 15MM 250\"",
+      "cl_qty": 1
+    },
+    {
+      "row": 3028,
+      "item_code": "20039",
+      "leading_code": "20039",
+      "item_group": "JB9",
+      "item_name": "PF CLR BINDER CLIP 41MM 400\"",
+      "cl_qty": 1
+    },
+    {
+      "row": 3029,
+      "item_code": "20040",
+      "leading_code": "20040",
+      "item_group": "JB9",
+      "item_name": "PF CLR BINDER CLIP 51MM 350\"",
+      "cl_qty": 1
+    },
+    {
+      "row": 3030,
+      "item_code": "20041",
+      "leading_code": "20041",
+      "item_group": "JB9",
+      "item_name": "PF COLOUR BINDER CLIP 19MM 260",
+      "cl_qty": 2
+    },
+    {
+      "row": 3031,
+      "item_code": "20042",
+      "leading_code": "20042",
+      "item_group": "JB9",
+      "item_name": "PF COLOUR BINDER CLIP 25MM 380",
+      "cl_qty": 2
+    },
+    {
+      "row": 3032,
+      "item_code": "20043",
+      "leading_code": "20043",
+      "item_group": "JB9",
+      "item_name": "PF COLOUR BINDER CLIP 32MM 270",
+      "cl_qty": 3
+    },
+    {
+      "row": 3033,
+      "item_code": "20044",
+      "leading_code": "20044",
+      "item_group": "JB9",
+      "item_name": "PF COLOUR BINDER CLIP 41MM 420",
+      "cl_qty": 3
+    }
+  ],
+  "sample_unmatched_shopify": [
+    {
+      "row": 2032,
+      "handle": "20199",
+      "variant_sku": "20199",
+      "title": "CELLO EXTRA DARK BALL PEN",
+      "brand": "Cello",
+      "category": "Branded Writing Instruments",
+      "inventory": 0
+    }
+  ]
+}

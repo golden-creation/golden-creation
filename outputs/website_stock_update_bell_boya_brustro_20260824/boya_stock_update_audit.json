@@ -1,0 +1,41 @@
+{
+  "category": "boya",
+  "brands": {
+    "Boya": 1
+  },
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (13).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_bell_boya_brustro_20260824\\boya products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\boya products - Updated Website Stock.xlsx",
+  "downloads_copy_status": "copied",
+  "target_sheet": "Products",
+  "lookup_column": "Variant SKU",
+  "updated_column": "Variant Inventory Qty",
+  "counts": {
+    "Matched": 1
+  },
+  "website_sku_rows": 1,
+  "website_unique_skus": 1,
+  "website_duplicate_skus": {},
+  "changed_rows": 0,
+  "rows": [
+    {
+      "website_row": 2,
+      "variant_sku": "8758",
+      "title": "BOYA BY-M1 LAVALIER MICROPHONE",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 245,
+          "item_code": "8758",
+          "item_details": "BOYA BY-M1 LAVALIER MICROPHONE 1995",
+          "item_group": "BOYA",
+          "cl_qty": 1
+        }
+      ]
+    }
+  ]
+}

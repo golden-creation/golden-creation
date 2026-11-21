@@ -1,0 +1,250 @@
+{
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (34).xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_hp_20260831\\hp products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\hp products - Updated Website Stock.xlsx",
+  "status_counts": {
+    "Matched": 14
+  },
+  "changed_rows": 8,
+  "rows": [
+    {
+      "row": 2,
+      "sku": "20481",
+      "title": "HP M038 WIRED MOUSE",
+      "brand": "HP",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1343,
+          "item_group": "HP MOUSE & KEY BOARD ",
+          "item_details": "HP M038 WIRED MOUSE 511",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "sku": "20482",
+      "title": "HP 680 BLACK CARTRIDGE",
+      "brand": "HP",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1331,
+          "item_group": "HP ",
+          "item_details": "HP 680 BLACK CARTRIDGE",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "sku": "20483",
+      "title": "HP 88A TONNER",
+      "brand": "HP",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1332,
+          "item_group": "HP ",
+          "item_details": "HP 88A TONNER 3950",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "sku": "19313",
+      "title": "HP 520 SMART TANK PRINTER",
+      "brand": "HP",
+      "old_qty": 2,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1329,
+          "item_group": "HP ",
+          "item_details": "HP 520 SMART TANK PRINTER 13900",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "sku": "19312",
+      "title": "HP 580 SMART TANK PRINTER",
+      "brand": "HP",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1330,
+          "item_group": "HP ",
+          "item_details": "HP 580 SMART TANK PRINTER 16400",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "sku": "19319",
+      "title": "HP INK GT-52 CYAN 70ML",
+      "brand": "HP",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1337,
+          "item_group": "HP ",
+          "item_details": "HP INK GT-52 CYAN 70ML 711",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "sku": "8778",
+      "title": "HP 1F0C8PA BLUETOOTH KEY BOARD+MOUSE",
+      "brand": "HP",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1327,
+          "item_group": "HP MOUSE & KEY BOARD ",
+          "item_details": "HP 1F0C8PA BT KEY BOARD+MOUSE 2847",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "sku": "8779",
+      "title": "HP 3RQ75PA WIRELESS KEYBOARD+MOUSE",
+      "brand": "HP",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1328,
+          "item_group": "HP MOUSE & KEY BOARD ",
+          "item_details": "HP 3RQ75PA WIRELESS KEYBOARD+MOUSE 3300",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "sku": "19325",
+      "title": "HP INK GT-52 MAGENTA 70ML",
+      "brand": "HP",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1338,
+          "item_group": "HP ",
+          "item_details": "HP INK GT-52 MAGENTA 70ML 711",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "sku": "19324",
+      "title": "HP INK GT-53 BLACK 90ML",
+      "brand": "HP",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1340,
+          "item_group": "HP ",
+          "item_details": "HP INK GT-53 BLACK 90ML 500",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "sku": "19323",
+      "title": "HP INK GT-53XL BLACK 135ML",
+      "brand": "HP",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1341,
+          "item_group": "HP ",
+          "item_details": "HP INK GT-53XL BLACK 135ML 860",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "sku": "19305",
+      "title": "HP M006 WIRED MOUSE",
+      "brand": "HP",
+      "old_qty": 11,
+      "new_qty": 9,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1342,
+          "item_group": "HP MOUSE & KEY BOARD ",
+          "item_details": "HP M006 WIRED MOUSE 600",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "sku": "19327",
+      "title": "HP INK GT-52 YELLOW 70ML",
+      "brand": "HP",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1339,
+          "item_group": "HP ",
+          "item_details": "HP INK GT-52 YELLOW 70ML 711",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "sku": "19308",
+      "title": "HP W111 WIRELESS MOUSE",
+      "brand": "HP",
+      "old_qty": 2,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1344,
+          "item_group": "HP MOUSE & KEY BOARD ",
+          "item_details": "HP W111 WIRELESS MOUSE 923",
+          "cl_qty": 1
+        }
+      ]
+    }
+  ]
+}

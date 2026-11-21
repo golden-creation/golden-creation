@@ -1,0 +1,220 @@
+{
+  "sourcePath": "C:/Users/My-PC-Win10/Downloads/products_export_1.csv",
+  "outputPath": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\goldencreation-products-import\\goldencreation_products_import_optimized.xlsx",
+  "sourceRows": 3747,
+  "outputRows": 3747,
+  "columns": 27,
+  "savedWorkbookRange": "A1:AA3748",
+  "duplicateSkuGroups": 40,
+  "duplicateSkuRowsRemapped": 157,
+  "remainingDuplicateSkuGroups": 0,
+  "inferredCategoryCount": 2673,
+  "blankBrandCount": 150,
+  "uniqueBrands": 81,
+  "topBrands": [
+    [
+      "Scholar",
+      230
+    ],
+    [
+      "Neelgagan",
+      225
+    ],
+    [
+      "Parker",
+      199
+    ],
+    [
+      "Sheaffer",
+      176
+    ],
+    [
+      "Planfix",
+      171
+    ],
+    [
+      "Staedtler",
+      155
+    ],
+    [
+      "Solo",
+      154
+    ],
+    [
+      "Pilot",
+      136
+    ],
+    [
+      "Cross",
+      130
+    ],
+    [
+      "Pierre Cardin",
+      119
+    ],
+    [
+      "Fevicol",
+      107
+    ],
+    [
+      "Camlin",
+      100
+    ],
+    [
+      "Ohto",
+      97
+    ],
+    [
+      "Uniball",
+      94
+    ],
+    [
+      "Portronics",
+      84
+    ],
+    [
+      "Deli",
+      76
+    ],
+    [
+      "Cello",
+      72
+    ],
+    [
+      "Kangaro-Munix",
+      61
+    ],
+    [
+      "Nataraj",
+      56
+    ],
+    [
+      "Intellio",
+      54
+    ],
+    [
+      "Waterman",
+      50
+    ],
+    [
+      "Pentel",
+      49
+    ],
+    [
+      "Hopax",
+      45
+    ],
+    [
+      "Kores",
+      43
+    ],
+    [
+      "Casio",
+      40
+    ]
+  ],
+  "topCategories": [
+    [
+      "Office Supplies > Pens & Pencil",
+      826
+    ],
+    [
+      "Uncategorized",
+      773
+    ],
+    [
+      "Office Supplies > Notebooks & Diaries",
+      415
+    ],
+    [
+      "Office Supplies > Office Stationery",
+      315
+    ],
+    [
+      "Art & Craft",
+      246
+    ],
+    [
+      "Computer & Electronic Accessories",
+      233
+    ],
+    [
+      "Office Supplies > Note Pads & Sticky Notes",
+      172
+    ],
+    [
+      "Office Supplies > Cartridges & Refills",
+      115
+    ],
+    [
+      "Office Supplies > Markers & Highlighters",
+      111
+    ],
+    [
+      "Office Supplies > Office Instruments > Writing & Drawing Instruments > Pens & Pencils > Pens > Ballpoint Pens",
+      85
+    ],
+    [
+      "Office Supplies > Office Instruments > Writing & Drawing Instruments > Pens & Pencils > Pens > Fountain Pens",
+      80
+    ],
+    [
+      "School Stationery",
+      72
+    ],
+    [
+      "Office Supplies > Office Instruments > Writing & Drawing Instrument Accessories > Pen Ink & Refills",
+      64
+    ],
+    [
+      "Office Supplies > Calculators",
+      41
+    ],
+    [
+      "Office Supplies > Files & Folders",
+      41
+    ],
+    [
+      "Office Supplies > Office Instruments > Writing & Drawing Instruments > Pens & Pencils > Pens > Rollerball Pens",
+      27
+    ],
+    [
+      "Office Supplies > General Office Supplies > Paper Products > Notebooks & Notepads > Journals",
+      26
+    ],
+    [
+      "Office Supplies > Tape & Scissors",
+      25
+    ],
+    [
+      "Computer & Electronic Accessories > Batteries & Cells",
+      20
+    ],
+    [
+      "Office Supplies > POS Rolls & Labels",
+      13
+    ],
+    [
+      "Office Supplies > Ink",
+      13
+    ],
+    [
+      "Office Supplies > Envelopes > Gift Envelopes",
+      12
+    ],
+    [
+      "Arts & Entertainment > Hobbies & Creative Arts > Arts & Crafts > Art & Crafting Materials > Art & Craft Paper",
+      10
+    ],
+    [
+      "Office Supplies > General Office Supplies > Paper Products > Envelopes",
+      5
+    ],
+    [
+      "Art & Craft > Clay & Moulding Dough",
+      3
+    ]
+  ],
+  "inspect": "{\"kind\":\"table\",\"sheet\":\"Products Import\",\"address\":\"A1:AA6\",\"rows\":6,\"cols\":27,\"values\":[[\"Handle\",\"Title\",\"Description\",\"Brand\",\"Category\",\"Tags\",\"Status\",\"SKU\",\"Source SKU\",\"Price\",\"Compare Price\",\"Cost Price\",\"Stock\",\"Barcode\",\"Weight\",\"Weight Unit\",\"Length\",\"Breadth\",\"Height\",\"Image\",\"Reorder Level\",\"Vendor\",\"Google Shopping / Google Product Category\",\"Google Shopping / MPN\",\"Google Shopping / Condition\",\"Color (product.metafields.shopify.color-pattern)\",\"Pen type (product.metafields.shopify.pen-type)\"],[\"pierre-cardin-grace-gift-set\",\"PIERRE CARDIN GRACE GIFT SET\",\"<p>Make every occasion memorable with the <strong data-start=\\\"233\\\" data-end=\\\"265\\\">Pierre Cardin Grace Gift Set</strong>, a perfect blend of sophistication, utility, and timeless design. Crafted for professionals and gifting enthusiasts, this premium set reflects the iconic elegance of the Pierre Cardin brand. Designed to impress, the Grace Gift Set features a sleek, high-quality writing instrument paired with thoughtfully curated accessories—making it an ideal choice for corporate gifting, festive celebrations, or personal milestones.</p>\\n<h3 data-section-id=\\\"8pl8n8\\\" data-start=\\\"689\\\" data-end=\\\"708\\\">Key Features:</h3>\\n<ul data-start=\\\"709\\\" data-end=\\\"1210\\\">\\n<li data-section-id=\\\"kaco2k\\\" data-start=\\\"709\\\" data-end=\\\"810\\\">\\n<strong data-start=\\\"711\\\" data-end=\\\"731\\\">Premium Ball Pen</strong> – Smooth writing experience with a refined metal finish for a luxurious feel</li>\\n<li data-section-id=\\\"kkjgyz\\\" data-start=\\\"811\\\" data-end=\\\"912\\\">\\n<strong data-start=\\\"813\\\" data-end=\\\"839\\\">Elegant Notebook/Diary</strong> – High-quality pages, perfect for notes, journaling, or daily planning</li>\\n<li data-section-id=\\\"si9sk5\\\" data-start=\\\"913\\\" data-end=\\\"1023\\\">\\n<strong data-start=\\\"915\\\" data-end=\\\"936\\\">Smart Accessories</strong> – May include card holder &amp; keychain (depending on variant) for everyday convenience</li>\\n<li data-section-id=\\\"1bxx3rf\\\" data-start=\\\"1024\\\" data-end=\\\"1121\\\">\\n<strong data-start=\\\"1026\\\" data-end=\\\"1050\\\">Sophisticated Design</strong> – Classic styling with modern aesthetics, suitable for professionals</li>\\n<li data-section-id=\\\"2ylhl6\\\" data-start=\\\"1122\\\" data-end=\\\"1210\\\">\\n<strong data-start=\\\"1124\\\" data-end=\\\"1148\\\">Gift-Ready Packaging</strong> – Comes in a designer box, ready to present on any occasion</li>\\n</ul>\\n<p> </p>\",\"Pierre Cardin\",\"Office Supplies\",\"PENS & PENCIL, PIERRE CARDIN\",\"active\",\"30490\",\"30490\",1100,\"\",\"\",2,\"\",500,\"g\",27,22,3,\"https://cdn.shopify.com/s/files/1/0770/3832/1721/files/pcgracegift.webp?v=1777881125\",10,\"LEKHANMART\",\"922\",\"\",\"\",\"\",\"ballpoint\"],[\"parker-insignia-matte-black-chrome-trim-ball-pen-credit-card-holder\",\"PARKER INSIGNIA MATTE BLACK CHROME TRIM BALL PEN+ CREDIT CARD HOLDER\",\"\",\"Parker\",\"Uncategorized\",\"PARKER PREMIUM, PREMIUM PENS\",\"active\",\"20935\",\"20935\",1500,\"\",\"\",0,\"\",350,\"g\",22,22,4,\"https://cdn.shopify.com/s/files/1/0770/3832/1721/files/71izFDxxnHL._SX679.jpg?v=1770567992\",10,\"Lekhanmart\",\"\",\"\",\"\",\"\",\"\"],[\"parker-insignia-matte-black-bmt-ball-pen-keychain\",\"PARKER INSIGNIA MATTE BLACK BMT BALL PEN+ KEYCHAIN\",\"<p><span>The remarkable classic design makes it an outstanding choice for the quietly discerning. The solid metal barrel and the iconic arrowhead clip enhance the design’s authentic quality. A distinctively slender silhouette and refined finish make it a sight to behold. The Ball Point tip provides clean and accurate lines. Its excellent design fits comfortably in your hand to deliver an uninterrupted writing experience each time. The Insignia is clearly special, clearly Parker.</span></p>\",\"Parker\",\"Uncategorized\",\"PARKER PREMIUM, PREMIUM PENS\",\"active\",\"20934\",\"20934\",1600,\"\",\"\",2,\"\",350,\"g\",22,22,4,\"https://cdn.shopify.com/s/files/1/0770/3832/1721/files/8901198155614.jpg?v=1770567994\",10,\"Lekhanmart\",\"\",\"\",\"\",\"\",\"\"],[\"parker-insignia-laque-black-bmt-ball-pen-credit-card-holder\",\"PARKER INSIGNIA LAQUE BLACK BMT BALL PEN+ CREDIT CARD HOLDER\",\"\",\"Parker\",\"Uncategorized\",\"PARKER PREMIUM, PREMIUM PENS\",\"active\",\"20933\",\"20933\",1600,\"\",\"\",4,\"\",350,\"g\",22,22,4,\"https://cdn.shopify.com/s/files/1/0770/3832/1721/files/Instagram_34_f492d5e9-c56e-4caf-9817-bd91290e8058.png?v=1770567996\",10,\"Lekhanmart\",\"\",\"\",\"\",\"\",\"\"],[\"parker-im-white-ct-ball-pen-with-parker-notebook\",\"PARKER IM WHITE CT BALL PEN WITH PARKER NOTEBOOK\",\"\",\"Parker\",\"Uncategorized\",\"PARKER PREMIUM, PREMIUM PENS\",\"active\",\"30016\",\"30016\",2600,\"\",\"\",1,\"\",590,\"g\",22,22,4,\"https://cdn.shopify.com/s/files/1/0770/3832/1721/files/Untitleddesign-2026-02-08T213014.557.png?v=1770568001\",10,\"Lekhanmart\",\"\",\"\",\"\",\"\",\"\"]]}",
+  "formulaErrors": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}"
+}

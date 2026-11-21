@@ -1,0 +1,6662 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (45).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "project_output": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_parker_20260831\\parker products - Updated Website Stock.xlsx",
+  "downloads_output": "C:\\Users\\My-PC-Win10\\Downloads\\parker products - Updated Website Stock.xlsx",
+  "downloads_status": "copied",
+  "meta": {
+    "sheet_name": "Products",
+    "max_row": 197,
+    "max_column": 34,
+    "sku_col": 16,
+    "stock_col": 17,
+    "warehouse_col": 18,
+    "shop_col": 19
+  },
+  "summary": {
+    "website_sku_rows": 196,
+    "matched_direct": 179,
+    "duplicate_code_summed": 17,
+    "missing_in_busy": 0,
+    "changed": 101,
+    "negative_new_qty": 0
+  },
+  "missing_in_busy": [],
+  "duplicate_code_summed": [
+    {
+      "row": 72,
+      "sku": "12161",
+      "title": "PARKER ODYSSEY DARK GREY BLACK METAL TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 2485,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2450,
+          "cl_qty": 1
+        },
+        {
+          "busy_row": 2486,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2450,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 113,
+      "sku": "9171",
+      "title": "PARKER GALAXY GOLD ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3347,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 650,
+          "cl_qty": 5
+        },
+        {
+          "busy_row": 3348,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 690,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 114,
+      "sku": "9143",
+      "title": "PARKER CLASSIC GOLD BALL PEN 600",
+      "variant": "",
+      "old_qty": 30,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 23,
+      "busy_rows": [
+        {
+          "busy_row": 3320,
+          "item_group": "CLASSIC",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 21
+        },
+        {
+          "busy_row": 3321,
+          "item_group": "CLASSIC",
+          "item_name": "",
+          "mrp": 650,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 115,
+      "sku": "9147",
+      "title": "PARKER CLASSIC STAINLESS STEEL GT BP 500",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3325,
+          "item_group": "CLASSIC",
+          "item_name": "",
+          "mrp": 500,
+          "cl_qty": 0
+        },
+        {
+          "busy_row": 3326,
+          "item_group": "CLASSIC",
+          "item_name": "",
+          "mrp": 540,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 123,
+      "sku": "9170",
+      "title": "PARKER GALAXY GOLD BALL PEN",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3345,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 11
+        },
+        {
+          "busy_row": 3346,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 640,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 126,
+      "sku": "9184",
+      "title": "PARKER JOTTER LONDON GOLD BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3360,
+          "item_group": "JOTTER",
+          "item_name": "",
+          "mrp": 525,
+          "cl_qty": 1
+        },
+        {
+          "busy_row": 3361,
+          "item_group": "JOTTER",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 128,
+      "sku": "9173",
+      "title": "PARKER GALAXY STAINLESS STEEL GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3350,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 0
+        },
+        {
+          "busy_row": 3351,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 129,
+      "sku": "9174",
+      "title": "PARKER GALAXY STANDARD GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 14,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 13,
+      "busy_rows": [
+        {
+          "busy_row": 3352,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 2
+        },
+        {
+          "busy_row": 3353,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 430,
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "row": 130,
+      "sku": "9175",
+      "title": "PARKER GALAXY STANDARD GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 23,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3354,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 450,
+          "cl_qty": 0
+        },
+        {
+          "busy_row": 3355,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 490,
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 134,
+      "sku": "9185",
+      "title": "PARKER JOTTER STANDARD CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 23,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 19,
+      "busy_rows": [
+        {
+          "busy_row": 3364,
+          "item_group": "JOTTER",
+          "item_name": "",
+          "mrp": 300,
+          "cl_qty": 13
+        },
+        {
+          "busy_row": 3365,
+          "item_group": "JOTTER",
+          "item_name": "",
+          "mrp": 330,
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 141,
+      "sku": "9312",
+      "title": "PARKER VECTOR METALLIX CHROME TRIM FOUNTAIN PEN+INK POT 30ML",
+      "variant": "",
+      "old_qty": 16,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3407,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 7
+        },
+        {
+          "busy_row": 3408,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 155,
+      "sku": "12532",
+      "title": "PARKER VECTOR METALLIX CHROME TRIM ROLLER BALL PEN+SWISS KNIFE",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 21,
+      "busy_rows": [
+        {
+          "busy_row": 3409,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 470,
+          "cl_qty": 11
+        },
+        {
+          "busy_row": 3410,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 530,
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "row": 158,
+      "sku": "12546",
+      "title": "PARKER LATITUDE MATTE BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 21,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 18,
+      "busy_rows": [
+        {
+          "busy_row": 3368,
+          "item_group": "LATITUDE",
+          "item_name": "",
+          "mrp": 260,
+          "cl_qty": 6
+        },
+        {
+          "busy_row": 3369,
+          "item_group": "LATITUDE",
+          "item_name": "",
+          "mrp": 290,
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "row": 162,
+      "sku": "12570",
+      "title": "PARKER VECTOR STAINLESS STEEL GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 16,
+      "busy_rows": [
+        {
+          "busy_row": 3418,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 8
+        },
+        {
+          "busy_row": 3419,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 750,
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 179,
+      "sku": "17726",
+      "title": "PARKER BETA NEO COATED CLIP FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 26,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 25,
+      "busy_rows": [
+        {
+          "busy_row": 3303,
+          "item_group": "BETA NEO",
+          "item_name": "",
+          "mrp": 150,
+          "cl_qty": 1
+        },
+        {
+          "busy_row": 3304,
+          "item_group": "BETA NEO",
+          "item_name": "",
+          "mrp": 180,
+          "cl_qty": 24
+        }
+      ]
+    },
+    {
+      "row": 180,
+      "sku": "12519",
+      "title": "PARKER BETA NEO COATED CLIP BALL PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3301,
+          "item_group": "BETA NEO",
+          "item_name": "",
+          "mrp": 120,
+          "cl_qty": 6
+        },
+        {
+          "busy_row": 3306,
+          "item_group": "BETA NEO",
+          "item_name": "",
+          "mrp": 150,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 194,
+      "sku": "19432",
+      "title": "PARKER VECTOR GOLD ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 16,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3396,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 850,
+          "cl_qty": 6
+        },
+        {
+          "busy_row": 3397,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 900,
+          "cl_qty": 6
+        }
+      ]
+    }
+  ],
+  "negative_new_qty": [],
+  "changed_rows": [
+    {
+      "row": 2,
+      "sku": "20933",
+      "title": "PARKER INSIGNIA LAQUE BLACK BMT BALL PEN+ CREDIT CARD HOLDER",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1405,
+          "item_group": "INSIGNIA",
+          "item_name": "",
+          "mrp": 1600,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "sku": "20934",
+      "title": "PARKER INSIGNIA MATTE BLACK BMT BALL PEN+ KEYCHAIN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1407,
+          "item_group": "INSIGNIA",
+          "item_name": "",
+          "mrp": 1600,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "sku": "20935",
+      "title": "PARKER INSIGNIA MATTE BLACK CHROME TRIM BALL PEN+ CREDIT CARD HOLDER",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1409,
+          "item_group": "INSIGNIA",
+          "item_name": "",
+          "mrp": 1500,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "sku": "9251",
+      "title": "PARKER ODYSSEY GOLD GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 2490,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 3600,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 32,
+      "sku": "9206",
+      "title": "PARKER ODYSSEY LAQUE BLACK GOLD TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 2492,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 35,
+      "sku": "9257",
+      "title": "PARKER ASTER MATTE BLACK GOLD TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 161,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 2000,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 39,
+      "sku": "12228",
+      "title": "PARKER ASTER CONTEMPORARY BLACK&CHROME GOLD TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 138,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 2350,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 47,
+      "sku": "12195",
+      "title": "PARKER ASTER DELUXE BLACK & CHROME GOLD TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 141,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 2350,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 51,
+      "sku": "9204",
+      "title": "PARKER ODYSSEY BRUSHED METAL GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 2482,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2600,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 52,
+      "sku": "9222",
+      "title": "PARKER ODYSSEY WHITE GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 2501,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2200,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 53,
+      "sku": "9224",
+      "title": "PARKER ASTER BRUSHED METAL GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 136,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1650,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 59,
+      "sku": "9260",
+      "title": "PARKER ASTER LAQUE BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 154,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1400,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 60,
+      "sku": "9263",
+      "title": "PARKER ASTER SHINY CHROME GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 168,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1550,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 64,
+      "sku": "9983",
+      "title": "PARKER INSIGNIA MATT BLACK CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 1408,
+          "item_group": "INSIGNIA",
+          "item_name": "",
+          "mrp": 1500,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 72,
+      "sku": "12161",
+      "title": "PARKER ODYSSEY DARK GREY BLACK METAL TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 2485,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2450,
+          "cl_qty": 1
+        },
+        {
+          "busy_row": 2486,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2450,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 75,
+      "sku": "12177",
+      "title": "PARKER ASTER SHINY CHROME BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 164,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1550,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 76,
+      "sku": "12184",
+      "title": "PARKER FUSION BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 1208,
+          "item_group": "FUSHION",
+          "item_name": "",
+          "mrp": 1200,
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 79,
+      "sku": "12216",
+      "title": "PARKER ODYSSEY SHINY CHROME CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 2499,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2050,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 84,
+      "sku": "12243",
+      "title": "PARKER ASTER LAQUE BROWN GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 155,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1400,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 86,
+      "sku": "12253",
+      "title": "PARKER ASTER MATTE BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 160,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1550,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 87,
+      "sku": "12207",
+      "title": "PARKER ODYSSEY LAQUE BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 2494,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2000,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 89,
+      "sku": "20932",
+      "title": "PARKER INSIGNIA CLASSIC TWIST MATTE BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 1404,
+          "item_group": "INSIGNIA",
+          "item_name": "",
+          "mrp": 1750,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 91,
+      "sku": "20931",
+      "title": "PARKER INSIGNIA CHMPANGE BMT BALL PEN+ CREDIT CARD HOLDER",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1403,
+          "item_group": "INSIGNIA",
+          "item_name": "",
+          "mrp": 1600,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 92,
+      "sku": "12167",
+      "title": "PARKER ASTER LAQUE BLACK GOLD TRIM ROLLER BALL PEN + WATCH",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 9,
+      "busy_rows": [
+        {
+          "busy_row": 153,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1750,
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 94,
+      "sku": "9217",
+      "title": "PARKER ODYSSEY PRECIOUS BLUE GOLD TRIM BALL PEN+WALLET",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 2498,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2400,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 95,
+      "sku": "9226",
+      "title": "PARKER ASTER LAQUE BLACK GOLD TRIM BALL PEN+CREDIT CARD HOLDER",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 152,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1400,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 97,
+      "sku": "9231",
+      "title": "PARKER ASTER SHINY CHROME GOLD TRIM BALL PEN+CREDIT CARD HOLDER",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 169,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1400,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 100,
+      "sku": "9238",
+      "title": "PARKER ASTER SHINY CHROME GOLD TRIM ROLLER BALL PEN+CREDIT CARD HOLDER",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 166,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1500,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 107,
+      "sku": "20485",
+      "title": "PARKER IM BLACK CHROME TRIM BALL PEN WITH PARKER NOTEBOOK",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1372,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 2600,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 108,
+      "sku": "30018",
+      "title": "PARKER IM BLUE CHROME TRIM BALL PEN WITH PARKER NOTEBOOK",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1373,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 2600,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 109,
+      "sku": "30016",
+      "title": "PARKER IM WHITE CT BALL PEN WITH PARKER NOTEBOOK",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 1391,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 2600,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 110,
+      "sku": "8571",
+      "title": "PARKER BETA PREMIUM GOLD CT RB 190",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3312,
+          "item_group": "BETA PREMIUM",
+          "item_name": "",
+          "mrp": 190,
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "row": 111,
+      "sku": "8570",
+      "title": "PARKER BETA PREMIUM GOLD CT BP 170",
+      "variant": "",
+      "old_qty": 31,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 30,
+      "busy_rows": [
+        {
+          "busy_row": 3311,
+          "item_group": "BETA PREMIUM",
+          "item_name": "",
+          "mrp": 170,
+          "cl_qty": 30
+        }
+      ]
+    },
+    {
+      "row": 112,
+      "sku": "9157",
+      "title": "PARKER FOLIO STANDARD CHROME TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3334,
+          "item_group": "FOLIO",
+          "item_name": "",
+          "mrp": 300,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 113,
+      "sku": "9171",
+      "title": "PARKER GALAXY GOLD ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3347,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 650,
+          "cl_qty": 5
+        },
+        {
+          "busy_row": 3348,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 690,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 114,
+      "sku": "9143",
+      "title": "PARKER CLASSIC GOLD BALL PEN 600",
+      "variant": "",
+      "old_qty": 30,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 23,
+      "busy_rows": [
+        {
+          "busy_row": 3320,
+          "item_group": "CLASSIC",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 21
+        },
+        {
+          "busy_row": 3321,
+          "item_group": "CLASSIC",
+          "item_name": "",
+          "mrp": 650,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 115,
+      "sku": "9147",
+      "title": "PARKER CLASSIC STAINLESS STEEL GT BP 500",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3325,
+          "item_group": "CLASSIC",
+          "item_name": "",
+          "mrp": 500,
+          "cl_qty": 0
+        },
+        {
+          "busy_row": 3326,
+          "item_group": "CLASSIC",
+          "item_name": "",
+          "mrp": 540,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 116,
+      "sku": "9148",
+      "title": "PARKER FOLIO ANTIMICROBIAL CIP RB 550",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3328,
+          "item_group": "FOLIO",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 117,
+      "sku": "9163",
+      "title": "PARKER FRONTIER MATTE BLACK GOLD TRIM  FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3340,
+          "item_group": "FRONTIER",
+          "item_name": "",
+          "mrp": 825,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 118,
+      "sku": "9164",
+      "title": "PARKER FRONTIER MATTE BLACK GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 11,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3341,
+          "item_group": "FRONTIER",
+          "item_name": "",
+          "mrp": 775,
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 119,
+      "sku": "9154",
+      "title": "PARKER FOLIO  STAINLESS STEEL CHORME TRIM BP 350",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3330,
+          "item_group": "FOLIO",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 120,
+      "sku": "9158",
+      "title": "PARKER FOLIO STANDARD CT ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3335,
+          "item_group": "FOLIO",
+          "item_name": "",
+          "mrp": 290,
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 121,
+      "sku": "9160",
+      "title": "PARKER FRONTIER GOLD ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3337,
+          "item_group": "FRONTIER",
+          "item_name": "",
+          "mrp": 900,
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 122,
+      "sku": "9162",
+      "title": "PARKER FRONTIER MATTE BLACK GUN METAL TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3339,
+          "item_group": "FRONTIER",
+          "item_name": "",
+          "mrp": 825,
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 123,
+      "sku": "9170",
+      "title": "PARKER GALAXY GOLD BALL PEN",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3345,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 11
+        },
+        {
+          "busy_row": 3346,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 640,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 124,
+      "sku": "9176",
+      "title": "PARKER CARTRIDGE QUINK BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3318,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 125,
+      "sku": "9177",
+      "title": "PARKER INK QUINK 30ML BLUE",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 17,
+      "busy_rows": [
+        {
+          "busy_row": 3358,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 17
+        }
+      ]
+    },
+    {
+      "row": 126,
+      "sku": "9184",
+      "title": "PARKER JOTTER LONDON GOLD BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3360,
+          "item_group": "JOTTER",
+          "item_name": "",
+          "mrp": 525,
+          "cl_qty": 1
+        },
+        {
+          "busy_row": 3361,
+          "item_group": "JOTTER",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 127,
+      "sku": "9188",
+      "title": "PARKER JOTTER LONDON STAINLESS STEEL GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3363,
+          "item_group": "JOTTER",
+          "item_name": "",
+          "mrp": 410,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 129,
+      "sku": "9174",
+      "title": "PARKER GALAXY STANDARD GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 14,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 13,
+      "busy_rows": [
+        {
+          "busy_row": 3352,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 2
+        },
+        {
+          "busy_row": 3353,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 430,
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "row": 130,
+      "sku": "9175",
+      "title": "PARKER GALAXY STANDARD GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 23,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3354,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 450,
+          "cl_qty": 0
+        },
+        {
+          "busy_row": 3355,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 490,
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 131,
+      "sku": "9178",
+      "title": "PARKER INK QUINK 30ML BLACK",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3357,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 132,
+      "sku": "9180",
+      "title": "PARKER REFILL MEDIUM BLUE BALL PEN",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 36,
+      "busy_rows": [
+        {
+          "busy_row": 3379,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 80,
+          "cl_qty": 36
+        }
+      ]
+    },
+    {
+      "row": 133,
+      "sku": "9181",
+      "title": "PARKER REFILL FINE BLUE BALL PEN",
+      "variant": "",
+      "old_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 23,
+      "busy_rows": [
+        {
+          "busy_row": 3375,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 80,
+          "cl_qty": 23
+        }
+      ]
+    },
+    {
+      "row": 134,
+      "sku": "9185",
+      "title": "PARKER JOTTER STANDARD CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 23,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 19,
+      "busy_rows": [
+        {
+          "busy_row": 3364,
+          "item_group": "JOTTER",
+          "item_name": "",
+          "mrp": 300,
+          "cl_qty": 13
+        },
+        {
+          "busy_row": 3365,
+          "item_group": "JOTTER",
+          "item_name": "",
+          "mrp": 330,
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 136,
+      "sku": "9305",
+      "title": "PARKER VECTOR GOLD GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 18,
+      "busy_rows": [
+        {
+          "busy_row": 3394,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 800,
+          "cl_qty": 18
+        }
+      ]
+    },
+    {
+      "row": 137,
+      "sku": "9314",
+      "title": "PARKER VECTOR STAINLESS STEEL CHROME TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3414,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 650,
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 139,
+      "sku": "9310",
+      "title": "PARKER VECTOR MATTE BLACK CHROME TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3399,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 140,
+      "sku": "9311",
+      "title": "PARKER VECTOR STANDARD CALLIGRAPHY CHROME TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3421,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 141,
+      "sku": "9312",
+      "title": "PARKER VECTOR METALLIX CHROME TRIM FOUNTAIN PEN+INK POT 30ML",
+      "variant": "",
+      "old_qty": 16,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3407,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 7
+        },
+        {
+          "busy_row": 3408,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 144,
+      "sku": "9319",
+      "title": "PARKER VECTOR STANDARD CHROME TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 34,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 25,
+      "busy_rows": [
+        {
+          "busy_row": 3426,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 370,
+          "cl_qty": 25
+        }
+      ]
+    },
+    {
+      "row": 145,
+      "sku": "9320",
+      "title": "PARKER VECTOR STANDARD GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3427,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 147,
+      "sku": "12508",
+      "title": "PARKER BETA PREMIUM SILVER GT FP+INK 250",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3315,
+          "item_group": "BETA PREMIUM",
+          "item_name": "",
+          "mrp": 250,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 152,
+      "sku": "12516",
+      "title": "PARKER BETA NEO CHROME TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3307,
+          "item_group": "BETA NEO",
+          "item_name": "",
+          "mrp": 150,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 153,
+      "sku": "12526",
+      "title": "PARKER FOLIO STAINLESS STEEL GOLD TRIM RB 420",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 11,
+      "busy_rows": [
+        {
+          "busy_row": 3332,
+          "item_group": "FOLIO",
+          "item_name": "",
+          "mrp": 420,
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "row": 155,
+      "sku": "12532",
+      "title": "PARKER VECTOR METALLIX CHROME TRIM ROLLER BALL PEN+SWISS KNIFE",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 21,
+      "busy_rows": [
+        {
+          "busy_row": 3409,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 470,
+          "cl_qty": 11
+        },
+        {
+          "busy_row": 3410,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 530,
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "row": 157,
+      "sku": "12564",
+      "title": "PARKER BETA PREMIUM SILVER BP 170",
+      "variant": "",
+      "old_qty": 32,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 29,
+      "busy_rows": [
+        {
+          "busy_row": 3314,
+          "item_group": "BETA PREMIUM",
+          "item_name": "",
+          "mrp": 170,
+          "cl_qty": 29
+        }
+      ]
+    },
+    {
+      "row": 158,
+      "sku": "12546",
+      "title": "PARKER LATITUDE MATTE BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 21,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 18,
+      "busy_rows": [
+        {
+          "busy_row": 3368,
+          "item_group": "LATITUDE",
+          "item_name": "",
+          "mrp": 260,
+          "cl_qty": 6
+        },
+        {
+          "busy_row": 3369,
+          "item_group": "LATITUDE",
+          "item_name": "",
+          "mrp": 290,
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "row": 161,
+      "sku": "12568",
+      "title": "PARKER CARTRIDGE QUINK BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 17,
+      "busy_rows": [
+        {
+          "busy_row": 3319,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 17
+        }
+      ]
+    },
+    {
+      "row": 162,
+      "sku": "12570",
+      "title": "PARKER VECTOR STAINLESS STEEL GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 16,
+      "busy_rows": [
+        {
+          "busy_row": 3418,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 8
+        },
+        {
+          "busy_row": 3419,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 750,
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 163,
+      "sku": "12575",
+      "title": "PARKER VECTOR NEU BHARAT SPECIAL EDITION CHROME TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3411,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 370,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 164,
+      "sku": "12591",
+      "title": "PARKER LATITUDE SHINY CHROME CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 16,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3370,
+          "item_group": "LATITUDE",
+          "item_name": "",
+          "mrp": 240,
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 165,
+      "sku": "12598",
+      "title": "PARKER VECTOR STAINLESS STEEL CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3413,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 166,
+      "sku": "12626",
+      "title": "PARKER REFILL ULTRA FINE BLACK ROLLER BALL",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3383,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 150,
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 167,
+      "sku": "12613",
+      "title": "PARKER VECTOR STANDARD CHROME TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3424,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 430,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 168,
+      "sku": "12615",
+      "title": "PARKER REFILL ULTRA FINE BLUE ROLLER BALL",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 9,
+      "busy_rows": [
+        {
+          "busy_row": 3384,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 160,
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 169,
+      "sku": "12628",
+      "title": "PARKER REFILL MEDIUM BLUE ROLLER BALL",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3380,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 170,
+      "sku": "12631",
+      "title": "PARKER REFILL MEDIUM BLACK ROLLER BALL",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3378,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 171,
+      "sku": "12632",
+      "title": "PARKER REFILL FINE BLUE ROLLER BALL",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 21,
+      "busy_rows": [
+        {
+          "busy_row": 3376,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 21
+        }
+      ]
+    },
+    {
+      "row": 172,
+      "sku": "12636",
+      "title": "PARKER REFILL FINE BLACK ROLLER BALL",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3374,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 173,
+      "sku": "12641",
+      "title": "PARKER BETA NEO CHROME TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3308,
+          "item_group": "BETA NEO",
+          "item_name": "",
+          "mrp": 140,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 174,
+      "sku": "8573",
+      "title": "PARKER BETA PREMIUM GOLD FOUNTAIN PEN +INK",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 9,
+      "busy_rows": [
+        {
+          "busy_row": 3313,
+          "item_group": "BETA PREMIUM",
+          "item_name": "",
+          "mrp": 250,
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 175,
+      "sku": "17150",
+      "title": "PARKER VECTOR STANDARD COLOR BLOCK CHROME TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3422,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 370,
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 176,
+      "sku": "17153",
+      "title": "PARKER CLASSIC MATTE BLACK BALL PEN",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 11,
+      "busy_rows": [
+        {
+          "busy_row": 3322,
+          "item_group": "CLASSIC",
+          "item_name": "",
+          "mrp": 580,
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "row": 177,
+      "sku": "17165",
+      "title": "PARKER VECTOR STANDARD CALLIGRAPHY FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3420,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 178,
+      "sku": "17739",
+      "title": "PARKER REFILL NAVIGATOR FINE ROLLER BALL PEN - BLACK",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3382,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "row": 179,
+      "sku": "17726",
+      "title": "PARKER BETA NEO COATED CLIP FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 26,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 25,
+      "busy_rows": [
+        {
+          "busy_row": 3303,
+          "item_group": "BETA NEO",
+          "item_name": "",
+          "mrp": 150,
+          "cl_qty": 1
+        },
+        {
+          "busy_row": 3304,
+          "item_group": "BETA NEO",
+          "item_name": "",
+          "mrp": 180,
+          "cl_qty": 24
+        }
+      ]
+    },
+    {
+      "row": 180,
+      "sku": "12519",
+      "title": "PARKER BETA NEO COATED CLIP BALL PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3301,
+          "item_group": "BETA NEO",
+          "item_name": "",
+          "mrp": 120,
+          "cl_qty": 6
+        },
+        {
+          "busy_row": 3306,
+          "item_group": "BETA NEO",
+          "item_name": "",
+          "mrp": 150,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 181,
+      "sku": "17730",
+      "title": "PARKER JOTTER LONDON ROSE GOLD BALL PEN",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3362,
+          "item_group": "JOTTER",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 182,
+      "sku": "17733",
+      "title": "PARKER REFILL SYSTEMARK FINE BALL PEN",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3377,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 40,
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 183,
+      "sku": "17740",
+      "title": "PARKER REFILL NAVIGATOR FINE ROLLER BALL PEN - BLUE",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3381,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "row": 184,
+      "sku": "17741",
+      "title": "PARKER BETA NEO COATED CLIP ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 33,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 30,
+      "busy_rows": [
+        {
+          "busy_row": 3305,
+          "item_group": "BETA NEO",
+          "item_name": "",
+          "mrp": 140,
+          "cl_qty": 30
+        }
+      ]
+    },
+    {
+      "row": 185,
+      "sku": "18674",
+      "title": "PARKER FRONTIER GOLD FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3336,
+          "item_group": "FRONTIER",
+          "item_name": "",
+          "mrp": 950,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 188,
+      "sku": "19266",
+      "title": "PARKER FRONTIER MATTE BLACK GUN METAL TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3338,
+          "item_group": "FRONTIER",
+          "item_name": "",
+          "mrp": 875,
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 190,
+      "sku": "12580",
+      "title": "PARKER LATITUDE SHINY CHROME GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 11,
+      "busy_rows": [
+        {
+          "busy_row": 3372,
+          "item_group": "LATITUDE",
+          "item_name": "",
+          "mrp": 310,
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "row": 191,
+      "sku": "19354",
+      "title": "PARKER LATITUDE MATTE BLACK CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3367,
+          "item_group": "LATITUDE",
+          "item_name": "",
+          "mrp": 220,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 193,
+      "sku": "19447",
+      "title": "PARKER VECTOR MATTE BLACK ROLLER BALL PEN + NOTEBOOK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3404,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 999,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 194,
+      "sku": "19432",
+      "title": "PARKER VECTOR GOLD ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 16,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3396,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 850,
+          "cl_qty": 6
+        },
+        {
+          "busy_row": 3397,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 900,
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 195,
+      "sku": "19435",
+      "title": "PARKER VECTOR STANDARD METALLIC CHROME TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3405,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 340,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 196,
+      "sku": "19441",
+      "title": "PARKER VECTOR SPECIAL EDITION CAMOUFLAGE CHROME TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 11,
+      "busy_rows": [
+        {
+          "busy_row": 3412,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "row": 197,
+      "sku": "19436",
+      "title": "PARKER VECTOR STANDARD METALLIC GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3406,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 360,
+          "cl_qty": 2
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "row": 2,
+      "sku": "20933",
+      "title": "PARKER INSIGNIA LAQUE BLACK BMT BALL PEN+ CREDIT CARD HOLDER",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1405,
+          "item_group": "INSIGNIA",
+          "item_name": "",
+          "mrp": 1600,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "sku": "20934",
+      "title": "PARKER INSIGNIA MATTE BLACK BMT BALL PEN+ KEYCHAIN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1407,
+          "item_group": "INSIGNIA",
+          "item_name": "",
+          "mrp": 1600,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "sku": "20935",
+      "title": "PARKER INSIGNIA MATTE BLACK CHROME TRIM BALL PEN+ CREDIT CARD HOLDER",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1409,
+          "item_group": "INSIGNIA",
+          "item_name": "",
+          "mrp": 1500,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "sku": "9189",
+      "title": "PARKER AMBIENT DARK GREY BLACK METAL TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 94,
+          "item_group": "AMBIENT",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "sku": "9190",
+      "title": "PARKER AMBIENT GUNMETAL CHROME TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 97,
+          "item_group": "AMBIENT",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "sku": "9192",
+      "title": "PARKER AMBIENT ROSE GOLD BLACK METAL TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 101,
+          "item_group": "AMBIENT",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "sku": "9194",
+      "title": "PARKER AMBIENT WHITE CHROME TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 103,
+          "item_group": "AMBIENT",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "sku": "9219",
+      "title": "PARKER ODYSSEY SILVER CHROME TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 2500,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 1800,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "sku": "9251",
+      "title": "PARKER ODYSSEY GOLD GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 2490,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 3600,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "sku": "9252",
+      "title": "PARKER ODYSSEY MATTE BLACK-BLACK METAL TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 2497,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2600,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "sku": "9977",
+      "title": "PARKER ASTER MATTE BROWN GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 163,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1550,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "sku": "9987",
+      "title": "PARKER ODYSSEY LAQUE BLACK GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 2491,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2400,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "sku": "12108",
+      "title": "PARKER IM  AMETHYST PURPLE BLACK ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1371,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 3300,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "sku": "12120",
+      "title": "PARKER IM MONOCHROME TITANIUM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1390,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 5100,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "sku": "12127",
+      "title": "PARKER IM FLAME ORANGE BLACK ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1376,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 3300,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "sku": "12135",
+      "title": "PARKER IM MARINE BLUE BLACK TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1379,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 3300,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "sku": "12137",
+      "title": "PARKER IM MONOCHROME BLUE TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1381,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 5800,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "sku": "12139",
+      "title": "PARKER URBAN  VOILET CHROME TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 4788,
+          "item_group": "URBAN",
+          "item_name": "",
+          "mrp": 2200,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "sku": "12142",
+      "title": "PARKER ODYSSEY WHITE GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 2502,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2400,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 21,
+      "sku": "12157",
+      "title": "PARKER ODYSSEY DARK GREY BLACK METAL TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 2487,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2650,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 22,
+      "sku": "12165",
+      "title": "PARKER ASTER SHINY CHROME CHROME TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 167,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1550,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 23,
+      "sku": "12172",
+      "title": "PARKER ASTER SILVER BLUE CHROME TIME ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 173,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1400,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "sku": "12193",
+      "title": "PARKER ASTER DELUXE BLACK & CHROME GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 142,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 2100,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 25,
+      "sku": "12203",
+      "title": "PARKER ASTER DELUXE BLACK & GOLD GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 145,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 2400,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 26,
+      "sku": "12206",
+      "title": "PARKER ASTER ESSENTIAL BLACK & CHROME GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 148,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 2300,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 27,
+      "sku": "12221",
+      "title": "PARKER ODYSSEY BRUSHED METAL GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 2484,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "sku": "12226",
+      "title": "PARKER ASTER CONTEMPORARY BLACK&CHROME GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 139,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 2100,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 29,
+      "sku": "12232",
+      "title": "PARKER ASTER ESSENTIAL BLACK & GOLD GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 151,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 2400,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 30,
+      "sku": "12240",
+      "title": "PARKER IM MONOCHROME CHAMPAGNE ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1387,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 4100,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 31,
+      "sku": "12248",
+      "title": "PARKER IM MONOCHROME BURGUNDY ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1384,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 5100,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 32,
+      "sku": "9206",
+      "title": "PARKER ODYSSEY LAQUE BLACK GOLD TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 2492,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 33,
+      "sku": "9249",
+      "title": "PARKER ODYSSEY GOLD GOLD TRIM FOUNTAIN PEN MEDIUM NIB",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 2489,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 4100,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 34,
+      "sku": "9250",
+      "title": "PARKER ODYSSEY MATTE BLACK- BLACK METAL TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 2496,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 35,
+      "sku": "9257",
+      "title": "PARKER ASTER MATTE BLACK GOLD TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 161,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 2000,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 36,
+      "sku": "9985",
+      "title": "PARKER ODYSSEY BRUSHED METAL GOLD TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 2483,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 3100,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 37,
+      "sku": "12199",
+      "title": "PARKER ASTER DELUXE BLACK & GOLD GOLD TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 144,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 2700,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 38,
+      "sku": "12213",
+      "title": "PARKER ASTER ESSENTIAL BLACK & CHROME GOLD TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 147,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 2350,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 39,
+      "sku": "12228",
+      "title": "PARKER ASTER CONTEMPORARY BLACK&CHROME GOLD TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 138,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 2350,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 40,
+      "sku": "12234",
+      "title": "PARKER ASTER ESSENTIAL BLACK & GOLD GOLD TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 150,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 2700,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 41,
+      "sku": "12242",
+      "title": "PARKER IM MONOCHROME CHAMPAGNE FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1386,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 5100,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 42,
+      "sku": "12251",
+      "title": "PARKER IM MONOCHROME BURGUNDY FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1383,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 5900,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 43,
+      "sku": "12104",
+      "title": "PARKER IM  AMETHYST PURPLE BLACK FOUNTAIN PEN FINE NIB",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1370,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 4100,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 44,
+      "sku": "12114",
+      "title": "PARKER IM MONOCHROME TITANIUM FOUNTAIN PEN MEDIUM NIB",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1388,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 5900,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 45,
+      "sku": "12122",
+      "title": "PARKER IM FLAME ORANGE BLACK FOUNTAIN PEN MEDIUM NIB",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1375,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 4100,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 46,
+      "sku": "12129",
+      "title": "PARKER IM MARINE BLUE BLACK TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1378,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 4100,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 47,
+      "sku": "12195",
+      "title": "PARKER ASTER DELUXE BLACK & CHROME GOLD TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 141,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 2350,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 48,
+      "sku": "17501",
+      "title": "PARKER 51 BLACK CHROME TRIM FOUNTAIN PEN FINE NIB",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 2582,
+          "item_group": "PARKER PREMIUM",
+          "item_name": "",
+          "mrp": 8500,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 49,
+      "sku": "9191",
+      "title": "PARKER AMBIENT ROSE GOLD BLACK METAL TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 100,
+          "item_group": "AMBIENT",
+          "item_name": "",
+          "mrp": 2600,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 50,
+      "sku": "9202",
+      "title": "PARKER INSIGNIA LAQUE BLACK CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1406,
+          "item_group": "INSIGNIA",
+          "item_name": "",
+          "mrp": 1500,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 51,
+      "sku": "9204",
+      "title": "PARKER ODYSSEY BRUSHED METAL GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 2482,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2600,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 52,
+      "sku": "9222",
+      "title": "PARKER ODYSSEY WHITE GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 2501,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2200,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 53,
+      "sku": "9224",
+      "title": "PARKER ASTER BRUSHED METAL GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 136,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1650,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 54,
+      "sku": "9242",
+      "title": "PARKER FUSION MATTE BLACK CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1211,
+          "item_group": "FUSHION",
+          "item_name": "",
+          "mrp": 1000,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 55,
+      "sku": "9246",
+      "title": "PARKER FUSION SHINY CHROME GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1213,
+          "item_group": "FUSHION",
+          "item_name": "",
+          "mrp": 1100,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 56,
+      "sku": "9248",
+      "title": "PARKER ODYSSEY GOLD GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 2488,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 3100,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 57,
+      "sku": "9253",
+      "title": "PARKER ODYSSEY MATTE BLACK-BLACK METAL TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 2495,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2300,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 58,
+      "sku": "9254",
+      "title": "PARKER FUSION SHINY CHROME CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1212,
+          "item_group": "FUSHION",
+          "item_name": "",
+          "mrp": 1000,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 59,
+      "sku": "9260",
+      "title": "PARKER ASTER LAQUE BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 154,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1400,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 60,
+      "sku": "9263",
+      "title": "PARKER ASTER SHINY CHROME GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 168,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1550,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 61,
+      "sku": "9271",
+      "title": "PARKER INSIGNIA MATT BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 1410,
+          "item_group": "INSIGNIA",
+          "item_name": "",
+          "mrp": 1800,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 62,
+      "sku": "9973",
+      "title": "PARKER AMBIENT WHITE CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 102,
+          "item_group": "AMBIENT",
+          "item_name": "",
+          "mrp": 2600,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 63,
+      "sku": "9978",
+      "title": "PARKER ASTER SILVER BLACK CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 171,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1350,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 64,
+      "sku": "9983",
+      "title": "PARKER INSIGNIA MATT BLACK CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 1408,
+          "item_group": "INSIGNIA",
+          "item_name": "",
+          "mrp": 1500,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 65,
+      "sku": "9984",
+      "title": "PARKER INSIGNIA SLIM SHINY CHROME GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1411,
+          "item_group": "INSIGNIA",
+          "item_name": "",
+          "mrp": 2600,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 66,
+      "sku": "12113",
+      "title": "PARKER IM  AMETHYST PURPLE BLACK BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1369,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 67,
+      "sku": "12121",
+      "title": "PARKER IM MONOCHROME TITANIUM BALL PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1389,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 3100,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 68,
+      "sku": "12128",
+      "title": "PARKER IM FLAME ORANGE BLACK BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1374,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 69,
+      "sku": "12136",
+      "title": "PARKER IM MARINE BLUE BLACK TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1377,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 70,
+      "sku": "12144",
+      "title": "PARKER URBAN MUTED BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 4789,
+          "item_group": "URBAN",
+          "item_name": "",
+          "mrp": 3000,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 71,
+      "sku": "12159",
+      "title": "PARKER AMBIENT DELUX BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 96,
+          "item_group": "AMBIENT",
+          "item_name": "",
+          "mrp": 3300,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 72,
+      "sku": "12161",
+      "title": "PARKER ODYSSEY DARK GREY BLACK METAL TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 2485,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2450,
+          "cl_qty": 1
+        },
+        {
+          "busy_row": 2486,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2450,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 73,
+      "sku": "12163",
+      "title": "PARKER ASTER MATTE BLUE GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 162,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1450,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 74,
+      "sku": "12170",
+      "title": "PARKER ASTER SILVER BLUE CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 172,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1250,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 75,
+      "sku": "12177",
+      "title": "PARKER ASTER SHINY CHROME BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 164,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1550,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 76,
+      "sku": "12184",
+      "title": "PARKER FUSION BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 1208,
+          "item_group": "FUSHION",
+          "item_name": "",
+          "mrp": 1200,
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 77,
+      "sku": "12189",
+      "title": "PARKER ASTER DELUXE BLACK & CHROME GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 140,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1900,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 78,
+      "sku": "12210",
+      "title": "PARKER ASTER ESSENTIAL BLACK & CHROME GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 146,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1900,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 79,
+      "sku": "12216",
+      "title": "PARKER ODYSSEY SHINY CHROME CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 2499,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2050,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 80,
+      "sku": "12224",
+      "title": "PARKER ASTER DELUXE BLACK & GOLD GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 143,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 2200,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 81,
+      "sku": "12230",
+      "title": "PARKER ASTER CONTEMPORARY BLACK&CHROME GOLD TRIM  BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 137,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1900,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 82,
+      "sku": "12236",
+      "title": "PARKER IM MONOCHROME BLUE TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1380,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 4100,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 83,
+      "sku": "12238",
+      "title": "PARKER IM MONOCHROME CHAMPAGNE BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1385,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 3100,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 84,
+      "sku": "12243",
+      "title": "PARKER ASTER LAQUE BROWN GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 155,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1400,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 85,
+      "sku": "12246",
+      "title": "PARKER IM MONOCHROME BURGUNDY BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1382,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 3100,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 86,
+      "sku": "12253",
+      "title": "PARKER ASTER MATTE BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 160,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1550,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 87,
+      "sku": "12207",
+      "title": "PARKER ODYSSEY LAQUE BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 2494,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2000,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 88,
+      "sku": "17499",
+      "title": "PARKER ASTER ESSENTIAL BLACK&GOLD GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 149,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 2200,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 89,
+      "sku": "20932",
+      "title": "PARKER INSIGNIA CLASSIC TWIST MATTE BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 1404,
+          "item_group": "INSIGNIA",
+          "item_name": "",
+          "mrp": 1750,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 90,
+      "sku": "19113",
+      "title": "PARKER ASTER SHINY CHROME GOLD TRIM BALL PEN+NOTEBOOK+KEYCHAIN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 165,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1400,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 91,
+      "sku": "20931",
+      "title": "PARKER INSIGNIA CHMPANGE BMT BALL PEN+ CREDIT CARD HOLDER",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1403,
+          "item_group": "INSIGNIA",
+          "item_name": "",
+          "mrp": 1600,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 92,
+      "sku": "12167",
+      "title": "PARKER ASTER LAQUE BLACK GOLD TRIM ROLLER BALL PEN + WATCH",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 9,
+      "busy_rows": [
+        {
+          "busy_row": 153,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1750,
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 93,
+      "sku": "12186",
+      "title": "PARKER ASTER SILVER BLACK CHROME TRIM ROLLER BALL PEN + SPHOL",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 170,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1500,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 94,
+      "sku": "9217",
+      "title": "PARKER ODYSSEY PRECIOUS BLUE GOLD TRIM BALL PEN+WALLET",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 2498,
+          "item_group": "ODYSSEY",
+          "item_name": "",
+          "mrp": 2400,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 95,
+      "sku": "9226",
+      "title": "PARKER ASTER LAQUE BLACK GOLD TRIM BALL PEN+CREDIT CARD HOLDER",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 152,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1400,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 96,
+      "sku": "9229",
+      "title": "PARKER ASTER MATT BLACK GOLD TRIM ROLLER BALL PEN+WALLET",
+      "variant": "",
+      "old_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 158,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1700,
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "row": 97,
+      "sku": "9231",
+      "title": "PARKER ASTER SHINY CHROME GOLD TRIM BALL PEN+CREDIT CARD HOLDER",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 169,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1400,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 98,
+      "sku": "9236",
+      "title": "PARKER ASTER MATT RED GOLD TRIM ROLLER BALL PEN+PASSPORT HOLDER",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 159,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1600,
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 99,
+      "sku": "9237",
+      "title": "PARKER ASTER MATT BLACK GOLD TRIM BALL PEN+CREDIT CARD HOLDER",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 156,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1400,
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 100,
+      "sku": "9238",
+      "title": "PARKER ASTER SHINY CHROME GOLD TRIM ROLLER BALL PEN+CREDIT CARD HOLDER",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 166,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1500,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 101,
+      "sku": "9239",
+      "title": "PARKER ASTER MATT BLACK GOLD TRIM BALL PEN+NOTEBOOK+KEYCHAIN",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 157,
+          "item_group": "ASTER",
+          "item_name": "",
+          "mrp": 1400,
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 102,
+      "sku": "9243",
+      "title": "PARKER FUSION LAQUE BLACK GOLD TRIM BALL PEN+NOTEBOOK A6",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1210,
+          "item_group": "FUSHION",
+          "item_name": "",
+          "mrp": 1250,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 103,
+      "sku": "9244",
+      "title": "PARKER FUSION LAQUE BLACK CHROME TRIM BALL PEN+NOTEBOOK A6",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1209,
+          "item_group": "FUSHION",
+          "item_name": "",
+          "mrp": 1200,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 104,
+      "sku": "30015",
+      "title": "PARKER AMBIENT DARK GREY BMT ROLLER BALL & BALL PEN SET",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 95,
+          "item_group": "AMBIENT",
+          "item_name": "",
+          "mrp": 3510,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 105,
+      "sku": "30013",
+      "title": "PARKER AMBIENT LACQUE BLACK CHROME TRIM FOUNTAIN PEN & ROLLER BALL SET",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 98,
+          "item_group": "AMBIENT",
+          "item_name": "",
+          "mrp": 3835,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 106,
+      "sku": "30014",
+      "title": "PARKER AMBIENT LACQUE BLACK GOLD TRIM FOUNTAIN PEN & ROLLER BALL SET",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 99,
+          "item_group": "AMBIENT",
+          "item_name": "",
+          "mrp": 4225,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 107,
+      "sku": "20485",
+      "title": "PARKER IM BLACK CHROME TRIM BALL PEN WITH PARKER NOTEBOOK",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1372,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 2600,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 108,
+      "sku": "30018",
+      "title": "PARKER IM BLUE CHROME TRIM BALL PEN WITH PARKER NOTEBOOK",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1373,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 2600,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 109,
+      "sku": "30016",
+      "title": "PARKER IM WHITE CT BALL PEN WITH PARKER NOTEBOOK",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 1391,
+          "item_group": "IMMENS",
+          "item_name": "",
+          "mrp": 2600,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 110,
+      "sku": "8571",
+      "title": "PARKER BETA PREMIUM GOLD CT RB 190",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3312,
+          "item_group": "BETA PREMIUM",
+          "item_name": "",
+          "mrp": 190,
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "row": 111,
+      "sku": "8570",
+      "title": "PARKER BETA PREMIUM GOLD CT BP 170",
+      "variant": "",
+      "old_qty": 31,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 30,
+      "busy_rows": [
+        {
+          "busy_row": 3311,
+          "item_group": "BETA PREMIUM",
+          "item_name": "",
+          "mrp": 170,
+          "cl_qty": 30
+        }
+      ]
+    },
+    {
+      "row": 112,
+      "sku": "9157",
+      "title": "PARKER FOLIO STANDARD CHROME TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3334,
+          "item_group": "FOLIO",
+          "item_name": "",
+          "mrp": 300,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 113,
+      "sku": "9171",
+      "title": "PARKER GALAXY GOLD ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3347,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 650,
+          "cl_qty": 5
+        },
+        {
+          "busy_row": 3348,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 690,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 114,
+      "sku": "9143",
+      "title": "PARKER CLASSIC GOLD BALL PEN 600",
+      "variant": "",
+      "old_qty": 30,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 23,
+      "busy_rows": [
+        {
+          "busy_row": 3320,
+          "item_group": "CLASSIC",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 21
+        },
+        {
+          "busy_row": 3321,
+          "item_group": "CLASSIC",
+          "item_name": "",
+          "mrp": 650,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 115,
+      "sku": "9147",
+      "title": "PARKER CLASSIC STAINLESS STEEL GT BP 500",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3325,
+          "item_group": "CLASSIC",
+          "item_name": "",
+          "mrp": 500,
+          "cl_qty": 0
+        },
+        {
+          "busy_row": 3326,
+          "item_group": "CLASSIC",
+          "item_name": "",
+          "mrp": 540,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 116,
+      "sku": "9148",
+      "title": "PARKER FOLIO ANTIMICROBIAL CIP RB 550",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3328,
+          "item_group": "FOLIO",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 117,
+      "sku": "9163",
+      "title": "PARKER FRONTIER MATTE BLACK GOLD TRIM  FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3340,
+          "item_group": "FRONTIER",
+          "item_name": "",
+          "mrp": 825,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 118,
+      "sku": "9164",
+      "title": "PARKER FRONTIER MATTE BLACK GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 11,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3341,
+          "item_group": "FRONTIER",
+          "item_name": "",
+          "mrp": 775,
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 119,
+      "sku": "9154",
+      "title": "PARKER FOLIO  STAINLESS STEEL CHORME TRIM BP 350",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3330,
+          "item_group": "FOLIO",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 120,
+      "sku": "9158",
+      "title": "PARKER FOLIO STANDARD CT ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3335,
+          "item_group": "FOLIO",
+          "item_name": "",
+          "mrp": 290,
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 121,
+      "sku": "9160",
+      "title": "PARKER FRONTIER GOLD ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3337,
+          "item_group": "FRONTIER",
+          "item_name": "",
+          "mrp": 900,
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 122,
+      "sku": "9162",
+      "title": "PARKER FRONTIER MATTE BLACK GUN METAL TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3339,
+          "item_group": "FRONTIER",
+          "item_name": "",
+          "mrp": 825,
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 123,
+      "sku": "9170",
+      "title": "PARKER GALAXY GOLD BALL PEN",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3345,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 11
+        },
+        {
+          "busy_row": 3346,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 640,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 124,
+      "sku": "9176",
+      "title": "PARKER CARTRIDGE QUINK BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3318,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 125,
+      "sku": "9177",
+      "title": "PARKER INK QUINK 30ML BLUE",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 17,
+      "busy_rows": [
+        {
+          "busy_row": 3358,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 17
+        }
+      ]
+    },
+    {
+      "row": 126,
+      "sku": "9184",
+      "title": "PARKER JOTTER LONDON GOLD BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3360,
+          "item_group": "JOTTER",
+          "item_name": "",
+          "mrp": 525,
+          "cl_qty": 1
+        },
+        {
+          "busy_row": 3361,
+          "item_group": "JOTTER",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 127,
+      "sku": "9188",
+      "title": "PARKER JOTTER LONDON STAINLESS STEEL GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3363,
+          "item_group": "JOTTER",
+          "item_name": "",
+          "mrp": 410,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 128,
+      "sku": "9173",
+      "title": "PARKER GALAXY STAINLESS STEEL GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3350,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 0
+        },
+        {
+          "busy_row": 3351,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 129,
+      "sku": "9174",
+      "title": "PARKER GALAXY STANDARD GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 14,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 13,
+      "busy_rows": [
+        {
+          "busy_row": 3352,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 2
+        },
+        {
+          "busy_row": 3353,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 430,
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "row": 130,
+      "sku": "9175",
+      "title": "PARKER GALAXY STANDARD GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 23,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3354,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 450,
+          "cl_qty": 0
+        },
+        {
+          "busy_row": 3355,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 490,
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 131,
+      "sku": "9178",
+      "title": "PARKER INK QUINK 30ML BLACK",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3357,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 132,
+      "sku": "9180",
+      "title": "PARKER REFILL MEDIUM BLUE BALL PEN",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 36,
+      "busy_rows": [
+        {
+          "busy_row": 3379,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 80,
+          "cl_qty": 36
+        }
+      ]
+    },
+    {
+      "row": 133,
+      "sku": "9181",
+      "title": "PARKER REFILL FINE BLUE BALL PEN",
+      "variant": "",
+      "old_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 23,
+      "busy_rows": [
+        {
+          "busy_row": 3375,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 80,
+          "cl_qty": 23
+        }
+      ]
+    },
+    {
+      "row": 134,
+      "sku": "9185",
+      "title": "PARKER JOTTER STANDARD CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 23,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 19,
+      "busy_rows": [
+        {
+          "busy_row": 3364,
+          "item_group": "JOTTER",
+          "item_name": "",
+          "mrp": 300,
+          "cl_qty": 13
+        },
+        {
+          "busy_row": 3365,
+          "item_group": "JOTTER",
+          "item_name": "",
+          "mrp": 330,
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 135,
+      "sku": "9304",
+      "title": "PARKER VECTOR GOLD FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3395,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 900,
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "row": 136,
+      "sku": "9305",
+      "title": "PARKER VECTOR GOLD GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 18,
+      "busy_rows": [
+        {
+          "busy_row": 3394,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 800,
+          "cl_qty": 18
+        }
+      ]
+    },
+    {
+      "row": 137,
+      "sku": "9314",
+      "title": "PARKER VECTOR STAINLESS STEEL CHROME TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3414,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 650,
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 138,
+      "sku": "9307",
+      "title": "PARKER VECTOR MATTE BLACK CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3398,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 139,
+      "sku": "9310",
+      "title": "PARKER VECTOR MATTE BLACK CHROME TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3399,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 140,
+      "sku": "9311",
+      "title": "PARKER VECTOR STANDARD CALLIGRAPHY CHROME TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3421,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 141,
+      "sku": "9312",
+      "title": "PARKER VECTOR METALLIX CHROME TRIM FOUNTAIN PEN+INK POT 30ML",
+      "variant": "",
+      "old_qty": 16,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3407,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 7
+        },
+        {
+          "busy_row": 3408,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 142,
+      "sku": "9316",
+      "title": "PARKER VECTOR STAINLESS STEEL GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3416,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 650,
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 143,
+      "sku": "9317",
+      "title": "PARKER VECTOR MATTE BLACK GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3403,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 144,
+      "sku": "9319",
+      "title": "PARKER VECTOR STANDARD CHROME TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 34,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 25,
+      "busy_rows": [
+        {
+          "busy_row": 3426,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 370,
+          "cl_qty": 25
+        }
+      ]
+    },
+    {
+      "row": 145,
+      "sku": "9320",
+      "title": "PARKER VECTOR STANDARD GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3427,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 146,
+      "sku": "12491",
+      "title": "PARKER BETA PREMIUM SILVER CT RB 190",
+      "variant": "",
+      "old_qty": 13,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 13,
+      "busy_rows": [
+        {
+          "busy_row": 3316,
+          "item_group": "BETA PREMIUM",
+          "item_name": "",
+          "mrp": 190,
+          "cl_qty": 13
+        }
+      ]
+    },
+    {
+      "row": 147,
+      "sku": "12508",
+      "title": "PARKER BETA PREMIUM SILVER GT FP+INK 250",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3315,
+          "item_group": "BETA PREMIUM",
+          "item_name": "",
+          "mrp": 250,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 148,
+      "sku": "12496",
+      "title": "PARKER VECTOR STAINLESS STEEL GOLD TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3417,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 750,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 149,
+      "sku": "12498",
+      "title": "PARKER VECTOR STANDARD CHROME TRIM FOUNTAIN PEN+INK CARTRIDGE 3N BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3425,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 375,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 150,
+      "sku": "12503",
+      "title": "PARKER VECTOR STANDARD CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 22,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 22,
+      "busy_rows": [
+        {
+          "busy_row": 3423,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 320,
+          "cl_qty": 22
+        }
+      ]
+    },
+    {
+      "row": 151,
+      "sku": "12539",
+      "title": "PARKER VECTOR MATTE BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3400,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 650,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 152,
+      "sku": "12516",
+      "title": "PARKER BETA NEO CHROME TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3307,
+          "item_group": "BETA NEO",
+          "item_name": "",
+          "mrp": 150,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 153,
+      "sku": "12526",
+      "title": "PARKER FOLIO STAINLESS STEEL GOLD TRIM RB 420",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 11,
+      "busy_rows": [
+        {
+          "busy_row": 3332,
+          "item_group": "FOLIO",
+          "item_name": "",
+          "mrp": 420,
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "row": 154,
+      "sku": "12528",
+      "title": "PARKER VECTOR MATTE BLACK GUN METAL TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3401,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 800,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 155,
+      "sku": "12532",
+      "title": "PARKER VECTOR METALLIX CHROME TRIM ROLLER BALL PEN+SWISS KNIFE",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 21,
+      "busy_rows": [
+        {
+          "busy_row": 3409,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 470,
+          "cl_qty": 11
+        },
+        {
+          "busy_row": 3410,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 530,
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "row": 156,
+      "sku": "12551",
+      "title": "PARKER FOLIO STAINLESS STEEL GT FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3331,
+          "item_group": "FOLIO",
+          "item_name": "",
+          "mrp": 450,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 157,
+      "sku": "12564",
+      "title": "PARKER BETA PREMIUM SILVER BP 170",
+      "variant": "",
+      "old_qty": 32,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 29,
+      "busy_rows": [
+        {
+          "busy_row": 3314,
+          "item_group": "BETA PREMIUM",
+          "item_name": "",
+          "mrp": 170,
+          "cl_qty": 29
+        }
+      ]
+    },
+    {
+      "row": 158,
+      "sku": "12546",
+      "title": "PARKER LATITUDE MATTE BLACK GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 21,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 18,
+      "busy_rows": [
+        {
+          "busy_row": 3368,
+          "item_group": "LATITUDE",
+          "item_name": "",
+          "mrp": 260,
+          "cl_qty": 6
+        },
+        {
+          "busy_row": 3369,
+          "item_group": "LATITUDE",
+          "item_name": "",
+          "mrp": 290,
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "row": 159,
+      "sku": "12549",
+      "title": "PARKER JOTTER STANDARD GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 16,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 16,
+      "busy_rows": [
+        {
+          "busy_row": 3366,
+          "item_group": "JOTTER",
+          "item_name": "",
+          "mrp": 330,
+          "cl_qty": 16
+        }
+      ]
+    },
+    {
+      "row": 160,
+      "sku": "12560",
+      "title": "PARKER FRONTIER STAINLESS STEEL GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3342,
+          "item_group": "FRONTIER",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 161,
+      "sku": "12568",
+      "title": "PARKER CARTRIDGE QUINK BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 17,
+      "busy_rows": [
+        {
+          "busy_row": 3319,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 17
+        }
+      ]
+    },
+    {
+      "row": 162,
+      "sku": "12570",
+      "title": "PARKER VECTOR STAINLESS STEEL GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 16,
+      "busy_rows": [
+        {
+          "busy_row": 3418,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 8
+        },
+        {
+          "busy_row": 3419,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 750,
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 163,
+      "sku": "12575",
+      "title": "PARKER VECTOR NEU BHARAT SPECIAL EDITION CHROME TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3411,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 370,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 164,
+      "sku": "12591",
+      "title": "PARKER LATITUDE SHINY CHROME CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 16,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3370,
+          "item_group": "LATITUDE",
+          "item_name": "",
+          "mrp": 240,
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 165,
+      "sku": "12598",
+      "title": "PARKER VECTOR STAINLESS STEEL CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3413,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 166,
+      "sku": "12626",
+      "title": "PARKER REFILL ULTRA FINE BLACK ROLLER BALL",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3383,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 150,
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 167,
+      "sku": "12613",
+      "title": "PARKER VECTOR STANDARD CHROME TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3424,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 430,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 168,
+      "sku": "12615",
+      "title": "PARKER REFILL ULTRA FINE BLUE ROLLER BALL",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 9,
+      "busy_rows": [
+        {
+          "busy_row": 3384,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 160,
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 169,
+      "sku": "12628",
+      "title": "PARKER REFILL MEDIUM BLUE ROLLER BALL",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3380,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 170,
+      "sku": "12631",
+      "title": "PARKER REFILL MEDIUM BLACK ROLLER BALL",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3378,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 171,
+      "sku": "12632",
+      "title": "PARKER REFILL FINE BLUE ROLLER BALL",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 21,
+      "busy_rows": [
+        {
+          "busy_row": 3376,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 21
+        }
+      ]
+    },
+    {
+      "row": 172,
+      "sku": "12636",
+      "title": "PARKER REFILL FINE BLACK ROLLER BALL",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3374,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 173,
+      "sku": "12641",
+      "title": "PARKER BETA NEO CHROME TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3308,
+          "item_group": "BETA NEO",
+          "item_name": "",
+          "mrp": 140,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 174,
+      "sku": "8573",
+      "title": "PARKER BETA PREMIUM GOLD FOUNTAIN PEN +INK",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 9,
+      "busy_rows": [
+        {
+          "busy_row": 3313,
+          "item_group": "BETA PREMIUM",
+          "item_name": "",
+          "mrp": 250,
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 175,
+      "sku": "17150",
+      "title": "PARKER VECTOR STANDARD COLOR BLOCK CHROME TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3422,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 370,
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 176,
+      "sku": "17153",
+      "title": "PARKER CLASSIC MATTE BLACK BALL PEN",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 11,
+      "busy_rows": [
+        {
+          "busy_row": 3322,
+          "item_group": "CLASSIC",
+          "item_name": "",
+          "mrp": 580,
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "row": 177,
+      "sku": "17165",
+      "title": "PARKER VECTOR STANDARD CALLIGRAPHY FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3420,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 178,
+      "sku": "17739",
+      "title": "PARKER REFILL NAVIGATOR FINE ROLLER BALL PEN - BLACK",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3382,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "row": 179,
+      "sku": "17726",
+      "title": "PARKER BETA NEO COATED CLIP FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 26,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 25,
+      "busy_rows": [
+        {
+          "busy_row": 3303,
+          "item_group": "BETA NEO",
+          "item_name": "",
+          "mrp": 150,
+          "cl_qty": 1
+        },
+        {
+          "busy_row": 3304,
+          "item_group": "BETA NEO",
+          "item_name": "",
+          "mrp": 180,
+          "cl_qty": 24
+        }
+      ]
+    },
+    {
+      "row": 180,
+      "sku": "12519",
+      "title": "PARKER BETA NEO COATED CLIP BALL PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3301,
+          "item_group": "BETA NEO",
+          "item_name": "",
+          "mrp": 120,
+          "cl_qty": 6
+        },
+        {
+          "busy_row": 3306,
+          "item_group": "BETA NEO",
+          "item_name": "",
+          "mrp": 150,
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 181,
+      "sku": "17730",
+      "title": "PARKER JOTTER LONDON ROSE GOLD BALL PEN",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3362,
+          "item_group": "JOTTER",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 182,
+      "sku": "17733",
+      "title": "PARKER REFILL SYSTEMARK FINE BALL PEN",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3377,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 40,
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 183,
+      "sku": "17740",
+      "title": "PARKER REFILL NAVIGATOR FINE ROLLER BALL PEN - BLUE",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3381,
+          "item_group": "INK CARTRIGDE REFILLS",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "row": 184,
+      "sku": "17741",
+      "title": "PARKER BETA NEO COATED CLIP ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 33,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 30,
+      "busy_rows": [
+        {
+          "busy_row": 3305,
+          "item_group": "BETA NEO",
+          "item_name": "",
+          "mrp": 140,
+          "cl_qty": 30
+        }
+      ]
+    },
+    {
+      "row": 185,
+      "sku": "18674",
+      "title": "PARKER FRONTIER GOLD FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3336,
+          "item_group": "FRONTIER",
+          "item_name": "",
+          "mrp": 950,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 186,
+      "sku": "19269",
+      "title": "PARKER FRONTIER STAINLESS STEEL GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3343,
+          "item_group": "FRONTIER",
+          "item_name": "",
+          "mrp": 800,
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 187,
+      "sku": "19263",
+      "title": "PARKER FOLIO STANDARD CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3333,
+          "item_group": "FOLIO",
+          "item_name": "",
+          "mrp": 270,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 188,
+      "sku": "19266",
+      "title": "PARKER FRONTIER MATTE BLACK GUN METAL TRIM FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3338,
+          "item_group": "FRONTIER",
+          "item_name": "",
+          "mrp": 875,
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 189,
+      "sku": "19272",
+      "title": "PARKER GALAXY STAINLESS STEEL GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3349,
+          "item_group": "GALAXY",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 190,
+      "sku": "12580",
+      "title": "PARKER LATITUDE SHINY CHROME GOLD TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 11,
+      "busy_rows": [
+        {
+          "busy_row": 3372,
+          "item_group": "LATITUDE",
+          "item_name": "",
+          "mrp": 310,
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "row": 191,
+      "sku": "19354",
+      "title": "PARKER LATITUDE MATTE BLACK CHROME TRIM BALL PEN",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3367,
+          "item_group": "LATITUDE",
+          "item_name": "",
+          "mrp": 220,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 192,
+      "sku": "19444",
+      "title": "PARKER VECTOR STAINLESS STEEL CHROME TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3415,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 650,
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 193,
+      "sku": "19447",
+      "title": "PARKER VECTOR MATTE BLACK ROLLER BALL PEN + NOTEBOOK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3404,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 999,
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 194,
+      "sku": "19432",
+      "title": "PARKER VECTOR GOLD ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 16,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3396,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 850,
+          "cl_qty": 6
+        },
+        {
+          "busy_row": 3397,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 900,
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 195,
+      "sku": "19435",
+      "title": "PARKER VECTOR STANDARD METALLIC CHROME TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3405,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 340,
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 196,
+      "sku": "19441",
+      "title": "PARKER VECTOR SPECIAL EDITION CAMOUFLAGE CHROME TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 11,
+      "busy_rows": [
+        {
+          "busy_row": 3412,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "row": 197,
+      "sku": "19436",
+      "title": "PARKER VECTOR STANDARD METALLIC GOLD TRIM ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3406,
+          "item_group": "VECTOR",
+          "item_name": "",
+          "mrp": 360,
+          "cl_qty": 2
+        }
+      ]
+    }
+  ]
+}

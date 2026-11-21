@@ -1,0 +1,5669 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (46).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "project_output": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_pilot_20260831\\pilot products - Updated Website Stock.xlsx",
+  "downloads_output": "C:\\Users\\My-PC-Win10\\Downloads\\pilot products - Updated Website Stock.xlsx",
+  "downloads_status": "copied",
+  "meta": {
+    "sheet_name": "Products",
+    "max_row": 137,
+    "max_column": 34,
+    "sku_col": 16,
+    "stock_col": 17,
+    "warehouse_col": 18,
+    "shop_col": 19
+  },
+  "summary": {
+    "website_sku_rows": 136,
+    "matched_direct": 55,
+    "duplicate_code_summed": 0,
+    "missing_in_busy": 81,
+    "base_code_available_no_exact_sku": 78,
+    "changed": 17,
+    "negative_new_qty": 0
+  },
+  "missing_in_busy": [
+    {
+      "row": 42,
+      "sku": "18994-GC03",
+      "base_sku": "18994",
+      "title": "PILOT 1101 0.5 HI-TECPOINT PEN BLUE",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 43,
+      "sku": "18994-GC04",
+      "base_sku": "18994",
+      "title": "PILOT 1101 0.5 HI-TECPOINT PEN BLACK",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 44,
+      "sku": "18869-GC04",
+      "base_sku": "18869",
+      "title": "PILOT 1103 HI-TECPOINT V7 PEN BLUE",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 45,
+      "sku": "18994-GC02",
+      "base_sku": "18994",
+      "title": "PILOT 1101 0.5 HI-TECPOINT PEN RED",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 46,
+      "sku": "18994-GC01",
+      "base_sku": "18994",
+      "title": "PILOT 1101 0.5 HI-TECPOINT PEN GREEN",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 47,
+      "sku": "18869-GC03",
+      "base_sku": "18869",
+      "title": "PILOT 1103 HI-TECPOINT V7 PEN BLACK",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 48,
+      "sku": "18869-GC02",
+      "base_sku": "18869",
+      "title": "PILOT 1103 HI-TECPOINT V7 PEN RED",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 49,
+      "sku": "18869-GC01",
+      "base_sku": "18869",
+      "title": "PILOT 1103 HI-TECPOINT V7 PEN GREEN",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 50,
+      "sku": "18867-GC04",
+      "base_sku": "18867",
+      "title": "PILOT 1104 HI-TECPOINT V5 CARTAGE PEN BLUE",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 51,
+      "sku": "18867-GC02",
+      "base_sku": "18867",
+      "title": "PILOT 1104 HI-TECPOINT V5 CARTAGE PEN RED",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 52,
+      "sku": "18868-GC02",
+      "base_sku": "18868",
+      "title": "PILOT 1105 HI-TECPOINT V7 CARTAGE PEN BLUE",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 53,
+      "sku": "18868-GC01",
+      "base_sku": "18868",
+      "title": "PILOT 1105 HI-TECPOINT V7 CARTAGE PEN BLACK",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 54,
+      "sku": "18984-GC06",
+      "base_sku": "18984",
+      "title": "PILOT 1109 BOARD MARKER BLUE",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 55,
+      "sku": "18867-GC03",
+      "base_sku": "18867",
+      "title": "PILOT 1104 HI-TECPOINT V5 CARTAGE PEN BLACK",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 56,
+      "sku": "18867-GC01",
+      "base_sku": "18867",
+      "title": "PILOT 1104 HI-TECPOINT V5 CARTAGE PEN GREEN",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 57,
+      "sku": "18984-GC05",
+      "base_sku": "18984",
+      "title": "PILOT 1109 BOARD MARKER BLACK",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 58,
+      "sku": "18984-GC04",
+      "base_sku": "18984",
+      "title": "PILOT 1109 BOARD MARKER RED",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 59,
+      "sku": "18984-GC03",
+      "base_sku": "18984",
+      "title": "PILOT 1109 BOARD MARKER GREEN",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 60,
+      "sku": "18984-GC02",
+      "base_sku": "18984",
+      "title": "PILOT 1109 BOARD MARKER ORANGE",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 61,
+      "sku": "18984-GC01",
+      "base_sku": "18984",
+      "title": "PILOT 1109 BOARD MARKER VIOLET",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 62,
+      "sku": "18996-GC04",
+      "base_sku": "18996",
+      "title": "PILOT 1112 HI-TECPOINT V10 RT PEN BLUE",
+      "variant": "",
+      "old_qty": 150,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 63,
+      "sku": "18996-GC03",
+      "base_sku": "18996",
+      "title": "PILOT 1112 HI-TECPOINT V10 RT PEN BLACK",
+      "variant": "",
+      "old_qty": 150,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 64,
+      "sku": "18996-GC02",
+      "base_sku": "18996",
+      "title": "PILOT 1112 HI-TECPOINT V10 RT PEN GREEN",
+      "variant": "",
+      "old_qty": 150,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 65,
+      "sku": "18996-GC01",
+      "base_sku": "18996",
+      "title": "PILOT 1112 HI-TECPOINT V10 RT PEN RED",
+      "variant": "",
+      "old_qty": 150,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 66,
+      "sku": "18964-GC04",
+      "base_sku": "18964",
+      "title": "PILOT 1115 FRIXION RETRACTABLE PEN BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 67,
+      "sku": "18964-GC03",
+      "base_sku": "18964",
+      "title": "PILOT 1115 FRIXION RETRACTABLE PEN BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 68,
+      "sku": "18964-GC02",
+      "base_sku": "18964",
+      "title": "PILOT 1115 FRIXION RETRACTABLE PEN RED",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 69,
+      "sku": "18964-GC01",
+      "base_sku": "18964",
+      "title": "PILOT 1115 FRIXION RETRACTABLE PEN GREEN",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 70,
+      "sku": "18963-GC04",
+      "base_sku": "18963",
+      "title": "PILOT 1116 FRIXION  ROLLER BALL PEN BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 71,
+      "sku": "18963-GC03",
+      "base_sku": "18963",
+      "title": "PILOT 1116 FRIXION  ROLLER BALL PEN BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 73,
+      "sku": "30102-GC02",
+      "base_sku": "30102",
+      "title": "PILOT 1136 G2 GEL 0.7MM ROLLER BALL PEN BLUE",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 74,
+      "sku": "19188-GC02",
+      "base_sku": "19188",
+      "title": "PILOT 937 HI TECH INK BL15 BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 78,
+      "sku": "30102-GC01",
+      "base_sku": "30102",
+      "title": "PILOT 1136 G2 GEL 0.7MM ROLLER BALL PEN BLACK",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 79,
+      "sku": "19188-GC01",
+      "base_sku": "19188",
+      "title": "PILOT 937 HI TECH INK BL15 BLACK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 82,
+      "sku": "18715-GC03",
+      "base_sku": "18715",
+      "title": "PILOT 1110 HI-TECPOINT V5 RETRACTABLE PEN - BLUE",
+      "variant": "",
+      "old_qty": 299,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 83,
+      "sku": "18712-GC06",
+      "base_sku": "18712",
+      "title": "PILOT 1107 HI-TECPOINT V7 GRIP PEN - BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 84,
+      "sku": "18930-GC03",
+      "base_sku": "18930",
+      "title": "PILOT 1108 HI-TECPOINT V10 GRIP PEN - BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 85,
+      "sku": "18856-GC02",
+      "base_sku": "18856",
+      "title": "PILOT 1114 V SIGN PEN - GREEN",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 86,
+      "sku": "18871-GC03",
+      "base_sku": "18871",
+      "title": "PILOT 1102 HI-TECPOINT V5 PEN - BLUE",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 87,
+      "sku": "18715-GC02",
+      "base_sku": "18715",
+      "title": "PILOT 1110 HI-TECPOINT V5 RETRACTABLE PEN - GREEN",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 88,
+      "sku": "18856-GC04",
+      "base_sku": "18856",
+      "title": "PILOT 1114 V SIGN PEN - BLACK",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 89,
+      "sku": "18856-GC03",
+      "base_sku": "18856",
+      "title": "PILOT 1114 V SIGN PEN - BLUE",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 90,
+      "sku": "18856-GC01",
+      "base_sku": "18856",
+      "title": "PILOT 1114 V SIGN PEN - RED",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 91,
+      "sku": "18871-GC04",
+      "base_sku": "18871",
+      "title": "PILOT 1102 HI-TECPOINT V5 PEN - BLACK",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 92,
+      "sku": "18871-GC02",
+      "base_sku": "18871",
+      "title": "PILOT 1102 HI-TECPOINT V5 PEN - GREEN",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 93,
+      "sku": "18871-GC01",
+      "base_sku": "18871",
+      "title": "PILOT 1102 HI-TECPOINT V5 PEN - RED",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 94,
+      "sku": "18700-GC04",
+      "base_sku": "18700",
+      "title": "PILOT 1111 HI-TECPOINT V7 RETRACTABLE PEN - BLACK",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 95,
+      "sku": "18700-GC03",
+      "base_sku": "18700",
+      "title": "PILOT 1111 HI-TECPOINT V7 RETRACTABLE PEN - BLUE",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 96,
+      "sku": "18715-GC04",
+      "base_sku": "18715",
+      "title": "PILOT 1110 HI-TECPOINT V5 RETRACTABLE PEN - BLACK",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 97,
+      "sku": "18712-GC01",
+      "base_sku": "18712",
+      "title": "PILOT 1107 HI-TECPOINT V7 GRIP PEN - VIOLET",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 98,
+      "sku": "18930-GC04",
+      "base_sku": "18930",
+      "title": "PILOT 1108 HI-TECPOINT V10 GRIP PEN - BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 99,
+      "sku": "18930-GC02",
+      "base_sku": "18930",
+      "title": "PILOT 1108 HI-TECPOINT V10 GRIP PEN - GREEN",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 100,
+      "sku": "18700-GC02",
+      "base_sku": "18700",
+      "title": "PILOT 1111 HI-TECPOINT V7 RETRACTABLE PEN - GREEN",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 101,
+      "sku": "18700-GC01",
+      "base_sku": "18700",
+      "title": "PILOT 1111 HI-TECPOINT V7 RETRACTABLE PEN - RED",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 102,
+      "sku": "18715-GC01",
+      "base_sku": "18715",
+      "title": "PILOT 1110 HI-TECPOINT V5 RETRACTABLE PEN - RED",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 103,
+      "sku": "18712-GC05",
+      "base_sku": "18712",
+      "title": "PILOT 1107 HI-TECPOINT V7 GRIP PEN - BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 104,
+      "sku": "18712-GC04",
+      "base_sku": "18712",
+      "title": "PILOT 1107 HI-TECPOINT V7 GRIP PEN - GREEN",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 105,
+      "sku": "18712-GC03",
+      "base_sku": "18712",
+      "title": "PILOT 1107 HI-TECPOINT V7 GRIP PEN - PINK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 106,
+      "sku": "18712-GC02",
+      "base_sku": "18712",
+      "title": "PILOT 1107 HI-TECPOINT V7 GRIP PEN - SKY BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 107,
+      "sku": "18930-GC01",
+      "base_sku": "18930",
+      "title": "PILOT 1108 HI-TECPOINT V10 GRIP PEN - RED",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 108,
+      "sku": "18953-GC04",
+      "base_sku": "18953",
+      "title": "PILOT 1113 V FOUNTAIN PEN - BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 109,
+      "sku": "18953-GC03",
+      "base_sku": "18953",
+      "title": "PILOT 1113 V FOUNTAIN PEN - BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 110,
+      "sku": "19014-GC02",
+      "base_sku": "19014",
+      "title": "PILOT 1121 REFILL V5 RETRACTABLE PEN - GREEN",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 111,
+      "sku": "18953-GC02",
+      "base_sku": "18953",
+      "title": "PILOT 1113 V FOUNTAIN PEN - GREEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 112,
+      "sku": "18953-GC01",
+      "base_sku": "18953",
+      "title": "PILOT 1113 V FOUNTAIN PEN - RED",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 113,
+      "sku": "18963-GC02",
+      "base_sku": "18963",
+      "title": "PILOT 1116 FRIXION ROLLER BALL PEN GREEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 114,
+      "sku": "18963-GC01",
+      "base_sku": "18963",
+      "title": "PILOT 1116 FRIXION ROLLER BALL PEN RED",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 115,
+      "sku": "19014-GC04",
+      "base_sku": "19014",
+      "title": "PILOT 1121 REFILL V5 RETRACTABLE PEN - BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 116,
+      "sku": "19014-GC03",
+      "base_sku": "19014",
+      "title": "PILOT 1121 REFILL V5 RETRACTABLE PEN - BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 117,
+      "sku": "19012-GC03",
+      "base_sku": "19012",
+      "title": "PILOT 1122 REFILL V7 RETRACTABLE PEN - BLUE",
+      "variant": "",
+      "old_qty": 36,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 118,
+      "sku": "19012-GC01",
+      "base_sku": "19012",
+      "title": "PILOT 1122 REFILL V7 RETRACTABLE PEN - RED",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 119,
+      "sku": "19033-GC03",
+      "base_sku": "19033",
+      "title": "PILOT 1124 MARKER CARTRIDGE - BLUE",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 120,
+      "sku": "19033-GC01",
+      "base_sku": "19033",
+      "title": "PILOT 1124 MARKER CARTRIDGE - RED",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 122,
+      "sku": "19014-GC01",
+      "base_sku": "19014",
+      "title": "PILOT 1121 REFILL V5 RETRACTABLE PEN - RED",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 123,
+      "sku": "19012-GC04",
+      "base_sku": "19012",
+      "title": "PILOT 1122 REFILL V7 RETRACTABLE PEN - BLACK",
+      "variant": "",
+      "old_qty": 34,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 124,
+      "sku": "19012-GC02",
+      "base_sku": "19012",
+      "title": "PILOT 1122 REFILL V7 RETRACTABLE PEN - GREEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 125,
+      "sku": "19033-GC04",
+      "base_sku": "19033",
+      "title": "PILOT 1124 MARKER CARTRIDGE - BLACK",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 126,
+      "sku": "19033-GC02",
+      "base_sku": "19033",
+      "title": "PILOT 1124 MARKER CARTRIDGE - GREEN",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 127,
+      "sku": "19043-GC02",
+      "base_sku": "19043",
+      "title": "PILOT 1127 CARTRIDGE V5-V7 PACK OF 2PCS - BLACK",
+      "variant": "",
+      "old_qty": 26,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 128,
+      "sku": "19043-GC01",
+      "base_sku": "19043",
+      "title": "PILOT 1127 CARTRIDGE V5-V7 PACK OF 2PCS - BLUE",
+      "variant": "",
+      "old_qty": 34,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 136,
+      "sku": "19481",
+      "base_sku": "19481",
+      "title": "PILOT 1729 BALL PEN BALL POINT-1RT 0.7MM BLACK",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    }
+  ],
+  "base_code_available_no_exact_sku": [
+    {
+      "row": 42,
+      "sku": "18994-GC03",
+      "base_sku": "18994",
+      "title": "PILOT 1101 0.5 HI-TECPOINT PEN BLUE",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3072,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 32
+        }
+      ]
+    },
+    {
+      "row": 43,
+      "sku": "18994-GC04",
+      "base_sku": "18994",
+      "title": "PILOT 1101 0.5 HI-TECPOINT PEN BLACK",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3072,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 32
+        }
+      ]
+    },
+    {
+      "row": 44,
+      "sku": "18869-GC04",
+      "base_sku": "18869",
+      "title": "PILOT 1103 HI-TECPOINT V7 PEN BLUE",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3075,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 276
+        }
+      ]
+    },
+    {
+      "row": 45,
+      "sku": "18994-GC02",
+      "base_sku": "18994",
+      "title": "PILOT 1101 0.5 HI-TECPOINT PEN RED",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3072,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 32
+        }
+      ]
+    },
+    {
+      "row": 46,
+      "sku": "18994-GC01",
+      "base_sku": "18994",
+      "title": "PILOT 1101 0.5 HI-TECPOINT PEN GREEN",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3072,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 32
+        }
+      ]
+    },
+    {
+      "row": 47,
+      "sku": "18869-GC03",
+      "base_sku": "18869",
+      "title": "PILOT 1103 HI-TECPOINT V7 PEN BLACK",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3075,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 276
+        }
+      ]
+    },
+    {
+      "row": 48,
+      "sku": "18869-GC02",
+      "base_sku": "18869",
+      "title": "PILOT 1103 HI-TECPOINT V7 PEN RED",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3075,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 276
+        }
+      ]
+    },
+    {
+      "row": 49,
+      "sku": "18869-GC01",
+      "base_sku": "18869",
+      "title": "PILOT 1103 HI-TECPOINT V7 PEN GREEN",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3075,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 276
+        }
+      ]
+    },
+    {
+      "row": 50,
+      "sku": "18867-GC04",
+      "base_sku": "18867",
+      "title": "PILOT 1104 HI-TECPOINT V5 CARTAGE PEN BLUE",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3076,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 51,
+      "sku": "18867-GC02",
+      "base_sku": "18867",
+      "title": "PILOT 1104 HI-TECPOINT V5 CARTAGE PEN RED",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3076,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 52,
+      "sku": "18868-GC02",
+      "base_sku": "18868",
+      "title": "PILOT 1105 HI-TECPOINT V7 CARTAGE PEN BLUE",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3077,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 85
+        }
+      ]
+    },
+    {
+      "row": 53,
+      "sku": "18868-GC01",
+      "base_sku": "18868",
+      "title": "PILOT 1105 HI-TECPOINT V7 CARTAGE PEN BLACK",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3077,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 85
+        }
+      ]
+    },
+    {
+      "row": 54,
+      "sku": "18984-GC06",
+      "base_sku": "18984",
+      "title": "PILOT 1109 BOARD MARKER BLUE",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3081,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 78
+        }
+      ]
+    },
+    {
+      "row": 55,
+      "sku": "18867-GC03",
+      "base_sku": "18867",
+      "title": "PILOT 1104 HI-TECPOINT V5 CARTAGE PEN BLACK",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3076,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 56,
+      "sku": "18867-GC01",
+      "base_sku": "18867",
+      "title": "PILOT 1104 HI-TECPOINT V5 CARTAGE PEN GREEN",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3076,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 57,
+      "sku": "18984-GC05",
+      "base_sku": "18984",
+      "title": "PILOT 1109 BOARD MARKER BLACK",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3081,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 78
+        }
+      ]
+    },
+    {
+      "row": 58,
+      "sku": "18984-GC04",
+      "base_sku": "18984",
+      "title": "PILOT 1109 BOARD MARKER RED",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3081,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 78
+        }
+      ]
+    },
+    {
+      "row": 59,
+      "sku": "18984-GC03",
+      "base_sku": "18984",
+      "title": "PILOT 1109 BOARD MARKER GREEN",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3081,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 78
+        }
+      ]
+    },
+    {
+      "row": 60,
+      "sku": "18984-GC02",
+      "base_sku": "18984",
+      "title": "PILOT 1109 BOARD MARKER ORANGE",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3081,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 78
+        }
+      ]
+    },
+    {
+      "row": 61,
+      "sku": "18984-GC01",
+      "base_sku": "18984",
+      "title": "PILOT 1109 BOARD MARKER VIOLET",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3081,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 78
+        }
+      ]
+    },
+    {
+      "row": 62,
+      "sku": "18996-GC04",
+      "base_sku": "18996",
+      "title": "PILOT 1112 HI-TECPOINT V10 RT PEN BLUE",
+      "variant": "",
+      "old_qty": 150,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3085,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 72
+        }
+      ]
+    },
+    {
+      "row": 63,
+      "sku": "18996-GC03",
+      "base_sku": "18996",
+      "title": "PILOT 1112 HI-TECPOINT V10 RT PEN BLACK",
+      "variant": "",
+      "old_qty": 150,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3085,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 72
+        }
+      ]
+    },
+    {
+      "row": 64,
+      "sku": "18996-GC02",
+      "base_sku": "18996",
+      "title": "PILOT 1112 HI-TECPOINT V10 RT PEN GREEN",
+      "variant": "",
+      "old_qty": 150,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3085,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 72
+        }
+      ]
+    },
+    {
+      "row": 65,
+      "sku": "18996-GC01",
+      "base_sku": "18996",
+      "title": "PILOT 1112 HI-TECPOINT V10 RT PEN RED",
+      "variant": "",
+      "old_qty": 150,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3085,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 72
+        }
+      ]
+    },
+    {
+      "row": 66,
+      "sku": "18964-GC04",
+      "base_sku": "18964",
+      "title": "PILOT 1115 FRIXION RETRACTABLE PEN BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3088,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 88
+        }
+      ]
+    },
+    {
+      "row": 67,
+      "sku": "18964-GC03",
+      "base_sku": "18964",
+      "title": "PILOT 1115 FRIXION RETRACTABLE PEN BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3088,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 88
+        }
+      ]
+    },
+    {
+      "row": 68,
+      "sku": "18964-GC02",
+      "base_sku": "18964",
+      "title": "PILOT 1115 FRIXION RETRACTABLE PEN RED",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3088,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 88
+        }
+      ]
+    },
+    {
+      "row": 69,
+      "sku": "18964-GC01",
+      "base_sku": "18964",
+      "title": "PILOT 1115 FRIXION RETRACTABLE PEN GREEN",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3088,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 88
+        }
+      ]
+    },
+    {
+      "row": 70,
+      "sku": "18963-GC04",
+      "base_sku": "18963",
+      "title": "PILOT 1116 FRIXION  ROLLER BALL PEN BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3089,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 22
+        }
+      ]
+    },
+    {
+      "row": 71,
+      "sku": "18963-GC03",
+      "base_sku": "18963",
+      "title": "PILOT 1116 FRIXION  ROLLER BALL PEN BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3089,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 22
+        }
+      ]
+    },
+    {
+      "row": 73,
+      "sku": "30102-GC02",
+      "base_sku": "30102",
+      "title": "PILOT 1136 G2 GEL 0.7MM ROLLER BALL PEN BLUE",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3104,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 51
+        }
+      ]
+    },
+    {
+      "row": 78,
+      "sku": "30102-GC01",
+      "base_sku": "30102",
+      "title": "PILOT 1136 G2 GEL 0.7MM ROLLER BALL PEN BLACK",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3104,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 51
+        }
+      ]
+    },
+    {
+      "row": 82,
+      "sku": "18715-GC03",
+      "base_sku": "18715",
+      "title": "PILOT 1110 HI-TECPOINT V5 RETRACTABLE PEN - BLUE",
+      "variant": "",
+      "old_qty": 299,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3083,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 225
+        }
+      ]
+    },
+    {
+      "row": 83,
+      "sku": "18712-GC06",
+      "base_sku": "18712",
+      "title": "PILOT 1107 HI-TECPOINT V7 GRIP PEN - BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3078,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 84,
+      "sku": "18930-GC03",
+      "base_sku": "18930",
+      "title": "PILOT 1108 HI-TECPOINT V10 GRIP PEN - BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3080,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 85,
+      "sku": "18856-GC02",
+      "base_sku": "18856",
+      "title": "PILOT 1114 V SIGN PEN - GREEN",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3087,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 80,
+          "cl_qty": 37
+        }
+      ]
+    },
+    {
+      "row": 86,
+      "sku": "18871-GC03",
+      "base_sku": "18871",
+      "title": "PILOT 1102 HI-TECPOINT V5 PEN - BLUE",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3073,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 116
+        }
+      ]
+    },
+    {
+      "row": 87,
+      "sku": "18715-GC02",
+      "base_sku": "18715",
+      "title": "PILOT 1110 HI-TECPOINT V5 RETRACTABLE PEN - GREEN",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3083,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 225
+        }
+      ]
+    },
+    {
+      "row": 88,
+      "sku": "18856-GC04",
+      "base_sku": "18856",
+      "title": "PILOT 1114 V SIGN PEN - BLACK",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3087,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 80,
+          "cl_qty": 37
+        }
+      ]
+    },
+    {
+      "row": 89,
+      "sku": "18856-GC03",
+      "base_sku": "18856",
+      "title": "PILOT 1114 V SIGN PEN - BLUE",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3087,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 80,
+          "cl_qty": 37
+        }
+      ]
+    },
+    {
+      "row": 90,
+      "sku": "18856-GC01",
+      "base_sku": "18856",
+      "title": "PILOT 1114 V SIGN PEN - RED",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3087,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 80,
+          "cl_qty": 37
+        }
+      ]
+    },
+    {
+      "row": 91,
+      "sku": "18871-GC04",
+      "base_sku": "18871",
+      "title": "PILOT 1102 HI-TECPOINT V5 PEN - BLACK",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3073,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 116
+        }
+      ]
+    },
+    {
+      "row": 92,
+      "sku": "18871-GC02",
+      "base_sku": "18871",
+      "title": "PILOT 1102 HI-TECPOINT V5 PEN - GREEN",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3073,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 116
+        }
+      ]
+    },
+    {
+      "row": 93,
+      "sku": "18871-GC01",
+      "base_sku": "18871",
+      "title": "PILOT 1102 HI-TECPOINT V5 PEN - RED",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3073,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 116
+        }
+      ]
+    },
+    {
+      "row": 94,
+      "sku": "18700-GC04",
+      "base_sku": "18700",
+      "title": "PILOT 1111 HI-TECPOINT V7 RETRACTABLE PEN - BLACK",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3084,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 238
+        }
+      ]
+    },
+    {
+      "row": 95,
+      "sku": "18700-GC03",
+      "base_sku": "18700",
+      "title": "PILOT 1111 HI-TECPOINT V7 RETRACTABLE PEN - BLUE",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3084,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 238
+        }
+      ]
+    },
+    {
+      "row": 96,
+      "sku": "18715-GC04",
+      "base_sku": "18715",
+      "title": "PILOT 1110 HI-TECPOINT V5 RETRACTABLE PEN - BLACK",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3083,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 225
+        }
+      ]
+    },
+    {
+      "row": 97,
+      "sku": "18712-GC01",
+      "base_sku": "18712",
+      "title": "PILOT 1107 HI-TECPOINT V7 GRIP PEN - VIOLET",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3078,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 98,
+      "sku": "18930-GC04",
+      "base_sku": "18930",
+      "title": "PILOT 1108 HI-TECPOINT V10 GRIP PEN - BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3080,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 99,
+      "sku": "18930-GC02",
+      "base_sku": "18930",
+      "title": "PILOT 1108 HI-TECPOINT V10 GRIP PEN - GREEN",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3080,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 100,
+      "sku": "18700-GC02",
+      "base_sku": "18700",
+      "title": "PILOT 1111 HI-TECPOINT V7 RETRACTABLE PEN - GREEN",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3084,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 238
+        }
+      ]
+    },
+    {
+      "row": 101,
+      "sku": "18700-GC01",
+      "base_sku": "18700",
+      "title": "PILOT 1111 HI-TECPOINT V7 RETRACTABLE PEN - RED",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3084,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 238
+        }
+      ]
+    },
+    {
+      "row": 102,
+      "sku": "18715-GC01",
+      "base_sku": "18715",
+      "title": "PILOT 1110 HI-TECPOINT V5 RETRACTABLE PEN - RED",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3083,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 225
+        }
+      ]
+    },
+    {
+      "row": 103,
+      "sku": "18712-GC05",
+      "base_sku": "18712",
+      "title": "PILOT 1107 HI-TECPOINT V7 GRIP PEN - BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3078,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 104,
+      "sku": "18712-GC04",
+      "base_sku": "18712",
+      "title": "PILOT 1107 HI-TECPOINT V7 GRIP PEN - GREEN",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3078,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 105,
+      "sku": "18712-GC03",
+      "base_sku": "18712",
+      "title": "PILOT 1107 HI-TECPOINT V7 GRIP PEN - PINK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3078,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 106,
+      "sku": "18712-GC02",
+      "base_sku": "18712",
+      "title": "PILOT 1107 HI-TECPOINT V7 GRIP PEN - SKY BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3078,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 107,
+      "sku": "18930-GC01",
+      "base_sku": "18930",
+      "title": "PILOT 1108 HI-TECPOINT V10 GRIP PEN - RED",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3080,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 108,
+      "sku": "18953-GC04",
+      "base_sku": "18953",
+      "title": "PILOT 1113 V FOUNTAIN PEN - BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3086,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 73
+        }
+      ]
+    },
+    {
+      "row": 109,
+      "sku": "18953-GC03",
+      "base_sku": "18953",
+      "title": "PILOT 1113 V FOUNTAIN PEN - BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3086,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 73
+        }
+      ]
+    },
+    {
+      "row": 110,
+      "sku": "19014-GC02",
+      "base_sku": "19014",
+      "title": "PILOT 1121 REFILL V5 RETRACTABLE PEN - GREEN",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3094,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 54
+        }
+      ]
+    },
+    {
+      "row": 111,
+      "sku": "18953-GC02",
+      "base_sku": "18953",
+      "title": "PILOT 1113 V FOUNTAIN PEN - GREEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3086,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 73
+        }
+      ]
+    },
+    {
+      "row": 112,
+      "sku": "18953-GC01",
+      "base_sku": "18953",
+      "title": "PILOT 1113 V FOUNTAIN PEN - RED",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3086,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 73
+        }
+      ]
+    },
+    {
+      "row": 113,
+      "sku": "18963-GC02",
+      "base_sku": "18963",
+      "title": "PILOT 1116 FRIXION ROLLER BALL PEN GREEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3089,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 22
+        }
+      ]
+    },
+    {
+      "row": 114,
+      "sku": "18963-GC01",
+      "base_sku": "18963",
+      "title": "PILOT 1116 FRIXION ROLLER BALL PEN RED",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3089,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 22
+        }
+      ]
+    },
+    {
+      "row": 115,
+      "sku": "19014-GC04",
+      "base_sku": "19014",
+      "title": "PILOT 1121 REFILL V5 RETRACTABLE PEN - BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3094,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 54
+        }
+      ]
+    },
+    {
+      "row": 116,
+      "sku": "19014-GC03",
+      "base_sku": "19014",
+      "title": "PILOT 1121 REFILL V5 RETRACTABLE PEN - BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3094,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 54
+        }
+      ]
+    },
+    {
+      "row": 117,
+      "sku": "19012-GC03",
+      "base_sku": "19012",
+      "title": "PILOT 1122 REFILL V7 RETRACTABLE PEN - BLUE",
+      "variant": "",
+      "old_qty": 36,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3095,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 72
+        }
+      ]
+    },
+    {
+      "row": 118,
+      "sku": "19012-GC01",
+      "base_sku": "19012",
+      "title": "PILOT 1122 REFILL V7 RETRACTABLE PEN - RED",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3095,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 72
+        }
+      ]
+    },
+    {
+      "row": 119,
+      "sku": "19033-GC03",
+      "base_sku": "19033",
+      "title": "PILOT 1124 MARKER CARTRIDGE - BLUE",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3097,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 38
+        }
+      ]
+    },
+    {
+      "row": 120,
+      "sku": "19033-GC01",
+      "base_sku": "19033",
+      "title": "PILOT 1124 MARKER CARTRIDGE - RED",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3097,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 38
+        }
+      ]
+    },
+    {
+      "row": 122,
+      "sku": "19014-GC01",
+      "base_sku": "19014",
+      "title": "PILOT 1121 REFILL V5 RETRACTABLE PEN - RED",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3094,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 54
+        }
+      ]
+    },
+    {
+      "row": 123,
+      "sku": "19012-GC04",
+      "base_sku": "19012",
+      "title": "PILOT 1122 REFILL V7 RETRACTABLE PEN - BLACK",
+      "variant": "",
+      "old_qty": 34,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3095,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 72
+        }
+      ]
+    },
+    {
+      "row": 124,
+      "sku": "19012-GC02",
+      "base_sku": "19012",
+      "title": "PILOT 1122 REFILL V7 RETRACTABLE PEN - GREEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3095,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 72
+        }
+      ]
+    },
+    {
+      "row": 125,
+      "sku": "19033-GC04",
+      "base_sku": "19033",
+      "title": "PILOT 1124 MARKER CARTRIDGE - BLACK",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3097,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 38
+        }
+      ]
+    },
+    {
+      "row": 126,
+      "sku": "19033-GC02",
+      "base_sku": "19033",
+      "title": "PILOT 1124 MARKER CARTRIDGE - GREEN",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3097,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 38
+        }
+      ]
+    },
+    {
+      "row": 127,
+      "sku": "19043-GC02",
+      "base_sku": "19043",
+      "title": "PILOT 1127 CARTRIDGE V5-V7 PACK OF 2PCS - BLACK",
+      "variant": "",
+      "old_qty": 26,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3098,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 30,
+          "cl_qty": 35
+        }
+      ]
+    },
+    {
+      "row": 128,
+      "sku": "19043-GC01",
+      "base_sku": "19043",
+      "title": "PILOT 1127 CARTRIDGE V5-V7 PACK OF 2PCS - BLUE",
+      "variant": "",
+      "old_qty": 34,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 3098,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 30,
+          "cl_qty": 35
+        }
+      ]
+    }
+  ],
+  "duplicate_code_summed": [],
+  "negative_new_qty": [],
+  "changed_rows": [
+    {
+      "row": 2,
+      "sku": "30110",
+      "base_sku": "30110",
+      "title": "PILOT 2276 PRERA TINTED LIGHT BLUE FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3160,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 4190,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 8,
+      "sku": "30184",
+      "base_sku": "30184",
+      "title": "PILOT 2246 METAL PEN MR1 BLACK 0.7 ROLLER BALL",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3145,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 1700,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 11,
+      "sku": "21183",
+      "base_sku": "21183",
+      "title": "PILOT 2440 PYTHON MR2 FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3192,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 13,
+      "sku": "30000",
+      "base_sku": "30000",
+      "title": "PILOT 2412 CON-40 TWIST TYPE FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3186,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 500,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 16,
+      "sku": "30115",
+      "base_sku": "30115",
+      "title": "PILOT 2278 PRERA TINTED LIGHT GREEN FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3161,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 4190,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 26,
+      "sku": "19066",
+      "base_sku": "19066",
+      "title": "PILOT 2442 MR2 CROCODILE FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3194,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 28,
+      "sku": "19080",
+      "base_sku": "19080",
+      "title": "PILOT 2274 PRERA TINTED BLACK FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3159,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 4190,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 72,
+      "sku": "19003",
+      "base_sku": "19003",
+      "title": "PILOT 1120 FRIXON REFILL 0.7MM BALL PEN BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3090,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 75,
+      "sku": "19005",
+      "base_sku": "19005",
+      "title": "PILOT 1120 FRIXON REFILL 0.7MM BALL PEN GREEN",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3091,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 76,
+      "sku": "19006",
+      "base_sku": "19006",
+      "title": "PILOT 1120 FRIXON REFILL 0.7MM BALL PEN RED",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3092,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 77,
+      "sku": "19004",
+      "base_sku": "19004",
+      "title": "PILOT 1120 FRIXON REFILL 0.7MM BALL PEN BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3093,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 81,
+      "sku": "18699",
+      "base_sku": "18699",
+      "title": "PILOT 1102 HI-TECPOINT V5 ASSORTED PEN PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3074,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 900,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 121,
+      "sku": "19055",
+      "base_sku": "19055",
+      "title": "PILOT 2298 REFILL G-2 ROLLAR BALL PEN",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3167,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 125,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 129,
+      "sku": "19084",
+      "base_sku": "19084",
+      "title": "PILOT 2304 INK BOTTLE BLUE 30ML",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3170,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 131,
+      "sku": "19083",
+      "base_sku": "19083",
+      "title": "PILOT 2352 INK CARTRIDGE IC50L BLUE PACK OF 6PCS",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3178,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 133,
+      "sku": "19088",
+      "base_sku": "19088",
+      "title": "PILOT 2306 INK BOTTLE BLUE BLACK 30ML",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3172,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 137,
+      "sku": "30103",
+      "base_sku": "30103",
+      "title": "PILOT 1325 FRIXON HIGHLIGHTER PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3116,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 540,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    }
+  ],
+  "rows": [
+    {
+      "row": 2,
+      "sku": "30110",
+      "base_sku": "30110",
+      "title": "PILOT 2276 PRERA TINTED LIGHT BLUE FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3160,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 4190,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 3,
+      "sku": "19068",
+      "base_sku": "19068",
+      "title": "PILOT 2346 MR3 RETRO POP METTALIC GREY ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3177,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 1700,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 4,
+      "sku": "21174",
+      "base_sku": "21174",
+      "title": "PILOT 2251 LZ LIZARD 0.7 MR2 ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3149,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 1700,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 5,
+      "sku": "21173",
+      "base_sku": "21173",
+      "title": "PILOT 2249 CROCODIE 0.7 MR2 ROLLER BALL",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3148,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 1700,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 6,
+      "sku": "30186",
+      "base_sku": "30186",
+      "title": "PILOT 2248 SILVER DOTS MR1 0.7 ROLLER BALL",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3147,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 1700,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 7,
+      "sku": "30185",
+      "base_sku": "30185",
+      "title": "PILOT 2247 METAL PEN ZIGZAG MR1 GOLD ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3146,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 1700,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 8,
+      "sku": "30184",
+      "base_sku": "30184",
+      "title": "PILOT 2246 METAL PEN MR1 BLACK 0.7 ROLLER BALL",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3145,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 1700,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 9,
+      "sku": "30109",
+      "base_sku": "30109",
+      "title": "PILOT 2446 WHITE TIGER MR2 FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3195,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 10,
+      "sku": "21184",
+      "base_sku": "21184",
+      "title": "PILOT 2441 WHITE TIGER MR2 FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3193,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 11,
+      "sku": "21183",
+      "base_sku": "21183",
+      "title": "PILOT 2440 PYTHON MR2 FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3192,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 12,
+      "sku": "21182",
+      "base_sku": "21182",
+      "title": "PILOT 2435 SILVER MR1 M FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3191,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 13,
+      "sku": "30000",
+      "base_sku": "30000",
+      "title": "PILOT 2412 CON-40 TWIST TYPE FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3186,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 500,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 14,
+      "sku": "30111",
+      "base_sku": "30111",
+      "title": "PILOT 2284 PRERA TINTED RED FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3163,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 4190,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 15,
+      "sku": "30114",
+      "base_sku": "30114",
+      "title": "PILOT 2281 PRERA TINTED ORANGE FOUNATIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3162,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 4190,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 16,
+      "sku": "30115",
+      "base_sku": "30115",
+      "title": "PILOT 2278 PRERA TINTED LIGHT GREEN FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3161,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 4190,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 17,
+      "sku": "30005",
+      "base_sku": "30005",
+      "title": "PILOT 2026 ELITE 95S DEEP RED M FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3125,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 17000,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 18,
+      "sku": "30112",
+      "base_sku": "30112",
+      "title": "PILOT 2023 ELITE 95S BLACK FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3124,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 17000,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 19,
+      "sku": "21180",
+      "base_sku": "21180",
+      "title": "PILOT 2019 CAPLESS DECIMO VIOLT FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3123,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 19500,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 20,
+      "sku": "21178",
+      "base_sku": "21178",
+      "title": "PILOT 2018 CAPLESS DECIMO LIGHT BLUE FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3122,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 19500,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 21,
+      "sku": "21179",
+      "base_sku": "21179",
+      "title": "PILOT 2014 CAPLESS DECIMO PINK FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3121,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 19500,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 22,
+      "sku": "21177",
+      "base_sku": "21177",
+      "title": "PILOT 2013 CAPLESS DECIMO DARK BLUE FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3120,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 19500,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 23,
+      "sku": "19061",
+      "base_sku": "19061",
+      "title": "PILOT 2432 MR1 PLAIN BLACK FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3189,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 24,
+      "sku": "19062",
+      "base_sku": "19062",
+      "title": "PILOT 2462 MR3 METTALIC GREY FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3196,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 2500,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 25,
+      "sku": "19065",
+      "base_sku": "19065",
+      "title": "PILOT 2433 MR1 PLAIN GOLD FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3190,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 26,
+      "sku": "19066",
+      "base_sku": "19066",
+      "title": "PILOT 2442 MR2 CROCODILE FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3194,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 2800,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 27,
+      "sku": "19078",
+      "base_sku": "19078",
+      "title": "PILOT 74 CUSTOM TINTED WINE RED FOUNTAIN PEN CHROME TRIM",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3144,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 18900,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 28,
+      "sku": "19080",
+      "base_sku": "19080",
+      "title": "PILOT 2274 PRERA TINTED BLACK FOUNTAIN PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3159,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 4190,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 29,
+      "sku": "30108",
+      "base_sku": "30108",
+      "title": "PILOT 2261 WHITE TIGER MR2 BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3158,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 1600,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 30,
+      "sku": "21172",
+      "base_sku": "21172",
+      "title": "PILOT 2260 PYTHON MR2 BALL PEN",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3157,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 1600,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 31,
+      "sku": "21171",
+      "base_sku": "21171",
+      "title": "PILOT 2259 LZ LIZARD MR2 BALL PEN",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3156,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 1600,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 32,
+      "sku": "21170",
+      "base_sku": "21170",
+      "title": "PILOT 2258 L LEOPARD MR2 BALL PEN",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3155,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 1600,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 33,
+      "sku": "30188",
+      "base_sku": "30188",
+      "title": "PILOT 2256 SILVER DOTS MR1 BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3153,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 1600,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 34,
+      "sku": "30187",
+      "base_sku": "30187",
+      "title": "PILOT 2254 METTAL PLAIN BLACK MR1 BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3151,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 1600,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 35,
+      "sku": "21175",
+      "base_sku": "21175",
+      "title": "PILOT 2252 P PYTHON 0.7 MR2 ROLLER BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3150,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 1700,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 36,
+      "sku": "19070",
+      "base_sku": "19070",
+      "title": "PILOT 2257 MR2 CROCODILE BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3154,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 1600,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 37,
+      "sku": "19072",
+      "base_sku": "19072",
+      "title": "PILOT 2340 MR3 RETRO POP METTALIC GREY BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3176,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 1600,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 38,
+      "sku": "19073",
+      "base_sku": "19073",
+      "title": "PILOT 2255 MR1 METAL PEN ZIGZAG GOLD BALL PEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3152,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 1600,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 39,
+      "sku": "30189",
+      "base_sku": "30189",
+      "title": "PILOT 2473 CST 74 BLUE FOUNTAIN PEN (M) INK",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3197,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 32000,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 40,
+      "sku": "30001",
+      "base_sku": "30001",
+      "title": "PILOT 2300 REFILL FOR BALL PEN BLUE",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3169,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 41,
+      "sku": "30183",
+      "base_sku": "30183",
+      "title": "PILOT 2152 INK MOONLIGHT 50ML",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3135,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 1500,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 42,
+      "sku": "18994-GC03",
+      "base_sku": "18994",
+      "title": "PILOT 1101 0.5 HI-TECPOINT PEN BLUE",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 300,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3072,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 32
+        }
+      ]
+    },
+    {
+      "row": 43,
+      "sku": "18994-GC04",
+      "base_sku": "18994",
+      "title": "PILOT 1101 0.5 HI-TECPOINT PEN BLACK",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 300,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3072,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 32
+        }
+      ]
+    },
+    {
+      "row": 44,
+      "sku": "18869-GC04",
+      "base_sku": "18869",
+      "title": "PILOT 1103 HI-TECPOINT V7 PEN BLUE",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 300,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3075,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 276
+        }
+      ]
+    },
+    {
+      "row": 45,
+      "sku": "18994-GC02",
+      "base_sku": "18994",
+      "title": "PILOT 1101 0.5 HI-TECPOINT PEN RED",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 300,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3072,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 32
+        }
+      ]
+    },
+    {
+      "row": 46,
+      "sku": "18994-GC01",
+      "base_sku": "18994",
+      "title": "PILOT 1101 0.5 HI-TECPOINT PEN GREEN",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 300,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3072,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 32
+        }
+      ]
+    },
+    {
+      "row": 47,
+      "sku": "18869-GC03",
+      "base_sku": "18869",
+      "title": "PILOT 1103 HI-TECPOINT V7 PEN BLACK",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 300,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3075,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 276
+        }
+      ]
+    },
+    {
+      "row": 48,
+      "sku": "18869-GC02",
+      "base_sku": "18869",
+      "title": "PILOT 1103 HI-TECPOINT V7 PEN RED",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 300,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3075,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 276
+        }
+      ]
+    },
+    {
+      "row": 49,
+      "sku": "18869-GC01",
+      "base_sku": "18869",
+      "title": "PILOT 1103 HI-TECPOINT V7 PEN GREEN",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 300,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3075,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 276
+        }
+      ]
+    },
+    {
+      "row": 50,
+      "sku": "18867-GC04",
+      "base_sku": "18867",
+      "title": "PILOT 1104 HI-TECPOINT V5 CARTAGE PEN BLUE",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 300,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3076,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 51,
+      "sku": "18867-GC02",
+      "base_sku": "18867",
+      "title": "PILOT 1104 HI-TECPOINT V5 CARTAGE PEN RED",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 300,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3076,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 52,
+      "sku": "18868-GC02",
+      "base_sku": "18868",
+      "title": "PILOT 1105 HI-TECPOINT V7 CARTAGE PEN BLUE",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 300,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3077,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 85
+        }
+      ]
+    },
+    {
+      "row": 53,
+      "sku": "18868-GC01",
+      "base_sku": "18868",
+      "title": "PILOT 1105 HI-TECPOINT V7 CARTAGE PEN BLACK",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 300,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3077,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 85
+        }
+      ]
+    },
+    {
+      "row": 54,
+      "sku": "18984-GC06",
+      "base_sku": "18984",
+      "title": "PILOT 1109 BOARD MARKER BLUE",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 20,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3081,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 78
+        }
+      ]
+    },
+    {
+      "row": 55,
+      "sku": "18867-GC03",
+      "base_sku": "18867",
+      "title": "PILOT 1104 HI-TECPOINT V5 CARTAGE PEN BLACK",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 300,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3076,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 56,
+      "sku": "18867-GC01",
+      "base_sku": "18867",
+      "title": "PILOT 1104 HI-TECPOINT V5 CARTAGE PEN GREEN",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 300,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3076,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 57,
+      "sku": "18984-GC05",
+      "base_sku": "18984",
+      "title": "PILOT 1109 BOARD MARKER BLACK",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 20,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3081,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 78
+        }
+      ]
+    },
+    {
+      "row": 58,
+      "sku": "18984-GC04",
+      "base_sku": "18984",
+      "title": "PILOT 1109 BOARD MARKER RED",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 20,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3081,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 78
+        }
+      ]
+    },
+    {
+      "row": 59,
+      "sku": "18984-GC03",
+      "base_sku": "18984",
+      "title": "PILOT 1109 BOARD MARKER GREEN",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 20,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3081,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 78
+        }
+      ]
+    },
+    {
+      "row": 60,
+      "sku": "18984-GC02",
+      "base_sku": "18984",
+      "title": "PILOT 1109 BOARD MARKER ORANGE",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 20,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3081,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 78
+        }
+      ]
+    },
+    {
+      "row": 61,
+      "sku": "18984-GC01",
+      "base_sku": "18984",
+      "title": "PILOT 1109 BOARD MARKER VIOLET",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 20,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3081,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 78
+        }
+      ]
+    },
+    {
+      "row": 62,
+      "sku": "18996-GC04",
+      "base_sku": "18996",
+      "title": "PILOT 1112 HI-TECPOINT V10 RT PEN BLUE",
+      "variant": "",
+      "old_qty": 150,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 150,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3085,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 72
+        }
+      ]
+    },
+    {
+      "row": 63,
+      "sku": "18996-GC03",
+      "base_sku": "18996",
+      "title": "PILOT 1112 HI-TECPOINT V10 RT PEN BLACK",
+      "variant": "",
+      "old_qty": 150,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 150,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3085,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 72
+        }
+      ]
+    },
+    {
+      "row": 64,
+      "sku": "18996-GC02",
+      "base_sku": "18996",
+      "title": "PILOT 1112 HI-TECPOINT V10 RT PEN GREEN",
+      "variant": "",
+      "old_qty": 150,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 150,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3085,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 72
+        }
+      ]
+    },
+    {
+      "row": 65,
+      "sku": "18996-GC01",
+      "base_sku": "18996",
+      "title": "PILOT 1112 HI-TECPOINT V10 RT PEN RED",
+      "variant": "",
+      "old_qty": 150,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 150,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3085,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 72
+        }
+      ]
+    },
+    {
+      "row": 66,
+      "sku": "18964-GC04",
+      "base_sku": "18964",
+      "title": "PILOT 1115 FRIXION RETRACTABLE PEN BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3088,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 88
+        }
+      ]
+    },
+    {
+      "row": 67,
+      "sku": "18964-GC03",
+      "base_sku": "18964",
+      "title": "PILOT 1115 FRIXION RETRACTABLE PEN BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3088,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 88
+        }
+      ]
+    },
+    {
+      "row": 68,
+      "sku": "18964-GC02",
+      "base_sku": "18964",
+      "title": "PILOT 1115 FRIXION RETRACTABLE PEN RED",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3088,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 88
+        }
+      ]
+    },
+    {
+      "row": 69,
+      "sku": "18964-GC01",
+      "base_sku": "18964",
+      "title": "PILOT 1115 FRIXION RETRACTABLE PEN GREEN",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3088,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 88
+        }
+      ]
+    },
+    {
+      "row": 70,
+      "sku": "18963-GC04",
+      "base_sku": "18963",
+      "title": "PILOT 1116 FRIXION  ROLLER BALL PEN BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3089,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 22
+        }
+      ]
+    },
+    {
+      "row": 71,
+      "sku": "18963-GC03",
+      "base_sku": "18963",
+      "title": "PILOT 1116 FRIXION  ROLLER BALL PEN BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3089,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 22
+        }
+      ]
+    },
+    {
+      "row": 72,
+      "sku": "19003",
+      "base_sku": "19003",
+      "title": "PILOT 1120 FRIXON REFILL 0.7MM BALL PEN BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3090,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 73,
+      "sku": "30102-GC02",
+      "base_sku": "30102",
+      "title": "PILOT 1136 G2 GEL 0.7MM ROLLER BALL PEN BLUE",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 4,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3104,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 51
+        }
+      ]
+    },
+    {
+      "row": 74,
+      "sku": "19188-GC02",
+      "base_sku": "19188",
+      "title": "PILOT 937 HI TECH INK BL15 BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "missing_in_busy",
+      "new_qty": 0,
+      "busy_rows": [],
+      "base_busy_rows": []
+    },
+    {
+      "row": 75,
+      "sku": "19005",
+      "base_sku": "19005",
+      "title": "PILOT 1120 FRIXON REFILL 0.7MM BALL PEN GREEN",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3091,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 76,
+      "sku": "19006",
+      "base_sku": "19006",
+      "title": "PILOT 1120 FRIXON REFILL 0.7MM BALL PEN RED",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3092,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 77,
+      "sku": "19004",
+      "base_sku": "19004",
+      "title": "PILOT 1120 FRIXON REFILL 0.7MM BALL PEN BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3093,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 78,
+      "sku": "30102-GC01",
+      "base_sku": "30102",
+      "title": "PILOT 1136 G2 GEL 0.7MM ROLLER BALL PEN BLACK",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 4,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3104,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 51
+        }
+      ]
+    },
+    {
+      "row": 79,
+      "sku": "19188-GC01",
+      "base_sku": "19188",
+      "title": "PILOT 937 HI TECH INK BL15 BLACK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "missing_in_busy",
+      "new_qty": 0,
+      "busy_rows": [],
+      "base_busy_rows": []
+    },
+    {
+      "row": 80,
+      "sku": "19049",
+      "base_sku": "19049",
+      "title": "PILOT 1729 BALL PEN BP-1RT 0.7MM BLUE",
+      "variant": "",
+      "old_qty": 141,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 141,
+      "busy_rows": [
+        {
+          "busy_row": 3119,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 20,
+          "cl_qty": 141
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 81,
+      "sku": "18699",
+      "base_sku": "18699",
+      "title": "PILOT 1102 HI-TECPOINT V5 ASSORTED PEN PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3074,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 900,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 82,
+      "sku": "18715-GC03",
+      "base_sku": "18715",
+      "title": "PILOT 1110 HI-TECPOINT V5 RETRACTABLE PEN - BLUE",
+      "variant": "",
+      "old_qty": 299,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 299,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3083,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 225
+        }
+      ]
+    },
+    {
+      "row": 83,
+      "sku": "18712-GC06",
+      "base_sku": "18712",
+      "title": "PILOT 1107 HI-TECPOINT V7 GRIP PEN - BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3078,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 84,
+      "sku": "18930-GC03",
+      "base_sku": "18930",
+      "title": "PILOT 1108 HI-TECPOINT V10 GRIP PEN - BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3080,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 85,
+      "sku": "18856-GC02",
+      "base_sku": "18856",
+      "title": "PILOT 1114 V SIGN PEN - GREEN",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 100,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3087,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 80,
+          "cl_qty": 37
+        }
+      ]
+    },
+    {
+      "row": 86,
+      "sku": "18871-GC03",
+      "base_sku": "18871",
+      "title": "PILOT 1102 HI-TECPOINT V5 PEN - BLUE",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 100,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3073,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 116
+        }
+      ]
+    },
+    {
+      "row": 87,
+      "sku": "18715-GC02",
+      "base_sku": "18715",
+      "title": "PILOT 1110 HI-TECPOINT V5 RETRACTABLE PEN - GREEN",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 300,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3083,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 225
+        }
+      ]
+    },
+    {
+      "row": 88,
+      "sku": "18856-GC04",
+      "base_sku": "18856",
+      "title": "PILOT 1114 V SIGN PEN - BLACK",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 100,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3087,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 80,
+          "cl_qty": 37
+        }
+      ]
+    },
+    {
+      "row": 89,
+      "sku": "18856-GC03",
+      "base_sku": "18856",
+      "title": "PILOT 1114 V SIGN PEN - BLUE",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 100,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3087,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 80,
+          "cl_qty": 37
+        }
+      ]
+    },
+    {
+      "row": 90,
+      "sku": "18856-GC01",
+      "base_sku": "18856",
+      "title": "PILOT 1114 V SIGN PEN - RED",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 100,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3087,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 80,
+          "cl_qty": 37
+        }
+      ]
+    },
+    {
+      "row": 91,
+      "sku": "18871-GC04",
+      "base_sku": "18871",
+      "title": "PILOT 1102 HI-TECPOINT V5 PEN - BLACK",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 100,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3073,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 116
+        }
+      ]
+    },
+    {
+      "row": 92,
+      "sku": "18871-GC02",
+      "base_sku": "18871",
+      "title": "PILOT 1102 HI-TECPOINT V5 PEN - GREEN",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 100,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3073,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 116
+        }
+      ]
+    },
+    {
+      "row": 93,
+      "sku": "18871-GC01",
+      "base_sku": "18871",
+      "title": "PILOT 1102 HI-TECPOINT V5 PEN - RED",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 100,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3073,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 116
+        }
+      ]
+    },
+    {
+      "row": 94,
+      "sku": "18700-GC04",
+      "base_sku": "18700",
+      "title": "PILOT 1111 HI-TECPOINT V7 RETRACTABLE PEN - BLACK",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 100,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3084,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 238
+        }
+      ]
+    },
+    {
+      "row": 95,
+      "sku": "18700-GC03",
+      "base_sku": "18700",
+      "title": "PILOT 1111 HI-TECPOINT V7 RETRACTABLE PEN - BLUE",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 100,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3084,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 238
+        }
+      ]
+    },
+    {
+      "row": 96,
+      "sku": "18715-GC04",
+      "base_sku": "18715",
+      "title": "PILOT 1110 HI-TECPOINT V5 RETRACTABLE PEN - BLACK",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 300,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3083,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 225
+        }
+      ]
+    },
+    {
+      "row": 97,
+      "sku": "18712-GC01",
+      "base_sku": "18712",
+      "title": "PILOT 1107 HI-TECPOINT V7 GRIP PEN - VIOLET",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3078,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 98,
+      "sku": "18930-GC04",
+      "base_sku": "18930",
+      "title": "PILOT 1108 HI-TECPOINT V10 GRIP PEN - BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3080,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 99,
+      "sku": "18930-GC02",
+      "base_sku": "18930",
+      "title": "PILOT 1108 HI-TECPOINT V10 GRIP PEN - GREEN",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3080,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 100,
+      "sku": "18700-GC02",
+      "base_sku": "18700",
+      "title": "PILOT 1111 HI-TECPOINT V7 RETRACTABLE PEN - GREEN",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 100,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3084,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 238
+        }
+      ]
+    },
+    {
+      "row": 101,
+      "sku": "18700-GC01",
+      "base_sku": "18700",
+      "title": "PILOT 1111 HI-TECPOINT V7 RETRACTABLE PEN - RED",
+      "variant": "",
+      "old_qty": 100,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 100,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3084,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 238
+        }
+      ]
+    },
+    {
+      "row": 102,
+      "sku": "18715-GC01",
+      "base_sku": "18715",
+      "title": "PILOT 1110 HI-TECPOINT V5 RETRACTABLE PEN - RED",
+      "variant": "",
+      "old_qty": 300,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 300,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3083,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 225
+        }
+      ]
+    },
+    {
+      "row": 103,
+      "sku": "18712-GC05",
+      "base_sku": "18712",
+      "title": "PILOT 1107 HI-TECPOINT V7 GRIP PEN - BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3078,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 104,
+      "sku": "18712-GC04",
+      "base_sku": "18712",
+      "title": "PILOT 1107 HI-TECPOINT V7 GRIP PEN - GREEN",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3078,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 105,
+      "sku": "18712-GC03",
+      "base_sku": "18712",
+      "title": "PILOT 1107 HI-TECPOINT V7 GRIP PEN - PINK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3078,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 106,
+      "sku": "18712-GC02",
+      "base_sku": "18712",
+      "title": "PILOT 1107 HI-TECPOINT V7 GRIP PEN - SKY BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3078,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 107,
+      "sku": "18930-GC01",
+      "base_sku": "18930",
+      "title": "PILOT 1108 HI-TECPOINT V10 GRIP PEN - RED",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3080,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 65
+        }
+      ]
+    },
+    {
+      "row": 108,
+      "sku": "18953-GC04",
+      "base_sku": "18953",
+      "title": "PILOT 1113 V FOUNTAIN PEN - BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3086,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 73
+        }
+      ]
+    },
+    {
+      "row": 109,
+      "sku": "18953-GC03",
+      "base_sku": "18953",
+      "title": "PILOT 1113 V FOUNTAIN PEN - BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3086,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 73
+        }
+      ]
+    },
+    {
+      "row": 110,
+      "sku": "19014-GC02",
+      "base_sku": "19014",
+      "title": "PILOT 1121 REFILL V5 RETRACTABLE PEN - GREEN",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 12,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3094,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 54
+        }
+      ]
+    },
+    {
+      "row": 111,
+      "sku": "18953-GC02",
+      "base_sku": "18953",
+      "title": "PILOT 1113 V FOUNTAIN PEN - GREEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 0,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3086,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 73
+        }
+      ]
+    },
+    {
+      "row": 112,
+      "sku": "18953-GC01",
+      "base_sku": "18953",
+      "title": "PILOT 1113 V FOUNTAIN PEN - RED",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3086,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 73
+        }
+      ]
+    },
+    {
+      "row": 113,
+      "sku": "18963-GC02",
+      "base_sku": "18963",
+      "title": "PILOT 1116 FRIXION ROLLER BALL PEN GREEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 0,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3089,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 22
+        }
+      ]
+    },
+    {
+      "row": 114,
+      "sku": "18963-GC01",
+      "base_sku": "18963",
+      "title": "PILOT 1116 FRIXION ROLLER BALL PEN RED",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 0,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3089,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 22
+        }
+      ]
+    },
+    {
+      "row": 115,
+      "sku": "19014-GC04",
+      "base_sku": "19014",
+      "title": "PILOT 1121 REFILL V5 RETRACTABLE PEN - BLACK",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3094,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 54
+        }
+      ]
+    },
+    {
+      "row": 116,
+      "sku": "19014-GC03",
+      "base_sku": "19014",
+      "title": "PILOT 1121 REFILL V5 RETRACTABLE PEN - BLUE",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 24,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3094,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 54
+        }
+      ]
+    },
+    {
+      "row": 117,
+      "sku": "19012-GC03",
+      "base_sku": "19012",
+      "title": "PILOT 1122 REFILL V7 RETRACTABLE PEN - BLUE",
+      "variant": "",
+      "old_qty": 36,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 36,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3095,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 72
+        }
+      ]
+    },
+    {
+      "row": 118,
+      "sku": "19012-GC01",
+      "base_sku": "19012",
+      "title": "PILOT 1122 REFILL V7 RETRACTABLE PEN - RED",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 0,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3095,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 72
+        }
+      ]
+    },
+    {
+      "row": 119,
+      "sku": "19033-GC03",
+      "base_sku": "19033",
+      "title": "PILOT 1124 MARKER CARTRIDGE - BLUE",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 10,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3097,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 38
+        }
+      ]
+    },
+    {
+      "row": 120,
+      "sku": "19033-GC01",
+      "base_sku": "19033",
+      "title": "PILOT 1124 MARKER CARTRIDGE - RED",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 10,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3097,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 38
+        }
+      ]
+    },
+    {
+      "row": 121,
+      "sku": "19055",
+      "base_sku": "19055",
+      "title": "PILOT 2298 REFILL G-2 ROLLAR BALL PEN",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3167,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 125,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 122,
+      "sku": "19014-GC01",
+      "base_sku": "19014",
+      "title": "PILOT 1121 REFILL V5 RETRACTABLE PEN - RED",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 2,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3094,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 54
+        }
+      ]
+    },
+    {
+      "row": 123,
+      "sku": "19012-GC04",
+      "base_sku": "19012",
+      "title": "PILOT 1122 REFILL V7 RETRACTABLE PEN - BLACK",
+      "variant": "",
+      "old_qty": 34,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 34,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3095,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 72
+        }
+      ]
+    },
+    {
+      "row": 124,
+      "sku": "19012-GC02",
+      "base_sku": "19012",
+      "title": "PILOT 1122 REFILL V7 RETRACTABLE PEN - GREEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 0,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3095,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 72
+        }
+      ]
+    },
+    {
+      "row": 125,
+      "sku": "19033-GC04",
+      "base_sku": "19033",
+      "title": "PILOT 1124 MARKER CARTRIDGE - BLACK",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 10,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3097,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 38
+        }
+      ]
+    },
+    {
+      "row": 126,
+      "sku": "19033-GC02",
+      "base_sku": "19033",
+      "title": "PILOT 1124 MARKER CARTRIDGE - GREEN",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 10,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3097,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 38
+        }
+      ]
+    },
+    {
+      "row": 127,
+      "sku": "19043-GC02",
+      "base_sku": "19043",
+      "title": "PILOT 1127 CARTRIDGE V5-V7 PACK OF 2PCS - BLACK",
+      "variant": "",
+      "old_qty": 26,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 26,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3098,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 30,
+          "cl_qty": 35
+        }
+      ]
+    },
+    {
+      "row": 128,
+      "sku": "19043-GC01",
+      "base_sku": "19043",
+      "title": "PILOT 1127 CARTRIDGE V5-V7 PACK OF 2PCS - BLUE",
+      "variant": "",
+      "old_qty": 34,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 34,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 3098,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 30,
+          "cl_qty": 35
+        }
+      ]
+    },
+    {
+      "row": 129,
+      "sku": "19084",
+      "base_sku": "19084",
+      "title": "PILOT 2304 INK BOTTLE BLUE 30ML",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3170,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 130,
+      "sku": "19052",
+      "base_sku": "19052",
+      "title": "PILOT 2305 INK BOTTLE BLACK 30ML",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3171,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 131,
+      "sku": "19083",
+      "base_sku": "19083",
+      "title": "PILOT 2352 INK CARTRIDGE IC50L BLUE PACK OF 6PCS",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3178,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 132,
+      "sku": "19085",
+      "base_sku": "19085",
+      "title": "PILOT 2353 INK CARTRIDGE IC50B BLACK PACK OF 6PCS",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3179,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 133,
+      "sku": "19088",
+      "base_sku": "19088",
+      "title": "PILOT 2306 INK BOTTLE BLUE BLACK 30ML",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3172,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 134,
+      "sku": "19091",
+      "base_sku": "19091",
+      "title": "PILOT 2310 INK BOTTLE BLUE BLACK 70ML",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3175,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 1100,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 135,
+      "sku": "19092",
+      "base_sku": "19092",
+      "title": "PILOT 2307 INK BOTTLE RED 30ML",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3173,
+          "item_group": "PILOT PREMIUM",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 136,
+      "sku": "19481",
+      "base_sku": "19481",
+      "title": "PILOT 1729 BALL PEN BALL POINT-1RT 0.7MM BLACK",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "missing_in_busy",
+      "new_qty": 5,
+      "busy_rows": [],
+      "base_busy_rows": []
+    },
+    {
+      "row": 137,
+      "sku": "30103",
+      "base_sku": "30103",
+      "title": "PILOT 1325 FRIXON HIGHLIGHTER PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3116,
+          "item_group": "PILOT NORMAL",
+          "item_name": "",
+          "mrp": 540,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    }
+  ]
+}

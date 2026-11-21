@@ -1,0 +1,8416 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (50).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "busy_sheet": "Sheet1",
+  "project_output": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_scholar_20260831\\scholar products - Updated Website Stock.xlsx",
+  "downloads_output": "C:\\Users\\My-PC-Win10\\Downloads\\scholar products - Updated Website Stock.xlsx",
+  "downloads_status": "copied",
+  "meta": {
+    "sheet_name": "Products",
+    "max_row": 231,
+    "max_column": 34,
+    "sku_col": 16,
+    "stock_col": 17,
+    "warehouse_col": 18,
+    "shop_col": 19
+  },
+  "summary": {
+    "website_sku_rows": 230,
+    "matched_direct": 229,
+    "duplicate_code_summed": 1,
+    "missing_in_busy": 0,
+    "base_code_available_no_exact_sku": 0,
+    "changed": 149,
+    "negative_new_qty": 0
+  },
+  "missing_in_busy": [],
+  "base_code_available_no_exact_sku": [],
+  "duplicate_code_summed": [
+    {
+      "row": 42,
+      "sku": "8773",
+      "base_sku": "8773",
+      "title": "SCHOLAR WJ2 A5 WATER COLOR JOURNAL BOOK 300GSM 28SHEET",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3777,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 650,
+          "cl_qty": 6
+        },
+        {
+          "busy_row": 3778,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    }
+  ],
+  "negative_new_qty": [],
+  "changed_rows": [
+    {
+      "row": 2,
+      "sku": "30052",
+      "base_sku": "30052",
+      "title": "SCHOLAR 601B A5 ECO DIARY BLUE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3556,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 4,
+      "sku": "30054",
+      "base_sku": "30054",
+      "title": "SCHOLAR 601G A5 ECO DIARY GREEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3558,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 6,
+      "sku": "30058",
+      "base_sku": "30058",
+      "title": "SCHOLAR 603BK A5 ELURE DIARY BLACK",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3560,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 7,
+      "sku": "8673",
+      "base_sku": "8673",
+      "title": "SCHOLAR WPL4V A4 WEEKLY PLANNER VERTICAL 50SHEET",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3782,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 280,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 11,
+      "sku": "21240",
+      "base_sku": "21240",
+      "title": "SCHOLAR KLS4 A4 KRAFT LOOSE SHEETS",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3637,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 13,
+      "sku": "21243",
+      "base_sku": "21243",
+      "title": "SCHOLAR PSM2T PRISMA NOTEBOOK A5 TAN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 60,
+      "busy_rows": [
+        {
+          "busy_row": 3703,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 319,
+          "cl_qty": 60
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 14,
+      "sku": "30087",
+      "base_sku": "30087",
+      "title": "SCHOLAR PSM2B PRISMA NOTEBOOK A5 BLUE",
+      "variant": "",
+      "old_qty": 41,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 42,
+      "busy_rows": [
+        {
+          "busy_row": 3700,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 299,
+          "cl_qty": 42
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 16,
+      "sku": "21241",
+      "base_sku": "21241",
+      "title": "SCHOLAR NVB3 NOVA NOTEBOOK B5",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3678,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 420,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 18,
+      "sku": "21237",
+      "base_sku": "21237",
+      "title": "SCHOLAR ACRL3 A3 ACRLIC LOSSE SHEETS",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3578,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 250,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 22,
+      "sku": "30065",
+      "base_sku": "30065",
+      "title": "SCHOLAR 803P B5 ELURE DIARY PLUM",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3571,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 500,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 30,
+      "sku": "30050",
+      "base_sku": "30050",
+      "title": "SCHOLAR 608T A5 CHANCELLOR DIARY TAN",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3563,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 625,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 31,
+      "sku": "30061",
+      "base_sku": "30061",
+      "title": "SCHOLAR 603P A5 ELURE DIARY PLUM",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3562,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 32,
+      "sku": "30060",
+      "base_sku": "30060",
+      "title": "SCHOLAR 603G A5 ELURE DIARY GREEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3561,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 33,
+      "sku": "8721",
+      "base_sku": "8721",
+      "title": "SCHOLAR EXB-W STOIC WOODEN EXAM BOARD",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3617,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 155,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 34,
+      "sku": "8722",
+      "base_sku": "8722",
+      "title": "SCHOLAR KNB1 A6 PARYAVARAN NOTEBOOK (RULED) 80PGS",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 23,
+      "busy_rows": [
+        {
+          "busy_row": 3638,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 23
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 36,
+      "sku": "8738",
+      "base_sku": "8738",
+      "title": "SCHOLAR APL2 A5 APOLLO NOTEBOOK 192 PAGES - BLACK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3587,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 480,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 37,
+      "sku": "8725",
+      "base_sku": "8725",
+      "title": "SCHOLAR TTDP A6 THINGS TO DO PAD PURPLE 50SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3745,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 38,
+      "sku": "8727",
+      "base_sku": "8727",
+      "title": "SCHOLAR TTS1 A6 THINGS TO DO SPIRAL PAD 50SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3746,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 39,
+      "sku": "8732",
+      "base_sku": "8732",
+      "title": "SCHOLAR PNB2 A5 PARYAVARAN NOTEBOOK",
+      "variant": "",
+      "old_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3691,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 199,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 40,
+      "sku": "8746",
+      "base_sku": "8746",
+      "title": "SCHOLAR PSN2 A5 PARYAVARAN NOTEBOOK 1SUBJECT 160PAGES",
+      "variant": "",
+      "old_qty": 16,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 17,
+      "busy_rows": [
+        {
+          "busy_row": 3704,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 119,
+          "cl_qty": 17
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 41,
+      "sku": "8764",
+      "base_sku": "8764",
+      "title": "SCHOLAR RCY4 A4 RECYCLED PAPER SKETCH BOOK 160GSM 25SHEET",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3712,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 360,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 42,
+      "sku": "8773",
+      "base_sku": "8773",
+      "title": "SCHOLAR WJ2 A5 WATER COLOR JOURNAL BOOK 300GSM 28SHEET",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3777,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 650,
+          "cl_qty": 6
+        },
+        {
+          "busy_row": 3778,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 43,
+      "sku": "8756",
+      "base_sku": "8756",
+      "title": "SCHOLAR LPR2 A5 LUCID PREMIUM NOTEBOOK 90GSM",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3661,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 299,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 44,
+      "sku": "8760",
+      "base_sku": "8760",
+      "title": "SCHOLAR KNB4 A4 PARYAVARAN KRAFT RULED NOTEBOOK",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3644,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 190,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 46,
+      "sku": "8766",
+      "base_sku": "8766",
+      "title": "SCHOLAR CPLT9 BOOKMARK COLOR PAPRE SHEET 20SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3597,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 47,
+      "sku": "8767",
+      "base_sku": "8767",
+      "title": "SCHOLAR WCP2 A5 WATER COLOR PAD 300GSM 12SHEET",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3769,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 180,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 48,
+      "sku": "8770",
+      "base_sku": "8770",
+      "title": "SCHOLAR BLS4 A4 BLACK PAPER LOOSE DRAWING SHEET 170GSM 20SHEET",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3594,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 130,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 49,
+      "sku": "8775",
+      "base_sku": "8775",
+      "title": "SCHOLAR WJ1 A6 WATER COLOR JOURNAL BOOK 300GSM 28SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3776,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 50,
+      "sku": "8763",
+      "base_sku": "8763",
+      "title": "SCHOLAR EXB-S EXAM BOARD STUDENT",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3616,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 53,
+      "sku": "8771",
+      "base_sku": "8771",
+      "title": "SCHOLAR MMW4 A4 MIXED MEDIA SKETCH BOOK 250GSM 15SHEET",
+      "variant": "",
+      "old_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3672,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 54,
+      "sku": "8776",
+      "base_sku": "8776",
+      "title": "SCHOLAR DSB1 A6 DECOR SKETCH BOOK 150GSM 56SHEET",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3607,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 239,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 56,
+      "sku": "8834",
+      "base_sku": "8834",
+      "title": "SCHOLAR PSN6 A5 5SUBJECT PARYAVARAN NOTEBOOK",
+      "variant": "",
+      "old_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3705,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 219,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 57,
+      "sku": "8840",
+      "base_sku": "8840",
+      "title": "SCHOLAR SLN2 A5 SELF LOVE RULED NOTEBOOK",
+      "variant": "",
+      "old_qty": 30,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 21,
+      "busy_rows": [
+        {
+          "busy_row": 3728,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 21
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 58,
+      "sku": "8833",
+      "base_sku": "8833",
+      "title": "SCHOLAR VB9 BIG VISITOR BOOK",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3754,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 725,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 59,
+      "sku": "8839",
+      "base_sku": "8839",
+      "title": "SCHOLAR SLN2P A5 SELF LOVE PLAIN NOTEBOOK",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 22,
+      "busy_rows": [
+        {
+          "busy_row": 3729,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 22
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 63,
+      "sku": "8888",
+      "base_sku": "8888",
+      "title": "SCHOLAR NXN1 A6 METTALIC NOTEBOOK NOTES EXPLORER",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3679,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 129,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 64,
+      "sku": "8897",
+      "base_sku": "8897",
+      "title": "SCHOLAR MSN1 A6 METALLIC NOTEBOOK MOSAIC",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3675,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 129,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 65,
+      "sku": "8899",
+      "base_sku": "8899",
+      "title": "SCHOLAR RBN1CM A6 CREA NOTEBOOK COLOURMIX",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3708,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 280,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 67,
+      "sku": "8898",
+      "base_sku": "8898",
+      "title": "SCHOLAR MSN2 A5 METALLIC NOTEBOOK MOSAIC",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 22,
+      "busy_rows": [
+        {
+          "busy_row": 3676,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 209,
+          "cl_qty": 22
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 68,
+      "sku": "8900",
+      "base_sku": "8900",
+      "title": "SCHOLAR RBN2CM A5 CREA NOTEBOOK COLOURMIX",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 9,
+      "busy_rows": [
+        {
+          "busy_row": 3709,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 480,
+          "cl_qty": 9
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 69,
+      "sku": "8902",
+      "base_sku": "8902",
+      "title": "SCHOLAR VB7 SMALL VISITOR BOOK METTALIC",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3753,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 390,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 70,
+      "sku": "8904",
+      "base_sku": "8904",
+      "title": "SCHOLAR TP2 MEDIUM TABLE PLANNER REFILL",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3739,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 175,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 71,
+      "sku": "8916",
+      "base_sku": "8916",
+      "title": "SCHOLAR TP3 BIG TABLE PLANNER",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3740,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 590,
+          "cl_qty": 12
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 72,
+      "sku": "8946",
+      "base_sku": "8946",
+      "title": "SCHOLAR TP3 TABLE PLANNER BIG REFILL",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 16,
+      "busy_rows": [
+        {
+          "busy_row": 3741,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 250,
+          "cl_qty": 16
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 73,
+      "sku": "8948",
+      "base_sku": "8948",
+      "title": "SCHOLAR WCP4 A4 WATER COLOR COLD PRESS DRAWING PAD 300GSM 12SHEET",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3771,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 360,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 74,
+      "sku": "8953",
+      "base_sku": "8953",
+      "title": "SCHOLAR KNB2P A5 KRAFT PLAIN NOTEBOOK",
+      "variant": "",
+      "old_qty": 39,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 37,
+      "busy_rows": [
+        {
+          "busy_row": 3641,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 95,
+          "cl_qty": 37
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 75,
+      "sku": "8947",
+      "base_sku": "8947",
+      "title": "SCHOLAR TP2 MEDIUM TABLE PLANNER",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3738,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 330,
+          "cl_qty": 12
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 76,
+      "sku": "8952",
+      "base_sku": "8952",
+      "title": "SCHOLAR KNB2 A5 KRAFT RULED NOTEBOOK",
+      "variant": "",
+      "old_qty": 45,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3640,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 95,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 77,
+      "sku": "8984",
+      "base_sku": "8984",
+      "title": "SCHOLAR KNB1P A6 KRAFT PLAIN NOTEBOOK",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3639,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 12
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 79,
+      "sku": "9009",
+      "base_sku": "9009",
+      "title": "SCHOLAR TTD2 B6 THINGS TO DO PAD",
+      "variant": "",
+      "old_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3742,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 82,
+      "sku": "8995",
+      "base_sku": "8995",
+      "title": "SCHOLAR KNB3P B5 KRAFT PLAIN NOTEBOOK",
+      "variant": "",
+      "old_qty": 13,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3643,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 130,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 83,
+      "sku": "8996",
+      "base_sku": "8996",
+      "title": "SCHOLAR KNB4P A4 PARYAVARAN KRAFT PLAIN NOTEBOOK",
+      "variant": "",
+      "old_qty": 25,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3645,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 190,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 84,
+      "sku": "8997",
+      "base_sku": "8997",
+      "title": "SCHOLAR HTWH A5 WEEKLY HABIT TRACKER HORIZONTAL 50SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3629,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 140,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 85,
+      "sku": "9018",
+      "base_sku": "9018",
+      "title": "SCHOLAR UBS1 A6 URBANA SKETCH BOOK 128PAGES",
+      "variant": "",
+      "old_qty": 11,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3748,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 86,
+      "sku": "9019",
+      "base_sku": "9019",
+      "title": "SCHOLAR UBS2 A5 URBANA SKETCH BOOK 128PAGES",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 22,
+      "busy_rows": [
+        {
+          "busy_row": 3749,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 120,
+          "cl_qty": 22
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 87,
+      "sku": "9007",
+      "base_sku": "9007",
+      "title": "SCHOLAR RWC8 WATERCOLOR MIXED MEDIA PAD ROUND",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3719,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 500,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 88,
+      "sku": "9012",
+      "base_sku": "9012",
+      "title": "SCHOLAR CWP2 A5 CREANOTE NOTEPAD 80SHEET",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3601,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 249,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 89,
+      "sku": "9032",
+      "base_sku": "9032",
+      "title": "SCHOLAR UBS4 A4 URBANA SKETCH BOOK 128PAGES",
+      "variant": "",
+      "old_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3750,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 220,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 92,
+      "sku": "9124",
+      "base_sku": "9124",
+      "title": "SCHOLAR SLB13 A4 EXERCISE NOTEBOOK 140PAGES",
+      "variant": "",
+      "old_qty": 102,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 110,
+      "busy_rows": [
+        {
+          "busy_row": 3724,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 110
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 93,
+      "sku": "9105",
+      "base_sku": "9105",
+      "title": "SCHOLAR SLB17 A4 EXERCISE NOTEBOOK 256PAGES",
+      "variant": "",
+      "old_qty": 76,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 77,
+      "busy_rows": [
+        {
+          "busy_row": 3726,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 120,
+          "cl_qty": 77
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 96,
+      "sku": "9521",
+      "base_sku": "9521",
+      "title": "SCHOLAR PSJ6 SQUARE PARYAVARAN SKETCH BOOK",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3699,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 300,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 97,
+      "sku": "9523",
+      "base_sku": "9523",
+      "title": "SCHOLAR ACR2 A5 ACRYLIC PAINTING PAD 360GSM 10SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3574,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 190,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 98,
+      "sku": "9525",
+      "base_sku": "9525",
+      "title": "SCHOLAR ACR4 A4 ACRYLIC PAINTING PAD 360GSM 10SHEET",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3576,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 99,
+      "sku": "9526",
+      "base_sku": "9526",
+      "title": "SCHOLAR ACRL2 A5 ACRYLIC LOOSE SHEET 20SHEET 360GSM",
+      "variant": "",
+      "old_qty": 11,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3577,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 250,
+          "cl_qty": 12
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 102,
+      "sku": "9530",
+      "base_sku": "9530",
+      "title": "SCHOLAR APA3 A3 ARTIST PAD ADVANCE 170GSM 40SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3585,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 370,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 103,
+      "sku": "9531",
+      "base_sku": "9531",
+      "title": "SCHOLAR APA4 A4 ARTIST PAD ADVANCE 170GSM 40SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3586,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 210,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 105,
+      "sku": "9528",
+      "base_sku": "9528",
+      "title": "SCHOLAR ACRL4 A4 ACRYLIC LOOSE SHEET 360GSM 10SHEET",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3579,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 250,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 106,
+      "sku": "9532",
+      "base_sku": "9532",
+      "title": "SCHOLAR APX4 A4 ARTIST PAD EXPERT 220GSM 30SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3592,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 210,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 107,
+      "sku": "9535",
+      "base_sku": "9535",
+      "title": "SCHOLAR QTR4 A4 QUATRO SKETCH BOOK 60SHEET",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3707,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 650,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 108,
+      "sku": "9536",
+      "base_sku": "9536",
+      "title": "SCHOLAR DPL2 A5 DAILY PLANNER 80SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3605,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 140,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 109,
+      "sku": "9537",
+      "base_sku": "9537",
+      "title": "SCHOLAR DPL4 A4 DAILY PLANNER 80 SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3606,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 280,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 110,
+      "sku": "9539",
+      "base_sku": "9539",
+      "title": "SCHOLAR SSP9 A7 PRISM SPIRAL PAD",
+      "variant": "",
+      "old_qty": 151,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 143,
+      "busy_rows": [
+        {
+          "busy_row": 3734,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 32,
+          "cl_qty": 143
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 111,
+      "sku": "9543",
+      "base_sku": "9543",
+      "title": "SCHOLAR FLS4 A4 BEIGE PAPER LOOSE SHEET 160GSM 20SHEET",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3621,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 160,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 113,
+      "sku": "9540",
+      "base_sku": "9540",
+      "title": "SCHOLAR TTS9 A7 THINGS TO DO SPIRAL PAD 50SHEET",
+      "variant": "",
+      "old_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3747,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 45,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 118,
+      "sku": "9553",
+      "base_sku": "9553",
+      "title": "SCHOLAR AGR2 A5 GRATITUDE JOURNAL ARTCOVER NOTEBOOK",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3581,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 349,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 121,
+      "sku": "9547",
+      "base_sku": "9547",
+      "title": "SCHOLAR GSP2 A5 GRAVEL SKETCH PAD",
+      "variant": "",
+      "old_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3625,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 240,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 123,
+      "sku": "9551",
+      "base_sku": "9551",
+      "title": "SCHOLAR KLS3 A3 KRAFT PAPER LOOSE DRAWING SHEET 170GSM 20SHEET",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3636,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 220,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 124,
+      "sku": "9556",
+      "base_sku": "9556",
+      "title": "SCHOLAR KNN2 A5 JAZZ NOTEBOOK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3646,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 170,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 125,
+      "sku": "9557",
+      "base_sku": "9557",
+      "title": "SCHOLAR KSP2 A5 KRAFT SKETCH PAD DRAWING BOOK 180GSM 40SHEET",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3647,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 160,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 126,
+      "sku": "9552",
+      "base_sku": "9552",
+      "title": "SCHOLAR ACR3 A3 ACRYLIC PAINTING PAD 360GSM 10SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3575,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 127,
+      "sku": "9554",
+      "base_sku": "9554",
+      "title": "SCHOLAR KNB3 B5 PARYAVARAN KRAFT NOTEBOOK RULED",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3642,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 130,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 128,
+      "sku": "9555",
+      "base_sku": "9555",
+      "title": "SCHOLAR APN2 A5 PLANNER JOURNAL ARTCOVER NOTEBOOK",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3591,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 349,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 130,
+      "sku": "9563",
+      "base_sku": "9563",
+      "title": "SCHOLAR NVB2-C A5 NOVA NOTEBOOK BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3677,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 330,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 131,
+      "sku": "9564",
+      "base_sku": "9564",
+      "title": "SCHOLAR AGL2 A5 GOALS JOURNAL ARTCOVER NOTEBOOK",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3580,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 349,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 132,
+      "sku": "9565",
+      "base_sku": "9565",
+      "title": "SCHOLAR PSB1 A6 PARYAVRAN SKETCH DRAWING BOOK 50SHEET",
+      "variant": "",
+      "old_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3695,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 137,
+      "sku": "9568",
+      "base_sku": "9568",
+      "title": "SCHOLAR PSB4 A4 PARYAVRAN SKETCH DRAWING BOOK 150GSM 50SHEET",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3698,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 210,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 138,
+      "sku": "9572",
+      "base_sku": "9572",
+      "title": "SCHOLAR SNB2-I A5 ZAFIRO NOTEBOOK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3730,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 210,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 139,
+      "sku": "9573",
+      "base_sku": "9573",
+      "title": "SCHOLAR JGR2 A5 PREMIUM GRATITUDE JOURNAL NOTEBOOK+PEN",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3632,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 849,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 140,
+      "sku": "9574",
+      "base_sku": "9574",
+      "title": "SCHOLAR SPL4 A4 SKETCH LOOSE DRAWING SHEET 130GSM 50SHEETS",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3731,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 130,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 141,
+      "sku": "9567",
+      "base_sku": "9567",
+      "title": "SCHOLAR PSB3 A3 PARYAVRAN SKETCH DRAWING BOOK",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3697,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 370,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 150,
+      "sku": "9576",
+      "base_sku": "9576",
+      "title": "SCHOLAR SPL9 A4 SKETCH DRAWING SHEET 220GSM 30SHEET",
+      "variant": "",
+      "old_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3733,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 140,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 156,
+      "sku": "10015",
+      "base_sku": "10015",
+      "title": "SCHOLAR WPLT A4 WEEKLY SCHEDULER 50SHEET",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3783,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 200,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 159,
+      "sku": "10003",
+      "base_sku": "10003",
+      "title": "SCHOLAR PRP4 A4 WATER COLOUR PAD ROUGH GRAIN 300GSM 12SHEET",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3694,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 162,
+      "sku": "10016",
+      "base_sku": "10016",
+      "title": "SCHOLAR RCY2 A5 RECYCLED PAPER SKETCH PAD DRAWING BOOK 160GSM 25SHEET",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3711,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 200,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 165,
+      "sku": "14620",
+      "base_sku": "14620",
+      "title": "SCHOLAR VNB1 A6 VIBE NOTEBOOK 192 PAGES",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3763,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 168,
+      "sku": "14839",
+      "base_sku": "14839",
+      "title": "SCHOLAR RGN2 A5 REGENT NOTEBOOK - BLUE",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3713,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 169,
+      "sku": "14840",
+      "base_sku": "14840",
+      "title": "SCHOLAR RGN2 A5 REGENT NOTEBOOK - GREY",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3714,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 170,
+      "sku": "14841",
+      "base_sku": "14841",
+      "title": "SCHOLAR RGN2 A5 REGENT NOTEBOOK - KHAKHI",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3715,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 171,
+      "sku": "14903",
+      "base_sku": "14903",
+      "title": "SCHOLAR ESN2 A5 ESSENTIAL NOTEBOOK 192PAGES - GREY",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3612,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 429,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 172,
+      "sku": "14869",
+      "base_sku": "14869",
+      "title": "SCHOLAR LUC2 A5 LUCID NOTEBOOK RULED - GREEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3662,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 220,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 173,
+      "sku": "14870",
+      "base_sku": "14870",
+      "title": "SCHOLAR LUC2 A5 LUCID NOTEBOOK RULED - NAVY BLUE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3663,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 220,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 174,
+      "sku": "14871",
+      "base_sku": "14871",
+      "title": "SCHOLAR LUC2 A5 LUCID NOTEBOOK RULED - ORANGE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 14,
+      "busy_rows": [
+        {
+          "busy_row": 3664,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 220,
+          "cl_qty": 14
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 175,
+      "sku": "14886",
+      "base_sku": "14886",
+      "title": "SCHOLAR ORN2 A5 ORION NOTEBOOK - GREY",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3681,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 499,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 176,
+      "sku": "14905",
+      "base_sku": "14905",
+      "title": "SCHOLAR ESN2 A5 ESSENTIAL NOTEBOOK 192PAGES - TAN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3614,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 429,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 177,
+      "sku": "14907",
+      "base_sku": "14907",
+      "title": "SCHOLAR ESN2 A5 ESSENTIAL NOTEBOOK 192PAGES - RED",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3613,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 429,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 178,
+      "sku": "14885",
+      "base_sku": "14885",
+      "title": "SCHOLAR ORN2 A5 ORION NOTEBOOK - BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3680,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 499,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 179,
+      "sku": "14887",
+      "base_sku": "14887",
+      "title": "SCHOLAR ORN2 A5 ORION NOTEBOOK - TAN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3682,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 499,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 180,
+      "sku": "14889",
+      "base_sku": "14889",
+      "title": "SCHOLAR APL2 A5 APOLLO NOTEBOOK 192 PAGES - BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3588,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 480,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 181,
+      "sku": "14890",
+      "base_sku": "14890",
+      "title": "SCHOLAR APL2 A5 APOLLO NOTEBOOK 192 PAGES - GREY",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3589,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 480,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 182,
+      "sku": "14891",
+      "base_sku": "14891",
+      "title": "SCHOLAR APL2 A5 APOLLO NOTEBOOK 192 PAGES - TAN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3590,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 480,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 183,
+      "sku": "14901",
+      "base_sku": "14901",
+      "title": "SCHOLAR ESN2 A5 ESSENTIAL NOTEBOOK 192PAGES - BLACK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3610,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 429,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 185,
+      "sku": "14913",
+      "base_sku": "14913",
+      "title": "SCHOLAR LYN2 A5 LYNEA NOTEBOOK - BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3665,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 186,
+      "sku": "14914",
+      "base_sku": "14914",
+      "title": "SCHOLAR LYN2 A5 LYNEA NOTEBOOK - GREY",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3666,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 187,
+      "sku": "14915",
+      "base_sku": "14915",
+      "title": "SCHOLAR LYN2 A5 LYNEA NOTEBOOK - TAN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3667,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 188,
+      "sku": "14931",
+      "base_sku": "14931",
+      "title": "SCHOLAR ZPR2 A5 ZIPPER NOTEBOOK - BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3786,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 480,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 189,
+      "sku": "14932",
+      "base_sku": "14932",
+      "title": "SCHOLAR ZPR2 A5 ZIPPER NOTEBOOK - GREY",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3787,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 480,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 190,
+      "sku": "14933",
+      "base_sku": "14933",
+      "title": "SCHOLAR ZPR2 A5 ZIPPER NOTEBOOK - TAN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3788,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 480,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 191,
+      "sku": "14996",
+      "base_sku": "14996",
+      "title": "SCHOLAR LEG1 A6 LEGEND NOTEBOOK - COFFEE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3649,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 300,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 192,
+      "sku": "14997",
+      "base_sku": "14997",
+      "title": "SCHOLAR LEG1 A6 LEGEND NOTEBOOK - MIDNIGHT BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3651,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 300,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 193,
+      "sku": "14998",
+      "base_sku": "14998",
+      "title": "SCHOLAR LEG1 A6 LEGEND NOTEBOOK - TAN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3650,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 300,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 194,
+      "sku": "15003",
+      "base_sku": "15003",
+      "title": "SCHOLAR LEG2 A5 LEGEND NOTEBOOK - CHARCOAL",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3652,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 450,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 195,
+      "sku": "15004",
+      "base_sku": "15004",
+      "title": "SCHOLAR LEG2 A5 LEGEND NOTEBOOK - COFFEE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3653,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 450,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 196,
+      "sku": "15005",
+      "base_sku": "15005",
+      "title": "SCHOLAR LEG2 A5 LEGEND NOTEBOOK - MIDNIGHT BLUE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3655,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 450,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 197,
+      "sku": "15006",
+      "base_sku": "15006",
+      "title": "SCHOLAR LEG2 A5 LEGEND NOTEBOOK - TAN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3654,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 450,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 198,
+      "sku": "15011",
+      "base_sku": "15011",
+      "title": "SCHOLAR LEG3 B5 LEGEND NOTEBOOK - MIDNIGHT BLUE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3659,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 199,
+      "sku": "15012",
+      "base_sku": "15012",
+      "title": "SCHOLAR LEG3 B5 LEGEND NOTEBOOK - TAN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3658,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 201,
+      "sku": "15071",
+      "base_sku": "15071",
+      "title": "SCHOLAR VIV2 A5 VIVANT NOTEBOOK - BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3755,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 1375,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 202,
+      "sku": "15072",
+      "base_sku": "15072",
+      "title": "SCHOLAR VIV2 A5 VIVANT NOTEBOOK - GREY",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3756,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 1375,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 203,
+      "sku": "15009",
+      "base_sku": "15009",
+      "title": "SCHOLAR LEG3 B5 LEGEND NOTEBOOK - CHARCOAL",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3656,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 204,
+      "sku": "15010",
+      "base_sku": "15010",
+      "title": "SCHOLAR LEG3 B5 LEGEND NOTEBOOK - COFFEE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3657,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 206,
+      "sku": "15036",
+      "base_sku": "15036",
+      "title": "SCHOLAR SGN2 A5 SIGNOR NOTEBOOK WITH PEN - BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3720,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 209,
+      "sku": "15038",
+      "base_sku": "15038",
+      "title": "SCHOLAR SGN2 A5 SIGNOR NOTEBOOK WITH PEN - MAROON",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3722,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 210,
+      "sku": "15039",
+      "base_sku": "15039",
+      "title": "SCHOLAR SGN2 A5 SIGNOR NOTEBOOK WITH PEN - TAN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 14,
+      "busy_rows": [
+        {
+          "busy_row": 3723,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 14
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 211,
+      "sku": "15091",
+      "base_sku": "15091",
+      "title": "SCHOLAR CRC2 A5 CROCO NOTEBOOK - BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3598,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 359,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 212,
+      "sku": "15092",
+      "base_sku": "15092",
+      "title": "SCHOLAR CRC2 A5 CROCO NOTEBOOK - GREY",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3599,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 359,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 213,
+      "sku": "15073",
+      "base_sku": "15073",
+      "title": "SCHOLAR VIV2 A5 VIVANT NOTEBOOK - MAROON",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3757,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 1375,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 214,
+      "sku": "15074",
+      "base_sku": "15074",
+      "title": "SCHOLAR VIV2 A5 VIVANT NOTEBOOK - TAN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3758,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 1375,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 218,
+      "sku": "15153",
+      "base_sku": "15153",
+      "title": "SCHOLAR RGN3 B5 REGENT NOTEBOOK 192PAGES - BLUE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3716,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 219,
+      "sku": "15093",
+      "base_sku": "15093",
+      "title": "SCHOLAR CRC2 A5 CROCO NOTEBOOK - TAN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3600,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 359,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 220,
+      "sku": "15269",
+      "base_sku": "15269",
+      "title": "SCHOLAR 365 A5 PLANNER JOURNAL NOTEBOOK 416PAGES - BROWN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3552,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 799,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 221,
+      "sku": "15270",
+      "base_sku": "15270",
+      "title": "SCHOLAR 365 A5 PLANNER JOURNAL NOTEBOOK 416PAGES - GREY",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3553,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 799,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 222,
+      "sku": "15284",
+      "base_sku": "15284",
+      "title": "SCHOLAR VLR2 A5 VELOUR NOTEBOOK 192 PAGES - GREY",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3760,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 599,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 224,
+      "sku": "15154",
+      "base_sku": "15154",
+      "title": "SCHOLAR RGN3 B5 REGENT NOTEBOOK 192PAGES - GREY",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3717,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 225,
+      "sku": "15155",
+      "base_sku": "15155",
+      "title": "SCHOLAR RGN3 B5 REGENT NOTEBOOK 192PAGES - KHAKHI",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3718,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 227,
+      "sku": "15271",
+      "base_sku": "15271",
+      "title": "SCHOLAR 365 A5 PLANNER JOURNAL NOTEBOOK 416PAGES - PLUM",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 11,
+      "busy_rows": [
+        {
+          "busy_row": 3554,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 799,
+          "cl_qty": 11
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 228,
+      "sku": "15272",
+      "base_sku": "15272",
+      "title": "SCHOLAR 365 A5 PLANNER JOURNAL NOTEBOOK 416PAGES - TEAL",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 11,
+      "busy_rows": [
+        {
+          "busy_row": 3555,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 799,
+          "cl_qty": 11
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 229,
+      "sku": "15283",
+      "base_sku": "15283",
+      "title": "SCHOLAR VLR2 A5 VELOUR NOTEBOOK 192 PAGES - BROWN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3759,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 599,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 230,
+      "sku": "15285",
+      "base_sku": "15285",
+      "title": "SCHOLAR VLR2 A5 VELOUR NOTEBOOK 192 PAGES - PLUM",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3761,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 599,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 231,
+      "sku": "15286",
+      "base_sku": "15286",
+      "title": "SCHOLAR VLR2 A5 VELOUR NOTEBOOK 192 PAGES - TEAL",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3762,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 599,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    }
+  ],
+  "rows": [
+    {
+      "row": 2,
+      "sku": "30052",
+      "base_sku": "30052",
+      "title": "SCHOLAR 601B A5 ECO DIARY BLUE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3556,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 3,
+      "sku": "30053",
+      "base_sku": "30053",
+      "title": "SCHOLAR 601BR A5 ECO DIARY BROWN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3557,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 4,
+      "sku": "30054",
+      "base_sku": "30054",
+      "title": "SCHOLAR 601G A5 ECO DIARY GREEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3558,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 5,
+      "sku": "30059",
+      "base_sku": "30059",
+      "title": "SCHOLAR 603B A5 ELURE DIARY BLUE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3559,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 6,
+      "sku": "30058",
+      "base_sku": "30058",
+      "title": "SCHOLAR 603BK A5 ELURE DIARY BLACK",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3560,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 7,
+      "sku": "8673",
+      "base_sku": "8673",
+      "title": "SCHOLAR WPL4V A4 WEEKLY PLANNER VERTICAL 50SHEET",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3782,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 280,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 8,
+      "sku": "21244",
+      "base_sku": "21244",
+      "title": "SCHOLAR WCW9 WATER COLOUR SHEET 300GSM",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3772,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 9,
+      "sku": "30067",
+      "base_sku": "30067",
+      "title": "SCHOLAR VB6 BIG VISITOR BOOK METTALIC",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3752,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 570,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 10,
+      "sku": "30088",
+      "base_sku": "30088",
+      "title": "SCHOLAR PSM2GY PRISMA NOTEBOOK A5 GREY",
+      "variant": "",
+      "old_qty": 41,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 41,
+      "busy_rows": [
+        {
+          "busy_row": 3701,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 299,
+          "cl_qty": 41
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 11,
+      "sku": "21240",
+      "base_sku": "21240",
+      "title": "SCHOLAR KLS4 A4 KRAFT LOOSE SHEETS",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3637,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 12,
+      "sku": "30066",
+      "base_sku": "30066",
+      "title": "SCHOLAR VB2 BIG VISITOR BOOK PREMIUM",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3751,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 1000,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 13,
+      "sku": "21243",
+      "base_sku": "21243",
+      "title": "SCHOLAR PSM2T PRISMA NOTEBOOK A5 TAN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 60,
+      "busy_rows": [
+        {
+          "busy_row": 3703,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 319,
+          "cl_qty": 60
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 14,
+      "sku": "30087",
+      "base_sku": "30087",
+      "title": "SCHOLAR PSM2B PRISMA NOTEBOOK A5 BLUE",
+      "variant": "",
+      "old_qty": 41,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 42,
+      "busy_rows": [
+        {
+          "busy_row": 3700,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 299,
+          "cl_qty": 42
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 15,
+      "sku": "21242",
+      "base_sku": "21242",
+      "title": "SCHOLAR PN2 A5 PREMIUM PLANNER JOURNAL",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3690,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 849,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 16,
+      "sku": "21241",
+      "base_sku": "21241",
+      "title": "SCHOLAR NVB3 NOVA NOTEBOOK B5",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3678,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 420,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 17,
+      "sku": "30089",
+      "base_sku": "30089",
+      "title": "SCHOLAR LNP7 LUNA UNDATED PLANNER",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3660,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 1499,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 18,
+      "sku": "21237",
+      "base_sku": "21237",
+      "title": "SCHOLAR ACRL3 A3 ACRLIC LOSSE SHEETS",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3578,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 250,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 19,
+      "sku": "30068",
+      "base_sku": "30068",
+      "title": "SCHOLAR DSB2 A5 DECOR SKETCH BOOK",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3608,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 399,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 20,
+      "sku": "21239",
+      "base_sku": "21239",
+      "title": "SCHOLAR DC2 JUMBO DESK CALENDER REFILL",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3604,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 140,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 21,
+      "sku": "21238",
+      "base_sku": "21238",
+      "title": "SCHOLAR DC1 SMALL DESK CALENDAR REFILL",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3603,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 22,
+      "sku": "30065",
+      "base_sku": "30065",
+      "title": "SCHOLAR 803P B5 ELURE DIARY PLUM",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3571,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 500,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 23,
+      "sku": "30064",
+      "base_sku": "30064",
+      "title": "SCHOLAR 803G B5 ELURE DIARY GREEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3570,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 500,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 24,
+      "sku": "30062",
+      "base_sku": "30062",
+      "title": "SCHOLAR 803BK B5 ELURE DIARY BLACK",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3569,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 500,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 25,
+      "sku": "30051",
+      "base_sku": "30051",
+      "title": "SCHOLAR 808T B5 CHANCELLOR DIARY TAN",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3572,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 825,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 26,
+      "sku": "30063",
+      "base_sku": "30063",
+      "title": "SCHOLAR 803B B5 ELURE DIARY BLUE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3568,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 500,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 27,
+      "sku": "30057",
+      "base_sku": "30057",
+      "title": "SCHOLAR 801G B5 ECO DIARY GREEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3567,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 450,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 28,
+      "sku": "30056",
+      "base_sku": "30056",
+      "title": "SCHOLAR 801BR B5 ECO DIARY BROWN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3566,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 450,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 29,
+      "sku": "30055",
+      "base_sku": "30055",
+      "title": "SCHOLAR 801B B5 ECO DIARY BLUE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3565,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 450,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 30,
+      "sku": "30050",
+      "base_sku": "30050",
+      "title": "SCHOLAR 608T A5 CHANCELLOR DIARY TAN",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3563,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 625,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 31,
+      "sku": "30061",
+      "base_sku": "30061",
+      "title": "SCHOLAR 603P A5 ELURE DIARY PLUM",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3562,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 32,
+      "sku": "30060",
+      "base_sku": "30060",
+      "title": "SCHOLAR 603G A5 ELURE DIARY GREEN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3561,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 33,
+      "sku": "8721",
+      "base_sku": "8721",
+      "title": "SCHOLAR EXB-W STOIC WOODEN EXAM BOARD",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3617,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 155,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 34,
+      "sku": "8722",
+      "base_sku": "8722",
+      "title": "SCHOLAR KNB1 A6 PARYAVARAN NOTEBOOK (RULED) 80PGS",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 23,
+      "busy_rows": [
+        {
+          "busy_row": 3638,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 23
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 35,
+      "sku": "8724",
+      "base_sku": "8724",
+      "title": "SCHOLAR ZNB2 A5 ZAFIRO PREMIUM NOTEBOOK 120GSM",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3785,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 349,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 36,
+      "sku": "8738",
+      "base_sku": "8738",
+      "title": "SCHOLAR APL2 A5 APOLLO NOTEBOOK 192 PAGES - BLACK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3587,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 480,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 37,
+      "sku": "8725",
+      "base_sku": "8725",
+      "title": "SCHOLAR TTDP A6 THINGS TO DO PAD PURPLE 50SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3745,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 38,
+      "sku": "8727",
+      "base_sku": "8727",
+      "title": "SCHOLAR TTS1 A6 THINGS TO DO SPIRAL PAD 50SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3746,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 39,
+      "sku": "8732",
+      "base_sku": "8732",
+      "title": "SCHOLAR PNB2 A5 PARYAVARAN NOTEBOOK",
+      "variant": "",
+      "old_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3691,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 199,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 40,
+      "sku": "8746",
+      "base_sku": "8746",
+      "title": "SCHOLAR PSN2 A5 PARYAVARAN NOTEBOOK 1SUBJECT 160PAGES",
+      "variant": "",
+      "old_qty": 16,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 17,
+      "busy_rows": [
+        {
+          "busy_row": 3704,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 119,
+          "cl_qty": 17
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 41,
+      "sku": "8764",
+      "base_sku": "8764",
+      "title": "SCHOLAR RCY4 A4 RECYCLED PAPER SKETCH BOOK 160GSM 25SHEET",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3712,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 360,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 42,
+      "sku": "8773",
+      "base_sku": "8773",
+      "title": "SCHOLAR WJ2 A5 WATER COLOR JOURNAL BOOK 300GSM 28SHEET",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3777,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 650,
+          "cl_qty": 6
+        },
+        {
+          "busy_row": 3778,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 43,
+      "sku": "8756",
+      "base_sku": "8756",
+      "title": "SCHOLAR LPR2 A5 LUCID PREMIUM NOTEBOOK 90GSM",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3661,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 299,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 44,
+      "sku": "8760",
+      "base_sku": "8760",
+      "title": "SCHOLAR KNB4 A4 PARYAVARAN KRAFT RULED NOTEBOOK",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3644,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 190,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 45,
+      "sku": "8762",
+      "base_sku": "8762",
+      "title": "SCHOLAR MI A4 MONTHLY PLANNER",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3670,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 250,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 46,
+      "sku": "8766",
+      "base_sku": "8766",
+      "title": "SCHOLAR CPLT9 BOOKMARK COLOR PAPRE SHEET 20SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3597,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 75,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 47,
+      "sku": "8767",
+      "base_sku": "8767",
+      "title": "SCHOLAR WCP2 A5 WATER COLOR PAD 300GSM 12SHEET",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3769,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 180,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 48,
+      "sku": "8770",
+      "base_sku": "8770",
+      "title": "SCHOLAR BLS4 A4 BLACK PAPER LOOSE DRAWING SHEET 170GSM 20SHEET",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3594,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 130,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 49,
+      "sku": "8775",
+      "base_sku": "8775",
+      "title": "SCHOLAR WJ1 A6 WATER COLOR JOURNAL BOOK 300GSM 28SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3776,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 50,
+      "sku": "8763",
+      "base_sku": "8763",
+      "title": "SCHOLAR EXB-S EXAM BOARD STUDENT",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3616,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 51,
+      "sku": "8768",
+      "base_sku": "8768",
+      "title": "SCHOLAR BRPL2 A5 BRISTOL BOARD LOOSE SHEET 300GSM 20SHEET",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3595,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 250,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 52,
+      "sku": "8769",
+      "base_sku": "8769",
+      "title": "SCHOLAR BRPL4 A4 BRISTOL BOARD SHEET 300GSM 10 SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3596,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 250,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 53,
+      "sku": "8771",
+      "base_sku": "8771",
+      "title": "SCHOLAR MMW4 A4 MIXED MEDIA SKETCH BOOK 250GSM 15SHEET",
+      "variant": "",
+      "old_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3672,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 54,
+      "sku": "8776",
+      "base_sku": "8776",
+      "title": "SCHOLAR DSB1 A6 DECOR SKETCH BOOK 150GSM 56SHEET",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3607,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 239,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 55,
+      "sku": "8786",
+      "base_sku": "8786",
+      "title": "SCHOLAR QTR2 A5 QUATRO SKETCH BOOK MIXED TONED",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3706,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 56,
+      "sku": "8834",
+      "base_sku": "8834",
+      "title": "SCHOLAR PSN6 A5 5SUBJECT PARYAVARAN NOTEBOOK",
+      "variant": "",
+      "old_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3705,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 219,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 57,
+      "sku": "8840",
+      "base_sku": "8840",
+      "title": "SCHOLAR SLN2 A5 SELF LOVE RULED NOTEBOOK",
+      "variant": "",
+      "old_qty": 30,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 21,
+      "busy_rows": [
+        {
+          "busy_row": 3728,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 21
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 58,
+      "sku": "8833",
+      "base_sku": "8833",
+      "title": "SCHOLAR VB9 BIG VISITOR BOOK",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3754,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 725,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 59,
+      "sku": "8839",
+      "base_sku": "8839",
+      "title": "SCHOLAR SLN2P A5 SELF LOVE PLAIN NOTEBOOK",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 22,
+      "busy_rows": [
+        {
+          "busy_row": 3729,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 110,
+          "cl_qty": 22
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 60,
+      "sku": "8841",
+      "base_sku": "8841",
+      "title": "SCHOLAR SLN1 A6 SELF LOVE RULED NOTEBOOK",
+      "variant": "",
+      "old_qty": 21,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 21,
+      "busy_rows": [
+        {
+          "busy_row": 3727,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 21
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 61,
+      "sku": "8886",
+      "base_sku": "8886",
+      "title": "SCHOLAR WJW3 A3 WATER COLOR COLD PRESS SHEET DRAWING SHEET 300GSM 12SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3779,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 800,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 62,
+      "sku": "8887",
+      "base_sku": "8887",
+      "title": "SCHOLAR WCP3 A3 WATER COLOR DRAWING PAD 300GSM 12SHEET",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3770,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 710,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 63,
+      "sku": "8888",
+      "base_sku": "8888",
+      "title": "SCHOLAR NXN1 A6 METTALIC NOTEBOOK NOTES EXPLORER",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3679,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 129,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 64,
+      "sku": "8897",
+      "base_sku": "8897",
+      "title": "SCHOLAR MSN1 A6 METALLIC NOTEBOOK MOSAIC",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3675,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 129,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 65,
+      "sku": "8899",
+      "base_sku": "8899",
+      "title": "SCHOLAR RBN1CM A6 CREA NOTEBOOK COLOURMIX",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3708,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 280,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 66,
+      "sku": "8903",
+      "base_sku": "8903",
+      "title": "SCHOLAR JPN2 PREMIUM PLANNER JOURNAL BOOK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3633,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 849,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 67,
+      "sku": "8898",
+      "base_sku": "8898",
+      "title": "SCHOLAR MSN2 A5 METALLIC NOTEBOOK MOSAIC",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 22,
+      "busy_rows": [
+        {
+          "busy_row": 3676,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 209,
+          "cl_qty": 22
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 68,
+      "sku": "8900",
+      "base_sku": "8900",
+      "title": "SCHOLAR RBN2CM A5 CREA NOTEBOOK COLOURMIX",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 9,
+      "busy_rows": [
+        {
+          "busy_row": 3709,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 480,
+          "cl_qty": 9
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 69,
+      "sku": "8902",
+      "base_sku": "8902",
+      "title": "SCHOLAR VB7 SMALL VISITOR BOOK METTALIC",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3753,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 390,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 70,
+      "sku": "8904",
+      "base_sku": "8904",
+      "title": "SCHOLAR TP2 MEDIUM TABLE PLANNER REFILL",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3739,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 175,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 71,
+      "sku": "8916",
+      "base_sku": "8916",
+      "title": "SCHOLAR TP3 BIG TABLE PLANNER",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3740,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 590,
+          "cl_qty": 12
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 72,
+      "sku": "8946",
+      "base_sku": "8946",
+      "title": "SCHOLAR TP3 TABLE PLANNER BIG REFILL",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 16,
+      "busy_rows": [
+        {
+          "busy_row": 3741,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 250,
+          "cl_qty": 16
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 73,
+      "sku": "8948",
+      "base_sku": "8948",
+      "title": "SCHOLAR WCP4 A4 WATER COLOR COLD PRESS DRAWING PAD 300GSM 12SHEET",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3771,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 360,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 74,
+      "sku": "8953",
+      "base_sku": "8953",
+      "title": "SCHOLAR KNB2P A5 KRAFT PLAIN NOTEBOOK",
+      "variant": "",
+      "old_qty": 39,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 37,
+      "busy_rows": [
+        {
+          "busy_row": 3641,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 95,
+          "cl_qty": 37
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 75,
+      "sku": "8947",
+      "base_sku": "8947",
+      "title": "SCHOLAR TP2 MEDIUM TABLE PLANNER",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3738,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 330,
+          "cl_qty": 12
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 76,
+      "sku": "8952",
+      "base_sku": "8952",
+      "title": "SCHOLAR KNB2 A5 KRAFT RULED NOTEBOOK",
+      "variant": "",
+      "old_qty": 45,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3640,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 95,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 77,
+      "sku": "8984",
+      "base_sku": "8984",
+      "title": "SCHOLAR KNB1P A6 KRAFT PLAIN NOTEBOOK",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3639,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 12
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 78,
+      "sku": "8998",
+      "base_sku": "8998",
+      "title": "SCHOLAR HTWV A5 WEEKLY HABIT TRACKER VERTICAL 50SHEET",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3630,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 140,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 79,
+      "sku": "9009",
+      "base_sku": "9009",
+      "title": "SCHOLAR TTD2 B6 THINGS TO DO PAD",
+      "variant": "",
+      "old_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3742,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 60,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 80,
+      "sku": "9010",
+      "base_sku": "9010",
+      "title": "SCHOLAR CWP4 A4 CREANOTE NOTEPAD 80SHEET",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3602,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 499,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 81,
+      "sku": "8993",
+      "base_sku": "8993",
+      "title": "SCHOLAR 811 B5 LEGEND DAIRY",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3573,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 850,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 82,
+      "sku": "8995",
+      "base_sku": "8995",
+      "title": "SCHOLAR KNB3P B5 KRAFT PLAIN NOTEBOOK",
+      "variant": "",
+      "old_qty": 13,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3643,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 130,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 83,
+      "sku": "8996",
+      "base_sku": "8996",
+      "title": "SCHOLAR KNB4P A4 PARYAVARAN KRAFT PLAIN NOTEBOOK",
+      "variant": "",
+      "old_qty": 25,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3645,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 190,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 84,
+      "sku": "8997",
+      "base_sku": "8997",
+      "title": "SCHOLAR HTWH A5 WEEKLY HABIT TRACKER HORIZONTAL 50SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3629,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 140,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 85,
+      "sku": "9018",
+      "base_sku": "9018",
+      "title": "SCHOLAR UBS1 A6 URBANA SKETCH BOOK 128PAGES",
+      "variant": "",
+      "old_qty": 11,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3748,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 86,
+      "sku": "9019",
+      "base_sku": "9019",
+      "title": "SCHOLAR UBS2 A5 URBANA SKETCH BOOK 128PAGES",
+      "variant": "",
+      "old_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 22,
+      "busy_rows": [
+        {
+          "busy_row": 3749,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 120,
+          "cl_qty": 22
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 87,
+      "sku": "9007",
+      "base_sku": "9007",
+      "title": "SCHOLAR RWC8 WATERCOLOR MIXED MEDIA PAD ROUND",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3719,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 500,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 88,
+      "sku": "9012",
+      "base_sku": "9012",
+      "title": "SCHOLAR CWP2 A5 CREANOTE NOTEPAD 80SHEET",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3601,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 249,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 89,
+      "sku": "9032",
+      "base_sku": "9032",
+      "title": "SCHOLAR UBS4 A4 URBANA SKETCH BOOK 128PAGES",
+      "variant": "",
+      "old_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3750,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 220,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 90,
+      "sku": "9037",
+      "base_sku": "9037",
+      "title": "SCHOLAR RCJ4 A4 100% RECYCLED HB SKETCHBOOK",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3710,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 799,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 91,
+      "sku": "9090",
+      "base_sku": "9090",
+      "title": "SCHOLAR EXB-D EXAM BOARD DRAWING",
+      "variant": "",
+      "old_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 9,
+      "busy_rows": [
+        {
+          "busy_row": 3615,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 180,
+          "cl_qty": 9
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 92,
+      "sku": "9124",
+      "base_sku": "9124",
+      "title": "SCHOLAR SLB13 A4 EXERCISE NOTEBOOK 140PAGES",
+      "variant": "",
+      "old_qty": 102,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 110,
+      "busy_rows": [
+        {
+          "busy_row": 3724,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 110
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 93,
+      "sku": "9105",
+      "base_sku": "9105",
+      "title": "SCHOLAR SLB17 A4 EXERCISE NOTEBOOK 256PAGES",
+      "variant": "",
+      "old_qty": 76,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 77,
+      "busy_rows": [
+        {
+          "busy_row": 3726,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 120,
+          "cl_qty": 77
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 94,
+      "sku": "9123",
+      "base_sku": "9123",
+      "title": "SCHOLAR SLB15 A4 EXERCISE NOTEBOOK 172PAGES",
+      "variant": "",
+      "old_qty": 122,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 122,
+      "busy_rows": [
+        {
+          "busy_row": 3725,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 80,
+          "cl_qty": 122
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 95,
+      "sku": "9524",
+      "base_sku": "9524",
+      "title": "SCHOLAR HTMH A4 MONTHLY HABIT TRACKER 24SHEET HORIZONTAL",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3627,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 280,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 96,
+      "sku": "9521",
+      "base_sku": "9521",
+      "title": "SCHOLAR PSJ6 SQUARE PARYAVARAN SKETCH BOOK",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3699,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 300,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 97,
+      "sku": "9523",
+      "base_sku": "9523",
+      "title": "SCHOLAR ACR2 A5 ACRYLIC PAINTING PAD 360GSM 10SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3574,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 190,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 98,
+      "sku": "9525",
+      "base_sku": "9525",
+      "title": "SCHOLAR ACR4 A4 ACRYLIC PAINTING PAD 360GSM 10SHEET",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3576,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 350,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 99,
+      "sku": "9526",
+      "base_sku": "9526",
+      "title": "SCHOLAR ACRL2 A5 ACRYLIC LOOSE SHEET 20SHEET 360GSM",
+      "variant": "",
+      "old_qty": 11,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3577,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 250,
+          "cl_qty": 12
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 100,
+      "sku": "9527",
+      "base_sku": "9527",
+      "title": "SCHOLAR MEL4H A4 MEAL PLANNER HORIZONTAL 50SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3668,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 280,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 101,
+      "sku": "9529",
+      "base_sku": "9529",
+      "title": "SCHOLAR AP1 A4 ARTIST PAD NOVICE 130GSM 25SHEETS",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3584,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 120,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 102,
+      "sku": "9530",
+      "base_sku": "9530",
+      "title": "SCHOLAR APA3 A3 ARTIST PAD ADVANCE 170GSM 40SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3585,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 370,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 103,
+      "sku": "9531",
+      "base_sku": "9531",
+      "title": "SCHOLAR APA4 A4 ARTIST PAD ADVANCE 170GSM 40SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3586,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 210,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 104,
+      "sku": "9533",
+      "base_sku": "9533",
+      "title": "SCHOLAR MEL4V A4 MEAL PLANNER VERTICAL 50SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3669,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 280,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 105,
+      "sku": "9528",
+      "base_sku": "9528",
+      "title": "SCHOLAR ACRL4 A4 ACRYLIC LOOSE SHEET 360GSM 10SHEET",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3579,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 250,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 106,
+      "sku": "9532",
+      "base_sku": "9532",
+      "title": "SCHOLAR APX4 A4 ARTIST PAD EXPERT 220GSM 30SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3592,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 210,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 107,
+      "sku": "9535",
+      "base_sku": "9535",
+      "title": "SCHOLAR QTR4 A4 QUATRO SKETCH BOOK 60SHEET",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3707,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 650,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 108,
+      "sku": "9536",
+      "base_sku": "9536",
+      "title": "SCHOLAR DPL2 A5 DAILY PLANNER 80SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3605,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 140,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 109,
+      "sku": "9537",
+      "base_sku": "9537",
+      "title": "SCHOLAR DPL4 A4 DAILY PLANNER 80 SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3606,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 280,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 110,
+      "sku": "9539",
+      "base_sku": "9539",
+      "title": "SCHOLAR SSP9 A7 PRISM SPIRAL PAD",
+      "variant": "",
+      "old_qty": 151,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 143,
+      "busy_rows": [
+        {
+          "busy_row": 3734,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 32,
+          "cl_qty": 143
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 111,
+      "sku": "9543",
+      "base_sku": "9543",
+      "title": "SCHOLAR FLS4 A4 BEIGE PAPER LOOSE SHEET 160GSM 20SHEET",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3621,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 160,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 112,
+      "sku": "9538",
+      "base_sku": "9538",
+      "title": "SCHOLAR ATR2 A5 TRAVEL JOURNAL ARTCOVER NOTEBOOK",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3593,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 349,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 113,
+      "sku": "9540",
+      "base_sku": "9540",
+      "title": "SCHOLAR TTS9 A7 THINGS TO DO SPIRAL PAD 50SHEET",
+      "variant": "",
+      "old_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3747,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 45,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 114,
+      "sku": "9541",
+      "base_sku": "9541",
+      "title": "SCHOLAR FLS2 A5 BEIGE PAPER LOOSE SHEET 160GSM 20SHEET",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3619,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 90,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 115,
+      "sku": "9542",
+      "base_sku": "9542",
+      "title": "SCHOLAR FLS3 A3 BEIGE PAPER LOOSE SHEET 160GSM 20SHEET",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3620,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 320,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 116,
+      "sku": "9548",
+      "base_sku": "9548",
+      "title": "SCHOLAR GSP4 A4 GRAVEL SKETCH PAD GREY PAPER",
+      "variant": "",
+      "old_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 9,
+      "busy_rows": [
+        {
+          "busy_row": 3626,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 9
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 117,
+      "sku": "9549",
+      "base_sku": "9549",
+      "title": "SCHOLAR HTMV A4 MONTHLY HABIT TRACKER 24SHEET VERTICAL",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3628,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 280,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 118,
+      "sku": "9553",
+      "base_sku": "9553",
+      "title": "SCHOLAR AGR2 A5 GRATITUDE JOURNAL ARTCOVER NOTEBOOK",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3581,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 349,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 119,
+      "sku": "9545",
+      "base_sku": "9545",
+      "title": "SCHOLAR EPL4 A4 EXERCISE PLANNER 50SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3609,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 280,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 120,
+      "sku": "9546",
+      "base_sku": "9546",
+      "title": "SCHOLAR GLS4 A4 GREY PAPER LOOSE DRAWING SHEET 170GSM 20SHEET",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3624,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 160,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 121,
+      "sku": "9547",
+      "base_sku": "9547",
+      "title": "SCHOLAR GSP2 A5 GRAVEL SKETCH PAD",
+      "variant": "",
+      "old_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3625,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 240,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 122,
+      "sku": "9550",
+      "base_sku": "9550",
+      "title": "SCHOLAR KLS2 A5 KRAFT PAPRE LOOSE SHEET 20SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3635,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 50,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 123,
+      "sku": "9551",
+      "base_sku": "9551",
+      "title": "SCHOLAR KLS3 A3 KRAFT PAPER LOOSE DRAWING SHEET 170GSM 20SHEET",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3636,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 220,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 124,
+      "sku": "9556",
+      "base_sku": "9556",
+      "title": "SCHOLAR KNN2 A5 JAZZ NOTEBOOK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3646,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 170,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 125,
+      "sku": "9557",
+      "base_sku": "9557",
+      "title": "SCHOLAR KSP2 A5 KRAFT SKETCH PAD DRAWING BOOK 180GSM 40SHEET",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3647,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 160,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 126,
+      "sku": "9552",
+      "base_sku": "9552",
+      "title": "SCHOLAR ACR3 A3 ACRYLIC PAINTING PAD 360GSM 10SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3575,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 127,
+      "sku": "9554",
+      "base_sku": "9554",
+      "title": "SCHOLAR KNB3 B5 PARYAVARAN KRAFT NOTEBOOK RULED",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3642,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 130,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 128,
+      "sku": "9555",
+      "base_sku": "9555",
+      "title": "SCHOLAR APN2 A5 PLANNER JOURNAL ARTCOVER NOTEBOOK",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3591,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 349,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 129,
+      "sku": "9562",
+      "base_sku": "9562",
+      "title": "SCHOLAR MPL4V A4 MONTHLY PLANNER VERTICAL 24SHEET",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3674,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 280,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 130,
+      "sku": "9563",
+      "base_sku": "9563",
+      "title": "SCHOLAR NVB2-C A5 NOVA NOTEBOOK BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3677,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 330,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 131,
+      "sku": "9564",
+      "base_sku": "9564",
+      "title": "SCHOLAR AGL2 A5 GOALS JOURNAL ARTCOVER NOTEBOOK",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3580,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 349,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 132,
+      "sku": "9565",
+      "base_sku": "9565",
+      "title": "SCHOLAR PSB1 A6 PARYAVRAN SKETCH DRAWING BOOK 50SHEET",
+      "variant": "",
+      "old_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3695,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 133,
+      "sku": "9566",
+      "base_sku": "9566",
+      "title": "SCHOLAR PSB2 A5 PARYAVRAN SKETCH DRAWING BOOK 50SHEET 150GSM",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3696,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 150,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 134,
+      "sku": "9558",
+      "base_sku": "9558",
+      "title": "SCHOLAR KSP4 A4  KRAFT SKETCH PAD DRAWING BOOK",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3648,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 300,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 135,
+      "sku": "9560",
+      "base_sku": "9560",
+      "title": "SCHOLAR MML4 A4 MIXED MEDIA LOOSE SHEET 250GSM 10 SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3671,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 180,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 136,
+      "sku": "9561",
+      "base_sku": "9561",
+      "title": "SCHOLAR MPL4H A4 MONTHLY PLANNER HORIZONTAL",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3673,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 250,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 137,
+      "sku": "9568",
+      "base_sku": "9568",
+      "title": "SCHOLAR PSB4 A4 PARYAVRAN SKETCH DRAWING BOOK 150GSM 50SHEET",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3698,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 210,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 138,
+      "sku": "9572",
+      "base_sku": "9572",
+      "title": "SCHOLAR SNB2-I A5 ZAFIRO NOTEBOOK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3730,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 210,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 139,
+      "sku": "9573",
+      "base_sku": "9573",
+      "title": "SCHOLAR JGR2 A5 PREMIUM GRATITUDE JOURNAL NOTEBOOK+PEN",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3632,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 849,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 140,
+      "sku": "9574",
+      "base_sku": "9574",
+      "title": "SCHOLAR SPL4 A4 SKETCH LOOSE DRAWING SHEET 130GSM 50SHEETS",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3731,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 130,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 141,
+      "sku": "9567",
+      "base_sku": "9567",
+      "title": "SCHOLAR PSB3 A3 PARYAVRAN SKETCH DRAWING BOOK",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3697,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 370,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 142,
+      "sku": "9569",
+      "base_sku": "9569",
+      "title": "SCHOLAR JGL2 A5 PREMIUM GOALS JOURNAL NOTEBOOK+PEN",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3631,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 849,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 143,
+      "sku": "9570",
+      "base_sku": "9570",
+      "title": "SCHOLAR PHP3 A3 WATERCOLOR HOTPRESS 100% COTTON DRAWING BOOK",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3688,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 1100,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 144,
+      "sku": "9571",
+      "base_sku": "9571",
+      "title": "SCHOLAR JTR2 A5 PREMIUM TRAVEL JOURNAL NOTEBOOK+PEN",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3634,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 849,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 145,
+      "sku": "9577",
+      "base_sku": "9577",
+      "title": "SCHOLAR TTD4 A5 THINGS TO DO PAD 50SHEET",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3743,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 85,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 146,
+      "sku": "9580",
+      "base_sku": "9580",
+      "title": "SCHOLAR WCL4 A4 WATER COLOR COLDPRESS LOOSE SHEET 300GSM 10SHEET",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3767,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 200,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 147,
+      "sku": "9581",
+      "base_sku": "9581",
+      "title": "SCHOLAR WHL2 A5 WATERCOLOR HOTPRESS LOOSE SHEET 20SHEET",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3773,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 200,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 148,
+      "sku": "9584",
+      "base_sku": "9584",
+      "title": "SCHOLAR WPL4H A4 WEEKLY PLANNER HORIZONTAL 50SHEET",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3781,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 280,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 149,
+      "sku": "9575",
+      "base_sku": "9575",
+      "title": "SCHOLAR SPL5 A4 SKETCH LOOSE DRAWING SHEET 150GSM 50SHEET",
+      "variant": "",
+      "old_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3732,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 150,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 150,
+      "sku": "9576",
+      "base_sku": "9576",
+      "title": "SCHOLAR SPL9 A4 SKETCH DRAWING SHEET 220GSM 30SHEET",
+      "variant": "",
+      "old_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3733,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 140,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 151,
+      "sku": "9578",
+      "base_sku": "9578",
+      "title": "SCHOLAR TTD5 A4 THINGS TO DO PAD 50SHEET",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3744,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 165,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 152,
+      "sku": "9579",
+      "base_sku": "9579",
+      "title": "SCHOLAR WP18 CLASSIC SQUARE PAD 80GSM 50SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3780,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 200,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 153,
+      "sku": "9582",
+      "base_sku": "9582",
+      "title": "SCHOLAR WHL3 A3 WATERCOLOR HOT PRESS PAPER 300GSM LOOSE SHEET 5SHEET",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3774,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 200,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 154,
+      "sku": "9583",
+      "base_sku": "9583",
+      "title": "SCHOLAR WHL4 A4 WATER COLOR HOT PRESS LOOSE SHEET 300GSM 10SHEET",
+      "variant": "",
+      "old_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 9,
+      "busy_rows": [
+        {
+          "busy_row": 3775,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 200,
+          "cl_qty": 9
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 155,
+      "sku": "9585",
+      "base_sku": "9585",
+      "title": "SCHOLAR WRL4 A4 WATER COLOR TORCHON LOOSE DRAWING SHEET 300GSM 10SHEET",
+      "variant": "",
+      "old_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 9,
+      "busy_rows": [
+        {
+          "busy_row": 3784,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 200,
+          "cl_qty": 9
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 156,
+      "sku": "10015",
+      "base_sku": "10015",
+      "title": "SCHOLAR WPLT A4 WEEKLY SCHEDULER 50SHEET",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3783,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 200,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 157,
+      "sku": "10002",
+      "base_sku": "10002",
+      "title": "SCHOLAR PHP4 A4 WATER COLOR HOT PRESS PAD 300GSM 12SHEET",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3689,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 158,
+      "sku": "9999",
+      "base_sku": "9999",
+      "title": "SCHOLAR PCP4 A4 WATER COLOR COLD PRESS PAD 300GSM 12SHEET",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3683,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 159,
+      "sku": "10003",
+      "base_sku": "10003",
+      "title": "SCHOLAR PRP4 A4 WATER COLOUR PAD ROUGH GRAIN 300GSM 12SHEET",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3694,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 160,
+      "sku": "10005",
+      "base_sku": "10005",
+      "title": "SCHOLAR AJW2 A5 NOIRE ADVANCE SKETCH BOOK 170GSM 48SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3582,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 290,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 161,
+      "sku": "10006",
+      "base_sku": "10006",
+      "title": "SCHOLAR AJW4 A4 NOIRE ADVANCE SKETCH BOOK 170GSM 48SHEET",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3583,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 500,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 162,
+      "sku": "10016",
+      "base_sku": "10016",
+      "title": "SCHOLAR RCY2 A5 RECYCLED PAPER SKETCH PAD DRAWING BOOK 160GSM 25SHEET",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3711,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 200,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 163,
+      "sku": "10025",
+      "base_sku": "10025",
+      "title": "SCHOLAR WCL9 WATER COLOR COLD PRESS SHEET 300GSM 10SHEET",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3768,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 70,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 164,
+      "sku": "14627",
+      "base_sku": "14627",
+      "title": "SCHOLAR VNB3 B5 VIBE NOTEBOOK 192 PAGES",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3765,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 230,
+          "cl_qty": 12
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 165,
+      "sku": "14620",
+      "base_sku": "14620",
+      "title": "SCHOLAR VNB1 A6 VIBE NOTEBOOK 192 PAGES",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3763,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 166,
+      "sku": "14625",
+      "base_sku": "14625",
+      "title": "SCHOLAR VNB2 A5 VIBE NOTEBOOK 192 PAGES",
+      "variant": "",
+      "old_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3764,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 160,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 167,
+      "sku": "14630",
+      "base_sku": "14630",
+      "title": "SCHOLAR VNB4 A4 VIBE NOTEBOOK 192 PAGES",
+      "variant": "",
+      "old_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 3766,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 330,
+          "cl_qty": 12
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 168,
+      "sku": "14839",
+      "base_sku": "14839",
+      "title": "SCHOLAR RGN2 A5 REGENT NOTEBOOK - BLUE",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3713,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 169,
+      "sku": "14840",
+      "base_sku": "14840",
+      "title": "SCHOLAR RGN2 A5 REGENT NOTEBOOK - GREY",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3714,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 170,
+      "sku": "14841",
+      "base_sku": "14841",
+      "title": "SCHOLAR RGN2 A5 REGENT NOTEBOOK - KHAKHI",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3715,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 171,
+      "sku": "14903",
+      "base_sku": "14903",
+      "title": "SCHOLAR ESN2 A5 ESSENTIAL NOTEBOOK 192PAGES - GREY",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3612,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 429,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 172,
+      "sku": "14869",
+      "base_sku": "14869",
+      "title": "SCHOLAR LUC2 A5 LUCID NOTEBOOK RULED - GREEN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3662,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 220,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 173,
+      "sku": "14870",
+      "base_sku": "14870",
+      "title": "SCHOLAR LUC2 A5 LUCID NOTEBOOK RULED - NAVY BLUE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3663,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 220,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 174,
+      "sku": "14871",
+      "base_sku": "14871",
+      "title": "SCHOLAR LUC2 A5 LUCID NOTEBOOK RULED - ORANGE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 14,
+      "busy_rows": [
+        {
+          "busy_row": 3664,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 220,
+          "cl_qty": 14
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 175,
+      "sku": "14886",
+      "base_sku": "14886",
+      "title": "SCHOLAR ORN2 A5 ORION NOTEBOOK - GREY",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3681,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 499,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 176,
+      "sku": "14905",
+      "base_sku": "14905",
+      "title": "SCHOLAR ESN2 A5 ESSENTIAL NOTEBOOK 192PAGES - TAN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3614,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 429,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 177,
+      "sku": "14907",
+      "base_sku": "14907",
+      "title": "SCHOLAR ESN2 A5 ESSENTIAL NOTEBOOK 192PAGES - RED",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3613,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 429,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 178,
+      "sku": "14885",
+      "base_sku": "14885",
+      "title": "SCHOLAR ORN2 A5 ORION NOTEBOOK - BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3680,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 499,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 179,
+      "sku": "14887",
+      "base_sku": "14887",
+      "title": "SCHOLAR ORN2 A5 ORION NOTEBOOK - TAN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3682,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 499,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 180,
+      "sku": "14889",
+      "base_sku": "14889",
+      "title": "SCHOLAR APL2 A5 APOLLO NOTEBOOK 192 PAGES - BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3588,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 480,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 181,
+      "sku": "14890",
+      "base_sku": "14890",
+      "title": "SCHOLAR APL2 A5 APOLLO NOTEBOOK 192 PAGES - GREY",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3589,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 480,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 182,
+      "sku": "14891",
+      "base_sku": "14891",
+      "title": "SCHOLAR APL2 A5 APOLLO NOTEBOOK 192 PAGES - TAN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3590,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 480,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 183,
+      "sku": "14901",
+      "base_sku": "14901",
+      "title": "SCHOLAR ESN2 A5 ESSENTIAL NOTEBOOK 192PAGES - BLACK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3610,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 429,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 184,
+      "sku": "14902",
+      "base_sku": "14902",
+      "title": "SCHOLAR ESN2 A5 ESSENTIAL NOTEBOOK 192PAGES - BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3611,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 429,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 185,
+      "sku": "14913",
+      "base_sku": "14913",
+      "title": "SCHOLAR LYN2 A5 LYNEA NOTEBOOK - BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3665,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 186,
+      "sku": "14914",
+      "base_sku": "14914",
+      "title": "SCHOLAR LYN2 A5 LYNEA NOTEBOOK - GREY",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3666,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 187,
+      "sku": "14915",
+      "base_sku": "14915",
+      "title": "SCHOLAR LYN2 A5 LYNEA NOTEBOOK - TAN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 3667,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 400,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 188,
+      "sku": "14931",
+      "base_sku": "14931",
+      "title": "SCHOLAR ZPR2 A5 ZIPPER NOTEBOOK - BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8,
+      "busy_rows": [
+        {
+          "busy_row": 3786,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 480,
+          "cl_qty": 8
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 189,
+      "sku": "14932",
+      "base_sku": "14932",
+      "title": "SCHOLAR ZPR2 A5 ZIPPER NOTEBOOK - GREY",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3787,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 480,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 190,
+      "sku": "14933",
+      "base_sku": "14933",
+      "title": "SCHOLAR ZPR2 A5 ZIPPER NOTEBOOK - TAN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3788,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 480,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 191,
+      "sku": "14996",
+      "base_sku": "14996",
+      "title": "SCHOLAR LEG1 A6 LEGEND NOTEBOOK - COFFEE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3649,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 300,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 192,
+      "sku": "14997",
+      "base_sku": "14997",
+      "title": "SCHOLAR LEG1 A6 LEGEND NOTEBOOK - MIDNIGHT BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3651,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 300,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 193,
+      "sku": "14998",
+      "base_sku": "14998",
+      "title": "SCHOLAR LEG1 A6 LEGEND NOTEBOOK - TAN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3650,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 300,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 194,
+      "sku": "15003",
+      "base_sku": "15003",
+      "title": "SCHOLAR LEG2 A5 LEGEND NOTEBOOK - CHARCOAL",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3652,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 450,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 195,
+      "sku": "15004",
+      "base_sku": "15004",
+      "title": "SCHOLAR LEG2 A5 LEGEND NOTEBOOK - COFFEE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3653,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 450,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 196,
+      "sku": "15005",
+      "base_sku": "15005",
+      "title": "SCHOLAR LEG2 A5 LEGEND NOTEBOOK - MIDNIGHT BLUE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3655,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 450,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 197,
+      "sku": "15006",
+      "base_sku": "15006",
+      "title": "SCHOLAR LEG2 A5 LEGEND NOTEBOOK - TAN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 3654,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 450,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 198,
+      "sku": "15011",
+      "base_sku": "15011",
+      "title": "SCHOLAR LEG3 B5 LEGEND NOTEBOOK - MIDNIGHT BLUE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3659,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 199,
+      "sku": "15012",
+      "base_sku": "15012",
+      "title": "SCHOLAR LEG3 B5 LEGEND NOTEBOOK - TAN",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3658,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 200,
+      "sku": "15024",
+      "base_sku": "15024",
+      "title": "SCHOLAR 304 SLIM WEEKLY DIARY - BLACK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3549,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 260,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 201,
+      "sku": "15071",
+      "base_sku": "15071",
+      "title": "SCHOLAR VIV2 A5 VIVANT NOTEBOOK - BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3755,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 1375,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 202,
+      "sku": "15072",
+      "base_sku": "15072",
+      "title": "SCHOLAR VIV2 A5 VIVANT NOTEBOOK - GREY",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3756,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 1375,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 203,
+      "sku": "15009",
+      "base_sku": "15009",
+      "title": "SCHOLAR LEG3 B5 LEGEND NOTEBOOK - CHARCOAL",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3656,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 204,
+      "sku": "15010",
+      "base_sku": "15010",
+      "title": "SCHOLAR LEG3 B5 LEGEND NOTEBOOK - COFFEE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3657,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 600,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 205,
+      "sku": "15025",
+      "base_sku": "15025",
+      "title": "SCHOLAR 304 SLIM WEEKLY DIARY - BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3550,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 260,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 206,
+      "sku": "15036",
+      "base_sku": "15036",
+      "title": "SCHOLAR SGN2 A5 SIGNOR NOTEBOOK WITH PEN - BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3720,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 207,
+      "sku": "15037",
+      "base_sku": "15037",
+      "title": "SCHOLAR SGN2 A5 SIGNOR NOTEBOOK WITH PEN - GREY",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3721,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 208,
+      "sku": "15026",
+      "base_sku": "15026",
+      "title": "SCHOLAR 304 SLIM WEEKLY DIARY - TAN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3551,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 260,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 209,
+      "sku": "15038",
+      "base_sku": "15038",
+      "title": "SCHOLAR SGN2 A5 SIGNOR NOTEBOOK WITH PEN - MAROON",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3722,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 210,
+      "sku": "15039",
+      "base_sku": "15039",
+      "title": "SCHOLAR SGN2 A5 SIGNOR NOTEBOOK WITH PEN - TAN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 14,
+      "busy_rows": [
+        {
+          "busy_row": 3723,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 550,
+          "cl_qty": 14
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 211,
+      "sku": "15091",
+      "base_sku": "15091",
+      "title": "SCHOLAR CRC2 A5 CROCO NOTEBOOK - BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 3598,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 359,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 212,
+      "sku": "15092",
+      "base_sku": "15092",
+      "title": "SCHOLAR CRC2 A5 CROCO NOTEBOOK - GREY",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 3599,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 359,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 213,
+      "sku": "15073",
+      "base_sku": "15073",
+      "title": "SCHOLAR VIV2 A5 VIVANT NOTEBOOK - MAROON",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3757,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 1375,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 214,
+      "sku": "15074",
+      "base_sku": "15074",
+      "title": "SCHOLAR VIV2 A5 VIVANT NOTEBOOK - TAN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3758,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 1375,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 215,
+      "sku": "15084",
+      "base_sku": "15084",
+      "title": "SCHOLAR TNB2 A5 TEAK NOTEBOOK - BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3735,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 219,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 216,
+      "sku": "15085",
+      "base_sku": "15085",
+      "title": "SCHOLAR TNB2 A5 TEAK NOTEBOOK - BROWN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3736,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 219,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 217,
+      "sku": "15086",
+      "base_sku": "15086",
+      "title": "SCHOLAR TNB2 A5 TEAK NOTEBOOK - GREEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3737,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 219,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 218,
+      "sku": "15153",
+      "base_sku": "15153",
+      "title": "SCHOLAR RGN3 B5 REGENT NOTEBOOK 192PAGES - BLUE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3716,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 219,
+      "sku": "15093",
+      "base_sku": "15093",
+      "title": "SCHOLAR CRC2 A5 CROCO NOTEBOOK - TAN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3600,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 359,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 220,
+      "sku": "15269",
+      "base_sku": "15269",
+      "title": "SCHOLAR 365 A5 PLANNER JOURNAL NOTEBOOK 416PAGES - BROWN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3552,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 799,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 221,
+      "sku": "15270",
+      "base_sku": "15270",
+      "title": "SCHOLAR 365 A5 PLANNER JOURNAL NOTEBOOK 416PAGES - GREY",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 3553,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 799,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 222,
+      "sku": "15284",
+      "base_sku": "15284",
+      "title": "SCHOLAR VLR2 A5 VELOUR NOTEBOOK 192 PAGES - GREY",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3760,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 599,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 223,
+      "sku": "15120",
+      "base_sku": "15120",
+      "title": "SCHOLAR 611 A5 LEGEND DIARY - GREY",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3564,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 650,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 224,
+      "sku": "15154",
+      "base_sku": "15154",
+      "title": "SCHOLAR RGN3 B5 REGENT NOTEBOOK 192PAGES - GREY",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3717,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 225,
+      "sku": "15155",
+      "base_sku": "15155",
+      "title": "SCHOLAR RGN3 B5 REGENT NOTEBOOK 192PAGES - KHAKHI",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 3718,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 226,
+      "sku": "15245",
+      "base_sku": "15245",
+      "title": "SCHOLAR FLO2 A5 FOLIO NOTEBOOK 192PAGES - GREY",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 3618,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 700,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 227,
+      "sku": "15271",
+      "base_sku": "15271",
+      "title": "SCHOLAR 365 A5 PLANNER JOURNAL NOTEBOOK 416PAGES - PLUM",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 11,
+      "busy_rows": [
+        {
+          "busy_row": 3554,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 799,
+          "cl_qty": 11
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 228,
+      "sku": "15272",
+      "base_sku": "15272",
+      "title": "SCHOLAR 365 A5 PLANNER JOURNAL NOTEBOOK 416PAGES - TEAL",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 11,
+      "busy_rows": [
+        {
+          "busy_row": 3555,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 799,
+          "cl_qty": 11
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 229,
+      "sku": "15283",
+      "base_sku": "15283",
+      "title": "SCHOLAR VLR2 A5 VELOUR NOTEBOOK 192 PAGES - BROWN",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 3759,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 599,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 230,
+      "sku": "15285",
+      "base_sku": "15285",
+      "title": "SCHOLAR VLR2 A5 VELOUR NOTEBOOK 192 PAGES - PLUM",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3761,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 599,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 231,
+      "sku": "15286",
+      "base_sku": "15286",
+      "title": "SCHOLAR VLR2 A5 VELOUR NOTEBOOK 192 PAGES - TEAL",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 3762,
+          "item_group": "SCHOLAR",
+          "item_name": "",
+          "mrp": 599,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    }
+  ]
+}

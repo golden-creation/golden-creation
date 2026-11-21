@@ -1,0 +1,2801 @@
+{
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (43).xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_planfix_20260831\\planfix products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\planfix products - Updated Website Stock.xlsx",
+  "status_counts": {
+    "No Busy Match": 17,
+    "Matched": 154
+  },
+  "changed_rows": 125,
+  "rows": [
+    {
+      "row": 2,
+      "sku": "8618",
+      "title": "LEVIN E4 RULED NOTES 3X4 100SHEETS",
+      "brand": "Planfix",
+      "old_qty": 10,
+      "new_qty": 10,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 3,
+      "sku": "8602",
+      "title": "LEVIN E3 RULED NOTES 3X3 100SHEETS",
+      "brand": "Planfix",
+      "old_qty": 10,
+      "new_qty": 10,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 4,
+      "sku": "8645",
+      "title": "LEVIN E5 RULED NOTES 3X5 100SHEETS",
+      "brand": "Planfix",
+      "old_qty": 10,
+      "new_qty": 10,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 5,
+      "sku": "8653",
+      "title": "PLANFIX 22057 STICKY NOTES FLAGS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2869,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 22057 STICKY PAD 102",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "sku": "8652",
+      "title": "PLANFIX 22067 STICKY PAD FLAGS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2878,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 22067 STICKY PAD 80",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "sku": "8661",
+      "title": "PLANFIX 22056 STICKY NOTES FLAGS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2868,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 22056 STICKY PAD 102",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "sku": "8663",
+      "title": "PLANFIX 22042 STICKY NOTES FLAG",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": -2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2863,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 22042 STICKY PAD 110",
+          "cl_qty": -2
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "sku": "8678",
+      "title": "PLANFIX 22250 STICKY NOTES FLAG",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 10,
+      "sku": "8665",
+      "title": "PLANFIX 22041 STICKY NOTES FLAG",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2862,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 22041 STICKY PAD 110",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "sku": "8666",
+      "title": "PLANFIX 21345 STICKY NOTES FLAGS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 49,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2853,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 21345 PLASTIC FLAGS  185",
+          "cl_qty": 49
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "sku": "8668",
+      "title": "PLANFIX 22040 STICKY NOTES FLAG",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 8,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2861,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 22040 STICKY PAD 110",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "sku": "20046",
+      "title": "PUSH PIN 100N",
+      "brand": "Planfix",
+      "old_qty": 50,
+      "new_qty": 17,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3050,
+          "item_group": "JB9  ",
+          "item_details": "PF PUSH PIN 100 PCS 100",
+          "cl_qty": 17
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "sku": "8693",
+      "title": "PLANFIX 22060 STICKY NOTES FLAGS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": -1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2872,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 22060 STICKY PAD 47",
+          "cl_qty": -1
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "sku": "8801",
+      "title": "PLANFIX 22063 STICKY PAD FLAGS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": -2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2875,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 22063 STICKY PAD 54",
+          "cl_qty": -2
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "sku": "8944",
+      "title": "PLANFIX 21050 STICKY NOTES FLAGS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 17,
+      "sku": "8954",
+      "title": "PLANFIX 22546 STICKY NOTES FLAGS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 18,
+      "sku": "8955",
+      "title": "PLANFIX 9836 A5 NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 8,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2996,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9836 A5 NOTEBOOK 375",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "sku": "9349",
+      "title": "PLANFIX PF-1031 A5 JUTE BAG",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 9,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2829,
+          "item_group": "JUTE BAG ",
+          "item_details": "PF 1031 A5 JUTE BAG 195",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "sku": "9351",
+      "title": "PLANFIX XH 7802 WOODEN FILE TRAY TWO LAYER",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3060,
+          "item_group": "PF TABLE STATIONERY ",
+          "item_details": "PF XH 7802 WOODEN FILE TRAY 2 LAYER 1990",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 21,
+      "sku": "9353",
+      "title": "PLANFIX 22064 STICKY NOTES",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2876,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 22064 STICKY PAD 270",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 22,
+      "sku": "9345",
+      "title": "PLANFIX PF-1033 FULL SCAPE JUTE BAG",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2831,
+          "item_group": "JUTE BAG ",
+          "item_details": "PF 1033 FS JUTE BAG 325",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 23,
+      "sku": "9346",
+      "title": "JUTE FOLDER BAG",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 19,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1505,
+          "item_group": "JUTE BAG ",
+          "item_details": "JUTE FOLDER BAG 250",
+          "cl_qty": 19
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "sku": "9348",
+      "title": "PLANFIX PF-1032 A4 JUTE BAG",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 9,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2830,
+          "item_group": "JUTE BAG ",
+          "item_details": "PF 1032 A4 JUTE BAG 295",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 25,
+      "sku": "9358",
+      "title": "PLANFIX 3783L A5 NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 7,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2886,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 3783L A5 NOTEBOOK 220",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "row": 26,
+      "sku": "9359",
+      "title": "PLANFIX 5409 DIARY GIFT SET",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 10,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2889,
+          "item_group": "PF GIFT SET ",
+          "item_details": "PF 5409 DIARY GIFT SET 1650\"",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "row": 27,
+      "sku": "9354",
+      "title": "PLANFIX 22065 STICKY NOTES",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2877,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 22065 STICKY PAD 270",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "sku": "9355",
+      "title": "PLANFIX 22058 STICKY NOTES TRANSPARENTE",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2870,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 22058 STICKY PAD 102",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 29,
+      "sku": "9356",
+      "title": "PLANFIX STICKY NOTES DIE CUT 200SHEETS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 30,
+      "sku": "9357",
+      "title": "PLANFIX 3782L NOTEBOOK A5",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2885,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 3782L NOTEBOOK A5 150",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 31,
+      "sku": "9360",
+      "title": "PLANFIX 9701 FULLSCAPE FOLDER",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2899,
+          "item_group": "PF FOLDER ",
+          "item_details": "PF 9701 FS FOLDER 895",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 32,
+      "sku": "9361",
+      "title": "PLANFIX 9702 ARRIVAL NEW FOLDER",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2900,
+          "item_group": "PF FOLDER ",
+          "item_details": "PF 9702 ARRIVAL NEW FOLDER 525",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 33,
+      "sku": "9363",
+      "title": "PLANFIX 9707 A4 FILE FOLDER",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2902,
+          "item_group": "PF FOLDER ",
+          "item_details": "PF 9707 A4 FILE FOLDER 550",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 34,
+      "sku": "9364",
+      "title": "PLANFIX 9837 B5 NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 15,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2997,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9837 B5 NOTEBOOK 475",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "row": 35,
+      "sku": "9366",
+      "title": "PLANFIX 9711 A4 ZIP DISPLAY FOLDER WITH 20 POCKETS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": -1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2906,
+          "item_group": "PF FOLDER ",
+          "item_details": "PF 9711 A4 DISPLAY FOLDER 1025",
+          "cl_qty": -1
+        }
+      ]
+    },
+    {
+      "row": 36,
+      "sku": "9374",
+      "title": "PLANFIX 9885 ICONIC A5 NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 86,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3020,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9885 ICONIC NOTEBOOK A5 215",
+          "cl_qty": 86
+        }
+      ]
+    },
+    {
+      "row": 37,
+      "sku": "9376",
+      "title": "PLANFIX 9760 A5 NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 9,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2937,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9760 A5 NOTEBOOK 190",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 38,
+      "sku": "9362",
+      "title": "PLANFIX 9706 A4 FOLDER PUNCHLESS CLIP AND GOLDEN CORNER",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 9,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2901,
+          "item_group": "PF FOLDER ",
+          "item_details": "PF 9706 A4 AUTO CLIP CONA FOLDER 595",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 39,
+      "sku": "9365",
+      "title": "PLANFIX 9710 FULLSCAPE HANDLE BAG FOLDER",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2905,
+          "item_group": "PF FOLDER ",
+          "item_details": "PF 9710 FS HANDLE BAG FOLDER 1995",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 40,
+      "sku": "9367",
+      "title": "PLANFIX 9713 B4 DISPLAY FOLDER",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2907,
+          "item_group": "PF FOLDER ",
+          "item_details": "PF 9713 B4 DISPLAY FOLDER 1450",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 41,
+      "sku": "9369",
+      "title": "PLANFIX 9715 A5 FOLDER NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2908,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9715 A5 FOLDER NOTEBOOK 1150",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 42,
+      "sku": "9370",
+      "title": "PLANFIX 9717 A6 FOLDER SPIRAL PAD WITH CALCULATOR",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 7,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2909,
+          "item_group": "PF FOLDER ",
+          "item_details": "PF 9717 A6 FOLDER NB+CALCULATOR 695",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "row": 43,
+      "sku": "9371",
+      "title": "PLANFIX 9720 A6 FOLDER NOTE BOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 7,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2912,
+          "item_group": "PF FOLDER ",
+          "item_details": "PF 9720 FOLDER NOTEBOOK A6 495",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "row": 44,
+      "sku": "9372",
+      "title": "PLANFIX 9724 A4 CLIP BOARD FOLDER",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2915,
+          "item_group": "PF FOLDER ",
+          "item_details": "PF 9724 A4 CLIP BOARD FOLDAR 495",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 45,
+      "sku": "9373",
+      "title": "PLANFIX 9725 CLIP BOARD PLAN A4",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2916,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9725 CLIP BOARD PLANNER A4 295",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 46,
+      "sku": "9377",
+      "title": "PLANFIX 9729 NOTEBOOK A5",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 16,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2920,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9729 NOTE BOOK A5 375",
+          "cl_qty": 16
+        }
+      ]
+    },
+    {
+      "row": 47,
+      "sku": "9378",
+      "title": "PLANFIX 9731 A5 UNRULED NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 19,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2922,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9731 UNRULED NOTEBOOK A5 225",
+          "cl_qty": 19
+        }
+      ]
+    },
+    {
+      "row": 48,
+      "sku": "9379",
+      "title": "PLANFIX 9732 A5 NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 8,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2923,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9732 NOTEBOOK A5 375",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 49,
+      "sku": "9384",
+      "title": "PLANFIX 9752 TABLE STATIONERY SET",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2933,
+          "item_group": "PF TABLE STATIONERY ",
+          "item_details": "PF 9752 TABLE STATIONERY SET 2495",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 50,
+      "sku": "9375",
+      "title": "PLANFIX 9728 CARD HOLDER",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2919,
+          "item_group": "PF CARD HOLDER KEY POUCH ",
+          "item_details": "PF 9728 CARD HOLDER 215",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 51,
+      "sku": "9380",
+      "title": "PLANFIX 9735 B5 ZIP NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2926,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9735 B5 ZIP NOTEBOOK 995",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 52,
+      "sku": "9381",
+      "title": "PLANFIX 9747 CARD HOLDER",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2930,
+          "item_group": "PF CARD HOLDER KEY POUCH ",
+          "item_details": "PF 9747 CARD HOLDER 675\"",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 53,
+      "sku": "9385",
+      "title": "PLANFIX 9753 TABLE STATIONERY SET",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2934,
+          "item_group": "PF TABLE STATIONERY ",
+          "item_details": "PF 9753 TABLE STATIONERY SET 2595",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 54,
+      "sku": "9386",
+      "title": "PLANFIX 9754 TABLE STATIONERY SET",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2935,
+          "item_group": "PF GIFT SET ",
+          "item_details": "PF 9754 TABLE STAIONERY SET 3400",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 55,
+      "sku": "9387",
+      "title": "PLANFIX 9733 B5 NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2924,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9733 B5 NOTEBOOK 525",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 56,
+      "sku": "9388",
+      "title": "PLANFIX 9767 A6 ELASTIC NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 21,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2942,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9767 A6 ELASTIC NOTEBOOK 135",
+          "cl_qty": 21
+        }
+      ]
+    },
+    {
+      "row": 57,
+      "sku": "9399",
+      "title": "PLANFIX 9788 TABLE STATIONERY SET",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2961,
+          "item_group": "PF GIFT SET ",
+          "item_details": "PF 9788 TABLE STATIONERY SET 1375",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 58,
+      "sku": "9404",
+      "title": "PLANFIX 9807 A5 NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 18,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2974,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9807 A5 NOTEBOOK 325",
+          "cl_qty": 18
+        }
+      ]
+    },
+    {
+      "row": 59,
+      "sku": "9389",
+      "title": "PLANFIX 9768 B6 ELASTIC NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 20,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2943,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9768 B6 ELASTIC NOTEBOOK 190",
+          "cl_qty": 20
+        }
+      ]
+    },
+    {
+      "row": 60,
+      "sku": "9390",
+      "title": "PLANFIX 9809 A5 NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2975,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9809 A5 NOTEBOOK 345",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 61,
+      "sku": "9391",
+      "title": "PLANFIX 9770 B5 ANY YEAR DIARY",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2945,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9770A ANY YEAR DIARY 450",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 62,
+      "sku": "9392",
+      "title": "PLANFIX 9775 KRAFT NOTE BOOK A6",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 10,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2950,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9775 A6 KRAFT NOTE BOOK 150",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "row": 63,
+      "sku": "9394",
+      "title": "PLANFIX 9783 PEN STAND",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2957,
+          "item_group": "PF PEN STAND ",
+          "item_details": "PF 9783 PEN STAND 425",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 64,
+      "sku": "9397",
+      "title": "PLANFIX 9786 PEN STAND CLOCK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2959,
+          "item_group": "PF GIFT SET ",
+          "item_details": "PF 9786 PEN STAND WITH CLOCK 1050",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 65,
+      "sku": "9398",
+      "title": "PLANFIX 9787 TABLE STATIONERY SET",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2960,
+          "item_group": "PF GIFT SET ",
+          "item_details": "PF 9787 TABLE STATIONERY SET 2450",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 66,
+      "sku": "9406",
+      "title": "PLANFIX 9835 B5 LOOP NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2995,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9835 B5 LOOP NOTEBOOK 595",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 67,
+      "sku": "9408",
+      "title": "PLANFIX 9817 B5 NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2982,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9817 B5 NOTEBOOK 450",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 68,
+      "sku": "9400",
+      "title": "PLANFIX 9802 EXECUTIVE ORGANIZAR",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2969,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9802 EXECUTIVE ORGANIZAR 1250",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 69,
+      "sku": "9401",
+      "title": "PLANFIX 9803 A5 NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2970,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9803 A5 NOTEBOOK 345",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 70,
+      "sku": "9402",
+      "title": "PLANFIX 9805 A5 NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 8,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2972,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9805 A5 NOTEBOOK 360",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 71,
+      "sku": "9403",
+      "title": "PLANFIX 9806 NOTEBOOK A5",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 55,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2973,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9806 NOTEBOOK A5 395",
+          "cl_qty": 55
+        }
+      ]
+    },
+    {
+      "row": 72,
+      "sku": "9410",
+      "title": "PLANFIX 9824 A3 CLIP BOARD PLAIN",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2989,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9824 A3 CLIP BOARD PLAIN 495",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 73,
+      "sku": "9411",
+      "title": "PLANFIX 1209 EXECUTIVE ORGNAIZER DIARY",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 8,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2841,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 1209 EXECUTIVE ORGNAIZER DIARY 1925",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 74,
+      "sku": "9413",
+      "title": "PLANFIX 22059 STICKY NOTES TRANSPARENTE",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 75,
+      "sku": "9417",
+      "title": "PLANFIX 21051 STICKY NOTES FLAGS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 83,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2850,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 21051 PLASTIC FLAGS ARROW 75",
+          "cl_qty": 83
+        }
+      ]
+    },
+    {
+      "row": 76,
+      "sku": "9405",
+      "title": "PLANFIX 9812 A2 DISPLAY FOLDER",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2978,
+          "item_group": "PF FOLDER ",
+          "item_details": "PF 9812 A2 DISPLAY FOLDER 2795",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 77,
+      "sku": "9407",
+      "title": "PLANFIX 9843 GIFT SET",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3002,
+          "item_group": "PF GIFT SET ",
+          "item_details": "PF 9843 GIFT SET NB+CC+KEY+PEN 1195",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 78,
+      "sku": "9414",
+      "title": "PLANFIX MCSS01 MESSAGE CLIP STAND STEEL",
+      "brand": "Planfix",
+      "old_qty": 1,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3044,
+          "item_group": "STEEL CLIP STAND ",
+          "item_details": "PF MCSS01 CLIP STAND STEEL 170",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 79,
+      "sku": "9415",
+      "title": "PLANFIX MOUSE PAD HIGH LEVEL",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3045,
+          "item_group": "MOUSE PAD ",
+          "item_details": "PF MOUSE PAD HIGH LEVEL 250",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 80,
+      "sku": "9416",
+      "title": "PLANFIX NB01 A6 NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3047,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF NB01 A6 NOTEBOOK 140",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 81,
+      "sku": "9418",
+      "title": "PLANFIX 5418 A5 FOLDER DAIRY",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 7,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2890,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 5418 A5 FOLDER DIARY 1550",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "row": 82,
+      "sku": "9419",
+      "title": "PLANFIX 9770 B5 ELASTIC NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 7,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2944,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9770 ELASTIC NOTEBOOK B5 300",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "row": 83,
+      "sku": "9420",
+      "title": "PLANFIX 9884 A6 NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 17,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3019,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9884 ICONIC NOTEBOOK A6 150",
+          "cl_qty": 17
+        }
+      ]
+    },
+    {
+      "row": 84,
+      "sku": "9421",
+      "title": "PLANFIX XH 7803 WOODEN FILE TRAY THREE LAYER",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3061,
+          "item_group": "PF TABLE STATIONERY ",
+          "item_details": "PF XH 7803 WOODEN FILE TRAY 3 LAYER 2790",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 85,
+      "sku": "9439",
+      "title": "PLANFIX 006 STICKY PAD PLAIN 4X4 100SHEETS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 86,
+      "sku": "9440",
+      "title": "PLANFIX 007 STICKY PAD 4X6 100SHEETS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 87,
+      "sku": "9422",
+      "title": "PLANFIX 9846 POWERBANK WITH NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3004,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9846 POWERBANK & NOTEBOOK 2495",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 88,
+      "sku": "9423",
+      "title": "PLANFIX 9887 A5 JUTE NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 22,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3021,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9887 JUTE NOTEBOOK A5 275",
+          "cl_qty": 22
+        }
+      ]
+    },
+    {
+      "row": 89,
+      "sku": "9437",
+      "title": "PLANFIX 003 STICKY PAD FC 3X3 100SHEETS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 90,
+      "sku": "9438",
+      "title": "PLANFIX 003 STICKY PAD MULTICOLOR 3X3 100SHEETS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2805,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 003 STICKY PAD 3X3 MC 100ST 71",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 91,
+      "sku": "9441",
+      "title": "PLANFIX 008 STICKY PAD 8X6 100SHEETS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 28,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2812,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 008 STICKY PAD 8X6 100ST 325",
+          "cl_qty": 28
+        }
+      ]
+    },
+    {
+      "row": 92,
+      "sku": "9445",
+      "title": "PLANFIX 9036 STICKY PAD RULED 3X3 280SHEETS 7COLORS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": -1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2897,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 9036 STICKY PAD RULED 3X3 280ST 290",
+          "cl_qty": -1
+        }
+      ]
+    },
+    {
+      "row": 93,
+      "sku": "9448",
+      "title": "PLANFIX 21099 STICKY PAD PLASTIC COLOR",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2851,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 21099 STICKY PLASTIC COLOUR 100",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 94,
+      "sku": "9452",
+      "title": "PLANFIX 005 STICKY PAD PLAIN 3X5 100SHEETS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2807,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 005 STICKY PAD PLAIN 3X5 95",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 95,
+      "sku": "9442",
+      "title": "PLANFIX 018 STICKY PAD RULED 8X6 100SHEETS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 12,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2814,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 018 STICKY PAD RULED 8X6 100ST 525",
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "row": 96,
+      "sku": "9443",
+      "title": "PLANFIX 017 STICKY PAD RULED 4X6 100SHEETS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 97,
+      "sku": "9444",
+      "title": "PLANFIX 006 STICKY PAD RULED 4X4 100SHEETS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 98,
+      "sku": "9446",
+      "title": "PLANFIX 9038 STICKY PAD RULED 4X6 280SHEETS 7COLORS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2898,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 9038 STICKY PAD RULED 4X6 280ST 595",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 99,
+      "sku": "9447",
+      "title": "PLANFIX 21038 STICKY PAD RULED YELLOW COLOR 8X6 50SHEETS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 11,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2848,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 21038 STICKY PAD RULED Y 8X6 50ST 195",
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "row": 100,
+      "sku": "9450",
+      "title": "PLANFIX M-010 STICKY NOTES",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3042,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF M-010 STICKY NOTES 141",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 101,
+      "sku": "9451",
+      "title": "PLANFIX 22045 STICKY NOTES FLAG",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 102,
+      "sku": "9449",
+      "title": "PLANFIX 21203 STICKY NOTES CUBE 2X2 250 SHEETS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2852,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 21203 STICKY NOTES CUBE 2X2 250ST 100",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 103,
+      "sku": "9454",
+      "title": "PLANFIX 006 PROMPTS STICKY NOTES 3COLOR 1X3 120SHEETS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 123,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2808,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 006 PROMPTS 3 COL 1X3 120ST 42",
+          "cl_qty": 123
+        }
+      ]
+    },
+    {
+      "row": 104,
+      "sku": "9457",
+      "title": "PLANFIX 002 STICKY PAD 2X3 100SHEETS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2802,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 002 STICKY PAD 2X3 30",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 105,
+      "sku": "9458",
+      "title": "PLANFIX 003 STICKY PAD 3X3 100SHEETS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2803,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 003 STICKY PAD 3X3 45",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 106,
+      "sku": "9460",
+      "title": "PLANFIX 004 STICKY PAD 3X4 100SHEETS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 11,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2806,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 004 STICKY PAD 3X4 100ST 85",
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "row": 107,
+      "sku": "9459",
+      "title": "PLANFIX 001 STICKY PAD 1.5X2 100SHEETS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 45,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2800,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 001 STICKY PAD 1.5X2 100ST 28",
+          "cl_qty": 45
+        }
+      ]
+    },
+    {
+      "row": 108,
+      "sku": "9511",
+      "title": "PLANFIX 22046 STICKY NOTES FLAG",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 109,
+      "sku": "9914",
+      "title": "LEVIN E2 RULED NOTES 3X2 100SHEETS",
+      "brand": "Planfix",
+      "old_qty": 10,
+      "new_qty": 10,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 110,
+      "sku": "9991",
+      "title": "PLANFIX 22048 STICKY NOTES FLAG",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2867,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 22048 STICKY PAD 130",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 111,
+      "sku": "10504",
+      "title": "PLANFIX 22047 STICKY NOTES FLAG",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 112,
+      "sku": "10781",
+      "title": "PLANFIX 21346 STICKY NOTES FLAG",
+      "brand": "Planfix",
+      "old_qty": -5,
+      "new_qty": 50,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2854,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 21346 PLASTIC FLAGS  REGULAR 185",
+          "cl_qty": 50
+        }
+      ]
+    },
+    {
+      "row": 113,
+      "sku": "12391",
+      "title": "PLANFIX 22037 STICKY NOTES",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 12,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2858,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 22037 STICKY PAD Z15-DK 280",
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "row": 114,
+      "sku": "12786",
+      "title": "PLANFIX 22038 STICKY NOTES",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 9,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2859,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 22038 A5 STICKY NOTEPAD 240",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 115,
+      "sku": "12992",
+      "title": "PLANFIX PF-1028 MOUSE PAD",
+      "brand": "Planfix",
+      "old_qty": 5,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3062,
+          "item_group": "MOUSE PAD ",
+          "item_details": "PF-1028 MOUSE PAD 195",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 116,
+      "sku": "12996",
+      "title": "PLANFIX PF-1029 MOUSE PAD",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 9,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3063,
+          "item_group": "MOUSE PAD ",
+          "item_details": "PF-1029 MOUSE PAD 225",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 117,
+      "sku": "20777",
+      "title": "PADTECH SUPER THIN MOUSE PAD 250",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 10,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2530,
+          "item_group": "MOUSE PAD ",
+          "item_details": "PADTECH SUPER THIN MOUSE PAD 250",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "row": 118,
+      "sku": "13007",
+      "title": "PLANFIX PF-MOUSE PAD 295",
+      "brand": "Planfix",
+      "old_qty": 4,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3069,
+          "item_group": "MOUSE PAD ",
+          "item_details": "PF-MOUSE PAD 295",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 119,
+      "sku": "20776",
+      "title": "PADTECH PT-102 SILICONE MOUSE PAD 250",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 22,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2529,
+          "item_group": "MOUSE PAD ",
+          "item_details": "PADTECH PT-102 SILICONE MOUSE PAD 250",
+          "cl_qty": 22
+        }
+      ]
+    },
+    {
+      "row": 120,
+      "sku": "13427",
+      "title": "PLANFIX 22039 STICKY NOTES",
+      "brand": "Planfix",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 4737,
+          "item_group": "UNIBALL ",
+          "item_details": "UB SXN-310 1.0MM BLACK RB 400",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 121,
+      "sku": "17238",
+      "title": "PLANFIX STICK NOTE TRANSPRENT WHITE",
+      "brand": "Planfix",
+      "old_qty": 10,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3053,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF STICKY NOTE TRANSPRENT 70",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 122,
+      "sku": "17236",
+      "title": "PLANFIX STICK NOTES TRANSPRENT LINE",
+      "brand": "Planfix",
+      "old_qty": 10,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3054,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF STICKY NOTE TRANSPRENT FC 70",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 123,
+      "sku": "17968",
+      "title": "PLANFIX 21012 STICKY PAD CUBE 3X3 400SHEETS",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2847,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 21012 STICKY CUBE 3*3 400ST 260",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 124,
+      "sku": "18228",
+      "title": "PLANFIX 9730 A6 NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2921,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9730 A6 NOTEBOOK 195",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 125,
+      "sku": "18229",
+      "title": "PLANFIX 9821 A7 POCKET NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2986,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9821 A7 POCKET NOTEBOOK 105",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 126,
+      "sku": "18232",
+      "title": "PLANFIX 9830 A7 POCKET NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2992,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9830 A7 POCKET NOTEBOOK 105",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 127,
+      "sku": "18235",
+      "title": "PLANFIX 9831 A6 NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2993,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9831 A6 NOTEBOOK 165",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 128,
+      "sku": "18243",
+      "title": "PLANFIX 9819 A5 NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2984,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9819 A5 NOTEBOOK 475",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 129,
+      "sku": "18226",
+      "title": "PLANFIX 9822 A6 NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2987,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9822 A6 NOTEBOOK 165",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 130,
+      "sku": "18238",
+      "title": "PLANFIX NB04 A5 HARD BINDING NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3048,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF NB04 A5 NOTEBOOK HB 250",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 131,
+      "sku": "18239",
+      "title": "PLANFIX 1010 PREMIUM EXECUTIVE JUTE BAG",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2821,
+          "item_group": "JUTE BAG ",
+          "item_details": "PF 1010 JUTE BAG 1050",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 132,
+      "sku": "18242",
+      "title": "PLANFIX 9834 A5 LOOP NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2994,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9834 A5 LOOP NOTEBOOK 445",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 133,
+      "sku": "18245",
+      "title": "PLANFIX 22061 STICKY PAD FLAG",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": -1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2873,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 22061 STICKY PAD 47",
+          "cl_qty": -1
+        }
+      ]
+    },
+    {
+      "row": 134,
+      "sku": "18259",
+      "title": "PLANFIX 9874 TABLE STATIONERY GIFT SET",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3013,
+          "item_group": "PF GIFT SET ",
+          "item_details": "PF 9874 TABLE STATIONERY GIFT SET 3100",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 135,
+      "sku": "18262",
+      "title": "PLANFIX 9849 NOTEBOOK & BOTTEL SET",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3006,
+          "item_group": "PF GIFT SET ",
+          "item_details": "PF 9849 NOTEBOOK&BOTTEL SET 2795",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 136,
+      "sku": "18277",
+      "title": "PLANFIX 9838 B5 NOTEBOOK WITH PEN",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 9,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2998,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9838 B5 NOTEBOOK WITH PEN 475",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 137,
+      "sku": "18283",
+      "title": "PLANFIX 9793 TABLE STATIONERY SET",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2963,
+          "item_group": "PF GIFT SET ",
+          "item_details": "PF 9793 TABLE STATIONERY SET 1095",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 138,
+      "sku": "18285",
+      "title": "PLANFIX 1027 TABLE STATIONERY SET",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2828,
+          "item_group": "PF TABLE STATIONERY ",
+          "item_details": "PF 1027 TABLE STATIONERY SET 1150",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 139,
+      "sku": "18265",
+      "title": "PLANFIX 9867 MUG GIFT SET",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3011,
+          "item_group": "PF GIFT SET ",
+          "item_details": "PF 9867 MUG GIFT SET 2595",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 140,
+      "sku": "18267",
+      "title": "PLANFIX 9868 A5 NOTEBOOK WITH POWERBANK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3012,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9868 A5 NOTEBOOK & POWER BANK 3195",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 141,
+      "sku": "18275",
+      "title": "PLANFIX 5427 B5 FOLDER DIARY",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2891,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 5427 B5 FOLDER DIARY 1650",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 142,
+      "sku": "18288",
+      "title": "PLANFIX 1021 TABLE STATIONERY SET",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2825,
+          "item_group": "PF TABLE STATIONERY ",
+          "item_details": "PF 1021 TABLE STATIONERY SET 2095",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 143,
+      "sku": "18300",
+      "title": "PLANFIX 9881 WIRELESS POWERBANK & LOCK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3016,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9881 WIRELESS POWERBANK & LOCK 3450",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 144,
+      "sku": "18303",
+      "title": "PLANFIX 9880 WIRELESS POWERBANK NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3015,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9880 WIRELESS POWERBANK NOTEBOOK 2895",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 145,
+      "sku": "18305",
+      "title": "PLANFIX 9845 ZIP POWERBANK NOTEBOOK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3003,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9845 ZIP POWERBANK NOTEBOOK 2595",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 146,
+      "sku": "18309",
+      "title": "PLANFIX 9850 EXECUTIVE ORGANIZER",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3007,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9850 EXECUTIVE ORGANIZER 950",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 147,
+      "sku": "18456",
+      "title": "PLANFIX 9718 A4 ZIP FOLDER WITH UPPER & INNER POCKET",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2910,
+          "item_group": "PF FOLDER ",
+          "item_details": "PF 9718 A4 ZIP FOLDER 1295",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 148,
+      "sku": "18458",
+      "title": "PLANFIX 9781 PAPER CUBE WHITE",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2955,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9781 PAPER CUBE-WHITE 475",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 149,
+      "sku": "18459",
+      "title": "PLANFIX 9782 PAPER CUBE MULTICOLOR",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2956,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9782 PAPER CUBE-MULTICOLOR 475",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 150,
+      "sku": "18576",
+      "title": "PLANFIX 9840 GIFT SET NOTEBOOK WITH PEN",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2999,
+          "item_group": "PF GIFT SET ",
+          "item_details": "PF 9840 GIFT SET PEN NOTEBOOK 450",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 151,
+      "sku": "18463",
+      "title": "PLANFIX 1017 PEN STAND",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2823,
+          "item_group": "PF PEN STAND ",
+          "item_details": "PF 1017 PEN STAND 795",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 152,
+      "sku": "18464",
+      "title": "PLANFIX 1018 STATIONERY SET",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2824,
+          "item_group": "PF TABLE STATIONERY ",
+          "item_details": "PF 1018 STATIONERY SET 1095",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 153,
+      "sku": "18469",
+      "title": "PLANFIX 9763 KEY POUCH",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2938,
+          "item_group": "PF CARD HOLDER KEY POUCH ",
+          "item_details": "PF 9763 KEY POUCH 275",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 154,
+      "sku": "18470",
+      "title": "PLANFIX 9764 KEY POUCH",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2939,
+          "item_group": "PF CARD HOLDER KEY POUCH ",
+          "item_details": "PF 9764 KEY POUCH 310",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 155,
+      "sku": "18473",
+      "title": "PLANFIX 9766 KEY POUCH",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2941,
+          "item_group": "PF CARD HOLDER KEY POUCH ",
+          "item_details": "PF 9766 KEY POUCH 385",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 156,
+      "sku": "18475",
+      "title": "PLANFIX 9765 KEY POUCH",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2940,
+          "item_group": "PF CARD HOLDER KEY POUCH ",
+          "item_details": "PF 9765 KEY POUCH 340",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 157,
+      "sku": "18500",
+      "title": "PLANFIX 1024 A4 PU BAG",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2826,
+          "item_group": "JUTE BAG ",
+          "item_details": "PF 1024 A4 PU BAG 295",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 158,
+      "sku": "18508",
+      "title": "PLANFIX 1025 A4 PU BAG",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2827,
+          "item_group": "JUTE BAG ",
+          "item_details": "PF 1025 A4 PU BAG 295",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 159,
+      "sku": "18513",
+      "title": "PLANFIX MCS000 MESSAGE CLIP WOODEN STAND 2X2",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3043,
+          "item_group": "STEEL CLIP STAND ",
+          "item_details": "PF MCS000 CLIP STAND W BASE 2X2 350",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 160,
+      "sku": "18578",
+      "title": "PLANFIX 9841 GIFT SET CARD HOLDER PEN AND KEY CHAIN",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 9,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3000,
+          "item_group": "PF GIFT SET ",
+          "item_details": "PF 9841 GIFT SET CC+PEN+KEY 750",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 161,
+      "sku": "18580",
+      "title": "PLANFIX 9842 BIG GIFT SET A5 NOTEBOOK WITH PEN",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 8,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3001,
+          "item_group": "PF GIFT SET ",
+          "item_details": "PF 9842 BIG GIFT SET NB+PEN 895",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 162,
+      "sku": "19336",
+      "title": "PLANFIX 1034 JUTE BAG",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2832,
+          "item_group": "JUTE BAG ",
+          "item_details": "PF 1034 JUTE BAG 675",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 163,
+      "sku": "19343",
+      "title": "PLANFIX 1008 JUTE BAG",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2818,
+          "item_group": "JUTE BAG ",
+          "item_details": "PF 1008 JUTE BAG 595",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 164,
+      "sku": "19339",
+      "title": "PLANFIX 1007 JUTE BAG",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2817,
+          "item_group": "JUTE BAG ",
+          "item_details": "PF 1007 JUTE FOLDER 475",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 165,
+      "sku": "18270",
+      "title": "PLANFIX 9883 NOTEBOOK & POWERBANK WITH LIGHT",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3018,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9883 NOTEBOOK & POWERBANK WL 3795",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 166,
+      "sku": "18290",
+      "title": "PLANFIX 9882 PREMIUM WIRELESS POWERBANK",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 3017,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 9882 PREMIUM WIRELESS POWER BANK 3675",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 167,
+      "sku": "18605",
+      "title": "PLANFIX 794 LLJ DIARY",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2895,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 794 LLJ DIARY 155",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 168,
+      "sku": "18606",
+      "title": "PLANFIX 771 LLJ DIARY",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2894,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 771 LLJ DIARY 180",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 169,
+      "sku": "18607",
+      "title": "PLANFIX 7011 GPP DIARY",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2893,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 7011 GPP DIARY 355",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 170,
+      "sku": "18609",
+      "title": "PLANFIX 002 DIARY",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2801,
+          "item_group": "STICKY PAD ",
+          "item_details": "PF 002 DIARY 330",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 171,
+      "sku": "18610",
+      "title": "PLANFIX 501 ZLDB DIARY",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2887,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 501 ZLDB DIARY 699",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 172,
+      "sku": "18611",
+      "title": "PLANFIX 511 ZLDB DIARY",
+      "brand": "Planfix",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 2888,
+          "item_group": "PF NOTE BOOK ",
+          "item_details": "PF 511 ZLDB DIARY 535",
+          "cl_qty": 0
+        }
+      ]
+    }
+  ]
+}

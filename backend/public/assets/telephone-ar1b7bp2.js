@@ -1,0 +1,1 @@
+var e=`/assets/telephone-Cxf6_a7E.png`;export{e as t};

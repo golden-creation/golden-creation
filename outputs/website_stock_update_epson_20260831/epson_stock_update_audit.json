@@ -1,0 +1,111 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (26).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_epson_20260831\\epson products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\epson products - Updated Website Stock.xlsx",
+  "summary": {
+    "Matched": 5
+  },
+  "rows": [
+    {
+      "website_row": 2,
+      "title": "EPSON 008 INK BOTTEL MAGENTA 70ML",
+      "brand": "Epson",
+      "variant_sku": "19158",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 946,
+          "item_code": "19158",
+          "item_details": "EPSON 008 INK BOTTEL MAGENTA 70ML 899",
+          "item_group": "EPSON",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 3,
+      "title": "EPSON TM-T82X-461 THERMAL PRINTER",
+      "brand": "Epson",
+      "variant_sku": "19164",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 953,
+          "item_code": "19164",
+          "item_details": "EPSON TM-T82X-461 THERMAL PRINTER 13999",
+          "item_group": "EPSON",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 4,
+      "title": "EPSON 008 INK BOTTEL BLACK 127ML",
+      "brand": "Epson",
+      "variant_sku": "19148",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 944,
+          "item_code": "19148",
+          "item_details": "EPSON 008 INK BOTTEL BLACK 127ML 999",
+          "item_group": "EPSON",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 5,
+      "title": "EPSON 008 INK BOTTEL CYAN 70ML",
+      "brand": "Epson",
+      "variant_sku": "19161",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 945,
+          "item_code": "19161",
+          "item_details": "EPSON 008 INK BOTTEL CYAN 70ML 899",
+          "item_group": "EPSON",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 6,
+      "title": "EPSON 008 INK BOTTEL YELLOW 70ML",
+      "brand": "Epson",
+      "variant_sku": "19151",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 947,
+          "item_code": "19151",
+          "item_details": "EPSON 008 INK BOTTEL YELLOW 70ML",
+          "item_group": "EPSON",
+          "cl_qty": 0
+        }
+      ]
+    }
+  ]
+}

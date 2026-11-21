@@ -1,0 +1,403 @@
+{
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (35).xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_hq_20260831\\hq products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\hq products - Updated Website Stock.xlsx",
+  "status_counts": {
+    "Matched": 23
+  },
+  "changed_rows": 17,
+  "rows": [
+    {
+      "row": 2,
+      "sku": "20484",
+      "title": "HQ A5 SPIRAL 300 PAGE",
+      "brand": "HQ",
+      "old_qty": 5,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1367,
+          "item_group": "HQ ",
+          "item_details": "HQ A5 SPIRAL 300 PAGE 180",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "sku": "8845",
+      "title": "HQ 27037 B5 1 SUBJECT NOTEBOOK MINT GREEN 160PAGES",
+      "brand": "HQ",
+      "old_qty": 6,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1357,
+          "item_group": "HQ ",
+          "item_details": "HQ 27037 B5 1SUBJECT NOTEBOOK GREEN 180",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "sku": "9094",
+      "title": "HQ 27044 A5 5SUBJECT NOTEBOOK SALMON PINK 300PAGES",
+      "brand": "HQ",
+      "old_qty": 8,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1361,
+          "item_group": "HQ ",
+          "item_details": "HQ 27044 A5 5SUBJECT NOTEBOOK PINK 210",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "sku": "9098",
+      "title": "HQ 23791 MEMO CUBE 700SHEETS",
+      "brand": "HQ",
+      "old_qty": 20,
+      "new_qty": 19,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1345,
+          "item_group": "HQ ",
+          "item_details": "HQ 23791 MEMO CUBE 700SHEETS 150",
+          "cl_qty": 19
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "sku": "9096",
+      "title": "HQ 27031 A5 1SUBJECT NOTEBOOK BLUE 160PAGES",
+      "brand": "HQ",
+      "old_qty": 16,
+      "new_qty": -5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1351,
+          "item_group": "HQ ",
+          "item_details": "HQ 27031 A5 1SUBJECT NOTEBOOK BLUE 140",
+          "cl_qty": -5
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "sku": "9100",
+      "title": "HQ 23816 A5 PREMIUM PU NOTEBOOK 312PAGES",
+      "brand": "HQ",
+      "old_qty": 3,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1346,
+          "item_group": "HQ ",
+          "item_details": "HQ 23816 A5 PREMIUM PU NOTEBOOK 300",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "sku": "9108",
+      "title": "HQ 27002 A5 1SUBJECT NOTEBOOK BLACK 160PAGES",
+      "brand": "HQ",
+      "old_qty": 14,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1348,
+          "item_group": "HQ ",
+          "item_details": "HQ 27002 A5 1SUBJECT NOTEBOOK BLACK 140",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "sku": "9109",
+      "title": "HQ 27013 A5 5SUBJECT NOTEBOOK BLACK 300PAGES",
+      "brand": "HQ",
+      "old_qty": 8,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1350,
+          "item_group": "HQ ",
+          "item_details": "HQ 27013 A5 5SUBJECT NOTEBOOK BLACK 210",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "sku": "9111",
+      "title": "HQ 27041 A5 5SUBJECT NOTEBOOK BLUE 300PAGES",
+      "brand": "HQ",
+      "old_qty": 7,
+      "new_qty": 7,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1359,
+          "item_group": "HQ ",
+          "item_details": "HQ 27041 A5 5SUBJECT NOTEBOOK BLUE 210",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "sku": "9112",
+      "title": "HQ 27043 A5 5SUBJECT NOTEBOOK MINT GREEN 300PAGES",
+      "brand": "HQ",
+      "old_qty": 7,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1360,
+          "item_group": "HQ ",
+          "item_details": "HQ 27043 A5 5SUBJECT NOTEBOOK GREEN 210",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "sku": "9118",
+      "title": "HQ 27032 A5 1SUBJECT NOTEBOOK GREY 160PAGES",
+      "brand": "HQ",
+      "old_qty": 16,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1352,
+          "item_group": "HQ ",
+          "item_details": "HQ 27032 A5 1SUBJECT NOTEBOOK GREY 140",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "sku": "9501",
+      "title": "HQ 27001 B5 1 SUBJECT NOTEBOOK BLACK 160PAGES",
+      "brand": "HQ",
+      "old_qty": 8,
+      "new_qty": 8,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1347,
+          "item_group": "HQ ",
+          "item_details": "HQ 27001 B5 1SUBJECT NOTEBOOK BLACK 180",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "sku": "9504",
+      "title": "HQ 27033 A5 1SUBJECT NOTEBOOK MINT GREEN 160PAGES",
+      "brand": "HQ",
+      "old_qty": 15,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1353,
+          "item_group": "HQ ",
+          "item_details": "HQ 27033 A5 1SUBJECT NOTEBOOK GREEN 140",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "sku": "9505",
+      "title": "HQ 27034 A5 1SUBJECT NOTEBOOK SALMON PINK 160PAGES",
+      "brand": "HQ",
+      "old_qty": 15,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1354,
+          "item_group": "HQ ",
+          "item_details": "HQ 27034 A5 1SUBJECT NOTEBOOK PINK 140",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "sku": "9500",
+      "title": "HQ 27012 B5 5SUBJECT NOTEBOOK BLACK 300PAGES",
+      "brand": "HQ",
+      "old_qty": 8,
+      "new_qty": 8,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1349,
+          "item_group": "HQ ",
+          "item_details": "HQ 27012 B5 5SUBJECT NOTEBOOK BLACK 275",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "sku": "9503",
+      "title": "HQ 27045 B5 5SUBJECT NOTEBOOK BLUE 300PAGES",
+      "brand": "HQ",
+      "old_qty": 6,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1362,
+          "item_group": "HQ ",
+          "item_details": "HQ 27045 B5 5SUBJECT NOTEBOOK BLUE 275",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "sku": "9607",
+      "title": "HQ 27035 B5 1 SUBJECT NOTEBOOK BLUE 160PAGES",
+      "brand": "HQ",
+      "old_qty": 8,
+      "new_qty": 7,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1355,
+          "item_group": "HQ ",
+          "item_details": "HQ 27035 B5 1SUBJECT NOTEBOOK BLUE 180",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "sku": "9604",
+      "title": "HQ 27038 B5 1 SUBJECT NOTEBOOK SALMON PINK 160PAGES",
+      "brand": "HQ",
+      "old_qty": 7,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1358,
+          "item_group": "HQ ",
+          "item_details": "HQ 27038 B5 1SUBJECT NOTEBOOK PINK 180",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "sku": "9605",
+      "title": "HQ 27036 B5 1 SUBJECT NOTEBOOK GREY 160PAGES",
+      "brand": "HQ",
+      "old_qty": 8,
+      "new_qty": 8,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1356,
+          "item_group": "HQ ",
+          "item_details": "HQ 27036 B5 1SUBJECT NOTEBOOK GREY 180",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 21,
+      "sku": "15468",
+      "title": "HQ 27066 A5 GOLD RUSH NOTEBOOK 192PAGES - BLACK",
+      "brand": "HQ",
+      "old_qty": 3,
+      "new_qty": 48,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1364,
+          "item_group": "HQ ",
+          "item_details": "HQ 27066-2 A5 GOLD RUSH NOTEBOOK BLA 300",
+          "cl_qty": 48
+        }
+      ]
+    },
+    {
+      "row": 22,
+      "sku": "15469",
+      "title": "HQ 27066 A5 GOLD RUSH NOTEBOOK 192PAGES - BLUE",
+      "brand": "HQ",
+      "old_qty": 3,
+      "new_qty": 35,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1366,
+          "item_group": "HQ ",
+          "item_details": "HQ 27066-4 A5 GOLD RUSH NOTEBOOK BLU 300",
+          "cl_qty": 35
+        }
+      ]
+    },
+    {
+      "row": 23,
+      "sku": "15470",
+      "title": "HQ 27066 A5 GOLD RUSH NOTEBOOK 192PAGES - GREY",
+      "brand": "HQ",
+      "old_qty": 3,
+      "new_qty": 24,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1363,
+          "item_group": "HQ ",
+          "item_details": "HQ 27066-1 A5 GOLD RUSH NOTEBOOK GRY 300",
+          "cl_qty": 24
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "sku": "15471",
+      "title": "HQ 27066 A5 GOLD RUSH NOTEBOOK 192PAGES - MAROON",
+      "brand": "HQ",
+      "old_qty": 3,
+      "new_qty": 35,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1365,
+          "item_group": "HQ ",
+          "item_details": "HQ 27066-3 A5 GOLD RUSH NOTEBOOK RED 300",
+          "cl_qty": 35
+        }
+      ]
+    }
+  ]
+}

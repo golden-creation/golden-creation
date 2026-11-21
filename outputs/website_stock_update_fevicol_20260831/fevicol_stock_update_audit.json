@@ -1,0 +1,1814 @@
+{
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (31).xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_fevicol_20260831\\fevicol products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\fevicol products - Updated Website Stock.xlsx",
+  "status_counts": {
+    "Matched": 106
+  },
+  "changed_rows": 63,
+  "rows": [
+    {
+      "row": 2,
+      "sku": "16003",
+      "title": "FINE ART CANVAS BOARD 5X7",
+      "brand": "Fevicol",
+      "old_qty": 3,
+      "new_qty": 48,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1064,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FINE ART CANVAS BOARD 5X7 45",
+          "cl_qty": 48
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "sku": "16005",
+      "title": "FINE ART CANVAS BOARD 6X8",
+      "brand": "Fevicol",
+      "old_qty": 5,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1066,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FINE ART CANVAS BOARD 6X8 50",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "sku": "16007",
+      "title": "FINE ART CANVAS BOARD 6X6",
+      "brand": "Fevicol",
+      "old_qty": 1,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1065,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FINE ART CANVAS BOARD 6X6 50",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "sku": "16008",
+      "title": "FINE ART CANVAS BOARD 8X8",
+      "brand": "Fevicol",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1068,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FINE ART CANVAS BOARD 8X8 68",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "sku": "16018",
+      "title": "RANGEELA CREATIVE CLAY 200GM",
+      "brand": "Fevicol",
+      "old_qty": 3,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1087,
+          "item_group": "FEVICOL ",
+          "item_details": "FC RANGEELA CREATIVE CLAY 200GM 199",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "sku": "16022",
+      "title": "RANGEELA 3125 MOULDING DOUGH 150GM BUCKET",
+      "brand": "Fevicol",
+      "old_qty": 4,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1080,
+          "item_group": "FEVICOL ",
+          "item_details": "FC RANGEELA 3125 MOULDING DOUGH 150G 115",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "sku": "16030",
+      "title": "FEVICRYL ACRYLIC PASTEL COLOR KIT 6 SHADES 90ML",
+      "brand": "Fevicol",
+      "old_qty": 3,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1027,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL ACRYLIC PASTEL KIT 90ML 150",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "sku": "16032",
+      "title": "FEVICRYL ACRYLIC COLOR KIT 60ML",
+      "brand": "Fevicol",
+      "old_qty": 8,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1023,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL ACRYLIC KIT 60ML 100",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "sku": "16035",
+      "title": "FEVICRYL ACRYLIC SUNFLOWER KIT 150ML 10 SHADES 15ML EACH",
+      "brand": "Fevicol",
+      "old_qty": 4,
+      "new_qty": 12,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1012,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL ACR SUNFLOWER KIT 150ML 250",
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "sku": "16037",
+      "title": "FINE ART TSF-4 S-413 PAINTING BRUSH FLAT",
+      "brand": "Fevicol",
+      "old_qty": 3,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1119,
+          "item_group": "FEVICOL ",
+          "item_details": "FC TSF-4 S-413 PAINTING BRUSH FLAT 200",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "sku": "16039",
+      "title": "FINE ART TSF-7 S-413 PAINTING BRUSH FLAT",
+      "brand": "Fevicol",
+      "old_qty": 5,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1120,
+          "item_group": "FEVICOL ",
+          "item_details": "FC TSF-7 S-413 PAINTING BRUSH FLAT 570",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "sku": "16041",
+      "title": "FINE ART TR-4 S-412 PAINTING BRUSH ROUND",
+      "brand": "Fevicol",
+      "old_qty": 4,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1117,
+          "item_group": "FEVICOL ",
+          "item_details": "FC TR-4 S-412 PAINTING BRUSH ROUND 135",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "sku": "16043",
+      "title": "FINE ART TR-7 S-412 PAINTING BRUSH ROUND",
+      "brand": "Fevicol",
+      "old_qty": 5,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1118,
+          "item_group": "FEVICOL ",
+          "item_details": "FC TR-7 S-412 PAINTING BRUSH ROUND 370",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "sku": "16070",
+      "title": "RANGEELA GLITTER STAR PACK 6SHADES 30ML",
+      "brand": "Fevicol",
+      "old_qty": 2,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1088,
+          "item_group": "FEVICOL ",
+          "item_details": "FC RANGEELA GLITTER STAR PACK 30ML 40",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "sku": "16072",
+      "title": "FEVICRYL GLASS COLOR SET 75ML 6SHADES",
+      "brand": "Fevicol",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1039,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL GLASS COLOR 6SET 75ML 85",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "sku": "16081",
+      "title": "FEVICRYL GLASS COLOR SET 115ML 10SHADES",
+      "brand": "Fevicol",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1038,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL GLASS COLOR 10SET 115ML 110",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "sku": "16510",
+      "title": "STRETCHING CANVAS BOARD 6X6",
+      "brand": "Fevicol",
+      "old_qty": 4,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 4529,
+          "item_group": "FEVICOL ",
+          "item_details": "STRETCHING CANVAS 06 X 06 180",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "sku": "16513",
+      "title": "STRETCHING CANVAS BOARD 8X8",
+      "brand": "Fevicol",
+      "old_qty": 2,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 4530,
+          "item_group": "FEVICOL ",
+          "item_details": "STRETCHING CANVAS 08 X 08 200",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "sku": "16514",
+      "title": "STRETCHING CANVAS BOARD 8X10",
+      "brand": "Fevicol",
+      "old_qty": 4,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 4531,
+          "item_group": "FEVICOL ",
+          "item_details": "STRETCHING CANVAS 08 X 10 225",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 21,
+      "sku": "16516",
+      "title": "STRETCHING CANVAS BOARD 10X12",
+      "brand": "Fevicol",
+      "old_qty": 4,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 4532,
+          "item_group": "FEVICOL ",
+          "item_details": "STRETCHING CANVAS 10 X 12 270",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 22,
+      "sku": "16519",
+      "title": "STRETCHING CANVAS BOARD 12X16",
+      "brand": "Fevicol",
+      "old_qty": 2,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 4533,
+          "item_group": "FEVICOL ",
+          "item_details": "STRETCHING CANVAS 12 X 16 315",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 23,
+      "sku": "16738",
+      "title": "FINE ART 413 BRUSH NO. 1",
+      "brand": "Fevicol",
+      "old_qty": 10,
+      "new_qty": 15,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1105,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-413 PAINTING BRUSH SIZE  1 40",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "sku": "16739",
+      "title": "FINE ART 413 BRUSH NO. 6",
+      "brand": "Fevicol",
+      "old_qty": 9,
+      "new_qty": 14,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1110,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-413 PAINTING BRUSH SIZE  6 65",
+          "cl_qty": 14
+        }
+      ]
+    },
+    {
+      "row": 25,
+      "sku": "16740",
+      "title": "FINE ART 413 BRUSH NO. 5",
+      "brand": "Fevicol",
+      "old_qty": 10,
+      "new_qty": 15,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1109,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-413 PAINTING BRUSH SIZE  5 55",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "row": 26,
+      "sku": "16741",
+      "title": "FINE ART 413 BRUSH NO. 4",
+      "brand": "Fevicol",
+      "old_qty": 10,
+      "new_qty": 15,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1108,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-413 PAINTING BRUSH SIZE  4 55",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "row": 27,
+      "sku": "16742",
+      "title": "FINE ART 413 BRUSH NO. 3",
+      "brand": "Fevicol",
+      "old_qty": 9,
+      "new_qty": 14,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1107,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-413 PAINTING BRUSH SIZE  3 45",
+          "cl_qty": 14
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "sku": "16743",
+      "title": "FINE ART 413 BRUSH NO. 2",
+      "brand": "Fevicol",
+      "old_qty": 10,
+      "new_qty": 14,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1106,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-413 PAINTING BRUSH SIZE  2 45",
+          "cl_qty": 14
+        }
+      ]
+    },
+    {
+      "row": 29,
+      "sku": "16750",
+      "title": "FINE ART 413 BRUSH NO. 7",
+      "brand": "Fevicol",
+      "old_qty": 5,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1111,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-413 PAINTING BRUSH SIZE  7 75",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 30,
+      "sku": "16751",
+      "title": "FINE ART 413 BRUSH NO. 9",
+      "brand": "Fevicol",
+      "old_qty": 5,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1113,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-413 PAINTING BRUSH SIZE  9 100",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 31,
+      "sku": "16752",
+      "title": "FINE ART 413 BRUSH NO. 10",
+      "brand": "Fevicol",
+      "old_qty": 3,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1114,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-413 PAINTING BRUSH SIZE 10 120",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 32,
+      "sku": "16753",
+      "title": "FINE ART 413 BRUSH NO. 11",
+      "brand": "Fevicol",
+      "old_qty": 3,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1115,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-413 PAINTING BRUSH SIZE 11 145",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 33,
+      "sku": "16754",
+      "title": "FINE ART 413 BRUSH NO. 8",
+      "brand": "Fevicol",
+      "old_qty": 5,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1112,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-413 PAINTING BRUSH SIZE  8 90",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 34,
+      "sku": "16755",
+      "title": "FINE ART 413 BRUSH NO. 12",
+      "brand": "Fevicol",
+      "old_qty": 3,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1116,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-413 PAINTING BRUSH SIZE 12 165",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 35,
+      "sku": "16762",
+      "title": "FINE ART 412 BRUSH NO. 0",
+      "brand": "Fevicol",
+      "old_qty": 10,
+      "new_qty": 15,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1090,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-412 PAINTING BRUSH SIZE  0 30",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "row": 36,
+      "sku": "16763",
+      "title": "FINE ART 412 BRUSH NO. 00",
+      "brand": "Fevicol",
+      "old_qty": 10,
+      "new_qty": 15,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1100,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-412 PAINTING BRUSH SIZE 00 30",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "row": 37,
+      "sku": "16764",
+      "title": "FINE ART 412 BRUSH NO. 000",
+      "brand": "Fevicol",
+      "old_qty": 10,
+      "new_qty": 15,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1101,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-412 PAINTING BRUSH SIZE 000 30",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "row": 38,
+      "sku": "16765",
+      "title": "FINE ART 412 BRUSH NO. 1",
+      "brand": "Fevicol",
+      "old_qty": 10,
+      "new_qty": 10,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1091,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-412 PAINTING BRUSH SIZE  1 30",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "row": 39,
+      "sku": "16766",
+      "title": "FINE ART 412 BRUSH NO. 2",
+      "brand": "Fevicol",
+      "old_qty": 10,
+      "new_qty": 15,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1092,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-412 PAINTING BRUSH SIZE  2 30",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "row": 40,
+      "sku": "16767",
+      "title": "FINE ART 412 BRUSH NO. 3",
+      "brand": "Fevicol",
+      "old_qty": 10,
+      "new_qty": 15,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1093,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-412 PAINTING BRUSH SIZE  3 35",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "row": 41,
+      "sku": "16768",
+      "title": "FINE ART 412 BRUSH NO. 4",
+      "brand": "Fevicol",
+      "old_qty": 10,
+      "new_qty": 15,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1094,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-412 PAINTING BRUSH SIZE  4 35",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "row": 42,
+      "sku": "16769",
+      "title": "FINE ART 412 BRUSH NO. 5",
+      "brand": "Fevicol",
+      "old_qty": 10,
+      "new_qty": 15,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1095,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-412 PAINTING BRUSH SIZE  5 40",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "row": 43,
+      "sku": "16778",
+      "title": "FINE ART 412 BRUSH NO. 6",
+      "brand": "Fevicol",
+      "old_qty": 10,
+      "new_qty": 15,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1096,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-412 PAINTING BRUSH SIZE  6 45",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "row": 44,
+      "sku": "16779",
+      "title": "FINE ART 412 BRUSH NO. 7",
+      "brand": "Fevicol",
+      "old_qty": 5,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1097,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-412 PAINTING BRUSH SIZE  7 50",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 45,
+      "sku": "16780",
+      "title": "FINE ART 412 BRUSH NO. 8",
+      "brand": "Fevicol",
+      "old_qty": 5,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1098,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-412 PAINTING BRUSH SIZE  8 55",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 46,
+      "sku": "16781",
+      "title": "FINE ART 412 BRUSH NO. 9",
+      "brand": "Fevicol",
+      "old_qty": 5,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1099,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-412 PAINTING BRUSH SIZE  9 70",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 47,
+      "sku": "16782",
+      "title": "FINE ART 412 BRUSH NO. 10",
+      "brand": "Fevicol",
+      "old_qty": 3,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1102,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-412 PAINTING BRUSH SIZE 10 80",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 48,
+      "sku": "16783",
+      "title": "FINE ART 412 BRUSH NO. 11",
+      "brand": "Fevicol",
+      "old_qty": 3,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1103,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-412 PAINTING BRUSH SIZE 11 100",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 49,
+      "sku": "16784",
+      "title": "FINE ART 412 BRUSH NO. 12",
+      "brand": "Fevicol",
+      "old_qty": 3,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1104,
+          "item_group": "FEVICOL ",
+          "item_details": "FC S-412 PAINTING BRUSH SIZE 12 110",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 50,
+      "sku": "16793",
+      "title": "FEVICRYL ART OF INDIA PICHWAI TRADITIONAL ART KIT",
+      "brand": "Fevicol",
+      "old_qty": 2,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1033,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL ART OF INDIA PICHWAI 749",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 51,
+      "sku": "16803",
+      "title": "FEVICRYL ART OF INDIA MADHUBANI TRADITIONAL ART KIT",
+      "brand": "Fevicol",
+      "old_qty": 2,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1030,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL ART OF INDIA MADHUBANI 499",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 52,
+      "sku": "16807",
+      "title": "FEVICRYL ART OF INDIA MANDALA TRADITIONAL ART KIT",
+      "brand": "Fevicol",
+      "old_qty": 2,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1031,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL ART OF INDIA MANDALA  499",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 53,
+      "sku": "16812",
+      "title": "FEVICRYL ART OF INDIA LIPPAN TRADITIONAL ART KIT",
+      "brand": "Fevicol",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1029,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL ART OF INDIA LIPPAN  699",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 54,
+      "sku": "16816",
+      "title": "FEVICRYL NO STICH FABRIC GLUE 80ML",
+      "brand": "Fevicol",
+      "old_qty": 8,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1037,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL FABRIC GLUE 80ML 37",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 55,
+      "sku": "16821",
+      "title": "FEVICRYL ACRYLIC PASTEL KIT 150ML(10N*15ML)",
+      "brand": "Fevicol",
+      "old_qty": 3,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1026,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL ACRYLIC PASTEL KIT 10X15 300",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 56,
+      "sku": "16824",
+      "title": "RANGEELA TEMPERA COLOR 12TUBE*3ML",
+      "brand": "Fevicol",
+      "old_qty": 9,
+      "new_qty": 25,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1089,
+          "item_group": "FEVICOL ",
+          "item_details": "FC RANGEELA TEMPRA COLOR 36ML 20",
+          "cl_qty": 25
+        }
+      ]
+    },
+    {
+      "row": 57,
+      "sku": "16827",
+      "title": "RANGEELA CLAY ANIMAL 150GM",
+      "brand": "Fevicol",
+      "old_qty": 24,
+      "new_qty": 19,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1083,
+          "item_group": "FEVICOL ",
+          "item_details": "FC RANGEELA CLAY ANIMAL 150GM 120",
+          "cl_qty": 19
+        }
+      ]
+    },
+    {
+      "row": 58,
+      "sku": "16828",
+      "title": "RANGEELA CLAY MY CUTE ANIMAL 75GM",
+      "brand": "Fevicol",
+      "old_qty": 24,
+      "new_qty": 17,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1084,
+          "item_group": "FEVICOL ",
+          "item_details": "FC RANGEELA CLAY MY CUTE ANIMAL 75GM 65",
+          "cl_qty": 17
+        }
+      ]
+    },
+    {
+      "row": 59,
+      "sku": "16831",
+      "title": "FEVICRYL NEON COLOR 60ML (4N*15ML)",
+      "brand": "Fevicol",
+      "old_qty": 5,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1043,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL NEON COLOR KIT 4*15ML 99",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 60,
+      "sku": "16834",
+      "title": "FEVICRYL PEARL METALLIC KIT 60ML (10ML*6N)",
+      "brand": "Fevicol",
+      "old_qty": 2,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1044,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL PEARL METALIC KIT 60 ML 125",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 61,
+      "sku": "16835",
+      "title": "FEVICRYL 3D OUTLINER FABRIC & MULTI-SURFACE PEARL METALLIC GOLD 352",
+      "brand": "Fevicol",
+      "old_qty": 10,
+      "new_qty": 8,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1009,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL 3D OUTL F&MS GOL 352 20ML 25",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 62,
+      "sku": "16836",
+      "title": "FEVICRYL 3D OUTLINER FABRIC & MULTI-SURFACE BLACK 708",
+      "brand": "Fevicol",
+      "old_qty": 9,
+      "new_qty": 9,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1008,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL 3D OUTL F&MS BLK 708 20ML 25",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 63,
+      "sku": "16838",
+      "title": "FEVICRYL 3D OUTLINER FABRIC & MULTI-SURFACE WHITE 707",
+      "brand": "Fevicol",
+      "old_qty": 8,
+      "new_qty": 7,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1011,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL 3D OUTL F&MS WHT 707 20ML 25",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "row": 64,
+      "sku": "16843",
+      "title": "FEVICRYL FABRIC COLOR 200ML (10N*20ML)",
+      "brand": "Fevicol",
+      "old_qty": 5,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1036,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL FABRIC COLOR KIT 200ML 300",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 65,
+      "sku": "17175",
+      "title": "FINE ART CANVAS PAD 18X24",
+      "brand": "Fevicol",
+      "old_qty": 2,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1071,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FINE ART CANVAS PAD  18X24 1000",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 66,
+      "sku": "17178",
+      "title": "FINE ART CANVAS PAD 16X20",
+      "brand": "Fevicol",
+      "old_qty": 2,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1070,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FINE ART CANVAS PAD  16X20 790",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 67,
+      "sku": "17180",
+      "title": "FINE ART CANVAS PAD 8X10",
+      "brand": "Fevicol",
+      "old_qty": 2,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1074,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FINE ART CANVAS PAD 8X10 250",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 68,
+      "sku": "17182",
+      "title": "FINE ART STRETCHED CANVAS 4X4",
+      "brand": "Fevicol",
+      "old_qty": 6,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1075,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FINE ART STRETCHED CANVAS 4X4 100",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 69,
+      "sku": "17184",
+      "title": "FINE ART STRETCHED CANVAS 5X7",
+      "brand": "Fevicol",
+      "old_qty": 5,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1076,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FINE ART STRETCHED CANVAS 5X7 125",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 70,
+      "sku": "17185",
+      "title": "FEVICRYL ACRYLIC COLOR CARNIVAL PACK (14 SHADES)",
+      "brand": "Fevicol",
+      "old_qty": 12,
+      "new_qty": 10,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1022,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL ACRYLIC COLOR CARNIVAL 275",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "row": 71,
+      "sku": "19168",
+      "title": "FEVICRYL MANDALA  ART KIT",
+      "brand": "Fevicol",
+      "old_qty": 9,
+      "new_qty": 9,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1042,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL MANDALA ART KIT 225",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 72,
+      "sku": "16818",
+      "title": "FEVICRYL CANVAS PAINTING KIT",
+      "brand": "Fevicol",
+      "old_qty": 3,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1034,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL CANVAS PAINTING KIT 225",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 73,
+      "sku": "19182",
+      "title": "FEVICRYL WARLI ART KIT",
+      "brand": "Fevicol",
+      "old_qty": 5,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1046,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL WARLI ART KIT 225",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 74,
+      "sku": "9939",
+      "title": "FEVICREATE ART & CRAFT KIT OF FEVICOL",
+      "brand": "Fevicol",
+      "old_qty": 11,
+      "new_qty": 11,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1003,
+          "item_group": "FEVICOL ",
+          "item_details": "FC CREATE ART & CRAFT KIT 499",
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "row": 75,
+      "sku": "9940",
+      "title": "FEVISTICK 15GM",
+      "brand": "Fevicol",
+      "old_qty": 285,
+      "new_qty": 254,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1053,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVISTICK 15GM 40",
+          "cl_qty": 254
+        }
+      ]
+    },
+    {
+      "row": 76,
+      "sku": "9948",
+      "title": "FEVISTICK POWER 8GM",
+      "brand": "Fevicol",
+      "old_qty": 139,
+      "new_qty": 134,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1054,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVISTICK POWER 8GM 35",
+          "cl_qty": 134
+        }
+      ]
+    },
+    {
+      "row": 77,
+      "sku": "9951",
+      "title": "FEVIKWIK 450MG PACK OF 10PCS",
+      "brand": "Fevicol",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1052,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVIKWIK 450MG 5",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 78,
+      "sku": "9952",
+      "title": "FINE ART CANVAS BOARD 8X10",
+      "brand": "Fevicol",
+      "old_qty": 9,
+      "new_qty": 12,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1067,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FINE ART CANVAS BOARD 8X10 75",
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "row": 79,
+      "sku": "9953",
+      "title": "FINE ART CANVAS BOARD 10X12",
+      "brand": "Fevicol",
+      "old_qty": 9,
+      "new_qty": 12,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1056,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FINE ART CANVAS BOARD 10 X 12 100",
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "row": 80,
+      "sku": "9954",
+      "title": "FINE ART CANVAS PAD 9X12 10SHEET",
+      "brand": "Fevicol",
+      "old_qty": 3,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1072,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FINE ART CANVAS PAD  9X12 300",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 81,
+      "sku": "9955",
+      "title": "FINE ART CANVAS BOARD 15X22",
+      "brand": "Fevicol",
+      "old_qty": 4,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1060,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FINE ART CANVAS BOARD 15X22 255",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 82,
+      "sku": "9956",
+      "title": "FINE ART CANVAS BOARD 20X24",
+      "brand": "Fevicol",
+      "old_qty": 2,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1062,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FINE ART CANVAS BOARD 20X24 385",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 83,
+      "sku": "9958",
+      "title": "FINE ART CANVAS BOARD 12X16",
+      "brand": "Fevicol",
+      "old_qty": 9,
+      "new_qty": 12,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1058,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FINE ART CANVAS BOARD 12X16 150",
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "row": 84,
+      "sku": "9959",
+      "title": "FINE ART CANVAS PAD 12X16 10SHEET",
+      "brand": "Fevicol",
+      "old_qty": 3,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1073,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FINE ART CANVAS PAD 12X16 550",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 85,
+      "sku": "9957",
+      "title": "FEVICRYL ACRYLIC PEARL METTALIC KIT 40ML 4 SHADES",
+      "brand": "Fevicol",
+      "old_qty": 6,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1045,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL PEARL METALLIC KIT 40ML 100",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 86,
+      "sku": "16001",
+      "title": "FINE ART CANVAS BOARD 4X4",
+      "brand": "Fevicol",
+      "old_qty": 51,
+      "new_qty": 40,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1063,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FINE ART CANVAS BOARD 4X4 30",
+          "cl_qty": 40
+        }
+      ]
+    },
+    {
+      "row": 87,
+      "sku": "16011",
+      "title": "FINE ART CANVAS BOARD 14X18",
+      "brand": "Fevicol",
+      "old_qty": 5,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1059,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FINE ART CANVAS BOARD 14X18 185",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 88,
+      "sku": "16014",
+      "title": "RANGEELA 3502 MOULDING DOUGH 200GM",
+      "brand": "Fevicol",
+      "old_qty": 9,
+      "new_qty": 12,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1082,
+          "item_group": "FEVICOL ",
+          "item_details": "FC RANGEELA 3502 MOULDING DOUGH 200G 140",
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "row": 89,
+      "sku": "16020",
+      "title": "RANGEELA 3419 MOULDING DOUGH 375GM",
+      "brand": "Fevicol",
+      "old_qty": 12,
+      "new_qty": 12,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1081,
+          "item_group": "FEVICOL ",
+          "item_details": "FC RANGEELA 3419 MOULDING DOUGH 375G 199",
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "row": 90,
+      "sku": "30024",
+      "title": "FEVICRYL ART OF INDIA KALAMKARI",
+      "brand": "Fevicol",
+      "old_qty": 2,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1028,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL ART OF INDIA KALAMKARI 599",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 91,
+      "sku": "30021",
+      "title": "FEVICRYL ART OF INDIA PATTACHITRA",
+      "brand": "Fevicol",
+      "old_qty": 2,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1032,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL ART OF INDIA PATTACHITRA 599",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 92,
+      "sku": "30045",
+      "title": "FEVICRYL KALAMKARI ART KIT",
+      "brand": "Fevicol",
+      "old_qty": 5,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1040,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL KALAMKARI ART KIT 225",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 93,
+      "sku": "30046",
+      "title": "FEVICRYL LIPPAN ART KIT",
+      "brand": "Fevicol",
+      "old_qty": 5,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1041,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL LIPPAN ART KIT 299",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 94,
+      "sku": "30027",
+      "title": "FEVICRYL YUDU 3IN1 CLR PENCIL 12N",
+      "brand": "Fevicol",
+      "old_qty": 5,
+      "new_qty": 8,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1048,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL YUDU 3IN1 CLR PENCIL 12N 630",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 95,
+      "sku": "30025",
+      "title": "FEVICRYL YUDU BRUSH PENS 14N COLOR",
+      "brand": "Fevicol",
+      "old_qty": 9,
+      "new_qty": 8,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1049,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL YUDU BRUSH PENS 14N CLR 225",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 96,
+      "sku": "30026",
+      "title": "FEVICRYL YUDU GEL CRAYONS 12N COLOR",
+      "brand": "Fevicol",
+      "old_qty": 4,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1050,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICRYL YUDU GEL CRAYONS 12N CLR 320",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 97,
+      "sku": "20429",
+      "title": "FINE ART CANVAS BOARD 16X20",
+      "brand": "Fevicol",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1061,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FINE ART CANVAS BOARD 16X20 240",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 98,
+      "sku": "30101",
+      "title": "FUNSKOOL ARTICIOUS BURGER PAD BOOK",
+      "brand": "Fevicol",
+      "old_qty": 3,
+      "new_qty": 9,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1206,
+          "item_group": "FEVICOL ",
+          "item_details": "FUNSKOOL ARTICIOUS BURGER PAD BOOK 199",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 99,
+      "sku": "30100",
+      "title": "FUNSKOOL ARTICIOUS SANDWICH PAD BOOK",
+      "brand": "Fevicol",
+      "old_qty": 4,
+      "new_qty": 10,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1207,
+          "item_group": "FEVICOL ",
+          "item_details": "FUNSKOOL ARTICIOUS SANDWICH PAD BOOK 199",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "row": 100,
+      "sku": "9944",
+      "title": "FEVICOL 200GM",
+      "brand": "Fevicol",
+      "old_qty": 4,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1005,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICOL 200GM 100",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 101,
+      "sku": "9945",
+      "title": "FEVICOL 500GM",
+      "brand": "Fevicol",
+      "old_qty": 2,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1007,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICOL 500GM 200",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 102,
+      "sku": "9942",
+      "title": "FEVICOL 42GM",
+      "brand": "Fevicol",
+      "old_qty": 11,
+      "new_qty": 11,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1006,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICOL 42GM 25",
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "row": 103,
+      "sku": "9943",
+      "title": "FEVICOL 105GM",
+      "brand": "Fevicol",
+      "old_qty": 12,
+      "new_qty": 261,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1004,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVICOL 105GM 60",
+          "cl_qty": 261
+        }
+      ]
+    },
+    {
+      "row": 104,
+      "sku": "9950",
+      "title": "FLEX KWIK INSTANT ADHESIVE 20GM",
+      "brand": "Fevicol",
+      "old_qty": 50,
+      "new_qty": 90,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1077,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FLEX KWIK INSTANT ADHESIVE 20GM 60",
+          "cl_qty": 90
+        }
+      ]
+    },
+    {
+      "row": 105,
+      "sku": "16047",
+      "title": "FEVICOL GLUE DROP 2SHEET",
+      "brand": "Fevicol",
+      "old_qty": 5,
+      "new_qty": 8,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1078,
+          "item_group": "FEVICOL ",
+          "item_details": "FC GLUE DROP 20",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "row": 106,
+      "sku": "16069",
+      "title": "FEVICOL GLUE DROP SHEET 4SHEET",
+      "brand": "Fevicol",
+      "old_qty": 23,
+      "new_qty": 17,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1079,
+          "item_group": "FEVICOL ",
+          "item_details": "FC GLUE DROP 60",
+          "cl_qty": 17
+        }
+      ]
+    },
+    {
+      "row": 107,
+      "sku": "17190",
+      "title": "FEVI STICK ROCKIN ROLLER 8M",
+      "brand": "Fevicol",
+      "old_qty": 11,
+      "new_qty": 8,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1055,
+          "item_group": "FEVICOL ",
+          "item_details": "FC FEVISTICK ROCKING ROLLER 8M 99",
+          "cl_qty": 8
+        }
+      ]
+    }
+  ]
+}

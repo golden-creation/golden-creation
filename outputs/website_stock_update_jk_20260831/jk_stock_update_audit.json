@@ -1,0 +1,308 @@
+{
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (38).xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_jk_20260831\\jk products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\jk products - Updated Website Stock.xlsx",
+  "status_counts": {
+    "Matched": 15,
+    "No Busy Match": 4
+  },
+  "changed_rows": 13,
+  "rows": [
+    {
+      "row": 2,
+      "sku": "20939",
+      "title": "JK A5 70GSM SPARKLE PAPER REAM",
+      "brand": "JK",
+      "old_qty": 0,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1500,
+          "item_group": "JK PAPER ",
+          "item_details": "JK A5 70GSM SPARKLE PAPER REAM 180",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "sku": "20937",
+      "title": "JK A4 80GSM LEDGER GREEN PAPER",
+      "brand": "JK",
+      "old_qty": 43,
+      "new_qty": 42,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1497,
+          "item_group": "JK PAPER ",
+          "item_details": "JK A4 80GSM LEDGER GREEN PAPER 550",
+          "cl_qty": 42
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "sku": "20938",
+      "title": "JK A4 85GSM EXCEL BOND",
+      "brand": "JK",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1498,
+          "item_group": "JK PAPER ",
+          "item_details": "JK A4 85GSM EXCEL BOND 540",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "sku": "8827",
+      "title": "JK A3 75GSM COPIER PAPER",
+      "brand": "JK",
+      "old_qty": 17,
+      "new_qty": 33,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1488,
+          "item_group": "JK PAPER ",
+          "item_details": "JK A3 75GSM COPIER PAPER 775",
+          "cl_qty": 33
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "sku": "8828",
+      "title": "JK A4 75GSM COPIER PAPER REAM 500SHEET",
+      "brand": "JK",
+      "old_qty": 201,
+      "new_qty": 316,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1493,
+          "item_group": "JK PAPER ",
+          "item_details": "JK A4 75GSM COPIER PAPER 400",
+          "cl_qty": 316
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "sku": "8831-GC04",
+      "title": "JK A4 75GSM ECO CANVAS COLOURED PAPER REAM BLUE 500SHEET",
+      "brand": "JK",
+      "old_qty": 19,
+      "new_qty": 19,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 8,
+      "sku": "8835",
+      "title": "JK A5 75GSM COPIER PAPER REAM",
+      "brand": "JK",
+      "old_qty": 8,
+      "new_qty": 30,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1501,
+          "item_group": "JK PAPER ",
+          "item_details": "JK A5 75GSM COPIER 210",
+          "cl_qty": 30
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "sku": "8837",
+      "title": "JK A4 100GSM EXCEL BOND REAM 500SHEET",
+      "brand": "JK",
+      "old_qty": 9,
+      "new_qty": 50,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1490,
+          "item_group": "JK PAPER ",
+          "item_details": "JK A4 100GSM EXCEL BOND 500 SHEETS 635",
+          "cl_qty": 50
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "sku": "8838",
+      "title": "JK FULL SCAPE 75GMS COPIER PAPER REAM 500SHEET",
+      "brand": "JK",
+      "old_qty": 85,
+      "new_qty": 42,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1502,
+          "item_group": "JK PAPER ",
+          "item_details": "JK FS 75GSM COPIER PAPER 485",
+          "cl_qty": 42
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "sku": "10549",
+      "title": "JK FULL SCAPE 90GSM LEDGER GREEN PAPER REAM 500SHEET",
+      "brand": "JK",
+      "old_qty": 13,
+      "new_qty": 11,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1503,
+          "item_group": "JK PAPER ",
+          "item_details": "JK FS 90GSM LEDGER GRN PAPER 600",
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "sku": "10543",
+      "title": "JK A4 80GSM COPIER PLUS",
+      "brand": "JK",
+      "old_qty": 19,
+      "new_qty": 9,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1496,
+          "item_group": "JK PAPER ",
+          "item_details": "JK A4 80GSM COPIER PAPER 475",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "sku": "10544",
+      "title": "JK A4 100GSM CEDAR PAPER REAM 500 SHEET",
+      "brand": "JK",
+      "old_qty": 24,
+      "new_qty": 51,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1489,
+          "item_group": "JK PAPER ",
+          "item_details": "JK A4 100GSM CEDAR PAPER 600",
+          "cl_qty": 51
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "sku": "10547",
+      "title": "JK A4 75GSM EVERVITE PAPER 100SHEET",
+      "brand": "JK",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1495,
+          "item_group": "JK PAPER ",
+          "item_details": "JK A4 75GSM EVERVITE 100 SHEET 80",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "sku": "10551",
+      "title": "JK A4 100GSM MATT COATED PHOTO PAPER 100SHEET",
+      "brand": "JK",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1491,
+          "item_group": "JK PAPER ",
+          "item_details": "JK A4 100GSM MATT COATED 100 SHEETS 250",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "sku": "10552",
+      "title": "JK A4 140GSM MATT COATED PHOTO PAPER 100SHEET",
+      "brand": "JK",
+      "old_qty": 2,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1492,
+          "item_group": "JK PAPER ",
+          "item_details": "JK A4 140GSM MATT COATED 100 SHEETS 300",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "sku": "8831-GC03",
+      "title": "JK A4 75GSM ECO CANVAS COLOURED PAPER REAM PINK 500SHEET",
+      "brand": "JK",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 18,
+      "sku": "13523",
+      "title": "JK A4 90GSM EXCEL PAPER PACKET 100SHEET",
+      "brand": "JK",
+      "old_qty": 100,
+      "new_qty": 18,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1499,
+          "item_group": "JK PAPER ",
+          "item_details": "JK A4 90GSM EXCEL BOND 175",
+          "cl_qty": 18
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "sku": "8831-GC02",
+      "title": "JK A4 75GSM ECO CANVAS COLOURED PAPER REAM GREEN 500SHEET",
+      "brand": "JK",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "row": 20,
+      "sku": "8831-GC01",
+      "title": "JK A4 75GSM ECO CANVAS COLOURED PAPER REAM YELLOW 500SHEET",
+      "brand": "JK",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    }
+  ]
+}

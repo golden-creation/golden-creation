@@ -1,0 +1,1 @@
+var e=`/assets/information-wjqWesp7.png`;export{e as t};

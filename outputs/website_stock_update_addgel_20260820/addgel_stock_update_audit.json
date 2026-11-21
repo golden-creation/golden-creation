@@ -1,0 +1,693 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\Addgel Products.xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_addgel_20260820\\Addgel Products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\Addgel Products - Updated Website Stock.xlsx",
+  "downloads_copy_status": "copied",
+  "target_sheet": "Products",
+  "lookup_column": "Variant SKU",
+  "updated_column": "Variant Inventory Qty",
+  "counts": {
+    "Matched": 36,
+    "Matched - Busy Duplicates Summed": 1
+  },
+  "website_sku_rows": 37,
+  "website_unique_skus": 37,
+  "website_duplicate_skus": {},
+  "changed_rows": 25,
+  "rows": [
+    {
+      "website_row": 2,
+      "variant_sku": "10183",
+      "title": "ADDGEL ACHIEVER BLACK",
+      "old_variant_inventory_qty": 89,
+      "new_variant_inventory_qty": 86,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 39,
+          "item_code": "10183",
+          "item_details": "ADDGEL ACHIEVER BLACK 50",
+          "item_group": "ADDGEL",
+          "cl_qty": 86
+        }
+      ]
+    },
+    {
+      "website_row": 3,
+      "variant_sku": "8540",
+      "title": "ADDGEL ACHIEVER BLUE",
+      "old_variant_inventory_qty": 139,
+      "new_variant_inventory_qty": 140,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 40,
+          "item_code": "8540",
+          "item_details": "ADDGEL ACHIEVER BLUE 50",
+          "item_group": "ADDGEL",
+          "cl_qty": 140
+        }
+      ]
+    },
+    {
+      "website_row": 4,
+      "variant_sku": "10182",
+      "title": "ADDGEL ACHIEVER GREEN",
+      "old_variant_inventory_qty": 20,
+      "new_variant_inventory_qty": 20,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 41,
+          "item_code": "10182",
+          "item_details": "ADDGEL ACHIEVER GREEN 50",
+          "item_group": "ADDGEL",
+          "cl_qty": 20
+        }
+      ]
+    },
+    {
+      "website_row": 5,
+      "variant_sku": "10184",
+      "title": "ADDGEL ACHIEVER RED",
+      "old_variant_inventory_qty": 40,
+      "new_variant_inventory_qty": 40,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 42,
+          "item_code": "10184",
+          "item_details": "ADDGEL ACHIEVER RED 50",
+          "item_group": "ADDGEL",
+          "cl_qty": 40
+        }
+      ]
+    },
+    {
+      "website_row": 6,
+      "variant_sku": "16569",
+      "title": "ADDGEL CLASSE GEL ROLLER BALL PEN",
+      "old_variant_inventory_qty": 6,
+      "new_variant_inventory_qty": 6,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 44,
+          "item_code": "16569",
+          "item_details": "ADDGEL CLASSE GEL RB PEN 90",
+          "item_group": "ADDGEL",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "website_row": 7,
+      "variant_sku": "8552",
+      "title": "ADDGEL DIAMOND ROLLER BALL PEN",
+      "old_variant_inventory_qty": 7,
+      "new_variant_inventory_qty": 13,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 45,
+          "item_code": "8552",
+          "item_details": "ADDGEL DIAMOND ROLLER BALL PEN 150",
+          "item_group": "ADDGEL",
+          "cl_qty": 13
+        }
+      ]
+    },
+    {
+      "website_row": 8,
+      "variant_sku": "16586",
+      "title": "ADDGEL GRANDEUR GEL ROLLER BALL PEN",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 5,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 47,
+          "item_code": "16586",
+          "item_details": "ADDGEL GRANDEUR GEL RB PEN 210",
+          "item_group": "ADDGEL",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "website_row": 9,
+      "variant_sku": "16579",
+      "title": "ADDGEL HIGHNESS BALL ROLLER BALL PEN",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 4,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 48,
+          "item_code": "16579",
+          "item_details": "ADDGEL HIGHNESS BALL RB PEN 180",
+          "item_group": "ADDGEL",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 10,
+      "variant_sku": "19472",
+      "title": "ADDGEL HI-LITER MARK ON MARKER PINK",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 50,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 50,
+          "item_code": "19472",
+          "item_details": "ADDGEL HI-LITER MARK ON MARKER PINK 20",
+          "item_group": "ADDGEL",
+          "cl_qty": 50
+        }
+      ]
+    },
+    {
+      "website_row": 11,
+      "variant_sku": "10185",
+      "title": "ADDGEL MAESTRO BALL PEN",
+      "old_variant_inventory_qty": 26,
+      "new_variant_inventory_qty": 26,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 54,
+          "item_code": "10185",
+          "item_details": "ADDGEL MAESTRO BALL PEN 50",
+          "item_group": "ADDGEL",
+          "cl_qty": 26
+        }
+      ]
+    },
+    {
+      "website_row": 12,
+      "variant_sku": "16589",
+      "title": "ADDGEL NU POINT COLOURFUL WRITING",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 57,
+          "item_code": "16589",
+          "item_details": "ADDGEL NU POINT COLOURFUL WRITING 100",
+          "item_group": "ADDGEL",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 13,
+      "variant_sku": "19466",
+      "title": "ADDGEL PERMANENT MARK-ON MARKER BLUE",
+      "old_variant_inventory_qty": 15,
+      "new_variant_inventory_qty": 16,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 58,
+          "item_code": "19466",
+          "item_details": "ADDGEL PERMANENT MARK-ON MARKER BL 20",
+          "item_group": "ADDGEL",
+          "cl_qty": 16
+        }
+      ]
+    },
+    {
+      "website_row": 14,
+      "variant_sku": "19467",
+      "title": "ADDGEL PERMANENT MARK-ON MARKER RED",
+      "old_variant_inventory_qty": 15,
+      "new_variant_inventory_qty": 15,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 60,
+          "item_code": "19467",
+          "item_details": "ADDGEL PERMANENT MARK-ON MARKER RED 20",
+          "item_group": "ADDGEL",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "website_row": 15,
+      "variant_sku": "10188",
+      "title": "ADDGEL REFILL METAL BALL PEN",
+      "old_variant_inventory_qty": 535,
+      "new_variant_inventory_qty": 991,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 69,
+          "item_code": "10188",
+          "item_details": "ADDGEL REFILL METAL BALL PEN 5",
+          "item_group": "ADDGEL",
+          "cl_qty": 991
+        }
+      ]
+    },
+    {
+      "website_row": 16,
+      "variant_sku": "19473",
+      "title": "ADDGEL HI-LITER MARK ON MARKER YELLOW",
+      "old_variant_inventory_qty": 23,
+      "new_variant_inventory_qty": 72,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 51,
+          "item_code": "19473",
+          "item_details": "ADDGEL HI-LITER MARK ON MARKER YELLOW 20",
+          "item_group": "ADDGEL",
+          "cl_qty": 72
+        }
+      ]
+    },
+    {
+      "website_row": 17,
+      "variant_sku": "16588",
+      "title": "ADDGEL LEGACY BALL ROLLER BALL PEN",
+      "old_variant_inventory_qty": 6,
+      "new_variant_inventory_qty": 6,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 52,
+          "item_code": "16588",
+          "item_details": "ADDGEL LEGACY BALL RB PEN 240",
+          "item_group": "ADDGEL",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "website_row": 18,
+      "variant_sku": "8549",
+      "title": "ADDGEL LITTLE ARTIST COLOUR 12N",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 9,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 53,
+          "item_code": "8549",
+          "item_details": "ADDGEL LITTLE ARTIST COLOUR 12N 150",
+          "item_group": "ADDGEL",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "website_row": 19,
+      "variant_sku": "19465",
+      "title": "ADDGEL PERMANENT MARK-ON MARKER BLACK",
+      "old_variant_inventory_qty": 15,
+      "new_variant_inventory_qty": 35,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 59,
+          "item_code": "19465",
+          "item_details": "ADDGEL PERMANENT MARK-ON MARKER BLK 20",
+          "item_group": "ADDGEL",
+          "cl_qty": 35
+        }
+      ]
+    },
+    {
+      "website_row": 20,
+      "variant_sku": "8543",
+      "title": "ADDGEL REFILL GR-50 ROLLER BALL PEN",
+      "old_variant_inventory_qty": 20,
+      "new_variant_inventory_qty": 23,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 68,
+          "item_code": "8543",
+          "item_details": "ADDGEL REFILL GR-50 RB 50",
+          "item_group": "ADDGEL",
+          "cl_qty": 23
+        }
+      ]
+    },
+    {
+      "website_row": 21,
+      "variant_sku": "8545",
+      "title": "ADDGEL ROLLTECH PEN",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 14,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 72,
+          "item_code": "8545",
+          "item_details": "ADDGEL ROLLTECH PEN 100",
+          "item_group": "ADDGEL",
+          "cl_qty": 14
+        }
+      ]
+    },
+    {
+      "website_row": 22,
+      "variant_sku": "19459",
+      "title": "ADDGEL WHITEBOARD MARK-ON MARKER RED",
+      "old_variant_inventory_qty": 13,
+      "new_variant_inventory_qty": 135,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 80,
+          "item_code": "19459",
+          "item_details": "ADDGEL WHITEBOARD MARK-ON MARKER RED 20",
+          "item_group": "ADDGEL",
+          "cl_qty": 135
+        }
+      ]
+    },
+    {
+      "website_row": 23,
+      "variant_sku": "10187",
+      "title": "ADDGEL REFILL BR-40 GEL",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 46,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 62,
+          "item_code": "10187",
+          "item_details": "ADDGEL REFILL BR-40 GEL 20",
+          "item_group": "ADDGEL",
+          "cl_qty": 46
+        }
+      ]
+    },
+    {
+      "website_row": 24,
+      "variant_sku": "10189",
+      "title": "ADDGEL REFILL BR-70 GEL",
+      "old_variant_inventory_qty": 16,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 63,
+          "item_code": "10189",
+          "item_details": "ADDGEL REFILL BR-70 GEL 10",
+          "item_group": "ADDGEL",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 25,
+      "variant_sku": "16576",
+      "title": "ADDGEL SERENE GEL ROLLER BALL PEN",
+      "old_variant_inventory_qty": 6,
+      "new_variant_inventory_qty": 6,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 73,
+          "item_code": "16576",
+          "item_details": "ADDGEL SERENE GEL RB PEN 150",
+          "item_group": "ADDGEL",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "website_row": 26,
+      "variant_sku": "10191",
+      "title": "ADDGEL SOFTLINE PERMANENT MARKER SLIM",
+      "old_variant_inventory_qty": 12,
+      "new_variant_inventory_qty": 12,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 74,
+          "item_code": "10191",
+          "item_details": "ADDGEL SOFTLINE PERMANENT MARKER SLIM 15",
+          "item_group": "ADDGEL",
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "website_row": 27,
+      "variant_sku": "19458",
+      "title": "ADDGEL WHITEBOARD MARK-ON MARKER BLUE",
+      "old_variant_inventory_qty": 7,
+      "new_variant_inventory_qty": 193,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 77,
+          "item_code": "19458",
+          "item_details": "ADDGEL WHITEBOARD MARK-ON MARKER BL 20",
+          "item_group": "ADDGEL",
+          "cl_qty": 193
+        }
+      ]
+    },
+    {
+      "website_row": 28,
+      "variant_sku": "8544",
+      "title": "ADDGEL METAL BALL PEN BLUE INK",
+      "old_variant_inventory_qty": 18,
+      "new_variant_inventory_qty": 371,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 56,
+          "item_code": "8544",
+          "item_details": "ADDGEL METAL BALL PEN 15",
+          "item_group": "ADDGEL",
+          "cl_qty": 371
+        }
+      ]
+    },
+    {
+      "website_row": 29,
+      "variant_sku": "8547",
+      "title": "ADDGEL GOLD DIAMOND ROLLER PEN",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 46,
+          "item_code": "8547",
+          "item_details": "ADDGEL GOLD DIAMOND ROLLER BL 240",
+          "item_group": "ADDGEL",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 30,
+      "variant_sku": "8551",
+      "title": "ADDGEL REGENT GEL ROLLER BALL PEN",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 3,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 70,
+          "item_code": "8551",
+          "item_details": "ADDGEL REGENT BALL RB PEN 120",
+          "item_group": "ADDGEL",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 31,
+      "variant_sku": "10186",
+      "title": "ADDGEL MARQUIS CLASSIQUE CHROME RB 300",
+      "old_variant_inventory_qty": 20,
+      "new_variant_inventory_qty": 24,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 55,
+          "item_code": "10186",
+          "item_details": "ADDGEL MARQUS RB 300",
+          "item_group": "ADDGEL",
+          "cl_qty": 24
+        }
+      ]
+    },
+    {
+      "website_row": 32,
+      "variant_sku": "10192",
+      "title": "ADDGEL SOFTLINE WHITE BOARD MARKER SLIM 15",
+      "old_variant_inventory_qty": 31,
+      "new_variant_inventory_qty": 29,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 75,
+          "item_code": "10192",
+          "item_details": "ADDGEL SOFTLINE WHITE BRD MARKER SLIM 15",
+          "item_group": "ADDGEL",
+          "cl_qty": 29
+        }
+      ]
+    },
+    {
+      "website_row": 33,
+      "variant_sku": "16571",
+      "title": "ADDGEL REFILL GR-20 GEL 25 - BLUE",
+      "old_variant_inventory_qty": 20,
+      "new_variant_inventory_qty": 99,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 67,
+          "item_code": "16571",
+          "item_details": "ADDGEL REFILL GR-20 BLUE 25",
+          "item_group": "ADDGEL",
+          "cl_qty": 99
+        }
+      ]
+    },
+    {
+      "website_row": 34,
+      "variant_sku": "16572",
+      "title": "ADDGEL REFILL GR-20 GEL 25 - RED",
+      "old_variant_inventory_qty": 20,
+      "new_variant_inventory_qty": 48,
+      "status": "Matched - Busy Duplicates Summed",
+      "action": "updated from summed Busy rows",
+      "busy_matches": [
+        {
+          "busy_row": 64,
+          "item_code": "16572",
+          "item_details": "ADDGEL REFILL GR-20  GREEN 25",
+          "item_group": "ADDGEL",
+          "cl_qty": 4
+        },
+        {
+          "busy_row": 65,
+          "item_code": "16572",
+          "item_details": "ADDGEL REFILL GR-20  RED 25",
+          "item_group": "ADDGEL",
+          "cl_qty": 44
+        }
+      ]
+    },
+    {
+      "website_row": 35,
+      "variant_sku": "19457",
+      "title": "ADDGEL WHITEBOARD MARK-ON MARKER BLACK",
+      "old_variant_inventory_qty": 11,
+      "new_variant_inventory_qty": 151,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 78,
+          "item_code": "19457",
+          "item_details": "ADDGEL WHITEBOARD MARK-ON MARKER BLK 20",
+          "item_group": "ADDGEL",
+          "cl_qty": 151
+        }
+      ]
+    },
+    {
+      "website_row": 36,
+      "variant_sku": "20030",
+      "title": "ADDGEL REGENT GOLD PEN",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 71,
+          "item_code": "20030",
+          "item_details": "ADDGEL REGENT GOLD PEN 60\"",
+          "item_group": "ADDGEL",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 37,
+      "variant_sku": "19471",
+      "title": "ADDGEL HI-LITER MARK ON MARKER ORANGE",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 50,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 49,
+          "item_code": "19471",
+          "item_details": "ADDGEL HI-LITER MARK ON MARKER ORANGE 20",
+          "item_group": "ADDGEL",
+          "cl_qty": 50
+        }
+      ]
+    },
+    {
+      "website_row": 38,
+      "variant_sku": "20027",
+      "title": "ADDGEL CALIGRAPHY SET",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 43,
+          "item_code": "20027",
+          "item_details": "ADDGEL CALIGRAPHY SET 250\"",
+          "item_group": "ADDGEL",
+          "cl_qty": 0
+        }
+      ]
+    }
+  ]
+}

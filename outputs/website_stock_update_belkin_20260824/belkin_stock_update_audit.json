@@ -1,0 +1,163 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (11).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_belkin_20260824\\belkin products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\belkin products - Updated Website Stock.xlsx",
+  "downloads_copy_status": "copied",
+  "target_sheet": "Products",
+  "lookup_column": "Variant SKU",
+  "updated_column": "Variant Inventory Qty",
+  "counts": {
+    "Matched": 8
+  },
+  "website_sku_rows": 8,
+  "website_unique_skus": 8,
+  "website_duplicate_skus": {},
+  "changed_rows": 2,
+  "rows": [
+    {
+      "website_row": 2,
+      "variant_sku": "13147",
+      "title": "BELKIN 3 SOCKET SURGE PROTECTOR",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 229,
+          "item_code": "13147",
+          "item_details": "BELKIN 3 SOCKET SURGE PROTECTOR 999",
+          "item_group": "BELKIN",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 3,
+      "variant_sku": "13151",
+      "title": "BELKIN 4 SOCKET SURGE PROTECTOR",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 230,
+          "item_code": "13151",
+          "item_details": "BELKIN 4 SOCKET SURGE PROTECTOR 1199",
+          "item_group": "BELKIN",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 4,
+      "variant_sku": "13153",
+      "title": "BELKIN 6 SOCKET SURGE PROTECTOR",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 231,
+          "item_code": "13153",
+          "item_details": "BELKIN 6 SOCKET SURGE PROTECTOR 1499",
+          "item_group": "BELKIN",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 5,
+      "variant_sku": "13158",
+      "title": "BELKIN CAB004BT1MBK USB C TO C CABLE",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 232,
+          "item_code": "13158",
+          "item_details": "BELKIN CAB004BT1MBK USB C TO C CBL 1399",
+          "item_group": "BELKIN",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 6,
+      "variant_sku": "13162",
+      "title": "BELKIN CAB004BT2BK USB C TO C CABLE",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 233,
+          "item_code": "13162",
+          "item_details": "BELKIN CAB004BT2BK USB C TO C CBL 1599",
+          "item_group": "BELKIN",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 7,
+      "variant_sku": "13169",
+      "title": "BELKIN F7U096ZBWH 18W USB-C ADAPTOR",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 234,
+          "item_code": "13169",
+          "item_details": "BELKIN F7U096ZBWH 18W USB-C ADAPTOR 2999",
+          "item_group": "BELKIN",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 8,
+      "variant_sku": "13165",
+      "title": "BELKIN WCA005ZBWH 30W USB-C ADAPTOR",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 235,
+          "item_code": "13165",
+          "item_details": "BELKIN WCA005ZBWH 30W USB-C ADAPTOR 3999",
+          "item_group": "BELKIN",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 9,
+      "variant_sku": "19056",
+      "title": "BELKIN WIRELESS CHARGING STAND 15W",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 236,
+          "item_code": "19056",
+          "item_details": "BELKIN WIRELESS CHARGING STAND 15W 3999",
+          "item_group": "BELKIN",
+          "cl_qty": 1
+        }
+      ]
+    }
+  ]
+}

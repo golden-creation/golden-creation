@@ -1,0 +1,1546 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (22).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_deli_20260831\\deli products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\deli products - Updated Website Stock.xlsx",
+  "summary": {
+    "Matched": 74,
+    "Matched - Busy Duplicates Summed": 2
+  },
+  "rows": [
+    {
+      "website_row": 2,
+      "title": "DELI 6793 GEL INK PEN",
+      "brand": "Deli",
+      "variant_sku": "20293",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 766,
+          "item_code": "20293",
+          "item_details": "DELI 6793 GEL INK PEN 50",
+          "item_group": "DELI",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 3,
+      "title": "DELI U13-6C HIGHLIGHTER SET",
+      "brand": "Deli",
+      "variant_sku": "20335",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 816,
+          "item_code": "20335",
+          "item_details": "DELI U13-6C HIGHLIGHTER SET 225",
+          "item_group": "DELI",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 4,
+      "title": "DELI U12-6C HIGHLIGHTER SET",
+      "brand": "Deli",
+      "variant_sku": "20334",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 815,
+          "item_code": "20334",
+          "item_details": "DELI U12-6C HIGHLIGHTER SET 195",
+          "item_group": "DELI",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 5,
+      "title": "DELI C113-24 PENCIL COLOURS",
+      "brand": "Deli",
+      "variant_sku": "20333",
+      "old_variant_inventory_qty": 6,
+      "new_variant_inventory_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 814,
+          "item_code": "20333",
+          "item_details": "DELI C113-24 PENCIL COLOURS 190",
+          "item_group": "DELI",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 6,
+      "title": "DELI C113-12 PENCIL COLOUR",
+      "brand": "Deli",
+      "variant_sku": "20332",
+      "old_variant_inventory_qty": 7,
+      "new_variant_inventory_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 813,
+          "item_code": "20332",
+          "item_details": "DELI C113-12 PENCIL COLOUR 90",
+          "item_group": "DELI",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 7,
+      "title": "DELI C00700 PENCIL COLOURS",
+      "brand": "Deli",
+      "variant_sku": "20331",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 812,
+          "item_code": "20331",
+          "item_details": "DELI C00700 PENCIL COLOURS 240",
+          "item_group": "DELI",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 8,
+      "title": "DELI C00205 PENCIL COLOURS",
+      "brand": "Deli",
+      "variant_sku": "20330",
+      "old_variant_inventory_qty": 7,
+      "new_variant_inventory_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 811,
+          "item_code": "20330",
+          "item_details": "DELI C00205 PENCIL COLOURS 300",
+          "item_group": "DELI",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "website_row": 9,
+      "title": "DELI 9183 2 TIER DOC TRAY",
+      "brand": "Deli",
+      "variant_sku": "20341",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 803,
+          "item_code": "20341",
+          "item_details": "DELI 9183 2 TIER DOC TRAY 600",
+          "item_group": "DELI",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 10,
+      "title": "DELI 9181 3 TIER DOC TRAY",
+      "brand": "Deli",
+      "variant_sku": "20324",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 802,
+          "item_code": "20324",
+          "item_details": "DELI 9181 3 TIER DOC TRAY 750",
+          "item_group": "DELI",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 11,
+      "title": "DELI 9155 PEN HOLDER",
+      "brand": "Deli",
+      "variant_sku": "20323",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 801,
+          "item_code": "20323",
+          "item_details": "DELI 9155 PEN HOLDER 200",
+          "item_group": "DELI",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "website_row": 12,
+      "title": "DELI 9145 PEN HOLDER",
+      "brand": "Deli",
+      "variant_sku": "20322",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 30,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 800,
+          "item_code": "20322",
+          "item_details": "DELI 9145 PEN HOLDER 250",
+          "item_group": "DELI",
+          "cl_qty": 30
+        }
+      ]
+    },
+    {
+      "website_row": 13,
+      "title": "DELI 9143 PEN STAND",
+      "brand": "Deli",
+      "variant_sku": "20321",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 799,
+          "item_code": "20321",
+          "item_details": "DELI 9143 PEN STAND 160",
+          "item_group": "DELI",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 14,
+      "title": "DELI 9141 PEN STAND",
+      "brand": "Deli",
+      "variant_sku": "20320",
+      "old_variant_inventory_qty": 6,
+      "new_variant_inventory_qty": 17,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 798,
+          "item_code": "20320",
+          "item_details": "DELI 9141 PEN HOLDER 175",
+          "item_group": "DELI",
+          "cl_qty": 17
+        }
+      ]
+    },
+    {
+      "website_row": 15,
+      "title": "DELI 9139 PEN STAND",
+      "brand": "Deli",
+      "variant_sku": "20319",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 797,
+          "item_code": "20319",
+          "item_details": "DELI 9139 PEN STAND",
+          "item_group": "DELI",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 16,
+      "title": "DELI 9137 PEN STAND",
+      "brand": "Deli",
+      "variant_sku": "20318",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 796,
+          "item_code": "20318",
+          "item_details": "DELI 9137 PEN STAND 280",
+          "item_group": "DELI",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 17,
+      "title": "DELI 9132 ROUND PEN STAND",
+      "brand": "Deli",
+      "variant_sku": "20317",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 795,
+          "item_code": "20317",
+          "item_details": "DELI 9132 ROUND PEN STAND 650",
+          "item_group": "DELI",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 18,
+      "title": "DELI 9122 PEN STAND",
+      "brand": "Deli",
+      "variant_sku": "20316",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 794,
+          "item_code": "20316",
+          "item_details": "DELI 9122 PEN STAND 100",
+          "item_group": "DELI",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "website_row": 19,
+      "title": "DELI 9110 DESK ORGANIZER 7 COMP",
+      "brand": "Deli",
+      "variant_sku": "20340",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 793,
+          "item_code": "20340",
+          "item_details": "DELI 9110 DESK ORGANIZER 7 COMP 670",
+          "item_group": "DELI",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 20,
+      "title": "DELI 9099 2.5X/11X MAGNIFIER",
+      "brand": "Deli",
+      "variant_sku": "20315",
+      "old_variant_inventory_qty": 23,
+      "new_variant_inventory_qty": 23,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 792,
+          "item_code": "20315",
+          "item_details": "DELI 9099 2.5X/11X MAGNIFIER 610",
+          "item_group": "DELI",
+          "cl_qty": 23
+        }
+      ]
+    },
+    {
+      "website_row": 21,
+      "title": "DELI 9092 45MM 3X/5X MAGNIFIER",
+      "brand": "Deli",
+      "variant_sku": "20314",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 791,
+          "item_code": "20314",
+          "item_details": "DELI 9092 45MM 3X/5X MAGNIFIER 150",
+          "item_group": "DELI",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "website_row": 22,
+      "title": "DELI 9091 55M 3X 6X MAGNIFIER",
+      "brand": "Deli",
+      "variant_sku": "20313",
+      "old_variant_inventory_qty": 6,
+      "new_variant_inventory_qty": 14,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 790,
+          "item_code": "20313",
+          "item_details": "DELI 9091 55M 3X 6X MAGNIFIER 165",
+          "item_group": "DELI",
+          "cl_qty": 14
+        }
+      ]
+    },
+    {
+      "website_row": 23,
+      "title": "DELI 9090 70MM 2.5X 5X MAGNIFIER",
+      "brand": "Deli",
+      "variant_sku": "20312",
+      "old_variant_inventory_qty": 8,
+      "new_variant_inventory_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 789,
+          "item_code": "20312",
+          "item_details": "DELI 9090 70MM 2.5X 5X MAGNIFIER 175",
+          "item_group": "DELI",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 24,
+      "title": "DELI 909 PEN HOLDER",
+      "brand": "Deli",
+      "variant_sku": "20311",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 33,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched - Busy Duplicates Summed",
+      "busy_matches": [
+        {
+          "busy_row": 787,
+          "item_code": "20311",
+          "item_details": "DELI 909 PEN HOLDER 195",
+          "item_group": "DELI",
+          "cl_qty": 27
+        },
+        {
+          "busy_row": 788,
+          "item_code": "20311",
+          "item_details": "DELI 909 PEN HOLDER 200",
+          "item_group": "DELI",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "website_row": 25,
+      "title": "DELI 908 PEN HOLDER",
+      "brand": "Deli",
+      "variant_sku": "20310",
+      "old_variant_inventory_qty": 13,
+      "new_variant_inventory_qty": 14,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched - Busy Duplicates Summed",
+      "busy_matches": [
+        {
+          "busy_row": 785,
+          "item_code": "20310",
+          "item_details": "DELI 908 PEN HOLDER 195",
+          "item_group": "DELI",
+          "cl_qty": -5
+        },
+        {
+          "busy_row": 786,
+          "item_code": "20310",
+          "item_details": "DELI 908 PEN HOLDER 210",
+          "item_group": "DELI",
+          "cl_qty": 19
+        }
+      ]
+    },
+    {
+      "website_row": 26,
+      "title": "DELI 907 PEN STAND",
+      "brand": "Deli",
+      "variant_sku": "20309",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 784,
+          "item_code": "20309",
+          "item_details": "DELI 907 PEN STAND 410",
+          "item_group": "DELI",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 27,
+      "title": "DELI 8592 CLIP REFILLS",
+      "brand": "Deli",
+      "variant_sku": "20307",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 782,
+          "item_code": "20307",
+          "item_details": "DELI 8592 CLIP REFILLS 135",
+          "item_group": "DELI",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 28,
+      "title": "DELI 8591 PAPER CLIPPERS SET",
+      "brand": "Deli",
+      "variant_sku": "20306",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 781,
+          "item_code": "20306",
+          "item_details": "DELI 8591 PAPER CLIPPERS SET 100",
+          "item_group": "DELI",
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "website_row": 29,
+      "title": "DELI 8560 CLRD BINDER CLIP",
+      "brand": "Deli",
+      "variant_sku": "20305",
+      "old_variant_inventory_qty": 21,
+      "new_variant_inventory_qty": 21,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 780,
+          "item_code": "20305",
+          "item_details": "DELI 8560 CLRD BINDER CLIP 195",
+          "item_group": "DELI",
+          "cl_qty": 21
+        }
+      ]
+    },
+    {
+      "website_row": 30,
+      "title": "DELI 8499 STATIONERY SET",
+      "brand": "Deli",
+      "variant_sku": "20304",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 779,
+          "item_code": "20304",
+          "item_details": "DELI 8499 STATIONERY SET 285",
+          "item_group": "DELI",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 31,
+      "title": "DELI 816 TAPE DISPENSER",
+      "brand": "Deli",
+      "variant_sku": "20303",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 778,
+          "item_code": "20303",
+          "item_details": "DELI 816 TAPE DISPENSER 245",
+          "item_group": "DELI",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 32,
+      "title": "DELI 815A TAPE DISPENSER",
+      "brand": "Deli",
+      "variant_sku": "20339",
+      "old_variant_inventory_qty": 8,
+      "new_variant_inventory_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 777,
+          "item_code": "20339",
+          "item_details": "DELI 815A TAPE DISPENSER 185",
+          "item_group": "DELI",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "website_row": 33,
+      "title": "DELI 815 TAPE DISPENSER",
+      "brand": "Deli",
+      "variant_sku": "20302",
+      "old_variant_inventory_qty": 5,
+      "new_variant_inventory_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 776,
+          "item_code": "20302",
+          "item_details": "DELI 815 TAPE DISPENSER 195",
+          "item_group": "DELI",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "website_row": 34,
+      "title": "DELI 812 TAPE DISPENSER",
+      "brand": "Deli",
+      "variant_sku": "20301",
+      "old_variant_inventory_qty": 5,
+      "new_variant_inventory_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 775,
+          "item_code": "20301",
+          "item_details": "DELI 812 TAPE DISPENSER 395",
+          "item_group": "DELI",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 35,
+      "title": "DELI 811 TAPE DISPENSER",
+      "brand": "Deli",
+      "variant_sku": "20300",
+      "old_variant_inventory_qty": 7,
+      "new_variant_inventory_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 774,
+          "item_code": "20300",
+          "item_details": "DELI 811 TAPE DISPENSER 125",
+          "item_group": "DELI",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "website_row": 36,
+      "title": "DELI 78553 DESK ACCESSORIES SET",
+      "brand": "Deli",
+      "variant_sku": "20299",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 32,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 773,
+          "item_code": "20299",
+          "item_details": "DELI 78553 DESK ACCESSORIES SET 180",
+          "item_group": "DELI",
+          "cl_qty": 32
+        }
+      ]
+    },
+    {
+      "website_row": 37,
+      "title": "DELI 7836 WHITEBOARD ERASER MAGNETIC",
+      "brand": "Deli",
+      "variant_sku": "20298",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 772,
+          "item_code": "20298",
+          "item_details": "DELI 7836 WHITEBOARD ERASER MAGNETIC 100",
+          "item_group": "DELI",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 38,
+      "title": "DELI 7834 WHITE BOARD ERASER",
+      "brand": "Deli",
+      "variant_sku": "20297",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 11,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 771,
+          "item_code": "20297",
+          "item_details": "DELI 7834 WHITE BOARD ERASER 95",
+          "item_group": "DELI",
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "website_row": 39,
+      "title": "DELI 77756 SCISSORS",
+      "brand": "Deli",
+      "variant_sku": "20296",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 770,
+          "item_code": "20296",
+          "item_details": "DELI 77756 SCISSORS 170",
+          "item_group": "DELI",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 40,
+      "title": "DELI 7264 5MM CORRECTION TAPE",
+      "brand": "Deli",
+      "variant_sku": "20338",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 769,
+          "item_code": "20338",
+          "item_details": "DELI 7264 5MM CORRECTION TAPE 50",
+          "item_group": "DELI",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 41,
+      "title": "DELI 7154 MEMO PAPER",
+      "brand": "Deli",
+      "variant_sku": "20294",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 16,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 767,
+          "item_code": "20294",
+          "item_details": "DELI 7154 MEMO PAPER 44",
+          "item_group": "DELI",
+          "cl_qty": 16
+        }
+      ]
+    },
+    {
+      "website_row": 42,
+      "title": "DELI 6209 CLRD FLEXIBLE 30CM SCALE",
+      "brand": "Deli",
+      "variant_sku": "20292",
+      "old_variant_inventory_qty": 39,
+      "new_variant_inventory_qty": 39,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 765,
+          "item_code": "20292",
+          "item_details": "DELI 6209 CLRD FLEXIBLE 30CM SCALE 50",
+          "item_group": "DELI",
+          "cl_qty": 39
+        }
+      ]
+    },
+    {
+      "website_row": 43,
+      "title": "DELI 6067 SCISSORS",
+      "brand": "Deli",
+      "variant_sku": "20291",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 764,
+          "item_code": "20291",
+          "item_details": "DELI 6067 SCISSORS 70",
+          "item_group": "DELI",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 44,
+      "title": "DELI 6021 SCISSORS",
+      "brand": "Deli",
+      "variant_sku": "20290",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 763,
+          "item_code": "20290",
+          "item_details": "DELI 6021 SCISSORS 70",
+          "item_group": "DELI",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 45,
+      "title": "DELI 6014 SCISSORS",
+      "brand": "Deli",
+      "variant_sku": "20289",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 762,
+          "item_code": "20289",
+          "item_details": "DELI 6014 SCISSORS 165",
+          "item_group": "DELI",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 46,
+      "title": "DELI 6013 SCISSORS",
+      "brand": "Deli",
+      "variant_sku": "20288",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 761,
+          "item_code": "20288",
+          "item_details": "DELI 6013 SCISSORS 140",
+          "item_group": "DELI",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 47,
+      "title": "DELI 6010 SCISSORS",
+      "brand": "Deli",
+      "variant_sku": "20287",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 760,
+          "item_code": "20287",
+          "item_details": "DELI 6010 SCISSORS 155",
+          "item_group": "DELI",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 48,
+      "title": "DELI 6009 180MM SCISSORS",
+      "brand": "Deli",
+      "variant_sku": "20286",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 759,
+          "item_code": "20286",
+          "item_details": "DELI 6009 180MM SCISSORS 100",
+          "item_group": "DELI",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 49,
+      "title": "DELI 6005 SCISSORS",
+      "brand": "Deli",
+      "variant_sku": "20337",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 758,
+          "item_code": "20337",
+          "item_details": "DELI 6005 SCISSORS 115",
+          "item_group": "DELI",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 50,
+      "title": "DELI 6003 SCISSORS",
+      "brand": "Deli",
+      "variant_sku": "20285",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 757,
+          "item_code": "20285",
+          "item_details": "DELI 6003 SCISSORS 130",
+          "item_group": "DELI",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 51,
+      "title": "DELI 6002 SCISSORS",
+      "brand": "Deli",
+      "variant_sku": "20284",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 756,
+          "item_code": "20284",
+          "item_details": "DELI 6002 SCISSORS 170",
+          "item_group": "DELI",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 52,
+      "title": "DELI 6001 SCISSORS",
+      "brand": "Deli",
+      "variant_sku": "20283",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 755,
+          "item_code": "20283",
+          "item_details": "DELI 6001 SCISSORS 175",
+          "item_group": "DELI",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 53,
+      "title": "DELI 5606 DOCUMENT CASE DELI",
+      "brand": "Deli",
+      "variant_sku": "20282",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 748,
+          "item_code": "20282",
+          "item_details": "DELI 5606 DOCUMENT CASE DELI 250",
+          "item_group": "DELI",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 54,
+      "title": "DELI 5549 METAL BINDER",
+      "brand": "Deli",
+      "variant_sku": "20281",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 746,
+          "item_code": "20281",
+          "item_details": "DELI 5549 METAL BINDER 110",
+          "item_group": "DELI",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 55,
+      "title": "DELI 54600 HB PENCILS",
+      "brand": "Deli",
+      "variant_sku": "20280",
+      "old_variant_inventory_qty": 17,
+      "new_variant_inventory_qty": 336,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 744,
+          "item_code": "20280",
+          "item_details": "DELI 54600 HB PENCILS 85",
+          "item_group": "DELI",
+          "cl_qty": 336
+        }
+      ]
+    },
+    {
+      "website_row": 56,
+      "title": "DELI 49201 ADHESIVE ROLLER",
+      "brand": "Deli",
+      "variant_sku": "20279",
+      "old_variant_inventory_qty": 12,
+      "new_variant_inventory_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 743,
+          "item_code": "20279",
+          "item_details": "DELI 49201 ADHESIVE ROLLER 125",
+          "item_group": "DELI",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 57,
+      "title": "DELI 39815 STIKY PAPER",
+      "brand": "Deli",
+      "variant_sku": "20278",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 742,
+          "item_code": "20278",
+          "item_details": "DELI 39815 STIKY PAPER 15",
+          "item_group": "DELI",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 58,
+      "title": "DELI 39231N 12D CALCULATOR",
+      "brand": "Deli",
+      "variant_sku": "20277",
+      "old_variant_inventory_qty": 5,
+      "new_variant_inventory_qty": 34,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 741,
+          "item_code": "20277",
+          "item_details": "DELI 39231N 12D CALCULATOR 395",
+          "item_group": "DELI",
+          "cl_qty": 34
+        }
+      ]
+    },
+    {
+      "website_row": 59,
+      "title": "DELI 39231B 12D CALCULATOR",
+      "brand": "Deli",
+      "variant_sku": "20276",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 740,
+          "item_code": "20276",
+          "item_details": "DELI 39231B 12D CALCULATOR 395",
+          "item_group": "DELI",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "website_row": 60,
+      "title": "DELI 38165 FILE BAG TRANSPARENT",
+      "brand": "Deli",
+      "variant_sku": "20274",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 17,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 738,
+          "item_code": "20274",
+          "item_details": "DELI 38165 FILE BAG TRANSPARENT 20",
+          "item_group": "DELI",
+          "cl_qty": 17
+        }
+      ]
+    },
+    {
+      "website_row": 61,
+      "title": "DELI 21610 MAGIC TACK",
+      "brand": "Deli",
+      "variant_sku": "20336",
+      "old_variant_inventory_qty": 8,
+      "new_variant_inventory_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 736,
+          "item_code": "20336",
+          "item_details": "DELI 21610 MAGIC TACK 100",
+          "item_group": "DELI",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 62,
+      "title": "DELI 20700 GLUE STICK",
+      "brand": "Deli",
+      "variant_sku": "20273",
+      "old_variant_inventory_qty": 16,
+      "new_variant_inventory_qty": 15,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 735,
+          "item_code": "20273",
+          "item_details": "DELI 20700 GLUE STICK 30",
+          "item_group": "DELI",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "website_row": 63,
+      "title": "DELI 1237 CALCULATOR",
+      "brand": "Deli",
+      "variant_sku": "20272",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 734,
+          "item_code": "20272",
+          "item_details": "DELI 1237 CALCULATOR 899",
+          "item_group": "DELI",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 64,
+      "title": "DELI 0929 BASKET",
+      "brand": "Deli",
+      "variant_sku": "20271",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 732,
+          "item_code": "20271",
+          "item_details": "DELI 0929 BASKET 60",
+          "item_group": "DELI",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "website_row": 65,
+      "title": "DELI 0635 ROTARY PENCIL SHARPENER",
+      "brand": "Deli",
+      "variant_sku": "20269",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 730,
+          "item_code": "20269",
+          "item_details": "DELI 0635 ROTARY PENCIL SHARPENER 380",
+          "item_group": "DELI",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 66,
+      "title": "DELI 0603 SCISSORS",
+      "brand": "Deli",
+      "variant_sku": "20268",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 729,
+          "item_code": "20268",
+          "item_details": "DELI 0603 SCISSORS 105",
+          "item_group": "DELI",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 67,
+      "title": "DELI 02602 STICKY NOTES 4 X 25 NEON",
+      "brand": "Deli",
+      "variant_sku": "20267",
+      "old_variant_inventory_qty": 32,
+      "new_variant_inventory_qty": 14,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 728,
+          "item_code": "20267",
+          "item_details": "DELI 02602 STICKY NOTES 4 X 25 NEON 60\"",
+          "item_group": "DELI",
+          "cl_qty": 14
+        }
+      ]
+    },
+    {
+      "website_row": 68,
+      "title": "DELI 01302 STICKY NOTES 100 SHEET",
+      "brand": "Deli",
+      "variant_sku": "20266",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": -1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 727,
+          "item_code": "20266",
+          "item_details": "DELI 01302 STICKY NOTES 100 SHEET 60",
+          "item_group": "DELI",
+          "cl_qty": -1
+        }
+      ]
+    },
+    {
+      "website_row": 69,
+      "title": "DELI 00752 STICKY NOTES",
+      "brand": "Deli",
+      "variant_sku": "20265",
+      "old_variant_inventory_qty": 12,
+      "new_variant_inventory_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 726,
+          "item_code": "20265",
+          "item_details": "DELI 00752 STICKY NOTES 120\"",
+          "item_group": "DELI",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 70,
+      "title": "DELI 0025 PAPER CLIPS",
+      "brand": "Deli",
+      "variant_sku": "20264",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 725,
+          "item_code": "20264",
+          "item_details": "DELI 0025 PAPER CLIPS 60",
+          "item_group": "DELI",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 71,
+      "title": "DELI 0024 PAPER CLIPS",
+      "brand": "Deli",
+      "variant_sku": "20263",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 724,
+          "item_code": "20263",
+          "item_details": "DELI 0024 PAPER CLIPS 60",
+          "item_group": "DELI",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 72,
+      "title": "BOAT WAVE PLAY SMART WATCH 5990",
+      "brand": "Deli",
+      "variant_sku": "13683",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 810,
+          "item_code": "13683",
+          "item_details": "DELI BOAT WAVE PLAY SMART WATCH 5990",
+          "item_group": "DELI",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 73,
+      "title": "FIRE BOLTT BSW007 SMART WATCH BEIGE 4999",
+      "brand": "Deli",
+      "variant_sku": "13679",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1124,
+          "item_code": "13679",
+          "item_details": "FIRE BOLTT BSW007 SMART WATCH 4999",
+          "item_group": "PREMIUM",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 74,
+      "title": "DELI A10602 STICK NOTES INDEX TABS 5COLORS",
+      "brand": "Deli",
+      "variant_sku": "17345",
+      "old_variant_inventory_qty": 24,
+      "new_variant_inventory_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 733,
+          "item_code": "17345",
+          "item_details": "DELI 10602 STICKY NOTES  INDEX TAB 75",
+          "item_group": "DELI",
+          "cl_qty": 20
+        }
+      ]
+    },
+    {
+      "website_row": 75,
+      "title": "DELI A300 11 INVISIBLE TAPE",
+      "brand": "Deli",
+      "variant_sku": "17347",
+      "old_variant_inventory_qty": 34,
+      "new_variant_inventory_qty": 34,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 809,
+          "item_code": "17347",
+          "item_details": "DELI A300 11 INVISIBLE TAPE 85",
+          "item_group": "DELI",
+          "cl_qty": 34
+        }
+      ]
+    },
+    {
+      "website_row": 76,
+      "title": "DELI A55002 STICKY NOTES",
+      "brand": "Deli",
+      "variant_sku": "17350",
+      "old_variant_inventory_qty": 28,
+      "new_variant_inventory_qty": 104,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 745,
+          "item_code": "17350",
+          "item_details": "DELI 55002 STICKY NOTES 2X20 SHEET 60",
+          "item_group": "DELI",
+          "cl_qty": 104
+        }
+      ]
+    },
+    {
+      "website_row": 77,
+      "title": "DELI 382450A ROTARY DESK ORGANIZER",
+      "brand": "Deli",
+      "variant_sku": "17380",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 739,
+          "item_code": "17380",
+          "item_details": "DELI 382450A DESK ORGANISER 850",
+          "item_group": "DELI",
+          "cl_qty": 4
+        }
+      ]
+    }
+  ]
+}

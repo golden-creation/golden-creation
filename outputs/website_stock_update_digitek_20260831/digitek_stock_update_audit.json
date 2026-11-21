@@ -1,0 +1,351 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (23).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_digitek_20260831\\digitek products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\digitek products - Updated Website Stock.xlsx",
+  "summary": {
+    "Matched": 17
+  },
+  "rows": [
+    {
+      "website_row": 2,
+      "title": "DIGITEK DBH-006 BLUETOOTH HEADPHONE",
+      "brand": "Digitek",
+      "variant_sku": "20350",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 822,
+          "item_code": "20350",
+          "item_details": "DG DBH-006 BT HEADPHONE 1495\"",
+          "item_group": "DIGITEK",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 3,
+      "title": "DIGITEK 18R RING LIGHT",
+      "brand": "Digitek",
+      "variant_sku": "19203",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 819,
+          "item_code": "19203",
+          "item_details": "DG 18R RING LIGHT 6295",
+          "item_group": "DIGITEK",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 4,
+      "title": "DIGITEK 9FT LIGHT STAND",
+      "brand": "Digitek",
+      "variant_sku": "20348",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 820,
+          "item_code": "20348",
+          "item_details": "DG 9FT LIGHT STAND 1595",
+          "item_group": "DIGITEK",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 5,
+      "title": "DIGITEK DBH-005 BLUETOOTH HEADPHONE",
+      "brand": "Digitek",
+      "variant_sku": "20349",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 821,
+          "item_code": "20349",
+          "item_details": "DG DBH-005 BT HEADPHONE 1495",
+          "item_group": "DIGITEK",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 6,
+      "title": "DIGITEK DBH-011 BLUETOOTH HEADPHONE",
+      "brand": "Digitek",
+      "variant_sku": "20351",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 823,
+          "item_code": "20351",
+          "item_details": "DG DBH-011 BT HEADPHONE 500",
+          "item_group": "DIGITEK",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 7,
+      "title": "DIGITEK DBS-021 BLUETOOTH SPEAKER",
+      "brand": "Digitek",
+      "variant_sku": "13615",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 824,
+          "item_code": "13615",
+          "item_details": "DG DBS-021 BT SPEAKER 1295",
+          "item_group": "DIGITEK",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 8,
+      "title": "DIGITEK DBS-210 SOULBUDS BLUETOOTH TWS SPEAKER",
+      "brand": "Digitek",
+      "variant_sku": "8774",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 826,
+          "item_code": "8774",
+          "item_details": "DG DBS-210 SOULBUDS BT TWS SPEAKER 1995",
+          "item_group": "DIGITEK",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 9,
+      "title": "DIGITEK DBS-410 BLUETOOTH SPEAKER",
+      "brand": "Digitek",
+      "variant_sku": "13641",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 828,
+          "item_code": "13641",
+          "item_details": "DG DBS-410 BT SPEAKER 3995",
+          "item_group": "DIGITEK",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 10,
+      "title": "DIGITEK DWM-003 MICROPHONES C-T CONNECT",
+      "brand": "Digitek",
+      "variant_sku": "13650",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 834,
+          "item_code": "13650",
+          "item_details": "DG DWM-003 MICROPHONES C-T CONNECT 3295",
+          "item_group": "DIGITEK",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 11,
+      "title": "DIGITEK DE-044 EARPHONE",
+      "brand": "Digitek",
+      "variant_sku": "13647",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 830,
+          "item_code": "13647",
+          "item_details": "DG DE-044 EARPHONE 395",
+          "item_group": "DIGITEK",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 12,
+      "title": "DIGITEK DE-044 LTC EARPHONES",
+      "brand": "Digitek",
+      "variant_sku": "13644",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 831,
+          "item_code": "13644",
+          "item_details": "DG DE-044 LTC EARPHONES 695",
+          "item_group": "DIGITEK",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 13,
+      "title": "DIGITEK DWM-001 MICROPHONES C-T CONNECT",
+      "brand": "Digitek",
+      "variant_sku": "13657",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 832,
+          "item_code": "13657",
+          "item_details": "DG DWM-001 MICROPHONES C-T CONNECT 2295",
+          "item_group": "DIGITEK",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 14,
+      "title": "DIGITEK DWM-002 MICROPHONES LTC CONNECT",
+      "brand": "Digitek",
+      "variant_sku": "13658",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 833,
+          "item_code": "13658",
+          "item_details": "DG DWM-002 MICROPHONES LTC CONNECT 2795",
+          "item_group": "DIGITEK",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 15,
+      "title": "DIGITEK DWM-004 MICROPHONES LTC CONNECT",
+      "brand": "Digitek",
+      "variant_sku": "13655",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 835,
+          "item_code": "13655",
+          "item_details": "DG DWM-004 MICROPHONES LTC CONNECT 3795",
+          "item_group": "DIGITEK",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 16,
+      "title": "DIGITEK DE 044C EARPHONE WITH C TYPE JACK",
+      "brand": "Digitek",
+      "variant_sku": "8765",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 829,
+          "item_code": "8765",
+          "item_details": "DG DE 044C EARPHONE 595",
+          "item_group": "DIGITEK",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 17,
+      "title": "DIGITEK WM501 ELISTA WIRD MOUSE 149",
+      "brand": "Digitek",
+      "variant_sku": "8777",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 836,
+          "item_code": "8777",
+          "item_details": "DG WM501 ELISTA WIRED MOUSE 149",
+          "item_group": "DIGITEK",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 18,
+      "title": "DIGITEK DBS-028 BT SPEAKER",
+      "brand": "Digitek",
+      "variant_sku": "20352",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 825,
+          "item_code": "20352",
+          "item_details": "DG DBS-028 BT SPEAKER 1995",
+          "item_group": "DIGITEK",
+          "cl_qty": 0
+        }
+      ]
+    }
+  ]
+}

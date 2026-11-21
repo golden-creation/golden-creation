@@ -1,0 +1,235 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\adnet products.xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_adnet_20260820\\adnet products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\adnet products - Updated Website Stock.xlsx",
+  "downloads_copy_status": "copied",
+  "target_sheet": "Products",
+  "lookup_column": "Variant SKU",
+  "updated_column": "Variant Inventory Qty",
+  "counts": {
+    "Matched": 12
+  },
+  "website_sku_rows": 12,
+  "website_unique_skus": 12,
+  "website_duplicate_skus": {},
+  "changed_rows": 7,
+  "rows": [
+    {
+      "website_row": 2,
+      "variant_sku": "8559",
+      "title": "ADNET CLEAN & SHINE GEL 100ML",
+      "old_variant_inventory_qty": 20,
+      "new_variant_inventory_qty": 33,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 85,
+          "item_code": "8559",
+          "item_details": "ADNET CLEAN & SHINE GEL 100ML 99",
+          "item_group": "ADNET",
+          "cl_qty": 33
+        }
+      ]
+    },
+    {
+      "website_row": 3,
+      "variant_sku": "12976",
+      "title": "ADNET MOUSE PAD AD-MP-01",
+      "old_variant_inventory_qty": 5,
+      "new_variant_inventory_qty": 15,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 87,
+          "item_code": "12976",
+          "item_details": "ADNET MOUSE PAD AD-MP-01 70",
+          "item_group": "ADNET",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "website_row": 4,
+      "variant_sku": "12982",
+      "title": "ADNET MOUSE PAD AD-MP-04",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 90,
+          "item_code": "12982",
+          "item_details": "ADNET MOUSE PAD AD-MP-04 40",
+          "item_group": "ADNET",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 5,
+      "variant_sku": "12985",
+      "title": "ADNET MOUSE PAD AD-MP-05",
+      "old_variant_inventory_qty": 5,
+      "new_variant_inventory_qty": 5,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 91,
+          "item_code": "12985",
+          "item_details": "ADNET MOUSE PAD AD-MP-05 80",
+          "item_group": "ADNET",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "website_row": 6,
+      "variant_sku": "8560",
+      "title": "ADNET CLEAN & SHINE GEL 200ML",
+      "old_variant_inventory_qty": 43,
+      "new_variant_inventory_qty": 45,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 86,
+          "item_code": "8560",
+          "item_details": "ADNET CLEAN & SHINE GEL 200ML 199",
+          "item_group": "ADNET",
+          "cl_qty": 45
+        }
+      ]
+    },
+    {
+      "website_row": 7,
+      "variant_sku": "12978",
+      "title": "ADNET MOUSE PAD AD-MP-02",
+      "old_variant_inventory_qty": 6,
+      "new_variant_inventory_qty": 6,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 88,
+          "item_code": "12978",
+          "item_details": "ADNET MOUSE PAD AD-MP-02 80",
+          "item_group": "ADNET",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "website_row": 8,
+      "variant_sku": "12980",
+      "title": "ADNET MOUSE PAD AD-MP-03",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 4,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 89,
+          "item_code": "12980",
+          "item_details": "ADNET MOUSE PAD AD-MP-03 60",
+          "item_group": "ADNET",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 9,
+      "variant_sku": "10260",
+      "title": "ADNET SOCKET MULTIPLEXAR 1.5MTR",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 3,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 92,
+          "item_code": "10260",
+          "item_details": "ADNET SOCKET MULTIPLEXAR 1.5MTR 250",
+          "item_group": "ADNET",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 10,
+      "variant_sku": "8556",
+      "title": "ADNET 201 USB OPTICAL MOUSE",
+      "old_variant_inventory_qty": 14,
+      "new_variant_inventory_qty": 18,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 81,
+          "item_code": "8556",
+          "item_details": "ADNET 201 USB OPTICAL MOUSE 150",
+          "item_group": "ADNET",
+          "cl_qty": 18
+        }
+      ]
+    },
+    {
+      "website_row": 11,
+      "variant_sku": "8555",
+      "title": "ADNET 890 WIRELESS MOUSE 750",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 82,
+          "item_code": "8555",
+          "item_details": "ADNET 890 WIRE LESS MOUSE 750",
+          "item_group": "ADNET",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 12,
+      "variant_sku": "10261",
+      "title": "ADNET AD-SP-205 MULTIMEDIA SPEAKER SET",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 84,
+          "item_code": "10261",
+          "item_details": "ADNET AD-SP-205 MM SPEAKER SET 550",
+          "item_group": "ADNET",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 13,
+      "variant_sku": "10264",
+      "title": "ADNET AD 6115 1.5M SOCKET",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 83,
+          "item_code": "10264",
+          "item_details": "ADNET AD 6115 1.5M SOCKET 250",
+          "item_group": "ADNET",
+          "cl_qty": 1
+        }
+      ]
+    }
+  ]
+}

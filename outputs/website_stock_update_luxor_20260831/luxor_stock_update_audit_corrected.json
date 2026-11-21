@@ -1,0 +1,1676 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (52).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "busy_sheet": "Sheet1",
+  "project_output": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_luxor_20260831\\luxor products - Updated Website Stock Corrected.xlsx",
+  "downloads_output": "C:\\Users\\My-PC-Win10\\Downloads\\luxor products - Updated Website Stock Corrected.xlsx",
+  "downloads_status": "corrected_copy",
+  "meta": {
+    "sheet_name": "Products",
+    "max_row": 37,
+    "max_column": 34,
+    "sku_col": 16,
+    "stock_col": 17,
+    "warehouse_col": 18,
+    "shop_col": 19
+  },
+  "summary": {
+    "website_sku_rows": 36,
+    "matched_direct": 27,
+    "duplicate_code_summed": 2,
+    "missing_in_busy": 7,
+    "base_code_available_no_exact_sku": 7,
+    "changed": 24,
+    "negative_new_qty": 0,
+    "fractional_new_qty": 1
+  },
+  "missing_in_busy": [
+    {
+      "row": 26,
+      "sku": "18826-C-GC04",
+      "base_sku": "18826",
+      "title": "LUXOR 997N SUPER CHISEL MARKER BLACK PACK OF 10PCS - BLACK",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 27,
+      "sku": "18826-C-GC01",
+      "base_sku": "18826",
+      "title": "LUXOR 997N SUPER CHISEL MARKER BLACK PACK OF 10PCS - RED",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 28,
+      "sku": "18821-C-GC01",
+      "base_sku": "18821",
+      "title": "LUXOR 971 BROAD MARKER PACK OF 10PCS - RED",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 29,
+      "sku": "18826-C-GC03",
+      "base_sku": "18826",
+      "title": "LUXOR 997N SUPER CHISEL MARKER BLACK PACK OF 10PCS - BLUE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 30,
+      "sku": "18826-C-GC02",
+      "base_sku": "18826",
+      "title": "LUXOR 997N SUPER CHISEL MARKER BLACK PACK OF 10PCS - PINK",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 31,
+      "sku": "18821-C-GC03",
+      "base_sku": "18821",
+      "title": "LUXOR 971 BROAD MARKER PACK OF 10PCS - BLUE",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    },
+    {
+      "row": 32,
+      "sku": "18821-C-GC02",
+      "base_sku": "18821",
+      "title": "LUXOR 971 BROAD MARKER PACK OF 10PCS - GREEN",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0
+    }
+  ],
+  "base_code_available_no_exact_sku": [
+    {
+      "row": 26,
+      "sku": "18826-C-GC04",
+      "base_sku": "18826",
+      "title": "LUXOR 997N SUPER CHISEL MARKER BLACK PACK OF 10PCS - BLACK",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1926,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 77
+        }
+      ]
+    },
+    {
+      "row": 27,
+      "sku": "18826-C-GC01",
+      "base_sku": "18826",
+      "title": "LUXOR 997N SUPER CHISEL MARKER BLACK PACK OF 10PCS - RED",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1926,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 77
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "sku": "18821-C-GC01",
+      "base_sku": "18821",
+      "title": "LUXOR 971 BROAD MARKER PACK OF 10PCS - RED",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1923,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 69
+        }
+      ]
+    },
+    {
+      "row": 29,
+      "sku": "18826-C-GC03",
+      "base_sku": "18826",
+      "title": "LUXOR 997N SUPER CHISEL MARKER BLACK PACK OF 10PCS - BLUE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1926,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 77
+        }
+      ]
+    },
+    {
+      "row": 30,
+      "sku": "18826-C-GC02",
+      "base_sku": "18826",
+      "title": "LUXOR 997N SUPER CHISEL MARKER BLACK PACK OF 10PCS - PINK",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1926,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 77
+        }
+      ]
+    },
+    {
+      "row": 31,
+      "sku": "18821-C-GC03",
+      "base_sku": "18821",
+      "title": "LUXOR 971 BROAD MARKER PACK OF 10PCS - BLUE",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1923,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 69
+        }
+      ]
+    },
+    {
+      "row": 32,
+      "sku": "18821-C-GC02",
+      "base_sku": "18821",
+      "title": "LUXOR 971 BROAD MARKER PACK OF 10PCS - GREEN",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "base_busy_rows": [
+        {
+          "busy_row": 1923,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 69
+        }
+      ]
+    }
+  ],
+  "duplicate_code_summed": [
+    {
+      "row": 17,
+      "sku": "10711",
+      "base_sku": "10711",
+      "title": "LUXOR 1 SUBJECT SPIRAL NOTEBOOK A5 160PAGES",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 52,
+      "busy_rows": [
+        {
+          "busy_row": 1895,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 115,
+          "cl_qty": 3
+        },
+        {
+          "busy_row": 1896,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 120,
+          "cl_qty": 49
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 18,
+      "sku": "10715",
+      "base_sku": "10715",
+      "title": "LUXOR 5 SUBJECT SPIRAL NOTEBOOK A5 300PAGES",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 30,
+      "busy_rows": [
+        {
+          "busy_row": 1912,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 180,
+          "cl_qty": 1
+        },
+        {
+          "busy_row": 1913,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 190,
+          "cl_qty": 29
+        }
+      ],
+      "base_busy_rows": []
+    }
+  ],
+  "negative_new_qty": [],
+  "fractional_new_qty": [
+    {
+      "row": 12,
+      "sku": "21048",
+      "base_sku": "21048",
+      "title": "LUXOR 886 HIGHLIGHTER SET",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8.2,
+      "busy_rows": [
+        {
+          "busy_row": 1917,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 125,
+          "cl_qty": 8.2
+        }
+      ],
+      "base_busy_rows": []
+    }
+  ],
+  "changed_rows": [
+    {
+      "row": 2,
+      "sku": "18814",
+      "base_sku": "18814",
+      "title": "LUXOR 920 JUNIOR COLOR PEN PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 17,
+      "busy_rows": [
+        {
+          "busy_row": 1918,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 85,
+          "cl_qty": 17
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 3,
+      "sku": "18816",
+      "base_sku": "18816",
+      "title": "LUXOR 976 Y SKETCH COLOR PEN PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 32,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 41,
+      "busy_rows": [
+        {
+          "busy_row": 1925,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 30,
+          "cl_qty": 41
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 7,
+      "sku": "21041",
+      "base_sku": "21041",
+      "title": "LUXOR 1 SUBJECT SPIRAL NOTEBOOK B5",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1897,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 150,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 8,
+      "sku": "21042",
+      "base_sku": "21042",
+      "title": "LUXOR 1223 WHITE BOARD MARKER",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 19,
+      "busy_rows": [
+        {
+          "busy_row": 1898,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 25,
+          "cl_qty": 19
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 9,
+      "sku": "21043",
+      "base_sku": "21043",
+      "title": "LUXOR 1223-R WBM SET",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 1899,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 560,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 10,
+      "sku": "21045",
+      "base_sku": "21045",
+      "title": "LUXOR 2982 GALAXY ROLLER PEN ASS",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 16,
+      "busy_rows": [
+        {
+          "busy_row": 1910,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 690,
+          "cl_qty": 16
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 11,
+      "sku": "21046",
+      "base_sku": "21046",
+      "title": "LUXOR 567 ASST GRAPHIC PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 98,
+      "busy_rows": [
+        {
+          "busy_row": 1915,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 98
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 12,
+      "sku": "21048",
+      "base_sku": "21048",
+      "title": "LUXOR 886 HIGHLIGHTER SET",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8.2,
+      "busy_rows": [
+        {
+          "busy_row": 1917,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 125,
+          "cl_qty": 8.2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 13,
+      "sku": "21049",
+      "base_sku": "21049",
+      "title": "LUXOR 950 SKETCH PEN SET",
+      "variant": "",
+      "old_qty": 13,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 1921,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 30,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 14,
+      "sku": "21050",
+      "base_sku": "21050",
+      "title": "LUXOR 969 OHP MARKER",
+      "variant": "",
+      "old_qty": 135,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 129,
+      "busy_rows": [
+        {
+          "busy_row": 1922,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 20,
+          "cl_qty": 129
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 16,
+      "sku": "9733",
+      "base_sku": "9733",
+      "title": "LUXOR 5 SUBJECT SPIRAL NOTEBOOK B5 300 PAGES",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 16,
+      "busy_rows": [
+        {
+          "busy_row": 1914,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 220,
+          "cl_qty": 16
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 17,
+      "sku": "10711",
+      "base_sku": "10711",
+      "title": "LUXOR 1 SUBJECT SPIRAL NOTEBOOK A5 160PAGES",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 52,
+      "busy_rows": [
+        {
+          "busy_row": 1895,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 115,
+          "cl_qty": 3
+        },
+        {
+          "busy_row": 1896,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 120,
+          "cl_qty": 49
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 18,
+      "sku": "10715",
+      "base_sku": "10715",
+      "title": "LUXOR 5 SUBJECT SPIRAL NOTEBOOK A5 300PAGES",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 30,
+      "busy_rows": [
+        {
+          "busy_row": 1912,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 180,
+          "cl_qty": 1
+        },
+        {
+          "busy_row": 1913,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 190,
+          "cl_qty": 29
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 19,
+      "sku": "13374",
+      "base_sku": "13374",
+      "title": "LUXOR 1 SUBJECT SPIRAL NOTEBOOK A4 160PAGES",
+      "variant": "",
+      "old_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 1894,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 170,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 20,
+      "sku": "18690",
+      "base_sku": "18690",
+      "title": "LUXOR 5 SUBJECT SPIRAL NOTEBOOK A4 300PAGES",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 1911,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 315,
+          "cl_qty": 12
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 21,
+      "sku": "18796",
+      "base_sku": "18796",
+      "title": "LUXOR 1852 ASSORTED HIGHLIGHTER 5N",
+      "variant": "",
+      "old_qty": 185,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 106,
+      "busy_rows": [
+        {
+          "busy_row": 1904,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 125,
+          "cl_qty": 106
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 22,
+      "sku": "18798",
+      "base_sku": "18798",
+      "title": "LUXOR 1852P ASSORTED PASTEL HIGHLIGHTER 5N",
+      "variant": "",
+      "old_qty": 28,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 26,
+      "busy_rows": [
+        {
+          "busy_row": 1905,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 125,
+          "cl_qty": 26
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 23,
+      "sku": "18800",
+      "base_sku": "18800",
+      "title": "LUXOR 921 SIGN PEN PACK OF 10PCS",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 36,
+      "busy_rows": [
+        {
+          "busy_row": 1919,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 12,
+          "cl_qty": 36
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 24,
+      "sku": "18824",
+      "base_sku": "18824",
+      "title": "LUXOR 971A BROAD MARKER ASSORTED COLOR PACK OF 10PCS",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 1924,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 25,
+      "sku": "18828",
+      "base_sku": "18828",
+      "title": "LUXOR 999 SUPER CHISEL MARKER ASSORTED COLOR PACK OF 10PCS",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 29,
+      "busy_rows": [
+        {
+          "busy_row": 1927,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 29
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 33,
+      "sku": "18845",
+      "base_sku": "18845",
+      "title": "LUXOR 946 GRAPHIC 05 PLUS PEN BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 102,
+      "busy_rows": [
+        {
+          "busy_row": 1920,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 12,
+          "cl_qty": 102
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 35,
+      "sku": "18850",
+      "base_sku": "18850",
+      "title": "LUXOR LIQUI WRITE BALL PEN 0.7MM",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 174,
+      "busy_rows": [
+        {
+          "busy_row": 1909,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 174
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 36,
+      "sku": "19365",
+      "base_sku": "19365",
+      "title": "LUXOR 20751 A4 LAYFLAT NOTEBOOK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1906,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 95,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 37,
+      "sku": "19363",
+      "base_sku": "19363",
+      "title": "LUXOR 20752 B5 LAYFLAT NOTEBOOK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 1907,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 90,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    }
+  ],
+  "rows": [
+    {
+      "row": 2,
+      "sku": "18814",
+      "base_sku": "18814",
+      "title": "LUXOR 920 JUNIOR COLOR PEN PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 17,
+      "busy_rows": [
+        {
+          "busy_row": 1918,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 85,
+          "cl_qty": 17
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 3,
+      "sku": "18816",
+      "base_sku": "18816",
+      "title": "LUXOR 976 Y SKETCH COLOR PEN PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 32,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 41,
+      "busy_rows": [
+        {
+          "busy_row": 1925,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 30,
+          "cl_qty": 41
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 4,
+      "sku": "18817",
+      "base_sku": "18817",
+      "title": "LUXOR 1231 W SKETCH COLOR PEN PACK OF 10PCS(BLACK)",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 5,
+      "busy_rows": [
+        {
+          "busy_row": 1900,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 25,
+          "cl_qty": 5
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 5,
+      "sku": "18794",
+      "base_sku": "18794",
+      "title": "LUXOR 2367 MODELLING DOUGH BUCKET 15GM*24N",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 1908,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 225,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 6,
+      "sku": "21044",
+      "base_sku": "21044",
+      "title": "LUXOR 1674 MODELLING DOUGH",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1901,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 170,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 7,
+      "sku": "21041",
+      "base_sku": "21041",
+      "title": "LUXOR 1 SUBJECT SPIRAL NOTEBOOK B5",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1897,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 150,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 8,
+      "sku": "21042",
+      "base_sku": "21042",
+      "title": "LUXOR 1223 WHITE BOARD MARKER",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 19,
+      "busy_rows": [
+        {
+          "busy_row": 1898,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 25,
+          "cl_qty": 19
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 9,
+      "sku": "21043",
+      "base_sku": "21043",
+      "title": "LUXOR 1223-R WBM SET",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 1899,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 560,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 10,
+      "sku": "21045",
+      "base_sku": "21045",
+      "title": "LUXOR 2982 GALAXY ROLLER PEN ASS",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 16,
+      "busy_rows": [
+        {
+          "busy_row": 1910,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 690,
+          "cl_qty": 16
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 11,
+      "sku": "21046",
+      "base_sku": "21046",
+      "title": "LUXOR 567 ASST GRAPHIC PEN",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 98,
+      "busy_rows": [
+        {
+          "busy_row": 1915,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 98
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 12,
+      "sku": "21048",
+      "base_sku": "21048",
+      "title": "LUXOR 886 HIGHLIGHTER SET",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 8.2,
+      "busy_rows": [
+        {
+          "busy_row": 1917,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 125,
+          "cl_qty": 8.2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 13,
+      "sku": "21049",
+      "base_sku": "21049",
+      "title": "LUXOR 950 SKETCH PEN SET",
+      "variant": "",
+      "old_qty": 13,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 10,
+      "busy_rows": [
+        {
+          "busy_row": 1921,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 30,
+          "cl_qty": 10
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 14,
+      "sku": "21050",
+      "base_sku": "21050",
+      "title": "LUXOR 969 OHP MARKER",
+      "variant": "",
+      "old_qty": 135,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 129,
+      "busy_rows": [
+        {
+          "busy_row": 1922,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 20,
+          "cl_qty": 129
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 15,
+      "sku": "21051",
+      "base_sku": "21051",
+      "title": "LUXOR GLOITER HIGHLIGHTER",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1946,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 25,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 16,
+      "sku": "9733",
+      "base_sku": "9733",
+      "title": "LUXOR 5 SUBJECT SPIRAL NOTEBOOK B5 300 PAGES",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 16,
+      "busy_rows": [
+        {
+          "busy_row": 1914,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 220,
+          "cl_qty": 16
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 17,
+      "sku": "10711",
+      "base_sku": "10711",
+      "title": "LUXOR 1 SUBJECT SPIRAL NOTEBOOK A5 160PAGES",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 52,
+      "busy_rows": [
+        {
+          "busy_row": 1895,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 115,
+          "cl_qty": 3
+        },
+        {
+          "busy_row": 1896,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 120,
+          "cl_qty": 49
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 18,
+      "sku": "10715",
+      "base_sku": "10715",
+      "title": "LUXOR 5 SUBJECT SPIRAL NOTEBOOK A5 300PAGES",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "duplicate_code_summed",
+      "new_qty": 30,
+      "busy_rows": [
+        {
+          "busy_row": 1912,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 180,
+          "cl_qty": 1
+        },
+        {
+          "busy_row": 1913,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 190,
+          "cl_qty": 29
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 19,
+      "sku": "13374",
+      "base_sku": "13374",
+      "title": "LUXOR 1 SUBJECT SPIRAL NOTEBOOK A4 160PAGES",
+      "variant": "",
+      "old_qty": 7,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 1894,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 170,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 20,
+      "sku": "18690",
+      "base_sku": "18690",
+      "title": "LUXOR 5 SUBJECT SPIRAL NOTEBOOK A4 300PAGES",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 12,
+      "busy_rows": [
+        {
+          "busy_row": 1911,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 315,
+          "cl_qty": 12
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 21,
+      "sku": "18796",
+      "base_sku": "18796",
+      "title": "LUXOR 1852 ASSORTED HIGHLIGHTER 5N",
+      "variant": "",
+      "old_qty": 185,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 106,
+      "busy_rows": [
+        {
+          "busy_row": 1904,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 125,
+          "cl_qty": 106
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 22,
+      "sku": "18798",
+      "base_sku": "18798",
+      "title": "LUXOR 1852P ASSORTED PASTEL HIGHLIGHTER 5N",
+      "variant": "",
+      "old_qty": 28,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 26,
+      "busy_rows": [
+        {
+          "busy_row": 1905,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 125,
+          "cl_qty": 26
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 23,
+      "sku": "18800",
+      "base_sku": "18800",
+      "title": "LUXOR 921 SIGN PEN PACK OF 10PCS",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 36,
+      "busy_rows": [
+        {
+          "busy_row": 1919,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 12,
+          "cl_qty": 36
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 24,
+      "sku": "18824",
+      "base_sku": "18824",
+      "title": "LUXOR 971A BROAD MARKER ASSORTED COLOR PACK OF 10PCS",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 1924,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 100,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 25,
+      "sku": "18828",
+      "base_sku": "18828",
+      "title": "LUXOR 999 SUPER CHISEL MARKER ASSORTED COLOR PACK OF 10PCS",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 29,
+      "busy_rows": [
+        {
+          "busy_row": 1927,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 29
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 26,
+      "sku": "18826-C-GC04",
+      "base_sku": "18826",
+      "title": "LUXOR 997N SUPER CHISEL MARKER BLACK PACK OF 10PCS - BLACK",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 4,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1926,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 77
+        }
+      ]
+    },
+    {
+      "row": 27,
+      "sku": "18826-C-GC01",
+      "base_sku": "18826",
+      "title": "LUXOR 997N SUPER CHISEL MARKER BLACK PACK OF 10PCS - RED",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 1,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1926,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 77
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "sku": "18821-C-GC01",
+      "base_sku": "18821",
+      "title": "LUXOR 971 BROAD MARKER PACK OF 10PCS - RED",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 20,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1923,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 69
+        }
+      ]
+    },
+    {
+      "row": 29,
+      "sku": "18826-C-GC03",
+      "base_sku": "18826",
+      "title": "LUXOR 997N SUPER CHISEL MARKER BLACK PACK OF 10PCS - BLUE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 1,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1926,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 77
+        }
+      ]
+    },
+    {
+      "row": 30,
+      "sku": "18826-C-GC02",
+      "base_sku": "18826",
+      "title": "LUXOR 997N SUPER CHISEL MARKER BLACK PACK OF 10PCS - PINK",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 1,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1926,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 77
+        }
+      ]
+    },
+    {
+      "row": 31,
+      "sku": "18821-C-GC03",
+      "base_sku": "18821",
+      "title": "LUXOR 971 BROAD MARKER PACK OF 10PCS - BLUE",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 20,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1923,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 69
+        }
+      ]
+    },
+    {
+      "row": 32,
+      "sku": "18821-C-GC02",
+      "base_sku": "18821",
+      "title": "LUXOR 971 BROAD MARKER PACK OF 10PCS - GREEN",
+      "variant": "",
+      "old_qty": 20,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "base_code_available_no_exact_sku",
+      "new_qty": 20,
+      "busy_rows": [],
+      "base_busy_rows": [
+        {
+          "busy_row": 1923,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 69
+        }
+      ]
+    },
+    {
+      "row": 33,
+      "sku": "18845",
+      "base_sku": "18845",
+      "title": "LUXOR 946 GRAPHIC 05 PLUS PEN BLUE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 102,
+      "busy_rows": [
+        {
+          "busy_row": 1920,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 12,
+          "cl_qty": 102
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 34,
+      "sku": "18848",
+      "base_sku": "18848",
+      "title": "LUXOR 1760-N GELONE GEL PEN 0.6MM PACK OF 10PCS",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1902,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 12,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 35,
+      "sku": "18850",
+      "base_sku": "18850",
+      "title": "LUXOR LIQUI WRITE BALL PEN 0.7MM",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 174,
+      "busy_rows": [
+        {
+          "busy_row": 1909,
+          "item_group": "LUXOR",
+          "item_name": "",
+          "mrp": 10,
+          "cl_qty": 174
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 36,
+      "sku": "19365",
+      "base_sku": "19365",
+      "title": "LUXOR 20751 A4 LAYFLAT NOTEBOOK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1906,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 95,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 37,
+      "sku": "19363",
+      "base_sku": "19363",
+      "title": "LUXOR 20752 B5 LAYFLAT NOTEBOOK",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 1907,
+          "item_group": "LU NOTEBOOK",
+          "item_name": "",
+          "mrp": 90,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    }
+  ],
+  "corrected_rebuild": {
+    "method": "openpyxl_load_original_and_save",
+    "updated_rows": 29,
+    "reason": "previous low-level XML patched package did not open in Excel for the user"
+  }
+}

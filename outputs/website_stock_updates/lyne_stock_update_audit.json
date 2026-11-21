@@ -1,0 +1,498 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (53).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "busy_sheet": "Sheet1",
+  "project_output": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_updates\\lyne products - Updated Website Stock.xlsx",
+  "downloads_output": "C:\\Users\\My-PC-Win10\\Downloads\\lyne products - Updated Website Stock.xlsx",
+  "downloads_status": "copied",
+  "meta": {
+    "sheet_name": "Products",
+    "max_row": 15,
+    "max_column": 34,
+    "sku_col": 16,
+    "stock_col": 17,
+    "warehouse_col": 18,
+    "shop_col": 19
+  },
+  "summary": {
+    "website_sku_rows": 14,
+    "matched_direct": 14,
+    "duplicate_code_summed": 0,
+    "missing_in_busy": 0,
+    "base_code_available_no_exact_sku": 0,
+    "changed": 7,
+    "negative_new_qty": 0,
+    "fractional_new_qty": 0
+  },
+  "missing_in_busy": [],
+  "base_code_available_no_exact_sku": [],
+  "duplicate_code_summed": [],
+  "negative_new_qty": [],
+  "fractional_new_qty": [],
+  "changed_rows": [
+    {
+      "row": 3,
+      "sku": "17024",
+      "base_sku": "17024",
+      "title": "LYNE FLEXY 50 TC TO TC CABLE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1954,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 749,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 5,
+      "sku": "12888",
+      "base_sku": "12888",
+      "title": "LYNE FLEXY 38 TC TO TC CABLE 65W",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 1950,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 399,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 6,
+      "sku": "17026",
+      "base_sku": "17026",
+      "title": "LYNE FLEXY 48C TC TO TC CABLE",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1952,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 699,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 7,
+      "sku": "17025",
+      "base_sku": "17025",
+      "title": "LYNE FLEXY 48I TC TO IP CABLE",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 1953,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 699,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 10,
+      "sku": "12882",
+      "base_sku": "12882",
+      "title": "LYNE PHOTON 18 WIRED EARPHONE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1960,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 499,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 13,
+      "sku": "30107",
+      "base_sku": "30107",
+      "title": "LYNE PHOTON 35 WIRED EARPHONE",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 1963,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 999,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 14,
+      "sku": "12886",
+      "base_sku": "12886",
+      "title": "LYNE PISTON 12C CAR CHARGER",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1964,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 1199,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    }
+  ],
+  "rows": [
+    {
+      "row": 2,
+      "sku": "12891",
+      "base_sku": "12891",
+      "title": "LYNE FLEXY 39 TC TO IP CABLE 25W",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1951,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 499,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 3,
+      "sku": "17024",
+      "base_sku": "17024",
+      "title": "LYNE FLEXY 50 TC TO TC CABLE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1954,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 749,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 4,
+      "sku": "17031",
+      "base_sku": "17031",
+      "title": "LYNE HYDRO 7 HEADPHONE",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 1957,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 3999,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 5,
+      "sku": "12888",
+      "base_sku": "12888",
+      "title": "LYNE FLEXY 38 TC TO TC CABLE 65W",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 1950,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 399,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 6,
+      "sku": "17026",
+      "base_sku": "17026",
+      "title": "LYNE FLEXY 48C TC TO TC CABLE",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1952,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 699,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 7,
+      "sku": "17025",
+      "base_sku": "17025",
+      "title": "LYNE FLEXY 48I TC TO IP CABLE",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 1953,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 699,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 8,
+      "sku": "12842",
+      "base_sku": "12842",
+      "title": "LYNE HYDRO-6 HEADPHONE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1958,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 2899,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 9,
+      "sku": "12892",
+      "base_sku": "12892",
+      "title": "LYNE PHOTON 17 WIRED EARPHONE IP CABLE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1959,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 1499,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 10,
+      "sku": "12882",
+      "base_sku": "12882",
+      "title": "LYNE PHOTON 18 WIRED EARPHONE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1960,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 499,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 11,
+      "sku": "12884",
+      "base_sku": "12884",
+      "title": "LYNE PHOTON 21 WIRED EARPHONE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1961,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 699,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 12,
+      "sku": "12880",
+      "base_sku": "12880",
+      "title": "LYNE PHOTON 22 WIRED EARPHONE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1962,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 699,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 13,
+      "sku": "30107",
+      "base_sku": "30107",
+      "title": "LYNE PHOTON 35 WIRED EARPHONE",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 1963,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 999,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 14,
+      "sku": "12886",
+      "base_sku": "12886",
+      "title": "LYNE PISTON 12C CAR CHARGER",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1964,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 1199,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 15,
+      "sku": "17030",
+      "base_sku": "17030",
+      "title": "LYNE ROVER 40 NECKBAND",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 1965,
+          "item_group": "LYNE",
+          "item_name": "",
+          "mrp": 1499,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    }
+  ]
+}

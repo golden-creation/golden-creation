@@ -1,0 +1,244 @@
+{
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "results": [
+    {
+      "brand": "Faber-Castell",
+      "source": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (28).xlsx",
+      "output": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_faber_finger_hama_20260831\\faber castell products - Updated Website Stock.xlsx",
+      "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\faber castell products - Updated Website Stock.xlsx",
+      "sku_rows": 1,
+      "changed_rows": 0,
+      "status_counts": {
+        "Matched": 1
+      },
+      "rows": [
+        {
+          "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (28).xlsx",
+          "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_faber_finger_hama_20260831\\faber castell products - Updated Website Stock.xlsx",
+          "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\faber castell products - Updated Website Stock.xlsx",
+          "brand": "Faber-Castell",
+          "row": 2,
+          "sku": "17156",
+          "title": "FABER CASTEL BLACK MATT ERASER TIP PENCIL PACK OF 10PCS",
+          "old_qty": 98,
+          "new_qty": 98,
+          "status": "Matched",
+          "busy_matches": [
+            {
+              "busy_row": 991,
+              "item_group": "FABER CASTELL ",
+              "item_details": "FABER CASTELL 1112 HB PENCIL 75",
+              "cl_qty": 98
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "Finger",
+      "source": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (29).xlsx",
+      "output": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_faber_finger_hama_20260831\\finger products - Updated Website Stock.xlsx",
+      "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\finger products - Updated Website Stock.xlsx",
+      "sku_rows": 1,
+      "changed_rows": 0,
+      "status_counts": {
+        "Matched": 1
+      },
+      "rows": [
+        {
+          "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (29).xlsx",
+          "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_faber_finger_hama_20260831\\finger products - Updated Website Stock.xlsx",
+          "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\finger products - Updated Website Stock.xlsx",
+          "brand": "Finger",
+          "row": 2,
+          "sku": "19213",
+          "title": "FINGER FREEDOM U105 WIRELESS MICROPHONE",
+          "old_qty": 2,
+          "new_qty": 2,
+          "status": "Matched",
+          "busy_matches": [
+            {
+              "busy_row": 1122,
+              "item_group": "FINGERS ",
+              "item_details": "FINGERS FREEDOM U105 MICROPHONE 2499",
+              "cl_qty": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "Hama",
+      "source": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (30).xlsx",
+      "output": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_faber_finger_hama_20260831\\hama products - Updated Website Stock.xlsx",
+      "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\hama products - Updated Website Stock.xlsx",
+      "sku_rows": 8,
+      "changed_rows": 1,
+      "status_counts": {
+        "Matched": 8
+      },
+      "rows": [
+        {
+          "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (30).xlsx",
+          "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_faber_finger_hama_20260831\\hama products - Updated Website Stock.xlsx",
+          "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\hama products - Updated Website Stock.xlsx",
+          "brand": "Hama",
+          "row": 2,
+          "sku": "19291",
+          "title": "HAMA HDMI CABLE WITH ETHERNET 3M",
+          "old_qty": 1,
+          "new_qty": 1,
+          "status": "Matched",
+          "busy_matches": [
+            {
+              "busy_row": 1255,
+              "item_group": "HAMA  ",
+              "item_details": "HAMA HDMI CABLE WITH ETHERNET 3M 999",
+              "cl_qty": 1
+            }
+          ]
+        },
+        {
+          "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (30).xlsx",
+          "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_faber_finger_hama_20260831\\hama products - Updated Website Stock.xlsx",
+          "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\hama products - Updated Website Stock.xlsx",
+          "brand": "Hama",
+          "row": 3,
+          "sku": "19278",
+          "title": "HAMA CORTINO WL KEYBOARD & MOUSE",
+          "old_qty": 2,
+          "new_qty": 2,
+          "status": "Matched",
+          "busy_matches": [
+            {
+              "busy_row": 1252,
+              "item_group": "HAMA  ",
+              "item_details": "HAMA CORTINO WL KEYBOARD & MOUSE 2359",
+              "cl_qty": 2
+            }
+          ]
+        },
+        {
+          "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (30).xlsx",
+          "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_faber_finger_hama_20260831\\hama products - Updated Website Stock.xlsx",
+          "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\hama products - Updated Website Stock.xlsx",
+          "brand": "Hama",
+          "row": 4,
+          "sku": "19292",
+          "title": "HAMA HDMI CABLE WITH ETHERNET 1.5M",
+          "old_qty": 2,
+          "new_qty": 2,
+          "status": "Matched",
+          "busy_matches": [
+            {
+              "busy_row": 1253,
+              "item_group": "HAMA  ",
+              "item_details": "HAMA HDMI CABLE WITH ETHERNET 1.5M 799",
+              "cl_qty": 2
+            }
+          ]
+        },
+        {
+          "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (30).xlsx",
+          "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_faber_finger_hama_20260831\\hama products - Updated Website Stock.xlsx",
+          "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\hama products - Updated Website Stock.xlsx",
+          "brand": "Hama",
+          "row": 5,
+          "sku": "19275",
+          "title": "HAMA KEY 4 ALL X510 BT KEYBOARD",
+          "old_qty": 2,
+          "new_qty": 2,
+          "status": "Matched",
+          "busy_matches": [
+            {
+              "busy_row": 1257,
+              "item_group": "HAMA  ",
+              "item_details": "HAMA KEY 4 ALL X510 BT KEYBOARD 1999",
+              "cl_qty": 2
+            }
+          ]
+        },
+        {
+          "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (30).xlsx",
+          "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_faber_finger_hama_20260831\\hama products - Updated Website Stock.xlsx",
+          "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\hama products - Updated Website Stock.xlsx",
+          "brand": "Hama",
+          "row": 6,
+          "sku": "19279",
+          "title": "HAMA AMW-200 OPTICAL WL 3B MOUSE",
+          "old_qty": 2,
+          "new_qty": 2,
+          "status": "Matched",
+          "busy_matches": [
+            {
+              "busy_row": 1251,
+              "item_group": "HAMA  ",
+              "item_details": "HAMA AMW-200 OPTICAL WL 3B MOUSE 899",
+              "cl_qty": 2
+            }
+          ]
+        },
+        {
+          "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (30).xlsx",
+          "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_faber_finger_hama_20260831\\hama products - Updated Website Stock.xlsx",
+          "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\hama products - Updated Website Stock.xlsx",
+          "brand": "Hama",
+          "row": 7,
+          "sku": "19281",
+          "title": "HAMA HDMI CABLE WITH ETHERNET 10M",
+          "old_qty": 2,
+          "new_qty": 2,
+          "status": "Matched",
+          "busy_matches": [
+            {
+              "busy_row": 1254,
+              "item_group": "HAMA  ",
+              "item_details": "HAMA HDMI CABLE WITH ETHERNET 10M 2999",
+              "cl_qty": 2
+            }
+          ]
+        },
+        {
+          "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (30).xlsx",
+          "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_faber_finger_hama_20260831\\hama products - Updated Website Stock.xlsx",
+          "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\hama products - Updated Website Stock.xlsx",
+          "brand": "Hama",
+          "row": 8,
+          "sku": "19289",
+          "title": "HAMA HDMI CABLE WITH ETHERNET 5M",
+          "old_qty": 2,
+          "new_qty": 2,
+          "status": "Matched",
+          "busy_matches": [
+            {
+              "busy_row": 1256,
+              "item_group": "HAMA  ",
+              "item_details": "HAMA HDMI CABLE WITH ETHERNET 5M 1199",
+              "cl_qty": 2
+            }
+          ]
+        },
+        {
+          "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (30).xlsx",
+          "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_faber_finger_hama_20260831\\hama products - Updated Website Stock.xlsx",
+          "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\hama products - Updated Website Stock.xlsx",
+          "brand": "Hama",
+          "row": 9,
+          "sku": "19280",
+          "title": "HAMA MC-200 OPTICAL WIRED 3B MOUSE",
+          "old_qty": 9,
+          "new_qty": 10,
+          "status": "Matched",
+          "busy_matches": [
+            {
+              "busy_row": 1258,
+              "item_group": "HAMA  ",
+              "item_details": "HAMA MC-200 OPTICAL WIRED 3B MOUSE 799",
+              "cl_qty": 10
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

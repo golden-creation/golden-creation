@@ -1,0 +1,155 @@
+{
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "results": [
+    {
+      "brand": "Century",
+      "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (19).xlsx",
+      "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_century_corseca_20260824\\century products - Updated Website Stock.xlsx",
+      "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\century products - Updated Website Stock.xlsx",
+      "summary": {
+        "Matched": 1
+      },
+      "changed_rows": 1,
+      "rows": [
+        {
+          "brand_file": "Century",
+          "website_row": 2,
+          "title": "CENTURY STAR PAPER REAM",
+          "brand": "Century",
+          "variant_sku": "19144",
+          "old_variant_inventory_qty": 0,
+          "new_variant_inventory_qty": -13,
+          "warehouse_stock": 0,
+          "shop_stock": 0,
+          "status": "Matched",
+          "busy_matches": [
+            {
+              "busy_row": 384,
+              "item_code": "19144",
+              "item_details": "CENTURY A4 75GSM PAPER 300",
+              "item_group": "CENTURY",
+              "cl_qty": -13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "Corseca",
+      "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (20).xlsx",
+      "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_century_corseca_20260824\\corseca products - Updated Website Stock.xlsx",
+      "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\corseca products - Updated Website Stock.xlsx",
+      "summary": {
+        "Matched": 5
+      },
+      "changed_rows": 0,
+      "rows": [
+        {
+          "brand_file": "Corseca",
+          "website_row": 2,
+          "title": "CORSECA 1188 BT NECTOR NECKBAND",
+          "brand": "Corseca",
+          "variant_sku": "8759",
+          "old_variant_inventory_qty": 1,
+          "new_variant_inventory_qty": 1,
+          "warehouse_stock": 0,
+          "shop_stock": 0,
+          "status": "Matched",
+          "busy_matches": [
+            {
+              "busy_row": 537,
+              "item_code": "8759",
+              "item_details": "COR 1188 BT NECTOR NECKBAND  2499",
+              "item_group": "CORRESCA",
+              "cl_qty": 1
+            }
+          ]
+        },
+        {
+          "brand_file": "Corseca",
+          "website_row": 3,
+          "title": "CORSECA JST604 BLUETOOTH SPEAKER",
+          "brand": "Corseca",
+          "variant_sku": "8784",
+          "old_variant_inventory_qty": 2,
+          "new_variant_inventory_qty": 2,
+          "warehouse_stock": 0,
+          "shop_stock": 0,
+          "status": "Matched",
+          "busy_matches": [
+            {
+              "busy_row": 542,
+              "item_code": "8784",
+              "item_details": "COR JST604 BT SPEAKER 7499",
+              "item_group": "CORRESCA",
+              "cl_qty": 2
+            }
+          ]
+        },
+        {
+          "brand_file": "Corseca",
+          "website_row": 4,
+          "title": "CORSECA DMS2380 MU DISC BLUETOOTH SPEAKER",
+          "brand": "Corseca",
+          "variant_sku": "8761",
+          "old_variant_inventory_qty": 2,
+          "new_variant_inventory_qty": 2,
+          "warehouse_stock": 0,
+          "shop_stock": 0,
+          "status": "Matched",
+          "busy_matches": [
+            {
+              "busy_row": 539,
+              "item_code": "8761",
+              "item_details": "COR DMS2380 MUDISC BT SPEAKER 2499",
+              "item_group": "CORRESCA",
+              "cl_qty": 2
+            }
+          ]
+        },
+        {
+          "brand_file": "Corseca",
+          "website_row": 5,
+          "title": "CORSECA JST406 TWS POWERBUDS",
+          "brand": "Corseca",
+          "variant_sku": "20258",
+          "old_variant_inventory_qty": 0,
+          "new_variant_inventory_qty": 0,
+          "warehouse_stock": 0,
+          "shop_stock": 0,
+          "status": "Matched",
+          "busy_matches": [
+            {
+              "busy_row": 541,
+              "item_code": "20258",
+              "item_details": "COR JST406 TWS POWERBUDS  2999\"",
+              "item_group": "CORRESCA",
+              "cl_qty": 0
+            }
+          ]
+        },
+        {
+          "brand_file": "Corseca",
+          "website_row": 6,
+          "title": "CORSECA DMWH3213 WIRED HEADPHONE",
+          "brand": "Corseca",
+          "variant_sku": "20257",
+          "old_variant_inventory_qty": 0,
+          "new_variant_inventory_qty": 0,
+          "warehouse_stock": 0,
+          "shop_stock": 0,
+          "status": "Matched",
+          "busy_matches": [
+            {
+              "busy_row": 540,
+              "item_code": "20257",
+              "item_details": "COR DMWH3213 WIRED HEADPHONE 999\"",
+              "item_group": "CORRESCA",
+              "cl_qty": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

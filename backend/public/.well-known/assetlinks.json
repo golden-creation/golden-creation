@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "in.goldencreation.app",
+      "sha256_cert_fingerprints": [
+        "D2:0E:3D:DD:2B:18:82:37:44:53:26:3E:00:84:0D:BC:CD:8F:D9:82:4E:29:2B:19:70:FE:CB:C0:4E:E7:D1:89"
+      ]
+    }
+  }
+]

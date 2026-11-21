@@ -1,0 +1,1 @@
+var e=`/assets/verify-BtWQkdX8.png`;export{e as t};

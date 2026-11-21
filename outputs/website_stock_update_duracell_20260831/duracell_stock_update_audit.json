@@ -1,0 +1,266 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (24).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_duracell_20260831\\duracell products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\duracell products - Updated Website Stock.xlsx",
+  "summary": {
+    "Matched": 11,
+    "Matched - Busy Duplicates Summed": 1
+  },
+  "rows": [
+    {
+      "website_row": 2,
+      "title": "DURACELL CR2016 CHHOTA POWER CELL",
+      "brand": "Duracell",
+      "variant_sku": "10527",
+      "old_variant_inventory_qty": 9,
+      "new_variant_inventory_qty": 9.6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 895,
+          "item_code": "10527",
+          "item_details": "DU CR2016 CHHOTA POWER CELL 200",
+          "item_group": "DURACELL CHOTA",
+          "cl_qty": 9.6
+        }
+      ]
+    },
+    {
+      "website_row": 3,
+      "title": "DURACELL CR2025 CHHOTA CELL",
+      "brand": "Duracell",
+      "variant_sku": "20407",
+      "old_variant_inventory_qty": 8,
+      "new_variant_inventory_qty": 9.4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 896,
+          "item_code": "20407",
+          "item_details": "DU CR2025 CHHOTA CELL 200",
+          "item_group": "DURACELL CHOTA",
+          "cl_qty": 9.4
+        }
+      ]
+    },
+    {
+      "website_row": 4,
+      "title": "DURACELL CR2032 CHHOTA POWER CELL",
+      "brand": "Duracell",
+      "variant_sku": "10529",
+      "old_variant_inventory_qty": 29,
+      "new_variant_inventory_qty": 32.8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 897,
+          "item_code": "10529",
+          "item_details": "DU CR2032 CHHOTA POWER CELL  200",
+          "item_group": "DURACELL CHOTA",
+          "cl_qty": 32.8
+        }
+      ]
+    },
+    {
+      "website_row": 5,
+      "title": "DURACELL RECHARGEABLE CELL AA 1300MAH 2BL",
+      "brand": "Duracell",
+      "variant_sku": "8792",
+      "old_variant_inventory_qty": 5,
+      "new_variant_inventory_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 899,
+          "item_code": "8792",
+          "item_details": "DU RECHARGEABLE CELL AA 1300MAH 2BL 325",
+          "item_group": "DURACELL ULTRA",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "website_row": 6,
+      "title": "DURACELL RECHARGEABLE CELL AAA 750MAH 2BL",
+      "brand": "Duracell",
+      "variant_sku": "8793",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 900,
+          "item_code": "8793",
+          "item_details": "DU RECHARGEABLE CELL AAA 750MAH 2BL 275",
+          "item_group": "DURACELL ULTRA",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "website_row": 7,
+      "title": "DURACELL ULTRA 9V 1BL OLPP CELL",
+      "brand": "Duracell",
+      "variant_sku": "10522",
+      "old_variant_inventory_qty": 62,
+      "new_variant_inventory_qty": 64,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 901,
+          "item_code": "10522",
+          "item_details": "DU ULTRA 9V 1BL OLPP CELL 300\"",
+          "item_group": "DURACELL ULTRA",
+          "cl_qty": 64
+        }
+      ]
+    },
+    {
+      "website_row": 8,
+      "title": "DURACELL ULTRA AA 8BL CELL",
+      "brand": "Duracell",
+      "variant_sku": "8796",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": -0.5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched - Busy Duplicates Summed",
+      "busy_matches": [
+        {
+          "busy_row": 902,
+          "item_code": "8796",
+          "item_details": "DU ULTRA AA 6BL CELL 50",
+          "item_group": "DURACELL ULTRA",
+          "cl_qty": 0
+        },
+        {
+          "busy_row": 903,
+          "item_code": "8796",
+          "item_details": "DU ULTRA AA 8BL CELL 440",
+          "item_group": "DURACELL ULTRA",
+          "cl_qty": 0
+        },
+        {
+          "busy_row": 904,
+          "item_code": "8796",
+          "item_details": "DU ULTRA AA 8BL CELL 480",
+          "item_group": "DURACELL ULTRA",
+          "cl_qty": -0.5
+        }
+      ]
+    },
+    {
+      "website_row": 9,
+      "title": "DURACELL AAA ULTRA CARD OF 6PCS CELL",
+      "brand": "Duracell",
+      "variant_sku": "8798",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 905,
+          "item_code": "8798",
+          "item_details": "DU ULTRA AAA 6BL CELL 300",
+          "item_group": "DURACELL ULTRA",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 10,
+      "title": "DURACELL C2 ULTRA CARD OF 2PCS CELL",
+      "brand": "Duracell",
+      "variant_sku": "8800",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 44,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 908,
+          "item_code": "8800",
+          "item_details": "DU ULTRA C2 BL CELL 300",
+          "item_group": "DURACELL ULTRA",
+          "cl_qty": 44
+        }
+      ]
+    },
+    {
+      "website_row": 11,
+      "title": "DURACELL AAA ULTRA  CARD OF 8PCS CELL",
+      "brand": "Duracell",
+      "variant_sku": "8802",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 13.75,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 906,
+          "item_code": "8802",
+          "item_details": "DU ULTRA AAA 8BL CELL 440",
+          "item_group": "DURACELL ULTRA",
+          "cl_qty": 13.75
+        }
+      ]
+    },
+    {
+      "website_row": 12,
+      "title": "DURACELL CHHOTA AAA CELL",
+      "brand": "Duracell",
+      "variant_sku": "20406",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 894,
+          "item_code": "20406",
+          "item_details": "DU CHHOTA AAA CELL 22",
+          "item_group": "DURACELL CHOTA",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 13,
+      "title": "DURACELL CHHOTA AA CELL",
+      "brand": "Duracell",
+      "variant_sku": "20405",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 893,
+          "item_code": "20405",
+          "item_details": "DU CHHOTA AA CELL 22",
+          "item_group": "DURACELL CHOTA",
+          "cl_qty": 0
+        }
+      ]
+    }
+  ]
+}

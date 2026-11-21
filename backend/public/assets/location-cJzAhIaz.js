@@ -1,0 +1,1 @@
+var e=`/assets/location-CNCg-KZ4.png`;export{e as t};

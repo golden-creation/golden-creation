@@ -1,0 +1,29 @@
+{
+  "output": "C:\\Users\\My-PC-Win10\\Downloads\\SHEAFFER LIST - MRP Rechecked.xlsx",
+  "product_rows": 217,
+  "status_counts": {
+    "Unresolved - original MRP retained": 112,
+    "Updated": 77,
+    "Already current": 28
+  },
+  "changes_since_previous": [
+    {
+      "row": 121,
+      "sku": "11638",
+      "previous": 3500.0,
+      "new": 3995
+    },
+    {
+      "row": 188,
+      "sku": "11521",
+      "previous": 0.0,
+      "new": 6495
+    }
+  ],
+  "changed_cells": 77,
+  "only_mrp_cells_changed": true,
+  "all_cell_styles_preserved": true,
+  "other_package_parts_byte_identical": true,
+  "zip_valid": true,
+  "sha256": "ce49c3e14477e5c6033a13886244b35122ddfe20bd996d01b468a11898bba08a"
+}

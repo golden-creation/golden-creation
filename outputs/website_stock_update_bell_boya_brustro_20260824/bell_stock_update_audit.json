@@ -1,0 +1,59 @@
+{
+  "category": "bell",
+  "brands": {
+    "Bell": 2
+  },
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (12).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_bell_boya_brustro_20260824\\bell products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\bell products - Updated Website Stock.xlsx",
+  "downloads_copy_status": "copied",
+  "target_sheet": "Products",
+  "lookup_column": "Variant SKU",
+  "updated_column": "Variant Inventory Qty",
+  "counts": {
+    "Matched": 2
+  },
+  "website_sku_rows": 2,
+  "website_unique_skus": 2,
+  "website_duplicate_skus": {},
+  "changed_rows": 0,
+  "rows": [
+    {
+      "website_row": 2,
+      "variant_sku": "12646",
+      "title": "WIRELESS REMOTE BELL JINGLZ-GM 890",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 4872,
+          "item_code": "12646",
+          "item_details": "WIRELESS REMOTE BELL JINGLZ-GM 890",
+          "item_group": "WIRELESS REMOTE BELL",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 3,
+      "variant_sku": "12649",
+      "title": "WIRELESS REMOTE BELL ZIO-GM 1260",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 4873,
+          "item_code": "12649",
+          "item_details": "WIRELESS REMOTE BELL ZIO-GM 1260",
+          "item_group": "WIRELESS REMOTE BELL",
+          "cl_qty": 0
+        }
+      ]
+    }
+  ]
+}

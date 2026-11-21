@@ -1,0 +1,505 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (8).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_adwell_20260824\\adwell products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\adwell products - Updated Website Stock.xlsx",
+  "downloads_copy_status": "copied",
+  "target_sheet": "Products",
+  "lookup_column": "Variant SKU",
+  "updated_column": "Variant Inventory Qty",
+  "counts": {
+    "Matched": 27
+  },
+  "website_sku_rows": 27,
+  "website_unique_skus": 27,
+  "website_duplicate_skus": {},
+  "changed_rows": 17,
+  "rows": [
+    {
+      "website_row": 2,
+      "variant_sku": "9913",
+      "title": "ADWELL APDB-102 SKETCH NOTEBOOK A3",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 177,
+          "item_code": "9913",
+          "item_details": "AW APDB-102 SKETCH NOTEBOOK A3 350",
+          "item_group": "ADWELL",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 3,
+      "variant_sku": "9915",
+      "title": "ADWELL APDB-122 SKETCH NOTEBOOK A4",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 179,
+          "item_code": "9915",
+          "item_details": "AW APDB-122 SKETCH NOTEBOOK A4 180",
+          "item_group": "ADWELL",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 4,
+      "variant_sku": "9916",
+      "title": "ADWELL APDB-141 SKETCH NOTEBOOK A5",
+      "old_variant_inventory_qty": 5,
+      "new_variant_inventory_qty": 5,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 180,
+          "item_code": "9916",
+          "item_details": "AW APDB-141 SKECH NOTEBOOK A5 100",
+          "item_group": "ADWELL",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "website_row": 5,
+      "variant_sku": "9912",
+      "title": "ADWELL NEXA 1SUBJECT NOTEBOOK A5",
+      "old_variant_inventory_qty": 43,
+      "new_variant_inventory_qty": 45,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 193,
+          "item_code": "9912",
+          "item_details": "AW IN NEXA NOTEBOOK A5 250",
+          "item_group": "ADWELL",
+          "cl_qty": 45
+        }
+      ]
+    },
+    {
+      "website_row": 6,
+      "variant_sku": "9910",
+      "title": "ADWELL PREMIUM 5SUBJECT NOTEBOOK A5",
+      "old_variant_inventory_qty": 12,
+      "new_variant_inventory_qty": 11,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 195,
+          "item_code": "9910",
+          "item_details": "AW PREMIUM 5SUB NOTEBOOK A5 200",
+          "item_group": "ADWELL",
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "website_row": 7,
+      "variant_sku": "9911",
+      "title": "ADWELL PREMIUM 5SUBJECT NOTEBOOK B5",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 4,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 196,
+          "item_code": "9911",
+          "item_details": "AW PREMIUM 5SUB NOTEBOOK B5 285",
+          "item_group": "ADWELL",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 8,
+      "variant_sku": "9908",
+      "title": "ADWELL PREMIUM 5SUBJECT NOTEBOOK A4",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 194,
+          "item_code": "9908",
+          "item_details": "AW PREMIUM 5SUB NOTEBOOK A4 365",
+          "item_group": "ADWELL",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 9,
+      "variant_sku": "9917",
+      "title": "ADWELL AWA7-135 EXCLUSIVE NOTEBOOK A7",
+      "old_variant_inventory_qty": 16,
+      "new_variant_inventory_qty": 15,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 181,
+          "item_code": "9917",
+          "item_details": "AW AWA7-135 EXCLUSIVE NOTEBOOK A7 40",
+          "item_group": "ADWELL",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "website_row": 10,
+      "variant_sku": "10211",
+      "title": "ADWELL ZEBRANO NOTEBOOK B5",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 9,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 205,
+          "item_code": "10211",
+          "item_details": "AW ZEBRANO NOTEBOOK B5 475",
+          "item_group": "ADWELL",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "website_row": 11,
+      "variant_sku": "10215",
+      "title": "ADWELL ANTIQUE NOTEBOOK B6",
+      "old_variant_inventory_qty": 9,
+      "new_variant_inventory_qty": 9,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 186,
+          "item_code": "10215",
+          "item_details": "AW IN ANTIQUE NOTEBOOK B6 145",
+          "item_group": "ADWELL",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "website_row": 12,
+      "variant_sku": "10216",
+      "title": "ADWELL IN CLASSIC FOAM NOTEBOOK A5",
+      "old_variant_inventory_qty": 6,
+      "new_variant_inventory_qty": 8,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 188,
+          "item_code": "10216",
+          "item_details": "AW IN CLASSIC FOAM NOTEBOOK A5 260",
+          "item_group": "ADWELL",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "website_row": 13,
+      "variant_sku": "10217",
+      "title": "ADWELL IN CLASSIC FOAM LONG NOTEBOOK",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 6,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 187,
+          "item_code": "10217",
+          "item_details": "AW IN CLASSIC FOAM LONG NOTEBOOK 190",
+          "item_group": "ADWELL",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "website_row": 14,
+      "variant_sku": "10212",
+      "title": "ADWELL ZEBRANO NOTEBOOK A5",
+      "old_variant_inventory_qty": 9,
+      "new_variant_inventory_qty": 9,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 204,
+          "item_code": "10212",
+          "item_details": "AW ZEBRANO NOTEBOOK A5 385",
+          "item_group": "ADWELL",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "website_row": 15,
+      "variant_sku": "10213",
+      "title": "ADWELL DELUX NOTE BOOK A5 170",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 182,
+          "item_code": "10213",
+          "item_details": "AW DELUXE NOTEBOOK A5 170",
+          "item_group": "ADWELL",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 16,
+      "variant_sku": "10214",
+      "title": "ADWELL AMBASADER 1SUBJECT NOTEBOOK A5",
+      "old_variant_inventory_qty": 11,
+      "new_variant_inventory_qty": 11,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 183,
+          "item_code": "10214",
+          "item_details": "AW IN AMBASADER NOTEBOOK A5 190",
+          "item_group": "ADWELL",
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "website_row": 17,
+      "variant_sku": "10220",
+      "title": "ADWELL LOOP NOTE BOOK B6",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 23,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 192,
+          "item_code": "10220",
+          "item_details": "AW IN LOOP NOTEBOOK B6 240",
+          "item_group": "ADWELL",
+          "cl_qty": 23
+        }
+      ]
+    },
+    {
+      "website_row": 18,
+      "variant_sku": "10223",
+      "title": "ADWELL VENUS NOTEBOOK A5",
+      "old_variant_inventory_qty": 38,
+      "new_variant_inventory_qty": 38,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 202,
+          "item_code": "10223",
+          "item_details": "AW VENUS NOTEBOOK A5 245",
+          "item_group": "ADWELL",
+          "cl_qty": 38
+        }
+      ]
+    },
+    {
+      "website_row": 19,
+      "variant_sku": "10226",
+      "title": "ADWELL ANTIQUE NOTEBOOK B5",
+      "old_variant_inventory_qty": 18,
+      "new_variant_inventory_qty": 18,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 185,
+          "item_code": "10226",
+          "item_details": "AW IN ANTIQUE NOTEBOOK B5 255",
+          "item_group": "ADWELL",
+          "cl_qty": 18
+        }
+      ]
+    },
+    {
+      "website_row": 20,
+      "variant_sku": "10232",
+      "title": "ADWELL PREMIUM NOTEBOOK A5",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 26,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 198,
+          "item_code": "10232",
+          "item_details": "AW PREMIUM NOTEBOOK A5 125",
+          "item_group": "ADWELL",
+          "cl_qty": 26
+        }
+      ]
+    },
+    {
+      "website_row": 21,
+      "variant_sku": "10218",
+      "title": "ADWELL LOOP NOTE BOOK A5 290",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 6,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 190,
+          "item_code": "10218",
+          "item_details": "AW IN LOOP NOTEBOOK A5 290",
+          "item_group": "ADWELL",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "website_row": 22,
+      "variant_sku": "10219",
+      "title": "ADWELL LOOP NOTE BOOK A6 200",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 7,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 191,
+          "item_code": "10219",
+          "item_details": "AW IN LOOP NOTEBOOK A6 200",
+          "item_group": "ADWELL",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "website_row": 23,
+      "variant_sku": "10221",
+      "title": "ADWELL VENUS NOTEBOOK B5",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 10,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 203,
+          "item_code": "10221",
+          "item_details": "AW VENUS NOTEBOOK B5 320",
+          "item_group": "ADWELL",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 24,
+      "variant_sku": "10222",
+      "title": "ADWELL POCKET NOTE BOOK 30",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 8,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 197,
+          "item_code": "10222",
+          "item_details": "AW PREMIUM NOTEBOOK 30",
+          "item_group": "ADWELL",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "website_row": 25,
+      "variant_sku": "10227",
+      "title": "ADWELL ANTIQUE NOTEBOOK A5 185",
+      "old_variant_inventory_qty": 14,
+      "new_variant_inventory_qty": 14,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 184,
+          "item_code": "10227",
+          "item_details": "AW IN ANTIQUE NOTEBOOK A5 185",
+          "item_group": "ADWELL",
+          "cl_qty": 14
+        }
+      ]
+    },
+    {
+      "website_row": 26,
+      "variant_sku": "10228",
+      "title": "ADWELL IN CLASSIC FOAM NOTEBOOK B5",
+      "old_variant_inventory_qty": 8,
+      "new_variant_inventory_qty": 15,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 189,
+          "item_code": "10228",
+          "item_details": "AW IN CLASSIC FOAM NOTEBOOK B5 335",
+          "item_group": "ADWELL",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "website_row": 27,
+      "variant_sku": "10229",
+      "title": "ADWELL PREMIUM NOTEBOOK A6",
+      "old_variant_inventory_qty": 15,
+      "new_variant_inventory_qty": 15,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 199,
+          "item_code": "10229",
+          "item_details": "AW PREMIUM NOTEBOOK A6 75",
+          "item_group": "ADWELL",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "website_row": 28,
+      "variant_sku": "10230",
+      "title": "ADWELL PREMIUM NOTEBOOK B5",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 39,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 200,
+          "item_code": "10230",
+          "item_details": "AW PREMIUM NOTEBOOK B5 195",
+          "item_group": "ADWELL",
+          "cl_qty": 39
+        }
+      ]
+    }
+  ]
+}

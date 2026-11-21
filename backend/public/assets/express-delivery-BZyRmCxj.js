@@ -1,0 +1,1 @@
+var e=`/assets/express-delivery-B6SEoDa0.png`;export{e as t};

@@ -1,0 +1,777 @@
+{
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (33).xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_hopax_20260831\\hopax products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\hopax products - Updated Website Stock.xlsx",
+  "status_counts": {
+    "Matched": 45
+  },
+  "changed_rows": 28,
+  "rows": [
+    {
+      "row": 2,
+      "sku": "9473",
+      "title": "HOPAX 21578 STICK'N MAGIC NOTE 3X5",
+      "brand": "Hopax",
+      "old_qty": 23,
+      "new_qty": 23,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1302,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21578 STICK'N MAGIC NOTES 3X5 95",
+          "cl_qty": 23
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "sku": "9474",
+      "title": "HOPAX 21830 STICK'N DIE-CUT BLOCK CIRCLE CUBE",
+      "brand": "Hopax",
+      "old_qty": 3,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1319,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21830 STICK'N CIRCLE CUBE 250",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "sku": "9475",
+      "title": "HOPAX 21129 3x1 1 STRIP NEON 150 ST",
+      "brand": "Hopax",
+      "old_qty": 22,
+      "new_qty": 27,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1284,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21129 NIYO STICKY NOTES 3X3 55",
+          "cl_qty": 27
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "sku": "9479",
+      "title": "HOPAX 21345 FILM INDEX 8 X 25 200PC",
+      "brand": "Hopax",
+      "old_qty": 28,
+      "new_qty": 24,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1289,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21345 STICK'N FILM INDEX 200",
+          "cl_qty": 24
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "sku": "9476",
+      "title": "HOPAX 21203 STICKY CUBE 2 X 2",
+      "brand": "Hopax",
+      "old_qty": 4,
+      "new_qty": 19,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1287,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21203 STICKY CUBE 2X2 130",
+          "cl_qty": 19
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "sku": "9477",
+      "title": "HOPAX 21255 MAGIC CUBE 3X4 40X7ST",
+      "brand": "Hopax",
+      "old_qty": 7,
+      "new_qty": 7,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1288,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21255 MAGIC CUBE 3X4 40X7ST 420",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "sku": "9478",
+      "title": "HOPAX 21130 SELF STICKY NOTE 3X1",
+      "brand": "Hopax",
+      "old_qty": 23,
+      "new_qty": 23,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1285,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21130 SELF STICKY NOTES 3X1 70",
+          "cl_qty": 23
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "sku": "9480",
+      "title": "HOPAX 21346 INDEX 2-1 200PC",
+      "brand": "Hopax",
+      "old_qty": 28,
+      "new_qty": 28,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1290,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21346 INDEX 2-1 200PCS 200",
+          "cl_qty": 28
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "sku": "9481",
+      "title": "HOPAX 21423 STICKY NOTE STEP NOTES",
+      "brand": "Hopax",
+      "old_qty": 3,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1292,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21423 STICKY NOTE STEP NOTES  260",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "sku": "9482",
+      "title": "HOPAX 21432 STICKY CUBE",
+      "brand": "Hopax",
+      "old_qty": 2,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1294,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21432 STICKY CUBE 450",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "sku": "9483",
+      "title": "HOPAX 21853 STICK'N MEMO PAD 10X7",
+      "brand": "Hopax",
+      "old_qty": 3,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1323,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21853 STICKY MEMO PAD 595",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "sku": "9486",
+      "title": "HOPAX 21579 6X4 LINE NOTE MULTI 90ST",
+      "brand": "Hopax",
+      "old_qty": 6,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1303,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21579 STICK'N MAGIC LINE NOTES 200",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "sku": "9487",
+      "title": "HOPAX 21595 STICK'N INDEX 45X15 180ST",
+      "brand": "Hopax",
+      "old_qty": 38,
+      "new_qty": 21,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1305,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21595 STICK INDEX 45X15 180ST 135",
+          "cl_qty": 21
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "sku": "9492",
+      "title": "HOPAX 21689 STICK'N INDEX PAD",
+      "brand": "Hopax",
+      "old_qty": 23,
+      "new_qty": 21,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1312,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21689 STICK'N INDEX PAD 200",
+          "cl_qty": 21
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "sku": "9489",
+      "title": "HOPAX 21367 STICK'N SCHEDULE NOTES 2DESIGNS IN 1PAD",
+      "brand": "Hopax",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1291,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21367 STICK'N SCHEDULE NOTES 220",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "sku": "9490",
+      "title": "HOPAX 21639 STICKY NOTE 3X3 KRAFT",
+      "brand": "Hopax",
+      "old_qty": 17,
+      "new_qty": 18,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1309,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21639 3X3 KRAFT STICKY NOTES 70",
+          "cl_qty": 18
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "sku": "9493",
+      "title": "HOPAX 21809 STICKY PAD KRAFT",
+      "brand": "Hopax",
+      "old_qty": 2,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1315,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21809 STICKY PAD KRAFT 650\"",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "sku": "9494",
+      "title": "HOPAX 21820 STICKY NOTES",
+      "brand": "Hopax",
+      "old_qty": 2,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1317,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21820 STICKY NOTES 525",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "sku": "9495",
+      "title": "HOPAX 21852 STICK'N MEMO PAD 7.5X4.5",
+      "brand": "Hopax",
+      "old_qty": 2,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1322,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21852 STICKY MEMO PAD 495",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 21,
+      "sku": "9496",
+      "title": "HOPAX 21833 STICK'N FLOWER",
+      "brand": "Hopax",
+      "old_qty": 0,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1320,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21833 STICK'N FLOWER 250",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 22,
+      "sku": "9497",
+      "title": "HOPAX 21836 STICK'N HEART CUBE",
+      "brand": "Hopax",
+      "old_qty": 11,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1321,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21836 STICK'N HEART CUBE 250",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 23,
+      "sku": "9498",
+      "title": "HOPAX 21539 STICK'N MAGIC CUBE NOTES 3X3",
+      "brand": "Hopax",
+      "old_qty": 4,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1298,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21539 MAGIC CUBE NOTE 3X3 300",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "sku": "9499",
+      "title": "HOPAX 29009 STICK'N COLOR ROLL",
+      "brand": "Hopax",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1324,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 29009 STICK COLOR ROLLS 375",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 25,
+      "sku": "9626",
+      "title": "HOPAX 21425 STICK'N CUBE WITH HOLDER",
+      "brand": "Hopax",
+      "old_qty": 2,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1293,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21425 STICK'N CUBE WITH HOLDER 450",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 26,
+      "sku": "9639",
+      "title": "HOPAX 21462 STICK'N DIVIDER NOTES",
+      "brand": "Hopax",
+      "old_qty": 4,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1297,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21462 STICK'N DIVIDER NOTE 210",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 27,
+      "sku": "9640",
+      "title": "HOPAX 21066 STICK'N PAPER INDEX",
+      "brand": "Hopax",
+      "old_qty": 1,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1283,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21066 STICK'N PAPER INDEX 120\"",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "sku": "9647",
+      "title": "HOPAX 21577 STICK\u2019N MAGIC NOTES 3X3",
+      "brand": "Hopax",
+      "old_qty": 17,
+      "new_qty": 16,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1301,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21577 STICK'N MAGIC NOTES 3X3 80",
+          "cl_qty": 16
+        }
+      ]
+    },
+    {
+      "row": 29,
+      "sku": "9657",
+      "title": "HOPAX 21574 STICK'N MAGIC NOTES 3X3",
+      "brand": "Hopax",
+      "old_qty": 8,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1300,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21574 STICK'N MAGIC NOTE 3X3 55",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 30,
+      "sku": "9658",
+      "title": "HOPAX 21641 STICK'N KRAFT NOTES 6X4",
+      "brand": "Hopax",
+      "old_qty": 6,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1311,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21641 STICK'N KRAFT NOTES 6X4 210",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 31,
+      "sku": "9665",
+      "title": "HOPAX 21596 STICK'N INDEX NOTES",
+      "brand": "Hopax",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1306,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21596 STICK'N INDEX NOTES 135",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 32,
+      "sku": "9664",
+      "title": "HOPAX 21598 STICK'N INDEX NOTES",
+      "brand": "Hopax",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1307,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21598 STICK'N INDEX NOTES 135",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 33,
+      "sku": "9668",
+      "title": "HOPAX 21591 STICK'N NEON DIE-CUT NOTES",
+      "brand": "Hopax",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1304,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21591 STICK'N DIE CUT NOTES 90",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 34,
+      "sku": "9669",
+      "title": "HOPAX 21775 STICK'N NEON DIE-CUT NOTES",
+      "brand": "Hopax",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1313,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21775 STICK'N DIE CUT NOTES 90",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 35,
+      "sku": "9670",
+      "title": "HOPAX 21571 STICK'N MAGIC NOTES 3X3",
+      "brand": "Hopax",
+      "old_qty": 9,
+      "new_qty": 11,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1299,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21571 STICK'N MAGIC NOTE 3X3 75",
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "row": 36,
+      "sku": "9671",
+      "title": "HOPAX 21056 STICK'N LINE NOTE 6X4",
+      "brand": "Hopax",
+      "old_qty": 9,
+      "new_qty": 7,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1282,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21056 STICKY LINE NOTE 6X4 200",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "row": 37,
+      "sku": "9672",
+      "title": "HOPAX 21181 STICK'N NEON DIE-CUT NOTES",
+      "brand": "Hopax",
+      "old_qty": 0,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1286,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21181 STICK'N DIE CUT NOTES 90",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 38,
+      "sku": "9675",
+      "title": "HOPAX 21776 STICK'N NEON DIE-CUT NOTES",
+      "brand": "Hopax",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1314,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21776 STICK'N DIE CUT NOTES 90",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 39,
+      "sku": "9677",
+      "title": "HOPAX 21448 STICK'N NEON DIE-CUT NOTES",
+      "brand": "Hopax",
+      "old_qty": 15,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1295,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21448 STICK'N DIE CUT NOTES 90",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 40,
+      "sku": "9692",
+      "title": "HOPAX 21638 STICK'N KRAFT NOTE",
+      "brand": "Hopax",
+      "old_qty": 18,
+      "new_qty": 19,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1308,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21638 STICK'N KRAFT NOTES 3X2 60",
+          "cl_qty": 19
+        }
+      ]
+    },
+    {
+      "row": 41,
+      "sku": "9693",
+      "title": "HOPAX 21640 STICK'N KRAFT NOTE 3X5",
+      "brand": "Hopax",
+      "old_qty": 19,
+      "new_qty": 21,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1310,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21640 STICK'N KRAFT NOTES 3X5 100",
+          "cl_qty": 21
+        }
+      ]
+    },
+    {
+      "row": 42,
+      "sku": "20476",
+      "title": "HOPAX 21038 STICK'N YELLOW NOTES",
+      "brand": "Hopax",
+      "old_qty": 0,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1280,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21038 STICK'N YLW NOTES 210",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 43,
+      "sku": "20478",
+      "title": "HOPAX 21460 STICKY NOTE PAD",
+      "brand": "Hopax",
+      "old_qty": 0,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1296,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21460 STICKY NOTE PAD 330",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "row": 44,
+      "sku": "20477",
+      "title": "HOPAX 21039 STICK'N NOTE FLAG",
+      "brand": "Hopax",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1281,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21039 STICK'N NOTE FLAG 102\"",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 45,
+      "sku": "20480",
+      "title": "HOPAX OFFICIAL MARKERS STICKY PAD",
+      "brand": "Hopax",
+      "old_qty": 3,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1325,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX OFFICIAL MARKERS STICKY PAD 55\"",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 46,
+      "sku": "20479",
+      "title": "HOPAX 21825 STICK'N KRAFT NOTES",
+      "brand": "Hopax",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1318,
+          "item_group": "HOPAX ",
+          "item_details": "HOPAX 21825 STICK'N KRAFT NOTES 200",
+          "cl_qty": 1
+        }
+      ]
+    }
+  ]
+}

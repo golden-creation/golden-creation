@@ -1,0 +1,930 @@
+{
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (36).xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_intellio_20260831\\intellio products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\intellio products - Updated Website Stock.xlsx",
+  "status_counts": {
+    "Matched": 54
+  },
+  "changed_rows": 18,
+  "rows": [
+    {
+      "row": 2,
+      "sku": "11853",
+      "title": "INTELLIO GBP12RGP2 RHEIN BALL PEN +A5 DAIRY",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1442,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO GBP12RGP2 RHEIN BP+A5 2250",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "sku": "11738",
+      "title": "INTELLIO GRP11GTP1 RENAISSANCE ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1443,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO GRP11GTP1 RENAISSANCE  RB 2500",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "sku": "11756",
+      "title": "INTELLIO RP11CTP1 RENAISSANCE B&C ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 3,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1451,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO RP11CTP1 RENAISSANCE B&C RB2100",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "sku": "11758",
+      "title": "INTELLIO RP13GTP1 MYSTIQUE MATTE BLACK & GOLD ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1461,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO RP13GTP1 MYSTIQ MATT BK&GD 3800",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "sku": "11768",
+      "title": "INTELLIO RP11RGP2 RENAISSANCE RG ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1454,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO RP11RGP2 RENAISSANCE RG RB 2500",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "sku": "11771",
+      "title": "INTELLIO RP14CTP2 INSIGNIA RED & CHROME ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1465,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO RP14CTP2 INSIGNIA RD&CH RB 2500",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "sku": "11783",
+      "title": "INTELLIO RP12CTP1 JEWEL BLUE ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1457,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO RP12CTP1 JEWEL BLUE RB 3200",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "sku": "11785",
+      "title": "INTELLIO RP13MBP1 MYSTIQUE MYSTREY ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1462,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO RP13MBP1 MYSTIQ MYSTREY RB 3900",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "sku": "11791",
+      "title": "INTELLIO RP11GTP1 RENAISSANCE BLACK GOLD ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 2,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1452,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO RP11GTP1 RENAISSANCE B&G RB2500",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "sku": "11794",
+      "title": "INTELLIO RP11RGP1 RENAISSANCE MATT & RED ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 2,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1453,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO RP11RGP1 RENAISSANCE M&R RB2500",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "sku": "11818",
+      "title": "INTELLIO RP13CTP1 MYSTIQ M.B&C ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1459,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO RP13CTP1 MYSTIQ M.B&C RB 3600",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "sku": "11835",
+      "title": "INTELLIO RP12CTD3 FDR CHROME RING ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1456,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO RP12CTD3 FDR CH&RNG RB 3200",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "sku": "11840",
+      "title": "INTELLIO RP12CTP2 JEWEL BLACK ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1458,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO RP12CTP2 JEWEL BLACK RB 3200",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "sku": "13097",
+      "title": "INTELLIO RP14RGP2 INSIGNIA WHITE & ROSE GOLD ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1467,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO RP14RGP2 INSIGNIA WT&RD RB 2800",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "sku": "13101",
+      "title": "INTELLIO RP14CTP1 INSIGNIA INDIGO BLUE & CHROME ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1464,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO RP14CTP1 INSIGINIA BL&C FP 2500",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "sku": "13104",
+      "title": "INTELLIO RP11RGP3 RENAISSANCE BLACK & ROSE GOLD ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1455,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO RP11RGP3 RENAISSANCE BK&RG 2500",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "sku": "13106",
+      "title": "INTELLIO RP13RGP1 MYSTIQUE MATTE BLACK & ROSE GOLD ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1463,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO RP13RGP1 MYST BK&RG RB 3800",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "sku": "13107",
+      "title": "INTELLIO RP13CTP2 MYSTIQUE MATTE BLACK & CHROME ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1460,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO RP13CTP2 MYSTIQ M.B&C RB 3600",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "sku": "13110",
+      "title": "INTELLIO RP14RGP1 INSIGNIA BROWN & ROSE GOLD ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1466,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO RP14RGP1 INSIGNIA BR &R RB 2800",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 21,
+      "sku": "11762",
+      "title": "INTELLIO FP12CTD3 FDR BLACK CLEAR RING FOUNTAIN PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1430,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO FP12CTD3 FDR BLK CR RNG FP 4000",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 22,
+      "sku": "11796",
+      "title": "INTELLIO FP12CTP2 JEWEL STARRY BLACK FOUNTAIN PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1431,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO FP12CTP2 JEWELSTARRY BK FP 3800",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 23,
+      "sku": "13114",
+      "title": "INTELLIO FP13CTP1 MYSTIQUE MATTE BLUE & CHROME FOUNTAIN PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1433,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO FP13CTP1 MYSTIQ M BL&CH FP 4200",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "sku": "13124",
+      "title": "INTELLIO FP13CTP2 MYSTIQUE MATTE BLACK & CHROME FOUNTAIN PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1434,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO FP13CTP2 MYSTIQ M BK&CH FP 4200",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 25,
+      "sku": "13126",
+      "title": "INTELLIO FP13MBP1 MYSTIQUE MYSTERY GREY FOUNTAIN PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1436,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO FP13MBP1 MYSTIQ MYST GR FP 4900",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 26,
+      "sku": "13128",
+      "title": "INTELLIO FP13GTP1 MYSTIQUE MATTE BLACK & GOLD FOUNTAIN PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1435,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO FP13GTP1 MYSTIQ M BK&G FP 4800",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 27,
+      "sku": "13131",
+      "title": "INTELLIO FP13RGP1 MYSTIQUE MATTE BLACK & ROSE GOLD FOUNTAIN PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1437,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO FP13RGP1 MYSTIQ M BK&RG FP 4800",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "sku": "11836",
+      "title": "INTELLIO BP14CTP2 INSIGNIA RED & CHROME BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1427,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO BP14CTP2 INSIGNIA RD&CH BP 2200",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 29,
+      "sku": "11846",
+      "title": "INTELLIO BP12CTP1 RHEIN MATTE & CHROME BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1419,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO BP12CTP1 RHEIN MAT&CH BP 2150",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 30,
+      "sku": "11744",
+      "title": "INTELLIO GBP11GTP1 RENAISSANCE BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1439,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO GBP11GTP1 RENAISSANCE  BP 2250",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 31,
+      "sku": "11748",
+      "title": "INTELLIO GBP12GTP2 RENAISSANCE BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1441,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO GBP12GTP2 RENAISSANCE  BP 1800",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 32,
+      "sku": "11751",
+      "title": "INTELLIO BP12RGP2 RHEIN  BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1425,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO BP12RGP2 RHEIN BP 2050",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 33,
+      "sku": "11755",
+      "title": "INTELLIO BP12RGP2  RHEIN WHITE ROSE GOLD BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 3,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1424,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO BP12RGP2 RHEIN  W&R BP 2150",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 34,
+      "sku": "11760",
+      "title": "INTELLIO BP12RGP1 RHEIN  BLUE & ROSE GOLD BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 5,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1423,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO BP12RGP1 RHEIN  BP B&R.G 1900",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "row": 35,
+      "sku": "11764",
+      "title": "INTELLIO BP11CTD3 RENAISSANCE BLACK & CHROME BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1412,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO BP11CTD3 RENAISSANCE BK&CH 1900",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 36,
+      "sku": "11766",
+      "title": "INTELLIO BP11CTP1 RENAISSANCE BLACK & CHROME BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1413,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO BP11CTP1 RENAISSANCE B&C BP1800",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 37,
+      "sku": "11772",
+      "title": "INTELLIO BP14RGP1 INSIGNIA BROWN & ROSE GOLD BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1428,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO BP14RGP1 INSIGNIA BR&RG BP 2500",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 38,
+      "sku": "11775",
+      "title": "INTELLIO BP14RGP2 INSIGNIA WHITE & ROSE GOLD BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1429,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO BP14RGP2 INSIGNIA WT&RG 2500",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 39,
+      "sku": "11776",
+      "title": "INTELLIO BP14CTP1 INSIGNIA BLUE & CHROME BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1426,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO BP14CTP1 INSIGNIA BL&CH BP 2200",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 40,
+      "sku": "11782",
+      "title": "INTELLIO BP11GTP1 RENAISSANCE BLACK & GOLD BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1416,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO BP11GTP1 RENAISSANCE B&G 2300",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 41,
+      "sku": "11790",
+      "title": "INTELLIO BP11GTD1 RENAISSANCE GOLD BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1414,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO BP11GTD1 RENAISSANCE GB BP 3300",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 42,
+      "sku": "11822",
+      "title": "INTELLIO BP12GTD3 RHEIN CHROME & GOLD BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1420,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO BP12GTD3 RHEIN C&G BP 2050",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "row": 43,
+      "sku": "11829",
+      "title": "INTELLIO BP11RGP1 RENAISSANCE  BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1417,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO BP11RGP1 RENAISSANCE  BP 2300",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 44,
+      "sku": "11830",
+      "title": "INTELLIO BP12RGD3 RHEIN CHROME & ROSE GOLD BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1422,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO BP12RGD3 RHEIN  BP C&R.G 2050",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 45,
+      "sku": "11831",
+      "title": "INTELLIO BP12GTP2  MATTE BLACK & GOLD BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1421,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO BP12GTP2 RHEIN MT BK&GD BP 1900",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 46,
+      "sku": "13091",
+      "title": "INTELLIO BP11GTD2 RENAISSANCE CHROME & GOLD BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1415,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO BP11GTD2 RENAISS CH&GD BP 2500",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 47,
+      "sku": "13095",
+      "title": "INTELLIO BP11RGP3 RENAISSANCE BLACK & ROSE GOLD BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1418,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO BP11RGP3 RENAISSANCE BK&RG 2300",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 48,
+      "sku": "11848",
+      "title": "INTELLIO GBP12CTP1 RHEIN BALL PEN +A5 DAIRY",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1440,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO GBP12CTP1 RHEIN BPA5 DAIRY 2250",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 49,
+      "sku": "11798",
+      "title": "INTELLIO FPC06 CARTRIDGES PACK OF 6 125 MULTICOLOUR*",
+      "brand": "Intellio",
+      "old_qty": 14,
+      "new_qty": 26,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1438,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO FPC06 CARTRIDGES PACK OF 6 125",
+          "cl_qty": 26
+        }
+      ]
+    },
+    {
+      "row": 50,
+      "sku": "11807",
+      "title": "INTELLIO FP130 FOUNTAIN PEN INK BLACK BOTTLE",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1432,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO FP130 FP INK BLK BOTTLE 599",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 51,
+      "sku": "11810",
+      "title": "INTELLIO REFILL BR11 BLACK BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1445,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO REFILL BR11 BK BP 220",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 52,
+      "sku": "11815",
+      "title": "INTELLIO REFILL RR14 RED ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1450,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO REFILL RR14 RED RB 250",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "row": 53,
+      "sku": "11816",
+      "title": "INTELLIO REFILL RR12 BLUE ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 6,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1448,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO REFILL RR12 BLUE RB 250",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "row": 54,
+      "sku": "11817",
+      "title": "INTELLIO REFILL RR11 BLACK ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1447,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO REFILL RR11 BLACK RB 250",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 55,
+      "sku": "11832",
+      "title": "INTELLIO REFILL RR13 GREEN ROLLER BALL PEN",
+      "brand": "Intellio",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1449,
+          "item_group": "INTELLIO ",
+          "item_details": "INTELLIO REFILL RR13 GREEN RB 250",
+          "cl_qty": 1
+        }
+      ]
+    }
+  ]
+}

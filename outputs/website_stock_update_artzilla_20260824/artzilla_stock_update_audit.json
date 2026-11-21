@@ -1,0 +1,199 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (9).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_artzilla_20260824\\artzilla products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\artzilla products - Updated Website Stock.xlsx",
+  "downloads_copy_status": "copied",
+  "target_sheet": "Products",
+  "lookup_column": "Variant SKU",
+  "updated_column": "Variant Inventory Qty",
+  "counts": {
+    "Matched": 10
+  },
+  "website_sku_rows": 10,
+  "website_unique_skus": 10,
+  "website_duplicate_skus": {},
+  "changed_rows": 2,
+  "rows": [
+    {
+      "website_row": 2,
+      "variant_sku": "18187",
+      "title": "ARTZILLA ENVELOPE COLOR 9X6 10PCS",
+      "old_variant_inventory_qty": 50,
+      "new_variant_inventory_qty": 50,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 133,
+          "item_code": "18187",
+          "item_details": "ARTZILLA ENVELOPE CLR 9X6 10PCS 200",
+          "item_group": "ARTZILLA",
+          "cl_qty": 50
+        }
+      ]
+    },
+    {
+      "website_row": 3,
+      "variant_sku": "18185",
+      "title": "ARTZILLA ENVELOPE COLOR 6.5X4.5 10PCS",
+      "old_variant_inventory_qty": 46,
+      "new_variant_inventory_qty": 41,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 132,
+          "item_code": "18185",
+          "item_details": "ARTZILLA ENVELOPE CLR 6.5X4.5 10PCS 150",
+          "item_group": "ARTZILLA",
+          "cl_qty": 41
+        }
+      ]
+    },
+    {
+      "website_row": 4,
+      "variant_sku": "18181",
+      "title": "ARTZILLA A4 180GSM LETTER PAPER GREEN",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 10,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 125,
+          "item_code": "18181",
+          "item_details": "ARTZILLA A4 180GSM LETTER PAPER GRN 165",
+          "item_group": "ARTZILLA",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 5,
+      "variant_sku": "18183",
+      "title": "ARTZILLA A4 180GSM LETTER PAPER LIME",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 10,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 126,
+          "item_code": "18183",
+          "item_details": "ARTZILLA A4 180GSM LETTER PAPER LIME 165",
+          "item_group": "ARTZILLA",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 6,
+      "variant_sku": "17873",
+      "title": "ARTZILLA A4 180GSM LETTER PAPER PEACE",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 10,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 127,
+          "item_code": "17873",
+          "item_details": "ARTZILLA A4 180GSM LETTER PAPER PEAC 165",
+          "item_group": "ARTZILLA",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 7,
+      "variant_sku": "18179",
+      "title": "ARTZILLA A4 180GSM LETTER PAPER PINK",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 10,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 128,
+          "item_code": "18179",
+          "item_details": "ARTZILLA A4 180GSM LETTER PAPER PINK 165",
+          "item_group": "ARTZILLA",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 8,
+      "variant_sku": "18175",
+      "title": "ARTZILLA A4 180GSM LETTER PAPER YELLOW",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 10,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 129,
+          "item_code": "18175",
+          "item_details": "ARTZILLA A4 180GSM LETTER PAPER YEL 165",
+          "item_group": "ARTZILLA",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 9,
+      "variant_sku": "18161",
+      "title": "ARTZILLA A4 70GSM LETTER PAPER 100ST",
+      "old_variant_inventory_qty": 30,
+      "new_variant_inventory_qty": 30,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 131,
+          "item_code": "18161",
+          "item_details": "ARTZILLA A4 70GSM LETTER PAPER 100ST 175",
+          "item_group": "ARTZILLA",
+          "cl_qty": 30
+        }
+      ]
+    },
+    {
+      "website_row": 10,
+      "variant_sku": "18197",
+      "title": "ARTZILLA A4 200GSM PAPYRUS LETTER PAPER PACK 20SHEETS (GREY,WHITE,CREAM)",
+      "old_variant_inventory_qty": 14,
+      "new_variant_inventory_qty": 14,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 130,
+          "item_code": "18197",
+          "item_details": "ARTZILLA A4 200GSM LETTER PAPER 20ST 285",
+          "item_group": "ARTZILLA",
+          "cl_qty": 14
+        }
+      ]
+    },
+    {
+      "website_row": 11,
+      "variant_sku": "18189",
+      "title": "ARTZILLA WATERCOLOR BOARD ROUND & SQUARE 4.5 INCH",
+      "old_variant_inventory_qty": 7,
+      "new_variant_inventory_qty": 6,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 134,
+          "item_code": "18189",
+          "item_details": "ARTZILLA WATERCOLOR BOARD RD-SQ 335",
+          "item_group": "ARTZILLA",
+          "cl_qty": 6
+        }
+      ]
+    }
+  ]
+}

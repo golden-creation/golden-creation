@@ -1,0 +1,1 @@
+var e=`/assets/star-oLyS9BV2.png`;export{e as t};

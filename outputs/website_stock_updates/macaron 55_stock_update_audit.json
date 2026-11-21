@@ -1,0 +1,829 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (55).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "busy_sheet": "Sheet1",
+  "project_output": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_updates\\macaron 55 products - Updated Website Stock.xlsx",
+  "downloads_output": "C:\\Users\\My-PC-Win10\\Downloads\\macaron products - Updated Website Stock (55).xlsx",
+  "downloads_status": "copied",
+  "meta": {
+    "sheet_name": "Products",
+    "max_row": 19,
+    "max_column": 34,
+    "sku_col": 16,
+    "stock_col": 17,
+    "warehouse_col": 18,
+    "shop_col": 19
+  },
+  "summary": {
+    "website_sku_rows": 18,
+    "matched_direct": 18,
+    "duplicate_code_summed": 0,
+    "missing_in_busy": 0,
+    "base_code_available_no_exact_sku": 0,
+    "changed": 16,
+    "negative_new_qty": 2,
+    "fractional_new_qty": 0
+  },
+  "missing_in_busy": [],
+  "base_code_available_no_exact_sku": [],
+  "duplicate_code_summed": [],
+  "negative_new_qty": [
+    {
+      "row": 2,
+      "sku": "16855",
+      "base_sku": "16855",
+      "title": "MACARON MCR21 DOUBLE SIDE COLOR PENCIL PACK OF 13N(26 SHADES)",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": -1,
+      "busy_rows": [
+        {
+          "busy_row": 1981,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 299,
+          "cl_qty": -1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 8,
+      "sku": "16891",
+      "base_sku": "16891",
+      "title": "MACARON SM050-1 CHARCOAL WHITE PENCIL PACK OF 6PCS",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": -1,
+      "busy_rows": [
+        {
+          "busy_row": 1983,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 345,
+          "cl_qty": -1
+        }
+      ],
+      "base_busy_rows": []
+    }
+  ],
+  "fractional_new_qty": [],
+  "changed_rows": [
+    {
+      "row": 2,
+      "sku": "16855",
+      "base_sku": "16855",
+      "title": "MACARON MCR21 DOUBLE SIDE COLOR PENCIL PACK OF 13N(26 SHADES)",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": -1,
+      "busy_rows": [
+        {
+          "busy_row": 1981,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 299,
+          "cl_qty": -1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 3,
+      "sku": "16860",
+      "base_sku": "16860",
+      "title": "MACARON 1990-3 LAPICES DE METALIC NEON COLOR PENCIL PACK OF 12N(24 SHADES)",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1966,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 325,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 4,
+      "sku": "16866",
+      "base_sku": "16866",
+      "title": "MACARON MCR-1990-21 STAMPER SCENTED MARKER  PACK OF 10PCS",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1977,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 465,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 5,
+      "sku": "16869",
+      "base_sku": "16869",
+      "title": "MACARON MCR-1990-19 MARCADORES MAGIC PEN PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1967,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 365,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 7,
+      "sku": "16890",
+      "base_sku": "16890",
+      "title": "MACARON MCR-1990-13 CHARCOAL WHITE PENCIL PACK OF 3PCS",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1969,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 210,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 8,
+      "sku": "16891",
+      "base_sku": "16891",
+      "title": "MACARON SM050-1 CHARCOAL WHITE PENCIL PACK OF 6PCS",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": -1,
+      "busy_rows": [
+        {
+          "busy_row": 1983,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 345,
+          "cl_qty": -1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 9,
+      "sku": "16895",
+      "base_sku": "16895",
+      "title": "MACARON MCR-1990-2 LAPICES DE METALIC NEON PENCILS PACK OF 6PCS (12 SHADES)",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1975,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 180,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 10,
+      "sku": "16970",
+      "base_sku": "16970",
+      "title": "MACARON MCR-1990-188 WATERCOLOR PENCILS 3.3MM PACK OF 72SHADES",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1974,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 1410,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 11,
+      "sku": "16971",
+      "base_sku": "16971",
+      "title": "MACARON MCR-1990-182 SKETCHING DRAWING SET",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1973,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 1410,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 12,
+      "sku": "16972",
+      "base_sku": "16972",
+      "title": "MACARON MCR-1990-181 SKETCHING DRAWING SET",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1972,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 935,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 13,
+      "sku": "16868",
+      "base_sku": "16868",
+      "title": "MACARON MCR-1990-17 GLITTER MARKER PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1971,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 465,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 14,
+      "sku": "16872",
+      "base_sku": "16872",
+      "title": "MACARON MCR-1990-20 PASTEL MARKER PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1976,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 299,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 15,
+      "sku": "16864",
+      "base_sku": "16864",
+      "title": "MACARON MCR-666 SCENTED WASHABLE MARKER PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1982,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 465,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 16,
+      "sku": "16873",
+      "base_sku": "16873",
+      "title": "MACARON MCR-1990-89 WASHABLE SUPER TIP MARKERS PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1980,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 299,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 17,
+      "sku": "16877",
+      "base_sku": "16877",
+      "title": "MACARON MCR-1990-15 ERASHABLE MARKER PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1970,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 415,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 19,
+      "sku": "16881",
+      "base_sku": "16881",
+      "title": "MACARON MCR-1990-23 SCENTED COLOR MARKER PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1978,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 390,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    }
+  ],
+  "rows": [
+    {
+      "row": 2,
+      "sku": "16855",
+      "base_sku": "16855",
+      "title": "MACARON MCR21 DOUBLE SIDE COLOR PENCIL PACK OF 13N(26 SHADES)",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": -1,
+      "busy_rows": [
+        {
+          "busy_row": 1981,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 299,
+          "cl_qty": -1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 3,
+      "sku": "16860",
+      "base_sku": "16860",
+      "title": "MACARON 1990-3 LAPICES DE METALIC NEON COLOR PENCIL PACK OF 12N(24 SHADES)",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1966,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 325,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 4,
+      "sku": "16866",
+      "base_sku": "16866",
+      "title": "MACARON MCR-1990-21 STAMPER SCENTED MARKER  PACK OF 10PCS",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1977,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 465,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 5,
+      "sku": "16869",
+      "base_sku": "16869",
+      "title": "MACARON MCR-1990-19 MARCADORES MAGIC PEN PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1967,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 365,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 6,
+      "sku": "16876",
+      "base_sku": "16876",
+      "title": "MACARON MCR-1990-108 PENCIL COLOR WITH BRUSH PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1968,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 439,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 7,
+      "sku": "16890",
+      "base_sku": "16890",
+      "title": "MACARON MCR-1990-13 CHARCOAL WHITE PENCIL PACK OF 3PCS",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1969,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 210,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 8,
+      "sku": "16891",
+      "base_sku": "16891",
+      "title": "MACARON SM050-1 CHARCOAL WHITE PENCIL PACK OF 6PCS",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": -1,
+      "busy_rows": [
+        {
+          "busy_row": 1983,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 345,
+          "cl_qty": -1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 9,
+      "sku": "16895",
+      "base_sku": "16895",
+      "title": "MACARON MCR-1990-2 LAPICES DE METALIC NEON PENCILS PACK OF 6PCS (12 SHADES)",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1975,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 180,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 10,
+      "sku": "16970",
+      "base_sku": "16970",
+      "title": "MACARON MCR-1990-188 WATERCOLOR PENCILS 3.3MM PACK OF 72SHADES",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1974,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 1410,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 11,
+      "sku": "16971",
+      "base_sku": "16971",
+      "title": "MACARON MCR-1990-182 SKETCHING DRAWING SET",
+      "variant": "",
+      "old_qty": 3,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1973,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 1410,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 12,
+      "sku": "16972",
+      "base_sku": "16972",
+      "title": "MACARON MCR-1990-181 SKETCHING DRAWING SET",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1972,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 935,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 13,
+      "sku": "16868",
+      "base_sku": "16868",
+      "title": "MACARON MCR-1990-17 GLITTER MARKER PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1971,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 465,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 14,
+      "sku": "16872",
+      "base_sku": "16872",
+      "title": "MACARON MCR-1990-20 PASTEL MARKER PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1976,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 299,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 15,
+      "sku": "16864",
+      "base_sku": "16864",
+      "title": "MACARON MCR-666 SCENTED WASHABLE MARKER PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1982,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 465,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 16,
+      "sku": "16873",
+      "base_sku": "16873",
+      "title": "MACARON MCR-1990-89 WASHABLE SUPER TIP MARKERS PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1980,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 299,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 17,
+      "sku": "16877",
+      "base_sku": "16877",
+      "title": "MACARON MCR-1990-15 ERASHABLE MARKER PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1970,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 415,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 18,
+      "sku": "16880",
+      "base_sku": "16880",
+      "title": "MACARON MCR-1990-24 BRUSH TIP MARKER PACK OF 10PCS",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1979,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 380,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 19,
+      "sku": "16881",
+      "base_sku": "16881",
+      "title": "MACARON MCR-1990-23 SCENTED COLOR MARKER PACK OF 12PCS",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1978,
+          "item_group": "MACRON",
+          "item_name": "",
+          "mrp": 390,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    }
+  ]
+}

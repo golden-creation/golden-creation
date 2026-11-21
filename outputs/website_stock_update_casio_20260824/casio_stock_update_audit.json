@@ -1,0 +1,743 @@
+{
+  "category": "casio",
+  "brands": {
+    "Casio": 40
+  },
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (16).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_casio_20260824\\casio products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\casio products - Updated Website Stock.xlsx",
+  "downloads_copy_status": "copied",
+  "target_sheet": "Products",
+  "lookup_column": "Variant SKU",
+  "updated_column": "Variant Inventory Qty",
+  "counts": {
+    "Matched": 40
+  },
+  "website_sku_rows": 40,
+  "website_unique_skus": 40,
+  "website_duplicate_skus": {},
+  "changed_rows": 19,
+  "rows": [
+    {
+      "website_row": 2,
+      "variant_sku": "13348",
+      "title": "CASIO IQ 665DF ANALOG WALL CLOCK",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 286,
+          "item_code": "13348",
+          "item_details": "CASIO IQ 665DF ANALOG WALL CLOCK 4095",
+          "item_group": "CASIO",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 3,
+      "variant_sku": "20175",
+      "title": "CASIO MZ 12 SA CALCULATOR",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 299,
+          "item_code": "20175",
+          "item_details": "CASIO MZ 12 SA 280\"",
+          "item_group": "CASIO",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 4,
+      "variant_sku": "20172",
+      "title": "CASIO FX 991 EX CALCULATOR",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 277,
+          "item_code": "20172",
+          "item_details": "CASIO FX 991 EX CALCULATOR 1495",
+          "item_group": "CASIO",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 5,
+      "variant_sku": "20173",
+      "title": "CASIO MS 20VC PL CALCULATOR",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 297,
+          "item_code": "20173",
+          "item_details": "CASIO MS 20VC PL 425\"",
+          "item_group": "CASIO",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 6,
+      "variant_sku": "20174",
+      "title": "CASIO MS 6NC CALCULATOR",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 298,
+          "item_code": "20174",
+          "item_details": "CASIO MS 6NC CALCULATOR 275",
+          "item_group": "CASIO",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 7,
+      "variant_sku": "20171",
+      "title": "CASIO SL 1000SC PK CALCULATOR",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 301,
+          "item_code": "20171",
+          "item_details": "CASIO SL 1000SC PK CALCULATOR 425",
+          "item_group": "CASIO",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 8,
+      "variant_sku": "20177",
+      "title": "CASIO SX 300 W CALCULATOR",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 305,
+          "item_code": "20177",
+          "item_details": "CASIO SX 300 W 210\"",
+          "item_group": "CASIO",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 9,
+      "variant_sku": "8609",
+      "title": "CASIO DJ 120D CALCULATOR",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 271,
+          "item_code": "8609",
+          "item_details": "CASIO DJ 120D CALCULATOR 765",
+          "item_group": "CASIO",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 10,
+      "variant_sku": "8610",
+      "title": "CASIO DJ 220D PLUS CALCULATOR PLUS",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 7,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 272,
+          "item_code": "8610",
+          "item_details": "CASIO DJ 220D PLUS CALCULATOR PLUS 1045",
+          "item_group": "CASIO",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "website_row": 11,
+      "variant_sku": "8613",
+      "title": "CASIO FX 82 ES PLUS SCIENTIFIC CALCULATOR",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 3,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 275,
+          "item_code": "8613",
+          "item_details": "CASIO FX 82ES PLUS SCIENTIFIC CALC 795",
+          "item_group": "CASIO",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 12,
+      "variant_sku": "11384",
+      "title": "CASIO DJ 240D PLUS CALCULATOR PLUS",
+      "old_variant_inventory_qty": 11,
+      "new_variant_inventory_qty": 9,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 273,
+          "item_code": "11384",
+          "item_details": "CASIO DJ 240D PLUS CALCULATOR PLUS 1095",
+          "item_group": "CASIO",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "website_row": 13,
+      "variant_sku": "8615",
+      "title": "CASIO FX 100MS SCIENTIFIC CALCULATOR",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 3,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 274,
+          "item_code": "8615",
+          "item_details": "CASIO FX 100MS SCIENTIFIC CALCULATOR 975",
+          "item_group": "CASIO",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 14,
+      "variant_sku": "11392",
+      "title": "CASIO FX 991 CW CLASSWIZ CALCULATOR",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 278,
+          "item_code": "11392",
+          "item_details": "CASIO FX 991CW CLASSWIZ CALCULATOR 1595",
+          "item_group": "CASIO",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 15,
+      "variant_sku": "8623",
+      "title": "CASIO HL 820LV BLACK CALCULATOR",
+      "old_variant_inventory_qty": 5,
+      "new_variant_inventory_qty": 5,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 285,
+          "item_code": "8623",
+          "item_details": "CASIO HL 820LV BK CALCULATOR 160",
+          "item_group": "CASIO",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "website_row": 16,
+      "variant_sku": "13368",
+      "title": "CASIO MJ 12VCB ORANGE CALCULATOR",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 6,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 294,
+          "item_code": "13368",
+          "item_details": "CASIO MJ 12VCB ORG CALCULATOR 555",
+          "item_group": "CASIO",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "website_row": 17,
+      "variant_sku": "8614",
+      "title": "CASIO FX 82 MS SCIENTIFIC CALCULATOR",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 3,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 276,
+          "item_code": "8614",
+          "item_details": "CASIO FX 82MS SCIENTIFIC CALCULATOR 645",
+          "item_group": "CASIO",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 18,
+      "variant_sku": "8617",
+      "title": "CASIO FX 991 ES PLUS SCIENTIFIC CALCULATOR",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 279,
+          "item_code": "8617",
+          "item_details": "CASIO FX 991ES PLUS SCIENTIFIC CALC 1475",
+          "item_group": "CASIO",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 19,
+      "variant_sku": "11394",
+      "title": "CASIO FX 991 MS SCIENTFIC CALCULATOR",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 280,
+          "item_code": "11394",
+          "item_details": "CASIO FX 991MS SCIENTFIC CALCULATOR 1245",
+          "item_group": "CASIO",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 20,
+      "variant_sku": "16591",
+      "title": "CASIO FX CG50 CALCULATOR",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 281,
+          "item_code": "16591",
+          "item_details": "CASIO FX CG50 CALCULATOR 13995",
+          "item_group": "CASIO",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 21,
+      "variant_sku": "8622",
+      "title": "CASIO HL 815L BLACK CALCULATOR",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 284,
+          "item_code": "8622",
+          "item_details": "CASIO HL 815L BK CALCULATOR 145",
+          "item_group": "CASIO",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 22,
+      "variant_sku": "10256",
+      "title": "CASIO MJ 120D CALCULATOR",
+      "old_variant_inventory_qty": 8,
+      "new_variant_inventory_qty": 8,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 289,
+          "item_code": "10256",
+          "item_details": "CASIO MJ 120D CALCULATOR 555",
+          "item_group": "CASIO",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "website_row": 23,
+      "variant_sku": "8620",
+      "title": "CASIO HL 100LB CACULATOR",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 282,
+          "item_code": "8620",
+          "item_details": "CASIO HL 100LB CACULATOR 195",
+          "item_group": "CASIO",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 24,
+      "variant_sku": "8619",
+      "title": "CASIO HL 4A CALCULATOR",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 283,
+          "item_code": "8619",
+          "item_details": "CASIO HL 4A CALCULATOR 100",
+          "item_group": "CASIO",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 25,
+      "variant_sku": "17573",
+      "title": "CASIO KL 820W EZ LABEL PRINTER",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 287,
+          "item_code": "17573",
+          "item_details": "CASIO KL 820W EZ LABEL PRINTER 3895",
+          "item_group": "CASIO",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 26,
+      "variant_sku": "8628",
+      "title": "CASIO LC 160LV BLACK CALCULATOR",
+      "old_variant_inventory_qty": 7,
+      "new_variant_inventory_qty": 6,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 288,
+          "item_code": "8628",
+          "item_details": "CASIO LC 160LV BLK CALCULATOR 135",
+          "item_group": "CASIO",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "website_row": 27,
+      "variant_sku": "8630",
+      "title": "CASIO MJ 12D BLACK CALCULATOR",
+      "old_variant_inventory_qty": 38,
+      "new_variant_inventory_qty": 16,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 290,
+          "item_code": "8630",
+          "item_details": "CASIO MJ 12D BK CALCULATOR 490",
+          "item_group": "CASIO",
+          "cl_qty": 16
+        }
+      ]
+    },
+    {
+      "website_row": 28,
+      "variant_sku": "8632",
+      "title": "CASIO MJ 12VCB RED CALCULATOR",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 6,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 295,
+          "item_code": "8632",
+          "item_details": "CASIO MJ 12VCB RD CALCULATOR 555",
+          "item_group": "CASIO",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "website_row": 29,
+      "variant_sku": "17587",
+      "title": "CASIO XR9WE1 TAPE CARTRIDGE BLK-WHITE",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 3,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 308,
+          "item_code": "17587",
+          "item_details": "CASIO XR9WE1 TAPE CARTRIDGE BLK-WHT 495",
+          "item_group": "CASIO",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 30,
+      "variant_sku": "8631",
+      "title": "CASIO MJ 12SB CACULATOR",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 291,
+          "item_code": "8631",
+          "item_details": "CASIO MJ 12SB CACULATOR 415",
+          "item_group": "CASIO",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 31,
+      "variant_sku": "13356",
+      "title": "CASIO MJ 12VCB BLACK CALCULATOR",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 292,
+          "item_code": "13356",
+          "item_details": "CASIO MJ 12VCB BL CALCULATOR 555",
+          "item_group": "CASIO",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 32,
+      "variant_sku": "13365",
+      "title": "CASIO MJ 12VCB GREEN CALCULATOR",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 5,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 293,
+          "item_code": "13365",
+          "item_details": "CASIO MJ 12VCB GN CALCULATOR 555",
+          "item_group": "CASIO",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "website_row": 33,
+      "variant_sku": "13360",
+      "title": "CASIO MJ 12VCB WHITE CALCULATOR",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 3,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 296,
+          "item_code": "13360",
+          "item_details": "CASIO MJ 12VCB WH CALCULATOR 555",
+          "item_group": "CASIO",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 34,
+      "variant_sku": "19097",
+      "title": "CASIO NJ 120D BLUE CALCULATOR",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 300,
+          "item_code": "19097",
+          "item_details": "CASIO NJ 120D BU CALCULATOR 260",
+          "item_group": "CASIO",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 35,
+      "variant_sku": "8643",
+      "title": "CASIO SL 1000SC WHITE CALCULATOR",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 302,
+          "item_code": "8643",
+          "item_details": "CASIO SL 1000SC WHT CALCULATOR 425",
+          "item_group": "CASIO",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 36,
+      "variant_sku": "8641",
+      "title": "CASIO SL 100NC RED CALCULATOR",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 303,
+          "item_code": "8641",
+          "item_details": "CASIO SL 100NC RD CALCULATOR 325",
+          "item_group": "CASIO",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 37,
+      "variant_sku": "20176",
+      "title": "CASIO SL 760 LC CARD SIZE CALCULATOR",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": -1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 304,
+          "item_code": "20176",
+          "item_details": "CASIO SL 760 LC CARD SIZE CALCULATOR 250",
+          "item_group": "CASIO",
+          "cl_qty": -1
+        }
+      ]
+    },
+    {
+      "website_row": 38,
+      "variant_sku": "17577",
+      "title": "CASIO XR9GN1 TAPE CARTRIDGE BLACK-GREEN",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 306,
+          "item_code": "17577",
+          "item_details": "CASIO XR9GN1 TAPE CARTRIDGE BLK-GRN 495",
+          "item_group": "CASIO",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 39,
+      "variant_sku": "17584",
+      "title": "CASIO XR9X1 TAPE CARTRIDGE BLACK-CLEAR",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 309,
+          "item_code": "17584",
+          "item_details": "CASIO XR9X1 TAPE CARTRIDGE BLK-CLEAR 495",
+          "item_group": "CASIO",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 40,
+      "variant_sku": "17578",
+      "title": "CASIO XR9RD1 TAPE CARTRIDGE BLACK-RED",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 307,
+          "item_code": "17578",
+          "item_details": "CASIO XR9RD1 TAPE CARTRIDGE BLK-RD 495",
+          "item_group": "CASIO",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 41,
+      "variant_sku": "17579",
+      "title": "CASIO XR9YW1 TAPE CARTRIDGE BLACK-YELLOW",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 310,
+          "item_code": "17579",
+          "item_details": "CASIO XR9YW1 TAPE CARTRIDGE BLK-YL 495",
+          "item_group": "CASIO",
+          "cl_qty": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  overflow-x: hidden;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  touch-action: manipulation;
+}
+
+.mobile-safe-bottom {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+.route-fade-in {
+  animation: route-fade-in 180ms ease-out both;
+}
+
+@keyframes route-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grecaptcha-badge {
+  bottom: max(16px, env(safe-area-inset-bottom)) !important;
+  z-index: 900 !important;
+}
+
+@media (max-width: 767px) {
+  .grecaptcha-badge {
+    transform: scale(0.78);
+    transform-origin: right bottom;
+  }
+
+  .recaptcha-safe {
+    padding-bottom: 5.5rem;
+  }
+
+  .mobile-touch-target {
+    min-height: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

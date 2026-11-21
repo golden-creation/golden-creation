@@ -1,0 +1,1813 @@
+{
+  "category": "camlin",
+  "brands": {
+    "Camlin": 99
+  },
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (15).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_camlin_20260824\\camlin products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\camlin products - Updated Website Stock.xlsx",
+  "downloads_copy_status": "copied",
+  "target_sheet": "Products",
+  "lookup_column": "Variant SKU",
+  "updated_column": "Variant Inventory Qty",
+  "counts": {
+    "Matched": 98,
+    "Matched - Busy Duplicates Summed": 1
+  },
+  "website_sku_rows": 99,
+  "website_unique_skus": 99,
+  "website_duplicate_skus": {},
+  "changed_rows": 45,
+  "rows": [
+    {
+      "website_row": 2,
+      "variant_sku": "17161",
+      "title": "CAMLIN SCHOLAR DRAFT MATHEMATICAL DRAWING INSTRUMENT GEOMETRY BOX",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 4,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 502,
+          "item_code": "17161",
+          "item_details": "CML SCHOLAR DRAFT GEOMETRY BOX 100",
+          "item_group": "CAMLIN",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 3,
+      "variant_sku": "17193",
+      "title": "CAMLIN SCHOLAR PRO MATHS DRAWING INSTRUMENTS BOX",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 3,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 504,
+          "item_code": "17193",
+          "item_details": "CML SCHOLAR PRO GEOMETRY BOX 350",
+          "item_group": "CAMLIN",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 4,
+      "variant_sku": "10452",
+      "title": "CAMEL WAX CRAYON 100 12C",
+      "old_variant_inventory_qty": 490,
+      "new_variant_inventory_qty": 490,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 525,
+          "item_code": "10452",
+          "item_details": "CML WAX CRAYON 1000 12C 10",
+          "item_group": "CAMLIN",
+          "cl_qty": 490
+        }
+      ]
+    },
+    {
+      "website_row": 5,
+      "variant_sku": "10453",
+      "title": "CAMEL WAX CRAYONS 1000 XL 12 COLOR",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 526,
+          "item_code": "10453",
+          "item_details": "CML WAX CRAYONS 1000 XL 35",
+          "item_group": "CAMLIN",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 6,
+      "variant_sku": "16419",
+      "title": "CAMEL PAINTING KIT",
+      "old_variant_inventory_qty": 22,
+      "new_variant_inventory_qty": 22,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 491,
+          "item_code": "16419",
+          "item_details": "CML PAINTING KIT 199",
+          "item_group": "CAMLIN",
+          "cl_qty": 22
+        }
+      ]
+    },
+    {
+      "website_row": 7,
+      "variant_sku": "16432",
+      "title": "CAMEL WATER COLORPAD 12 SHADES",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 4,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 520,
+          "item_code": "16432",
+          "item_details": "CML WATER COLORPAD 12 SHADES 150",
+          "item_group": "CAMLIN",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 8,
+      "variant_sku": "16434",
+      "title": "CAMEL WATER COLORPAD 24 SHADES",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 5,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 521,
+          "item_code": "16434",
+          "item_details": "CML WATER COLORPAD 24 SHADES 260",
+          "item_group": "CAMLIN",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "website_row": 9,
+      "variant_sku": "16438",
+      "title": "CAMEL DRAWING KIT",
+      "old_variant_inventory_qty": 22,
+      "new_variant_inventory_qty": 22,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 476,
+          "item_code": "16438",
+          "item_details": "CML DRAWING KIT 149",
+          "item_group": "CAMLIN",
+          "cl_qty": 22
+        }
+      ]
+    },
+    {
+      "website_row": 10,
+      "variant_sku": "16449",
+      "title": "CAMEL ART KIT",
+      "old_variant_inventory_qty": 21,
+      "new_variant_inventory_qty": 23,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 432,
+          "item_code": "16449",
+          "item_details": "CML ART KIT 99",
+          "item_group": "CAMLIN",
+          "cl_qty": 23
+        }
+      ]
+    },
+    {
+      "website_row": 11,
+      "variant_sku": "16453",
+      "title": "CAMEL CREATIVE KIT",
+      "old_variant_inventory_qty": 24,
+      "new_variant_inventory_qty": 27,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 474,
+          "item_code": "16453",
+          "item_details": "CML CREATIVE KIT 49",
+          "item_group": "CAMLIN",
+          "cl_qty": 27
+        }
+      ]
+    },
+    {
+      "website_row": 12,
+      "variant_sku": "16496",
+      "title": "CAMEL ARTIST BRUSH PEN 12 SHADES",
+      "old_variant_inventory_qty": 8,
+      "new_variant_inventory_qty": 7,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 441,
+          "item_code": "16496",
+          "item_details": "CML ARTIST BRUSH PEN 12 SHADE 225",
+          "item_group": "CAMLIN",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "website_row": 13,
+      "variant_sku": "16499",
+      "title": "CAMEL ART PREMIUM STUDIO KIT",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 15,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 433,
+          "item_code": "16499",
+          "item_details": "CML ART PREMIUM STUDIO KIT 799",
+          "item_group": "CAMLIN",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "website_row": 14,
+      "variant_sku": "16502",
+      "title": "CAMEL POSTER COLOR T-14   14 SHADES",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 496,
+          "item_code": "16502",
+          "item_details": "CML POSTER COLOR T-14 SHADE 210",
+          "item_group": "CAMLIN",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 15,
+      "variant_sku": "16507",
+      "title": "CAMEL POSTER COLOR T-18  18SHADES",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 3,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 497,
+          "item_code": "16507",
+          "item_details": "CML POSTER COLOUR T-18 SHADES 265",
+          "item_group": "CAMLIN",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 16,
+      "variant_sku": "8587",
+      "title": "CAMEL ARTIST BRUSH PEN 24 SHADES",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 3,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 442,
+          "item_code": "8587",
+          "item_details": "CML ARTIST BRUSH PEN 24 SHADES 440",
+          "item_group": "CAMLIN",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 17,
+      "variant_sku": "8588",
+      "title": "CAMLIN BRUSH SET FLAT 4PCS (SR 65)",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 6,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 458,
+          "item_code": "8588",
+          "item_details": "CML BRUSH FLAT (SR 65) SET 4PC 100\"",
+          "item_group": "CAMLIN",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "website_row": 18,
+      "variant_sku": "8590",
+      "title": "CAMLIN BRUSH SET ROUND 4PCS (SR 64)",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 4,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 468,
+          "item_code": "8590",
+          "item_details": "CML BRUSH ROUND (SR-64) SET 4PCS 70\"",
+          "item_group": "CAMLIN",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 19,
+      "variant_sku": "8591",
+      "title": "CAMLIN BRUSH SET ROUND 7PCS (SR 64)",
+      "old_variant_inventory_qty": 8,
+      "new_variant_inventory_qty": 20,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 465,
+          "item_code": "8591",
+          "item_details": "CML BRUSH ROUND (SR 64) SET 7PCS 200",
+          "item_group": "CAMLIN",
+          "cl_qty": 20
+        }
+      ]
+    },
+    {
+      "website_row": 20,
+      "variant_sku": "8594",
+      "title": "CAMEL FABRICA ACRYLIC 6 COLOUR 10ML",
+      "old_variant_inventory_qty": 9,
+      "new_variant_inventory_qty": 9,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 427,
+          "item_code": "8594",
+          "item_details": "CML ACRYLIC FABRICA CLR 10ML 6S SET 100",
+          "item_group": "CAMLIN",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "website_row": 21,
+      "variant_sku": "8595",
+      "title": "CAMEL FABRICA ACRYLIC 10 COLOUR 15ML 230",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 428,
+          "item_code": "8595",
+          "item_details": "CML ACRYLIC FABRICA CLR 15ML 10S SET 200",
+          "item_group": "CAMLIN",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 22,
+      "variant_sku": "8598",
+      "title": "CAMEL INTERCHANGABLE BRUSH SET 8PCS",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 4,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 469,
+          "item_code": "8598",
+          "item_details": "CML CHANGEABLE 8PCS BRUSH SET 600",
+          "item_group": "CAMLIN",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 23,
+      "variant_sku": "8601",
+      "title": "CAMEL POSTER COLOR T-12 12 SHADES",
+      "old_variant_inventory_qty": 15,
+      "new_variant_inventory_qty": 16,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 495,
+          "item_code": "8601",
+          "item_details": "CML POSTER COLOR T-12 185\"",
+          "item_group": "CAMLIN",
+          "cl_qty": 16
+        }
+      ]
+    },
+    {
+      "website_row": 24,
+      "variant_sku": "8604",
+      "title": "CAMEL WATER CAKE 12 COLOUR",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 19,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 512,
+          "item_code": "8604",
+          "item_details": "CML WATER CAKE 12 COLOUR 35",
+          "item_group": "CAMLIN",
+          "cl_qty": 19
+        }
+      ]
+    },
+    {
+      "website_row": 25,
+      "variant_sku": "8605",
+      "title": "CAMEL WATER CAKE 12 COLOUR +1 BRUSH",
+      "old_variant_inventory_qty": 12,
+      "new_variant_inventory_qty": 12,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 514,
+          "item_code": "8605",
+          "item_details": "CML WATER CLR CAKE 12 COLOUR 60",
+          "item_group": "CAMLIN",
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "website_row": 26,
+      "variant_sku": "8606",
+      "title": "CAMEL WATER CAKE 24 COLOUR + BRUSH",
+      "old_variant_inventory_qty": 16,
+      "new_variant_inventory_qty": 16,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 515,
+          "item_code": "8606",
+          "item_details": "CML WATER CLR CAKE 24 COLOUR 70",
+          "item_group": "CAMLIN",
+          "cl_qty": 16
+        }
+      ]
+    },
+    {
+      "website_row": 27,
+      "variant_sku": "8607",
+      "title": "CAMEL WATER CAKE 24 COLOUR +1 BRUSH",
+      "old_variant_inventory_qty": 6,
+      "new_variant_inventory_qty": 16,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 513,
+          "item_code": "8607",
+          "item_details": "CML WATER CAKE 24 COLOUR +1 BRUSH 110",
+          "item_group": "CAMLIN",
+          "cl_qty": 16
+        }
+      ]
+    },
+    {
+      "website_row": 28,
+      "variant_sku": "9919",
+      "title": "CAMEL ARTIST ACRYLIC COLORS 18 SHADES 20ML",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 425,
+          "item_code": "9919",
+          "item_details": "CML ACRYLIC 20ML 18SHADES 1050",
+          "item_group": "CAMLIN",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 29,
+      "variant_sku": "9920",
+      "title": "CAMEL ARTIST ACRYLIC COLORS 12 SHADES 40ML",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 426,
+          "item_code": "9920",
+          "item_details": "CML ACRYLIC COLOR TUBES 40ML 12N 1390",
+          "item_group": "CAMLIN",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 30,
+      "variant_sku": "9921",
+      "title": "CAMEL ARFINA FIXATIVE SPRAY 200ML",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 430,
+          "item_code": "9921",
+          "item_details": "CML ARFINA FIXATIVE SPRAY 200ML 300",
+          "item_group": "CAMLIN",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 31,
+      "variant_sku": "9922",
+      "title": "CAMEL ARFINA PICTURE VARNISH",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 431,
+          "item_code": "9922",
+          "item_details": "CML ARFINA PICTURE VARNISH 200ML 300",
+          "item_group": "CAMLIN",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 32,
+      "variant_sku": "9923",
+      "title": "CAMEL ARTIST ACRYLIC 24+1 9ML",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 436,
+          "item_code": "9923",
+          "item_details": "CML ARTIST ACRYLIC 9ML 24+1 4PCS 875",
+          "item_group": "CAMLIN",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 33,
+      "variant_sku": "9924",
+      "title": "CAMEL ARTIST ACRYLIC 9ML",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 437,
+          "item_code": "9924",
+          "item_details": "CML ARTIST ACRYLIC 9ML 350",
+          "item_group": "CAMLIN",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 34,
+      "variant_sku": "9925",
+      "title": "CAMEL ARTIST ACRYLIC 20ML",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 3,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 435,
+          "item_code": "9925",
+          "item_details": "CML ARTIST ACRYLIC 20ML 650",
+          "item_group": "CAMLIN",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 35,
+      "variant_sku": "9926",
+      "title": "CAMEL ARTIST BRUSH PEN SET 12 COLOURS",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 4,
+      "status": "Matched - Busy Duplicates Summed",
+      "action": "updated from summed Busy rows",
+      "busy_matches": [
+        {
+          "busy_row": 444,
+          "item_code": "9926",
+          "item_details": "CML ARTIST BRUSH PEN SET 12 SHADES 350",
+          "item_group": "CAMLIN",
+          "cl_qty": 1
+        },
+        {
+          "busy_row": 445,
+          "item_code": "9926",
+          "item_details": "CML ARTIST BRUSH PEN SET 12 SHADES 400",
+          "item_group": "CAMLIN",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 36,
+      "variant_sku": "9927",
+      "title": "CAMEL ARTIST OIL COLOUR 9ML",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 451,
+          "item_code": "9927",
+          "item_details": "CML ARTIST OIL COLOUR 9ML 500",
+          "item_group": "CAMLIN",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 37,
+      "variant_sku": "9929",
+      "title": "CAMEL ARTIST WATER 18 COLORS",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 3,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 452,
+          "item_code": "9929",
+          "item_details": "CML ARTIST WATER COLOR CAKES 18N 300",
+          "item_group": "CAMLIN",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 38,
+      "variant_sku": "9932",
+      "title": "CAMEL BRUSH PEN SET 6 COLORS",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 4,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 443,
+          "item_code": "9932",
+          "item_details": "CML ARTIST BRUSH PEN 6 SHADE 115",
+          "item_group": "CAMLIN",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 39,
+      "variant_sku": "9936",
+      "title": "CAMEL BRUSH FLAT(SR 67)SET PCS",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 7,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 461,
+          "item_code": "9936",
+          "item_details": "CML BRUSH FLAT (SR 67) SET 7PCS 450",
+          "item_group": "CAMLIN",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "website_row": 40,
+      "variant_sku": "9937",
+      "title": "CAMEL BRUSH ROUND (SR 66) SET 4PCS",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 460,
+          "item_code": "9937",
+          "item_details": "CML BRUSH FLAT (SR 66) SET 4PCS 100",
+          "item_group": "CAMLIN",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 41,
+      "variant_sku": "9938",
+      "title": "CAMEL BRUSH FLAT (SR 65) SET 7PC",
+      "old_variant_inventory_qty": 14,
+      "new_variant_inventory_qty": 19,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 459,
+          "item_code": "9938",
+          "item_details": "CML BRUSH FLAT (SR 65) SET 7PC 250\"",
+          "item_group": "CAMLIN",
+          "cl_qty": 19
+        }
+      ]
+    },
+    {
+      "website_row": 42,
+      "variant_sku": "10413",
+      "title": "CAMEL ARTIST OIL COLOUR 20ML",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 449,
+          "item_code": "10413",
+          "item_details": "CML ARTIST OIL COLOUR 20ML 900",
+          "item_group": "CAMLIN",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 43,
+      "variant_sku": "10414",
+      "title": "CAMEL BRUSH FLAT (SR 69) SET 7PCS",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 462,
+          "item_code": "10414",
+          "item_details": "CML BRUSH FLAT (SR 69) SET 7 PC 600",
+          "item_group": "CAMLIN",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 44,
+      "variant_sku": "10415",
+      "title": "CAMEL ACRYLIC FABRICA COLOR 15ML SET OF 20",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 3,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 429,
+          "item_code": "10415",
+          "item_details": "CML ACRYLIC FABRICA CLR 15ML 20S SET 520",
+          "item_group": "CAMLIN",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 45,
+      "variant_sku": "10416",
+      "title": "CAMEL BRUSH ROUND (SR 66) SET 7PCS",
+      "old_variant_inventory_qty": 5,
+      "new_variant_inventory_qty": 13,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 466,
+          "item_code": "10416",
+          "item_details": "CML BRUSH ROUND (SR 66) SET 7PCS 300",
+          "item_group": "CAMLIN",
+          "cl_qty": 13
+        }
+      ]
+    },
+    {
+      "website_row": 46,
+      "variant_sku": "10417",
+      "title": "CAMEL CHARCOAL PENCIL PACK OF 3PCS",
+      "old_variant_inventory_qty": 7,
+      "new_variant_inventory_qty": 7,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 470,
+          "item_code": "10417",
+          "item_details": "CML CHARCOAL PENCIL (3PC)-90",
+          "item_group": "CAMLIN",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "website_row": 47,
+      "variant_sku": "10419",
+      "title": "CAMEL CHARCOAL PENCIL PACK OF 10N",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 472,
+          "item_code": "10419",
+          "item_details": "CML CHARCOAL PENCIL 10PC 300",
+          "item_group": "CAMLIN",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 48,
+      "variant_sku": "10420",
+      "title": "CAMEL PENCIL COLORS 12 SHADE",
+      "old_variant_inventory_qty": 46,
+      "new_variant_inventory_qty": 43,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 473,
+          "item_code": "10420",
+          "item_details": "CML COLOUR PENCILS 12CLRS 29",
+          "item_group": "CAMLIN",
+          "cl_qty": 43
+        }
+      ]
+    },
+    {
+      "website_row": 49,
+      "variant_sku": "10421",
+      "title": "CAMEL DISTILLED TURPENTINE OIL 100ML",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 4,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 485,
+          "item_code": "10421",
+          "item_details": "CML OIL DIST TURPENTINE 100ML 120",
+          "item_group": "CAMLIN",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 50,
+      "variant_sku": "10423",
+      "title": "CAMEL DRAWING INK 20ML PACK OF 12SHADES",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 475,
+          "item_code": "10423",
+          "item_details": "CML DRAWING INK 20 ML750",
+          "item_group": "CAMLIN",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 51,
+      "variant_sku": "10428",
+      "title": "CAMEL ARTIST WHITE GESSO 100ML",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 447,
+          "item_code": "10428",
+          "item_details": "CML ARTIST GESSO 100ML 140",
+          "item_group": "CAMLIN",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 52,
+      "variant_sku": "10429",
+      "title": "CAMEL ACRYLIC COLORS ARTISTS GESSO 500ML",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 480,
+          "item_code": "10429",
+          "item_details": "CML GESSO 500ML 630",
+          "item_group": "CAMLIN",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 53,
+      "variant_sku": "10432",
+      "title": "CAMEL OIL PASTEL COLORS 15 SHADES",
+      "old_variant_inventory_qty": 6,
+      "new_variant_inventory_qty": 8,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 487,
+          "item_code": "10432",
+          "item_details": "CML OIL PASTEL 15 COL 65.",
+          "item_group": "CAMLIN",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "website_row": 54,
+      "variant_sku": "10433",
+      "title": "CAMEL OIL PASTEL COLORS 12 SHADE",
+      "old_variant_inventory_qty": 6,
+      "new_variant_inventory_qty": 13,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 486,
+          "item_code": "10433",
+          "item_details": "CML OIL PASTEL 12 COL 50",
+          "item_group": "CAMLIN",
+          "cl_qty": 13
+        }
+      ]
+    },
+    {
+      "website_row": 55,
+      "variant_sku": "10434",
+      "title": "CAMEL OIL PASTEL COLORS 25 SHADES",
+      "old_variant_inventory_qty": 7,
+      "new_variant_inventory_qty": 7,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 488,
+          "item_code": "10434",
+          "item_details": "CML OIL PASTEL 25 COL 110",
+          "item_group": "CAMLIN",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "website_row": 56,
+      "variant_sku": "10436",
+      "title": "CAMEL PENCIL 12 COLOR",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 7,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 492,
+          "item_code": "10436",
+          "item_details": "CML PENCIL 12 COLOR 65",
+          "item_group": "CAMLIN",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "website_row": 57,
+      "variant_sku": "10437",
+      "title": "CAMEL PENCIL COLOUR 24 SHADES",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 4,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 493,
+          "item_code": "10437",
+          "item_details": "CML PENCIL 24 COLOR 130",
+          "item_group": "CAMLIN",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 58,
+      "variant_sku": "10438",
+      "title": "CAMEL PHOTO COLOUR SET 20ML PACK OF 12SHADES",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 494,
+          "item_code": "10438",
+          "item_details": "CML PHOTO COLOR 20ML 650",
+          "item_group": "CAMLIN",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 59,
+      "variant_sku": "10439",
+      "title": "CAMEL ARTIST PICTURE VARNISH OIL 100ML",
+      "old_variant_inventory_qty": 5,
+      "new_variant_inventory_qty": 5,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 489,
+          "item_code": "10439",
+          "item_details": "CML OIL PIC VARNISH 100ML 170",
+          "item_group": "CAMLIN",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "website_row": 60,
+      "variant_sku": "10440",
+      "title": "CAMEL ACRYLIC POSTER COLOUR  T-6  6SHADES",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 10,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 498,
+          "item_code": "10440",
+          "item_details": "CML POSTER COLOUR T-6 SHADES 100",
+          "item_group": "CAMLIN",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 61,
+      "variant_sku": "10441",
+      "title": "CAMEL ARTIST WATER COLOUR",
+      "old_variant_inventory_qty": 5,
+      "new_variant_inventory_qty": 5,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 454,
+          "item_code": "10441",
+          "item_details": "CML ARTIST WATER COLOUR 350",
+          "item_group": "CAMLIN",
+          "cl_qty": 5
+        }
+      ]
+    },
+    {
+      "website_row": 62,
+      "variant_sku": "10442",
+      "title": "CAMEL PREMIUM POSTER COLOUR 12 SHADES 15ML",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 499,
+          "item_code": "10442",
+          "item_details": "CML PREMIUM POSTER COLORS 15 ML 350",
+          "item_group": "CAMLIN",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 63,
+      "variant_sku": "10443",
+      "title": "CAMEL PREMIUM POSTER COLOUR 20 SHADES",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 500,
+          "item_code": "10443",
+          "item_details": "CML PREMIUM POSTER COLOUR 20ML 650",
+          "item_group": "CAMLIN",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 64,
+      "variant_sku": "10444",
+      "title": "CAMEL PURIFIED LINSEED OIL",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 3,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 490,
+          "item_code": "10444",
+          "item_details": "CML OIL PURIFIED LINSEED 120",
+          "item_group": "CAMLIN",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 65,
+      "variant_sku": "10445",
+      "title": "CAMEL SOFT PASTEL COLOR 20 SHADES",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 505,
+          "item_code": "10445",
+          "item_details": "CML SOFT PASTEL 20 COLOR 250",
+          "item_group": "CAMLIN",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 66,
+      "variant_sku": "10446",
+      "title": "CAMEL SOFT PASTEL COLOR 36 SHADES",
+      "old_variant_inventory_qty": 5,
+      "new_variant_inventory_qty": 4,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 506,
+          "item_code": "10446",
+          "item_details": "CML SOFT PASTEL 36 COL 450",
+          "item_group": "CAMLIN",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 67,
+      "variant_sku": "10447",
+      "title": "CAMEL TEXTURE WHITE 100ML",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 509,
+          "item_code": "10447",
+          "item_details": "CML TEXTURE WHITE 100 ML 170",
+          "item_group": "CAMLIN",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 68,
+      "variant_sku": "10448",
+      "title": "CAMEL TEXTURE WHITE 500ML",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 510,
+          "item_code": "10448",
+          "item_details": "CML TEXTURE WHITE 500ML 765",
+          "item_group": "CAMLIN",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 69,
+      "variant_sku": "10449",
+      "title": "CAMEL WATER TUBES COLORS 12 SHADES",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 4,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 522,
+          "item_code": "10449",
+          "item_details": "CML WATER TUBES 12 CLRS 100",
+          "item_group": "CAMLIN",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 70,
+      "variant_sku": "10450",
+      "title": "CAMEL WATER COLOR TUBE 6 SHADES",
+      "old_variant_inventory_qty": 11,
+      "new_variant_inventory_qty": 11,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 523,
+          "item_code": "10450",
+          "item_details": "CML WATER TUBES 6 CLRS 50",
+          "item_group": "CAMLIN",
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "website_row": 71,
+      "variant_sku": "10454",
+      "title": "CAMEL WAX CRAYONS 1000 XL 24 COLOR",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 528,
+          "item_code": "10454",
+          "item_details": "CML WAX CRAYONS 1000XL 24 70",
+          "item_group": "CAMLIN",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 72,
+      "variant_sku": "30083",
+      "title": "CAMLIN WAX CRAYONS 1000S 24C",
+      "old_variant_inventory_qty": 16,
+      "new_variant_inventory_qty": 15,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 527,
+          "item_code": "30083",
+          "item_details": "CML WAX CRAYONS 1000S 24C 25",
+          "item_group": "CAMLIN",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "website_row": 73,
+      "variant_sku": "10451",
+      "title": "CAMLIN WAX 12 COL JUMBO",
+      "old_variant_inventory_qty": 7,
+      "new_variant_inventory_qty": 4,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 524,
+          "item_code": "10451",
+          "item_details": "CML WAX 12 COL JUMBO 60",
+          "item_group": "CAMLIN",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 74,
+      "variant_sku": "30182",
+      "title": "CAMLIN WATER CLR TUBES 9ML 12 COLORS",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 519,
+          "item_code": "30182",
+          "item_details": "CML WATER CLR TUBES 9ML 12 COLORS 490",
+          "item_group": "CAMLIN",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 75,
+      "variant_sku": "30181",
+      "title": "CAMLIN WATER CLR TUBES 5ML 24 COLORS",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 518,
+          "item_code": "30181",
+          "item_details": "CML WATER CLR TUBES 5ML 24 COLORS 450",
+          "item_group": "CAMLIN",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 76,
+      "variant_sku": "30180",
+      "title": "CAMLIN WATER CLR TUBES 5ML 12 COLORS",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 517,
+          "item_code": "30180",
+          "item_details": "CML WATER CLR TUBES 5ML 12 COLORS 220",
+          "item_group": "CAMLIN",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 77,
+      "variant_sku": "30179",
+      "title": "CAMLIN WATER CLR TUBES 20ML 12 COLORS",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 516,
+          "item_code": "30179",
+          "item_details": "CML WATER CLR TUBES 20ML 12 COLORS 1090",
+          "item_group": "CAMLIN",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 78,
+      "variant_sku": "30177",
+      "title": "CAMLIN BRUSH ROUND (SR 68) SET 7 PC",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 467,
+          "item_code": "30177",
+          "item_details": "CML BRUSH ROUND (SR 68) SET 7 PC 400",
+          "item_group": "CAMLIN",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 79,
+      "variant_sku": "30176",
+      "title": "CAMLIN BRUSH FLAT (SR 70,71,72) 10PCS",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 463,
+          "item_code": "30176",
+          "item_details": "CML BRUSH FLAT (SR 70,71,72) 10PCS 900",
+          "item_group": "CAMLIN",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 80,
+      "variant_sku": "30175",
+      "title": "CAMLIN BRUSH FLAT (SR 56) SET 7PC",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 457,
+          "item_code": "30175",
+          "item_details": "CML BRUSH FLAT (SR 56) SET 7PC 650",
+          "item_group": "CAMLIN",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 81,
+      "variant_sku": "30174",
+      "title": "CAMLIN ARTIST GLITTER COLORS",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 10,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 448,
+          "item_code": "30174",
+          "item_details": "CML ARTIST GLITTER COLORS 40",
+          "item_group": "CAMLIN",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 82,
+      "variant_sku": "30173",
+      "title": "CAMLIN ARTIST DRAWING INK 20ML BLACK",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 10,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 446,
+          "item_code": "30173",
+          "item_details": "CML ARTIST DRAWING INK 20ML BLK 75",
+          "item_group": "CAMLIN",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 83,
+      "variant_sku": "30172",
+      "title": "CAMLIN ARTIST ACRYLIC COLORS 9ML 24 COLOUR",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 6,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 440,
+          "item_code": "30172",
+          "item_details": "CML ARTIST ACRYLIC COLORS 9ML 24 CLR 750",
+          "item_group": "CAMLIN",
+          "cl_qty": 6
+        }
+      ]
+    },
+    {
+      "website_row": 84,
+      "variant_sku": "30171",
+      "title": "CAMLIN ARTIST ACRYLIC COLORS 9ML 14 COLOUR",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 4,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 439,
+          "item_code": "30171",
+          "item_details": "CML ARTIST ACRYLIC COLORS 9ML 14 CLR 390",
+          "item_group": "CAMLIN",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 85,
+      "variant_sku": "30170",
+      "title": "CAMLIN ARTIST ACRYLIC COLORS 20ML 14 COLOUR",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 438,
+          "item_code": "30170",
+          "item_details": "CML ARTIST ACRYLIC COLORS 20ML 14CLR 790",
+          "item_group": "CAMLIN",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 86,
+      "variant_sku": "30028",
+      "title": "CAMLIN ART SAFARI KIT",
+      "old_variant_inventory_qty": 5,
+      "new_variant_inventory_qty": 7,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 434,
+          "item_code": "30028",
+          "item_details": "CML ART SAFARI KIT 550",
+          "item_group": "CAMLIN",
+          "cl_qty": 7
+        }
+      ]
+    },
+    {
+      "website_row": 87,
+      "variant_sku": "20255",
+      "title": "CAMLIN 15CM SCALE",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 423,
+          "item_code": "20255",
+          "item_details": "CML 15CM SCALE 5",
+          "item_group": "CAMLIN",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 88,
+      "variant_sku": "8593",
+      "title": "CAMEL GEOMETRY EXAM BOX 160",
+      "old_variant_inventory_qty": 3,
+      "new_variant_inventory_qty": 3,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 479,
+          "item_code": "8593",
+          "item_details": "CML GEOMETRY EXAM BOX 160",
+          "item_group": "CAMLIN",
+          "cl_qty": 3
+        }
+      ]
+    },
+    {
+      "website_row": 89,
+      "variant_sku": "8599",
+      "title": "CAMEL NOVA GLOWING PENCIL PACK OF 10PCS",
+      "old_variant_inventory_qty": 23,
+      "new_variant_inventory_qty": 339,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 484,
+          "item_code": "8599",
+          "item_details": "CML NOVA GLOWING PENCIL 6",
+          "item_group": "CAMLIN",
+          "cl_qty": 339
+        }
+      ]
+    },
+    {
+      "website_row": 90,
+      "variant_sku": "30081",
+      "title": "CAMLIN SUPREME HD WOODEN PENCIL",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 12,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 507,
+          "item_code": "30081",
+          "item_details": "CML SUPREME HD WOODEN PENCIL 70",
+          "item_group": "CAMLIN",
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "website_row": 91,
+      "variant_sku": "30178",
+      "title": "CAMLIN PREMIUM SKETCH BOOK A5 UNRULED",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 4,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 501,
+          "item_code": "30178",
+          "item_details": "CML PREMIUM SKETCH BOOK A5 UNRULED 71",
+          "item_group": "CAMLIN",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 92,
+      "variant_sku": "30082",
+      "title": "CAMLIN DUST FREE ERASER",
+      "old_variant_inventory_qty": 380,
+      "new_variant_inventory_qty": 357,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 478,
+          "item_code": "30082",
+          "item_details": "CML DUST FREE ERASER 3",
+          "item_group": "CAMLIN",
+          "cl_qty": 357
+        }
+      ]
+    },
+    {
+      "website_row": 93,
+      "variant_sku": "20253",
+      "title": "CAMLIN DRAWING PENCIL(6PC)",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 477,
+          "item_code": "20253",
+          "item_details": "CML DRAWING PENCIL(6PC)",
+          "item_group": "CAMLIN",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 94,
+      "variant_sku": "20254",
+      "title": "CAMLIN CHARCOAL PENCIL 10N",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 471,
+          "item_code": "20254",
+          "item_details": "CML CHARCOAL PENCIL 10N 150",
+          "item_group": "CAMLIN",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 95,
+      "variant_sku": "16462",
+      "title": "CAMLIN SUPREME PENCIL PACK OF 10N",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 10,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 508,
+          "item_code": "16462",
+          "item_details": "CML SUPREME NRT PENCIL 60",
+          "item_group": "CAMLIN",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 96,
+      "variant_sku": "16463",
+      "title": "CAMLIN BLACK PENCIL PACK OF 10N",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 10,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 455,
+          "item_code": "16463",
+          "item_details": "CML BLACK NRT PENCILS 50",
+          "item_group": "CAMLIN",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 97,
+      "variant_sku": "16472",
+      "title": "CAMLIN SCHOLAR PLUS GEOMETRY BOX",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 503,
+          "item_code": "16472",
+          "item_details": "CML SCHOLAR PLUS GEOMETRY BOX 200",
+          "item_group": "CAMLIN",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 98,
+      "variant_sku": "16489",
+      "title": "CAMLIN MECHANICAL PENCIL 2.0MM",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 483,
+          "item_code": "16489",
+          "item_details": "CML MECHANICAL PENCIL 2.0MM 25",
+          "item_group": "CAMLIN",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 99,
+      "variant_sku": "16491",
+      "title": "CAMLIN 3IN1 MECHANICAL PENCIL KIT",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 424,
+          "item_code": "16491",
+          "item_details": "CML 3IN1 TRI MECHANICAL PENCIL 59",
+          "item_group": "CAMLIN",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 100,
+      "variant_sku": "17194",
+      "title": "CAMLIN TRINITY FOUNTAIN PEN 24K GOLD PLATED NIB",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 2,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 511,
+          "item_code": "17194",
+          "item_details": "CML TRINITY FOUNTAIN PEN 140",
+          "item_group": "CAMLIN",
+          "cl_qty": 2
+        }
+      ]
+    }
+  ]
+}

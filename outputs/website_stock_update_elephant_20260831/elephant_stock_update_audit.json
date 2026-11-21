@@ -1,0 +1,531 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (25).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_elephant_20260831\\elephant products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\elephant products - Updated Website Stock.xlsx",
+  "summary": {
+    "Matched": 26
+  },
+  "rows": [
+    {
+      "website_row": 2,
+      "title": "ELEPHANT 112110 12*50 STICKY NOTES NEON",
+      "brand": "Elephant",
+      "variant_sku": "20417",
+      "old_variant_inventory_qty": 24,
+      "new_variant_inventory_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 921,
+          "item_code": "20417",
+          "item_details": "ELP 112110 12*50 STICKY NOTES NEON 80",
+          "item_group": "ELEPHANT",
+          "cl_qty": 24
+        }
+      ]
+    },
+    {
+      "website_row": 3,
+      "title": "ELEPHANT 133009 FILM INDEX STICKY NOTES",
+      "brand": "Elephant",
+      "variant_sku": "20418",
+      "old_variant_inventory_qty": 18,
+      "new_variant_inventory_qty": 18,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 922,
+          "item_code": "20418",
+          "item_details": "ELP 133009 FILM INDEX STICKY NOTES 130",
+          "item_group": "ELEPHANT",
+          "cl_qty": 18
+        }
+      ]
+    },
+    {
+      "website_row": 4,
+      "title": "ELEPHANT 159634 1*3 STICKY NOTES NEON",
+      "brand": "Elephant",
+      "variant_sku": "17891",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 926,
+          "item_code": "17891",
+          "item_details": "ELP 159658 2*3 STICKY NOTES BL 60",
+          "item_group": "ELEPHANT",
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "website_row": 5,
+      "title": "ELEPHANT 159672 2*3 STICKY NOTES PINK",
+      "brand": "Elephant",
+      "variant_sku": "20420",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 928,
+          "item_code": "20420",
+          "item_details": "ELP 159672 2*3 STICKY NOTES PINK 60",
+          "item_group": "ELEPHANT",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "website_row": 6,
+      "title": "ELEPHANT 106898 3*3 STICKY NOTES YELLOW",
+      "brand": "Elephant",
+      "variant_sku": "9892",
+      "old_variant_inventory_qty": 13,
+      "new_variant_inventory_qty": 11,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 913,
+          "item_code": "9892",
+          "item_details": "ELP 106898 3*3 STICKY NOTES YL 80",
+          "item_group": "ELEPHANT",
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "website_row": 7,
+      "title": "ELEPHANT 106911 3*3 STICKY NOTES BLACK",
+      "brand": "Elephant",
+      "variant_sku": "9893",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 915,
+          "item_code": "9893",
+          "item_details": "ELP 106911 3*3 STICKY NOTES BL 80",
+          "item_group": "ELEPHANT",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "website_row": 8,
+      "title": "ELEPHANT 106959 3*3 STICKY NOTES N.PINK",
+      "brand": "Elephant",
+      "variant_sku": "9894",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 917,
+          "item_code": "9894",
+          "item_details": "ELP 106959 3*3 STICKY NOTES N.PNK 80",
+          "item_group": "ELEPHANT",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 9,
+      "title": "ELEPHANT 106966 3*3 STICKY NOTES N.GREEN",
+      "brand": "Elephant",
+      "variant_sku": "17897",
+      "old_variant_inventory_qty": 11,
+      "new_variant_inventory_qty": 11,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 918,
+          "item_code": "17897",
+          "item_details": "ELP 106966 3*3 STICKY NOTES N.GRN 80",
+          "item_group": "ELEPHANT",
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "website_row": 10,
+      "title": "ELEPHANT 112103 12*50 STICKY NOTES PASTEL",
+      "brand": "Elephant",
+      "variant_sku": "17934",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 920,
+          "item_code": "17934",
+          "item_details": "ELP 112103 12*50 STICKY NOTES PASTEL 80",
+          "item_group": "ELEPHANT",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 11,
+      "title": "ELEPHANT 159702 2*3 STICKY NOTES PINK",
+      "brand": "Elephant",
+      "variant_sku": "17899",
+      "old_variant_inventory_qty": 11,
+      "new_variant_inventory_qty": 11,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 931,
+          "item_code": "17899",
+          "item_details": "ELP 159702 2*3 STICKY NOTES PINK 60",
+          "item_group": "ELEPHANT",
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "website_row": 12,
+      "title": "ELEPHANT 106904 3*3 STICKY NOTES PINK",
+      "brand": "Elephant",
+      "variant_sku": "17910",
+      "old_variant_inventory_qty": 23,
+      "new_variant_inventory_qty": 21,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 914,
+          "item_code": "17910",
+          "item_details": "ELP 106904 3*3 STICKY NOTES PK 80",
+          "item_group": "ELEPHANT",
+          "cl_qty": 21
+        }
+      ]
+    },
+    {
+      "website_row": 13,
+      "title": "ELEPHANT 106928 3*3 STICKY NOTES GREEN",
+      "brand": "Elephant",
+      "variant_sku": "17913",
+      "old_variant_inventory_qty": 11,
+      "new_variant_inventory_qty": 11,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 916,
+          "item_code": "17913",
+          "item_details": "ELP 106928 3*3 STICKY NOTES GRN 80",
+          "item_group": "ELEPHANT",
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "website_row": 14,
+      "title": "ELEPHANT 106973 3*3 STICKY NOTES N.YELLOW",
+      "brand": "Elephant",
+      "variant_sku": "17886",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 919,
+          "item_code": "17886",
+          "item_details": "ELP 106973 3*3 STICKY NOTES N.YL 80",
+          "item_group": "ELEPHANT",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "website_row": 15,
+      "title": "ELEPHANT 155032 3*3 STICKY NOTES PURPLE",
+      "brand": "Elephant",
+      "variant_sku": "17914",
+      "old_variant_inventory_qty": 9,
+      "new_variant_inventory_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 923,
+          "item_code": "17914",
+          "item_details": "ELP 155032 3*3 STICKY NOTES PURPLE 80",
+          "item_group": "ELEPHANT",
+          "cl_qty": 9
+        }
+      ]
+    },
+    {
+      "website_row": 16,
+      "title": "ELEPHANT 155049 3*3 STICKY NOTES ORANGE",
+      "brand": "Elephant",
+      "variant_sku": "17908",
+      "old_variant_inventory_qty": 9,
+      "new_variant_inventory_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 924,
+          "item_code": "17908",
+          "item_details": "ELP 155049 3*3 STICKY NOTES ORNG 80",
+          "item_group": "ELEPHANT",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 17,
+      "title": "ELEPHANT 159658 2*3 STICKY NOTES BLACK",
+      "brand": "Elephant",
+      "variant_sku": "17878",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 11,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 927,
+          "item_code": "17878",
+          "item_details": "ELP 159665 2*3 STICKY NOTES GRN 60",
+          "item_group": "ELEPHANT",
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "website_row": 18,
+      "title": "ELEPHANT 159689 2*3 STICKY NOTES ORANGE",
+      "brand": "Elephant",
+      "variant_sku": "17922",
+      "old_variant_inventory_qty": 12,
+      "new_variant_inventory_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 929,
+          "item_code": "17922",
+          "item_details": "ELP 159689 2*3 STICKY NOTES ORNG 60",
+          "item_group": "ELEPHANT",
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "website_row": 19,
+      "title": "ELEPHANT 159696 2*3 STICKY NOTES GREEN",
+      "brand": "Elephant",
+      "variant_sku": "17906",
+      "old_variant_inventory_qty": 11,
+      "new_variant_inventory_qty": 11,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 930,
+          "item_code": "17906",
+          "item_details": "ELP 159696 2*3 STICKY NOTES GRN 60",
+          "item_group": "ELEPHANT",
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "website_row": 20,
+      "title": "ELEPHANT 159719 2*3 STICKY NOTES YELLOW",
+      "brand": "Elephant",
+      "variant_sku": "17889",
+      "old_variant_inventory_qty": 12,
+      "new_variant_inventory_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 932,
+          "item_code": "17889",
+          "item_details": "ELP 159719 2*3 STICKY NOTES YL 60",
+          "item_group": "ELEPHANT",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 21,
+      "title": "ELEPHANT 159726 2*3 STICKY NOTES VLT",
+      "brand": "Elephant",
+      "variant_sku": "17920",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 933,
+          "item_code": "17920",
+          "item_details": "ELP 159726 2*3 STICKY NOTES VLT 60",
+          "item_group": "ELEPHANT",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 22,
+      "title": "ELEPHANT 165536 2*3 STICKY NOTES YELLOW",
+      "brand": "Elephant",
+      "variant_sku": "17921",
+      "old_variant_inventory_qty": 9,
+      "new_variant_inventory_qty": 11,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 934,
+          "item_code": "17921",
+          "item_details": "ELP 165536 2*3 STICKY NOTES YL 60",
+          "item_group": "ELEPHANT",
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "website_row": 23,
+      "title": "ELEPHANT 176679 STICKY NOTES WHITE MIX",
+      "brand": "Elephant",
+      "variant_sku": "17936",
+      "old_variant_inventory_qty": 23,
+      "new_variant_inventory_qty": 23,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 935,
+          "item_code": "17936",
+          "item_details": "ELP 176679 STICKY NOTES WH MIX 190",
+          "item_group": "ELEPHANT",
+          "cl_qty": 23
+        }
+      ]
+    },
+    {
+      "website_row": 24,
+      "title": "ELEPHANT 279660 3*4 MAGNOTE ORANGE",
+      "brand": "Elephant",
+      "variant_sku": "17927",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 936,
+          "item_code": "17927",
+          "item_details": "ELP 279660 3*4 MAGNOTE OR 140",
+          "item_group": "ELEPHANT",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 25,
+      "title": "ELEPHANT 279677 3*4 MAGNOTE YELLOW",
+      "brand": "Elephant",
+      "variant_sku": "17928",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 937,
+          "item_code": "17928",
+          "item_details": "ELP 279677 3*4 MAGNOTE YLW 140",
+          "item_group": "ELEPHANT",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 26,
+      "title": "ELEPHANT 279684 3*4 MAGNOTE PINK",
+      "brand": "Elephant",
+      "variant_sku": "17930",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 938,
+          "item_code": "17930",
+          "item_details": "ELP 279684 3*4 MAGNOTE PINK 140",
+          "item_group": "ELEPHANT",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 27,
+      "title": "ELEPHANT 279691 3*4 MAGNOTE GREEN",
+      "brand": "Elephant",
+      "variant_sku": "17931",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 939,
+          "item_code": "17931",
+          "item_details": "ELP 279691 3*4 MAGNOTE GRN 140",
+          "item_group": "ELEPHANT",
+          "cl_qty": 0
+        }
+      ]
+    }
+  ]
+}

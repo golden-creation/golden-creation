@@ -1,0 +1,222 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (10).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_baoke_20260824\\baoke products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\baoke products - Updated Website Stock.xlsx",
+  "downloads_copy_status": "copied",
+  "target_sheet": "Products",
+  "lookup_column": "Variant SKU",
+  "updated_column": "Variant Inventory Qty",
+  "counts": {
+    "Matched": 9,
+    "No Busy Match": 4
+  },
+  "website_sku_rows": 13,
+  "website_unique_skus": 13,
+  "website_duplicate_skus": {},
+  "changed_rows": 8,
+  "rows": [
+    {
+      "website_row": 2,
+      "variant_sku": "20145",
+      "title": "BAOKE BAILE 6 IN 1 PEN",
+      "old_variant_inventory_qty": 72,
+      "new_variant_inventory_qty": 69,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 206,
+          "item_code": "20145",
+          "item_details": "BAILE 6 IN 1",
+          "item_group": "BAOKE",
+          "cl_qty": 69
+        }
+      ]
+    },
+    {
+      "website_row": 3,
+      "variant_sku": "20146",
+      "title": "BAOKE BLUE 602 BAILE 2B LEAD",
+      "old_variant_inventory_qty": 20,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 211,
+          "item_code": "20146",
+          "item_details": "BAOKE BL 602 BAILE 2B LEAD 20",
+          "item_group": "BAOKE",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 4,
+      "variant_sku": "16383-GC04",
+      "title": "BAOKE PEN ROLLER BALL PEN",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "No Busy Match",
+      "action": "left unchanged",
+      "busy_matches": []
+    },
+    {
+      "website_row": 5,
+      "variant_sku": "16987",
+      "title": "BAOKE BL 618 LEAD 2.0MM",
+      "old_variant_inventory_qty": 20,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 212,
+          "item_code": "16987",
+          "item_details": "BAOKE BL 618 LEAD 2.0MM 60",
+          "item_group": "BAOKE",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 6,
+      "variant_sku": "16887",
+      "title": "BAOKE MP 2941 12 ACR BRUSH MARKER",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 213,
+          "item_code": "16887",
+          "item_details": "BAOKE MP 2941 12 ACR BRUSH MARKER 465",
+          "item_group": "BAOKE",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 7,
+      "variant_sku": "16383-GC03",
+      "title": "BAOKE PEN MULTICOLOR - BLACK",
+      "old_variant_inventory_qty": 50,
+      "new_variant_inventory_qty": 50,
+      "status": "No Busy Match",
+      "action": "left unchanged",
+      "busy_matches": []
+    },
+    {
+      "website_row": 8,
+      "variant_sku": "16383-GC02",
+      "title": "BAOKE PEN MULTICOLOR - BLUE",
+      "old_variant_inventory_qty": 50,
+      "new_variant_inventory_qty": 50,
+      "status": "No Busy Match",
+      "action": "left unchanged",
+      "busy_matches": []
+    },
+    {
+      "website_row": 9,
+      "variant_sku": "16383-GC01",
+      "title": "BAOKE PEN MULTICOLOR - RED",
+      "old_variant_inventory_qty": 50,
+      "new_variant_inventory_qty": 50,
+      "status": "No Busy Match",
+      "action": "left unchanged",
+      "busy_matches": []
+    },
+    {
+      "website_row": 10,
+      "variant_sku": "16952",
+      "title": "BAOKE BL-601 ERASER PUSH",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 210,
+          "item_code": "16952",
+          "item_details": "BAOKE BL 601 ERASER PUSH 35",
+          "item_group": "BAOKE",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 11,
+      "variant_sku": "16953",
+      "title": "BAOKE BL-164B 4IN1 BALL POINT PEN 0.7MM (RED,BLUE,BLACK,GREEN)",
+      "old_variant_inventory_qty": 5,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 208,
+          "item_code": "16953",
+          "item_details": "BAOKE BL 164B 4IN1 BALL PEN 0.7MM 60",
+          "item_group": "BAOKE",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 12,
+      "variant_sku": "16956",
+      "title": "BAOKE PC5088 PIGMENT GOLD INK PEN",
+      "old_variant_inventory_qty": 5,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 214,
+          "item_code": "16956",
+          "item_details": "BAOKE PC 5088 PIGMENT GOLD INK PEN 80",
+          "item_group": "BAOKE",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 13,
+      "variant_sku": "16961",
+      "title": "BAOKE 185E 5IN1 ERASABLE CLIP-IN BALL PEN 07.MM+PENCIL 0.5MM(BLUE,BLACK,RED,)",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 207,
+          "item_code": "16961",
+          "item_details": "BAOKE 185E 5IN1 BP+MECH PENCIL 180",
+          "item_group": "BAOKE",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 14,
+      "variant_sku": "16962",
+      "title": "BAOKE BL-190 4IN1 BALL POINT PEN 0.7MM (RED,BLUE,BLACK,GREEN)",
+      "old_variant_inventory_qty": 5,
+      "new_variant_inventory_qty": 0,
+      "status": "Matched",
+      "action": "updated from single Busy row",
+      "busy_matches": [
+        {
+          "busy_row": 209,
+          "item_code": "16962",
+          "item_details": "BAOKE BL 190 4IN1 BALL PEN 0.7MM 50",
+          "item_group": "BAOKE",
+          "cl_qty": 0
+        }
+      ]
+    }
+  ]
+}

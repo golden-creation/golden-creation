@@ -1,0 +1,165 @@
+{
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (37).xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_jb9_20260831\\jb9 products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\jb9 products - Updated Website Stock.xlsx",
+  "status_counts": {
+    "Matched": 9
+  },
+  "changed_rows": 7,
+  "rows": [
+    {
+      "row": 2,
+      "sku": "20050",
+      "title": "JB9 166 20MM MAGNET",
+      "brand": "JB9",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1471,
+          "item_group": "JB9  ",
+          "item_details": "JB9 166 20MM MAGNET 85",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "sku": "9342",
+      "title": "JB9 BINDER CLIPS 32MM PACK OF 12PCS",
+      "brand": "JB9",
+      "old_qty": 48,
+      "new_qty": 1226,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1477,
+          "item_group": "JB9  ",
+          "item_details": "JB9 BINDER CLIP 32MM 108",
+          "cl_qty": 1226
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "sku": "9339",
+      "title": "JB9 BINDER CLIPS 15MM PACK OF 12PCS",
+      "brand": "JB9",
+      "old_qty": 24,
+      "new_qty": -12,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1474,
+          "item_group": "JB9  ",
+          "item_details": "JB9 BINDER CLIP 15MM 50",
+          "cl_qty": -12
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "sku": "9340",
+      "title": "JB9 BINDER CLIPS 19MM PACK OF 12PCS",
+      "brand": "JB9",
+      "old_qty": 48,
+      "new_qty": 538,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1475,
+          "item_group": "JB9  ",
+          "item_details": "JB9 BINDER CLIP 19MM 51",
+          "cl_qty": 538
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "sku": "9341",
+      "title": "JB9 BINDER CLIPS 25MM PACK OF 12PCS",
+      "brand": "JB9",
+      "old_qty": 48,
+      "new_qty": 536,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1476,
+          "item_group": "JB9  ",
+          "item_details": "JB9 BINDER CLIP 25MM 76",
+          "cl_qty": 536
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "sku": "9343",
+      "title": "JB9 BINDER CLIPS 41MM PACK OF 12PCS",
+      "brand": "JB9",
+      "old_qty": 24,
+      "new_qty": 77,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1478,
+          "item_group": "JB9  ",
+          "item_details": "JB9 BINDER CLIP 41MM 172",
+          "cl_qty": 77
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "sku": "9344",
+      "title": "JB9 BINDER CLIPS 51MM PACK OF 12PCS",
+      "brand": "JB9",
+      "old_qty": 24,
+      "new_qty": 180,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1479,
+          "item_group": "JB9  ",
+          "item_details": "JB9 BINDER CLIP 51MM 190",
+          "cl_qty": 180
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "sku": "9393",
+      "title": "JB9 9103 MESH WIRE ELITE PEN STAND",
+      "brand": "JB9",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1473,
+          "item_group": "JB9  ",
+          "item_details": "JB9 9103 PEN STAND 425",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "sku": "9395",
+      "title": "JP09 WOODEN PEN STAND",
+      "brand": "JB9",
+      "old_qty": 0,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1483,
+          "item_group": "JB9  ",
+          "item_details": "JB9 WOODEN PEN STAND 1600",
+          "cl_qty": 1
+        }
+      ]
+    }
+  ]
+}

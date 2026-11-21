@@ -1,0 +1,942 @@
+{
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (41).xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_lamy_20260831\\lamy products - Updated Website Stock Corrected.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\lamy products - Updated Website Stock Corrected.xlsx",
+  "status_counts": {
+    "Matched": 33,
+    "Busy SKU Collision - Exact Product Match Used": 1,
+    "Duplicate Busy SKU Summed": 1
+  },
+  "changed_rows": 15,
+  "rows": [
+    {
+      "row": 2,
+      "sku": "12385",
+      "title": "LAMY SAFARI M16  BLUE BALL PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1761,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M16  BLUE BP 2500",
+          "cl_qty": 0
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1761,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M16  BLUE BP 2500",
+          "cl_qty": 0
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 3,
+      "sku": "12383",
+      "title": "LAMY SAFARI M16 PETROL BLACK BALL PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1764,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M16 PETROL BP 2500",
+          "cl_qty": 1
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1764,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M16 PETROL BP 2500",
+          "cl_qty": 1
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 4,
+      "sku": "12380",
+      "title": "LAMY SAFARI M16 UMBER BLACK  BALL PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1765,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M16 UMBRA BP 2500",
+          "cl_qty": 1
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1765,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M16 UMBRA BP 2500",
+          "cl_qty": 1
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 5,
+      "sku": "12387",
+      "title": "LAMY SAFARI M16 YELLOW BALL PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 7,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1766,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M16 YELLOW BP 2500",
+          "cl_qty": 7
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1766,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M16 YELLOW BP 2500",
+          "cl_qty": 7
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 6,
+      "sku": "12365",
+      "title": "LAMY SAFARI M63 SHINY BLACK ROLLER BALL PEN",
+      "brand": "Lamy",
+      "old_qty": 2,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1772,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M63 SHINY BLACK RB 2700",
+          "cl_qty": 2
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1772,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M63 SHINY BLACK RB 2700",
+          "cl_qty": 2
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 7,
+      "sku": "12373",
+      "title": "LAMY INK BOTTLE T52 BLUE 50ML",
+      "brand": "Lamy",
+      "old_qty": 2,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1713,
+          "item_group": "LAMY ",
+          "item_details": "LAMY INK BOTTLE T52 BLUE 50ML 1600",
+          "cl_qty": 1
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1713,
+          "item_group": "LAMY ",
+          "item_details": "LAMY INK BOTTLE T52 BLUE 50ML 1600",
+          "cl_qty": 1
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 8,
+      "sku": "12367",
+      "title": "LAMY INK BOTTLE T51 BLACK 30ML",
+      "brand": "Lamy",
+      "old_qty": 2,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1709,
+          "item_group": "LAMY ",
+          "item_details": "LAMY INK BOTTLE T51 BLACK 30ML 715",
+          "cl_qty": 1
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1709,
+          "item_group": "LAMY ",
+          "item_details": "LAMY INK BOTTLE T51 BLACK 30ML 715",
+          "cl_qty": 1
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 9,
+      "sku": "12372",
+      "title": "LAMY INK BOTTLE T51 BLUE 30ML",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1710,
+          "item_group": "LAMY ",
+          "item_details": "LAMY INK BOTTLE T51 BLUE 30ML 1100",
+          "cl_qty": 1
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1710,
+          "item_group": "LAMY ",
+          "item_details": "LAMY INK BOTTLE T51 BLUE 30ML 1100",
+          "cl_qty": 1
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 10,
+      "sku": "12374",
+      "title": "LAMY INK BOTTLE T52 BLACK 50ML",
+      "brand": "Lamy",
+      "old_qty": 3,
+      "new_qty": 3,
+      "status": "Busy SKU Collision - Exact Product Match Used",
+      "busy_matches": [
+        {
+          "busy_row": 1711,
+          "item_group": "LAMY ",
+          "item_details": "LAMY INK BOTTLE T52 BLACK 50ML 1600",
+          "cl_qty": 3
+        },
+        {
+          "busy_row": 1716,
+          "item_group": "LAMY ",
+          "item_details": "LAMY INK BOTTLE T52 SEPIA 50ML 1600",
+          "cl_qty": 1
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1711,
+          "item_group": "LAMY ",
+          "item_details": "LAMY INK BOTTLE T52 BLACK 50ML 1600",
+          "cl_qty": 3
+        }
+      ],
+      "collision_reason": "Busy uses SKU 12374 for both T52 Black and T52 Sepia; website row is T52 Black."
+    },
+    {
+      "row": 11,
+      "sku": "12335",
+      "title": "LAMY INK CARTRIDGE T10 BLACK",
+      "brand": "Lamy",
+      "old_qty": 3,
+      "new_qty": 5,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1725,
+          "item_group": "LAMY ",
+          "item_details": "LAMY INK CARTRIDGE T10 BLACK 450",
+          "cl_qty": 5
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1725,
+          "item_group": "LAMY ",
+          "item_details": "LAMY INK CARTRIDGE T10 BLACK 450",
+          "cl_qty": 5
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 12,
+      "sku": "12327",
+      "title": "LAMY INK CARTRIDGE T10 BLUE",
+      "brand": "Lamy",
+      "old_qty": 2,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1727,
+          "item_group": "LAMY ",
+          "item_details": "LAMY INK CARTRIDGE T10 BLUE 450",
+          "cl_qty": 3
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1727,
+          "item_group": "LAMY ",
+          "item_details": "LAMY INK CARTRIDGE T10 BLUE 450",
+          "cl_qty": 3
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 13,
+      "sku": "12334",
+      "title": "LAMY INK CARTRIDGE T10 RED",
+      "brand": "Lamy",
+      "old_qty": 2,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1729,
+          "item_group": "LAMY ",
+          "item_details": "LAMY INK CARTRIDGE T10 RED 260",
+          "cl_qty": 2
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1729,
+          "item_group": "LAMY ",
+          "item_details": "LAMY INK CARTRIDGE T10 RED 260",
+          "cl_qty": 2
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 14,
+      "sku": "12325",
+      "title": "LAMY INK CARTRIDGE T10 VIOLET",
+      "brand": "Lamy",
+      "old_qty": 2,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1731,
+          "item_group": "LAMY ",
+          "item_details": "LAMY INK CARTRIDGE T10 VIOLET 260",
+          "cl_qty": 0
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1731,
+          "item_group": "LAMY ",
+          "item_details": "LAMY INK CARTRIDGE T10 VIOLET 260",
+          "cl_qty": 0
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 15,
+      "sku": "12393",
+      "title": "LAMY REFILL M63 BLACK  ROLLER BALL PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 5,
+      "status": "Duplicate Busy SKU Summed",
+      "busy_matches": [
+        {
+          "busy_row": 1738,
+          "item_group": "LAMY ",
+          "item_details": "LAMY REFILL M63 BLACK  RB 460",
+          "cl_qty": 1
+        },
+        {
+          "busy_row": 1739,
+          "item_group": "LAMY ",
+          "item_details": "LAMY REFILL M63 BLACK RB 570",
+          "cl_qty": 4
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1738,
+          "item_group": "LAMY ",
+          "item_details": "LAMY REFILL M63 BLACK  RB 460",
+          "cl_qty": 1
+        },
+        {
+          "busy_row": 1739,
+          "item_group": "LAMY ",
+          "item_details": "LAMY REFILL M63 BLACK RB 570",
+          "cl_qty": 4
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 16,
+      "sku": "12333",
+      "title": "LAMY INK CARTRIDGE T10 GRN",
+      "brand": "Lamy",
+      "old_qty": 2,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1728,
+          "item_group": "LAMY ",
+          "item_details": "LAMY INK CARTRIDGE T10 GRN  260",
+          "cl_qty": 0
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1728,
+          "item_group": "LAMY ",
+          "item_details": "LAMY INK CARTRIDGE T10 GRN  260",
+          "cl_qty": 0
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 17,
+      "sku": "17569",
+      "title": "LAMY REFILL M66 BLACK ROLLER BALL PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1741,
+          "item_group": "LAMY ",
+          "item_details": "LAMY REFILL M66 BLACK RB 570",
+          "cl_qty": 2
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1741,
+          "item_group": "LAMY ",
+          "item_details": "LAMY REFILL M66 BLACK RB 570",
+          "cl_qty": 2
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 18,
+      "sku": "12363",
+      "title": "LAMY SAFARI F T10 BLUE FOUNTAIN PEN",
+      "brand": "Lamy",
+      "old_qty": 0,
+      "new_qty": 9,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1747,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 BLUE FP 3900",
+          "cl_qty": 9
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1747,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 BLUE FP 3900",
+          "cl_qty": 9
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 19,
+      "sku": "12341",
+      "title": "LAMY SAFARI M T10 BLACK FOUNTAIN PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 4,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1746,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 BLACK FP 3900",
+          "cl_qty": 4
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1746,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 BLACK FP 3900",
+          "cl_qty": 4
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 20,
+      "sku": "12349",
+      "title": "LAMY SAFARI M T10 LIGHT ROSE FOUNTAIN PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1750,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 LIGHT ROSE FP 3900",
+          "cl_qty": 1
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1750,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 LIGHT ROSE FP 3900",
+          "cl_qty": 1
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 21,
+      "sku": "12337",
+      "title": "LAMY SAFARI M T10 PINK FOUNTAIN PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1751,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 PINK FP  3900",
+          "cl_qty": 1
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1751,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 PINK FP  3900",
+          "cl_qty": 1
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 22,
+      "sku": "12360",
+      "title": "LAMY SAFARI M T10 RED FOUNTAIN PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1752,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 RED FP 3900",
+          "cl_qty": 1
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1752,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 RED FP 3900",
+          "cl_qty": 1
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 23,
+      "sku": "12343",
+      "title": "LAMY SAFARI M T10 STRAWBERRY FOUNTAIN PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1755,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 STRAWBERRY FP 3900",
+          "cl_qty": 1
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1755,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 STRAWBERRY FP 3900",
+          "cl_qty": 1
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 24,
+      "sku": "12375",
+      "title": "LAMY SAFARI M T10 UMBRA FOUNTAIN PEN",
+      "brand": "Lamy",
+      "old_qty": 2,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1756,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 UMBRA FP 3900",
+          "cl_qty": 2
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1756,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 UMBRA FP 3900",
+          "cl_qty": 2
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 25,
+      "sku": "12361",
+      "title": "LAMY SAFARI M T10 WHITE BLACK CLIP FOUNTAIN PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1758,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 WHITE BLK CLIP FP 3900",
+          "cl_qty": 1
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1758,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 WHITE BLK CLIP FP 3900",
+          "cl_qty": 1
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 26,
+      "sku": "12362",
+      "title": "LAMY SAFARI M T10 WHITE FOUNTAIN PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1759,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 WHITE FP  3900",
+          "cl_qty": 1
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1759,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 WHITE FP  3900",
+          "cl_qty": 1
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 27,
+      "sku": "12339",
+      "title": "LAMY SAFARI M T10 YELLOW FOUNTAIN PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1760,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 YELLOW FP 3900",
+          "cl_qty": 0
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1760,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 YELLOW FP 3900",
+          "cl_qty": 0
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 28,
+      "sku": "30352",
+      "title": "LAMY SAFARI M63 RED ROLLER BALL PEN",
+      "brand": "Lamy",
+      "old_qty": 2,
+      "new_qty": 2,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1771,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M63 RED RB 2700",
+          "cl_qty": 2
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1771,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M63 RED RB 2700",
+          "cl_qty": 2
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 29,
+      "sku": "12377",
+      "title": "LAMY SAFARI M63 UMBRA ROLLER BALL PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 3,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1774,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M63 UMBRA RB  2700",
+          "cl_qty": 3
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1774,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M63 UMBRA RB  2700",
+          "cl_qty": 3
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 30,
+      "sku": "12389",
+      "title": "LAMY TIPO WHITE ROLLER BALL PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1782,
+          "item_group": "LAMY ",
+          "item_details": "LAMY TIPO WHITE ROLLER BALL PEN 1850",
+          "cl_qty": 0
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1782,
+          "item_group": "LAMY ",
+          "item_details": "LAMY TIPO WHITE ROLLER BALL PEN 1850",
+          "cl_qty": 0
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 31,
+      "sku": "30459",
+      "title": "LAMY 081 DIALOG CC BLUE MEDIUM NIB FOUNTAIN PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1697,
+          "item_group": "LAMY ",
+          "item_details": "LAMY 081 DG CC BLUE M GOLD T10 FP 66000",
+          "cl_qty": 1
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1697,
+          "item_group": "LAMY ",
+          "item_details": "LAMY 081 DG CC BLUE M GOLD T10 FP 66000",
+          "cl_qty": 1
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 32,
+      "sku": "8927",
+      "title": "LAMY SAFARI M T10 GREEN FOUNTAIN PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1748,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 GREEN FP  3900",
+          "cl_qty": 1
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1748,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 GREEN FP  3900",
+          "cl_qty": 1
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 33,
+      "sku": "12348",
+      "title": "LAMY SAFARI M T10 VIOLET FOUNTAIN PEN",
+      "brand": "Lamy",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1757,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 VIOLET FP  3900",
+          "cl_qty": 0
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1757,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 VIOLET FP  3900",
+          "cl_qty": 0
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 34,
+      "sku": "12356",
+      "title": "LAMY SAFARI M T10 AQUA SKY FOUNTAIN PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1745,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 AQUA SKY FP 3900",
+          "cl_qty": 1
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1745,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 AQUA SKY FP 3900",
+          "cl_qty": 1
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 35,
+      "sku": "12364",
+      "title": "LAMY SAFARI M T10 GREY PINK CLIP FOUNTAIN PEN",
+      "brand": "Lamy",
+      "old_qty": 1,
+      "new_qty": 1,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1749,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 GREY PINK CLIP FP 3900",
+          "cl_qty": 1
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1749,
+          "item_group": "LAMY ",
+          "item_details": "LAMY SAFARI M T10 GREY PINK CLIP FP 3900",
+          "cl_qty": 1
+        }
+      ],
+      "collision_reason": null
+    },
+    {
+      "row": 36,
+      "sku": "21012",
+      "title": "LAMY TIPO PINK ROLLER BALL PEN",
+      "brand": "Lamy",
+      "old_qty": 0,
+      "new_qty": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 1781,
+          "item_group": "LAMY ",
+          "item_details": "LAMY TIPO PINK ROLLER BALL PEN 1850",
+          "cl_qty": 0
+        }
+      ],
+      "busy_matches_used": [
+        {
+          "busy_row": 1781,
+          "item_group": "LAMY ",
+          "item_details": "LAMY TIPO PINK ROLLER BALL PEN 1850",
+          "cl_qty": 0
+        }
+      ],
+      "collision_reason": null
+    }
+  ]
+}

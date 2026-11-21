@@ -1,0 +1,650 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (51).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "busy_sheet": "Sheet1",
+  "project_output": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_logitech_20260831\\logitech products - Updated Website Stock.xlsx",
+  "downloads_output": "C:\\Users\\My-PC-Win10\\Downloads\\logitech products - Updated Website Stock.xlsx",
+  "downloads_status": "copied",
+  "meta": {
+    "sheet_name": "Products",
+    "max_row": 26,
+    "max_column": 34,
+    "sku_col": 16,
+    "stock_col": 17,
+    "warehouse_col": 18,
+    "shop_col": 19
+  },
+  "summary": {
+    "website_sku_rows": 25,
+    "matched_direct": 25,
+    "duplicate_code_summed": 0,
+    "missing_in_busy": 0,
+    "base_code_available_no_exact_sku": 0,
+    "changed": 3,
+    "negative_new_qty": 0
+  },
+  "missing_in_busy": [],
+  "base_code_available_no_exact_sku": [],
+  "duplicate_code_summed": [],
+  "negative_new_qty": [],
+  "changed_rows": [
+    {
+      "row": 3,
+      "sku": "13227",
+      "base_sku": "13227",
+      "title": "LOGITECH M 100R CORDED BLACK MOUSE",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 1867,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 495,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 14,
+      "sku": "13273",
+      "base_sku": "13273",
+      "title": "LOGITECH MK 120 KEYBOARD+MOUSE",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 1879,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 1295,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 19,
+      "sku": "13270",
+      "base_sku": "13270",
+      "title": "LOGITECH MK 235 WIRELESS KEYBOARD+MOUSE",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 1881,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 2095,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    }
+  ],
+  "rows": [
+    {
+      "row": 2,
+      "sku": "12987",
+      "base_sku": "12987",
+      "title": "LOGITECH EXECUTIVE MOUSE PAD",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1862,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 36,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 3,
+      "sku": "13227",
+      "base_sku": "13227",
+      "title": "LOGITECH M 100R CORDED BLACK MOUSE",
+      "variant": "",
+      "old_qty": 5,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 1867,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 495,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 4,
+      "sku": "10498",
+      "base_sku": "10498",
+      "title": "LOGITECH M 170 WIRELESS MOUSE",
+      "variant": "",
+      "old_qty": 15,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 15,
+      "busy_rows": [
+        {
+          "busy_row": 1868,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 825,
+          "cl_qty": 15
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 5,
+      "sku": "10497",
+      "base_sku": "10497",
+      "title": "LOGITECH K120 KEYBOARD",
+      "variant": "",
+      "old_qty": 6,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 6,
+      "busy_rows": [
+        {
+          "busy_row": 1864,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 795,
+          "cl_qty": 6
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 6,
+      "sku": "10500",
+      "base_sku": "10500",
+      "title": "LOGITECH M 090 CORDED MOUSE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 1866,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 395,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 7,
+      "sku": "13203",
+      "base_sku": "13203",
+      "title": "LOGITECH M 171 BLACK-GREY WIRELESS MOUSE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1869,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 845,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 8,
+      "sku": "13201",
+      "base_sku": "13201",
+      "title": "LOGITECH M 171 BLUE WIRELESS MOUSE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1870,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 845,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 9,
+      "sku": "13206",
+      "base_sku": "13206",
+      "title": "LOGITECH M 171 GREY WIRELESS MOUSE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1871,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 845,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 10,
+      "sku": "13208",
+      "base_sku": "13208",
+      "title": "LOGITECH M 171 OFF WHITE WIRELESS MOUSE",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1872,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 845,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 11,
+      "sku": "13210",
+      "base_sku": "13210",
+      "title": "LOGITECH M 171 ROSE WIRELESS MOUSE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1873,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 845,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 12,
+      "sku": "13223",
+      "base_sku": "13223",
+      "title": "LOGITECH M 240 SILENT BLUETOOTH MOUSE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1877,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 1595,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 13,
+      "sku": "13219",
+      "base_sku": "13219",
+      "title": "LOGITECH M 350S PEBBLE MOUSE 2",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1878,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 2295,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 14,
+      "sku": "13273",
+      "base_sku": "13273",
+      "title": "LOGITECH MK 120 KEYBOARD+MOUSE",
+      "variant": "",
+      "old_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 7,
+      "busy_rows": [
+        {
+          "busy_row": 1879,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 1295,
+          "cl_qty": 7
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 15,
+      "sku": "13212",
+      "base_sku": "13212",
+      "title": "LOGITECH M 185 BLACK WIRELESS MOUSE",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 4,
+      "busy_rows": [
+        {
+          "busy_row": 1874,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 1195,
+          "cl_qty": 4
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 16,
+      "sku": "10499",
+      "base_sku": "10499",
+      "title": "LOGITECH M 187 WHITE WIRELESS MOUSE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1875,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 1395,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 17,
+      "sku": "13217",
+      "base_sku": "13217",
+      "title": "LOGITECH M 196 GRAPHITE MOUSE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 1876,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 1125,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 18,
+      "sku": "10501",
+      "base_sku": "10501",
+      "title": "LOGITECH MK 220 WIRELESS KEYBOARD+MOUSE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1880,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 1995,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 19,
+      "sku": "13270",
+      "base_sku": "13270",
+      "title": "LOGITECH MK 235 WIRELESS KEYBOARD+MOUSE",
+      "variant": "",
+      "old_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 3,
+      "busy_rows": [
+        {
+          "busy_row": 1881,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 2095,
+          "cl_qty": 3
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 20,
+      "sku": "13234",
+      "base_sku": "13234",
+      "title": "LOGITECH MK 240 NANO KEYBOARD+MOUSE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1882,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 2095,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 21,
+      "sku": "10502",
+      "base_sku": "10502",
+      "title": "LOGITECH MK 275 WIRELESS KEYBOARD+MOUSE",
+      "variant": "",
+      "old_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 2,
+      "busy_rows": [
+        {
+          "busy_row": 1883,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 2495,
+          "cl_qty": 2
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 22,
+      "sku": "13265",
+      "base_sku": "13265",
+      "title": "LOGITECH MK 345 WIRELESS KEYBOARD+MOUSE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1884,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 3245,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 23,
+      "sku": "10503",
+      "base_sku": "10503",
+      "title": "LOGITECH R 400 PRESENTATION REMOTE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1885,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 3295,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 24,
+      "sku": "13280",
+      "base_sku": "13280",
+      "title": "LOGITECH R 500 WIRELESS PRESENTER",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1886,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 3995,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 25,
+      "sku": "19358",
+      "base_sku": "19358",
+      "title": "LOGITECH K380S PEBBLE KEYS 2 KEYBOARD WIRELESS,MULTI DEVICE",
+      "variant": "",
+      "old_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 1,
+      "busy_rows": [
+        {
+          "busy_row": 1865,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 4195,
+          "cl_qty": 1
+        }
+      ],
+      "base_busy_rows": []
+    },
+    {
+      "row": 26,
+      "sku": "21040",
+      "base_sku": "21040",
+      "title": "LOGITECH Z120 STEREO SPEAKERS",
+      "variant": "",
+      "old_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "matched_direct",
+      "new_qty": 0,
+      "busy_rows": [
+        {
+          "busy_row": 1887,
+          "item_group": "LOGITECH",
+          "item_name": "",
+          "mrp": 1195,
+          "cl_qty": 0
+        }
+      ],
+      "base_busy_rows": []
+    }
+  ]
+}

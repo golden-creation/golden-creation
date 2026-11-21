@@ -1,0 +1,1384 @@
+{
+  "source_file": "C:\\Users\\My-PC-Win10\\Downloads\\website-products (18).xlsx",
+  "busy_file": "C:\\Users\\My-PC-Win10\\Downloads\\GOLDEN CRE_StockStatus of busy for website stock.xlsx",
+  "output_file": "D:\\lekhanmart-backend-frontend-hostinger\\outputs\\website_stock_update_cello_20260824\\cello products - Updated Website Stock.xlsx",
+  "downloads_copy": "C:\\Users\\My-PC-Win10\\Downloads\\cello products - Updated Website Stock.xlsx",
+  "summary": {
+    "Matched": 65,
+    "No Busy Match": 6
+  },
+  "rows": [
+    {
+      "website_row": 2,
+      "title": "CELLO LEGACY VASU STEEL FLASK 600ML",
+      "brand": "Cello",
+      "variant_sku": "19133",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 331,
+          "item_code": "19133",
+          "item_details": "CELLO LEGACY VASU STEEL FLASK 1625",
+          "item_group": "CELLO",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 3,
+      "title": "CELLO BUTTERGEL PEN",
+      "brand": "Cello",
+      "variant_sku": "8657",
+      "old_variant_inventory_qty": 294,
+      "new_variant_inventory_qty": 294,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 321,
+          "item_code": "8657",
+          "item_details": "CELLO BUTTERGEL GEL PEN 10",
+          "item_group": "CELLO",
+          "cl_qty": 294
+        }
+      ]
+    },
+    {
+      "website_row": 4,
+      "title": "CELLO AQUA GEL PEN",
+      "brand": "Cello",
+      "variant_sku": "8646",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 241,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 314,
+          "item_code": "8646",
+          "item_details": "CELLO AQUA GEL PEN 10",
+          "item_group": "CELLO",
+          "cl_qty": 241
+        }
+      ]
+    },
+    {
+      "website_row": 5,
+      "title": "CELLO FINEGRIP BALL PEN PACK OF 5PCS",
+      "brand": "Cello",
+      "variant_sku": "8659-C",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "website_row": 6,
+      "title": "CELLO BUTTERFLOW SIMPLY BALL PEN BLACK",
+      "brand": "Cello",
+      "variant_sku": "8656",
+      "old_variant_inventory_qty": 200,
+      "new_variant_inventory_qty": 29,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 319,
+          "item_code": "8656",
+          "item_details": "CELLO BUTTERFLOW SIMPLY BP BLACK 10",
+          "item_group": "CELLO",
+          "cl_qty": 29
+        }
+      ]
+    },
+    {
+      "website_row": 7,
+      "title": "CELLO GRIPPER BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "8672",
+      "old_variant_inventory_qty": 738,
+      "new_variant_inventory_qty": 664,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 326,
+          "item_code": "8672",
+          "item_details": "CELLO GRIPPER BALL PEN 10",
+          "item_group": "CELLO",
+          "cl_qty": 664
+        }
+      ]
+    },
+    {
+      "website_row": 8,
+      "title": "CELLO ARROW GEL PEN",
+      "brand": "Cello",
+      "variant_sku": "8647",
+      "old_variant_inventory_qty": 400,
+      "new_variant_inventory_qty": 381,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 315,
+          "item_code": "8647",
+          "item_details": "CELLO ARROW GEL PEN 10",
+          "item_group": "CELLO",
+          "cl_qty": 381
+        }
+      ]
+    },
+    {
+      "website_row": 9,
+      "title": "CELLO AURIS GEL PEN",
+      "brand": "Cello",
+      "variant_sku": "8649",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 179,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 317,
+          "item_code": "8649",
+          "item_details": "CELLO AURIS GEL PEN 10",
+          "item_group": "CELLO",
+          "cl_qty": 179
+        }
+      ]
+    },
+    {
+      "website_row": 10,
+      "title": "CELLO CHEQUERS METAL BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "8650",
+      "old_variant_inventory_qty": 11,
+      "new_variant_inventory_qty": 11,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 322,
+          "item_code": "8650",
+          "item_details": "CELLO CHEQUERS METAL PEN 135",
+          "item_group": "CELLO",
+          "cl_qty": 11
+        }
+      ]
+    },
+    {
+      "website_row": 11,
+      "title": "CELLO BENZ BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "8651",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 23,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 318,
+          "item_code": "8651",
+          "item_details": "CELLO BENZ BALL PEN 50",
+          "item_group": "CELLO",
+          "cl_qty": 23
+        }
+      ]
+    },
+    {
+      "website_row": 12,
+      "title": "CELLO BUTTERFLOW SIMPLY BALL PEN BLUE PACK OF 20PCS",
+      "brand": "Cello",
+      "variant_sku": "8690-C",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "website_row": 13,
+      "title": "CELLO FINEGRIP BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "8659",
+      "old_variant_inventory_qty": 186,
+      "new_variant_inventory_qty": 186,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 323,
+          "item_code": "8659",
+          "item_details": "CELLO FINE GRIP PEN 10",
+          "item_group": "CELLO",
+          "cl_qty": 186
+        }
+      ]
+    },
+    {
+      "website_row": 14,
+      "title": "CELLO HIGHLIGHTER",
+      "brand": "Cello",
+      "variant_sku": "8662",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 327,
+          "item_code": "8662",
+          "item_details": "CELLO HIGHLIGHTER 25",
+          "item_group": "CELLO",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 15,
+      "title": "CELLO REFILL 5000",
+      "brand": "Cello",
+      "variant_sku": "8674",
+      "old_variant_inventory_qty": 104,
+      "new_variant_inventory_qty": 52,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 338,
+          "item_code": "8674",
+          "item_details": "CELLO REFILL 5000 10",
+          "item_group": "CELLO",
+          "cl_qty": 52
+        }
+      ]
+    },
+    {
+      "website_row": 16,
+      "title": "CELLO REFILL 8000",
+      "brand": "Cello",
+      "variant_sku": "8675",
+      "old_variant_inventory_qty": 90,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 339,
+          "item_code": "8675",
+          "item_details": "CELLO REFILL 8000 10",
+          "item_group": "CELLO",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 17,
+      "title": "CELLO REFILL FREEFLO GEL",
+      "brand": "Cello",
+      "variant_sku": "8676",
+      "old_variant_inventory_qty": 50,
+      "new_variant_inventory_qty": 37,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 340,
+          "item_code": "8676",
+          "item_details": "CELLO REFILL FREEFLO GEL 10",
+          "item_group": "CELLO",
+          "cl_qty": 37
+        }
+      ]
+    },
+    {
+      "website_row": 18,
+      "title": "CELLO SIGNATURE CREME IVORY BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "8680",
+      "old_variant_inventory_qty": 70,
+      "new_variant_inventory_qty": 77,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 352,
+          "item_code": "8680",
+          "item_details": "CELLO SIGNATURE CREME IVORY BP 225",
+          "item_group": "CELLO",
+          "cl_qty": 77
+        }
+      ]
+    },
+    {
+      "website_row": 19,
+      "title": "CELLO LEAD 0.5MM",
+      "brand": "Cello",
+      "variant_sku": "8667",
+      "old_variant_inventory_qty": 4,
+      "new_variant_inventory_qty": 121,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 329,
+          "item_code": "8667",
+          "item_details": "CELLO LEAD 0.5MM 5",
+          "item_group": "CELLO",
+          "cl_qty": 121
+        }
+      ]
+    },
+    {
+      "website_row": 20,
+      "title": "CELLO SIGNATURE HERITAGE FOUNTAIN PEN WITH 22KT GOLD PLATED NIB",
+      "brand": "Cello",
+      "variant_sku": "8669",
+      "old_variant_inventory_qty": 2,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 357,
+          "item_code": "8669",
+          "item_details": "CELLO SIGNATURE HERITAGE FP BLUE 600",
+          "item_group": "CELLO",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 21,
+      "title": "CELLO SIGNATURE ORIGIN ROLLER BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "8683",
+      "old_variant_inventory_qty": 16,
+      "new_variant_inventory_qty": 16,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 360,
+          "item_code": "8683",
+          "item_details": "CELLO SIGNATURE ORIGIN RB 325",
+          "item_group": "CELLO",
+          "cl_qty": 16
+        }
+      ]
+    },
+    {
+      "website_row": 22,
+      "title": "CELLO TRIMATE BALL PEN 0.7MM",
+      "brand": "Cello",
+      "variant_sku": "8670",
+      "old_variant_inventory_qty": 100,
+      "new_variant_inventory_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 371,
+          "item_code": "8670",
+          "item_details": "CELLO TRIMATE BALL PEN 10",
+          "item_group": "CELLO",
+          "cl_qty": 24
+        }
+      ]
+    },
+    {
+      "website_row": 23,
+      "title": "CELLO SIGNATURE ETHOS BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "8682",
+      "old_variant_inventory_qty": 69,
+      "new_variant_inventory_qty": 213,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 356,
+          "item_code": "8682",
+          "item_details": "CELLO SIGNATURE ETHOS BP 150",
+          "item_group": "CELLO",
+          "cl_qty": 213
+        }
+      ]
+    },
+    {
+      "website_row": 24,
+      "title": "CELLO VELVET O BALL PEN BLUE",
+      "brand": "Cello",
+      "variant_sku": "20226",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 167,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 373,
+          "item_code": "20226",
+          "item_details": "CELLO VELVET O BALL PEN BLUE 10",
+          "item_group": "CELLO",
+          "cl_qty": 167
+        }
+      ]
+    },
+    {
+      "website_row": 25,
+      "title": "CELLO WHITE BOARD INK",
+      "brand": "Cello",
+      "variant_sku": "20227",
+      "old_variant_inventory_qty": 57,
+      "new_variant_inventory_qty": 57,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 374,
+          "item_code": "20227",
+          "item_details": "CELLO WHITE BOARD INK 30\"",
+          "item_group": "CELLO",
+          "cl_qty": 57
+        }
+      ]
+    },
+    {
+      "website_row": 26,
+      "title": "CELLO SWISS BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "20224",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 369,
+          "item_code": "20224",
+          "item_details": "CELLO SWISS BALL PEN 70",
+          "item_group": "CELLO",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 27,
+      "title": "CELLO TRIMATE PLUS BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "20225",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 47.8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 372,
+          "item_code": "20225",
+          "item_details": "CELLO TRIMATE PLUS BALL PEN 30",
+          "item_group": "CELLO",
+          "cl_qty": 47.8
+        }
+      ]
+    },
+    {
+      "website_row": 28,
+      "title": "CELLO SUPREME PENCIL 0.5",
+      "brand": "Cello",
+      "variant_sku": "20223",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 75,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 367,
+          "item_code": "20223",
+          "item_details": "CELLO SUPREME PENCIL 0.5 10",
+          "item_group": "CELLO",
+          "cl_qty": 75
+        }
+      ]
+    },
+    {
+      "website_row": 29,
+      "title": "CELLO SIGNATURE TREASURE ROLLER BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "20221",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 362,
+          "item_code": "20221",
+          "item_details": "CELLO SIGNATURE TREASURE RB 400",
+          "item_group": "CELLO",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 30,
+      "title": "CELLO SIGNATURE ORIGIN BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "20220",
+      "old_variant_inventory_qty": 35,
+      "new_variant_inventory_qty": 33,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 359,
+          "item_code": "20220",
+          "item_details": "CELLO SIGNATURE ORIGIN BP 225",
+          "item_group": "CELLO",
+          "cl_qty": 33
+        }
+      ]
+    },
+    {
+      "website_row": 31,
+      "title": "CELLO SIGNATURE CREME IVORY SLIM PEN",
+      "brand": "Cello",
+      "variant_sku": "20228",
+      "old_variant_inventory_qty": 30,
+      "new_variant_inventory_qty": 29,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 355,
+          "item_code": "20228",
+          "item_details": "CELLO SIGNATURE CREME IVORY SLIM PEN 200",
+          "item_group": "CELLO",
+          "cl_qty": 29
+        }
+      ]
+    },
+    {
+      "website_row": 32,
+      "title": "CELLO SIGNATURE CREME IVORY FOUNTAIN PEN BLUE",
+      "brand": "Cello",
+      "variant_sku": "20217",
+      "old_variant_inventory_qty": 11,
+      "new_variant_inventory_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 353,
+          "item_code": "20217",
+          "item_details": "CELLO SIGNATURE CREME IVORY FP BL 350",
+          "item_group": "CELLO",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 33,
+      "title": "CELLO SIGNATURE CARBON BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "20215",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 349,
+          "item_code": "20215",
+          "item_details": "CELLO SIGNATURE CARBON BP 200\"",
+          "item_group": "CELLO",
+          "cl_qty": 2
+        }
+      ]
+    },
+    {
+      "website_row": 34,
+      "title": "CELLO SIGNATURE MOONLIGHT BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "20219",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 14,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 358,
+          "item_code": "20219",
+          "item_details": "CELLO SIGNATURE MOONLIGHT BP 175",
+          "item_group": "CELLO",
+          "cl_qty": 14
+        }
+      ]
+    },
+    {
+      "website_row": 35,
+      "title": "CELLO SIGNATURE CREME IVORY ROLLER BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "20218",
+      "old_variant_inventory_qty": 15,
+      "new_variant_inventory_qty": 15,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 354,
+          "item_code": "20218",
+          "item_details": "CELLO SIGNATURE CREME IVORY RB PEN 275\"",
+          "item_group": "CELLO",
+          "cl_qty": 15
+        }
+      ]
+    },
+    {
+      "website_row": 36,
+      "title": "CELLO SAPHIRE BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "20214",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 24,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 348,
+          "item_code": "20214",
+          "item_details": "CELLO SAPHIRE BALL PEN 40",
+          "item_group": "CELLO",
+          "cl_qty": 24
+        }
+      ]
+    },
+    {
+      "website_row": 37,
+      "title": "CELLO REFILL ULTRA 3000",
+      "brand": "Cello",
+      "variant_sku": "20213",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 51,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 347,
+          "item_code": "20213",
+          "item_details": "CELLO REFILL ULTRA 3000 8",
+          "item_group": "CELLO",
+          "cl_qty": 51
+        }
+      ]
+    },
+    {
+      "website_row": 38,
+      "title": "CELLO REFILL SUPER GEL",
+      "brand": "Cello",
+      "variant_sku": "20211",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 50,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 345,
+          "item_code": "20211",
+          "item_details": "CELLO REFILL SUPER GEL 5",
+          "item_group": "CELLO",
+          "cl_qty": 50
+        }
+      ]
+    },
+    {
+      "website_row": 39,
+      "title": "CELLO POCKET BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "20207",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 74,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 336,
+          "item_code": "20207",
+          "item_details": "CELLO POCKET BALL PEN 10",
+          "item_group": "CELLO",
+          "cl_qty": 74
+        }
+      ]
+    },
+    {
+      "website_row": 40,
+      "title": "CELLO PINPOINT BALL PEN BLUE",
+      "brand": "Cello",
+      "variant_sku": "20206",
+      "old_variant_inventory_qty": 193,
+      "new_variant_inventory_qty": 51,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 335,
+          "item_code": "20206",
+          "item_details": "CELLO PINPOINT BP BLUE 10",
+          "item_group": "CELLO",
+          "cl_qty": 51
+        }
+      ]
+    },
+    {
+      "website_row": 41,
+      "title": "CELLO SIGNATURE CARBON SLIM BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "20216",
+      "old_variant_inventory_qty": 33,
+      "new_variant_inventory_qty": 50,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 351,
+          "item_code": "20216",
+          "item_details": "CELLO SIGNATURE CARBON SLIM  BP 175",
+          "item_group": "CELLO",
+          "cl_qty": 50
+        }
+      ]
+    },
+    {
+      "website_row": 42,
+      "title": "CELLO REFILL TECHNO TIP",
+      "brand": "Cello",
+      "variant_sku": "20212",
+      "old_variant_inventory_qty": 1,
+      "new_variant_inventory_qty": 1,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 346,
+          "item_code": "20212",
+          "item_details": "CELLO REFILL TECHNO TIP 120",
+          "item_group": "CELLO",
+          "cl_qty": 1
+        }
+      ]
+    },
+    {
+      "website_row": 43,
+      "title": "CELLO REFILL SIGNATURE ROLLER BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "8677",
+      "old_variant_inventory_qty": 20,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 344,
+          "item_code": "8677",
+          "item_details": "CELLO REFILL SIGNATURE RB 50",
+          "item_group": "CELLO",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 44,
+      "title": "CELLO REFILL PAPERSOFT",
+      "brand": "Cello",
+      "variant_sku": "20209",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 49,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 341,
+          "item_code": "20209",
+          "item_details": "CELLO REFILL PAPERSOFT 10",
+          "item_group": "CELLO",
+          "cl_qty": 49
+        }
+      ]
+    },
+    {
+      "website_row": 45,
+      "title": "CELLO POCKET TEH GEL PEN",
+      "brand": "Cello",
+      "variant_sku": "20208",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 337,
+          "item_code": "20208",
+          "item_details": "CELLO POCKET TEH GEL PEN 20",
+          "item_group": "CELLO",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 46,
+      "title": "CELLO ASPRO & MAVRO BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "20198",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 52,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 316,
+          "item_code": "20198",
+          "item_details": "CELLO ASPRO & MAVRO BP 10",
+          "item_group": "CELLO",
+          "cl_qty": 52
+        }
+      ]
+    },
+    {
+      "website_row": 47,
+      "title": "CELLO OPTIMA BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "20205",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 334,
+          "item_code": "20205",
+          "item_details": "CELLO OPTIMA BP 125\"",
+          "item_group": "CELLO",
+          "cl_qty": 0
+        }
+      ]
+    },
+    {
+      "website_row": 48,
+      "title": "CELLO METALLICA BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "20204",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 4,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 333,
+          "item_code": "20204",
+          "item_details": "CELLO METALLICA BALL PEN 40",
+          "item_group": "CELLO",
+          "cl_qty": 4
+        }
+      ]
+    },
+    {
+      "website_row": 49,
+      "title": "CELLO MAXRITER BALL PEN BLACK",
+      "brand": "Cello",
+      "variant_sku": "20203-GC02",
+      "old_variant_inventory_qty": 2209,
+      "new_variant_inventory_qty": 2209,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "website_row": 50,
+      "title": "CELLO MAXRITER BALL PEN BLUE",
+      "brand": "Cello",
+      "variant_sku": "20203-GC01",
+      "old_variant_inventory_qty": 2243,
+      "new_variant_inventory_qty": 2243,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "website_row": 51,
+      "title": "CELLO LEAD 0.7MM",
+      "brand": "Cello",
+      "variant_sku": "20202",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 83,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 330,
+          "item_code": "20202",
+          "item_details": "CELLO LEAD 0.7MM 5",
+          "item_group": "CELLO",
+          "cl_qty": 83
+        }
+      ]
+    },
+    {
+      "website_row": 52,
+      "title": "CELLO GLIDE RT BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "20201",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 18,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 325,
+          "item_code": "20201",
+          "item_details": "CELLO GLIDE RT BALL PEN 5",
+          "item_group": "CELLO",
+          "cl_qty": 18
+        }
+      ]
+    },
+    {
+      "website_row": 53,
+      "title": "CELLO ACCUGRIP BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "20197",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 25,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 313,
+          "item_code": "20197",
+          "item_details": "CELLO ACCUGRIP BALL PEN 70",
+          "item_group": "CELLO",
+          "cl_qty": 25
+        }
+      ]
+    },
+    {
+      "website_row": 54,
+      "title": "CELLO  EASY GRIP PEN",
+      "brand": "Cello",
+      "variant_sku": "20196",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 7.9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 312,
+          "item_code": "20196",
+          "item_details": "CELLO  EASY GRIP PEN 5",
+          "item_group": "CELLO",
+          "cl_qty": 7.9
+        }
+      ]
+    },
+    {
+      "website_row": 55,
+      "title": "CELLO FLUORO PEN",
+      "brand": "Cello",
+      "variant_sku": "20200",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 324,
+          "item_code": "20200",
+          "item_details": "CELLO FLUORO PEN 250",
+          "item_group": "CELLO",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 56,
+      "title": "CELLO EXTRA DARK BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "20199",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 0,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "website_row": 57,
+      "title": "CELLO SMARTY PENCIL 0.7MM PACK OF 5PCS",
+      "brand": "Cello",
+      "variant_sku": "8686",
+      "old_variant_inventory_qty": 27,
+      "new_variant_inventory_qty": 135,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 365,
+          "item_code": "8686",
+          "item_details": "CELLO SMARTY PENCIL 0.7MM 7",
+          "item_group": "CELLO",
+          "cl_qty": 135
+        }
+      ]
+    },
+    {
+      "website_row": 58,
+      "title": "CELLO ZAPP PASTEL GEL PEN",
+      "brand": "Cello",
+      "variant_sku": "8687",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 89,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 379,
+          "item_code": "8687",
+          "item_details": "CELLO ZAPP PASTEL GEL PEN 10",
+          "item_group": "CELLO",
+          "cl_qty": 89
+        }
+      ]
+    },
+    {
+      "website_row": 59,
+      "title": "CELLO STREAK BALL PEN 0.7MM",
+      "brand": "Cello",
+      "variant_sku": "8688",
+      "old_variant_inventory_qty": 20,
+      "new_variant_inventory_qty": 42,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 366,
+          "item_code": "8688",
+          "item_details": "CELLO STREAK BP 20",
+          "item_group": "CELLO",
+          "cl_qty": 42
+        }
+      ]
+    },
+    {
+      "website_row": 60,
+      "title": "CELLO TECHNOTIP BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "8691",
+      "old_variant_inventory_qty": 1300,
+      "new_variant_inventory_qty": 2083,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 370,
+          "item_code": "8691",
+          "item_details": "CELLO TECHNO TIP BALL PEN 10",
+          "item_group": "CELLO",
+          "cl_qty": 2083
+        }
+      ]
+    },
+    {
+      "website_row": 61,
+      "title": "CELLO SMARTY PENCIL 0.5MM PACK OF 5PCS",
+      "brand": "Cello",
+      "variant_sku": "8685",
+      "old_variant_inventory_qty": 27,
+      "new_variant_inventory_qty": 135,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 364,
+          "item_code": "8685",
+          "item_details": "CELLO SMARTY PENCIL 0.5MM 7",
+          "item_group": "CELLO",
+          "cl_qty": 135
+        }
+      ]
+    },
+    {
+      "website_row": 62,
+      "title": "CELLO SUPREME PENCIL 0.7MM",
+      "brand": "Cello",
+      "variant_sku": "8689",
+      "old_variant_inventory_qty": 10,
+      "new_variant_inventory_qty": 154,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 368,
+          "item_code": "8689",
+          "item_details": "CELLO SUPREME PENCIL 0.7MM 10",
+          "item_group": "CELLO",
+          "cl_qty": 154
+        }
+      ]
+    },
+    {
+      "website_row": 63,
+      "title": "CELLO REFILL SIGNATURE BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "8692",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 12,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 343,
+          "item_code": "8692",
+          "item_details": "CELLO REFILL SIGNATURE BP 40",
+          "item_group": "CELLO",
+          "cl_qty": 12
+        }
+      ]
+    },
+    {
+      "website_row": 64,
+      "title": "CELLO SIGNATURE TERRA BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "8694",
+      "old_variant_inventory_qty": 60,
+      "new_variant_inventory_qty": 62,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 361,
+          "item_code": "8694",
+          "item_details": "CELLO SIGNATURE TERRA BP 200",
+          "item_group": "CELLO",
+          "cl_qty": 62
+        }
+      ]
+    },
+    {
+      "website_row": 65,
+      "title": "CELLO SIGNATURE CARBON ROLLER BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "8695",
+      "old_variant_inventory_qty": 16,
+      "new_variant_inventory_qty": 17,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 350,
+          "item_code": "8695",
+          "item_details": "CELLO SIGNATURE CARBON RB PEN 300",
+          "item_group": "CELLO",
+          "cl_qty": 17
+        }
+      ]
+    },
+    {
+      "website_row": 66,
+      "title": "CELLO BUTTERFLOW SIMPLY BALL PEN BLUE",
+      "brand": "Cello",
+      "variant_sku": "8690",
+      "old_variant_inventory_qty": 300,
+      "new_variant_inventory_qty": 10,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 320,
+          "item_code": "8690",
+          "item_details": "CELLO BUTTERFLOW SIMPLY BP BLUE 10",
+          "item_group": "CELLO",
+          "cl_qty": 10
+        }
+      ]
+    },
+    {
+      "website_row": 67,
+      "title": "CELLO TRIMATE BALL PEN 0.7MM PACK OF 5PCS",
+      "brand": "Cello",
+      "variant_sku": "8670-C",
+      "old_variant_inventory_qty": 9,
+      "new_variant_inventory_qty": 9,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "No Busy Match",
+      "busy_matches": []
+    },
+    {
+      "website_row": 68,
+      "title": "CELLO JOTDOT BALL PEN",
+      "brand": "Cello",
+      "variant_sku": "19130",
+      "old_variant_inventory_qty": 200,
+      "new_variant_inventory_qty": 108,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 328,
+          "item_code": "19130",
+          "item_details": "CELLO JOT DOT BALL PEN 20",
+          "item_group": "CELLO",
+          "cl_qty": 108
+        }
+      ]
+    },
+    {
+      "website_row": 69,
+      "title": "CELLO WHITEMATE MARKER WHITEBOARD - BLACK",
+      "brand": "Cello",
+      "variant_sku": "19136",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 44,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 375,
+          "item_code": "19136",
+          "item_details": "CELLO WHITEMATE MARKER BK 25",
+          "item_group": "CELLO",
+          "cl_qty": 44
+        }
+      ]
+    },
+    {
+      "website_row": 70,
+      "title": "CELLO WHITEMATE MARKER WHITEBOARD - BLUE",
+      "brand": "Cello",
+      "variant_sku": "19137",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 376,
+          "item_code": "19137",
+          "item_details": "CELLO WHITEMATE MARKER BL 25",
+          "item_group": "CELLO",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "website_row": 71,
+      "title": "CELLO WHITEMATE MARKER WHITEBOARD - GREEN",
+      "brand": "Cello",
+      "variant_sku": "19138",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 8,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 377,
+          "item_code": "19138",
+          "item_details": "CELLO WHITEMATE MARKER GN 25",
+          "item_group": "CELLO",
+          "cl_qty": 8
+        }
+      ]
+    },
+    {
+      "website_row": 72,
+      "title": "CELLO WHITEMATE MARKER WHITEBOARD - RED",
+      "brand": "Cello",
+      "variant_sku": "19139",
+      "old_variant_inventory_qty": 0,
+      "new_variant_inventory_qty": 2,
+      "warehouse_stock": 0,
+      "shop_stock": 0,
+      "status": "Matched",
+      "busy_matches": [
+        {
+          "busy_row": 378,
+          "item_code": "19139",
+          "item_details": "CELLO WHITEMATE MARKER RD 25",
+          "item_group": "CELLO",
+          "cl_qty": 2
+        }
+      ]
+    }
+  ]
+}

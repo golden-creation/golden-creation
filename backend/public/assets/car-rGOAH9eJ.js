@@ -1,0 +1,1 @@
+var e=`/assets/car-CqU6kX7s.png`;export{e as t};
