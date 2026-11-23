@@ -3,7 +3,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import ProductRating from "../components/ProductRating";
-import { formatCurrency, getCollectionBySlug, getVariantFilters, productPath } from "../lib/api";
+import PriceOffer from "../components/PriceOffer";
+import { getCollectionBySlug, getVariantFilters, productPath } from "../lib/api";
 
 function CollectionDetail() {
   const { slug } = useParams();
@@ -232,7 +233,7 @@ function CollectionDetail() {
                     <ProductRating product={product} className="mt-3" />
                     <p className="mt-2 text-xs uppercase tracking-wide text-gray-400">{product.brandName || product.categoryName}</p>
                     <h3 className="mt-1 line-clamp-2 text-sm font-semibold">{product.name}</h3>
-                    <p className="mt-2 font-bold text-[#C2863F]">{formatCurrency(product.price)}</p>
+                    <PriceOffer className="mt-2" price={product.price} comparePrice={product.comparePrice} mrp={product.mrp} percent={product.discountPercent} />
                     {!!product.tags?.length && (
                       <div className="mt-2 flex flex-wrap gap-1">
                         {product.tags.slice(0, 2).map((tag) => <span key={tag} className="rounded-full bg-[#FFF4DC] px-2 py-0.5 text-[10px] text-[#7A4D18]">{tag}</span>)}

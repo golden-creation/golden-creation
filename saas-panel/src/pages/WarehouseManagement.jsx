@@ -10,6 +10,7 @@ import {
   updateWarehouseSheet,
 } from "../lib/adminApi";
 import { apiRequest } from "../lib/api";
+import { formatQuantity, quantityFieldValue } from "../lib/formatQuantity";
 
 const stockDraftInitial = {
   productRef: "",
@@ -395,9 +396,9 @@ function WarehouseManagement() {
             <h2 className="mb-4 text-lg font-semibold">Add Warehouse Product Record</h2>
             <SelectProduct value={stockDraft.productRef} products={productOptions} onChange={(value) => setStockDraft({ ...stockDraft, productRef: value })} />
             <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
-              <Field label="On Hand" type="number" value={stockDraft.stockOnHand} onChange={(value) => setStockDraft({ ...stockDraft, stockOnHand: value })} />
-              <Field label="Reserved" type="number" value={stockDraft.reservedStock} onChange={(value) => setStockDraft({ ...stockDraft, reservedStock: value })} />
-              <Field label="Reorder" type="number" value={stockDraft.reorderLevel} onChange={(value) => setStockDraft({ ...stockDraft, reorderLevel: value })} />
+              <Field label="On Hand" type="number" value={quantityFieldValue(stockDraft.stockOnHand)} onChange={(value) => setStockDraft({ ...stockDraft, stockOnHand: value })} />
+              <Field label="Reserved" type="number" value={quantityFieldValue(stockDraft.reservedStock)} onChange={(value) => setStockDraft({ ...stockDraft, reservedStock: value })} />
+              <Field label="Reorder" type="number" value={quantityFieldValue(stockDraft.reorderLevel)} onChange={(value) => setStockDraft({ ...stockDraft, reorderLevel: value })} />
             </div>
             <button onClick={saveStock} className="mt-4 rounded-lg bg-[#A68B5B] px-4 py-2 text-sm text-white">
               Save Stock Record
@@ -419,7 +420,7 @@ function WarehouseManagement() {
                   <option>Outward</option>
                 </select>
               </label>
-              <Field label="Quantity" type="number" value={movementDraft.quantity} onChange={(value) => setMovementDraft({ ...movementDraft, quantity: value })} />
+              <Field label="Quantity" type="number" value={quantityFieldValue(movementDraft.quantity)} onChange={(value) => setMovementDraft({ ...movementDraft, quantity: value })} />
               <Field label="Reference" value={movementDraft.reference} onChange={(value) => setMovementDraft({ ...movementDraft, reference: value })} />
             </div>
             <button onClick={saveMovement} className="mt-4 rounded-lg bg-[#A68B5B] px-4 py-2 text-sm text-white">
@@ -482,8 +483,8 @@ function StockTable({ loading, stock }) {
               <td>{item.warehouse_name}</td>
               <td>{item.sku || "-"}</td>
               <td>{item.google_sheet_row_id || "-"}</td>
-              <td>{item.stock_on_hand}</td>
-              <td>{item.reserved_stock}</td>
+              <td>{formatQuantity(item.stock_on_hand) || "0"}</td>
+              <td>{formatQuantity(item.reserved_stock) || "0"}</td>
               <td>
                 <span className="rounded-full bg-green-50 px-2 py-1 text-xs text-green-700">
                   {item.approval_status}
@@ -527,7 +528,7 @@ function MovementTable({ entries, onApprove }) {
               <td className="p-3 font-medium">{entry.product_name}</td>
               <td>{entry.product_source}</td>
               <td>{entry.movement_type}</td>
-              <td>{entry.quantity}</td>
+              <td>{formatQuantity(entry.quantity) || "0"}</td>
               <td>{entry.reference || "-"}</td>
               <td>
                 <span className={`rounded-full px-2 py-1 text-xs ${entry.status === "Pending" ? "bg-orange-50 text-orange-700" : "bg-green-50 text-green-700"}`}>

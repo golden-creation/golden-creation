@@ -7,6 +7,7 @@ import {
   uploadAdminMedia,
 } from "../lib/adminApi";
 import ConfirmDialog from "../components/ConfirmDialog";
+import { formatQuantity } from "../lib/formatQuantity";
 
 const emptyForm = {
   name: "",
@@ -239,7 +240,7 @@ function BrandForm() {
                         <td className="p-3 font-medium">{product.name}</td>
                         <td className="p-3 text-gray-500">{product.sku || "-"}</td>
                         <td className="p-3">₹{Number(product.price || 0).toLocaleString("en-IN")}</td>
-                        <td className="p-3">{product.stock_quantity || 0}</td>
+                        <td className="p-3">{formatQuantity(product.stock_quantity) || "0"}</td>
                         <td className="p-3">{product.status}</td>
                       </tr>
                     )) : (

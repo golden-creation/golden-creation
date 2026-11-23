@@ -3,6 +3,7 @@ export async function ensureExpansionSchema({
   addColumnIfMissing,
   indexExists,
   constraintExists,
+  allowDataWrites = false,
 }) {
   await addColumnIfMissing("products", "deleted_at", "deleted_at DATETIME NULL");
   await addColumnIfMissing("warehouse_products", "category_id", "category_id INT NULL AFTER category");
@@ -346,6 +347,7 @@ export async function ensureExpansionSchema({
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
   `);
 
+  if (allowDataWrites) {
   await db.query(`
     INSERT IGNORE INTO product_stock_counts (product_id, bucket, stock_on_hand, reserved_stock, reorder_level)
     SELECT id, 'warehouse', 0, 0, COALESCE(reorder_level, 0)
@@ -371,6 +373,7 @@ export async function ensureExpansionSchema({
     await db.query("UPDATE warehouse_stock SET reorder_level = 0 WHERE reorder_level <> 0");
     await db.query("UPDATE store_stock SET reorder_level = 0 WHERE reorder_level <> 0");
     await db.query("INSERT INTO migration_flags (flag_key) VALUES ('low_stock_alerts_zero_20260906')");
+  }
   }
 
   await addColumnIfMissing("store_movements", "product_id", "product_id INT NULL AFTER id");
@@ -414,8 +417,10 @@ export async function ensureExpansionSchema({
     `);
   }
 
+  if (allowDataWrites) {
   await db.query("UPDATE orders SET order_status = 'Dispatched' WHERE order_status = 'Shipped'");
   await db.query("UPDATE orders SET delivered_at = COALESCE(delivered_at, updated_at) WHERE order_status = 'Delivered'");
+  }
 
   if (false) {
   await db.query(`

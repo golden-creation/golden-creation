@@ -3,7 +3,8 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import ProductRating from "../components/ProductRating";
-import { formatCurrency, getCategories, getProducts } from "../lib/api";
+import PriceOffer from "../components/PriceOffer";
+import { getCategories, getProducts } from "../lib/api";
 
 function ConnectedCatalog() {
   const [categories, setCategories] = useState([]);
@@ -222,7 +223,7 @@ function ConnectedCatalog() {
                       </p>
                       <p className="text-sm hover:text-[#C2863F]">{product.name}</p>
                       <p className="font-bold text-[#C2863F]">
-                        {formatCurrency(product.price)}
+                        <PriceOffer price={product.price} comparePrice={product.comparePrice} mrp={product.mrp} percent={product.discountPercent} />
                       </p>
                     </button>
                   ))}

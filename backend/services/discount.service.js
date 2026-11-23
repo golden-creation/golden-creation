@@ -341,8 +341,9 @@ export async function evaluateDiscount(discountRow, cartInput, coupon = null) {
     return { valid: false, reason: "You have already used this discount" };
   }
 
+  const discountType = cleanString(discount.discount_type).toLowerCase();
   const discountAmount = calculateDiscountAmount(discount, cart);
-  if (discountAmount <= 0) {
+  if (discountAmount <= 0 && !discountType.includes("shipping")) {
     return { valid: false, reason: "Discount amount is zero for this cart" };
   }
 

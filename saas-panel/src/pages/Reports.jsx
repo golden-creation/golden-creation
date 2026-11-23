@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { getAdminReports } from "../lib/adminApi";
+import { formatQuantity } from "../lib/formatQuantity";
 
 const money = (value) => `Rs. ${Number(value || 0).toLocaleString("en-IN")}`;
 
@@ -170,13 +171,13 @@ function Reports() {
           title="Fast Moving Items"
           headers={["Product", "Category", "Qty Sold", "Revenue", "Velocity"]}
           rows={filteredFastMoving}
-          renderRow={(item) => [item.name, item.category, item.qtySold, money(item.revenue), item.velocity]}
+          renderRow={(item) => [item.name, item.category, formatQuantity(item.qtySold) || "0", money(item.revenue), item.velocity]}
         />
         <ReportTable
           title="Slow Moving Items"
           headers={["Product", "Stock", "Last Sale", "Aging"]}
           rows={reports?.slowMoving || []}
-          renderRow={(item) => [item.name, item.stock, item.lastSale, item.aging]}
+          renderRow={(item) => [item.name, formatQuantity(item.stock) || "0", item.lastSale, item.aging]}
         />
       </div>
 
@@ -197,9 +198,9 @@ function Reports() {
               {(reports?.lowStockAlerts || []).map((item) => (
                 <tr key={item.name} className="border-b">
                   <td className="p-3 font-medium">{item.name}</td>
-                  <td className="text-red-600">{item.stock}</td>
-                  <td>{item.threshold}</td>
-                  <td>{item.gap}</td>
+                  <td className="text-red-600">{formatQuantity(item.stock) || "0"}</td>
+                  <td>{formatQuantity(item.threshold) || "0"}</td>
+                  <td>{formatQuantity(item.gap) || "0"}</td>
                   <td>
                     <span className={`rounded-full px-2 py-1 text-xs ${item.action === "Critical" ? "bg-red-50 text-red-700" : "bg-orange-50 text-orange-700"}`}>
                       {item.action}

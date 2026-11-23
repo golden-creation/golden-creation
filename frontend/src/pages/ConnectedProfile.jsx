@@ -56,7 +56,7 @@ function ConnectedProfile() {
             <ProfileCard
               title="Cart Items"
               value={String(cartCount).padStart(2, "0")}
-              subtitle={`Current checkout value ${formatCurrency(cartGrandTotal)}`}
+              subtitle={`Merchandise total ${formatCurrency(cartGrandTotal)}`}
               action="Open Cart"
               onClick={() => navigate("/cart")}
             />

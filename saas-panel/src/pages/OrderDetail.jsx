@@ -5,8 +5,9 @@ import {
   markOrderCodCollected,
   updateAdminShipment,
 } from "../lib/adminApi";
-
-const statusOptions = ["Pending", "Processing", "Dispatched", "In Transit", "Delivered", "Cancelled"];
+import { formatQuantity } from "../lib/formatQuantity";
+import { carrierResolutionAvailable, nextStatusOptions } from "../lib/orderCancellation";
+import CancelOrderDialog from "../components/CancelOrderDialog";
 
 function OrderDetail() {
   const { id } = useParams();
@@ -17,6 +18,7 @@ function OrderDetail() {
   const [loading, setLoading] = useState(true);
   const [tracking, setTracking] = useState({ trackingUrl: "", logisticsProvider: "" });
   const [dispatchPrompt, setDispatchPrompt] = useState(false);
+  const [cancelPrompt, setCancelPrompt] = useState(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -55,16 +57,38 @@ function OrderDetail() {
       return;
     }
 
+    if (status === "Cancelled") {
+      setCancelPrompt({ resolution: "" });
+      return;
+    }
+
     try {
-      await updateAdminShipment(id, { status, ...tracking, ...extra });
+      const response = await updateAdminShipment(id, { status, ...tracking, ...extra });
       setOrder((current) => ({
         ...current,
         order_status: status,
         fulfillment_stock_source: extra.fulfillmentStockSource || current.fulfillment_stock_source,
       }));
-      setMessage(`Order moved to ${status}`);
+      setMessage(response.message || `Order moved to ${status}`);
     } catch (error) {
       setMessage(error.message || "Unable to update status");
+    }
+  };
+
+  const confirmCancellation = async (reason) => {
+    const prompt = cancelPrompt;
+    setCancelPrompt(null);
+    try {
+      const response = await updateAdminShipment(id, {
+        status: "Cancelled",
+        reason,
+        resolution: prompt?.resolution || undefined,
+        ...tracking,
+      });
+      setOrder((current) => ({ ...current, order_status: "Cancelled" }));
+      setMessage(response.message || "Order cancelled");
+    } catch (error) {
+      setMessage(error.message || "Unable to cancel order");
     }
   };
 
@@ -116,7 +140,7 @@ function OrderDetail() {
             onChange={(event) => changeStatus(event.target.value)}
             className="rounded-lg border bg-white px-3 py-2 text-sm shadow"
           >
-            {statusOptions.map((status) => (
+            {nextStatusOptions(order.order_status).map((status) => (
               <option key={status}>{status}</option>
             ))}
           </select>
@@ -126,6 +150,12 @@ function OrderDetail() {
       {message && (
         <div className="mb-4 rounded-lg border border-orange-200 bg-orange-50 px-3 py-2 text-sm text-orange-700">
           {message}
+        </div>
+      )}
+      {carrierResolutionAvailable(order.order_status) && (
+        <div className="mb-4 flex flex-wrap gap-2">
+          <button type="button" onClick={() => setCancelPrompt({ resolution: "carrier_intercepted" })} className="rounded-lg bg-white px-3 py-2 text-sm shadow">Carrier intercepted</button>
+          <button type="button" onClick={() => setCancelPrompt({ resolution: "return_received" })} className="rounded-lg bg-white px-3 py-2 text-sm shadow">Return received</button>
         </div>
       )}
 
@@ -155,7 +185,7 @@ function OrderDetail() {
                       )}
                     </td>
                     <td>{item.sku || "-"}</td>
-                    <td>{item.quantity}</td>
+                    <td>{formatQuantity(item.quantity) || "0"}</td>
                     <td>Rs. {Number(item.price || 0).toLocaleString("en-IN")}</td>
                     <td>Rs. {Number(item.line_total || 0).toLocaleString("en-IN")}</td>
                   </tr>
@@ -230,6 +260,16 @@ function OrderDetail() {
             </button>
           </div>
         </div>
+      )}
+      {cancelPrompt && (
+        <CancelOrderDialog
+          title={cancelPrompt.resolution ? "Cancel shipped order" : "Cancel order"}
+          detail={cancelPrompt.resolution
+            ? "This restores website stock if it was deducted and physical stock only for the bucket recorded at dispatch. A captured payment is not marked refunded."
+            : "Pending and processing orders restore website stock only when this order deducted it. A captured payment is not marked refunded."}
+          onClose={() => setCancelPrompt(null)}
+          onConfirm={confirmCancellation}
+        />
       )}
     </div>
   );

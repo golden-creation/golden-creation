@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import Footer from "../components/Footer";
+import PriceOffer from "../components/PriceOffer";
 import Navbar from "../components/Navbar";
 import heart from "../assets/heart.png";
 import share from "../assets/share.png";
@@ -625,9 +626,7 @@ function ConnectedProductDetail() {
                       {realReviewCount === 1 ? "" : "s"})
                     </span>
                   </div>
-                ) : (
-                  <p className="mb-2 text-xs font-semibold text-gray-500">Not Rated Yet</p>
-                )}
+                ) : null}
                 <p className="text-xs uppercase tracking-wide text-[#C2863F]">
                   {product.categoryName}
                 </p>
@@ -650,15 +649,15 @@ function ConnectedProductDetail() {
                 <h1 className="mb-4 text-2xl font-bold leading-[1.2] text-gray-900 md:text-3xl">
                   {product.name}
                 </h1>
-                <div className="mb-6 flex items-center gap-4">
-                  <span className="text-3xl font-bold text-gray-950">
-                    {formatCurrency(selectedVariant?.price ?? product.price)}
-                  </span>
-                  {selectedVariant?.comparePrice && (
-                    <span className="text-lg text-gray-400 line-through">
-                      {formatCurrency(selectedVariant.comparePrice)}
-                    </span>
-                  )}
+                <div className="mb-6">
+                  <PriceOffer
+                    className="text-3xl"
+                    price={selectedVariant?.price ?? product.price}
+                    comparePrice={selectedVariant?.comparePrice || product.comparePrice}
+                    mrp={product.mrp}
+                    percent={product.discountPercent}
+                  />
+                  <p className="mt-1 text-xs text-gray-500">Product discount is separate from a checkout coupon.</p>
                 </div>
                 {hasVariants && (
                   <div className="mb-6 space-y-5 rounded-lg border border-gray-100 bg-[#FBF8F2] p-4">

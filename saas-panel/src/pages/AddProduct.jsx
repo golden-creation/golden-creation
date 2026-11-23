@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { quantityFieldValue } from "../lib/formatQuantity";
 import checkIcon from "../assets/check.png";
 import chainIcon from "../assets/chain.png";
 import starIcon from "../assets/star.png";
@@ -322,7 +323,7 @@ const AddProduct = () => {
                 <label className="text-xs text-black">STOCK QUANTITY</label>
                 <div className="flex items-center border p-3 rounded-lg gap-2">
                   <img src={boxIcon} className="h-4" />
-                  <input value={form.stock} onChange={(event) => updateField("stock", event.target.value)} className="w-full outline-none text-sm" placeholder="50" />
+                  <input value={quantityFieldValue(form.stock)} onChange={(event) => updateField("stock", event.target.value)} className="w-full outline-none text-sm" placeholder="50" />
                 </div>
               </div>
               <div>

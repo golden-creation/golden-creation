@@ -23,7 +23,6 @@ import { brandMenuChildren } from "../lib/brandCatalog";
 
 const fallbackMenuItems = [
   { id: "art", title: "Art & Craft", url: "/writing-essentials?q=Art%20%26%20Craft", children: [] },
-  { id: "brand-pen", title: "Brand Pen", url: "/writing-essentials?category=440", children: [] },
   { id: "computer", title: "Computer & Electronics Accessories", url: "/writing-essentials?category=479", children: [] },
   { id: "office", title: "Office Stationery", url: "/collections/office-essentials", children: [] },
   { id: "school", title: "School Stationery", url: "/writing-essentials?q=School%20Stationery", children: [] },
@@ -32,6 +31,23 @@ const fallbackMenuItems = [
   { id: "corporate", title: "Corporate Orders", url: "/corporate-orders", children: [] },
   { id: "brands", title: "Shop By Brand", url: "/brands", mega_menu: true, children: [] },
 ];
+
+function removeBrandPenMenuItems(items) {
+  if (!Array.isArray(items)) return [];
+
+  return items
+    .filter((item) => {
+      const title = String(item?.title || "").trim().toLowerCase();
+      const url = String(item?.url || "").toLowerCase();
+      return title !== "brand pen" && !url.includes("category=440");
+    })
+    .map((item) => ({
+      ...item,
+      children: Array.isArray(item.children)
+        ? removeBrandPenMenuItems(item.children)
+        : [],
+    }));
+}
 
 function isBrandMenuItem(item) {
   return (
@@ -118,9 +134,18 @@ const Navbar = () => {
     ])
       .then(([items, brandResult]) => {
         if (!ignore) {
-          const sourceItems = items.length ? items : fallbackMenuItems;
+          const filteredItems = removeBrandPenMenuItems(items);
+          const sourceItems = filteredItems.length ? filteredItems : fallbackMenuItems;
+          const brandChildren = brandResult.ok
+            ? null
+            : [{ id: "brand-error", title: "Brands could not be loaded", url: "/brands", children: [] }];
           setMenuItems(
-            brandResult.ok ? hydrateBrandMenus(sourceItems, brandResult.brands) : sourceItems
+            brandResult.ok
+              ? hydrateBrandMenus(sourceItems, brandResult.brands)
+              : sourceItems.map((item) => ({
+                  ...item,
+                  children: isBrandMenuItem(item) ? brandChildren : item.children || [],
+                }))
           );
         }
       })
@@ -502,12 +527,17 @@ function DesktopMenuItem({
   const scrollableMenu = item.mega_menu || isBrandMenuItem(item) || item.children?.length > 12;
 
   return (
-    <div className="relative min-w-0">
+    <div
+      className="relative min-w-0"
+      onMouseEnter={() => hasChildren && onActivate(item.id)}
+      onMouseLeave={() => hasChildren && onActivate(null)}
+    >
       <button
         type="button"
         onClick={() => (hasChildren ? onActivate(isOpen ? null : item.id) : onNavigate(item))}
         className={`${navItemClass} flex items-center justify-center gap-1`}
         title={item.title}
+        aria-expanded={hasChildren ? isOpen : undefined}
       >
         {item.icon && <img src={item.icon} alt="" className="h-4 w-4 object-contain" />}
         <span className="min-w-0 truncate">{item.title}</span>

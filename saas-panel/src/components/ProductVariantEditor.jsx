@@ -1,6 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import React, { useEffect, useMemo } from "react";
 import { uploadAdminMedia } from "../lib/adminApi";
+import { formatQuantity, quantityFieldValue } from "../lib/formatQuantity";
 
 function splitValues(value) {
   if (Array.isArray(value)) {
@@ -59,7 +60,7 @@ function normalizeVariants(variants) {
     price: String(variant.price ?? ""),
     comparePrice: String(variant.comparePrice ?? variant.compare_price ?? ""),
     costPrice: String(variant.costPrice ?? variant.cost_price ?? ""),
-    stock: String(variant.stock ?? ""),
+    stock: formatQuantity(variant.stock ?? ""),
     weight: String(variant.weight ?? ""),
     weightUnit: variant.weightUnit || variant.weight_unit || "g",
     dimensions:
@@ -145,7 +146,7 @@ function ProductVariantEditor({
         price: existing.price ?? basePrice ?? "",
         comparePrice: existing.comparePrice ?? "",
         costPrice: existing.costPrice ?? "",
-        stock: existing.stock ?? "",
+        stock: formatQuantity(existing.stock ?? ""),
         weight: existing.weight ?? "",
         weightUnit: existing.weightUnit || "g",
         dimensions: existing.dimensions || { length: "", breadth: "", height: "", unit: "cm" },
@@ -294,7 +295,7 @@ function ProductVariantEditor({
                     <td><input value={variant.sku || ""} onChange={(event) => updateVariant(index, "sku", event.target.value)} className="w-32 rounded border p-2" /></td>
                     <td><input value={variant.price || ""} onChange={(event) => updateVariant(index, "price", event.target.value)} className="w-24 rounded border p-2" /></td>
                     <td><input value={variant.comparePrice || ""} onChange={(event) => updateVariant(index, "comparePrice", event.target.value)} className="w-24 rounded border p-2" /></td>
-                    <td><input value={variant.stock || ""} onChange={(event) => updateVariant(index, "stock", event.target.value)} className="w-20 rounded border p-2" /></td>
+                    <td><input value={quantityFieldValue(variant.stock)} onChange={(event) => updateVariant(index, "stock", event.target.value)} className="w-20 rounded border p-2" /></td>
                     <td><input value={variant.weight || ""} onChange={(event) => updateVariant(index, "weight", event.target.value)} className="w-20 rounded border p-2" /></td>
                     <td>
                       <select value={variant.weightUnit || "g"} onChange={(event) => updateVariant(index, "weightUnit", event.target.value)} className="rounded border p-2">

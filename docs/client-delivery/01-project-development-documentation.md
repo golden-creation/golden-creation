@@ -434,7 +434,7 @@ npm run db:customer
 node scripts/ensure-seo-schema.js
 ```
 
-Note: the current production deployment script runs `npm run db:setup`; other migration scripts should be run when their matching feature schema changes are introduced.
+`npm start` does not run database setup. `npm run db:setup` is schema-only unless a local seed is explicitly authorized. Do not run `db:setup` or `db:seed` from the production start command. See `backend/HOSTINGER_DEPLOY.md`.
 
 ## 15. Deployment Process
 

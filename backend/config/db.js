@@ -1,7 +1,5 @@
-import dotenv from "dotenv";
 import mysql from "mysql2";
-
-dotenv.config();
+import "./load-env.js";
 
 const connectTimeout = Number(process.env.DB_CONNECT_TIMEOUT_MS) || 10000;
 const queryTimeout = Number(process.env.DB_QUERY_TIMEOUT_MS) || 15000;

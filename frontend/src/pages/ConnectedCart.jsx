@@ -9,6 +9,7 @@ import arrow from "../assets/right-arrow.png";
 import verify from "../assets/verify.png";
 import undo from "../assets/undo.png";
 import { useAppStore } from "../context/AppContext";
+import PriceOffer from "../components/PriceOffer";
 import { formatCurrency } from "../lib/api";
 
 function ConnectedCart() {
@@ -19,7 +20,6 @@ function ConnectedCart() {
     discountState,
     discountAmount,
     discountedSubtotal,
-    cartGrandTotal,
     applyDiscountCode,
     removeDiscount,
     updateCartQuantity,
@@ -160,7 +160,7 @@ function ConnectedCart() {
                   </div>
                   <div className="text-left sm:text-right">
                     <p className="text-sm font-semibold text-black">
-                      {formatCurrency(item.price * item.quantity)}
+                      <PriceOffer price={item.price * item.quantity} comparePrice={item.comparePrice ? item.comparePrice * item.quantity : null} mrp={item.mrp ? item.mrp * item.quantity : null} percent={item.discountPercent} />
                     </p>
                   </div>
                 </div>
@@ -192,8 +192,8 @@ function ConnectedCart() {
                 <span className="text-gray-500">Calculated at checkout</span>
               </div>
               <div className="flex justify-between border-t pt-3 text-base font-semibold">
-                <span>Estimated subtotal</span>
-                <span className="text-[#C2863F]">{formatCurrency(cartGrandTotal)}</span>
+                <span>Merchandise total</span>
+                <span className="text-[#C2863F]">{formatCurrency(discountedSubtotal)}</span>
               </div>
             </div>
 

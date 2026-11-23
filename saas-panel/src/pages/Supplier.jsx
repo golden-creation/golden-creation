@@ -9,6 +9,7 @@ import {
 } from "../lib/adminApi";
 import RemoteLookup from "../components/RemoteLookup";
 import useEditorScroll from "../hooks/useEditorScroll";
+import { formatQuantity } from "../lib/formatQuantity";
 
 const emptySupplier = {
   name: "",
@@ -146,7 +147,7 @@ function Supplier() {
   const openLowStockWhatsapp = (supplier) => {
     const lowStock = supplier.lowStockProducts || [];
     const productText = lowStock.length
-      ? lowStock.map((item) => `${item.product_name} (${item.stock_on_hand}/${item.reorder_level})`).join(", ")
+      ? lowStock.map((item) => `${item.product_name} (${formatQuantity(item.stock_on_hand) || "0"}/${formatQuantity(item.reorder_level) || "0"})`).join(", ")
       : "assigned products";
     const text = `Hello ${supplier.name}, Golden Creation needs stock support for: ${productText}. Please share availability and pricing.`;
     const phone = String(supplier.whatsapp || supplier.phone || "").replace(/\D/g, "");

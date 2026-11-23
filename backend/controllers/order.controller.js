@@ -11,6 +11,7 @@ import {
 import { refreshLowStockNotifications } from "./expansion.controller.js";
 import { sendOrderConfirmationSms } from "../services/sms.service.js";
 import { createCodOrder } from "./checkout.controller.js";
+import { includedTaxTotal } from "../services/invoice-tax-display.js";
 
 function dbQuery(sql, values = []) {
   return new Promise((resolve, reject) => {
@@ -70,7 +71,10 @@ export async function createOrder(req, res) {
         message: "Online and partial COD orders must be started through checkout",
       });
     }
-    const order = await createCodOrder(req.body || {});
+    const order = await createCodOrder({
+      ...(req.body || {}),
+      idempotencyKey: req.get("Idempotency-Key") || req.body?.idempotencyKey || req.body?.idempotency_key,
+    });
     res.status(201).json({ order });
   } catch (error) {
     res.status(error.statusCode || 400).json({
@@ -504,6 +508,10 @@ export async function downloadOrderInvoice(req, res) {
       doc.text(`Discount${order.discount_code ? ` (${order.discount_code})` : ""}: -Rs. ${Number(order.discount_amount || 0).toFixed(2)}`, { align: "right" });
     }
     doc.text(`Shipping: Rs. ${Number(order.shipping_fee || 0).toFixed(2)}`, { align: "right" });
+    const includedGst = includedTaxTotal(rows);
+    if (includedGst > 0) {
+      doc.text(`Included GST: Rs. ${includedGst.toFixed(2)}`, { align: "right" });
+    }
     doc.text(
       Number(order.tax_amount || 0) > 0
         ? `Additional GST: Rs. ${Number(order.tax_amount || 0).toFixed(2)}`

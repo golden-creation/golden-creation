@@ -230,7 +230,7 @@ async function request(
   options = {},
   retried = false
 ) {
-  const { authenticated = false, ...fetchOptions } = options;
+  const { authenticated = false, headers: extraHeaders = {}, ...fetchOptions } = options;
   const session = readCustomerSession();
   const response = await fetch(
     `${API_BASE_URL}${path}`,
@@ -241,7 +241,7 @@ async function request(
         ...(authenticated && session?.accessToken
           ? { Authorization: `Bearer ${session.accessToken}` }
           : {}),
-        ...(fetchOptions.headers || {}),
+        ...extraHeaders,
       },
       ...fetchOptions,
     }
@@ -629,6 +629,17 @@ export function normaliseProduct(
     price:
       Number(defaultVariant?.price ?? product.price) ||
       0,
+
+    comparePrice:
+      defaultVariant?.comparePrice ||
+      Number(product.default_compare_price || product.compare_price) ||
+      null,
+
+    discountPercent:
+      Number(parseMaybeJson(product.specifications, {})?.__product_offer?.percent) || 0,
+
+    mrp:
+      Number(parseMaybeJson(product.specifications, {})?.__product_offer?.mrp) || null,
 
     gstInclusive:
       product.gst_inclusive === undefined && product.gstInclusive === undefined
@@ -1393,6 +1404,7 @@ export async function createOrder(order) {
       {
         method: "POST",
         authenticated,
+        headers: order.idempotencyKey ? { "Idempotency-Key": order.idempotencyKey } : {},
         body: JSON.stringify(
           {
             ...order,
@@ -1437,6 +1449,7 @@ export async function createRazorpayCheckoutOrder(payload) {
   const response = await request("/customer/checkout/payments/razorpay/order", {
     method: "POST",
     authenticated: true,
+    headers: payload.idempotencyKey ? { "Idempotency-Key": payload.idempotencyKey } : {},
     body: JSON.stringify({
       ...payload,
       referralAttribution: payload?.referralAttribution || getStoredReferralAttribution(),

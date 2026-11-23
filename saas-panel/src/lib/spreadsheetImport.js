@@ -62,21 +62,6 @@ function parseCsv(text) {
   return rowsFromMatrix(rows);
 }
 
-function parseHtmlTable(text) {
-  const tableText = text
-    .replace(/<\/t[dh]>/gi, "\t")
-    .replace(/<\/tr>/gi, "\n")
-    .replace(/<[^>]+>/g, "")
-    .trim();
-
-  return rowsFromMatrix(
-    tableText
-      .split(/\r?\n/)
-      .map((line) => line.split("\t"))
-      .filter((row) => row.some((cell) => cell.trim()))
-  );
-}
-
 function xmlDocument(xml, fileName) {
   const document = new DOMParser().parseFromString(xml, "application/xml");
   if (document.getElementsByTagName("parsererror").length) {
@@ -203,7 +188,11 @@ async function parseExcelJsXlsx(buffer) {
 }
 
 export async function readSpreadsheetRows(file) {
-  const fileName = file.name.toLowerCase();
+  const fileName = String(file?.name || "").toLowerCase();
+
+  if (fileName.endsWith(".xls") && !fileName.endsWith(".xlsx")) {
+    throw new Error("Binary .xls files are not supported. Save the workbook as .xlsx or .csv and import that file.");
+  }
 
   if (fileName.endsWith(".xlsx")) {
     const buffer = await file.arrayBuffer();
@@ -214,16 +203,114 @@ export async function readSpreadsheetRows(file) {
     }
   }
 
-  const text = await file.text();
-  return fileName.endsWith(".csv") ? parseCsv(text) : parseHtmlTable(text);
+  if (fileName.endsWith(".csv")) {
+    return parseCsv(await file.text());
+  }
+
+  throw new Error("Import a .xlsx or .csv file.");
 }
+
+export function normalizeImportError(error) {
+  if (error && typeof error === "object") {
+    return {
+      row: error.row ?? "",
+      message: error.message || "Import error",
+    };
+  }
+
+  const match = String(error || "").match(/^Row\s+(\d+):\s*(.*)$/);
+  if (match) return { row: Number(match[1]), message: match[2] };
+  return { row: "", message: String(error || "Import error") };
+}
+
+export function mergeImportResults(totals, results = {}) {
+  totals.created += Number(results.created || 0);
+  totals.updated += Number(results.updated || 0);
+  totals.skipped += Number(results.skipped || 0);
+  const errors = Array.isArray(results.errors) ? results.errors : [];
+  errors.forEach((error) => totals.errors.push(normalizeImportError(error)));
+  return totals;
+}
+
+export function importResultMessage(totals, { preview = false } = {}) {
+  const applied = Number(totals.created || 0) + Number(totals.updated || 0);
+  const errorCount = totals.errors?.length || 0;
+  const verb = preview ? "Preview" : "Import";
+
+  if (!applied && (totals.skipped || errorCount)) {
+    return `${verb} failed: 0 created, 0 updated, ${totals.skipped} skipped. ${errorCount} row error(s).`;
+  }
+
+  return `${verb} complete: ${totals.created} created, ${totals.updated} updated, ${totals.skipped} skipped${errorCount ? `, ${errorCount} error(s)` : ""}.`;
+}
+
+export function importErrorReportCsv(errors = []) {
+  const lines = ["Row,Reason"];
+  errors.forEach((error) => {
+    const item = normalizeImportError(error);
+    const reason = String(item.message).replace(/"/g, '""');
+    lines.push(`${item.row},"${reason}"`);
+  });
+  return lines.join("\n");
+}
+
+export const PRODUCT_IMPORT_HEADERS = [
+  "Handle",
+  "Title",
+  "Body (HTML)",
+  "Vendor",
+  "Brand",
+  "Product Category",
+  "Parent Category",
+  "Subcategory",
+  "Category ID",
+  "Type",
+  "Tags",
+  "Published",
+  "Option1 Name",
+  "Option1 Value",
+  "Option2 Name",
+  "Option2 Value",
+  "Option3 Name",
+  "Option3 Value",
+  "Variant SKU",
+  "Busy Stock",
+  "Warehouse Stock",
+  "Shop Stock",
+  "Variant Price",
+  "Variant Compare At Price",
+  "Variant Barcode",
+  "Image Src",
+  "Image Position",
+  "Image Alt Text",
+  "HEIGHT (product.metafields.custom.height)",
+  "LENGTH (product.metafields.custom.length)",
+  "WIDTH (product.metafields.custom.width)",
+  "Variant Image",
+  "Variant Weight Unit",
+  "Cost per item",
+  "Reorder Level",
+  "Status",
+  "ID",
+];
 
 export function groupedImportBatches(rows, maximumRows = 100) {
   const groups = [];
   const byKey = new Map();
 
   rows.forEach((row, index) => {
-    const key = String(row.ID || row.id || row["Product ID"] || row.product_id || row.Handle || row.handle || row.SKU || row.sku || `row-${index}`).trim().toLowerCase();
+    const key = String(
+      row.ID ||
+      row.id ||
+      row["Product ID"] ||
+      row.product_id ||
+      row.Handle ||
+      row.handle ||
+      row["Variant SKU"] ||
+      row.SKU ||
+      row.sku ||
+      `row-${index}`
+    ).trim().toLowerCase();
     if (!byKey.has(key)) {
       const group = [];
       byKey.set(key, group);

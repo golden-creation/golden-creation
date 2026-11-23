@@ -3,7 +3,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import ProductRating from "../components/ProductRating";
-import { formatCurrency, getBrandBySlug, productPath } from "../lib/api";
+import PriceOffer from "../components/PriceOffer";
+import { getBrandBySlug, productPath } from "../lib/api";
 
 function BrandDetail() {
   const { slug } = useParams();
@@ -114,7 +115,7 @@ function BrandDetail() {
                     <ProductRating product={product} className="mt-3" />
                     <p className="mt-2 text-xs uppercase tracking-wide text-gray-400">{product.categoryName}</p>
                     <h3 className="mt-1 line-clamp-2 text-sm font-semibold">{product.name}</h3>
-                    <p className="mt-2 font-bold text-[#C2863F]">{formatCurrency(product.price)}</p>
+                    <PriceOffer className="mt-2" price={product.price} comparePrice={product.comparePrice} mrp={product.mrp} percent={product.discountPercent} />
                   </button>
                 ))}
               </div>

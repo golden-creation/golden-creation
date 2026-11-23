@@ -12,6 +12,8 @@ import {
   downloadAdminXlsx,
   updateAdminOrderStatus,
 } from "../lib/adminApi";
+import { nextStatusOptions } from "../lib/orderCancellation";
+import CancelOrderDialog from "../components/CancelOrderDialog";
 
 const Orders = () => {
   const navigate = useNavigate();
@@ -35,6 +37,8 @@ const Orders = () => {
   const [message, setMessage] =
     useState("");
   const [dispatchPrompt, setDispatchPrompt] =
+    useState(null);
+  const [cancelPrompt, setCancelPrompt] =
     useState(null);
 
   useEffect(() => {
@@ -74,9 +78,13 @@ const Orders = () => {
       setDispatchPrompt({ order, status });
       return;
     }
+    if (status === "Cancelled") {
+      setCancelPrompt({ order });
+      return;
+    }
 
     try {
-      await updateAdminOrderStatus(
+      const response = await updateAdminOrderStatus(
         order.id,
         status,
         extra
@@ -89,7 +97,8 @@ const Orders = () => {
         )
       );
       setMessage(
-        `Order ${order.orderId} moved to ${status}`
+        response.message ||
+          `Order ${order.orderId} moved to ${status}`
       );
     } catch (error) {
       setMessage(
@@ -106,6 +115,23 @@ const Orders = () => {
     await changeStatus(prompt.order, "Dispatched", {
       fulfillmentStockSource: source,
     });
+  };
+
+  const confirmCancellation = async (reason) => {
+    const prompt = cancelPrompt;
+    setCancelPrompt(null);
+    if (!prompt?.order) return;
+    try {
+      const response = await updateAdminOrderStatus(prompt.order.id, "Cancelled", { reason });
+      setOrders((current) =>
+        current.map((item) =>
+          item.id === prompt.order.id ? { ...item, status: "Cancelled" } : item
+        )
+      );
+      setMessage(response.message || `Order ${prompt.order.orderId} cancelled`);
+    } catch (error) {
+      setMessage(error.message || "Unable to cancel order");
+    }
   };
 
   const filteredOrders =
@@ -331,14 +357,7 @@ const Orders = () => {
                             }
                             className="rounded-lg border px-2 py-1 text-sm"
                           >
-                            {[
-                              "Pending",
-                              "Processing",
-                              "Dispatched",
-                              "In Transit",
-                              "Delivered",
-                              "Cancelled",
-                            ].map((status) => (
+                            {nextStatusOptions(order.status).map((status) => (
                               <option key={status}>
                                 {status}
                               </option>
@@ -388,6 +407,14 @@ const Orders = () => {
             </button>
           </div>
         </div>
+      )}
+      {cancelPrompt && (
+        <CancelOrderDialog
+          title="Cancel order"
+          detail="This restores website stock only when the order deducted it. Dispatched orders must be resolved from the order page. A captured payment is not marked refunded."
+          onClose={() => setCancelPrompt(null)}
+          onConfirm={confirmCancellation}
+        />
       )}
     </div>
   );

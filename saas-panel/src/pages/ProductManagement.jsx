@@ -26,7 +26,15 @@ import {
   runBulkAction,
   runMediaMigration,
 } from "../lib/adminApi";
-import { groupedImportBatches, readSpreadsheetRows } from "../lib/spreadsheetImport";
+import {
+  PRODUCT_IMPORT_HEADERS,
+  groupedImportBatches,
+  importErrorReportCsv,
+  importResultMessage,
+  mergeImportResults,
+  readSpreadsheetRows,
+} from "../lib/spreadsheetImport";
+import { formatQuantity } from "../lib/formatQuantity";
 
 const fallbackImages = [o1, o2, o3, o4, o5];
 const pageSize = 50;
@@ -38,13 +46,17 @@ function visiblePageNumbers(activePage, totalPages) {
 }
 
 function getProductStatus(product) {
-  if (product.stock) return product.stock;
+  const raw = product.stock;
+  if (raw !== undefined && raw !== null && String(raw).trim() !== "") {
+    const formatted = formatQuantity(raw);
+    if (formatted !== "") return formatted;
+    return raw;
+  }
 
   const quantity =
     Number(
       product.stock_quantity ??
         product.variant_stock ??
-        product.stock ??
         product.quantity ??
         1
     );
@@ -94,6 +106,8 @@ const ProductManagement = () => {
   const [summary, setSummary] = useState({});
   const [importProgress, setImportProgress] = useState("");
   const [importRunning, setImportRunning] = useState(false);
+  const [importPreview, setImportPreview] = useState(false);
+  const [importReport, setImportReport] = useState(null);
   const [mediaMigration, setMediaMigration] = useState(null);
   const [mediaMigrationRunning, setMediaMigrationRunning] = useState(false);
 
@@ -306,42 +320,9 @@ const ProductManagement = () => {
 
   const downloadSampleExcel = async () => {
     try {
-      const headers = [
-        "Handle",
-        "Title",
-        "Body (HTML)",
-        "Vendor",
-        "Brand",
-        "Product Category",
-        "Type",
-        "Tags",
-        "Published",
-        "Option1 Name",
-        "Option1 Value",
-        "Option2 Name",
-        "Option2 Value",
-        "Option3 Name",
-        "Option3 Value",
-        "Variant SKU",
-        "Busy Stock",
-        "Warehouse Stock",
-        "Shop Stock",
-        "Variant Price",
-        "Variant Compare At Price",
-        "Variant Barcode",
-        "Image Src",
-        "Image Position",
-        "Image Alt Text",
-        "HEIGHT (product.metafields.custom.height)",
-        "LENGTH (product.metafields.custom.length)",
-        "WIDTH (product.metafields.custom.width)",
-        "Variant Image",
-        "Variant Weight Unit",
-        "Cost per item",
-        "Reorder Level",
-        "Status",
-        "ID",
-      ];
+      const { default: ExcelJS } = await import("exceljs");
+      const workbook = new ExcelJS.Workbook();
+      const sheet = workbook.addWorksheet("Products");
       const rows = [
         [
           "sample-gel-pen",
@@ -349,7 +330,10 @@ const ProductManagement = () => {
           "Smooth writing pen with blue ink.",
           "Golden Creation",
           "Parker",
+          "Office Stationery > Pens",
+          "Office Stationery",
           "Pens",
+          "",
           "Premium Pens",
           "premium,gift-item",
           "TRUE",
@@ -385,7 +369,10 @@ const ProductManagement = () => {
           "Smooth writing pen with red ink.",
           "Golden Creation",
           "Parker",
+          "Office Stationery > Pens",
+          "Office Stationery",
           "Pens",
+          "",
           "Premium Pens",
           "premium,gift-item",
           "TRUE",
@@ -416,30 +403,17 @@ const ProductManagement = () => {
           "",
         ],
       ];
-      const tableRows = [headers, ...rows]
-        .map(
-          (row) =>
-            `<tr>${row
-              .map((cell) => `<td>${String(cell).replace(/[<>&]/g, "")}</td>`)
-              .join("")}</tr>`
-        )
-        .join("");
-      const workbookHtml = `
-        <html xmlns:o="urn:schemas-microsoft-com:office:office"
-          xmlns:x="urn:schemas-microsoft-com:office:excel"
-          xmlns="http://www.w3.org/TR/REC-html40">
-          <head><meta charset="UTF-8"></head>
-          <body><table>${tableRows}</table></body>
-        </html>
-      `;
+      sheet.addRow(PRODUCT_IMPORT_HEADERS);
+      rows.forEach((row) => sheet.addRow(row));
+      const buffer = await workbook.xlsx.writeBuffer();
       const url = URL.createObjectURL(
-        new Blob([workbookHtml], {
-          type: "application/vnd.ms-excel;charset=utf-8",
+        new Blob([buffer], {
+          type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         })
       );
       const link = document.createElement("a");
       link.href = url;
-      link.download = "lekhanmart-product-import-sample.xls";
+      link.download = "golden-creation-product-import-sample.xlsx";
       document.body.appendChild(link);
       link.click();
       link.remove();
@@ -448,6 +422,18 @@ const ProductManagement = () => {
     } catch (error) {
       showToast(error.message || "Unable to download sample Excel");
     }
+  };
+
+  const downloadImportErrors = () => {
+    if (!importReport?.errors?.length) return;
+    const url = URL.createObjectURL(new Blob([importErrorReportCsv(importReport.errors)], { type: "text/csv;charset=utf-8" }));
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "product-import-errors.csv";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
   };
 
   const handleImportFile = async (event) => {
@@ -464,24 +450,21 @@ const ProductManagement = () => {
         return;
       }
 
-      const totals = { created: 0, updated: 0, skipped: 0 };
+      const totals = { created: 0, updated: 0, skipped: 0, errors: [] };
       const batches = groupedImportBatches(rows);
       let importedRows = 0;
 
       for (const [index, batch] of batches.entries()) {
-        setImportProgress(`Importing batch ${index + 1} of ${batches.length}: ${importedRows} of ${rows.length} rows completed...`);
-        const response = await importAdminProducts(batch);
-        const results = response.results || {};
-        totals.created += Number(results.created || 0);
-        totals.updated += Number(results.updated || 0);
-        totals.skipped += Number(results.skipped || 0);
+        setImportProgress(`${importPreview ? "Checking" : "Importing"} batch ${index + 1} of ${batches.length}: ${importedRows} of ${rows.length} rows completed...`);
+        const response = await importAdminProducts(batch, { dryRun: importPreview });
+        mergeImportResults(totals, response.results || {});
         importedRows += batch.length;
       }
 
-      showToast(
-        `Import complete: ${totals.created} created, ${totals.updated} updated, ${totals.skipped} skipped`
-      );
-      await loadProducts();
+      const message = importResultMessage(totals, { preview: importPreview });
+      setImportReport(totals);
+      showToast(message);
+      if (!importPreview) await loadProducts();
     } catch (error) {
       showToast(error.message || "Unable to import Excel file");
     } finally {
@@ -511,6 +494,23 @@ const ProductManagement = () => {
       {importProgress && (
         <div className="mb-4 rounded-lg border border-[#D6BE8C] bg-[#FFF9E6] px-4 py-3 text-sm text-[#6E4D13]">
           {importProgress}
+        </div>
+      )}
+      {importReport && (
+        <div className="mb-4 rounded-lg border border-[#D6BE8C] bg-white px-4 py-3 text-sm">
+          <p className="font-medium">{importResultMessage(importReport, { preview: importPreview })}</p>
+          {importReport.errors?.length > 0 && (
+            <>
+              <ul className="mt-2 max-h-40 list-disc space-y-1 overflow-auto pl-5 text-red-700">
+                {importReport.errors.map((error, index) => (
+                  <li key={`${error.row}-${index}`}>Row {error.row || "?"}: {error.message}</li>
+                ))}
+              </ul>
+              <button type="button" onClick={downloadImportErrors} className="mt-3 rounded bg-white px-3 py-1 text-xs shadow">
+                Download error report
+              </button>
+            </>
+          )}
         </div>
       )}
 
@@ -608,7 +608,7 @@ const ProductManagement = () => {
                 setSearch(event.target.value);
                 setActivePage(1);
               }}
-              placeholder="Search products..."
+              placeholder="Search name, SKU, barcode, or serial"
               className="outline-none text-sm w-full"
             />
           </div>
@@ -677,17 +677,25 @@ const ProductManagement = () => {
           >
             Sample Excel
           </button>
+          <label className="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm shadow">
+            <input
+              type="checkbox"
+              checked={importPreview}
+              onChange={(event) => setImportPreview(event.target.checked)}
+            />
+            Preview only
+          </label>
           <button
             onClick={() => importInputRef.current?.click()}
             disabled={importRunning}
             className="px-4 py-2 rounded-full bg-[#A68B5BFF] text-white shadow text-sm"
           >
-            {importRunning ? "Importing..." : "Import Excel"}
+            {importRunning ? "Importing..." : importPreview ? "Preview Excel" : "Import Excel"}
           </button>
           <input
             ref={importInputRef}
             type="file"
-            accept=".xlsx,.xls,.csv"
+            accept=".xlsx,.csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,text/csv"
             hidden
             onChange={handleImportFile}
           />
@@ -756,7 +764,7 @@ const ProductManagement = () => {
                         <img src={img} className="h-10 w-10 rounded-full object-cover" />
                         <div>
                           <p className="font-medium">{item.name}</p>
-                          <p className="text-xs text-gray-400">ID: PRD-{item.id}</p>
+                          <p className="text-xs text-gray-400">Serial PRD-{item.id}{item.sku ? ` · SKU ${item.sku}` : ""}</p>
                         </div>
                       </div>
                     </td>
@@ -785,7 +793,7 @@ const ProductManagement = () => {
                     </td>
                     <td className="min-w-[110px] whitespace-nowrap px-3 text-center">
                       <span className={`inline-flex whitespace-nowrap rounded-full px-2 py-1 text-xs ${
-                        stock === "In Stock"
+                        stock === "In Stock" || Number(stock) > 0
                           ? "bg-green-100 text-green-600"
                           : "bg-red-100 text-red-500"
                       }`}>

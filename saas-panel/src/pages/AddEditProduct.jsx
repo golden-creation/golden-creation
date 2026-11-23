@@ -24,6 +24,8 @@ import ProductVariantEditor, {
 } from "../components/ProductVariantEditor";
 import RemoteLookup from "../components/RemoteLookup";
 import ConfirmDialog from "../components/ConfirmDialog";
+import { sellingPriceFromMrp } from "../lib/productOffer";
+import { formatQuantity, quantityFieldValue } from "../lib/formatQuantity";
 
 const defaultForm = {
   id: "",
@@ -33,6 +35,7 @@ const defaultForm = {
   brand_id: "",
   price: "",
   discountPrice: "",
+  discountPercent: "",
   tax: "",
   sku: "",
   stock: "",
@@ -88,12 +91,17 @@ const AddEditProduct = () => {
   const [hasVariants, setHasVariants] = useState(initialVariantState.enabled);
   const [variantOptions, setVariantOptions] = useState(initialVariantState.options);
   const [variants, setVariants] = useState(initialVariantState.variants);
+  const storedOffer = parseJson(product.specifications, {})?.__product_offer || {};
   const [form, setForm] = useState({
     ...defaultForm,
     ...product,
+    price: storedOffer.mrp || product.price || "",
+    discountPercent: storedOffer.percent || "",
     category_id: product.category_id || product.categoryId || "",
     brand_id: product.brand_id || product.brandId || "",
     barcode: product.barcode || "",
+    stock: formatQuantity(product.stock_quantity ?? product.stock ?? ""),
+    lowStockLimit: formatQuantity(product.lowStockLimit ?? product.reorder_level ?? defaultForm.lowStockLimit),
     weight: product.weight || "",
     weight_unit: product.weight_unit || product.weightUnit || "g",
     length: initialDimensions?.length || "",
@@ -132,6 +140,7 @@ const AddEditProduct = () => {
   );
   const [removedImages, setRemovedImages] = useState([]);
   const [uploading, setUploading] = useState(false);
+  const [dragImageIndex, setDragImageIndex] = useState(null);
 
   useEffect(() => {
     getAdminTags({ status: "Active", limit: 100 })
@@ -204,12 +213,25 @@ const AddEditProduct = () => {
     setForm((current) => ({ ...current, [field]: value }));
   };
 
-  const handleFileChange = async (event) => {
-    const files = Array.from(event.target.files || []).filter((file) => /^image\//i.test(file.type));
-    if (!files.length) return;
+  const uploadImageFiles = async (fileList) => {
+    const files = Array.from(fileList || []);
+    const accepted = [];
+    for (const file of files) {
+      const allowed = ["image/jpeg", "image/png", "image/webp", "image/gif"].includes(file.type);
+      if (!allowed) {
+        showToast(`${file.name} must be JPG, PNG, WebP, or GIF`);
+        continue;
+      }
+      if (file.size > 5 * 1024 * 1024) {
+        showToast(`${file.name} is larger than 5 MB`);
+        continue;
+      }
+      accepted.push(file);
+    }
+    if (!accepted.length) return;
     setUploading(true);
     try {
-      for (const file of files) {
+      for (const file of accepted) {
         const media = await uploadAdminMedia(file, "products");
         setImages((current) => [...current, { ...media, altText: form.name, titleText: form.name, isNew: true }]);
       }
@@ -218,12 +240,28 @@ const AddEditProduct = () => {
       showToast(error.message || "Unable to upload product media");
     } finally {
       setUploading(false);
-      event.target.value = "";
     }
+  };
+
+  const handleFileChange = async (event) => {
+    await uploadImageFiles(event.target.files);
+    event.target.value = "";
+  };
+
+  const moveImage = (fromIndex, toIndex) => {
+    if (fromIndex === toIndex || fromIndex < 0 || toIndex < 0) return;
+    setImages((current) => {
+      if (toIndex >= current.length) return current;
+      const next = [...current];
+      const [moved] = next.splice(fromIndex, 1);
+      next.splice(toIndex, 0, moved);
+      return next;
+    });
   };
 
   const removeImage = async (index) => {
     const media = images[index];
+    if (!window.confirm("Remove this image from the product? It stays in storage until you save.")) return;
     setImages((current) => current.filter((_, imageIndex) => imageIndex !== index));
     if (media?.isNew && media.key) {
       await deleteAdminMedia(media.key).catch(() => {});
@@ -275,7 +313,20 @@ const AddEditProduct = () => {
         body: JSON.stringify({
           name: form.name,
           description: form.description,
-          price: form.price,
+          price: (() => {
+            const selling = sellingPriceFromMrp(form.price, form.discountPercent);
+            return selling || form.price;
+          })(),
+          specifications: (() => {
+            const existing = parseJson(product.specifications, {}) || {};
+            const selling = sellingPriceFromMrp(form.price, form.discountPercent);
+            if (selling) {
+              return { ...existing, __product_offer: { mrp: Number(form.price), percent: Number(form.discountPercent) } };
+            }
+            if (!existing.__product_offer) return undefined;
+            const { __product_offer, ...rest } = existing;
+            return rest;
+          })(),
           slug: form.slug,
           metaTitle: form.meta_title,
           metaDescription: form.meta_description,
@@ -316,7 +367,14 @@ const AddEditProduct = () => {
           tagIds: selectedTagIds,
           hasVariants,
           variantOptions: hasVariants ? prepareVariantOptions(variantOptions) : [],
-          variants: hasVariants ? prepareVariants(variants) : [],
+          variants: hasVariants
+            ? prepareVariants(variants).map((variant) => {
+                const selling = sellingPriceFromMrp(form.price, form.discountPercent);
+                const original = Number(product.price);
+                if (!selling || Number(variant.price) !== original) return variant;
+                return { ...variant, price: selling, comparePrice: Number(form.price) };
+              })
+            : [],
         }),
       });
       await Promise.all(
@@ -426,8 +484,13 @@ const AddEditProduct = () => {
             <div>
               <SectionHeader icon={tagIcon} title="Pricing" description="Configure price, tax, and promotional rates." />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                <FormInput label="Base Price" value={form.price} onChange={(value) => updateField("price", value)} required />
-                <FormInput label="Discount Price" value={form.discountPrice || ""} onChange={(value) => updateField("discountPrice", value)} />
+                <FormInput label="MRP" value={form.price} onChange={(value) => updateField("price", value)} required />
+                <FormInput label="Product discount %" value={form.discountPercent || ""} onChange={(value) => updateField("discountPercent", value)} />
+                <p className="sm:col-span-2 text-xs text-gray-500">
+                  {sellingPriceFromMrp(form.price, form.discountPercent)
+                    ? `Selling price ₹${sellingPriceFromMrp(form.price, form.discountPercent)} · Save ₹${(Number(form.price) - sellingPriceFromMrp(form.price, form.discountPercent)).toFixed(2)}. This is a product discount, not a coupon.`
+                    : "Leave the percent blank to keep the MRP as the selling price. Coupons are still applied separately at checkout."}
+                </p>
               </div>
               <label className="block text-sm font-medium">
                 GST Treatment
@@ -447,8 +510,8 @@ const AddEditProduct = () => {
               <SectionHeader icon={boxIcon} title="Inventory" description="Manage stock levels and tracking numbers." />
               <FormInput label="SKU" value={form.sku || ""} onChange={(value) => updateField("sku", value)} />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4 mt-4">
-                <FormInput label="Stock Quantity" value={form.stock || ""} onChange={(value) => updateField("stock", value)} />
-                <FormInput label="Low Stock Limit" value={form.lowStockLimit || ""} onChange={(value) => updateField("lowStockLimit", value)} />
+                <FormInput label="Stock Quantity" value={quantityFieldValue(form.stock)} onChange={(value) => updateField("stock", value)} />
+                <FormInput label="Low Stock Limit" value={quantityFieldValue(form.lowStockLimit)} onChange={(value) => updateField("lowStockLimit", value)} />
               </div>
               <div className="bg-gray-50 border rounded-xl p-3 flex justify-between items-center">
                 <div>
@@ -507,7 +570,14 @@ const AddEditProduct = () => {
 
           <div className="mt-6">
             <SectionHeader icon={cameraIcon} title="Product Media" description="The first image is the primary storefront image." />
-            <label className="grid grid-cols-1 md:grid-cols-3 gap-4 cursor-pointer">
+            <label
+              className="grid grid-cols-1 md:grid-cols-3 gap-4 cursor-pointer"
+              onDragOver={(event) => event.preventDefault()}
+              onDrop={(event) => {
+                event.preventDefault();
+                uploadImageFiles(event.dataTransfer.files);
+              }}
+            >
               <div className="md:col-span-2 border-dashed border rounded-xl p-6 text-center bg-gray-50">
                 <img src={uploadIcon} className="h-6 mx-auto mb-2" />
                 <p className="text-sm font-medium">Click to upload or drag and drop</p>
@@ -527,7 +597,17 @@ const AddEditProduct = () => {
             </label>
             <div className="flex gap-3 mt-5 flex-wrap">
               {images.map((media, index) => (
-                <div key={`${media.url}-${index}`} className="relative rounded-lg border p-2">
+                <div
+                  key={`${media.url}-${index}`}
+                  className="relative rounded-lg border p-2"
+                  draggable
+                  onDragStart={() => setDragImageIndex(index)}
+                  onDragOver={(event) => event.preventDefault()}
+                  onDrop={() => {
+                    moveImage(dragImageIndex, index);
+                    setDragImageIndex(null);
+                  }}
+                >
                   <button type="button" onClick={() => setPrimaryImage(index)} title="Set as primary">
                     <img src={getAssetUrl(media.url)} className="h-16 w-16 rounded-lg object-cover" />
                   </button>
@@ -535,6 +615,10 @@ const AddEditProduct = () => {
                     <img src={closeIcon} className="h-3 w-3" />
                   </button>
                   {index === 0 && <span className="absolute bottom-1 left-1 rounded bg-black/70 px-1.5 py-0.5 text-[9px] text-white">Primary</span>}
+                  <div className="mt-1 flex gap-1">
+                    <button type="button" className="rounded border px-1 text-[10px]" onClick={() => moveImage(index, index - 1)} disabled={index === 0}>Earlier</button>
+                    <button type="button" className="rounded border px-1 text-[10px]" onClick={() => moveImage(index, index + 1)} disabled={index === images.length - 1}>Later</button>
+                  </div>
                   <input
                     value={media.altText || ""}
                     onChange={(event) => {

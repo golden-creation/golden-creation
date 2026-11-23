@@ -1,6 +1,7 @@
 import "dotenv/config";
 import mysql from "mysql2/promise";
 import { fileURLToPath } from "url";
+import { dataSeedAuthorized } from "./setup-safety.js";
 
 function slugify(value) {
   return String(value || "")
@@ -85,7 +86,8 @@ async function backfillCategorySlugs(db) {
   }
 }
 
-export async function ensureSeoSchema(db) {
+export async function ensureSeoSchema(db, options = {}) {
+  const allowDataWrites = options.allowDataWrites === true;
   await db.query(`
     CREATE TABLE IF NOT EXISTS seo_settings (
       setting_key VARCHAR(120) NOT NULL,
@@ -219,6 +221,7 @@ export async function ensureSeoSchema(db) {
   await addColumn(db, "blog_posts", "focus_keyword", "VARCHAR(190) NULL AFTER og_image");
   await addColumn(db, "blog_posts", "schema_override_json", "LONGTEXT NULL AFTER focus_keyword");
 
+  if (allowDataWrites) {
   await backfillProductSlugs(db);
   await backfillCategorySlugs(db);
 
@@ -230,12 +233,14 @@ export async function ensureSeoSchema(db) {
            pi.sort_order = CASE WHEN pi.sort_order = 0 THEN pi.id ELSE pi.sort_order END
      WHERE pi.alt_text IS NULL OR pi.alt_text = '' OR pi.title_text IS NULL OR pi.title_text = '' OR pi.sort_order = 0
   `);
+  }
 
   await addIndex(db, "products", "uq_products_slug", "UNIQUE KEY uq_products_slug (slug)");
   await addIndex(db, "categories", "uq_categories_slug", "UNIQUE KEY uq_categories_slug (slug)");
   await addIndex(db, "product_images", "idx_product_images_sort", "KEY idx_product_images_sort (product_id, sort_order)");
   await addIndex(db, "media_assets", "idx_media_assets_owner", "KEY idx_media_assets_owner (owner_type, owner_id)");
 
+  if (allowDataWrites) {
   const defaults = [
     ["site_title", "Golden Creation"],
     ["default_meta_title", "Golden Creation | Office Stationery & Gift Items"],
@@ -249,6 +254,7 @@ export async function ensureSeoSchema(db) {
   for (const [key, value] of defaults) {
     await db.query("INSERT IGNORE INTO seo_settings (setting_key, setting_value) VALUES (?, ?)", [key, value]);
   }
+  }
 }
 
 async function runStandalone() {
@@ -261,7 +267,7 @@ async function runStandalone() {
     database: dbName,
     multipleStatements: true,
   });
-  await ensureSeoSchema(connection);
+  await ensureSeoSchema(connection, { allowDataWrites: dataSeedAuthorized(process.env) });
   await connection.end();
 }
 

@@ -50,6 +50,7 @@ const productSelectWithImages = `
     GROUP_CONCAT(DISTINCT t.slug ORDER BY t.name SEPARATOR ',') AS tag_slugs,
     (SELECT COUNT(*) FROM product_variants list_pv WHERE list_pv.product_id = p.id) AS variant_count,
     (SELECT MIN(list_pv.price) FROM product_variants list_pv WHERE list_pv.product_id = p.id AND list_pv.status = 'Active' AND list_pv.visibility <> 'Hidden') AS min_variant_price,
+    (SELECT list_pv.compare_price FROM product_variants list_pv WHERE list_pv.product_id = p.id AND list_pv.status = 'Active' AND list_pv.visibility <> 'Hidden' AND list_pv.compare_price > list_pv.price ORDER BY list_pv.is_default DESC, list_pv.id LIMIT 1) AS default_compare_price,
     (SELECT MAX(list_pv.price) FROM product_variants list_pv WHERE list_pv.product_id = p.id AND list_pv.status = 'Active' AND list_pv.visibility <> 'Hidden') AS max_variant_price,
     (SELECT COALESCE(SUM(list_pv.stock), 0) FROM product_variants list_pv WHERE list_pv.product_id = p.id AND list_pv.status = 'Active' AND list_pv.visibility <> 'Hidden') AS variant_stock,
     COALESCE(AVG(CASE WHEN pr.status = 'Published' THEN pr.rating END), 0) AS average_rating,
@@ -72,6 +73,7 @@ const productSelectWithCategory = `
     b.logo AS brand_logo,
     (SELECT COUNT(*) FROM product_variants list_pv WHERE list_pv.product_id = p.id) AS variant_count,
     (SELECT MIN(list_pv.price) FROM product_variants list_pv WHERE list_pv.product_id = p.id AND list_pv.status = 'Active' AND list_pv.visibility <> 'Hidden') AS min_variant_price,
+    (SELECT list_pv.compare_price FROM product_variants list_pv WHERE list_pv.product_id = p.id AND list_pv.status = 'Active' AND list_pv.visibility <> 'Hidden' AND list_pv.compare_price > list_pv.price ORDER BY list_pv.is_default DESC, list_pv.id LIMIT 1) AS default_compare_price,
     (SELECT MAX(list_pv.price) FROM product_variants list_pv WHERE list_pv.product_id = p.id AND list_pv.status = 'Active' AND list_pv.visibility <> 'Hidden') AS max_variant_price,
     (SELECT COALESCE(SUM(list_pv.stock), 0) FROM product_variants list_pv WHERE list_pv.product_id = p.id AND list_pv.status = 'Active' AND list_pv.visibility <> 'Hidden') AS variant_stock
   FROM products p
@@ -132,6 +134,9 @@ export const Product = {
     if (q) {
       where.push(`(
         p.name LIKE ?
+        OR p.sku LIKE ?
+        OR p.barcode LIKE ?
+        OR CAST(p.id AS CHAR) LIKE ?
         OR p.description LIKE ?
         OR c.name LIKE ?
         OR b.name LIKE ?
@@ -153,6 +158,9 @@ export const Product = {
         )
       )`);
       values.push(
+        `%${q}%`,
+        `%${q}%`,
+        `%${q}%`,
         `%${q}%`,
         `%${q}%`,
         `%${q}%`,
@@ -317,7 +325,7 @@ export const Product = {
           schema_override_json=COALESCE(?, schema_override_json),
           description=?, price=?, image=?, category_id=?, brand_id=?, sku=?,
           stock_quantity=?, reorder_level=?, status=?, barcode=?, weight=?,
-          weight_unit=?, dimensions=?, specifications=?, gst_inclusive=?
+          weight_unit=?, dimensions=?, specifications=IF(? IS NULL, specifications, ?), gst_inclusive=?
       WHERE id=?
     `;
     db.query(
@@ -351,11 +359,15 @@ export const Product = {
             ? data.dimensions
             : JSON.stringify(data.dimensions)
           : null,
-        data.specifications
-          ? typeof data.specifications === "string"
-            ? data.specifications
-            : JSON.stringify(data.specifications)
-          : null,
+        ...(() => {
+          if (data.specifications === undefined) return [null, null];
+          const specifications = !data.specifications
+            ? "{}"
+            : typeof data.specifications === "string"
+              ? data.specifications
+              : JSON.stringify(data.specifications);
+          return [specifications, specifications];
+        })(),
         data.gst_inclusive === false || Number(data.gst_inclusive) === 0 ? 0 : 1,
         id,
       ],

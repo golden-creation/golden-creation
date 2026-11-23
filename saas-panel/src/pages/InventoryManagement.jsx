@@ -7,7 +7,14 @@ import {
   importAdminProducts,
   updateProductStock,
 } from "../lib/adminApi";
-import { groupedImportBatches, readSpreadsheetRows } from "../lib/spreadsheetImport";
+import {
+  groupedImportBatches,
+  importErrorReportCsv,
+  importResultMessage,
+  mergeImportResults,
+  readSpreadsheetRows,
+} from "../lib/spreadsheetImport";
+import { formatQuantity, quantityFieldValue } from "../lib/formatQuantity";
 
 const catalogs = [
   { key: "website", label: "Busy" },
@@ -20,8 +27,10 @@ const stockStatuses = [
   { value: "in_stock", label: "In Stock" },
   { value: "out_of_stock", label: "Out of Stock" },
   { value: "low_stock", label: "Low Stock" },
+  { value: "not_recorded", label: "Not Recorded" },
+  { value: "unverified", label: "Unverified" },
   { value: "balanced", label: "Balanced" },
-  { value: "mismatch", label: "Mismatched" },
+  { value: "mismatch", label: "Mismatch" },
   { value: "zero_stock", label: "Zero Busy Stock" },
 ];
 
@@ -37,15 +46,23 @@ function bucketForCatalog(catalog) {
 }
 
 function stockFor(product, bucket) {
-  if (bucket === "warehouse") return number(product.warehouseStock ?? product.warehouse_stock);
-  if (bucket === "shop") return number(product.shopStock ?? product.shop_stock);
-  return number(product.busyStock ?? product.busy_stock ?? product.websiteStock ?? product.website_stock ?? product.stock_quantity);
+  const value = bucket === "warehouse"
+    ? product.warehouseStock ?? product.warehouse_stock
+    : bucket === "shop"
+      ? product.shopStock ?? product.shop_stock
+      : product.busyStock ?? product.busy_stock ?? product.websiteStock ?? product.website_stock ?? product.stock_quantity;
+  if (value === null || value === undefined || value === "") return null;
+  return number(value);
 }
 
 function reorderFor(product, bucket) {
-  if (bucket === "warehouse") return number(product.warehouse_reorder_level ?? product.reorder_level);
-  if (bucket === "shop") return number(product.shop_reorder_level ?? product.reorder_level);
-  return number(product.website_reorder_level ?? product.reorder_level);
+  const value = bucket === "warehouse"
+    ? product.warehouse_reorder_level
+    : bucket === "shop"
+      ? product.shop_reorder_level
+      : product.website_reorder_level ?? product.reorder_level;
+  if (value === null || value === undefined || value === "") return null;
+  return number(value);
 }
 
 export default function InventoryManagement() {
@@ -63,6 +80,8 @@ export default function InventoryManagement() {
   const [stockModal, setStockModal] = useState(null);
   const [importRunning, setImportRunning] = useState(false);
   const [importProgress, setImportProgress] = useState("");
+  const [importPreview, setImportPreview] = useState(false);
+  const [importReport, setImportReport] = useState(null);
 
   const loadLookups = async () => {
     try {
@@ -130,9 +149,9 @@ export default function InventoryManagement() {
         auditLogs: detail.auditLogs || [],
         bucket: selectedBucket,
         mode: "set",
-        stockOnHand: stockFor(nextProduct, selectedBucket),
-        quantity: 1,
-        reorderLevel: reorderFor(nextProduct, selectedBucket) || 0,
+        stockOnHand: stockFor(nextProduct, selectedBucket) ?? "",
+        quantity: "",
+        reorderLevel: reorderFor(nextProduct, selectedBucket) ?? "",
         reason: "",
         saving: false,
       });
@@ -147,8 +166,8 @@ export default function InventoryManagement() {
         ? {
             ...current,
             bucket,
-            stockOnHand: stockFor(current.product, bucket),
-            reorderLevel: reorderFor(current.product, bucket) || 0,
+            stockOnHand: stockFor(current.product, bucket) ?? "",
+            reorderLevel: reorderFor(current.product, bucket) ?? "",
           }
         : current
     );
@@ -197,22 +216,20 @@ export default function InventoryManagement() {
         return;
       }
 
-      const totals = { created: 0, updated: 0, skipped: 0 };
+      const totals = { created: 0, updated: 0, skipped: 0, errors: [] };
       const batches = groupedImportBatches(rows);
       let importedRows = 0;
 
       for (const [index, batch] of batches.entries()) {
-        setImportProgress(`Importing batch ${index + 1} of ${batches.length}: ${importedRows} of ${rows.length} rows completed...`);
-        const response = await importAdminProducts(batch);
-        const results = response.results || {};
-        totals.created += number(results.created);
-        totals.updated += number(results.updated);
-        totals.skipped += number(results.skipped);
+        setImportProgress(`${importPreview ? "Checking" : "Importing"} batch ${index + 1} of ${batches.length}: ${importedRows} of ${rows.length} rows completed...`);
+        const response = await importAdminProducts(batch, { dryRun: importPreview });
+        mergeImportResults(totals, response.results || {});
         importedRows += batch.length;
       }
 
-      setMessage(`Import complete: ${totals.created} created, ${totals.updated} updated, ${totals.skipped} skipped`);
-      await load();
+      setImportReport(totals);
+      setMessage(importResultMessage(totals, { preview: importPreview }));
+      if (!importPreview) await load();
     } catch (error) {
       setMessage(error.message || "Unable to import Excel file");
     } finally {
@@ -228,15 +245,19 @@ export default function InventoryManagement() {
         <div>
           <h1 className="text-2xl font-semibold">Inventory</h1>
           <p className="text-sm text-gray-500">
-            Busy stock reconciles against Warehouse + Shop physical stock. Website stock follows Busy stock.
+            Missing Warehouse or Shop rows are Not recorded. A zero row without audit evidence is Unverified. Balanced and Mismatch are used only when both physical counts are verified.
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
           {catalog === "website" && (
             <>
+              <label className="flex items-center gap-2 rounded bg-white px-4 py-2 text-sm shadow">
+                <input type="checkbox" checked={importPreview} onChange={(event) => setImportPreview(event.target.checked)} />
+                Preview only
+              </label>
               <label className={`cursor-pointer rounded bg-[#A68B5B] px-4 py-2 text-sm text-white ${importRunning ? "pointer-events-none opacity-60" : ""}`}>
-                {importRunning ? "Importing..." : "Import Excel"}
-                <input type="file" accept=".xlsx,.xls,.csv" className="hidden" disabled={importRunning} onChange={handleImportFile} />
+                {importRunning ? "Importing..." : importPreview ? "Preview Excel" : "Import Excel"}
+                <input type="file" accept=".xlsx,.csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,text/csv" className="hidden" disabled={importRunning} onChange={handleImportFile} />
               </label>
             </>
           )}
@@ -270,11 +291,14 @@ export default function InventoryManagement() {
         ))}
       </div>
 
-      <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <Metric label="Listed Products" value={data.summary?.listedProducts} />
         <Metric label="Selected Stock" value={data.summary?.totalStock} />
+        <Metric label="Not Recorded" value={data.summary?.notRecorded} />
+        <Metric label="Unverified" value={data.summary?.unverified} />
+        <Metric label="Balanced" value={data.summary?.balanced} />
+        <Metric label="Mismatch" value={data.summary?.mismatched} warning />
         <Metric label="Low Stock" value={data.summary?.lowStock} warning />
-        <Metric label="Mismatched" value={data.summary?.mismatched} warning />
         <Metric label="Zero Busy Stock" value={data.summary?.zeroStock} danger />
       </div>
 
@@ -323,6 +347,31 @@ export default function InventoryManagement() {
 
       {importProgress && <p className="mt-4 rounded border border-[#D6BE8C] bg-[#FFF9E6] p-3 text-sm text-[#6E4D13]">{importProgress}</p>}
       {message && <p className="mt-4 rounded border border-[#D6BE8C] bg-[#FFF9E6] p-3 text-sm text-[#6E4D13]">{message}</p>}
+      {importReport?.errors?.length > 0 && (
+        <div className="mt-3 rounded border border-red-200 bg-white p-3 text-sm">
+          <ul className="max-h-40 list-disc space-y-1 overflow-auto pl-5 text-red-700">
+            {importReport.errors.map((error, index) => (
+              <li key={`${error.row}-${index}`}>Row {error.row || "?"}: {error.message}</li>
+            ))}
+          </ul>
+          <button
+            type="button"
+            className="mt-3 rounded bg-white px-3 py-1 text-xs shadow"
+            onClick={() => {
+              const url = URL.createObjectURL(new Blob([importErrorReportCsv(importReport.errors)], { type: "text/csv;charset=utf-8" }));
+              const link = document.createElement("a");
+              link.href = url;
+              link.download = "product-import-errors.csv";
+              document.body.appendChild(link);
+              link.click();
+              link.remove();
+              URL.revokeObjectURL(url);
+            }}
+          >
+            Download error report
+          </button>
+        </div>
+      )}
 
       <section className="mt-4 overflow-x-auto rounded bg-white shadow">
         <table className="w-full min-w-[1180px] text-sm">
@@ -347,12 +396,27 @@ export default function InventoryManagement() {
               const warehouseStock = stockFor(product, "warehouse");
               const shopStock = stockFor(product, "shop");
               const websiteStock = number(product.websiteStock ?? product.website_stock ?? busyStock);
-              const isBalanced = Boolean(product.isBalanced ?? number(product.is_balanced));
               const isZeroStock = Boolean(product.isZeroStock ?? number(product.is_zero_stock));
               const isLowStock = Boolean(product.isLowStock ?? number(product.is_low_stock));
-              const rowTone = isBalanced
-                ? "border-green-300 bg-green-100 hover:bg-green-200/80"
-                : "border-red-300 bg-red-100 hover:bg-red-200/80";
+              const status = product.reconciliationStatus || "unverified";
+              const statusLabel = {
+                not_recorded: "Not recorded",
+                unverified: "Unverified",
+                balanced: "Balanced",
+                mismatch: "Mismatch",
+              }[status] || "Unverified";
+              const statusClass = {
+                not_recorded: "bg-gray-100 text-gray-700",
+                unverified: "bg-amber-50 text-amber-800",
+                balanced: "bg-green-50 text-green-700",
+                mismatch: "bg-red-50 text-red-700",
+              }[status] || "bg-amber-50 text-amber-800";
+              const rowTone = {
+                not_recorded: "border-gray-200 bg-white hover:bg-gray-50",
+                unverified: "border-amber-200 bg-amber-50 hover:bg-amber-100/80",
+                balanced: "border-green-300 bg-green-100 hover:bg-green-200/80",
+                mismatch: "border-red-300 bg-red-100 hover:bg-red-200/80",
+              }[status] || "border-gray-200 bg-white";
               return (
                 <tr key={product.id} className={`border-b align-middle transition-colors ${rowTone}`}>
                   <td className="p-3">
@@ -368,10 +432,10 @@ export default function InventoryManagement() {
                   <StockCell value={busyStock} active={selectedBucket === "website"} />
                   <StockCell value={warehouseStock} active={selectedBucket === "warehouse"} />
                   <StockCell value={shopStock} active={selectedBucket === "shop"} />
-                  <td className="font-semibold">{websiteStock}</td>
+                  <td className="font-semibold">{formatQuantity(websiteStock) || "0"}</td>
                   <td>
-                    <span className={`rounded-full px-2 py-1 text-xs font-medium ${isBalanced ? "bg-green-50 text-green-700" : "bg-red-50 text-red-700"}`}>
-                      {isBalanced ? "Balanced" : "Mismatch"}
+                    <span className={`rounded-full px-2 py-1 text-xs font-medium ${statusClass}`}>
+                      {statusLabel}
                     </span>
                   </td>
                   <td>
@@ -428,7 +492,8 @@ function Metric({ label, value = 0, warning = false, danger = false }) {
 }
 
 function StockCell({ value, active }) {
-  return <td className={active ? "font-bold text-[#8A541E]" : ""}>{value}</td>;
+  const missing = value === null || value === undefined || value === "";
+  return <td className={active ? "font-bold text-[#8A541E]" : ""}>{missing ? "Not recorded" : formatQuantity(value) || "0"}</td>;
 }
 
 function StockModal({ state, setState, onBucketChange, onSave }) {
@@ -456,8 +521,8 @@ function StockModal({ state, setState, onBucketChange, onSave }) {
               className={`rounded-xl border p-4 text-left ${state.bucket === bucket ? "border-[#A68B5B] bg-[#FFF8E7]" : ""}`}
             >
               <p className="text-xs uppercase text-gray-500">{bucket === "shop" ? "Shop" : bucket === "website" ? "Busy" : bucket}</p>
-              <p className="mt-1 text-2xl font-semibold">{stockFor(state.product, bucket)}</p>
-              <p className="text-xs text-gray-400">Low level: {reorderFor(state.product, bucket) || 0}</p>
+              <p className="mt-1 text-2xl font-semibold">{stockFor(state.product, bucket) == null ? "Not recorded" : formatQuantity(stockFor(state.product, bucket)) || "0"}</p>
+              <p className="text-xs text-gray-400">Low level: {formatQuantity(reorderFor(state.product, bucket)) || "0"}</p>
             </button>
           ))}
         </div>
@@ -476,21 +541,21 @@ function StockModal({ state, setState, onBucketChange, onSave }) {
             {state.mode === "set" ? (
               <label className="text-sm">
                 New count
-                <input type="number" min="0" value={state.stockOnHand} onChange={(event) => setState((current) => ({ ...current, stockOnHand: event.target.value }))} className="mt-1 w-full rounded border px-3 py-2" />
+                <input type="number" min="0" value={quantityFieldValue(state.stockOnHand)} onChange={(event) => setState((current) => ({ ...current, stockOnHand: event.target.value }))} className="mt-1 w-full rounded border px-3 py-2" />
               </label>
             ) : (
               <label className="text-sm">
                 Quantity
-                <input type="number" min="1" value={state.quantity} onChange={(event) => setState((current) => ({ ...current, quantity: event.target.value }))} className="mt-1 w-full rounded border px-3 py-2" />
+                <input type="number" min="1" value={quantityFieldValue(state.quantity)} onChange={(event) => setState((current) => ({ ...current, quantity: event.target.value }))} className="mt-1 w-full rounded border px-3 py-2" />
               </label>
             )}
             <label className="text-sm">
               Low-stock level
-              <input type="number" min="0" value={state.reorderLevel} onChange={(event) => setState((current) => ({ ...current, reorderLevel: event.target.value }))} className="mt-1 w-full rounded border px-3 py-2" />
+              <input type="number" min="0" value={quantityFieldValue(state.reorderLevel)} onChange={(event) => setState((current) => ({ ...current, reorderLevel: event.target.value }))} className="mt-1 w-full rounded border px-3 py-2" />
             </label>
             <label className="text-sm">
               Current count
-              <input readOnly value={currentStock} className="mt-1 w-full rounded border bg-gray-50 px-3 py-2" />
+              <input readOnly value={currentStock == null ? "Not recorded" : formatQuantity(currentStock) || "0"} className="mt-1 w-full rounded border bg-gray-50 px-3 py-2" />
             </label>
           </div>
           <label className="mt-3 block text-sm">

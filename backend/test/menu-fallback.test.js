@@ -15,7 +15,6 @@ test("local navbar snapshot matches the public live menu order", () => {
 
   assert.deepEqual(titles, [
     "Art & Craft",
-    "Brand Pen",
     "Computer & Electronics Accessories",
     "Office Stationery",
     "School Stationery",

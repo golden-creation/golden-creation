@@ -47,6 +47,10 @@ function dbQuery(
   );
 }
 
+export function missingOrdersStoreError(error) {
+  return error?.code === "ER_NO_SUCH_TABLE" || error?.code === "ER_BAD_FIELD_ERROR";
+}
+
 async function optionalDbQuery(
   sql,
   values = []
@@ -734,11 +738,14 @@ export async function getAdminDashboard(
         FROM admins
       `);
 
-    const orders =
-      await optionalDbQuery(`
+    const orders = await dbQuery(`
         SELECT *
         FROM orders
-      `);
+      `).catch((error) => {
+        if (!missingOrdersStoreError(error)) throw error;
+        return null;
+      });
+    const ordersAvailable = Array.isArray(orders);
 
     const recentProducts =
       await dbQuery(`
@@ -788,26 +795,13 @@ export async function getAdminDashboard(
         LIMIT 5
       `);
 
-    const totalRevenue =
-      orders.reduce(
-        (
-          sum,
-          order
-        ) =>
-          sum +
-          Number(
-            order.total_amount ||
-              0
-          ),
-        0
-      );
+    const totalRevenue = ordersAvailable
+      ? orders.reduce((sum, order) => sum + Number(order.total_amount || 0), 0)
+      : null;
 
-    const pendingOrders =
-      orders.filter(
-        (order) =>
-          order.order_status ===
-          "Pending"
-      ).length;
+    const pendingOrders = ordersAvailable
+      ? orders.filter((order) => order.order_status === "Pending").length
+      : null;
 
     const premiumProducts =
       products.filter(
@@ -854,8 +848,8 @@ export async function getAdminDashboard(
         totalAdmins:
           admins.length,
 
-        totalOrders:
-          orders.length,
+        totalOrders: ordersAvailable ? orders.length : null,
+        ordersAvailable,
 
         pendingOrders,
 
@@ -946,8 +940,7 @@ export async function getAdminOrders(
   res
 ) {
   try {
-    const orders =
-      await optionalDbQuery(`
+    const orders = await dbQuery(`
       SELECT 
         o.id,
         o.order_number,
@@ -1114,8 +1107,10 @@ export async function getAdminOrders(
     );
 
     res.status(500).json({
-      message:
-        "Failed to fetch orders",
+      message: missingOrdersStoreError(error)
+        ? "Orders could not be loaded because the order store is unavailable."
+        : "Failed to fetch orders",
+      ordersAvailable: false,
     });
   }
 }

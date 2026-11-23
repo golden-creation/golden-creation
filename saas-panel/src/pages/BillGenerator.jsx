@@ -7,6 +7,7 @@ import {
   downloadAdminXlsx,
 } from "../lib/adminApi";
 import RemoteLookup from "../components/RemoteLookup";
+import { quantityFieldValue } from "../lib/formatQuantity";
 
 const money = (value) =>
   `Rs. ${Number(value || 0).toLocaleString("en-IN", {
@@ -330,7 +331,7 @@ function BillGenerator() {
                       <RemoteLookup type="products" catalog="website" value={item.productOption || (item.productRef ? { label: item.name } : null)} onChange={(value) => updateItem(index, "productOption", value)} placeholder="Search product..." />
                     </label>
                   )}
-                  <Field label="Qty" type="number" value={item.quantity} onChange={(value) => updateItem(index, "quantity", value)} />
+                  <Field label="Qty" type="number" value={quantityFieldValue(item.quantity)} onChange={(value) => updateItem(index, "quantity", value)} />
                   <Field label="Price" type="number" value={item.price} onChange={(value) => updateItem(index, "price", value)} />
                   <button onClick={() => removeItem(index)} className="self-end rounded-lg border px-3 py-2 text-sm">
                     Remove

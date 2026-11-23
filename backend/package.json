@@ -7,6 +7,7 @@
   "scripts": {
     "build": "node scripts/build.js",
     "db:setup": "node scripts/ensure-admin-modules-schema.js",
+    "db:seed": "node scripts/run-local-seed.js",
     "db:commerce": "node scripts/ensure-commerce-media-schema.js",
     "db:customer": "node scripts/ensure-customer-mobile-schema.js",
     "repair:catalogs": "node scripts/regenerate-ready-catalogs.js",

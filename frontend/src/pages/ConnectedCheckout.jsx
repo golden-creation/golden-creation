@@ -1,5 +1,6 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import PriceOffer from "../components/PriceOffer";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import locationIcon from "../assets/location.png";
@@ -16,7 +17,7 @@ import {
   pushDataLayer,
   verifyRazorpayCheckoutPayment,
 } from "../lib/api";
-import { SkeletonBlock } from "../components/Skeleton";
+import { presentCheckoutAmounts, acceptLatestQuote } from "../lib/checkoutTotals";
 
 function loadRazorpayCheckout() {
   if (window.Razorpay) return Promise.resolve(true);
@@ -34,11 +35,8 @@ function ConnectedCheckout() {
   const {
     currentUser,
     cartItems,
-    shippingFee,
-    taxAmount,
     discountState,
     discountAmount,
-    productDiscountAmount,
     applyDiscountCode,
     removeDiscount,
     addresses,
@@ -62,6 +60,9 @@ function ConnectedCheckout() {
   const [placingOrder, setPlacingOrder] = useState(false);
   const [quote, setQuote] = useState(null);
   const [quoteLoading, setQuoteLoading] = useState(false);
+  const quoteRequest = useRef(0);
+  const placingLock = useRef(false);
+  const checkoutAttempt = useRef({ hash: "", key: "" });
   const [couponCode, setCouponCode] = useState(discountState.code || "");
   const [couponMessage, setCouponMessage] = useState("");
   const [couponLoading, setCouponLoading] = useState(false);
@@ -188,6 +189,9 @@ function ConnectedCheckout() {
     }
 
     let cancelled = false;
+    const requestId = quoteRequest.current + 1;
+    quoteRequest.current = requestId;
+    setQuote(null);
     const timer = window.setTimeout(async () => {
       setQuoteLoading(true);
       try {
@@ -198,7 +202,7 @@ function ConnectedCheckout() {
           discountCode: discountState.appliedDiscount?.code || "",
         });
         if (!cancelled) {
-          setQuote(nextQuote);
+          setQuote(acceptLatestQuote(requestId, quoteRequest.current, nextQuote));
           setValidationMessage("");
         }
       } catch (error) {
@@ -234,14 +238,9 @@ function ConnectedCheckout() {
     }
   }, [quote?.paymentOptions, form.paymentMethod]);
 
-  const checkoutSubtotal = Number(quote?.subtotal ?? subtotal);
-  const checkoutDiscount = Number(quote?.discountAmount ?? discountAmount);
-  const checkoutShippingFee = Number(quote?.shippingFee ?? shippingFee);
-  const checkoutTaxAmount = Number(quote?.taxAmount ?? taxAmount);
-  const checkoutGrandTotal = Number(
-    quote?.totalAmount ??
-      Math.max(0, subtotal - productDiscountAmount) + shippingFee + taxAmount
-  );
+  const amounts = presentCheckoutAmounts(quote, { loading: quoteLoading, error: validationMessage });
+  const checkoutSubtotal = amounts.ready ? amounts.subtotal : subtotal;
+  const checkoutDiscount = amounts.ready ? amounts.discountAmount : Number(discountAmount || 0);
   const enabledPaymentMethods = quote?.paymentOptions
     ? [
         quote.paymentOptions.fullCod?.enabled && "Full COD",
@@ -294,6 +293,7 @@ function ConnectedCheckout() {
   };
 
   const handlePlaceOrder = async () => {
+    if (placingLock.current) return;
     if (!cartItems.length) {
       navigate("/cart");
       return;
@@ -313,10 +313,28 @@ function ConnectedCheckout() {
       return;
     }
 
+    placingLock.current = true;
     setPlacingOrder(true);
 
     try {
       if (!quote) throw new Error("Checkout totals are not ready");
+      const attemptPayload = {
+        items: cartItems.map((item) => ({
+          productId: item.productId || item.id,
+          variantId: item.variantId || 0,
+          bundleId: item.bundleId || 0,
+          quantity: item.quantity,
+        })),
+        paymentMethod: form.paymentMethod,
+        phone: form.phoneNumber,
+        zip: form.zipCode,
+        discount: discountState.appliedDiscount?.code || "",
+      };
+      const attemptHash = JSON.stringify(attemptPayload);
+      if (checkoutAttempt.current.hash !== attemptHash) {
+        checkoutAttempt.current = { hash: attemptHash, key: crypto.randomUUID() };
+      }
+      const idempotencyKey = checkoutAttempt.current.key;
       pushDataLayer("add_shipping_info", {
         ecommerce: {
           currency: "INR",
@@ -337,7 +355,7 @@ function ConnectedCheckout() {
       });
       let order;
       if (form.paymentMethod === "Full COD") {
-        order = await placeOrder({ ...form, paymentMethod: "Full COD" });
+        order = await placeOrder({ ...form, paymentMethod: "Full COD", idempotencyKey });
       } else {
         const razorpayOrder = await createRazorpayCheckoutOrder({
           userId: currentUser?.id,
@@ -345,6 +363,7 @@ function ConnectedCheckout() {
           items: cartItems,
           discountCode: discountState.appliedDiscount?.code || "",
           paymentMode: form.paymentMethod,
+          idempotencyKey,
         });
         const loaded = await loadRazorpayCheckout();
         if (!loaded) throw new Error("Unable to load secure payment checkout");
@@ -413,6 +432,7 @@ function ConnectedCheckout() {
       );
       setStep("address");
     } finally {
+      placingLock.current = false;
       setPlacingOrder(false);
     }
   };
@@ -630,7 +650,7 @@ function ConnectedCheckout() {
                   </div>
                 </div>
                 <span className="text-sm text-[#C2863F]">
-                  {formatCurrency(item.price * item.quantity)}
+                  <PriceOffer price={item.price * item.quantity} comparePrice={item.comparePrice ? item.comparePrice * item.quantity : null} mrp={item.mrp ? item.mrp * item.quantity : null} percent={item.discountPercent} />
                 </span>
               </div>
             ))}
@@ -657,15 +677,15 @@ function ConnectedCheckout() {
               )}
               <div className="flex justify-between">
                 <span>Shipping</span>
-                <span>{quoteLoading ? "Calculating..." : formatCurrency(checkoutShippingFee)}</span>
+                <span>{amounts.shippingConfirmed ? formatCurrency(amounts.shippingAmount) : amounts.shippingLabel}</span>
               </div>
               <div className="flex justify-between border-b pb-2">
-                <span>{checkoutTaxAmount > 0 ? "Additional GST" : "GST"}</span>
-                <span>{checkoutTaxAmount > 0 ? formatCurrency(checkoutTaxAmount) : "Included"}</span>
+                <span>GST</span>
+                <span>{amounts.taxLabel || (amounts.taxAmount > 0 ? formatCurrency(amounts.taxAmount) : "Included")}</span>
               </div>
               <div className="flex justify-between pt-2 font-semibold">
                 <span>Total</span>
-                <span>{formatCurrency(checkoutGrandTotal)}</span>
+                <span>{amounts.ready ? formatCurrency(amounts.totalAmount) : amounts.totalLabel}</span>
               </div>
             </div>
 

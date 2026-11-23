@@ -15,6 +15,7 @@ import {
   updateAdminBlogPost,
   uploadAdminMedia,
 } from "../lib/adminApi";
+import { formatBlockValue, sanitizeBlogHtml } from "../lib/blogEditor";
 
 const AddNewBlog = () => {
   const navigate = useNavigate();
@@ -61,6 +62,7 @@ const AddNewBlog = () => {
       setMessage("");
       const payload = {
         ...form,
+        content: sanitizeBlogHtml(form.content),
         desc: form.excerpt,
         tags: form.tags.split(",").map((tag) => tag.trim()).filter(Boolean),
         status,
@@ -259,7 +261,8 @@ function RichBlogEditor({ value, onChange, onMessage, uploading, setUploading })
   const sync = () => onChange(editorRef.current?.innerHTML || "");
   const runCommand = (command, argument = null) => {
     editorRef.current?.focus();
-    document.execCommand(command, false, argument);
+    const value = command === "formatBlock" ? formatBlockValue(argument) : argument;
+    document.execCommand(command, false, value);
     sync();
   };
   const insertHtml = (html) => {
@@ -298,10 +301,18 @@ function RichBlogEditor({ value, onChange, onMessage, uploading, setUploading })
       <p className="text-xs mb-1 text-black">Article Content</p>
       <div className="rounded-lg border bg-[#FBF8F2] p-2">
         <div className="mb-2 flex flex-wrap gap-2">
+          <button type="button" className={buttonClass} onClick={() => runCommand("undo")}>Undo</button>
+          <button type="button" className={buttonClass} onClick={() => runCommand("redo")}>Redo</button>
+          <button type="button" className={buttonClass} onClick={() => runCommand("formatBlock", "p")}>Paragraph</button>
+          <button type="button" className={buttonClass} onClick={() => runCommand("formatBlock", "h1")}>H1</button>
           <button type="button" className={buttonClass} onClick={() => runCommand("formatBlock", "h2")}>H2</button>
           <button type="button" className={buttonClass} onClick={() => runCommand("formatBlock", "h3")}>H3</button>
           <button type="button" className={buttonClass} onClick={() => runCommand("bold")}>Bold</button>
           <button type="button" className={buttonClass} onClick={() => runCommand("italic")}>Italic</button>
+          <button type="button" className={buttonClass} onClick={() => runCommand("underline")}>Underline</button>
+          <button type="button" className={buttonClass} onClick={() => runCommand("justifyLeft")}>Left</button>
+          <button type="button" className={buttonClass} onClick={() => runCommand("justifyCenter")}>Center</button>
+          <button type="button" className={buttonClass} onClick={() => runCommand("justifyRight")}>Right</button>
           <button type="button" className={buttonClass} onClick={() => runCommand("insertUnorderedList")}>Bullets</button>
           <button type="button" className={buttonClass} onClick={() => runCommand("insertOrderedList")}>Numbers</button>
           <button type="button" className={buttonClass} onClick={() => runCommand("formatBlock", "blockquote")}>Quote</button>

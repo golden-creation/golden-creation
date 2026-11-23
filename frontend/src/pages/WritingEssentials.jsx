@@ -17,7 +17,8 @@ import r7 from "../assets/r7.jpeg";
 import r8 from "../assets/r8.jpeg";
 import r9 from "../assets/r9.jpeg";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { formatCurrency, getBrands, getCategories, getProducts, getVariantFilters, productPath } from "../lib/api";
+import PriceOffer from "../components/PriceOffer";
+import { getBrands, getCategories, getProducts, getVariantFilters, productPath } from "../lib/api";
 import ProductRating from "../components/ProductRating";
 import { ProductGridSkeleton } from "../components/Skeleton";
 
@@ -792,7 +793,7 @@ function WritingEssentials() {
                       </p>
                     )}
                     <div className="mt-3 flex items-center justify-between gap-2">
-                      <p className="text-base font-bold text-[#C2863F]">{formatCurrency(item.price)}</p>
+                      <PriceOffer price={item.price} comparePrice={item.comparePrice} mrp={item.mrp} percent={item.discountPercent} />
                       <span className="rounded-full bg-[#FFF49C] px-2.5 py-1 text-[11px] font-semibold text-[#8A5A22]">
                         View
                       </span>

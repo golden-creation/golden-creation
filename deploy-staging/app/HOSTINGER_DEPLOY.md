@@ -18,6 +18,8 @@ Recommended Hostinger setup:
 - Node version: `20.x`
 - Build command: `npm install && npm run build`
 - Start command: `npm start`
+
+`npm start` must stay `node server.js`. Do not run `db:setup` during production startup. The copy of the setup script in this folder is stale and its npm script now refuses to run.
 - Domain: `lekhanmart.online`
 
 Important:

@@ -13,6 +13,17 @@ import {
   releaseEligibleCommissions,
   reverseOrderCommissions,
 } from "../services/referral-affiliate.service.js";
+import { cancelStoredOrder } from "../services/order-cancellation-store.js";
+import { statusTransitionAllowed } from "../services/order-cancellation.js";
+import {
+  duplicateSkuInGroup,
+  resolveImportBrand,
+  resolveImportCategory,
+  resolveImportProduct,
+  stockColumnsFromRows,
+  strictImportId,
+} from "../services/product-import.js";
+import { additionalTaxTotal, splitInvoiceTax } from "../services/invoice-tax-display.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const INVOICE_LOGO_PATH = path.join(__dirname, "..", "assets", "golden-creation-official-logo.png");
@@ -442,58 +453,6 @@ function parseImportDecimal(value) {
   const rawValue = cleanString(value).replace(/^'/, "").replace(/[^\d.-]/g, "");
   const parsed = Number(rawValue);
   return Number.isFinite(parsed) ? parsed : null;
-}
-
-function splitCategoryPath(value) {
-  return cleanString(value)
-    .split(/\s*(?:>|→|›|»|\/)\s*/u)
-    .map((item) => item.trim())
-    .filter(Boolean);
-}
-
-async function ensureCategoryPath(categoryValue) {
-  const names = splitCategoryPath(categoryValue);
-  const path = names.length ? names : ["Uncategorized"];
-  let parentId = null;
-  let categoryId = null;
-
-  for (const name of path) {
-    const slug = slugify(parentId ? `${parentId}-${name}` : name) || slugify(name);
-
-    await dbQuery(
-      `
-        INSERT INTO categories (name, slug, parent_id, status)
-        VALUES (?, ?, ?, 'Active')
-        ON DUPLICATE KEY UPDATE
-          status = 'Active',
-          parent_id = COALESCE(parent_id, VALUES(parent_id)),
-          slug = COALESCE(slug, VALUES(slug))
-      `,
-      [name, slug, parentId]
-    );
-
-    const rows = await dbQuery(
-      `
-        SELECT id
-        FROM categories
-        WHERE name = ?
-          AND (parent_id <=> ? OR parent_id IS NULL OR ? IS NULL)
-        ORDER BY CASE WHEN parent_id <=> ? THEN 0 ELSE 1 END, id
-        LIMIT 1
-      `,
-      [name, parentId, parentId, parentId]
-    );
-
-    categoryId = rows[0]?.id || categoryId;
-    parentId = categoryId;
-  }
-
-  return {
-    id: categoryId,
-    name: path[path.length - 1],
-    path,
-    pathText: path.join(" > "),
-  };
 }
 
 function buildDimensions(row) {
@@ -1185,6 +1144,7 @@ export async function deleteAdminCategory(req, res) {
 
 export async function importAdminProducts(req, res) {
   const rows = Array.isArray(req.body?.products) ? req.body.products : [];
+  const dryRun = req.body?.dryRun === true || req.body?.dryRun === "true";
 
   if (!rows.length) {
     return res.status(400).json({ message: "No products were supplied for import" });
@@ -1196,10 +1156,12 @@ export async function importAdminProducts(req, res) {
     skipped: 0,
     imagesUploaded: 0,
     errors: [],
+    preview: [],
   };
 
   try {
     const productGroups = new Map();
+    const seenSkus = new Set();
 
     for (const [index, row] of rows.entries()) {
       const rowNumber = index + 2;
@@ -1222,72 +1184,60 @@ export async function importAdminProducts(req, res) {
     for (const group of productGroups.values()) {
       const firstRow = group.rows.find(({ row }) => importValue(row, ["Title", "Name", "name", "product_name", "ProductName"]))?.row || group.rows[0].row;
       const firstRowNumber = group.firstRowNumber;
-      const productIdFromSheet = numericId(importValue(firstRow, ["ID", "Product ID", "product_id", "ProductId"]));
+      const productIdFromSheet = strictImportId(importValue(firstRow, ["ID", "Product ID", "product_id", "ProductId"]));
       const handle = importValue(firstRow, ["Handle", "handle", "slug"]);
       const name = importValue(firstRow, ["Title", "Name", "name", "product_name", "ProductName"]);
       const firstSku = importValue(firstRow, ["Variant SKU", "sku", "SKU"]);
+      const variantSkus = group.rows.map(({ row }) => importValue(row, ["Variant SKU", "variant_sku", "sku", "SKU"]));
       const hasPriceData = hasImportValue(firstRow, ["Variant Price", "price", "Price"]);
       const price = importNumber(firstRow, ["Variant Price", "price", "Price"], 0);
-      const categorySource =
-        importValue(firstRow, ["Product Category", "category", "category_name", "Category"]) ||
-        importValue(firstRow, ["Type", "type"]);
-
-      const existing =
-        productIdFromSheet
-          ? await dbQuery(
-              "SELECT id, sku, name, price, category_id, brand_id, image, description FROM products WHERE id = ? LIMIT 1",
-              [productIdFromSheet]
-            )
-          : firstSku || handle
-          ? await dbQuery(
-              `
-                SELECT id, sku, name, price, category_id, brand_id, image, description
-                FROM products
-                WHERE sku IN (?, ?)
-                   OR name = ?
-                ORDER BY CASE WHEN sku = ? THEN 0 WHEN sku = ? THEN 1 ELSE 2 END, id
-                LIMIT 1
-              `,
-              [firstSku || "", handle || "", name, firstSku || "", handle || ""]
-            )
-          : name
-          ? await dbQuery(
-              "SELECT id, sku, name, price, category_id, brand_id, image, description FROM products WHERE name = ? LIMIT 1",
-              [name]
-            )
-          : [];
-      const existingProduct = existing[0] || null;
+      const productResult = await resolveImportProduct(dbQuery, {
+        productId: productIdFromSheet,
+        sku: firstSku,
+        variantSkus,
+        name,
+      });
+      const categoryResult = await resolveImportCategory(dbQuery, firstRow);
+      const brandResult = await resolveImportBrand(dbQuery, firstRow);
+      const existingProduct = productResult.product || null;
+      const existing = existingProduct ? [existingProduct] : [];
       const resolvedName = name || existingProduct?.name || "";
       const resolvedPrice = hasPriceData ? price : Number(existingProduct?.price || 0);
+      const problems = [];
+      const repeatedSku = duplicateSkuInGroup(variantSkus);
+      const seenSku = variantSkus
+        .map((sku) => cleanString(sku).toLowerCase())
+        .find((sku) => sku && seenSkus.has(sku));
 
-      if (!existingProduct && (!resolvedName || !resolvedPrice || !categorySource)) {
+      if (repeatedSku) problems.push(`duplicate SKU ${repeatedSku} inside this product`);
+      if (seenSku) problems.push(`duplicate SKU ${seenSku} in this import`);
+      if (productResult.error) problems.push(productResult.error);
+      if (categoryResult.error) problems.push(categoryResult.error);
+      if (brandResult.error) problems.push(brandResult.error);
+      if (!existingProduct && !productResult.error) {
+        if (!resolvedName || !hasPriceData || !resolvedPrice) {
+          problems.push("title/name and a variant price above 0 are required");
+        }
+        if (categoryResult.blank) problems.push("category is required for a new product");
+      }
+
+      if (problems.length) {
         results.skipped += 1;
-        results.errors.push(`Row ${firstRowNumber}: title/name, variant price and category are required`);
+        problems.forEach((message) => results.errors.push({ row: firstRowNumber, message }));
         continue;
       }
 
-      const category = categorySource ? await ensureCategoryPath(categorySource) : null;
+      variantSkus.forEach((sku) => {
+        const key = cleanString(sku).toLowerCase();
+        if (key) seenSkus.add(key);
+      });
+
+      const category = categoryResult.blank ? null : categoryResult;
+      const categorySource = Boolean(category);
       const categoryId = category?.id || existingProduct?.category_id || null;
       const description = stripHtml(importValue(firstRow, ["Body (HTML)", "description", "Description"]));
-      const brandName = importValue(firstRow, ["Brand", "Brand Name", "brand_name", "brand"]);
-      const brandSlug = slugify(importValue(firstRow, ["Brand Slug", "brand_slug"]) || brandName);
-      let brandId = existingProduct?.brand_id || null;
-
-      if (brandName && brandSlug) {
-        await dbQuery(
-          `
-            INSERT INTO brands (name, slug, status)
-            VALUES (?, ?, 'Active')
-            ON DUPLICATE KEY UPDATE
-              name = VALUES(name),
-              status = 'Active',
-              deleted_at = NULL
-          `,
-          [brandName, brandSlug]
-        );
-        const brandRows = await dbQuery("SELECT id FROM brands WHERE slug = ? LIMIT 1", [brandSlug]);
-        brandId = brandRows[0]?.id || null;
-      }
+      const brandName = brandResult.blank ? "" : brandResult.name;
+      const brandId = brandResult.id || existingProduct?.brand_id || null;
       const variants = [];
       const imageSources = [];
       const productDimensions = buildDimensions(firstRow);
@@ -1317,45 +1267,42 @@ export async function importAdminProducts(req, res) {
         "Product Height",
         "height",
       ]);
-      const hasSpecificationData =
-        Boolean(categorySource) ||
-        hasImportValue(firstRow, [
-          "Vendor",
-          "vendor",
-          "Google Shopping / Google Product Category",
-          "Google Shopping / MPN",
-          "Google Shopping / Condition",
-          "Color (product.metafields.shopify.color-pattern)",
-          "Pen type (product.metafields.shopify.pen-type)",
-        ]);
-      const hasStockData = hasImportValueInRows(group.rows, [
-        "Busy Stock",
-        "busy_stock",
-        "busyStock",
-        "Website Stock",
-        "website_stock",
-        "websiteStock",
-        "Variant Inventory Qty",
-        "variant_stock",
-        "stock_quantity",
-        "stock",
-        "Stock",
+      const hasSpecificationData = hasImportValue(firstRow, [
+        "Vendor",
+        "vendor",
+        "Google Shopping / Google Product Category",
+        "Google Shopping / MPN",
+        "Google Shopping / Condition",
+        "Color (product.metafields.shopify.color-pattern)",
+        "Pen type (product.metafields.shopify.pen-type)",
       ]);
-      const hasWarehouseStockData = hasImportValueInRows(group.rows, [
-        "Warehouse Stock",
-        "warehouse_stock",
-        "warehouseStock",
-      ]);
-      const hasShopStockData = hasImportValueInRows(group.rows, [
-        "Shop Stock",
-        "Store Stock",
-        "shop_stock",
-        "store_stock",
-        "shopStock",
-        "storeStock",
-      ]);
+      const stockColumns = stockColumnsFromRows(group.rows.map(({ row }) => row));
+      const hasStockData = stockColumns.busy;
+      const hasWarehouseStockData = stockColumns.warehouse;
+      const hasShopStockData = stockColumns.shop;
       const hasStatusData = hasImportValue(firstRow, ["Status", "Published"]);
       const hasReorderData = hasImportValue(firstRow, ["Reorder Level", "reorder_level", "ReorderLevel"]);
+
+      if (dryRun) {
+        if (existingProduct) results.updated += 1;
+        else results.created += 1;
+        results.preview.push({
+          row: firstRowNumber,
+          action: existingProduct ? "update" : "create",
+          productId: existingProduct?.id || null,
+          matchedBy: productResult.matchedBy || null,
+          categoryId: categorySource ? categoryId : null,
+          brandId: brandResult.blank ? null : brandId,
+          preserveCategory: !categorySource,
+          preserveBrand: brandResult.blank,
+          stock: {
+            busy: hasStockData,
+            warehouse: hasWarehouseStockData,
+            shop: hasShopStockData,
+          },
+        });
+        continue;
+      }
 
       for (const { row, rowNumber } of group.rows) {
         const imageSrc = importValue(row, ["Image Src", "image", "Image"]);
@@ -1423,7 +1370,7 @@ export async function importAdminProducts(req, res) {
         productId = existing[0].id;
         productWasExisting = true;
         const updateFields = {
-          ...(firstSku || handle ? { sku: firstSku || handle || null } : {}),
+          ...(firstSku ? { sku: firstSku } : {}),
           ...(name ? { name } : {}),
           ...(hasPriceData ? { price: resolvedPrice } : {}),
           ...(categorySource ? { category_id: categoryId } : {}),
@@ -1554,8 +1501,20 @@ export async function importAdminProducts(req, res) {
       }
     }
 
-    await logActivity(req, "Imported products", "Products", `${results.created} created, ${results.updated} updated, ${results.imagesUploaded} images uploaded`);
-    res.json({ message: "Product import completed", results });
+    const applied = results.created + results.updated;
+    if (!dryRun && applied) {
+      await logActivity(req, "Imported products", "Products", `${results.created} created, ${results.updated} updated, ${results.imagesUploaded} images uploaded`);
+    }
+    const failed = applied === 0 && (results.skipped > 0 || results.errors.length > 0);
+    res.json({
+      message: dryRun
+        ? "Product import preview completed"
+        : failed
+          ? "Product import failed"
+          : "Product import completed",
+      dryRun,
+      results,
+    });
   } catch (error) {
     moduleResponse(res, error, "Failed to import products");
   }
@@ -2969,13 +2928,13 @@ export async function createAdminBill(req, res) {
           : toMoney(item.lineTotal * (item.gstRate / 100));
       } else {
         item.gstInclusive = Boolean(Number(item.gstInclusive));
-        item.gstRate = item.gstInclusive ? 0 : Number(item.gstRate || 0);
-        item.gstAmount = item.gstInclusive ? 0 : toMoney(item.gstAmount);
+        item.gstRate = Number(item.gstRate || 0);
+        item.gstAmount = toMoney(item.gstAmount);
       }
     });
 
     const subtotal = toMoney(req.body?.subtotal ?? normalizedItems.reduce((sum, item) => sum + item.lineTotal, 0));
-    const taxAmount = toMoney(normalizedItems.reduce((sum, item) => sum + item.gstAmount, 0));
+    const taxAmount = additionalTaxTotal(normalizedItems);
     const discountAmount = toMoney(req.body?.discountAmount ?? req.body?.discount_amount);
     const totalAmount = toMoney(req.body?.totalAmount ?? subtotal + taxAmount - discountAmount);
     const customerName =
@@ -3287,13 +3246,12 @@ function normalizeInvoiceItems(items = [], bill = {}) {
   return items.map((item) => {
     const quantity = Number(item.quantity || 1);
     const lineAmount = Number(item.line_total || quantity * Number(item.price || 0));
-    const gstInclusive = Boolean(Number(item.gst_inclusive ?? 1));
-    const gstRate = gstInclusive ? 0 : Number(item.gst_rate || 0);
-    const taxAmount = gstInclusive
-      ? 0
-      : Number(item.gst_amount || (lineAmount * gstRate) / 100);
-    const cgstAmount = taxAmount / 2;
-    const sgstAmount = taxAmount / 2;
+    const tax = splitInvoiceTax(item);
+    const gstInclusive = tax.gstInclusive;
+    const gstRate = tax.gstRate;
+    const taxAmount = tax.taxAmount;
+    const cgstAmount = tax.cgstAmount;
+    const sgstAmount = tax.sgstAmount;
     const discountRate = Number(item.discount_rate || 0);
     const hsn = cleanString(item.hsn_sac_code) || inferBillHsn(item.item_name);
 
@@ -3306,12 +3264,17 @@ function normalizeInvoiceItems(items = [], bill = {}) {
       discountRate,
       gstInclusive,
       gstRate,
-      cgstRate: gstRate / 2,
-      sgstRate: gstRate / 2,
+      cgstRate: tax.cgstRate,
+      sgstRate: tax.sgstRate,
       cgstAmount,
       sgstAmount,
       taxAmount,
-      taxableAmount: Math.max(lineAmount - (discountTotal > 0 && baseTotal > 0 ? (lineAmount / baseTotal) * discountTotal : 0), 0),
+      taxableAmount: Math.max(
+        lineAmount -
+          (discountTotal > 0 && baseTotal > 0 ? (lineAmount / baseTotal) * discountTotal : 0) -
+          tax.includedTax,
+        0
+      ),
       lineAmount,
     };
   });
@@ -3343,7 +3306,7 @@ function drawGoldenCreationInvoice(doc, bill, items) {
         tax: 0,
       };
       groups[item.hsn].inclusive = groups[item.hsn].inclusive && item.gstInclusive;
-      if (!item.gstInclusive && item.gstRate) {
+      if (item.gstRate) {
         groups[item.hsn].rates.add(item.gstRate);
       }
       groups[item.hsn].taxable += item.taxableAmount;
@@ -3355,7 +3318,7 @@ function drawGoldenCreationInvoice(doc, bill, items) {
   ).map((row) => ({
     ...row,
     rateLabel: row.inclusive
-      ? "Inclusive"
+      ? [...row.rates].map((rate) => `${formatPdfMoney(rate)}% Incl.`).join(", ") || "Inclusive"
       : [...row.rates].map((rate) => `${formatPdfMoney(rate)}%`).join(", "),
   }));
 
@@ -3465,9 +3428,9 @@ function drawGoldenCreationInvoice(doc, bill, items) {
       item.unit,
       formatPdfMoney(item.price),
       `${formatPdfMoney(item.discountRate)}%`,
-      item.gstInclusive ? "Incl." : `${formatPdfMoney(item.cgstRate)} %`,
+      item.gstInclusive ? `${formatPdfMoney(item.cgstRate)}% Incl.` : `${formatPdfMoney(item.cgstRate)} %`,
       formatPdfMoney(item.cgstAmount),
-      item.gstInclusive ? "Incl." : `${formatPdfMoney(item.sgstRate)} %`,
+      item.gstInclusive ? `${formatPdfMoney(item.sgstRate)}% Incl.` : `${formatPdfMoney(item.sgstRate)} %`,
       formatPdfMoney(item.sgstAmount),
       formatPdfMoney(item.lineAmount),
     ];
@@ -4120,6 +4083,34 @@ export async function updateAdminOrderStatus(req, res) {
     return res.status(400).json({ message: "Valid order status is required" });
   }
 
+  if (status === "Cancelled") {
+    try {
+      const result = await cancelStoredOrder({
+        orderId: id,
+        reason: req.body?.reason || req.body?.cancellationReason,
+        resolution: req.body?.resolution,
+        actor: req.admin?.email || req.admin?.name || "Admin",
+      });
+      if (!result.ok) return res.status(result.statusCode).json({ message: result.message });
+      await reverseOrderCommissions(id, "Order cancelled").catch((error) => {
+        console.log("Commission reversal skipped:", error.message);
+      });
+      await logActivity(req, "Cancelled order", "Orders", `Order ${id}: ${result.reason}`);
+      return res.json({
+        message: result.message,
+        refund: result.refund,
+        warnings: result.warnings,
+        restored: {
+          website: result.restoreWebsite,
+          physical: result.physical?.bucket || null,
+        },
+      });
+    } catch (error) {
+      moduleResponse(res, error, "Failed to cancel order");
+      return;
+    }
+  }
+
   try {
     const orderRows = await dbQuery(
       "SELECT id, order_status, fulfillment_stock_source, physical_stock_deducted_at FROM orders WHERE id = ? LIMIT 1",
@@ -4128,6 +4119,9 @@ export async function updateAdminOrderStatus(req, res) {
     const order = orderRows[0];
     if (!order) {
       return res.status(404).json({ message: "Order not found" });
+    }
+    if (!statusTransitionAllowed(order.order_status, status)) {
+      return res.status(409).json({ message: `${order.order_status} orders cannot move to ${status}` });
     }
 
     const sourceValue = cleanString(req.body?.fulfillmentStockSource || req.body?.fulfillment_stock_source).toLowerCase();
@@ -4238,11 +4232,6 @@ export async function updateAdminOrderStatus(req, res) {
       "INSERT INTO order_status_history (order_id, status, fulfillment_stock_source, changed_by) VALUES (?, ?, ?, ?)",
       [id, status, status === "Dispatched" ? fulfillmentSource || order.fulfillment_stock_source || null : null, req.admin?.email || "Admin"]
     );
-    if (status === "Cancelled") {
-      await reverseOrderCommissions(id, "Order cancelled").catch((error) => {
-        console.log("Commission reversal skipped:", error.message);
-      });
-    }
     if (status === "Delivered") {
       await releaseEligibleCommissions().catch((error) => {
         console.log("Commission release skipped:", error.message);

@@ -17,6 +17,16 @@ import {
   sendOrderSuccessEmail,
   sendPaymentSuccessEmail,
 } from "../services/email.service.js";
+import { razorpayAmountPaise } from "../services/checkout-totals.js";
+import { placeRazorpayCheckout } from "../services/checkout-transaction.js";
+import {
+  beginCheckoutAttempt,
+  checkoutPayloadHash,
+  markCheckoutAttempt,
+  normalizeIdempotencyKey,
+  claimCheckoutQuote,
+  recordCommitUncertainty,
+} from "../services/checkout-attempt.js";
 import {
   calculateOrderCommission,
   captureOrderAttribution,
@@ -135,14 +145,32 @@ export async function createCheckoutQuote(req, res) {
 }
 
 export async function createCodOrder(payload) {
-  const quote = await buildCheckoutQuote(payload);
-  if (!quote.paymentOptions.fullCod.enabled) {
-    const error = new Error("Cash on Delivery is currently unavailable");
-    error.statusCode = 422;
-    throw error;
+  const key = normalizeIdempotencyKey(payload.idempotencyKey || payload.idempotency_key);
+  const payloadHash = checkoutPayloadHash({ ...payload, paymentMode: "Full COD" });
+  const started = await beginCheckoutAttempt(dbQuery, { key, payloadHash });
+  if (started.mode === "stored" && started.response) return started.response;
+  if (started.mode === "replay") {
+    const rows = await dbQuery("SELECT * FROM orders WHERE id = ?", [started.orderId]);
+    return codOrderResponse(rows[0], payload, null);
   }
-  const connection = await getConnection();
+
+  const quote = await claimCheckoutQuote({
+    query: dbQuery,
+    attemptId: started.attemptId,
+    buildQuote: async () => {
+      const quoted = await buildCheckoutQuote(payload);
+      if (!quoted.paymentOptions.fullCod.enabled) {
+        const error = new Error("Cash on Delivery is currently unavailable");
+        error.statusCode = 422;
+        throw error;
+      }
+      return quoted;
+    },
+  });
+  let connection;
+  let commitConfirmed = false;
   try {
+    connection = await getConnection();
     await beginTransaction(connection);
     const created = await insertQuotedOrder(connection, {
       payload,
@@ -152,31 +180,63 @@ export async function createCodOrder(payload) {
       orderStatus: "Processing",
       amountPaid: 0,
       codDue: quote.totalAmount,
+      checkoutAttemptId: started.attemptId,
     });
     await deductQuoteStock(connection, quote.items);
     await captureOrderAttribution(created.orderId, payload, connection);
     await calculateOrderCommission(created.orderId, connection);
-    await commit(connection);
+    try {
+      await commit(connection);
+      commitConfirmed = true;
+    } catch (error) {
+      connection.destroy?.();
+      connection.destroyed = true;
+      const outcome = await recordCommitUncertainty(dbQuery, started.attemptId, error);
+      if (!outcome.committed) throw outcome.error;
+      const rows = await dbQuery("SELECT * FROM orders WHERE id = ?", [outcome.order.id]);
+      return codOrderResponse(rows[0], payload, quote);
+    }
     const rows = await dbQuery("SELECT * FROM orders WHERE id = ?", [created.orderId]);
     await notifyOrder(rows[0]);
-    return {
-      id: created.orderNumber,
-      databaseId: created.orderId,
-      createdAt: new Date().toISOString(),
-      status: "Processing",
-      paymentStatus: "COD Due",
-      amountPaid: 0,
-      codDue: quote.totalAmount,
-      ...publicQuote(quote),
-      total: quote.totalAmount,
-      customer: payload.customer || {},
-    };
+    const response = codOrderResponse(rows[0], payload, quote);
+    await markCheckoutAttempt(dbQuery, started.attemptId, "completed", {
+      orderId: created.orderId,
+      orderNumber: created.orderNumber,
+      responseJson: JSON.stringify(response),
+    });
+    return response;
   } catch (error) {
-    await rollback(connection);
+    if (connection && !connection.destroyed && !commitConfirmed) {
+      await rollback(connection).catch((rollbackError) => {
+        console.error("COD checkout rollback failed:", rollbackError?.message || rollbackError);
+      });
+    }
+    if (!commitConfirmed && !connection?.destroyed) {
+      await markCheckoutAttempt(dbQuery, started.attemptId, "retryable", {
+        errorMessage: error.message,
+      }).catch((markError) => {
+        console.error("Could not record retryable checkout:", markError?.message || markError);
+      });
+    }
     throw error;
   } finally {
-    connection.release();
+    if (connection && !connection.destroyed) connection.release();
   }
+}
+
+function codOrderResponse(order, payload, quote) {
+  return {
+    id: order.order_number,
+    databaseId: order.id,
+    createdAt: order.created_at || new Date().toISOString(),
+    status: order.order_status,
+    paymentStatus: order.payment_status,
+    amountPaid: Number(order.amount_paid || 0),
+    codDue: Number(order.cod_due || 0),
+    ...(quote ? publicQuote(quote) : {}),
+    total: Number(order.total_amount),
+    customer: payload.customer || {},
+  };
 }
 
 async function cancelPendingOrder(orderId, reason) {
@@ -230,98 +290,154 @@ export async function createRazorpayOrder(req, res) {
     return res.status(400).json({ message: "Choose a valid online payment mode" });
   }
 
-  let created;
-  let quote;
-  const connection = await getConnection();
-  try {
-    quote = await buildCheckoutQuote(req.body || {}, connection);
-    const option =
-      mode === "Partial COD"
-        ? quote.paymentOptions.partialCod
-        : quote.paymentOptions.fullOnline;
-    if (!option.enabled) {
-      throw Object.assign(new Error(`${mode} is unavailable for this cart`), {
-        statusCode: 422,
+  const body = req.body || {};
+  const key = normalizeIdempotencyKey(req.get("Idempotency-Key") || body.idempotencyKey || body.idempotency_key);
+  const payloadHash = checkoutPayloadHash({ ...body, paymentMode: mode });
+  const started = await beginCheckoutAttempt(dbQuery, { key, payloadHash });
+  if (started.mode === "stored") {
+    if (started.response) return res.status(201).json(started.response);
+    return res.status(409).json({ message: started.message || "This checkout was already processed." });
+  }
+  if (started.mode === "replay") {
+    const rows = await dbQuery("SELECT * FROM orders WHERE id = ?", [started.orderId]);
+    const order = rows[0];
+    if (order?.razorpay_order_id) {
+      return res.status(201).json({
+        order: {
+          id: order.order_number,
+          databaseId: order.id,
+          razorpayOrderId: order.razorpay_order_id,
+          keyId: process.env.RAZORPAY_KEY_ID,
+          currency: "INR",
+          amount: Number(order.total_amount) - Number(order.cod_due || 0),
+          codDue: Number(order.cod_due || 0),
+          customer: body.customer || {},
+        },
       });
     }
-    const settings = await connectionQuery(
+  }
+
+  let attemptSettled = started.mode !== "execute";
+  let connection;
+  try {
+    connection = await getConnection();
+    const completed = await placeRazorpayCheckout({
       connection,
-      "SELECT stock_hold_minutes FROM payment_settings WHERE id = 1"
-    );
-    const holdMinutes = Math.max(5, Number(settings[0]?.stock_hold_minutes || 30));
-    const expiresAt = new Date(Date.now() + holdMinutes * 60 * 1000);
-
-    await beginTransaction(connection);
-    created = await insertQuotedOrder(connection, {
-      payload: req.body || {},
-      quote,
-      paymentMethod: mode,
-      paymentStatus: "Pending",
-      orderStatus: "Pending",
-      amountPaid: 0,
-      codDue: option.amountCod,
-      paymentExpiresAt: expiresAt,
-    });
-    await deductQuoteStock(connection, quote.items);
-    await captureOrderAttribution(created.orderId, req.body || {}, connection);
-    await commit(connection);
-
-    const razorpayOrder = await callRazorpay("/orders", {
-      method: "POST",
-      body: JSON.stringify({
-        amount: Math.round(option.amountOnline * 100),
-        currency: "INR",
-        receipt: created.orderNumber,
-        notes: {
-          application_order_id: String(created.orderId),
-          payment_mode: mode,
-        },
-      }),
-    });
-    await dbQuery(
-      `UPDATE orders SET razorpay_order_id = ? WHERE id = ?`,
-      [razorpayOrder.id, created.orderId]
-    );
-    await dbQuery(
-      `INSERT INTO payment_transactions
-        (order_id, provider, provider_order_id, event_type, status, amount, payload_json)
-       VALUES (?, 'Razorpay', ?, 'order.created', 'Pending', ?, ?)`,
-      [
-        created.orderId,
-        razorpayOrder.id,
-        option.amountOnline,
-        JSON.stringify(razorpayOrder),
-      ]
-    );
-
-    res.status(201).json({
-      order: {
-        id: created.orderNumber,
-        databaseId: created.orderId,
-        razorpayOrderId: razorpayOrder.id,
-        keyId: process.env.RAZORPAY_KEY_ID,
-        currency: "INR",
-        amount: option.amountOnline,
-        amountPaise: razorpayOrder.amount,
-        codDue: option.amountCod,
-        expiresAt: expiresAt.toISOString(),
-        customer: req.body?.customer || {},
-        quote: publicQuote(quote),
+      begin: beginTransaction,
+      commit,
+      rollback,
+      release: (active) => active.release(),
+      prepare: async () => {
+        const quote = await buildCheckoutQuote(body, connection);
+        const option = mode === "Partial COD" ? quote.paymentOptions.partialCod : quote.paymentOptions.fullOnline;
+        if (!option.enabled) {
+          throw Object.assign(new Error(`${mode} is unavailable for this cart`), { statusCode: 422 });
+        }
+        const settings = await connectionQuery(connection, "SELECT stock_hold_minutes FROM payment_settings WHERE id = 1");
+        const holdMinutes = Math.max(5, Number(settings[0]?.stock_hold_minutes || 30));
+        return {
+          quote,
+          option,
+          expiresAt: new Date(Date.now() + holdMinutes * 60 * 1000),
+          replayOrderId: started.mode === "replay" ? started.orderId : null,
+        };
+      },
+      work: async ({ quote, option, expiresAt, replayOrderId }) => {
+        if (replayOrderId) {
+          const rows = await connectionQuery(connection, "SELECT id, order_number FROM orders WHERE id = ? FOR UPDATE", [replayOrderId]);
+          return { orderId: rows[0].id, orderNumber: rows[0].order_number, quote, option, expiresAt };
+        }
+        const created = await insertQuotedOrder(connection, {
+          payload: body,
+          quote,
+          paymentMethod: mode,
+          paymentStatus: "Pending",
+          orderStatus: "Pending",
+          amountPaid: 0,
+          codDue: option.amountCod,
+          paymentExpiresAt: expiresAt,
+          checkoutAttemptId: started.attemptId,
+        });
+        await deductQuoteStock(connection, quote.items);
+        await captureOrderAttribution(created.orderId, body, connection);
+        return created;
+      },
+      onUncertainCommit: async (error) => {
+        connection.destroy?.();
+        connection.destroyed = true;
+        const outcome = await recordCommitUncertainty(dbQuery, started.attemptId, error);
+        attemptSettled = true;
+        if (!outcome.committed) return outcome;
+        return {
+          committed: true,
+          created: { orderId: outcome.order.id, orderNumber: outcome.order.order_number },
+        };
+      },
+      callProvider: async (created, { quote, option, expiresAt }) => {
+        const razorpayOrder = await callRazorpay("/orders", {
+          method: "POST",
+          body: JSON.stringify({
+            amount: razorpayAmountPaise(option.amountOnline),
+            currency: "INR",
+            receipt: created.orderNumber,
+            notes: {
+              application_order_id: String(created.orderId),
+              payment_mode: mode,
+            },
+          }),
+        });
+        await dbQuery("UPDATE orders SET razorpay_order_id = ? WHERE id = ?", [razorpayOrder.id, created.orderId]);
+        await dbQuery(
+          `INSERT INTO payment_transactions
+            (order_id, provider, provider_order_id, event_type, status, amount, payload_json)
+           VALUES (?, 'Razorpay', ?, 'order.created', 'Pending', ?, ?)`,
+          [created.orderId, razorpayOrder.id, option.amountOnline, JSON.stringify(razorpayOrder)]
+        );
+        return { created, quote, option, expiresAt, razorpayOrder };
+      },
+      compensate: async (created) => {
+        await cancelPendingOrder(created.orderId, "Razorpay order was not completed");
+        await markCheckoutAttempt(dbQuery, started.attemptId, "compensated", {
+          orderId: created.orderId,
+          orderNumber: created.orderNumber,
+          errorMessage: "Razorpay order was not completed",
+        });
+        attemptSettled = true;
       },
     });
+
+    const response = {
+      order: {
+        id: completed.created.orderNumber,
+        databaseId: completed.created.orderId,
+        razorpayOrderId: completed.razorpayOrder.id,
+        keyId: process.env.RAZORPAY_KEY_ID,
+        currency: "INR",
+        amount: completed.option.amountOnline,
+        amountPaise: completed.razorpayOrder.amount,
+        codDue: completed.option.amountCod,
+        expiresAt: completed.expiresAt.toISOString(),
+        customer: body.customer || {},
+        quote: publicQuote(completed.quote),
+      },
+    };
+    await markCheckoutAttempt(dbQuery, started.attemptId, "completed", {
+      orderId: completed.created.orderId,
+      orderNumber: completed.created.orderNumber,
+      responseJson: JSON.stringify(response),
+    });
+    res.status(201).json(response);
   } catch (error) {
-    if (created?.orderId) {
-      await cancelPendingOrder(created.orderId, error.message).catch((cancelError) => {
-        console.error("Pending payment rollback failed:", cancelError);
+    if (!attemptSettled) {
+      await markCheckoutAttempt(dbQuery, started.attemptId, error.compensationError ? "ambiguous" : "retryable", {
+        errorMessage: error.message,
+      }).catch((markError) => {
+        console.error("Could not record checkout attempt:", markError?.message || markError);
       });
-    } else {
-      await rollback(connection).catch(() => {});
     }
     res.status(error.statusCode || 400).json({
       message: error.message || "Unable to start payment",
     });
-  } finally {
-    connection.release();
   }
 }
 

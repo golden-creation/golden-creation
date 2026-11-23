@@ -114,6 +114,9 @@ function normaliseStoreItem(product) {
     categoryId: Number(product.categoryId || product.category_id || 0),
     categoryName: product.categoryName || product.category_name || "",
     price: Number(selectedVariant?.price ?? product.price) || 0,
+    comparePrice: selectedVariant?.comparePrice || product.comparePrice || null,
+    mrp: product.mrp || null,
+    discountPercent: product.discountPercent || 0,
     imageUrl: selectedVariant?.image || product.imageUrl || product.image || "",
     stock: Number(selectedVariant?.stock ?? product.stock ?? product.stock_quantity ?? 0) || 0,
   };
@@ -339,9 +342,9 @@ export function AppProvider({ children }) {
   const productDiscountAmount = Number(discountState.totals?.productDiscountAmount ?? discountAmount);
   const shippingDiscountAmount = Number(discountState.totals?.shippingDiscountAmount || 0);
   const discountedSubtotal = Math.max(0, cartSubtotal - productDiscountAmount);
-  const shippingFee = Number(discountState.totals?.shippingFee ?? baseShippingFee);
-  const taxAmount = 0;
-  const cartGrandTotal = discountedSubtotal + shippingFee + taxAmount;
+  const shippingFee = null;
+  const taxAmount = null;
+  const cartGrandTotal = discountedSubtotal;
 
   const applyDiscountCode = async (code, extra = {}) => {
     const normalizedCode = String(code || "").trim().toUpperCase();
@@ -354,8 +357,8 @@ export function AppProvider({ children }) {
       code: normalizedCode,
       items: cartItems,
       subtotal: cartSubtotal,
-      shippingFee: baseShippingFee,
-      taxAmount,
+      shippingFee: 0,
+      taxAmount: 0,
       customer: currentUser || {},
       ...extra,
     });
@@ -392,8 +395,8 @@ export function AppProvider({ children }) {
       code: "",
       items: cartItems,
       subtotal: cartSubtotal,
-      shippingFee: baseShippingFee,
-      taxAmount: Math.round(cartSubtotal * 0.08),
+      shippingFee: 0,
+      taxAmount: 0,
       customer: currentUser || {},
     })
       .then((result) => {
@@ -682,8 +685,8 @@ export function AppProvider({ children }) {
     }
 
     const orderSubtotal = Number(totals.subtotal ?? cartSubtotal);
-    const orderShippingFee = Number(totals.shippingFee ?? shippingFee);
-    const orderTaxAmount = Number(totals.taxAmount ?? taxAmount);
+    const orderShippingFee = Number(totals.shippingFee ?? 0);
+    const orderTaxAmount = Number(totals.taxAmount ?? 0);
     const orderTotal = Number(totals.totalAmount ?? orderSubtotal + orderShippingFee + orderTaxAmount);
 
     const backendOrder = await createOrder({
@@ -700,6 +703,7 @@ export function AppProvider({ children }) {
         totals.discountCode ?? discountState.appliedDiscount?.code ?? "",
       discountAmount: Number(totals.discountAmount ?? discountAmount),
       totalAmount: orderTotal,
+      idempotencyKey: checkoutDetails.idempotencyKey,
     });
 
     if (!backendOrder) {

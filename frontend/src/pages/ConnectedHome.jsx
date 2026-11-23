@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
+import PriceOffer from "../components/PriceOffer";
 import Navbar from "../components/Navbar";
 import heroImg from "../assets/a2.webp";
 import goldenCreationHeroLogo from "../assets/golden-creation-hero-logo.png";
@@ -17,7 +18,6 @@ import music from "../assets/music.png";
 import curatedImg from "../assets/curated.webp";
 import star from "../assets/star.png";
 import {
-  formatCurrency,
   getBrands,
   getCategories,
   getCollections,
@@ -80,6 +80,7 @@ function ConnectedHome() {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [brands, setBrands] = useState([]);
+  const [brandMessage, setBrandMessage] = useState("");
   const [collections, setCollections] = useState([]);
   const [googleReviews, setGoogleReviews] = useState(fallbackGoogleReviewData);
   const [googleReviewsLoading, setGoogleReviewsLoading] = useState(true);
@@ -102,14 +103,15 @@ function ConnectedHome() {
         const [categoryResponse, productResponse, brandResponse, collectionResponse] = await Promise.all([
           getCategories(),
           getProducts(),
-          getBrands({ sort: "name" }).catch(() => []),
+          getBrands({ sort: "name" }).catch(() => null),
           getCollections({ limit: 100, status: "Active" }).catch(() => []),
         ]);
 
         if (!ignore) {
           setCategories(categoryResponse);
           setProducts(productResponse);
-          setBrands(brandResponse);
+          setBrands(Array.isArray(brandResponse) ? brandResponse : []);
+          setBrandMessage(brandResponse === null ? "Brands could not be loaded." : brandResponse.length ? "" : "No brands available.");
           setCollections(collectionResponse);
           setError("");
         }
@@ -237,7 +239,7 @@ function ConnectedHome() {
     <div className="w-full overflow-x-hidden bg-[#FBF8F2]">
       <Navbar />
 
-      <section className="bg-[#E7CB81] px-4 py-6 md:px-8 md:py-10">
+      <section className="bg-[#93C572] px-4 py-6 md:px-8 md:py-10">
         <div className="mx-auto grid max-w-7xl items-center gap-8 md:grid-cols-[1.05fr_0.95fr]">
           <div className="py-2 md:py-4">
             <img
@@ -496,7 +498,7 @@ function ConnectedHome() {
               </div>
             ) : (
               <div className="rounded-2xl border border-dashed border-gray-200 bg-[#FBF8F2] p-8 text-center text-sm text-gray-500">
-                No brands available.
+                {loading ? "Loading brands..." : brandMessage || "No brands available."}
               </div>
             )}
           </div>
@@ -851,35 +853,27 @@ function ProductCard({ product, onClick }) {
           {product.name}
         </p>
 
-        <div className="mt-2 flex min-h-[24px] items-center gap-1.5">
-          {hasRating ? (
-            <>
-              <div className="flex gap-0.5">
-                {[...Array(5)].map((_, index) => (
-                  <img
-                    key={index}
-                    src={star}
-                    className={`h-3.5 w-3.5 ${index < Math.round(rating) ? "opacity-100" : "opacity-20"}`}
-                    alt=""
-                  />
-                ))}
-              </div>
-              <span className="text-[11px] font-semibold text-[#6B5B2A]">
-                {rating.toFixed(1)}
-              </span>
-              <span className="text-[11px] text-gray-400">({reviewCount})</span>
-            </>
-          ) : (
-            <span className="rounded-full bg-gray-100 px-2 py-1 text-[11px] font-medium text-gray-500">
-              Not rated yet
+        {hasRating && (
+          <div className="mt-2 flex items-center gap-1.5">
+            <div className="flex gap-0.5">
+              {[...Array(5)].map((_, index) => (
+                <img
+                  key={index}
+                  src={star}
+                  className={`h-3.5 w-3.5 ${index < Math.round(rating) ? "opacity-100" : "opacity-20"}`}
+                  alt=""
+                />
+              ))}
+            </div>
+            <span className="text-[11px] font-semibold text-[#6B5B2A]">
+              {rating.toFixed(1)}
             </span>
-          )}
-        </div>
+            <span className="text-[11px] text-gray-400">({reviewCount})</span>
+          </div>
+        )}
 
         <div className="mt-3 flex items-end justify-between gap-2">
-          <p className="text-base font-bold text-[#C2863F]">
-            {formatCurrency(product.price)}
-          </p>
+          <PriceOffer price={product.price} comparePrice={product.comparePrice} mrp={product.mrp} percent={product.discountPercent} />
           <span className="rounded-full bg-[#FFF49C] px-2.5 py-1 text-[11px] font-semibold text-[#8A5A22] transition group-hover:bg-[#C2863F] group-hover:text-white">
             View
           </span>

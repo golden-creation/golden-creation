@@ -1478,10 +1478,10 @@ export async function approveOperationalMovement(catalog, id, status) {
   });
 }
 
-export async function importStoreProducts(products) {
+export async function importStoreProducts(products, { dryRun = false } = {}) {
   return apiRequest("/admin/catalogs/store/import", {
     method: "POST",
-    body: JSON.stringify({ products }),
+    body: JSON.stringify({ products, dryRun }),
   });
 }
 

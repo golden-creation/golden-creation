@@ -409,11 +409,7 @@ const ProductDetail = () => {
                   {reviews.length === 1 ? "" : "s"})
                 </span>
               </div>
-            ) : (
-              <p className="mb-3 text-sm font-medium text-gray-500">
-                Not Rated Yet
-              </p>
-            )}
+            ) : null}
 
             <h1 className="text-3xl font-bold text-gray-900">
               {product.name}

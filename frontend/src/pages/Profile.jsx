@@ -470,7 +470,7 @@ function Profile() {
                         <p>Phone: {profileUser?.phone || "Not available"}</p>
                         <p>Joined: {profileUser?.created_at ? formatDate(profileUser.created_at) : "Not available"}</p>
                         <p>Verified: {profileUser?.is_verified ? "Yes" : "No"}</p>
-                        <p>Current cart value: {formatCurrency(cartGrandTotal)}</p>
+                        <p>Merchandise total: {formatCurrency(cartGrandTotal)}</p>
                         {profileLoading && <p>Refreshing profile...</p>}
                         {profileError && <p>{profileError}</p>}
                       </div>

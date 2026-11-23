@@ -24,6 +24,21 @@ function clearMenuCache() {
   cachedNavbarAt = 0;
 }
 
+function removeBrandPenItems(items) {
+  if (!Array.isArray(items)) return [];
+
+  return items
+    .filter((item) => {
+      const title = String(item?.title || "").trim().toLowerCase();
+      const url = String(item?.url || "").toLowerCase();
+      return title !== "brand pen" && !url.includes("category=440");
+    })
+    .map((item) => ({
+      ...item,
+      children: removeBrandPenItems(item.children),
+    }));
+}
+
 function moduleError(res, error, message) {
   console.log(`${message}:`, error);
   res.status(500).json({ message });
@@ -56,7 +71,7 @@ export async function getNavbarMenus(_req, res) {
     }
 
     const rows = await getMenuRows();
-    cachedNavbar = { menus: buildMenuTree(rows), cached: false };
+    cachedNavbar = { menus: removeBrandPenItems(buildMenuTree(rows)), cached: false };
     cachedNavbarAt = now;
     res.json(cachedNavbar);
   } catch (error) {

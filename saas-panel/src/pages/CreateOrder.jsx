@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import { createAdminOrder } from "../lib/adminApi";
 import RemoteLookup from "../components/RemoteLookup";
+import { quantityFieldValue } from "../lib/formatQuantity";
 
 const emptyCustomer = {
   name: "",
@@ -187,7 +188,7 @@ function CreateOrder() {
                     <span className="text-xs text-gray-500">Product</span>
                     <RemoteLookup type="products" catalog="website" value={item.product} onChange={(product) => updateItem(index, "product", product)} placeholder="Search product..." />
                   </label>
-                  <Field label="Quantity" type="number" value={item.quantity} onChange={(value) => updateItem(index, "quantity", value)} />
+                  <Field label="Quantity" type="number" value={quantityFieldValue(item.quantity)} onChange={(value) => updateItem(index, "quantity", value)} />
                   <Field label="Price" type="number" value={item.price} onChange={(value) => updateItem(index, "price", value)} />
                   <button onClick={() => removeItem(index)} className="self-end rounded-lg border px-3 py-2 text-sm">
                     Remove

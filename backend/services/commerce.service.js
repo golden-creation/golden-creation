@@ -1,4 +1,5 @@
 import db from "../config/db.js";
+import { categoryGstTotal, composeCheckoutTotal } from "./checkout-totals.js";
 import { validateDiscountCart } from "./discount.service.js";
 
 export function dbQuery(sql, values = [], connection = db) {
@@ -129,8 +130,24 @@ async function loadProductCollections(productIds, connection = db) {
   }, new Map());
 }
 
+export function checkoutQuantity(value, label = "quantity") {
+  const text = String(value ?? "").trim();
+  if (!/^\d+(\.\d+)?$/.test(text)) {
+    const error = new Error(`The ${label} must be a whole number of at least 1. Fractional quantities are not accepted.`);
+    error.statusCode = 400;
+    throw error;
+  }
+  const quantity = Number(text);
+  if (!Number.isInteger(quantity) || quantity < 1 || !Number.isSafeInteger(quantity)) {
+    const error = new Error(`The ${label} must be a whole number of at least 1. Fractional quantities are not accepted.`);
+    error.statusCode = 400;
+    throw error;
+  }
+  return quantity;
+}
+
 async function normalizeProductLine(item, connection = db) {
-  const quantity = Math.max(1, Number(item.quantity) || 1);
+  const quantity = checkoutQuantity(item.quantity, "product quantity");
   const productId = Number(item.productId || item.product_id || item.id) || 0;
   const variantId = Number(item.variantId || item.variant_id) || null;
   if (!productId) throw new Error("A cart product is missing its product ID");
@@ -146,9 +163,9 @@ async function normalizeProductLine(item, connection = db) {
     productId,
     variantId,
     variantSku: product.variant_sku || cleanString(item.variantSku || item.variant_sku),
-    variantTitle: cleanString(item.variantTitle || item.variant_title),
+    variantTitle: checkoutVariantTitle(item.variantTitle || item.variant_title),
     variantOptions: parseJson(item.variantOptions || item.variant_options, []),
-    productName: product.name,
+    productName: checkoutItemName(product.name, "product"),
     itemType: "Product",
     bundleName: null,
     bundleItems: [],
@@ -169,7 +186,7 @@ async function normalizeProductLine(item, connection = db) {
 }
 
 async function normalizeBundleLine(item, connection = db) {
-  const quantity = Math.max(1, Number(item.quantity) || 1);
+  const quantity = checkoutQuantity(item.quantity, "bundle quantity");
   const bundleType = cleanString(item.bundleType || item.bundle_type).toLowerCase();
   const requestedBundleId = Number(item.bundleId || item.bundle_id) || 0;
   let name = cleanString(item.bundleName || item.name) || "Golden Creation Bundle";
@@ -208,7 +225,7 @@ async function normalizeBundleLine(item, connection = db) {
   const resolvedItems = [];
   let customPrice = 0;
   for (const bundleItem of bundleItems) {
-    const unitQuantity = Math.max(1, Number(bundleItem.quantity) || 1);
+    const unitQuantity = checkoutQuantity(bundleItem.quantity, "bundle item quantity");
     const product = await loadProduct(
       Number(bundleItem.productId || bundleItem.product_id),
       Number(bundleItem.variantId || bundleItem.variant_id) || null,
@@ -238,6 +255,7 @@ async function normalizeBundleLine(item, connection = db) {
   }
 
   if (bundleType === "custom" || !requestedBundleId) price = toMoney(customPrice);
+  name = checkoutItemName(name, "bundle");
   const categoryId = resolvedItems[0]?.categoryId || null;
   const componentBase = resolvedItems.reduce(
     (sum, resolvedItem) => sum + resolvedItem.price * resolvedItem.quantity * quantity,
@@ -479,24 +497,12 @@ async function resolveTax(items, discountedSubtotal, subtotal, connection = db) 
     connection
   );
   const rates = new Map(rows.map((row) => [Number(row.category_id), Number(row.tax_rate || 0)]));
-  const discountRatio = discountedSubtotal / subtotal;
-  let totalTax = 0;
-  items.forEach((item) => {
-    const taxableComponents = (item.taxComponents || []).filter((component) => !component.gstInclusive);
-    item.gstRate = taxableComponents.reduce(
-      (maximum, component) => Math.max(maximum, rates.get(component.categoryId) || 0),
-      0
-    );
-    item.gstAmount = toMoney(
-      taxableComponents.reduce(
-        (sum, component) =>
-          sum + component.amount * discountRatio * ((rates.get(component.categoryId) || 0) / 100),
-        0
-      )
-    );
-    totalTax += item.gstAmount;
+  const taxed = categoryGstTotal(items, rates, discountedSubtotal, subtotal);
+  taxed.items.forEach((item, index) => {
+    items[index].gstRate = item.gstRate;
+    items[index].gstAmount = item.gstAmount;
   });
-  return toMoney(totalTax);
+  return taxed.total;
 }
 
 async function resolvePaymentOptions(items, finalTotal, connection = db) {
@@ -618,9 +624,17 @@ export async function buildCheckoutQuote(payload, connection = db) {
     appliedDiscounts = discountResult.appliedDiscounts || [];
     discountCode = appliedDiscounts[0]?.code || discountCode || "";
   }
-  const discountedSubtotal = toMoney(Math.max(0, subtotal - productDiscountAmount));
-  const taxAmount = await resolveTax(items, discountedSubtotal, subtotal, connection);
-  const totalAmount = toMoney(discountedSubtotal + shippingFee + taxAmount);
+  const priced = composeCheckoutTotal({
+    subtotal,
+    productDiscountAmount,
+    shippingFee,
+    shippingDiscountAmount: 0,
+    taxAmount: await resolveTax(items, toMoney(Math.max(0, subtotal - productDiscountAmount)), subtotal, connection),
+  });
+  const discountedSubtotal = priced.discountedSubtotal;
+  shippingFee = priced.shippingFee;
+  const taxAmount = priced.taxAmount;
+  const totalAmount = priced.totalAmount;
   const paymentOptions = await resolvePaymentOptions(items, totalAmount, connection);
 
   return {
@@ -661,6 +675,31 @@ export async function deductQuoteStock(connection, items) {
   }
 }
 
+export function checkoutItemName(value, label = "item") {
+  const name = String(value ?? "").trim();
+  if (!name) {
+    const error = new Error(`The ${label} name is missing. Checkout was stopped before an order was created.`);
+    error.statusCode = 400;
+    throw error;
+  }
+  if (name.length > 255) {
+    const error = new Error(`The ${label} name is longer than 255 characters and was not shortened.`);
+    error.statusCode = 400;
+    throw error;
+  }
+  return name;
+}
+
+function checkoutVariantTitle(value) {
+  const title = cleanString(value);
+  if (title.length > 255) {
+    const error = new Error("The variant name is longer than 255 characters and was not shortened.");
+    error.statusCode = 400;
+    throw error;
+  }
+  return title;
+}
+
 export function createOrderNumber() {
   const random = Math.floor(Math.random() * 900 + 100);
   return `GC-${Date.now().toString().slice(-8)}${random}`;
@@ -677,8 +716,13 @@ export async function insertQuotedOrder(
     amountPaid,
     codDue,
     paymentExpiresAt = null,
+    checkoutAttemptId = null,
   }
 ) {
+  for (const item of quote?.items || []) {
+    checkoutItemName(item?.productName, item?.itemType === "Bundle" ? "bundle" : "product");
+    checkoutVariantTitle(item?.variantTitle);
+  }
   const customer = payload.customer || {};
   const customerName =
     cleanString(customer.name) ||
@@ -694,8 +738,8 @@ export async function insertQuotedOrder(
        street_address, city, state, zip_code, payment_method, payment_status,
        subtotal, shipping_fee, tax_amount, discount_id, discount_code,
        discount_amount, total_amount, amount_paid, cod_due, payment_expires_at,
-       quote_snapshot, order_status
-     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+       quote_snapshot, order_status, checkout_attempt_id
+     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
       orderNumber,
       Number(payload.userId || customer.userId) || null,
@@ -723,6 +767,7 @@ export async function insertQuotedOrder(
         paymentOption: payload.paymentOption || paymentMethod,
       }),
       orderStatus,
+      checkoutAttemptId,
     ]
   );
   const orderId = Number(orderResult.insertId);
@@ -773,12 +818,12 @@ export async function restoreOrderStock(connection, orderId) {
         ? parseJson(row.bundle_items, []).map((item) => ({
             productId: Number(item.productId || item.product_id),
             variantId: Number(item.variantId || item.variant_id) || null,
-            quantity: Math.max(1, Number(item.quantity) || 1) * Math.max(1, Number(row.quantity) || 1),
+            quantity: checkoutQuantity(item.quantity, "bundle item quantity") * checkoutQuantity(row.quantity, "order quantity"),
           }))
         : [{
             productId: Number(row.product_id),
             variantId: Number(row.variant_id) || null,
-            quantity: Math.max(1, Number(row.quantity) || 1),
+            quantity: checkoutQuantity(row.quantity, "order quantity"),
           }];
     for (const line of lines) {
       if (line.variantId) {

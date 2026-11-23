@@ -7,13 +7,7 @@ function ProductRating({ product, className = "", starClassName = "h-3.5 w-3.5" 
     product?.averageRating ?? product?.average_rating ?? product?.rating ?? 0
   ) || 0;
 
-  if (reviewCount <= 0 || rating <= 0) {
-    return (
-      <p className={`text-xs font-semibold text-gray-500 ${className}`}>
-        Not Rated Yet
-      </p>
-    );
-  }
+  if (reviewCount <= 0 || rating <= 0) return null;
 
   return (
     <div className={`flex items-center gap-1.5 ${className}`}>

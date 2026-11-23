@@ -4,6 +4,12 @@ import {
   releaseEligibleCommissions,
   reverseOrderCommissions,
 } from "../services/referral-affiliate.service.js";
+import { readStockDetail, parseStockQuantity, stockWritePlan, auditHistoryAvailable } from "../services/stock-detail.js";
+import { inventoryStatusSql, physicalStockFilter } from "../services/inventory-status.js";
+import { planLowStockStateWrite } from "../services/low-stock-state.js";
+import { applyShopImportPlan, planShopImport, SHOP_EXPORT_COLUMNS } from "../services/shop-import.js";
+import { cancelStoredOrder } from "../services/order-cancellation-store.js";
+import { statusTransitionAllowed } from "../services/order-cancellation.js";
 
 const TASK_STATUSES = ["Pending", "Ongoing", "Done", "Not Completed", "Abandoned"];
 const ATTENDANCE_STATUSES = ["Present", "Absent", "Half Day", "Leave"];
@@ -328,8 +334,8 @@ async function catalogQueryParts(catalog, query = {}) {
   const q = clean(query.q);
 
   if (q) {
-    where.push("(p.name LIKE ? OR p.sku LIKE ? OR p.barcode LIKE ? OR c.name LIKE ? OR b.name LIKE ?)");
-    values.push(...Array(5).fill(`%${q}%`));
+    where.push("(p.name LIKE ? OR p.sku LIKE ? OR p.barcode LIKE ? OR CAST(p.id AS CHAR) LIKE ? OR c.name LIKE ? OR b.name LIKE ?)");
+    values.push(...Array(6).fill(`%${q}%`));
   }
   if (query.categoryId) {
     const categoryIds = await descendantCategoryIds(query.categoryId);
@@ -355,14 +361,22 @@ async function catalogQueryParts(catalog, query = {}) {
       : key === "store"
       ? "COALESCE(shop_stock.stock_on_hand, 0)"
       : "COALESCE(p.stock_quantity, 0)";
+  const physicalAlias = key === "warehouse" ? "warehouse_stock" : key === "store" ? "shop_stock" : "";
   const stockStatus = clean(query.stockStatus).toLowerCase();
-  const physicalTotalExpression = "(COALESCE(warehouse_stock.stock_on_hand, 0) + COALESCE(shop_stock.stock_on_hand, 0))";
   const busyStockExpression = "COALESCE(p.stock_quantity, 0)";
-  if (stockStatus === "in_stock") where.push(`${selectedStockExpression} > 0`);
-  if (stockStatus === "out_of_stock") where.push(`${selectedStockExpression} <= 0`);
-  if (stockStatus === "low_stock") where.push(`${selectedStockExpression} <= ${config.reorder}`);
-  if (["mismatch", "mismatched", "unbalanced"].includes(stockStatus)) where.push(`${busyStockExpression} <> ${physicalTotalExpression}`);
-  if (["balanced", "matched"].includes(stockStatus)) where.push(`${busyStockExpression} = ${physicalTotalExpression}`);
+  const auditRows = await dbQuery(
+    "SELECT 1 AS present FROM information_schema.tables WHERE table_schema = DATABASE() AND table_name = 'product_stock_audit_logs' LIMIT 1"
+  );
+  const reconciliationStatus = inventoryStatusSql({ auditAvailable: Boolean(auditRows[0]) });
+  const presenceFilter = physicalAlias ? physicalStockFilter(physicalAlias, stockStatus, config.reorder) : "";
+  if (presenceFilter && ["in_stock", "out_of_stock", "low_stock"].includes(stockStatus)) where.push(presenceFilter);
+  else if (stockStatus === "in_stock") where.push(`${selectedStockExpression} > 0`);
+  else if (stockStatus === "out_of_stock") where.push(`${selectedStockExpression} <= 0`);
+  else if (stockStatus === "low_stock") where.push(`${selectedStockExpression} <= ${config.reorder}`);
+  if (["mismatch", "mismatched", "unbalanced"].includes(stockStatus)) where.push(`${reconciliationStatus} = 'mismatch'`);
+  if (["balanced", "matched"].includes(stockStatus)) where.push(`${reconciliationStatus} = 'balanced'`);
+  if (["not_recorded", "not-recorded", "missing"].includes(stockStatus)) where.push(`${reconciliationStatus} = 'not_recorded'`);
+  if (["unverified", "unverified_count"].includes(stockStatus)) where.push(`${reconciliationStatus} = 'unverified'`);
   if (["zero", "zero_stock", "zero_busy", "zero_website"].includes(stockStatus)) where.push(`${busyStockExpression} <= 0`);
   const ids = clean(query.ids).split(",").map(number).filter(Boolean);
   if (ids.length) {
@@ -388,21 +402,25 @@ async function catalogQueryParts(catalog, query = {}) {
     ${join}
     WHERE ${where.join(" AND ")}
   `;
-  return { key, config, values, base, stock: config.stock, reserved: config.reserved || "0", reorder: config.reorder, price: config.price };
+  return { key, config, values, base, stock: config.stock, reserved: config.reserved || "0", reorder: config.reorder, price: config.price, reconciliationStatus };
 }
 
 async function catalogRows(catalog, query = {}) {
   const { page, limit, offset } = pagination(query);
-  const { values, base, stock, reserved, reorder, price } = await catalogQueryParts(catalog, query);
+  const { values, base, stock, reserved, reorder, price, reconciliationStatus } = await catalogQueryParts(catalog, query);
   const rows = await dbQuery(
     `SELECT p.*, c.name AS category_name, b.name AS brand_name, ${price} AS display_price,
       ${stock} AS stock_on_hand, ${reserved} AS reserved_stock, ${reorder} AS reorder_level,
       COALESCE(p.stock_quantity, 0) AS busy_stock,
       COALESCE(p.stock_quantity, 0) AS website_stock,
-      COALESCE(warehouse_stock.stock_on_hand, 0) AS warehouse_stock,
-      COALESCE(shop_stock.stock_on_hand, 0) AS shop_stock,
-      COALESCE(warehouse_stock.stock_on_hand, 0) + COALESCE(shop_stock.stock_on_hand, 0) AS physical_total,
-      CASE WHEN COALESCE(p.stock_quantity, 0) = (COALESCE(warehouse_stock.stock_on_hand, 0) + COALESCE(shop_stock.stock_on_hand, 0)) THEN 1 ELSE 0 END AS is_balanced,
+      CASE WHEN warehouse_stock.id IS NULL THEN NULL ELSE warehouse_stock.stock_on_hand END AS warehouse_stock,
+      CASE WHEN shop_stock.id IS NULL THEN NULL ELSE shop_stock.stock_on_hand END AS shop_stock,
+      CASE
+        WHEN warehouse_stock.id IS NULL OR shop_stock.id IS NULL THEN NULL
+        ELSE warehouse_stock.stock_on_hand + shop_stock.stock_on_hand
+      END AS physical_total,
+      ${reconciliationStatus} AS reconciliation_status,
+      CASE WHEN ${reconciliationStatus} = 'balanced' THEN 1 ELSE 0 END AS is_balanced,
       CASE WHEN COALESCE(p.stock_quantity, 0) <= 0 THEN 1 ELSE 0 END AS is_zero_stock,
       CASE WHEN ${stock} <= ${reorder} THEN 1 ELSE 0 END AS is_low_stock,
       COALESCE(p.reorder_level, 0) AS website_reorder_level,
@@ -418,10 +436,11 @@ async function catalogRows(catalog, query = {}) {
       ...row,
       busyStock: number(row.busy_stock),
       websiteStock: number(row.website_stock),
-      warehouseStock: number(row.warehouse_stock),
-      shopStock: number(row.shop_stock),
-      physicalTotal: number(row.physical_total),
-      isBalanced: Boolean(number(row.is_balanced)),
+      warehouseStock: row.warehouse_stock === null || row.warehouse_stock === undefined ? null : number(row.warehouse_stock),
+      shopStock: row.shop_stock === null || row.shop_stock === undefined ? null : number(row.shop_stock),
+      physicalTotal: row.physical_total === null || row.physical_total === undefined ? null : number(row.physical_total),
+      reconciliationStatus: row.reconciliation_status,
+      isBalanced: row.reconciliation_status === "balanced",
       isZeroStock: Boolean(number(row.is_zero_stock)),
       isLowStock: Boolean(number(row.is_low_stock)),
       reorderLevel: number(row.reorder_level),
@@ -431,15 +450,17 @@ async function catalogRows(catalog, query = {}) {
 }
 
 async function catalogSummary(catalog, query = {}) {
-  const { values, base, stock, reserved, reorder } = await catalogQueryParts(catalog, query);
+  const { values, base, stock, reserved, reorder, reconciliationStatus } = await catalogQueryParts(catalog, query);
   const rows = await dbQuery(
     `SELECT
       COUNT(DISTINCT p.id) AS listed_products,
       COALESCE(SUM(${stock}), 0) AS total_stock,
       COALESCE(SUM(${reserved}), 0) AS reserved_stock,
       SUM(CASE WHEN ${stock} <= ${reorder} THEN 1 ELSE 0 END) AS low_stock,
-      SUM(CASE WHEN COALESCE(p.stock_quantity, 0) <> (COALESCE(warehouse_stock.stock_on_hand, 0) + COALESCE(shop_stock.stock_on_hand, 0)) THEN 1 ELSE 0 END) AS mismatched,
-      SUM(CASE WHEN COALESCE(p.stock_quantity, 0) = (COALESCE(warehouse_stock.stock_on_hand, 0) + COALESCE(shop_stock.stock_on_hand, 0)) THEN 1 ELSE 0 END) AS balanced,
+      SUM(CASE WHEN ${reconciliationStatus} = 'not_recorded' THEN 1 ELSE 0 END) AS not_recorded,
+      SUM(CASE WHEN ${reconciliationStatus} = 'unverified' THEN 1 ELSE 0 END) AS unverified,
+      SUM(CASE WHEN ${reconciliationStatus} = 'mismatch' THEN 1 ELSE 0 END) AS mismatched,
+      SUM(CASE WHEN ${reconciliationStatus} = 'balanced' THEN 1 ELSE 0 END) AS balanced,
       SUM(CASE WHEN COALESCE(p.stock_quantity, 0) <= 0 THEN 1 ELSE 0 END) AS zero_stock,
       SUM(CASE WHEN p.category_id IS NULL THEN 1 ELSE 0 END) AS uncategorized
      ${base}`,
@@ -451,6 +472,8 @@ async function catalogSummary(catalog, query = {}) {
     totalStock: number(row.total_stock),
     reservedStock: number(row.reserved_stock),
     lowStock: number(row.low_stock),
+    notRecorded: number(row.not_recorded),
+    unverified: number(row.unverified),
     mismatched: number(row.mismatched),
     balanced: number(row.balanced),
     zeroStock: number(row.zero_stock),
@@ -726,20 +749,9 @@ export async function getProductStockDetail(req, res) {
   if (!id) return res.status(400).json({ message: "Valid product is required" });
 
   try {
-    await ensurePhysicalStockRows(id);
-    const payload = await catalogRows("website", { ids: String(id), limit: 1 });
-    const product = payload.rows[0];
-    if (!product) return res.status(404).json({ message: "Product was not found" });
-    const auditLogs = await dbQuery(
-      `SELECT id, bucket, previous_stock, new_stock, previous_reorder_level, new_reorder_level,
-              adjustment_type, quantity_delta, reason, actor, created_at
-       FROM product_stock_audit_logs
-       WHERE product_id = ?
-       ORDER BY created_at DESC, id DESC
-       LIMIT 25`,
-      [id]
-    );
-    res.json({ product, auditLogs });
+    const detail = await readStockDetail(dbQuery, id);
+    if (!detail.ok) return res.status(detail.status).json({ message: detail.message });
+    res.json({ product: detail.product, auditLogs: detail.auditLogs });
   } catch (error) {
     respondError(res, error, "Failed to load product stock");
   }
@@ -754,38 +766,50 @@ export async function updateProductStock(req, res) {
   }
 
   try {
-    await ensurePhysicalStockRows(id);
+    const plan = stockWritePlan({
+      bucket,
+      mode,
+      stockOnHand: req.body?.stockOnHand ?? req.body?.stock_on_hand ?? req.body?.stock,
+      quantity: req.body?.quantity ?? req.body?.delta,
+    });
+    if (!plan.ok) return res.status(400).json({ message: plan.message });
+    if (!(await auditHistoryAvailable(dbQuery))) {
+      return res.status(503).json({ message: "Stock was not changed because the stock audit history table is not available." });
+    }
     const rows =
       bucket === "website"
         ? await dbQuery("SELECT stock_quantity AS stock_on_hand, reorder_level FROM products WHERE id = ? AND deleted_at IS NULL LIMIT 1", [id])
         : await dbQuery("SELECT stock_on_hand, reorder_level FROM product_stock_counts WHERE product_id = ? AND bucket = ? LIMIT 1", [id, bucket]);
-    const current = rows[0];
+    const current = rows[0] || (bucket === "website" ? null : { stock_on_hand: 0, reorder_level: 0 });
     if (!current) return res.status(404).json({ message: "Product stock was not found" });
 
     const currentStock = number(current.stock_on_hand);
-    const quantity = Math.max(0, number(req.body?.quantity ?? req.body?.delta ?? 0));
     let nextStock = currentStock;
-    if (mode === "set") nextStock = Math.max(0, number(req.body?.stockOnHand ?? req.body?.stock_on_hand ?? req.body?.stock));
-    if (mode === "increase") nextStock = currentStock + quantity;
-    if (mode === "decrease") nextStock = currentStock - quantity;
+    if (plan.mode === "set") nextStock = plan.quantity;
+    if (plan.mode === "increase") nextStock = currentStock + plan.quantity;
+    if (plan.mode === "decrease") nextStock = currentStock - plan.quantity;
     if (nextStock < 0) {
       return res.status(400).json({ message: `${catalogConfig[bucket === "shop" ? "store" : bucket]?.label || bucket} stock cannot go below zero` });
     }
 
-    const reorderLevel = req.body?.reorderLevel ?? req.body?.reorder_level;
+    const reorderInput = req.body?.reorderLevel ?? req.body?.reorder_level;
+    const reorderLevel = reorderInput === undefined || reorderInput === null || String(reorderInput).trim() === ""
+      ? null
+      : parseStockQuantity(reorderInput);
+    if (reorderLevel && !reorderLevel.ok) return res.status(400).json({ message: reorderLevel.message });
     await setProductStock(
       req,
       id,
       bucket,
       nextStock,
-      reorderLevel === undefined || reorderLevel === null || reorderLevel === "" ? null : number(reorderLevel, 0),
-      mode,
+      reorderLevel ? reorderLevel.value : null,
+      plan.mode,
       req.body?.reason || "Inventory adjustment"
     );
     await refreshLowStockNotifications();
     await logActivity(req, "Updated stock", "Inventory", `Product ${id}: ${bucket} ${currentStock} -> ${nextStock}`);
-    const detail = await catalogRows("website", { ids: String(id), limit: 1 });
-    res.json({ message: "Stock updated", product: detail.rows[0] });
+    const detail = await readStockDetail(dbQuery, id);
+    res.json({ message: "Stock updated", product: detail.product || null });
   } catch (error) {
     if (error?.message?.includes("required") || error?.message?.includes("not found")) {
       return res.status(400).json({ message: error.message });
@@ -1025,60 +1049,84 @@ export async function approveOperationalMovement(req, res) {
   }
 }
 
+async function shopImportCatalog(rows) {
+  const ids = [];
+  const skus = [];
+  for (const row of rows) {
+    const id = number(row.ID || row.id || row["Product ID"]);
+    const sku = clean(row.SKU || row.sku || row["Variant SKU"]);
+    if (id) ids.push(id);
+    if (sku) skus.push(sku);
+  }
+  const products = [];
+  if (ids.length || skus.length) {
+    const clauses = [];
+    const params = [];
+    if (ids.length) {
+      clauses.push(`p.id IN (${ids.map(() => "?").join(",")})`);
+      params.push(...ids);
+    }
+    if (skus.length) {
+      clauses.push(`p.sku IN (${skus.map(() => "?").join(",")})`);
+      params.push(...skus);
+    }
+    products.push(...await dbQuery(
+      `SELECT p.id, p.sku, COALESCE(shop.stock_on_hand, 0) AS shop_stock
+       FROM products p
+       LEFT JOIN product_stock_counts shop ON shop.product_id = p.id AND shop.bucket = 'shop'
+       WHERE p.deleted_at IS NULL AND (${clauses.join(" OR ")})`,
+      params
+    ));
+  }
+  const [categories, brands] = await Promise.all([
+    dbQuery("SELECT id, name FROM categories"),
+    dbQuery("SELECT id, name FROM brands WHERE deleted_at IS NULL"),
+  ]);
+  return { products, categories, brands };
+}
+
+const SHOP_PRODUCT_FIELDS = new Set(["name", "barcode", "description", "status", "price", "category_id", "brand_id"]);
+
 export async function importStoreProducts(req, res) {
   const rows = Array.isArray(req.body?.products) ? req.body.products : [];
+  const dryRun = req.body?.dryRun === true || req.body?.dryRun === "true";
   if (!rows.length) return res.status(400).json({ message: "Spreadsheet rows are required" });
-  let saved = 0;
   try {
-    for (const row of rows) {
-      const sku = clean(row.sku || row.SKU || row["Variant SKU"]);
-      const name = clean(row.name || row.Name || row.Title);
-      if (!sku || !name) continue;
-      const existingRows = await dbQuery("SELECT id FROM products WHERE sku=? ORDER BY id LIMIT 1", [sku]);
-      const values = [
-        clean(row.barcode) || null,
-        name,
-        clean(row.description) || null,
-        number(row.categoryId) || null,
-        number(row.brandId) || null,
-        number(row.mrp || row.price),
-        number(row.reorderLevel, 0),
-        clean(row.status || "Active"),
-      ];
-      let productId = existingRows[0]?.id || null;
-      if (existingRows[0]) {
-        await dbQuery(
-          `UPDATE products
-           SET barcode=?, name=?, description=?, category_id=?, brand_id=?, price=?,
-               reorder_level=?, status=?, deleted_at=NULL
-           WHERE id=?`,
-          [...values, existingRows[0].id]
-        );
-      } else {
-        const insertResult = await dbQuery(
-          `INSERT INTO products
-            (sku, barcode, name, description, category_id, brand_id, price, reorder_level, status, stock_quantity)
-           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 0)`,
-          [sku, ...values]
-        );
-        productId = insertResult.insertId;
-      }
-      if (productId) {
+    const plan = planShopImport(rows, await shopImportCatalog(rows));
+    const applied = await applyShopImportPlan(plan, {
+      dryRun,
+      write: async (kind, item) => {
+        if (kind === "product") {
+          const columns = Object.keys(item.fields).filter((column) => SHOP_PRODUCT_FIELDS.has(column));
+          if (!columns.length) return;
+          await dbQuery(
+            `UPDATE products SET ${columns.map((column) => `${column}=?`).join(", ")} WHERE id=? AND deleted_at IS NULL`,
+            [...columns.map((column) => item.fields[column]), item.productId]
+          );
+          return;
+        }
         await setProductStock(
           req,
-          productId,
+          item.productId,
           "shop",
-          number(row.stockOnHand || row.stock),
-          number(row.reorderLevel, 0),
+          item.shopStock !== undefined ? item.shopStock : item.currentShopStock,
+          item.reorderLevel !== undefined ? item.reorderLevel : null,
           "set",
           "Shop spreadsheet import"
         );
-      }
-      saved += 1;
-    }
-    await refreshLowStockNotifications();
-    await logActivity(req, "Imported Shop products", "Shop", `${saved} rows`);
-    res.json({ message: "Shop spreadsheet imported into unified inventory", saved });
+      },
+    });
+    if (!dryRun && applied.writes) await logActivity(req, "Imported Shop products", "Shop", `${plan.updated} rows`);
+    res.json({
+      message: dryRun ? "Shop import preview ready" : "Shop spreadsheet imported into unified inventory",
+      dryRun,
+      created: 0,
+      updated: plan.updated,
+      skipped: plan.skipped,
+      saved: dryRun ? 0 : plan.updated,
+      writes: applied.writes,
+      errors: plan.errors,
+    });
   } catch (error) {
     respondError(res, error, "Failed to import Shop spreadsheet");
   }
@@ -1445,10 +1493,39 @@ export async function updateShipment(req, res) {
   const id = number(req.params.id);
   const status = clean(req.body?.status);
   if (!ORDER_STATUSES.includes(status)) return res.status(400).json({ message: "Valid order status is required" });
+  if (status === "Cancelled") {
+    try {
+      const result = await cancelStoredOrder({
+        orderId: id,
+        reason: req.body?.reason || req.body?.cancellationReason,
+        resolution: req.body?.resolution,
+        actor: req.admin?.email || req.admin?.name || "Admin",
+      });
+      if (!result.ok) return res.status(result.statusCode).json({ message: result.message });
+      await reverseOrderCommissions(id, "Order cancelled").catch((error) => {
+        console.log("Commission reversal skipped:", error.message);
+      });
+      await logActivity(req, "Cancelled order", "Orders", `Order ${id}: ${result.reason}`);
+      return res.json({
+        message: result.message,
+        refund: result.refund,
+        warnings: result.warnings,
+        restored: {
+          website: result.restoreWebsite,
+          physical: result.physical?.bucket || null,
+        },
+      });
+    } catch (error) {
+      return respondError(res, error, "Failed to cancel order");
+    }
+  }
   try {
-    const orderRows = await dbQuery("SELECT id, physical_stock_deducted_at, fulfillment_stock_source FROM orders WHERE id = ? LIMIT 1", [id]);
+    const orderRows = await dbQuery("SELECT id, order_status, physical_stock_deducted_at, fulfillment_stock_source FROM orders WHERE id = ? LIMIT 1", [id]);
     const order = orderRows[0];
     if (!order) return res.status(404).json({ message: "Order not found" });
+    if (!statusTransitionAllowed(order.order_status, status)) {
+      return res.status(409).json({ message: `${order.order_status} orders cannot move to ${status}` });
+    }
 
     let fulfillmentSource = stockBucket(req.body?.fulfillmentStockSource || req.body?.fulfillment_stock_source);
     if (status === "Dispatched" && !order.physical_stock_deducted_at) {
@@ -1490,11 +1567,6 @@ export async function updateShipment(req, res) {
       "INSERT INTO order_status_history (order_id,status,tracking_url,logistics_provider,fulfillment_stock_source,changed_by) VALUES (?,?,?,?,?,?)",
       [id, status, clean(req.body?.trackingUrl) || null, clean(req.body?.logisticsProvider) || null, status === "Dispatched" ? fulfillmentSource || order.fulfillment_stock_source || null : null, req.admin?.email || "Admin"]
     );
-    if (status === "Cancelled") {
-      await reverseOrderCommissions(id, "Order cancelled").catch((error) => {
-        console.log("Commission reversal skipped:", error.message);
-      });
-    }
     if (status === "Delivered") {
       await releaseEligibleCommissions().catch((error) => {
         console.log("Commission release skipped:", error.message);
@@ -1600,17 +1672,30 @@ export async function refreshLowStockNotifications() {
     const rows = await allCatalogRows(catalog);
     for (const row of rows) {
       const isLow = number(row.stock_on_hand) <= number(row.reorder_level);
-      const stateRows = await dbQuery("SELECT * FROM low_stock_alert_state WHERE catalog=? AND product_id=? LIMIT 1", [catalog, row.id]);
-      const wasLow = Boolean(stateRows[0]?.is_low);
-      if (isLow && !wasLow) {
+      const stateRows = await dbQuery(
+        "SELECT id, is_low FROM low_stock_alert_state WHERE catalog=? AND product_id=?",
+        [catalog, row.id]
+      );
+      const wasLow = stateRows.some((state) => Boolean(state.is_low));
+      const plan = planLowStockStateWrite({ existingCount: stateRows.length, isLow, wasLow });
+      if (plan.setAlertedAt) {
         const dedupeKey = `low_stock:${catalog}:${row.id}:${Date.now()}`;
         await dbQuery("INSERT INTO admin_notifications (type,title,message,link,dedupe_key) VALUES ('low_stock',?,?,?,?)", [`Low ${catalog} stock`, `${row.name} has ${number(row.stock_on_hand)} unit(s), threshold ${number(row.reorder_level)}`, "/inventory", dedupeKey]);
       }
-      await dbQuery(
-        `INSERT INTO low_stock_alert_state (catalog,product_id,is_low,last_alerted_at) VALUES (?,?,?,?)
-         ON DUPLICATE KEY UPDATE is_low=VALUES(is_low), last_alerted_at=IF(VALUES(last_alerted_at) IS NOT NULL, VALUES(last_alerted_at), last_alerted_at)`,
-        [catalog, row.id, isLow, isLow && !wasLow ? new Date() : null]
-      );
+      if (plan.mode === "update") {
+        await dbQuery(
+          `UPDATE low_stock_alert_state
+              SET is_low = ?,
+                  last_alerted_at = IF(? = 1, NOW(), last_alerted_at)
+            WHERE catalog = ? AND product_id = ?`,
+          [plan.isLow ? 1 : 0, plan.setAlertedAt ? 1 : 0, catalog, row.id]
+        );
+      } else {
+        await dbQuery(
+          "INSERT INTO low_stock_alert_state (catalog, product_id, is_low, last_alerted_at) VALUES (?, ?, ?, IF(? = 1, NOW(), NULL))",
+          [catalog, row.id, plan.isLow ? 1 : 0, plan.setAlertedAt ? 1 : 0]
+        );
+      }
     }
   }
 }
@@ -1624,6 +1709,9 @@ export async function exportAdminXlsx(req, res) {
       if (catalog === "website") {
         const exportRows = await websiteProductExportRows(rows);
         return sendWorkbook(res, `${type}.xlsx`, "Products", PRODUCT_IMPORT_EXPORT_COLUMNS, exportRows);
+      }
+      if (catalog === "store") {
+        return sendWorkbook(res, `${type}.xlsx`, "Products", SHOP_EXPORT_COLUMNS, rows);
       }
       return sendWorkbook(res, `${type}.xlsx`, "Products", [["ID", "id"], ["SKU", "sku"], ["Name", "name", 34], ["Category", "category_name"], ["Brand", "brand_name"], ["Stock", "stock_on_hand"], ["Reorder Level", "reorder_level"], ["Status", "status"]], rows);
     }
