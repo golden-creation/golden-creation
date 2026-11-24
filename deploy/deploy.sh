@@ -306,8 +306,38 @@ rm -rf "$RELEASE/node_modules" "$RELEASE/public/assets" "$RELEASE/public/admin"
 test ! -f "$RELEASE/.env"
 test "$RELEASE" != "$PREVIOUS"
 
-(cd "$WORK/src/frontend" && npm ci && npm run lint && node --test test/*.test.js && npm run build)
-(cd "$WORK/src/saas-panel" && npm ci && npm run lint && npm run build)
+clear_frontend_env() {
+  rm -f \
+    "$1/.env" \
+    "$1/.env.local" \
+    "$1/.env.production" \
+    "$1/.env.production.local" \
+    "$1/.env.development" \
+    "$1/.env.development.local"
+}
+
+reject_loopback_bundle() {
+  if grep -R -E -q "https?://(localhost|127\\.0\\.0\\.1):5000" "$1" --include='*.js' --include='*.html' --include='*.css'; then
+    echo "STOP: production bundle contains a loopback API address in $1" >&2
+    exit 1
+  fi
+}
+
+clear_frontend_env "$WORK/src/frontend"
+clear_frontend_env "$WORK/src/saas-panel"
+(
+  cd "$WORK/src/frontend"
+  npm ci && npm run lint && node --test test/*.test.js
+  NODE_ENV=production VITE_API_BASE_URL=/api VITE_SITE_BASE_URL= npm run build
+)
+(
+  cd "$WORK/src/saas-panel"
+  npm ci && npm run lint
+  NODE_ENV=production VITE_API_BASE_URL=/api VITE_SITE_BASE_URL= npm run build
+)
+reject_loopback_bundle "$WORK/src/frontend/dist"
+reject_loopback_bundle "$WORK/src/saas-panel/dist"
+echo "production_api_bundle=same_origin"
 cp -a "$WORK/src/frontend/dist/." "$RELEASE/public/"
 mkdir -p "$RELEASE/public/admin"
 cp -a "$WORK/src/saas-panel/dist/." "$RELEASE/public/admin/"

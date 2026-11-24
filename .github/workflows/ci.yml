@@ -67,6 +67,15 @@ jobs:
       - run: npm run lint
       - run: node --test test/*.test.js
       - run: npm run build
+        env:
+          NODE_ENV: production
+          VITE_API_BASE_URL: /api
+          VITE_SITE_BASE_URL: ""
+      - name: Reject loopback API URLs in the storefront bundle
+        run: |
+          if grep -R -E -n "https?://(localhost|127\.0\.0\.1):5000" dist --include='*.js' --include='*.html' --include='*.css'; then
+            exit 1
+          fi
 
   admin:
     runs-on: ubuntu-latest
@@ -83,3 +92,12 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run build
+        env:
+          NODE_ENV: production
+          VITE_API_BASE_URL: /api
+          VITE_SITE_BASE_URL: ""
+      - name: Reject loopback API URLs in the admin bundle
+        run: |
+          if grep -R -E -n "https?://(localhost|127\.0\.0\.1):5000" dist --include='*.js' --include='*.html' --include='*.css'; then
+            exit 1
+          fi
