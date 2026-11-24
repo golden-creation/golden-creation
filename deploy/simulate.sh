@@ -24,6 +24,9 @@ printf 'console.log("test-ok")\n' > "$SOURCE/backend/server.js"
 mkdir -p "$SOURCE/backend/test" "$SOURCE/backend/routes"
 printf 'export {}\n' > "$SOURCE/backend/routes/order.routes.js"
 printf 'test("ok", () => {});\n' > "$SOURCE/backend/test/sample.test.js"
+mkdir -p "$SOURCE/backend/test" "$SOURCE/saas-panel/src/lib"
+printf 'import "../../saas-panel/src/lib/spreadsheetImport.js";\n' > "$SOURCE/backend/test/product-import.test.js"
+printf 'export {}\n' > "$SOURCE/saas-panel/src/lib/spreadsheetImport.js"
 printf '{}\n' > "$SOURCE/backend/package.json"
 printf '{}\n' > "$SOURCE/frontend/package.json"
 printf '{}\n' > "$SOURCE/saas-panel/package.json"
@@ -40,6 +43,10 @@ EOF
 cat > "$BIN/npm" << 'EOF'
 #!/bin/bash
 dir=$(pwd)
+if [[ "$*" == *ci* ]]; then
+  mkdir -p "$dir/node_modules/jszip"
+  printf '{}\n' > "$dir/node_modules/jszip/package.json"
+fi
 if [[ "$*" == *build* ]]; then
   mkdir -p "$dir/dist/assets"
   if [[ "$dir" == *saas-panel* ]]; then

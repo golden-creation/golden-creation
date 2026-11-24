@@ -372,10 +372,24 @@ run_isolated() {
     "$@"
 }
 
-(cd "$RELEASE" && npm ci)
+CHECKOUT="$WORK/src"
+test -d "$CHECKOUT/backend"
+test -d "$CHECKOUT/frontend"
+test -d "$CHECKOUT/saas-panel"
+test -f "$CHECKOUT/backend/test/product-import.test.js"
+test -f "$CHECKOUT/saas-panel/src/lib/spreadsheetImport.js"
+test ! -d "$(dirname "$RELEASE")/saas-panel"
+test "$RELEASE" != "$CHECKOUT/backend"
+echo "checkout_backend=$CHECKOUT/backend"
+echo "checkout_admin=$CHECKOUT/saas-panel"
+echo "release_backend=$RELEASE"
+
+(cd "$CHECKOUT/backend" && npm ci)
+test -d "$CHECKOUT/backend/node_modules"
+test -d "$CHECKOUT/saas-panel/node_modules/jszip"
 if [ "${GC_SIMULATE:-}" != 1 ]; then
   (
-    cd "$RELEASE"
+    cd "$CHECKOUT/backend"
     run_isolated node scripts/ensure-admin-modules-schema.js
     run_isolated node scripts/ensure-orders-schema.js
     run_isolated node scripts/ensure-customer-mobile-schema.js
@@ -386,10 +400,15 @@ if [ "${GC_SIMULATE:-}" != 1 ]; then
   echo "test_database_initialized=synthetic"
 fi
 (
-  cd "$RELEASE"
+  cd "$CHECKOUT/backend"
+  test "$(pwd -P)" = "$(cd "$CHECKOUT/backend" && pwd -P)"
+  test "$(pwd -P)" != "$(cd "$RELEASE" && pwd -P)"
   run_isolated npm test
 )
 echo "isolated_tests=ok"
+echo "isolated_test_cwd=$CHECKOUT/backend"
+
+(cd "$RELEASE" && npm ci)
 
 mkdir -p "$BACKUP_DIR"
 if [ "${GC_SIMULATE:-}" != 1 ]; then
