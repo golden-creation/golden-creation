@@ -24,8 +24,13 @@ printf 'console.log("test-ok")\n' > "$SOURCE/backend/server.js"
 mkdir -p "$SOURCE/backend/test" "$SOURCE/backend/routes"
 printf 'export {}\n' > "$SOURCE/backend/routes/order.routes.js"
 printf 'test("ok", () => {});\n' > "$SOURCE/backend/test/sample.test.js"
+mkdir -p "$SOURCE/backend/test" "$SOURCE/saas-panel/src/lib"
+printf 'import "../../saas-panel/src/lib/spreadsheetImport.js";\n' > "$SOURCE/backend/test/product-import.test.js"
+printf 'export {}\n' > "$SOURCE/saas-panel/src/lib/spreadsheetImport.js"
 printf '{}\n' > "$SOURCE/backend/package.json"
 printf '{}\n' > "$SOURCE/frontend/package.json"
+mkdir -p "$SOURCE/frontend/src/lib"
+printf 'export const publicRecaptchaSiteKey = "6LSimulatedSiteKeyForDeployCheck";\n' > "$SOURCE/frontend/src/lib/publicFrontendConfig.js"
 printf '{}\n' > "$SOURCE/saas-panel/package.json"
 
 cat > "$BIN/git" << 'EOF'
@@ -40,6 +45,10 @@ EOF
 cat > "$BIN/npm" << 'EOF'
 #!/bin/bash
 dir=$(pwd)
+if [[ "$*" == *ci* ]]; then
+  mkdir -p "$dir/node_modules/jszip"
+  printf '{}\n' > "$dir/node_modules/jszip/package.json"
+fi
 if [[ "$*" == *build* ]]; then
   mkdir -p "$dir/dist/assets"
   if [[ "$dir" == *saas-panel* ]]; then
@@ -47,7 +56,7 @@ if [[ "$*" == *build* ]]; then
     printf 'admin' > "$dir/dist/assets/index-admin.js"
   else
     printf '<html><script src="/assets/index-store.js"></script></html>' > "$dir/dist/index.html"
-    printf 'store' > "$dir/dist/assets/index-store.js"
+    printf 'store %s\n' "${VITE_RECAPTCHA_SITE_KEY:-}" > "$dir/dist/assets/index-store.js"
   fi
 fi
 exit 0
@@ -135,6 +144,10 @@ if [ "$1" = "jlist" ]; then
   printf '[{"name":"goldencreation-api","pm2_env":{"pm_cwd":"%s"}}]\n' "$cwd"
   exit 0
 fi
+if [ "$1" = "restart" ] && [ "${GC_PM2_RESTART_FAIL:-}" = 1 ]; then
+  echo "pm2 restart failed" >&2
+  exit 1
+fi
 echo "pm2 $*" >> "$GC_ROOT/pm2.log"
 exit 0
 EOF
@@ -142,6 +155,7 @@ chmod +x "$BIN/pm2"
 
 bash "$SCRIPT" > "$ROOT/success.txt"
 grep -q "deployment_status=ok" "$ROOT/success.txt"
+grep -q "production_recaptcha_site_key=present" "$ROOT/success.txt"
 test "$(cat "$GC_ROOT/current.link")" != "$GC_ROOT/releases/previous"
 test -s "$GC_ROOT/backups/db/"*.sql
 if grep -R "CREATE DATABASE" "$GC_ROOT/backups/db" >/dev/null; then
@@ -160,7 +174,27 @@ test "$status" -ne 0
 grep -q "code_rollback=" "$ROOT/rollback.txt"
 test "$(cat "$GC_ROOT/current.link")" = "$GC_ROOT/releases/previous"
 echo "simulation_rollback=ok"
-if grep -q "simulate-only" "$ROOT/dry-run.txt" "$ROOT/success.txt" "$ROOT/rollback.txt"; then
+if grep -q "code_rollback=failed" "$ROOT/rollback.txt"; then
+  echo "simulation reported a successful rollback as a failure" >&2
+  exit 1
+fi
+
+export GC_PM2_RESTART_FAIL=1
+set +e
+bash "$SCRIPT" > "$ROOT/rollback-failed.txt"
+failed_status=$?
+set -e
+test "$failed_status" -ne 0
+grep -q "code_rollback=failed" "$ROOT/rollback-failed.txt"
+test "$(cat "$GC_ROOT/current.link")" = "$GC_ROOT/releases/previous"
+echo "simulation_rollback_failure_reported=ok"
+unset GC_PM2_RESTART_FAIL
+
+if grep -q "defaults-extra-file" "$SCRIPT"; then
+  echo "simulation found a MariaDB client that can inherit root defaults" >&2
+  exit 1
+fi
+if grep -q "simulate-only" "$ROOT/dry-run.txt" "$ROOT/success.txt" "$ROOT/rollback.txt" "$ROOT/rollback-failed.txt"; then
   echo "simulation printed the test password" >&2
   exit 1
 fi

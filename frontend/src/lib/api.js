@@ -1,121 +1,46 @@
 import { appendUniqueBrands, hasAnotherBrandPage } from "./brandCatalog.js";
+import { resolveProductionApiBase, resolveProductionSiteBase } from "./apiOrigin.js";
+import { publicRecaptchaSiteKey } from "./publicFrontendConfig.js";
+import { resolveRecaptchaSiteKey } from "./recaptchaSiteKey.js";
 
 const BROWSER_ORIGIN =
   typeof window !== "undefined"
     ? window.location.origin.replace(/\/$/, "")
     : "";
 
-/* FIXED BACKEND URL */
-
-const DEFAULT_SITE_BASE_URL =
-  "http://localhost:5000";
-
-const DEFAULT_API_BASE_URL =
-  "http://localhost:5000/api";
-
-function isLoopbackUrl(value) {
-  return /https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?/i.test(
-    String(value || "")
-  );
+function browserIsPublicOrigin() {
+  return Boolean(BROWSER_ORIGIN) && !/localhost|127\.0\.0\.1/i.test(BROWSER_ORIGIN);
 }
 
 function resolveSiteBaseUrl() {
-  const configuredSiteUrl =
-    String(
-      import.meta.env
-        .VITE_SITE_BASE_URL || ""
-    ).trim();
-
-  const configuredApiUrl =
-    String(
-      import.meta.env
-        .VITE_API_BASE_URL || ""
-    ).trim();
-
-  if (
-    BROWSER_ORIGIN &&
-    isLoopbackUrl(
-      configuredSiteUrl
-    ) &&
-    !/localhost|127\.0\.0\.1/i.test(
-      BROWSER_ORIGIN
-    )
-  ) {
-    return BROWSER_ORIGIN;
+  const configuredSiteUrl = String(import.meta.env.VITE_SITE_BASE_URL || "").trim();
+  if (import.meta.env.PROD || browserIsPublicOrigin()) {
+    return resolveProductionSiteBase({
+      configured: configuredSiteUrl,
+      origin: BROWSER_ORIGIN,
+    });
   }
-
-  if (configuredSiteUrl) {
-    return configuredSiteUrl.replace(
-      /\/$/,
-      ""
-    );
-  }
-
-  if (
-    BROWSER_ORIGIN &&
-    isLoopbackUrl(
-      configuredApiUrl
-    ) &&
-    !/localhost|127\.0\.0\.1/i.test(
-      BROWSER_ORIGIN
-    )
-  ) {
-    return BROWSER_ORIGIN;
-  }
-
-  if (configuredApiUrl) {
-    return configuredApiUrl
-      .replace(/\/api$/, "")
-      .replace(/\/$/, "");
-  }
-
-  return DEFAULT_SITE_BASE_URL;
+  return (configuredSiteUrl || BROWSER_ORIGIN).replace(/\/$/, "");
 }
 
-function resolveApiBaseUrl(
-  siteBaseUrl
-) {
-  const configuredApiUrl =
-    String(
-      import.meta.env
-        .VITE_API_BASE_URL || ""
-    ).trim();
-
-  if (
-    BROWSER_ORIGIN &&
-    isLoopbackUrl(
-      configuredApiUrl
-    ) &&
-    !/localhost|127\.0\.0\.1/i.test(
-      BROWSER_ORIGIN
-    )
-  ) {
-    return `${siteBaseUrl}/api`;
+function resolveApiBaseUrl() {
+  const configuredApiUrl = String(import.meta.env.VITE_API_BASE_URL || "").trim();
+  if (import.meta.env.PROD || browserIsPublicOrigin()) {
+    return resolveProductionApiBase({ configured: configuredApiUrl });
   }
-
-  if (configuredApiUrl) {
-    return configuredApiUrl.replace(
-      /\/$/,
-      ""
-    );
-  }
-
-  return DEFAULT_API_BASE_URL;
+  return (configuredApiUrl || "/api").replace(/\/$/, "");
 }
 
 export const SITE_BASE_URL =
   resolveSiteBaseUrl();
 
 export const API_BASE_URL =
-  resolveApiBaseUrl(
-    SITE_BASE_URL
-  );
+  resolveApiBaseUrl();
 
-const RECAPTCHA_SITE_KEY =
-  String(
-    import.meta.env
-      .VITE_RECAPTCHA_SITE_KEY || ""
-  ).trim();
+const RECAPTCHA_SITE_KEY = resolveRecaptchaSiteKey({
+  configured: import.meta.env.VITE_RECAPTCHA_SITE_KEY,
+  fallback: publicRecaptchaSiteKey,
+});
 
 let recaptchaScriptPromise = null;
 
@@ -156,8 +81,12 @@ function loadRecaptchaScript() {
 }
 
 export async function getRecaptchaToken(action) {
-  if (!RECAPTCHA_SITE_KEY || typeof window === "undefined") {
+  if (typeof window === "undefined") {
     return "";
+  }
+
+  if (!RECAPTCHA_SITE_KEY) {
+    throw new Error("reCAPTCHA site key is not configured");
   }
 
   await loadRecaptchaScript();

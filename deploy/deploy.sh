@@ -189,15 +189,14 @@ if ((env.DOTENV_CONFIG_PATH || "").includes(".env.test")) process.exit(1);
   echo "preflight_disk=ok"
 
   write_client_defaults
-  mariadb --defaults-extra-file="$CLIENT_DEFAULTS" --batch --skip-column-names -e "SELECT DATABASE()" "$TEST_DB" | grep -qx "$TEST_DB"
+  mariadb --defaults-file="$CLIENT_DEFAULTS" --batch --skip-column-names -e "SELECT DATABASE()" "$TEST_DB" | grep -qx "$TEST_DB"
   echo "preflight_test_database=ok"
   set +e
-  mariadb --defaults-extra-file="$CLIENT_DEFAULTS" --batch -e "SELECT 1" "$SOURCE_DB" >/dev/null 2>&1
+  mariadb --defaults-file="$CLIENT_DEFAULTS" --batch -e "SELECT 1" "$SOURCE_DB" >/dev/null 2>&1
   local deny=$?
   set -e
   if [ "$deny" -eq 0 ]; then
     echo "STOP: the test user can access the production database" >&2
-    rm -f "$CLIENT_DEFAULTS"
     exit 1
   fi
   echo "production_database_denied=yes"
@@ -208,7 +207,43 @@ if ((env.DOTENV_CONFIG_PATH || "").includes(".env.test")) process.exit(1);
   schema_count "SELECT COUNT(*) FROM information_schema.STATISTICS WHERE TABLE_SCHEMA='${SOURCE_DB}' AND TABLE_NAME='orders' AND INDEX_NAME='uq_orders_checkout_attempt' AND NON_UNIQUE=0"
   echo "preflight_schema=ok"
   rm -f "$CLIENT_DEFAULTS"
+  unset CLIENT_DEFAULTS
 }
+
+SWITCHED=0
+finish() {
+  status=$?
+  if [ "$SWITCHED" = 1 ] && [ "$status" -ne 0 ]; then
+    set +e
+    replace_current "$PREVIOUS"
+    pointer_status=$?
+    pm2 restart goldencreation-api --update-env
+    pm2_status=$?
+    sleep 3
+    verify_pm2_cwd "$PREVIOUS"
+    cwd_status=$?
+    resolved=$(resolve_current)
+    resolve_status=$?
+    set -e
+    if [ "$pointer_status" -ne 0 ] || [ "$pm2_status" -ne 0 ] || [ "$cwd_status" -ne 0 ] || [ "$resolve_status" -ne 0 ] || [ "$resolved" != "$PREVIOUS" ]; then
+      echo "code_rollback=failed previous=$PREVIOUS database_unchanged=yes" >&2
+      status=1
+    else
+      echo "code_rollback=$PREVIOUS database_unchanged=yes"
+    fi
+  fi
+  if [ -n "${CLIENT_DEFAULTS:-}" ]; then
+    rm -f "$CLIENT_DEFAULTS"
+  fi
+  if [ -n "${RUNTIME_ENV:-}" ]; then
+    rm -f "$RUNTIME_ENV"
+  fi
+  if [ -n "${ISOLATED_HOME:-}" ]; then
+    rm -rf "$ISOLATED_HOME"
+  fi
+  exit "$status"
+}
+trap finish EXIT
 
 preflight
 
@@ -225,20 +260,6 @@ flock -n 9 || { echo "STOP: another deployment is running"; exit 1; }
 STAMP=$(date -u +%Y%m%dT%H%M%SZ)
 LOG="$LOG_DIR/deploy-$STAMP.log"
 exec > >(tee -a "$LOG") 2>&1
-SWITCHED=0
-rollback_code() {
-  status=$?
-  if [ "$SWITCHED" = 1 ] && [ "$status" -ne 0 ]; then
-    replace_current "$PREVIOUS"
-    pm2 restart goldencreation-api --update-env || true
-    sleep 3
-    verify_pm2_cwd "$PREVIOUS" || true
-    echo "code_rollback=$PREVIOUS database_unchanged=yes"
-  fi
-  rm -f "${CLIENT_DEFAULTS:-}" "${RUNTIME_ENV:-}"
-  exit "$status"
-}
-trap rollback_code EXIT
 
 write_client_defaults
 RUNTIME_ENV=$(mktemp)
@@ -257,6 +278,11 @@ chmod 600 "$RUNTIME_ENV"
   printf '%s\n' "NIMBUS_SMS_ENABLED=false"
 } > "$RUNTIME_ENV"
 chmod 600 "$RUNTIME_ENV"
+ISOLATED_HOME=$(mktemp -d)
+chmod 700 "$ISOLATED_HOME"
+: > "$ISOLATED_HOME/aws-credentials"
+: > "$ISOLATED_HOME/aws-config"
+chmod 600 "$ISOLATED_HOME/aws-credentials" "$ISOLATED_HOME/aws-config"
 
 WORK=$(mktemp -d)
 if [ "${GC_SIMULATE:-}" = 1 ]; then
@@ -280,8 +306,77 @@ rm -rf "$RELEASE/node_modules" "$RELEASE/public/assets" "$RELEASE/public/admin"
 test ! -f "$RELEASE/.env"
 test "$RELEASE" != "$PREVIOUS"
 
-(cd "$WORK/src/frontend" && npm ci && npm run lint && node --test test/*.test.js && npm run build)
-(cd "$WORK/src/saas-panel" && npm ci && npm run lint && npm run build)
+clear_frontend_env() {
+  rm -f \
+    "$1/.env" \
+    "$1/.env.local" \
+    "$1/.env.production" \
+    "$1/.env.production.local" \
+    "$1/.env.development" \
+    "$1/.env.development.local"
+}
+
+reject_loopback_bundle() {
+  if grep -R -E -q "https?://(localhost|127\\.0\\.0\\.1):5000" "$1" --include='*.js' --include='*.html' --include='*.css'; then
+    echo "STOP: production bundle contains a loopback API address in $1" >&2
+    exit 1
+  fi
+}
+
+resolve_recaptcha_site_key() {
+  local from_env committed
+  from_env=$(read_secret "$ENV_FILE" VITE_RECAPTCHA_SITE_KEY)
+  if [ -z "$from_env" ]; then
+    from_env=$(read_secret "$ENV_FILE" RECAPTCHA_SITE_KEY)
+  fi
+  committed=$(sed -n 's/^export const publicRecaptchaSiteKey = "\([^"]*\)";/\1/p' "$WORK/src/frontend/src/lib/publicFrontendConfig.js")
+  if [ -n "$from_env" ]; then
+    case "$from_env" in
+      your_google*|changeme|*placeholder*)
+        echo "STOP: production reCAPTCHA site key is a placeholder" >&2
+        exit 1
+        ;;
+    esac
+    if ! [[ "$from_env" =~ ^6L[A-Za-z0-9_-]{20,}$ ]]; then
+      echo "STOP: production reCAPTCHA site key is not a public site key" >&2
+      exit 1
+    fi
+    printf '%s' "$from_env"
+    return
+  fi
+  if ! [[ "$committed" =~ ^6L[A-Za-z0-9_-]{20,}$ ]]; then
+    echo "STOP: the storefront is missing its public reCAPTCHA site key" >&2
+    exit 1
+  fi
+  printf '%s' "$committed"
+}
+
+require_recaptcha_site_key() {
+  if ! grep -R -F -q -- "$1" "$2"; then
+    echo "STOP: storefront bundle is missing the reCAPTCHA site key" >&2
+    exit 1
+  fi
+}
+
+clear_frontend_env "$WORK/src/frontend"
+clear_frontend_env "$WORK/src/saas-panel"
+RECAPTCHA_SITE_KEY=$(resolve_recaptcha_site_key)
+export VITE_RECAPTCHA_SITE_KEY="$RECAPTCHA_SITE_KEY"
+(
+  cd "$WORK/src/frontend"
+  npm ci && npm run lint && node --test test/*.test.js
+  NODE_ENV=production VITE_API_BASE_URL=/api VITE_SITE_BASE_URL= VITE_RECAPTCHA_SITE_KEY="$VITE_RECAPTCHA_SITE_KEY" npm run build
+)
+(
+  cd "$WORK/src/saas-panel"
+  npm ci && npm run lint
+  NODE_ENV=production VITE_API_BASE_URL=/api VITE_SITE_BASE_URL= npm run build
+)
+reject_loopback_bundle "$WORK/src/frontend/dist"
+reject_loopback_bundle "$WORK/src/saas-panel/dist"
+require_recaptcha_site_key "$RECAPTCHA_SITE_KEY" "$WORK/src/frontend/dist"
+echo "production_api_bundle=same_origin"
+echo "production_recaptcha_site_key=present"
 cp -a "$WORK/src/frontend/dist/." "$RELEASE/public/"
 mkdir -p "$RELEASE/public/admin"
 cp -a "$WORK/src/saas-panel/dist/." "$RELEASE/public/admin/"
@@ -303,7 +398,8 @@ test -s "$RELEASE/public/$ASSET"
 run_isolated() {
   env -i \
     PATH="$PATH" \
-    HOME="${HOME:-/root}" \
+    HOME="$ISOLATED_HOME" \
+    USER="${USER:-deploy}" \
     NODE_ENV=development \
     GC_ISOLATED_TEST=true \
     DOTENV_CONFIG_PATH="$RUNTIME_ENV" \
@@ -324,9 +420,16 @@ run_isolated() {
     DO_SPACES_SECRET_KEY= \
     DO_SPACES_REGION= \
     DO_SPACES_ENDPOINT= \
+    AWS_EC2_METADATA_DISABLED=true \
+    AWS_SHARED_CREDENTIALS_FILE="$ISOLATED_HOME/aws-credentials" \
+    AWS_CONFIG_FILE="$ISOLATED_HOME/aws-config" \
     AWS_ACCESS_KEY_ID= \
     AWS_SECRET_ACCESS_KEY= \
     AWS_SESSION_TOKEN= \
+    AWS_PROFILE= \
+    AWS_CONTAINER_CREDENTIALS_RELATIVE_URI= \
+    AWS_CONTAINER_CREDENTIALS_FULL_URI= \
+    AWS_WEB_IDENTITY_TOKEN_FILE= \
     S3_BUCKET= \
     S3_ACCESS_KEY_ID= \
     S3_SECRET_ACCESS_KEY= \
@@ -338,9 +441,24 @@ run_isolated() {
     "$@"
 }
 
+CHECKOUT="$WORK/src"
+test -d "$CHECKOUT/backend"
+test -d "$CHECKOUT/frontend"
+test -d "$CHECKOUT/saas-panel"
+test -f "$CHECKOUT/backend/test/product-import.test.js"
+test -f "$CHECKOUT/saas-panel/src/lib/spreadsheetImport.js"
+test ! -d "$(dirname "$RELEASE")/saas-panel"
+test "$RELEASE" != "$CHECKOUT/backend"
+echo "checkout_backend=$CHECKOUT/backend"
+echo "checkout_admin=$CHECKOUT/saas-panel"
+echo "release_backend=$RELEASE"
+
+(cd "$CHECKOUT/backend" && npm ci)
+test -d "$CHECKOUT/backend/node_modules"
+test -d "$CHECKOUT/saas-panel/node_modules/jszip"
 if [ "${GC_SIMULATE:-}" != 1 ]; then
   (
-    cd "$RELEASE"
+    cd "$CHECKOUT/backend"
     run_isolated node scripts/ensure-admin-modules-schema.js
     run_isolated node scripts/ensure-orders-schema.js
     run_isolated node scripts/ensure-customer-mobile-schema.js
@@ -350,13 +468,16 @@ if [ "${GC_SIMULATE:-}" != 1 ]; then
   )
   echo "test_database_initialized=synthetic"
 fi
-
-(cd "$RELEASE" && npm ci)
 (
-  cd "$RELEASE"
+  cd "$CHECKOUT/backend"
+  test "$(pwd -P)" = "$(cd "$CHECKOUT/backend" && pwd -P)"
+  test "$(pwd -P)" != "$(cd "$RELEASE" && pwd -P)"
   run_isolated npm test
 )
 echo "isolated_tests=ok"
+echo "isolated_test_cwd=$CHECKOUT/backend"
+
+(cd "$RELEASE" && npm ci)
 
 mkdir -p "$BACKUP_DIR"
 if [ "${GC_SIMULATE:-}" != 1 ]; then
@@ -398,6 +519,4 @@ curl -fsS https://admin.goldencreation.in/ | grep -q 'assets/'
 echo "deployment_status=ok commit=$SHA release=$RELEASE previous=$PREVIOUS"
 SWITCHED=0
 rm -rf "$WORK"
-rm -f "$CLIENT_DEFAULTS" "$RUNTIME_ENV"
-trap - EXIT
 exit 0

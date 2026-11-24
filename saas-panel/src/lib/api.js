@@ -1,17 +1,12 @@
-const configuredBaseUrl = import.meta.env.VITE_API_BASE_URL;
+import { resolveProductionApiBase } from "./apiOrigin.js";
 
-function isLoopbackApiUrl(value) {
-  return /^https?:\/\/(?:localhost|127\.0\.0\.1)(?::\d+)?\/api\/?$/i.test(
-    String(value || "")
-  );
-}
+const configuredBaseUrl = String(import.meta.env.VITE_API_BASE_URL || "").trim();
+const browserOrigin = typeof window !== "undefined" ? window.location.origin : "";
+const browserIsPublic = Boolean(browserOrigin) && !/localhost|127\.0\.0\.1/i.test(browserOrigin);
 
 export const API_BASE_URL = (
-  typeof window !== "undefined" &&
-  configuredBaseUrl &&
-  isLoopbackApiUrl(configuredBaseUrl) &&
-  !/^https?:\/\/(?:localhost|127\.0\.0\.1)(?::\d+)?$/i.test(window.location.origin)
-    ? "/api"
+  import.meta.env.PROD || browserIsPublic
+    ? resolveProductionApiBase({ configured: configuredBaseUrl })
     : configuredBaseUrl || "/api"
 ).replace(/\/$/, "");
 
