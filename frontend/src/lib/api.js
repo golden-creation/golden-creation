@@ -1,5 +1,7 @@
 import { appendUniqueBrands, hasAnotherBrandPage } from "./brandCatalog.js";
 import { resolveProductionApiBase, resolveProductionSiteBase } from "./apiOrigin.js";
+import { publicRecaptchaSiteKey } from "./publicFrontendConfig.js";
+import { resolveRecaptchaSiteKey } from "./recaptchaSiteKey.js";
 
 const BROWSER_ORIGIN =
   typeof window !== "undefined"
@@ -35,11 +37,10 @@ export const SITE_BASE_URL =
 export const API_BASE_URL =
   resolveApiBaseUrl();
 
-const RECAPTCHA_SITE_KEY =
-  String(
-    import.meta.env
-      .VITE_RECAPTCHA_SITE_KEY || ""
-  ).trim();
+const RECAPTCHA_SITE_KEY = resolveRecaptchaSiteKey({
+  configured: import.meta.env.VITE_RECAPTCHA_SITE_KEY,
+  fallback: publicRecaptchaSiteKey,
+});
 
 let recaptchaScriptPromise = null;
 
@@ -80,8 +81,12 @@ function loadRecaptchaScript() {
 }
 
 export async function getRecaptchaToken(action) {
-  if (!RECAPTCHA_SITE_KEY || typeof window === "undefined") {
+  if (typeof window === "undefined") {
     return "";
+  }
+
+  if (!RECAPTCHA_SITE_KEY) {
+    throw new Error("reCAPTCHA site key is not configured");
   }
 
   await loadRecaptchaScript();

@@ -323,12 +323,49 @@ reject_loopback_bundle() {
   fi
 }
 
+resolve_recaptcha_site_key() {
+  local from_env committed
+  from_env=$(read_secret "$ENV_FILE" VITE_RECAPTCHA_SITE_KEY)
+  if [ -z "$from_env" ]; then
+    from_env=$(read_secret "$ENV_FILE" RECAPTCHA_SITE_KEY)
+  fi
+  committed=$(sed -n 's/^export const publicRecaptchaSiteKey = "\([^"]*\)";/\1/p' "$WORK/src/frontend/src/lib/publicFrontendConfig.js")
+  if [ -n "$from_env" ]; then
+    case "$from_env" in
+      your_google*|changeme|*placeholder*)
+        echo "STOP: production reCAPTCHA site key is a placeholder" >&2
+        exit 1
+        ;;
+    esac
+    if ! [[ "$from_env" =~ ^6L[A-Za-z0-9_-]{20,}$ ]]; then
+      echo "STOP: production reCAPTCHA site key is not a public site key" >&2
+      exit 1
+    fi
+    printf '%s' "$from_env"
+    return
+  fi
+  if ! [[ "$committed" =~ ^6L[A-Za-z0-9_-]{20,}$ ]]; then
+    echo "STOP: the storefront is missing its public reCAPTCHA site key" >&2
+    exit 1
+  fi
+  printf '%s' "$committed"
+}
+
+require_recaptcha_site_key() {
+  if ! grep -R -F -q -- "$1" "$2"; then
+    echo "STOP: storefront bundle is missing the reCAPTCHA site key" >&2
+    exit 1
+  fi
+}
+
 clear_frontend_env "$WORK/src/frontend"
 clear_frontend_env "$WORK/src/saas-panel"
+RECAPTCHA_SITE_KEY=$(resolve_recaptcha_site_key)
+export VITE_RECAPTCHA_SITE_KEY="$RECAPTCHA_SITE_KEY"
 (
   cd "$WORK/src/frontend"
   npm ci && npm run lint && node --test test/*.test.js
-  NODE_ENV=production VITE_API_BASE_URL=/api VITE_SITE_BASE_URL= npm run build
+  NODE_ENV=production VITE_API_BASE_URL=/api VITE_SITE_BASE_URL= VITE_RECAPTCHA_SITE_KEY="$VITE_RECAPTCHA_SITE_KEY" npm run build
 )
 (
   cd "$WORK/src/saas-panel"
@@ -337,7 +374,9 @@ clear_frontend_env "$WORK/src/saas-panel"
 )
 reject_loopback_bundle "$WORK/src/frontend/dist"
 reject_loopback_bundle "$WORK/src/saas-panel/dist"
+require_recaptcha_site_key "$RECAPTCHA_SITE_KEY" "$WORK/src/frontend/dist"
 echo "production_api_bundle=same_origin"
+echo "production_recaptcha_site_key=present"
 cp -a "$WORK/src/frontend/dist/." "$RELEASE/public/"
 mkdir -p "$RELEASE/public/admin"
 cp -a "$WORK/src/saas-panel/dist/." "$RELEASE/public/admin/"

@@ -29,6 +29,8 @@ printf 'import "../../saas-panel/src/lib/spreadsheetImport.js";\n' > "$SOURCE/ba
 printf 'export {}\n' > "$SOURCE/saas-panel/src/lib/spreadsheetImport.js"
 printf '{}\n' > "$SOURCE/backend/package.json"
 printf '{}\n' > "$SOURCE/frontend/package.json"
+mkdir -p "$SOURCE/frontend/src/lib"
+printf 'export const publicRecaptchaSiteKey = "6LSimulatedSiteKeyForDeployCheck";\n' > "$SOURCE/frontend/src/lib/publicFrontendConfig.js"
 printf '{}\n' > "$SOURCE/saas-panel/package.json"
 
 cat > "$BIN/git" << 'EOF'
@@ -54,7 +56,7 @@ if [[ "$*" == *build* ]]; then
     printf 'admin' > "$dir/dist/assets/index-admin.js"
   else
     printf '<html><script src="/assets/index-store.js"></script></html>' > "$dir/dist/index.html"
-    printf 'store' > "$dir/dist/assets/index-store.js"
+    printf 'store %s\n' "${VITE_RECAPTCHA_SITE_KEY:-}" > "$dir/dist/assets/index-store.js"
   fi
 fi
 exit 0
@@ -153,6 +155,7 @@ chmod +x "$BIN/pm2"
 
 bash "$SCRIPT" > "$ROOT/success.txt"
 grep -q "deployment_status=ok" "$ROOT/success.txt"
+grep -q "production_recaptcha_site_key=present" "$ROOT/success.txt"
 test "$(cat "$GC_ROOT/current.link")" != "$GC_ROOT/releases/previous"
 test -s "$GC_ROOT/backups/db/"*.sql
 if grep -R "CREATE DATABASE" "$GC_ROOT/backups/db" >/dev/null; then

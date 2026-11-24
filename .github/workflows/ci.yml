@@ -71,9 +71,14 @@ jobs:
           NODE_ENV: production
           VITE_API_BASE_URL: /api
           VITE_SITE_BASE_URL: ""
-      - name: Reject loopback API URLs in the storefront bundle
+          VITE_RECAPTCHA_SITE_KEY: 6LCiSiteKeyForFrontendBuildCheck00
+      - name: Reject loopback API URLs and require the reCAPTCHA site key
         run: |
           if grep -R -E -n "https?://(localhost|127\.0\.0\.1):5000" dist --include='*.js' --include='*.html' --include='*.css'; then
+            exit 1
+          fi
+          if ! grep -R -F -q "6LCiSiteKeyForFrontendBuildCheck00" dist --include='*.js'; then
+            echo "storefront bundle is missing the reCAPTCHA site key" >&2
             exit 1
           fi
 
