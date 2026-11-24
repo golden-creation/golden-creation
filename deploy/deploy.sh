@@ -189,15 +189,14 @@ if ((env.DOTENV_CONFIG_PATH || "").includes(".env.test")) process.exit(1);
   echo "preflight_disk=ok"
 
   write_client_defaults
-  mariadb --defaults-extra-file="$CLIENT_DEFAULTS" --batch --skip-column-names -e "SELECT DATABASE()" "$TEST_DB" | grep -qx "$TEST_DB"
+  mariadb --defaults-file="$CLIENT_DEFAULTS" --batch --skip-column-names -e "SELECT DATABASE()" "$TEST_DB" | grep -qx "$TEST_DB"
   echo "preflight_test_database=ok"
   set +e
-  mariadb --defaults-extra-file="$CLIENT_DEFAULTS" --batch -e "SELECT 1" "$SOURCE_DB" >/dev/null 2>&1
+  mariadb --defaults-file="$CLIENT_DEFAULTS" --batch -e "SELECT 1" "$SOURCE_DB" >/dev/null 2>&1
   local deny=$?
   set -e
   if [ "$deny" -eq 0 ]; then
     echo "STOP: the test user can access the production database" >&2
-    rm -f "$CLIENT_DEFAULTS"
     exit 1
   fi
   echo "production_database_denied=yes"
@@ -208,7 +207,43 @@ if ((env.DOTENV_CONFIG_PATH || "").includes(".env.test")) process.exit(1);
   schema_count "SELECT COUNT(*) FROM information_schema.STATISTICS WHERE TABLE_SCHEMA='${SOURCE_DB}' AND TABLE_NAME='orders' AND INDEX_NAME='uq_orders_checkout_attempt' AND NON_UNIQUE=0"
   echo "preflight_schema=ok"
   rm -f "$CLIENT_DEFAULTS"
+  unset CLIENT_DEFAULTS
 }
+
+SWITCHED=0
+finish() {
+  status=$?
+  if [ "$SWITCHED" = 1 ] && [ "$status" -ne 0 ]; then
+    set +e
+    replace_current "$PREVIOUS"
+    pointer_status=$?
+    pm2 restart goldencreation-api --update-env
+    pm2_status=$?
+    sleep 3
+    verify_pm2_cwd "$PREVIOUS"
+    cwd_status=$?
+    resolved=$(resolve_current)
+    resolve_status=$?
+    set -e
+    if [ "$pointer_status" -ne 0 ] || [ "$pm2_status" -ne 0 ] || [ "$cwd_status" -ne 0 ] || [ "$resolve_status" -ne 0 ] || [ "$resolved" != "$PREVIOUS" ]; then
+      echo "code_rollback=failed previous=$PREVIOUS database_unchanged=yes" >&2
+      status=1
+    else
+      echo "code_rollback=$PREVIOUS database_unchanged=yes"
+    fi
+  fi
+  if [ -n "${CLIENT_DEFAULTS:-}" ]; then
+    rm -f "$CLIENT_DEFAULTS"
+  fi
+  if [ -n "${RUNTIME_ENV:-}" ]; then
+    rm -f "$RUNTIME_ENV"
+  fi
+  if [ -n "${ISOLATED_HOME:-}" ]; then
+    rm -rf "$ISOLATED_HOME"
+  fi
+  exit "$status"
+}
+trap finish EXIT
 
 preflight
 
@@ -225,20 +260,6 @@ flock -n 9 || { echo "STOP: another deployment is running"; exit 1; }
 STAMP=$(date -u +%Y%m%dT%H%M%SZ)
 LOG="$LOG_DIR/deploy-$STAMP.log"
 exec > >(tee -a "$LOG") 2>&1
-SWITCHED=0
-rollback_code() {
-  status=$?
-  if [ "$SWITCHED" = 1 ] && [ "$status" -ne 0 ]; then
-    replace_current "$PREVIOUS"
-    pm2 restart goldencreation-api --update-env || true
-    sleep 3
-    verify_pm2_cwd "$PREVIOUS" || true
-    echo "code_rollback=$PREVIOUS database_unchanged=yes"
-  fi
-  rm -f "${CLIENT_DEFAULTS:-}" "${RUNTIME_ENV:-}"
-  exit "$status"
-}
-trap rollback_code EXIT
 
 write_client_defaults
 RUNTIME_ENV=$(mktemp)
@@ -257,6 +278,11 @@ chmod 600 "$RUNTIME_ENV"
   printf '%s\n' "NIMBUS_SMS_ENABLED=false"
 } > "$RUNTIME_ENV"
 chmod 600 "$RUNTIME_ENV"
+ISOLATED_HOME=$(mktemp -d)
+chmod 700 "$ISOLATED_HOME"
+: > "$ISOLATED_HOME/aws-credentials"
+: > "$ISOLATED_HOME/aws-config"
+chmod 600 "$ISOLATED_HOME/aws-credentials" "$ISOLATED_HOME/aws-config"
 
 WORK=$(mktemp -d)
 if [ "${GC_SIMULATE:-}" = 1 ]; then
@@ -303,7 +329,8 @@ test -s "$RELEASE/public/$ASSET"
 run_isolated() {
   env -i \
     PATH="$PATH" \
-    HOME="${HOME:-/root}" \
+    HOME="$ISOLATED_HOME" \
+    USER="${USER:-deploy}" \
     NODE_ENV=development \
     GC_ISOLATED_TEST=true \
     DOTENV_CONFIG_PATH="$RUNTIME_ENV" \
@@ -324,9 +351,16 @@ run_isolated() {
     DO_SPACES_SECRET_KEY= \
     DO_SPACES_REGION= \
     DO_SPACES_ENDPOINT= \
+    AWS_EC2_METADATA_DISABLED=true \
+    AWS_SHARED_CREDENTIALS_FILE="$ISOLATED_HOME/aws-credentials" \
+    AWS_CONFIG_FILE="$ISOLATED_HOME/aws-config" \
     AWS_ACCESS_KEY_ID= \
     AWS_SECRET_ACCESS_KEY= \
     AWS_SESSION_TOKEN= \
+    AWS_PROFILE= \
+    AWS_CONTAINER_CREDENTIALS_RELATIVE_URI= \
+    AWS_CONTAINER_CREDENTIALS_FULL_URI= \
+    AWS_WEB_IDENTITY_TOKEN_FILE= \
     S3_BUCKET= \
     S3_ACCESS_KEY_ID= \
     S3_SECRET_ACCESS_KEY= \
@@ -338,6 +372,7 @@ run_isolated() {
     "$@"
 }
 
+(cd "$RELEASE" && npm ci)
 if [ "${GC_SIMULATE:-}" != 1 ]; then
   (
     cd "$RELEASE"
@@ -350,8 +385,6 @@ if [ "${GC_SIMULATE:-}" != 1 ]; then
   )
   echo "test_database_initialized=synthetic"
 fi
-
-(cd "$RELEASE" && npm ci)
 (
   cd "$RELEASE"
   run_isolated npm test
@@ -398,6 +431,4 @@ curl -fsS https://admin.goldencreation.in/ | grep -q 'assets/'
 echo "deployment_status=ok commit=$SHA release=$RELEASE previous=$PREVIOUS"
 SWITCHED=0
 rm -rf "$WORK"
-rm -f "$CLIENT_DEFAULTS" "$RUNTIME_ENV"
-trap - EXIT
 exit 0

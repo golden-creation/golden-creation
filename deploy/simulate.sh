@@ -135,6 +135,10 @@ if [ "$1" = "jlist" ]; then
   printf '[{"name":"goldencreation-api","pm2_env":{"pm_cwd":"%s"}}]\n' "$cwd"
   exit 0
 fi
+if [ "$1" = "restart" ] && [ "${GC_PM2_RESTART_FAIL:-}" = 1 ]; then
+  echo "pm2 restart failed" >&2
+  exit 1
+fi
 echo "pm2 $*" >> "$GC_ROOT/pm2.log"
 exit 0
 EOF
@@ -160,7 +164,27 @@ test "$status" -ne 0
 grep -q "code_rollback=" "$ROOT/rollback.txt"
 test "$(cat "$GC_ROOT/current.link")" = "$GC_ROOT/releases/previous"
 echo "simulation_rollback=ok"
-if grep -q "simulate-only" "$ROOT/dry-run.txt" "$ROOT/success.txt" "$ROOT/rollback.txt"; then
+if grep -q "code_rollback=failed" "$ROOT/rollback.txt"; then
+  echo "simulation reported a successful rollback as a failure" >&2
+  exit 1
+fi
+
+export GC_PM2_RESTART_FAIL=1
+set +e
+bash "$SCRIPT" > "$ROOT/rollback-failed.txt"
+failed_status=$?
+set -e
+test "$failed_status" -ne 0
+grep -q "code_rollback=failed" "$ROOT/rollback-failed.txt"
+test "$(cat "$GC_ROOT/current.link")" = "$GC_ROOT/releases/previous"
+echo "simulation_rollback_failure_reported=ok"
+unset GC_PM2_RESTART_FAIL
+
+if grep -q "defaults-extra-file" "$SCRIPT"; then
+  echo "simulation found a MariaDB client that can inherit root defaults" >&2
+  exit 1
+fi
+if grep -q "simulate-only" "$ROOT/dry-run.txt" "$ROOT/success.txt" "$ROOT/rollback.txt" "$ROOT/rollback-failed.txt"; then
   echo "simulation printed the test password" >&2
   exit 1
 fi

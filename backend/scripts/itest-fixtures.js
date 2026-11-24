@@ -17,7 +17,8 @@ const db = await mysql.createConnection({
 });
 
 const [identity] = await db.query("SELECT DATABASE() AS name");
-if (identity[0].name !== process.env.DB_NAME || identity[0].name === "goldencreation_db") {
+const schemaName = identity[0]?.name;
+if (!schemaName || schemaName !== process.env.DB_NAME || schemaName === "goldencreation_db") {
   console.error("Refusing fixture load because the connection is not the isolated test database");
   process.exit(1);
 }
@@ -42,14 +43,16 @@ await db.query(`
 
 const [attemptColumn] = await db.query(
   `SELECT COLUMN_NAME FROM information_schema.COLUMNS
-    WHERE TABLE_SCHEMA = 'lekhanmart_itest' AND TABLE_NAME = 'orders' AND COLUMN_NAME = 'checkout_attempt_id'`
+    WHERE TABLE_SCHEMA = ? AND TABLE_NAME = 'orders' AND COLUMN_NAME = 'checkout_attempt_id'`,
+  [schemaName]
 );
 if (!attemptColumn.length) {
   await db.query("ALTER TABLE orders ADD COLUMN checkout_attempt_id BIGINT UNSIGNED NULL");
 }
 const [attemptIndex] = await db.query(
   `SELECT INDEX_NAME FROM information_schema.STATISTICS
-    WHERE TABLE_SCHEMA = 'lekhanmart_itest' AND TABLE_NAME = 'orders' AND INDEX_NAME = 'uq_orders_checkout_attempt'`
+    WHERE TABLE_SCHEMA = ? AND TABLE_NAME = 'orders' AND INDEX_NAME = 'uq_orders_checkout_attempt'`,
+  [schemaName]
 );
 if (!attemptIndex.length) {
   await db.query("ALTER TABLE orders ADD UNIQUE KEY uq_orders_checkout_attempt (checkout_attempt_id)");
@@ -64,18 +67,25 @@ await db.query(
 );
 
 const [rules] = await db.query("SELECT id FROM shipping_rules WHERE name = 'ITEST All India' LIMIT 1");
-if (!rules.length) {
+let ruleId = rules[0]?.id;
+if (!ruleId) {
   const [result] = await db.query(
     `INSERT INTO shipping_rules (name, region, min_order_value, charge, delivery_days, eta, status)
      VALUES ('ITEST All India', 'All India', 0, 40, 3, '3 days', 'Active')`
   );
-  await db.query(
-    "INSERT INTO shipping_rule_locations (rule_id, location_type, location_value) VALUES (?, 'All India', '')",
-    [result.insertId]
-  );
+  ruleId = result.insertId;
 }
+await db.query(
+  "INSERT IGNORE INTO shipping_rule_locations (rule_id, location_type, location_value) VALUES (?, 'All India', '')",
+  [ruleId]
+);
 
-const [categories] = await db.query("SELECT id FROM categories WHERE status = 'Active' ORDER BY id LIMIT 1");
+await db.query(
+  `INSERT INTO categories (name, slug, status)
+   SELECT 'ITEST Category', 'itest-category', 'Active'
+   WHERE NOT EXISTS (SELECT 1 FROM categories WHERE name = 'ITEST Category')`
+);
+const [categories] = await db.query("SELECT id FROM categories WHERE name = 'ITEST Category' LIMIT 1");
 const categoryId = categories[0]?.id || null;
 if (categoryId) {
   await db.query(
@@ -85,6 +95,12 @@ if (categoryId) {
     [categoryId]
   );
 }
+
+await db.query(
+  `INSERT INTO users (name, email, is_verified)
+   SELECT 'ITEST Customer', 'itest.customer@example.com', 1
+   WHERE NOT EXISTS (SELECT 1 FROM users WHERE email = 'itest.customer@example.com')`
+);
 
 await db.query(
   `INSERT INTO discounts (code, name, discount_type, method, value, status)
@@ -149,11 +165,33 @@ if (!existingItem.length) {
   );
 }
 
+const requiredTables = [
+  "admins",
+  "users",
+  "products",
+  "categories",
+  "brands",
+  "menus",
+  "product_reviews",
+  "orders",
+  "checkout_attempts",
+  "discounts",
+  "product_stock_audit_logs",
+  "shipping_rules",
+  "payment_transactions",
+];
 const [tables] = await db.query(
   `SELECT TABLE_NAME FROM information_schema.TABLES
-    WHERE TABLE_SCHEMA = 'lekhanmart_itest'
-      AND TABLE_NAME IN ('admins','users','products','categories','brands','menus','product_reviews','orders','checkout_attempts','discounts','product_stock_audit_logs','shipping_rules','payment_transactions')
-    ORDER BY TABLE_NAME`
+    WHERE TABLE_SCHEMA = ?
+      AND TABLE_NAME IN (${requiredTables.map(() => "?").join(",")})
+    ORDER BY TABLE_NAME`,
+  [schemaName, ...requiredTables]
 );
+const present = new Set(tables.map((row) => row.TABLE_NAME));
+const missing = requiredTables.filter((name) => !present.has(name));
+if (missing.length) {
+  console.error(`Isolated schema is incomplete: ${missing.join(",")}`);
+  process.exit(1);
+}
 console.log(tables.map((row) => row.TABLE_NAME).join(","));
 await db.end();
