@@ -24,6 +24,7 @@ import contentRoutes from "./routes/content.routes.js";
 import referralRoutes from "./routes/referral.routes.js";
 import affiliateRoutes from "./routes/affiliate.routes.js";
 import { razorpayWebhook } from "./controllers/checkout.controller.js";
+import { rateLimit } from "./middleware/rate-limit.js";
 import {
   getBlogSitemap,
   getBrandSitemap,
@@ -54,12 +55,18 @@ const configuredOrigins = (process.env.FRONTEND_URL || "")
   .split(",")
   .map((value) => value.trim())
   .filter(Boolean);
+const productionSiteOrigins = [
+  "https://goldencreation.in",
+  "https://www.goldencreation.in",
+  "https://admin.goldencreation.in",
+];
 
 function isLocalFrontendOrigin(origin) {
   return /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/i.test(origin);
 }
 
 const allowedOrigins = [...new Set([
+  ...productionSiteOrigins,
   ...configuredOrigins,
   "http://localhost:5173",
   "http://127.0.0.1:5173",
@@ -108,7 +115,8 @@ app.use(
       const configuredOrigin = resolveConfiguredFrontendOrigin(origin);
       const localOrigin = resolveLocalFrontendOrigin(origin);
 
-      if (!origin || !configuredOrigins.length) {
+      const production = String(process.env.NODE_ENV || "").trim().toLowerCase() === "production";
+      if (!origin || (!production && !configuredOrigins.length)) {
         callback(null, true);
         return;
       }
@@ -199,6 +207,9 @@ app.get("/product/:identifier", async (req, res, next) => {
 });
 
 // âœ… ROUTES
+const sensitiveRateLimit = rateLimit({ windowMs: 15 * 60 * 1000, max: 60 });
+app.use("/api/auth", sensitiveRateLimit);
+app.use("/api/checkout", sensitiveRateLimit);
 app.use("/api/products", productRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/brands", brandRoutes);

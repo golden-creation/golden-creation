@@ -132,7 +132,7 @@ export const deleteProduct = (req, res) => {
   Product.delete(id, (err) => {
     if (err) {
       console.error("Error deleting product:", err);
-      return res.status(500).json({ message: "Server error" });
+      return res.status(err.statusCode || 500).json({ message: err.statusCode === 409 ? err.message : "Server error" });
     }
 
     res.json({ message: "Product deleted successfully" });

@@ -376,6 +376,14 @@ export const Product = {
   },
 
   delete: (id, callback) => {
-    db.query("DELETE FROM products WHERE id = ?", [id], callback);
+    db.query("DELETE FROM products WHERE id = ?", [id], (error, result) => {
+      if (error && (error.code === "ER_ROW_IS_REFERENCED_2" || error.errno === 1451)) {
+        const blocked = new Error("This product is used by existing orders and was not deleted");
+        blocked.statusCode = 409;
+        callback(blocked);
+        return;
+      }
+      callback(error, result);
+    });
   },
 };

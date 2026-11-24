@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import PriceOffer from "../components/PriceOffer";
 import Navbar from "../components/Navbar";
 import heroImg from "../assets/a2.webp";
-import goldenCreationHeroLogo from "../assets/golden-creation-hero-logo.png";
+import goldenCreationHeroLogo from "../assets/golden-creation-hero-logo.jpeg";
 import rightArrow from "../assets/right-arrow.png";
 import chevron from "../assets/chevron.png";
 import gift from "../assets/gift.png";
