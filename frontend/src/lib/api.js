@@ -1151,7 +1151,10 @@ export function verifyEmailOtp(
         otp,
       }),
     }
-  );
+  ).then((payload) => {
+    saveCustomerSession(payload);
+    return payload;
+  });
 }
 
 export async function sendMobileOtp(

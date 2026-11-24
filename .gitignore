@@ -13,5 +13,12 @@ tmp/
 tmp-invoice-render/
 *.tgz
 *.tar.gz
+*.zip
+
+deploy-staging/
+_audit-backup/
+backend/public/assets/
+backend/public/admin/
+backend/public/index.html
 tmp-gc-sample-invoice-techdev.pdf
 tmp-gc-sample-invoice.pdf

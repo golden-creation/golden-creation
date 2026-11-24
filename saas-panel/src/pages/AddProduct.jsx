@@ -87,8 +87,8 @@ const AddProduct = () => {
     setForm((current) => ({ ...current, [field]: value }));
   };
 
-  const handleFileChange = async (event) => {
-    const files = Array.from(event.target.files || []).filter((file) => /^image\//i.test(file.type));
+  const uploadImageFiles = async (fileList) => {
+    const files = Array.from(fileList || []).filter((file) => /^image\//i.test(file.type));
     if (!files.length) return;
     setUploading(true);
     try {
@@ -101,8 +101,12 @@ const AddProduct = () => {
       showToast(error.message || "Unable to upload product media");
     } finally {
       setUploading(false);
-      event.target.value = "";
     }
+  };
+
+  const handleFileChange = async (event) => {
+    await uploadImageFiles(event.target.files);
+    event.target.value = "";
   };
 
   const removeImage = async (index) => {
@@ -375,7 +379,14 @@ const AddProduct = () => {
               <h2 className="font-semibold text-sm">PRODUCT MEDIA</h2>
             </div>
             <p className="text-xs text-gray-500 mb-4">Upload images to Golden Creation storage. The first image is the primary storefront image.</p>
-            <label className="border-2 border-dashed border-[#e5d3b3] p-6 rounded-xl text-center cursor-pointer block bg-[#faf7f2]">
+            <label
+              className="border-2 border-dashed border-[#e5d3b3] p-6 rounded-xl text-center cursor-pointer block bg-[#faf7f2]"
+              onDragOver={(event) => event.preventDefault()}
+              onDrop={(event) => {
+                event.preventDefault();
+                uploadImageFiles(event.dataTransfer.files);
+              }}
+            >
               <img src={uploadIcon} className="h-6 mx-auto mb-3 opacity-70" />
               <p className="text-sm font-medium text-gray-700">Click to upload or drag and drop</p>
               <p className="text-xs text-gray-400 mt-1">{uploading ? "Uploading..." : "PNG, JPG or WebP"}</p>

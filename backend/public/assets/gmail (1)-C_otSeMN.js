@@ -1,1 +1,0 @@
-var e=`/assets/gmail%20(1)-4Sl8ZAiE.png`;export{e as t};

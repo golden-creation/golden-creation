@@ -8,9 +8,11 @@ import { loadConfiguration } from "../config/load-env.js";
 import {
   isolatedTestFailures,
   listenHost,
+  productionDatabaseFailures,
   safeIsolatedTestEnv,
   startupJobsEnabled,
 } from "../config/runtime-safety.js";
+import { rateLimit } from "../middleware/rate-limit.js";
 
 function writeFixture() {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "gc-env-"));
@@ -52,6 +54,14 @@ test("production keeps the existing listen behavior", () => {
 test("isolated test binds only to localhost and accepts the safe configuration", () => {
   const env = safeIsolatedTestEnv();
   assert.equal(listenHost(env), "127.0.0.1");
+  assert.deepEqual(isolatedTestFailures(env), []);
+});
+
+test("deployment database gc_ci is an accepted isolated profile", () => {
+  const env = safeIsolatedTestEnv({
+    DB_USER: "gc_ci_user",
+    DB_NAME: "gc_ci",
+  });
   assert.deepEqual(isolatedTestFailures(env), []);
 });
 
@@ -146,6 +156,46 @@ test("MAILER_CLOUD_ENABLED=false does not send transactional email", async () =>
       else process.env[key] = previous[key];
     }
   }
+});
+
+test("production refuses a missing, local, restore, or test database configuration", () => {
+  assert.deepEqual(productionDatabaseFailures({ NODE_ENV: "development", DB_NAME: "lekhanmart" }), []);
+  assert.ok(productionDatabaseFailures({ NODE_ENV: "production" }).includes("DB_NAME is required in production"));
+  for (const name of ["lekhanmart", "lekhanmart_itest", "goldencreation_restore_20261122T142649Z"]) {
+    const failures = productionDatabaseFailures({ NODE_ENV: "production", DB_NAME: name });
+    assert.ok(failures.includes("DB_NAME must be goldencreation_db"), failures.join("; "));
+  }
+  const blocked = productionDatabaseFailures({
+    NODE_ENV: "production",
+    DB_NAME: "goldencreation_db",
+    DB_USER: "gc_restore",
+    GC_ISOLATED_TEST: "true",
+    DOTENV_CONFIG_PATH: "/opt/goldencreation/test-config/.env.test",
+  });
+  assert.ok(blocked.includes("gc_restore cannot be used in production"));
+  assert.ok(blocked.includes("GC_ISOLATED_TEST must not be enabled in production"));
+  assert.ok(blocked.includes("A test configuration file cannot be used in production"));
+  assert.deepEqual(productionDatabaseFailures({
+    NODE_ENV: "production",
+    DB_NAME: "goldencreation_db",
+    DB_USER: "goldencreation_user",
+  }), []);
+});
+
+test("sensitive routes are rate limited without blocking a normal request", () => {
+  const limit = rateLimit({ windowMs: 1000, max: 1 });
+  const req = { ip: "127.0.0.1", baseUrl: "/api/auth", path: "/login" };
+  let status = 0;
+  const res = {
+    set() {},
+    status(code) { status = code; return this; },
+    json() { return this; },
+  };
+  let passed = 0;
+  limit(req, res, () => { passed += 1; });
+  limit(req, res, () => { passed += 1; });
+  assert.equal(passed, 1);
+  assert.equal(status, 429);
 });
 
 test("server.js keeps production listening and gates the startup jobs", () => {

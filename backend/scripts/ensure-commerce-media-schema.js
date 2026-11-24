@@ -28,6 +28,8 @@ async function addColumn(table, column, definition) {
 }
 
 export async function ensureCommerceMediaSchema() {
+  const { refuseProductionSchemaTarget } = await import("./setup-safety.js");
+  refuseProductionSchemaTarget();
   await addColumn("shipping_rules", "priority", "INT NOT NULL DEFAULT 0 AFTER status");
 
   await query(`

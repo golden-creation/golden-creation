@@ -1,5 +1,8 @@
 import "dotenv/config";
 import mysql from "mysql2/promise";
+import { refuseProductionSchemaTarget } from "./setup-safety.js";
+
+refuseProductionSchemaTarget();
 
 const dbName = process.env.DB_NAME || "lekhanmart";
 const db = await mysql.createConnection({

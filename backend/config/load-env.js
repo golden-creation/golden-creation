@@ -5,6 +5,7 @@ import {
   SENSITIVE_KEYS,
   isIsolatedTest,
   isolatedTestFailures,
+  productionDatabaseFailures,
 } from "./runtime-safety.js";
 
 function assignParsed(env, parsed, { override }) {
@@ -52,6 +53,12 @@ export function loadProcessEnvironment() {
     loadConfiguration(process.env);
   } catch (error) {
     console.error(error.message);
+    process.exit(1);
+  }
+  const productionFailures = productionDatabaseFailures(process.env);
+  if (productionFailures.length) {
+    console.error("Refusing to start production server:");
+    for (const failure of productionFailures) console.error(`- ${failure}`);
     process.exit(1);
   }
   if (!isIsolatedTest(process.env)) return;

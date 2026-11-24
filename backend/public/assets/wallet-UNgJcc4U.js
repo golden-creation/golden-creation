@@ -1,1 +1,0 @@
-var e=`/assets/wallet-hHhBR5mN.png`;export{e as t};

@@ -1,1 +1,0 @@
-var e=`/assets/golden-creation-official-logo-DxbrlMQj.png`;export{e as t};

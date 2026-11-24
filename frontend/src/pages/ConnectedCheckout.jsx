@@ -18,6 +18,7 @@ import {
   verifyRazorpayCheckoutPayment,
 } from "../lib/api";
 import { presentCheckoutAmounts, acceptLatestQuote } from "../lib/checkoutTotals";
+import { SkeletonBlock } from "../components/Skeleton";
 
 function loadRazorpayCheckout() {
   if (window.Razorpay) return Promise.resolve(true);
@@ -690,11 +691,12 @@ function ConnectedCheckout() {
             </div>
 
             <div className="mt-4 rounded-lg border border-gray-200 bg-[#FBF8F2] p-3">
-              <label className="text-xs font-medium uppercase tracking-wide text-gray-500">
+              <label htmlFor="checkout-discount-coupon" className="text-xs font-medium uppercase tracking-wide text-gray-500">
                 Discount coupon
               </label>
               <div className="mt-2 flex gap-2">
                 <input
+                  id="checkout-discount-coupon"
                   value={couponCode}
                   onChange={(event) => setCouponCode(event.target.value.toUpperCase())}
                   placeholder="WELCOME10"
@@ -758,10 +760,12 @@ function ConnectedCheckout() {
 }
 
 function Field({ label, value, onChange, className = "" }) {
+  const id = `checkout-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
   return (
     <div className={className}>
-      <label className="text-xs text-gray-400">{label}</label>
+      <label htmlFor={id} className="text-xs text-gray-400">{label}</label>
       <input
+        id={id}
         value={value}
         onChange={(event) => onChange(event.target.value)}
         className="mobile-touch-target mt-1 w-full rounded-lg border border-gray-200 bg-[#fafafa] px-3 py-2"

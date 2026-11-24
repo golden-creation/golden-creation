@@ -3,8 +3,9 @@ import mysql from "mysql2/promise";
 import { seedAdminModuleData } from "./admin-module-seed.js";
 import { ensureExpansionSchema } from "./ensure-expansion-schema.js";
 import { ensureSeoSchema } from "./ensure-seo-schema.js";
-import { dataSeedAuthorized, dataSeedRefusalReason } from "./setup-safety.js";
+import { dataSeedAuthorized, dataSeedRefusalReason, refuseProductionSchemaTarget } from "./setup-safety.js";
 
+refuseProductionSchemaTarget();
 const dbName = process.env.DB_NAME || "lekhanmart";
 
 const baseConfig = {
@@ -16,9 +17,13 @@ const baseConfig = {
 };
 
 const root = await mysql.createConnection(baseConfig);
-await root.query(
-  `CREATE DATABASE IF NOT EXISTS \`${dbName}\` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci`
-);
+try {
+  await root.query(
+    `CREATE DATABASE IF NOT EXISTS \`${dbName}\` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci`
+  );
+} catch (error) {
+  if (error.errno !== 1044 && error.code !== "ER_DBACCESS_DENIED_ERROR") throw error;
+}
 await root.end();
 
 const db = await mysql.createConnection({

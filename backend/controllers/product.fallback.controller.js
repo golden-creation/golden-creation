@@ -463,6 +463,9 @@ export const deleteProduct = (req, res) => {
 
   Product.delete(id, (err) => {
     if (err) {
+      if (err.statusCode) {
+        return res.status(err.statusCode).json({ message: err.message });
+      }
       const product = deleteMockProduct(id);
 
       if (!product) {
