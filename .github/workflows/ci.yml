@@ -9,6 +9,19 @@ on:
 jobs:
   backend:
     runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: ci-only-password
+          MYSQL_DATABASE: gc_ci
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -pci-only-password"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=20
     defaults:
       run:
         working-directory: backend
@@ -24,7 +37,16 @@ jobs:
         env:
           NODE_ENV: development
           DB_HOST: 127.0.0.1
-          DB_NAME: lekhanmart_itest
+          DB_PORT: 3306
+          DB_USER: root
+          DB_PASSWORD: ci-only-password
+          DB_NAME: gc_ci
+          RUN_STARTUP_JOBS: "false"
+          MAILER_CLOUD_ENABLED: "false"
+          NIMBUS_SMS_ENABLED: "false"
+          RAZORPAY_KEY_ID: ""
+          RAZORPAY_KEY_SECRET: ""
+          RAZORPAY_WEBHOOK_SECRET: ""
 
   frontend:
     runs-on: ubuntu-latest
