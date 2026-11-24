@@ -1,3 +1,10 @@
+export function refuseProductionSchemaTarget(env = process.env) {
+  const name = String(env.DB_NAME || "").trim();
+  if (name === "goldencreation_db") {
+    throw new Error("Refusing schema setup for goldencreation_db");
+  }
+}
+
 export function dataSeedAuthorized(env = process.env) {
   const nodeEnv = String(env.NODE_ENV || "").trim().toLowerCase();
   const allow = String(env.ALLOW_DATA_SEED || "").trim().toLowerCase();

@@ -2,8 +2,9 @@ import bcrypt from "bcrypt";
 import mysql from "mysql2/promise";
 import "./../config/load-env.js";
 
-if (process.env.DB_NAME !== "lekhanmart_itest") {
-  console.error("Refusing fixture load because DB_NAME is not lekhanmart_itest");
+const allowedDatabases = new Set(["lekhanmart_itest", "gc_ci"]);
+if (!allowedDatabases.has(process.env.DB_NAME)) {
+  console.error("Refusing fixture load because DB_NAME is not an isolated test database");
   process.exit(1);
 }
 
@@ -16,8 +17,8 @@ const db = await mysql.createConnection({
 });
 
 const [identity] = await db.query("SELECT DATABASE() AS name");
-if (identity[0].name !== "lekhanmart_itest") {
-  console.error("Refusing fixture load because the connection is not lekhanmart_itest");
+if (identity[0].name !== process.env.DB_NAME || identity[0].name === "goldencreation_db") {
+  console.error("Refusing fixture load because the connection is not the isolated test database");
   process.exit(1);
 }
 

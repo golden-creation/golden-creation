@@ -4,7 +4,7 @@ import path from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
 import { seedAdminModuleData } from "../scripts/admin-module-seed.js";
-import { dataSeedAuthorized, dataSeedRefusalReason } from "../scripts/setup-safety.js";
+import { dataSeedAuthorized, dataSeedRefusalReason, refuseProductionSchemaTarget } from "../scripts/setup-safety.js";
 
 const scriptsDir = path.join(path.dirname(fileURLToPath(import.meta.url)), "../scripts");
 
@@ -22,6 +22,12 @@ test("local seed requires the explicit flag", () => {
   assert.equal(dataSeedAuthorized({ NODE_ENV: "development", SEED_DEMO_DATA: "yes" }), false);
   assert.equal(dataSeedAuthorized({ NODE_ENV: "development", ALLOW_DATA_SEED: "yes" }), true);
   assert.equal(dataSeedAuthorized({ ALLOW_DATA_SEED: "YES" }), true);
+});
+
+test("schema setup refuses the production database", () => {
+  assert.throws(() => refuseProductionSchemaTarget({ DB_NAME: "goldencreation_db" }), /goldencreation_db/);
+  assert.doesNotThrow(() => refuseProductionSchemaTarget({ DB_NAME: "gc_ci" }));
+  assert.doesNotThrow(() => refuseProductionSchemaTarget({ DB_NAME: "lekhanmart_itest" }));
 });
 
 test("unauthorized seed does not execute a query", async () => {

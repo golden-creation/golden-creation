@@ -87,10 +87,16 @@ export function productionDatabaseFailures(env = process.env) {
 
 export function isolatedTestFailures(env = process.env) {
   const failures = [];
+  const user = String(env.DB_USER ?? "").trim();
+  const name = String(env.DB_NAME ?? "").trim();
+  const restoreProfile = user === "gc_restore" && name === "goldencreation_restore_20261122T142649Z";
+  const deploymentProfile = user === "gc_ci_user" && name === "gc_ci";
   if (String(env.PORT ?? "").trim() !== "5001") failures.push("PORT must be 5001");
-  if (String(env.DB_USER ?? "").trim() !== "gc_restore") failures.push("DB_USER must be gc_restore");
-  if (String(env.DB_NAME ?? "").trim() !== "goldencreation_restore_20261122T142649Z") {
-    failures.push("DB_NAME must be goldencreation_restore_20261122T142649Z");
+  if (!restoreProfile && !deploymentProfile) {
+    if (user !== "gc_restore") failures.push("DB_USER must be gc_restore");
+    if (name !== "goldencreation_restore_20261122T142649Z") {
+      failures.push("DB_NAME must be goldencreation_restore_20261122T142649Z");
+    }
   }
   const host = token(env.DB_HOST);
   if (host !== "127.0.0.1" && host !== "localhost") failures.push("DB_HOST must be local");

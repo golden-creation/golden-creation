@@ -1,5 +1,8 @@
 import "dotenv/config";
 import mysql from "mysql2/promise";
+import { refuseProductionSchemaTarget } from "./setup-safety.js";
+
+refuseProductionSchemaTarget();
 
 const connection = await mysql.createConnection({
   host: process.env.DB_HOST || "localhost",

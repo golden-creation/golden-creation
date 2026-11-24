@@ -11,16 +11,18 @@ export GC_SIMULATE=1
 export GC_SOURCE="$SOURCE"
 export DEPLOY_SHA=0123456789abcdef0123456789abcdef01234567
 export GC_TEST_DB_NAME=gc_ci
-export GC_TEST_DB_USER=ci_user
+export GC_TEST_DB_USER=gc_ci_user
 export GC_TEST_DB_HOST=127.0.0.1
 export GC_FAIL_HEALTH="${GC_FAIL_HEALTH:-0}"
 
 mkdir -p "$BIN" "$GC_ROOT/releases/previous/public/.well-known" "$GC_ROOT/shared" "$SOURCE/backend" "$SOURCE/frontend" "$SOURCE/saas-panel"
 printf 'NODE_ENV=production\nDB_NAME=goldencreation_db\nDB_USER=app_user\n' > "$GC_ROOT/shared/.env"
+printf 'DB_PASSWORD=simulate-only\n' > "$GC_ROOT/gc-ci.env"
 printf 'ok' > "$GC_ROOT/releases/previous/public/.well-known/assetlinks.json"
 printf '%s\n' "$GC_ROOT/releases/previous" > "$GC_ROOT/current.link"
 printf 'console.log("test-ok")\n' > "$SOURCE/backend/server.js"
-mkdir -p "$SOURCE/backend/test"
+mkdir -p "$SOURCE/backend/test" "$SOURCE/backend/routes"
+printf 'export {}\n' > "$SOURCE/backend/routes/order.routes.js"
 printf 'test("ok", () => {});\n' > "$SOURCE/backend/test/sample.test.js"
 printf '{}\n' > "$SOURCE/backend/package.json"
 printf '{}\n' > "$SOURCE/frontend/package.json"
@@ -67,6 +69,9 @@ EOF
 
 cat > "$BIN/mariadb" << 'EOF'
 #!/bin/bash
+if [[ "$*" == *"SELECT 1"* && "$*" == *"goldencreation_db"* ]]; then
+  exit 1
+fi
 if [[ "$*" == *"SELECT DATABASE()"* ]]; then
   echo "$GC_TEST_DB_NAME"
   exit 0
@@ -83,7 +88,7 @@ for arg in "$@"; do
     --result-file=*) out="${arg#--result-file=}" ;;
   esac
 done
-printf 'INSERT INTO example VALUES (1);\n' > "$out"
+printf 'CREATE TABLE checkout_attempts (id INT);\nINSERT INTO example VALUES (1);\n' > "$out"
 exit 0
 EOF
 
@@ -155,4 +160,9 @@ test "$status" -ne 0
 grep -q "code_rollback=" "$ROOT/rollback.txt"
 test "$(cat "$GC_ROOT/current.link")" = "$GC_ROOT/releases/previous"
 echo "simulation_rollback=ok"
+if grep -q "simulate-only" "$ROOT/dry-run.txt" "$ROOT/success.txt" "$ROOT/rollback.txt"; then
+  echo "simulation printed the test password" >&2
+  exit 1
+fi
+echo "simulation_secret_not_printed=ok"
 echo "simulation_root=$ROOT"

@@ -28,6 +28,8 @@ async function addColumn(table, column, definition) {
 }
 
 export async function ensureReferralAffiliateSchema() {
+  const { refuseProductionSchemaTarget } = await import("./setup-safety.js");
+  refuseProductionSchemaTarget();
   await query(`
     CREATE TABLE IF NOT EXISTS referral_settings (
       id TINYINT UNSIGNED NOT NULL DEFAULT 1,

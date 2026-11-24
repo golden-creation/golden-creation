@@ -57,6 +57,14 @@ test("isolated test binds only to localhost and accepts the safe configuration",
   assert.deepEqual(isolatedTestFailures(env), []);
 });
 
+test("deployment database gc_ci is an accepted isolated profile", () => {
+  const env = safeIsolatedTestEnv({
+    DB_USER: "gc_ci_user",
+    DB_NAME: "gc_ci",
+  });
+  assert.deepEqual(isolatedTestFailures(env), []);
+});
+
 test("isolated test refuses production database, payments, mail, sms, and storage", () => {
   const cases = [
     [{ PORT: "5000" }, "PORT must be 5001"],
