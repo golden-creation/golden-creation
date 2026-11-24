@@ -43,6 +43,7 @@ import {
 import { buildSeoForRequest, renderSeoHtml } from "./services/seo.service.js";
 
 const app = express();
+app.set("trust proxy", 1);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const publicDir = path.join(__dirname, "public");

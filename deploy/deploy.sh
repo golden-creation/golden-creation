@@ -94,9 +94,12 @@ resolve_current() {
 replace_current() {
   if [ "${GC_SIMULATE:-}" = 1 ]; then
     printf '%s\n' "$1" > "$CURRENT.link"
-  else
-    ln -sfn "$1" "$CURRENT"
+    return
   fi
+  local next="${CURRENT}.next"
+  rm -f "$next"
+  ln -s "$1" "$next"
+  mv -Tf "$next" "$CURRENT"
 }
 PREVIOUS=$(resolve_current)
 test -d "$PREVIOUS"
