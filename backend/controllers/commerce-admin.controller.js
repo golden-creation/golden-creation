@@ -289,7 +289,7 @@ export async function updatePaymentSettings(req, res) {
       [
         req.body?.full_online_enabled ? 1 : 0,
         req.body?.partial_cod_enabled ? 1 : 0,
-        req.body?.full_cod_enabled === false ? 0 : 1,
+        req.body?.full_cod_enabled ? 1 : 0,
         percentage,
         holdMinutes,
         minAmount,

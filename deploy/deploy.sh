@@ -205,6 +205,26 @@ if ((env.DOTENV_CONFIG_PATH || "").includes(".env.test")) process.exit(1);
   schema_count "SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='${SOURCE_DB}' AND TABLE_NAME='orders' AND COLUMN_NAME='checkout_attempt_id'"
   schema_count "SELECT COUNT(*) FROM information_schema.STATISTICS WHERE TABLE_SCHEMA='${SOURCE_DB}' AND TABLE_NAME='checkout_attempts' AND INDEX_NAME='uq_checkout_attempt_key' AND NON_UNIQUE=0"
   schema_count "SELECT COUNT(*) FROM information_schema.STATISTICS WHERE TABLE_SCHEMA='${SOURCE_DB}' AND TABLE_NAME='orders' AND INDEX_NAME='uq_orders_checkout_attempt' AND NON_UNIQUE=0"
+  local payment_column
+  for payment_column in \
+    payment_settings:cod_min_amount \
+    payment_settings:cod_max_amount \
+    payment_settings:cod_pin_restricted \
+    payment_settings:cod_pins \
+    payment_settings:porter_enabled \
+    payment_settings:porter_pins \
+    payment_settings:porter_collects_cod \
+    orders:delivery_method \
+    orders:partial_advance_percent \
+    orders:porter_booking_reference \
+    orders:porter_status
+  do
+    if ! schema_count "SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='${SOURCE_DB}' AND TABLE_NAME='${payment_column%%:*}' AND COLUMN_NAME='${payment_column#*:}'"; then
+      echo "STOP: missing production column ${payment_column}" >&2
+      exit 1
+    fi
+  done
+  echo "preflight_payment_columns=ok"
   echo "preflight_schema=ok"
   rm -f "$CLIENT_DEFAULTS"
   unset CLIENT_DEFAULTS

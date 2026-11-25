@@ -5,6 +5,7 @@ import {
   evaluateFullCod,
   porterAvailability,
   restrictPorterPayments,
+  resolvePartialCodAdvance,
   splitPartialAdvance,
   storedOrderAmounts,
 } from "../services/payment-policy.js";
@@ -13,6 +14,40 @@ test("partial COD advance defaults to 20 percent and is calculated once", () => 
   assert.equal(DEFAULT_PARTIAL_ADVANCE_PERCENT, 20);
   assert.deepEqual(splitPartialAdvance(1000), { percentage: 20, amountOnline: 200, amountCod: 800 });
   assert.deepEqual(splitPartialAdvance(999.99, 20), { percentage: 20, amountOnline: 200, amountCod: 799.99 });
+});
+
+test("stored 10 percent product, category, and collection rules do not lower the 20 percent advance", () => {
+  const rules = [
+    { target_type: "Product", target_id: 4, percentage: 10, eligible: 1, status: "Active" },
+    { target_type: "Category", target_id: 8, percentage: null, eligible: 1, status: "Active" },
+    { target_type: "Collection", target_id: 3, percentage: 10, eligible: 1, status: "Active" },
+    { target_type: "Product", target_id: 99, percentage: 50, eligible: 1, status: "Inactive" },
+  ];
+  const decision = resolvePartialCodAdvance(20, rules, {
+    productIds: [4],
+    categoryIds: [8],
+    collectionIds: [3],
+  });
+  assert.equal(decision.baseline, 20);
+  assert.equal(decision.percentage, 20);
+  assert.equal(decision.eligible, true);
+  assert.deepEqual(splitPartialAdvance(1000, decision.percentage), {
+    percentage: 20,
+    amountOnline: 200,
+    amountCod: 800,
+  });
+});
+
+test("an explicit higher partial COD rule still raises only that cart", () => {
+  const decision = resolvePartialCodAdvance(20, [
+    { target_type: "Product", target_id: 4, percentage: 40, eligible: 1, status: "Active" },
+  ], { productIds: [4], categoryIds: [], collectionIds: [] });
+  assert.equal(decision.percentage, 40);
+  const untouched = resolvePartialCodAdvance(20, [
+    { target_type: "Product", target_id: 4, percentage: 40, eligible: 0, status: "Active" },
+  ], { productIds: [9], categoryIds: [], collectionIds: [] });
+  assert.equal(untouched.percentage, 20);
+  assert.equal(untouched.eligible, true);
 });
 
 test("a stored order keeps its original payment split", () => {

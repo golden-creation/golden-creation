@@ -14,6 +14,32 @@ export function parsePinList(value) {
   return [...new Set(String(value || "").split(/[^0-9]+/).map(normalizePin).filter(Boolean))];
 }
 
+export function resolvePartialCodAdvance(defaultPercent, rules = [], targets = {}) {
+  const baseline = Math.min(100, Math.max(1, Number(defaultPercent) || DEFAULT_PARTIAL_ADVANCE_PERCENT));
+  let percentage = baseline;
+  let eligible = true;
+  const idsByType = {
+    Product: new Set((targets.productIds || []).map(Number)),
+    Collection: new Set((targets.collectionIds || []).map(Number)),
+    Category: new Set((targets.categoryIds || []).map(Number)),
+  };
+  for (const rule of rules) {
+    if (rule.status && rule.status !== "Active") continue;
+    const ids = idsByType[rule.target_type];
+    if (!ids || !ids.has(Number(rule.target_id))) continue;
+    if (!Number(rule.eligible)) {
+      eligible = false;
+      continue;
+    }
+    if (rule.percentage === null || rule.percentage === undefined || rule.percentage === "") continue;
+    const rulePercent = Number(rule.percentage);
+    if (Number.isFinite(rulePercent) && rulePercent > percentage) {
+      percentage = Math.min(100, rulePercent);
+    }
+  }
+  return { eligible, percentage, baseline };
+}
+
 export function splitPartialAdvance(total, percentage = DEFAULT_PARTIAL_ADVANCE_PERCENT) {
   const percent = Math.min(100, Math.max(1, Number(percentage) || DEFAULT_PARTIAL_ADVANCE_PERCENT));
   const amountOnline = toMoney((Number(total) * percent) / 100);

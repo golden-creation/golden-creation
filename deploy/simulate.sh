@@ -154,7 +154,12 @@ EOF
 chmod +x "$BIN/pm2"
 
 bash "$SCRIPT" > "$ROOT/success.txt"
+grep -q "preflight_payment_columns=ok" "$ROOT/dry-run.txt"
 grep -q "deployment_status=ok" "$ROOT/success.txt"
+grep -q "preflight_payment_columns=ok" "$ROOT/success.txt"
+for column in cod_min_amount cod_max_amount cod_pin_restricted cod_pins porter_enabled porter_pins porter_collects_cod delivery_method partial_advance_percent porter_booking_reference porter_status; do
+  grep -q "$column" "$SCRIPT"
+done
 grep -q "production_recaptcha_site_key=present" "$ROOT/success.txt"
 test "$(cat "$GC_ROOT/current.link")" != "$GC_ROOT/releases/previous"
 test -s "$GC_ROOT/backups/db/"*.sql

@@ -24,7 +24,7 @@ function PaymentIntegrations() {
   const [paymentConfig, setPaymentConfig] = useState({
     full_online_enabled: false,
     partial_cod_enabled: false,
-    full_cod_enabled: true,
+    full_cod_enabled: false,
     default_partial_percent: 20,
     stock_hold_minutes: 30,
     cod_min_amount: 0,

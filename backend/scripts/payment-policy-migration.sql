@@ -1,5 +1,7 @@
 -- Additive payment and Porter columns.
 -- Does not update orders.amount_paid, orders.cod_due, stock, or payment history.
+-- Does not enable full COD or Porter. Both stay off until an admin configures them.
+-- quote_snapshot is added before delivery_method so a fresh orders table can take the later column.
 -- Run against production only after explicit approval.
 
 ALTER TABLE payment_settings
@@ -10,6 +12,9 @@ ALTER TABLE payment_settings
   ADD COLUMN IF NOT EXISTS porter_enabled TINYINT(1) NOT NULL DEFAULT 0 AFTER cod_pins,
   ADD COLUMN IF NOT EXISTS porter_pins TEXT NULL AFTER porter_enabled,
   ADD COLUMN IF NOT EXISTS porter_collects_cod TINYINT(1) NOT NULL DEFAULT 0 AFTER porter_pins;
+
+ALTER TABLE orders
+  ADD COLUMN IF NOT EXISTS quote_snapshot LONGTEXT NULL;
 
 ALTER TABLE orders
   ADD COLUMN IF NOT EXISTS delivery_method VARCHAR(40) NOT NULL DEFAULT 'Standard' AFTER quote_snapshot,

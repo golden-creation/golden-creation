@@ -2,11 +2,11 @@ import db from "../config/db.js";
 import { categoryGstTotal, composeCheckoutTotal } from "./checkout-totals.js";
 import { validateDiscountCart } from "./discount.service.js";
 import {
-  DEFAULT_PARTIAL_ADVANCE_PERCENT,
   PORTER_DELIVERY_LABEL,
   PORTER_PICKUP,
   evaluateFullCod,
   porterAvailability,
+  resolvePartialCodAdvance,
   restrictPorterPayments,
   splitPartialAdvance,
 } from "./payment-policy.js";
@@ -532,42 +532,17 @@ async function resolvePaymentOptions(items, finalTotal, connection = db, context
     [],
     connection
   );
-  let eligible = true;
-  let percentage = Number(settings.default_partial_percent || DEFAULT_PARTIAL_ADVANCE_PERCENT);
-
-  for (const productId of targetProductIds) {
-    const matches = rules.filter(
-      (rule) => rule.target_type === "Product" && Number(rule.target_id) === productId
-    );
-    if (matches.some((rule) => !Number(rule.eligible))) eligible = false;
-    percentage = Math.max(
-      percentage,
-      ...matches.filter((rule) => Number(rule.eligible)).map((rule) => Number(rule.percentage || 0))
-    );
-  }
-  for (const collectionId of targetCollectionIds) {
-    const matches = rules.filter(
-      (rule) => rule.target_type === "Collection" && Number(rule.target_id) === collectionId
-    );
-    if (matches.some((rule) => !Number(rule.eligible))) eligible = false;
-    percentage = Math.max(
-      percentage,
-      ...matches.filter((rule) => Number(rule.eligible)).map((rule) => Number(rule.percentage || 0))
-    );
-  }
   const categoryMap = await categoryAncestorMap(targetCategoryIds, connection);
+  const categoryIds = new Set(targetCategoryIds.map(Number));
   for (const categoryId of targetCategoryIds) {
-    const ancestors = categoryMap.get(categoryId) || new Set([categoryId]);
-    const matches = rules.filter(
-      (rule) => rule.target_type === "Category" && ancestors.has(Number(rule.target_id))
-    );
-    if (matches.some((rule) => !Number(rule.eligible))) eligible = false;
-    percentage = Math.max(
-      percentage,
-      ...matches.filter((rule) => Number(rule.eligible)).map((rule) => Number(rule.percentage || 0))
-    );
+    for (const ancestor of categoryMap.get(categoryId) || []) categoryIds.add(Number(ancestor));
   }
-  const partial = splitPartialAdvance(finalTotal, percentage);
+  const partialDecision = resolvePartialCodAdvance(settings.default_partial_percent, rules, {
+    productIds: targetProductIds,
+    collectionIds: targetCollectionIds,
+    categoryIds: [...categoryIds],
+  });
+  const partial = splitPartialAdvance(finalTotal, partialDecision.percentage);
   const fullCod = evaluateFullCod({
     enabled: Boolean(Number(settings.full_cod_enabled)),
     total: finalTotal,
@@ -585,7 +560,7 @@ async function resolvePaymentOptions(items, finalTotal, connection = db, context
   const options = {
     fullCod,
     partialCod: {
-      enabled: configured && Boolean(Number(settings.partial_cod_enabled)) && eligible,
+      enabled: configured && Boolean(Number(settings.partial_cod_enabled)) && partialDecision.eligible,
       ...partial,
     },
     fullOnline: {
