@@ -209,6 +209,7 @@ import {
   getPaymentSettings,
   savePartialCodRule,
   updateCommerceShippingRule,
+  savePorterBooking,
   updatePaymentSettings,
 } from "../controllers/commerce-admin.controller.js";
 import {
@@ -695,6 +696,11 @@ router.put(
 router.put(
   "/orders/:id/cod-collected",
   markCodCollected
+);
+
+router.put(
+  "/orders/:id/porter-booking",
+  savePorterBooking
 );
 
 router.get(

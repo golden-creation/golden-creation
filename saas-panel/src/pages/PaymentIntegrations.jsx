@@ -27,6 +27,13 @@ function PaymentIntegrations() {
     full_cod_enabled: true,
     default_partial_percent: 20,
     stock_hold_minutes: 30,
+    cod_min_amount: 0,
+    cod_max_amount: 0,
+    cod_pin_restricted: false,
+    cod_pins: "",
+    porter_enabled: false,
+    porter_pins: "",
+    porter_collects_cod: false,
   });
   const [partialRules, setPartialRules] = useState([]);
   const [targetType, setTargetType] = useState("Product");
@@ -145,10 +152,23 @@ function PaymentIntegrations() {
               </div>
             </div>
             <div className="mt-4 grid gap-3 sm:grid-cols-3">
-              <Field label="Default Partial COD %" type="number" value={paymentConfig.default_partial_percent} onChange={(value) => setPaymentConfig({ ...paymentConfig, default_partial_percent: value })} />
+              <Field label="Partial COD advance %" type="number" value={paymentConfig.default_partial_percent} onChange={(value) => setPaymentConfig({ ...paymentConfig, default_partial_percent: value })} />
+              <Field label="COD minimum order amount" type="number" value={paymentConfig.cod_min_amount || 0} onChange={(value) => setPaymentConfig({ ...paymentConfig, cod_min_amount: value })} />
+              <Field label="COD maximum order amount (0 = no limit)" type="number" value={paymentConfig.cod_max_amount || 0} onChange={(value) => setPaymentConfig({ ...paymentConfig, cod_max_amount: value })} />
               <Field label="Stock hold minutes" type="number" value={paymentConfig.stock_hold_minutes} onChange={(value) => setPaymentConfig({ ...paymentConfig, stock_hold_minutes: value })} />
-              <button onClick={savePaymentConfig} className="self-end rounded bg-[#A68B5B] px-4 py-2 text-sm text-white">Save payment settings</button>
+              <label className="flex items-center gap-2 text-sm sm:col-span-2"><input type="checkbox" checked={Boolean(Number(paymentConfig.cod_pin_restricted))} onChange={(event) => setPaymentConfig({ ...paymentConfig, cod_pin_restricted: event.target.checked })} />Limit Cash on Delivery to listed PIN codes</label>
+              <label className="text-xs text-gray-500 sm:col-span-3">COD PIN codes<textarea value={paymentConfig.cod_pins || ""} onChange={(event) => setPaymentConfig({ ...paymentConfig, cod_pins: event.target.value })} placeholder="122001, 122011" className="mt-1 w-full rounded border px-3 py-2 text-sm" rows="2" /></label>
             </div>
+            <div className="mt-4 rounded-lg border p-3">
+              <h3 className="text-sm font-semibold">Local Delivery via Porter — At Buyer's Cost</h3>
+              <p className="mt-1 text-xs text-gray-500">Pickup is the Golden Creation showroom in Sector 56, Gurugram. Porter's charge is paid by the buyer and is not added to the order. No Porter API is connected; bookings stay manual. Cash collection by Porter stays off until an approved arrangement exists.</p>
+              <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                <Toggle label="Porter delivery" checked={Boolean(Number(paymentConfig.porter_enabled))} onChange={(value) => setPaymentConfig({ ...paymentConfig, porter_enabled: value })} />
+                <Toggle label="Porter can collect the cash balance" checked={Boolean(Number(paymentConfig.porter_collects_cod))} onChange={(value) => setPaymentConfig({ ...paymentConfig, porter_collects_cod: value })} />
+                <label className="text-xs text-gray-500 sm:col-span-2">Eligible Gurugram PIN codes<textarea value={paymentConfig.porter_pins || ""} onChange={(event) => setPaymentConfig({ ...paymentConfig, porter_pins: event.target.value })} placeholder="122011, 122002" className="mt-1 w-full rounded border px-3 py-2 text-sm" rows="2" /></label>
+              </div>
+            </div>
+            <button onClick={savePaymentConfig} className="mt-4 rounded bg-[#A68B5B] px-4 py-2 text-sm text-white">Save payment settings</button>
           </section>
 
           <section className="mt-6 rounded-xl bg-white p-4 shadow">

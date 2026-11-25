@@ -417,6 +417,10 @@ export async function downloadOrderInvoice(req, res) {
           o.payment_status,
           o.amount_paid,
           o.cod_due,
+          o.delivery_method,
+          o.partial_advance_percent,
+          o.porter_booking_reference,
+          o.porter_status,
           o.order_status,
           o.tracking_url,
           o.logistics_provider,
@@ -529,6 +533,14 @@ export async function downloadOrderInvoice(req, res) {
     });
     doc.moveDown();
     doc.fontSize(10).text(`Payment Method: ${order.payment_method || "Not specified"}`);
+    if (order.delivery_method === "Porter") {
+      doc.moveDown(0.4);
+      doc.fontSize(10).text("Delivery: Local Delivery via Porter — At Buyer's Cost");
+      doc.fontSize(10).text("Porter's delivery charge is paid by the buyer to Porter and is not included in this invoice.");
+      if (order.porter_booking_reference) {
+        doc.fontSize(10).text(`Porter booking: ${order.porter_booking_reference}`);
+      }
+    }
     doc.text(`Payment Status: ${order.payment_status || "Pending"}`);
     doc.moveDown(2);
     doc.fontSize(9).fillColor("#666").text("Thank you for shopping with Golden Creation.");
@@ -574,6 +586,10 @@ export async function getCustomerOrders(req, res) {
           o.payment_status,
           o.amount_paid,
           o.cod_due,
+          o.delivery_method,
+          o.partial_advance_percent,
+          o.porter_booking_reference,
+          o.porter_status,
           o.order_status,
           o.tracking_url,
           o.logistics_provider,

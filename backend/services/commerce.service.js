@@ -1,6 +1,15 @@
 import db from "../config/db.js";
 import { categoryGstTotal, composeCheckoutTotal } from "./checkout-totals.js";
 import { validateDiscountCart } from "./discount.service.js";
+import {
+  DEFAULT_PARTIAL_ADVANCE_PERCENT,
+  PORTER_DELIVERY_LABEL,
+  PORTER_PICKUP,
+  evaluateFullCod,
+  porterAvailability,
+  restrictPorterPayments,
+  splitPartialAdvance,
+} from "./payment-policy.js";
 
 export function dbQuery(sql, values = [], connection = db) {
   return new Promise((resolve, reject) => {
@@ -505,7 +514,7 @@ async function resolveTax(items, discountedSubtotal, subtotal, connection = db) 
   return taxed.total;
 }
 
-async function resolvePaymentOptions(items, finalTotal, connection = db) {
+async function resolvePaymentOptions(items, finalTotal, connection = db, context = {}) {
   const settingsRows = await dbQuery("SELECT * FROM payment_settings WHERE id = 1", [], connection);
   const settings = settingsRows[0] || {};
   const configured =
@@ -524,7 +533,7 @@ async function resolvePaymentOptions(items, finalTotal, connection = db) {
     connection
   );
   let eligible = true;
-  let percentage = Number(settings.default_partial_percent || 20);
+  let percentage = Number(settings.default_partial_percent || DEFAULT_PARTIAL_ADVANCE_PERCENT);
 
   for (const productId of targetProductIds) {
     const matches = rules.filter(
@@ -558,38 +567,69 @@ async function resolvePaymentOptions(items, finalTotal, connection = db) {
       ...matches.filter((rule) => Number(rule.eligible)).map((rule) => Number(rule.percentage || 0))
     );
   }
-  percentage = Math.min(100, Math.max(1, percentage));
-
-  return {
-    fullCod: {
-      enabled: Boolean(Number(settings.full_cod_enabled)),
-      amountOnline: 0,
-      amountCod: toMoney(finalTotal),
-    },
+  const partial = splitPartialAdvance(finalTotal, percentage);
+  const fullCod = evaluateFullCod({
+    enabled: Boolean(Number(settings.full_cod_enabled)),
+    total: finalTotal,
+    pin: context.pin,
+    minAmount: settings.cod_min_amount,
+    maxAmount: settings.cod_max_amount,
+    restricted: Boolean(Number(settings.cod_pin_restricted)),
+    pins: settings.cod_pins,
+  });
+  const porter = porterAvailability({
+    enabled: settings.porter_enabled,
+    pin: context.pin,
+    pins: settings.porter_pins,
+  });
+  const options = {
+    fullCod,
     partialCod: {
-      enabled:
-        configured &&
-        Boolean(Number(settings.partial_cod_enabled)) &&
-        eligible,
-      percentage,
-      amountOnline: toMoney((finalTotal * percentage) / 100),
-      amountCod: toMoney(finalTotal - (finalTotal * percentage) / 100),
+      enabled: configured && Boolean(Number(settings.partial_cod_enabled)) && eligible,
+      ...partial,
     },
     fullOnline: {
       enabled: configured && Boolean(Number(settings.full_online_enabled)),
       amountOnline: toMoney(finalTotal),
       amountCod: 0,
     },
+    porter,
     razorpayConfigured: configured,
     keyId: configured ? process.env.RAZORPAY_KEY_ID : "",
   };
+  return restrictPorterPayments(options, {
+    deliveryMethod: context.deliveryMethod,
+    porterCollectsCod: Boolean(Number(settings.porter_collects_cod)),
+  });
 }
 
 export async function buildCheckoutQuote(payload, connection = db) {
   const items = await normalizeCartItems(payload.items, connection);
   const subtotal = toMoney(items.reduce((sum, item) => sum + item.lineTotal, 0));
-  const shippingRule = await resolveShippingRule(items, subtotal, payload.customer || payload, connection);
-  if (!shippingRule) {
+  const customer = payload.customer || payload;
+  const deliveryMethod = cleanString(payload.deliveryMethod || customer.deliveryMethod) === "Porter" ? "Porter" : "Standard";
+  const pin = customer.zipCode || customer.zip_code || payload.zipCode || "";
+  let shippingRule = await resolveShippingRule(items, subtotal, customer, connection);
+  const [paymentSettings] = await dbQuery("SELECT * FROM payment_settings WHERE id = 1", [], connection);
+  const porter = porterAvailability({
+    enabled: paymentSettings?.porter_enabled,
+    pin,
+    pins: paymentSettings?.porter_pins,
+  });
+  if (deliveryMethod === "Porter") {
+    if (!porter.available) {
+      const error = new Error("Local Porter delivery is not available for this PIN code");
+      error.statusCode = 422;
+      throw error;
+    }
+    shippingRule = {
+      id: shippingRule?.id || null,
+      name: PORTER_DELIVERY_LABEL,
+      charge: 0,
+      deliveryMethod: "Porter",
+      pickup: PORTER_PICKUP,
+    };
+  } else if (!shippingRule) {
     const error = new Error("Delivery is not available for this address");
     error.statusCode = 422;
     throw error;
@@ -624,10 +664,10 @@ export async function buildCheckoutQuote(payload, connection = db) {
     appliedDiscounts = discountResult.appliedDiscounts || [];
     discountCode = appliedDiscounts[0]?.code || discountCode || "";
   }
-  const priced = composeCheckoutTotal({
+  let priced = composeCheckoutTotal({
     subtotal,
     productDiscountAmount,
-    shippingFee,
+    shippingFee: deliveryMethod === "Porter" ? 0 : shippingFee,
     shippingDiscountAmount: 0,
     taxAmount: await resolveTax(items, toMoney(Math.max(0, subtotal - productDiscountAmount)), subtotal, connection),
   });
@@ -635,7 +675,7 @@ export async function buildCheckoutQuote(payload, connection = db) {
   shippingFee = priced.shippingFee;
   const taxAmount = priced.taxAmount;
   const totalAmount = priced.totalAmount;
-  const paymentOptions = await resolvePaymentOptions(items, totalAmount, connection);
+  const paymentOptions = await resolvePaymentOptions(items, totalAmount, connection, { pin, deliveryMethod });
 
   return {
     items,
@@ -651,6 +691,13 @@ export async function buildCheckoutQuote(payload, connection = db) {
     taxAmount,
     totalAmount,
     paymentOptions,
+    deliveryMethod,
+    delivery: {
+      method: deliveryMethod,
+      porter,
+      pickup: deliveryMethod === "Porter" ? PORTER_PICKUP : "",
+      buyerPaysPorter: deliveryMethod === "Porter",
+    },
   };
 }
 
@@ -738,8 +785,8 @@ export async function insertQuotedOrder(
        street_address, city, state, zip_code, payment_method, payment_status,
        subtotal, shipping_fee, tax_amount, discount_id, discount_code,
        discount_amount, total_amount, amount_paid, cod_due, payment_expires_at,
-       quote_snapshot, order_status, checkout_attempt_id
-     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+       quote_snapshot, delivery_method, partial_advance_percent, order_status, checkout_attempt_id
+     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
       orderNumber,
       Number(payload.userId || customer.userId) || null,
@@ -765,7 +812,17 @@ export async function insertQuotedOrder(
       JSON.stringify({
         shippingRule: quote.shippingRule,
         paymentOption: payload.paymentOption || paymentMethod,
+        deliveryMethod: quote.deliveryMethod || "Standard",
+        partialAdvancePercent: quote.paymentOptions?.partialCod?.percentage || null,
+        amountOnline: paymentMethod === "Full Online"
+          ? quote.totalAmount
+          : paymentMethod === "Partial COD"
+            ? quote.paymentOptions?.partialCod?.amountOnline
+            : 0,
+        amountCod: codDue,
       }),
+      quote.deliveryMethod || "Standard",
+      paymentMethod === "Partial COD" ? quote.paymentOptions?.partialCod?.percentage || null : null,
       orderStatus,
       checkoutAttemptId,
     ]

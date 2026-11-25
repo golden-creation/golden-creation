@@ -136,7 +136,7 @@ export function sendOrderSuccessEmail(order) {
     to: order.customer_email,
     subject: `Order ${order.order_number} placed successfully`,
     campaignId: "golden-creation-order-success",
-    text: `Thank you for shopping with Golden Creation. Your order ${order.order_number} has been placed successfully. Order total: ${money(order.total_amount)}.`,
+    text: `Thank you for shopping with Golden Creation. Your order ${order.order_number} has been placed successfully. Order total: ${money(order.total_amount)}. Paid now: ${money(order.amount_paid)}. Due on delivery: ${money(order.cod_due)}. Payment: ${cleanString(order.payment_method) || "Pending"}.`,
     html: shell({
       title: "Order placed successfully",
       preview: `Your order ${order.order_number} has been placed.`,
@@ -145,6 +145,9 @@ export function sendOrderSuccessEmail(order) {
         <table style="width:100%;border-collapse:collapse;margin-top:14px;font-size:14px;">
           <tr><td style="padding:9px 0;color:#7c7563;">Order</td><td style="padding:9px 0;text-align:right;font-weight:700;">${order.order_number}</td></tr>
           <tr><td style="padding:9px 0;color:#7c7563;">Order total</td><td style="padding:9px 0;text-align:right;font-weight:700;">${money(order.total_amount)}</td></tr>
+          <tr><td style="padding:9px 0;color:#7c7563;">Payment</td><td style="padding:9px 0;text-align:right;font-weight:700;">${cleanString(order.payment_method) || "Pending"}</td></tr>
+          <tr><td style="padding:9px 0;color:#7c7563;">Paid now</td><td style="padding:9px 0;text-align:right;font-weight:700;">${money(order.amount_paid)}</td></tr>
+          <tr><td style="padding:9px 0;color:#7c7563;">Due on delivery</td><td style="padding:9px 0;text-align:right;font-weight:700;">${money(order.cod_due)}</td></tr>
           <tr><td style="padding:9px 0;color:#7c7563;">Payment status</td><td style="padding:9px 0;text-align:right;font-weight:700;">${cleanString(order.payment_status) || "Pending"}</td></tr>
         </table>
         <a href="https://goldencreation.in/orders" style="display:inline-block;margin-top:18px;background:#c2863f;color:#fff;text-decoration:none;border-radius:999px;padding:12px 18px;font-size:14px;font-weight:700;">View order</a>

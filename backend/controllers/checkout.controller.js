@@ -130,6 +130,8 @@ function publicQuote(quote) {
     totalAmount: quote.totalAmount,
     discountCode: quote.discountCode,
     paymentOptions: quote.paymentOptions,
+    deliveryMethod: quote.deliveryMethod || "Standard",
+    delivery: quote.delivery || null,
   };
 }
 

@@ -1528,6 +1528,13 @@ export async function updateAdminShipment(id, payload) {
   return apiRequest(`/admin/orders/${id}/shipment`, { method: "PUT", body: JSON.stringify(payload) });
 }
 
+export async function savePorterBooking(id, payload) {
+  return apiRequest(`/admin/orders/${id}/porter-booking`, {
+    method: "PUT",
+    body: JSON.stringify(payload),
+  });
+}
+
 export async function markOrderCodCollected(id, remarks = "") {
   return apiRequest(`/admin/orders/${id}/cod-collected`, {
     method: "PUT",

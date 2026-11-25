@@ -85,6 +85,22 @@ export async function ensureCommerceMediaSchema() {
       (id, full_online_enabled, partial_cod_enabled, full_cod_enabled, default_partial_percent, stock_hold_minutes)
     VALUES (1, 0, 0, 1, 20.00, 30)
   `);
+  await addColumn("payment_settings", "cod_min_amount", "DECIMAL(12,2) NOT NULL DEFAULT 0 AFTER stock_hold_minutes");
+  await addColumn("payment_settings", "cod_max_amount", "DECIMAL(12,2) NOT NULL DEFAULT 0 AFTER cod_min_amount");
+  await addColumn("payment_settings", "cod_pin_restricted", "TINYINT(1) NOT NULL DEFAULT 0 AFTER cod_max_amount");
+  await addColumn("payment_settings", "cod_pins", "TEXT NULL AFTER cod_pin_restricted");
+  await addColumn("payment_settings", "porter_enabled", "TINYINT(1) NOT NULL DEFAULT 0 AFTER cod_pins");
+  await addColumn("payment_settings", "porter_pins", "TEXT NULL AFTER porter_enabled");
+  await addColumn("payment_settings", "porter_collects_cod", "TINYINT(1) NOT NULL DEFAULT 0 AFTER porter_pins");
+  await query(
+    `UPDATE payment_settings
+        SET default_partial_percent = 20
+      WHERE id = 1 AND default_partial_percent = 10`
+  );
+  await addColumn("orders", "delivery_method", "VARCHAR(40) NOT NULL DEFAULT 'Standard' AFTER quote_snapshot");
+  await addColumn("orders", "partial_advance_percent", "DECIMAL(5,2) NULL AFTER delivery_method");
+  await addColumn("orders", "porter_booking_reference", "VARCHAR(120) NULL AFTER partial_advance_percent");
+  await addColumn("orders", "porter_status", "VARCHAR(40) NULL AFTER porter_booking_reference");
 
   await query(`
     CREATE TABLE IF NOT EXISTS partial_cod_rules (

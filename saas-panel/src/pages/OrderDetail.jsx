@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import {
   getAdminOrderDetail,
   markOrderCodCollected,
+  savePorterBooking,
   updateAdminShipment,
 } from "../lib/adminApi";
 import { formatQuantity } from "../lib/formatQuantity";
@@ -17,6 +18,8 @@ function OrderDetail() {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(true);
   const [tracking, setTracking] = useState({ trackingUrl: "", logisticsProvider: "" });
+  const [porterReference, setPorterReference] = useState("");
+  const [porterStatus, setPorterStatus] = useState("Not booked");
   const [dispatchPrompt, setDispatchPrompt] = useState(false);
   const [cancelPrompt, setCancelPrompt] = useState(null);
 
@@ -32,6 +35,8 @@ function OrderDetail() {
           setOrder(payload.order);
           setItems(payload.items || []);
           setTracking({ trackingUrl: payload.order?.tracking_url || "", logisticsProvider: payload.order?.logistics_provider || "" });
+          setPorterReference(payload.order?.porter_booking_reference || "");
+          setPorterStatus(payload.order?.porter_status || "Not booked");
         }
       } catch (error) {
         if (!cancelled) {
@@ -204,6 +209,33 @@ function OrderDetail() {
               <button onClick={() => changeStatus(order.order_status)} className="rounded bg-black px-3 py-2 text-xs text-white">Save tracking</button>
             </div>
           </section>
+          {order.delivery_method === "Porter" && (
+            <section className="rounded-xl bg-white p-5 shadow">
+              <h2 className="text-lg font-semibold">Porter booking</h2>
+              <p className="mt-1 text-xs text-gray-500">Manual booking only. Saving a reference does not change the order amount or collect payment.</p>
+              <div className="mt-4 space-y-3 text-sm">
+                <input value={porterReference} onChange={(event) => setPorterReference(event.target.value)} placeholder="Porter booking reference" className="w-full rounded border px-3 py-2" />
+                <select value={porterStatus} onChange={(event) => setPorterStatus(event.target.value)} className="w-full rounded border px-3 py-2">
+                  {["Not booked", "Booked", "Picked up", "Delivered", "Cancelled"].map((status) => <option key={status}>{status}</option>)}
+                </select>
+                <button
+                  type="button"
+                  onClick={async () => {
+                    try {
+                      const response = await savePorterBooking(id, { porter_booking_reference: porterReference, porter_status: porterStatus });
+                      setOrder((current) => ({ ...current, porter_booking_reference: porterReference, porter_status: porterStatus, logistics_provider: "Porter" }));
+                      setMessage(response.message || "Porter booking saved");
+                    } catch (error) {
+                      setMessage(error.message || "Unable to save Porter booking");
+                    }
+                  }}
+                  className="rounded bg-black px-3 py-2 text-xs text-white"
+                >
+                  Save Porter booking
+                </button>
+              </div>
+            </section>
+          )}
           <section className="rounded-xl bg-white p-5 shadow">
             <h2 className="text-lg font-semibold">Customer</h2>
             <div className="mt-4 space-y-3 text-sm">
@@ -234,7 +266,9 @@ function OrderDetail() {
               <Row label="Online / collected" value={order.amount_paid} />
               <Row label="COD due" value={order.cod_due} strong={Number(order.cod_due) > 0} />
               <Detail label="Payment Method" value={order.payment_method || "-"} />
-              <Detail label="Payment Status" value={order.payment_status || "Pending"} />
+              <Detail label="Payment Status" value={order.payment_status === "COD Due" ? "Unpaid — collect on delivery" : (order.payment_status || "Pending")} />
+              <Detail label="Delivery" value={order.delivery_method === "Porter" ? "Local Delivery via Porter — At Buyer's Cost" : "Standard"} />
+              {order.partial_advance_percent ? <Detail label="Advance locked at order" value={`${order.partial_advance_percent}%`} /> : null}
               {Number(order.cod_due || 0) > 0 && <button onClick={collectCod} className="mt-3 w-full rounded bg-[#A68B5B] px-3 py-2 text-sm text-white">Mark COD collected</button>}
             </div>
           </section>

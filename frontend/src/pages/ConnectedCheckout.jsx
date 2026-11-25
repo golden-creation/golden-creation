@@ -56,6 +56,7 @@ function ConnectedCheckout() {
     zipCode: "",
     phoneNumber: currentUser?.phone || "",
     paymentMethod: "Full COD",
+    deliveryMethod: "Standard",
   });
   const [validationMessage, setValidationMessage] = useState("");
   const [placingOrder, setPlacingOrder] = useState(false);
@@ -98,9 +99,11 @@ function ConnectedCheckout() {
       zipCode: form.zipCode,
       phoneNumber: form.phoneNumber,
       paymentMethod: form.paymentMethod,
+      deliveryMethod: form.deliveryMethod,
     }),
     [
       form.city,
+      form.deliveryMethod,
       form.email,
       form.firstName,
       form.lastName,
@@ -200,6 +203,7 @@ function ConnectedCheckout() {
           items: cartItems,
           customer: quoteCustomer,
           paymentMethod: quoteCustomer.paymentMethod,
+          deliveryMethod: quoteCustomer.deliveryMethod,
           discountCode: discountState.appliedDiscount?.code || "",
         });
         if (!cancelled) {
@@ -327,6 +331,7 @@ function ConnectedCheckout() {
           quantity: item.quantity,
         })),
         paymentMethod: form.paymentMethod,
+        deliveryMethod: form.deliveryMethod,
         phone: form.phoneNumber,
         zip: form.zipCode,
         discount: discountState.appliedDiscount?.code || "",
@@ -361,6 +366,7 @@ function ConnectedCheckout() {
         const razorpayOrder = await createRazorpayCheckoutOrder({
           userId: currentUser?.id,
           customer: form,
+          deliveryMethod: form.deliveryMethod,
           items: cartItems,
           discountCode: discountState.appliedDiscount?.code || "",
           paymentMode: form.paymentMethod,
@@ -578,6 +584,25 @@ function ConnectedCheckout() {
               </div>
             )}
 
+            {quote?.delivery?.porter?.available && (
+              <div className="mt-6">
+                <p className="text-xs text-gray-400">Delivery</p>
+                <div className="mt-2 grid gap-2">
+                  <label className="flex items-start gap-2 rounded-lg border border-gray-200 px-3 py-2 text-sm">
+                    <input type="radio" name="deliveryMethod" checked={form.deliveryMethod !== "Porter"} onChange={() => updateField("deliveryMethod", "Standard")} />
+                    <span>Standard delivery</span>
+                  </label>
+                  <label className="flex items-start gap-2 rounded-lg border border-gray-200 px-3 py-2 text-sm">
+                    <input type="radio" name="deliveryMethod" checked={form.deliveryMethod === "Porter"} onChange={() => updateField("deliveryMethod", "Porter")} />
+                    <span>
+                      Local Delivery via Porter — At Buyer's Cost
+                      <span className="mt-1 block text-xs text-gray-500">Pickup from the Golden Creation showroom, Sector 56, Gurugram. Porter's charge is paid by you to Porter and is not added to this order.</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            )}
+
             <div className="mt-6">
               <label className="text-xs text-gray-400">Payment Method</label>
               <select
@@ -597,7 +622,10 @@ function ConnectedCheckout() {
                 {quote?.paymentOptions?.partialCod?.enabled && <option value="Partial COD">Partial COD ({quote.paymentOptions.partialCod.percentage}% online)</option>}
                 {quote?.paymentOptions?.fullOnline?.enabled && <option value="Full Online">Full Online Payment</option>}
               </select>
-              {form.paymentMethod === "Partial COD" && quote?.paymentOptions?.partialCod && <p className="mt-2 text-xs text-gray-500">Pay {formatCurrency(quote.paymentOptions.partialCod.amountOnline)} now and {formatCurrency(quote.paymentOptions.partialCod.amountCod)} on delivery.</p>}
+              {form.paymentMethod === "Partial COD" && quote?.paymentOptions?.partialCod && <p className="mt-2 text-xs text-gray-500">Pay {formatCurrency(quote.paymentOptions.partialCod.amountOnline)} now ({quote.paymentOptions.partialCod.percentage}%) through Razorpay and {formatCurrency(quote.paymentOptions.partialCod.amountCod)} on delivery.</p>}
+              {form.paymentMethod === "Full COD" && <p className="mt-2 text-xs text-gray-500">No advance is collected. The full amount stays unpaid until it is collected on delivery.</p>}
+              {form.paymentMethod === "Full Online" && <p className="mt-2 text-xs text-gray-500">Pay 100% now. RuPay, UPI, debit cards, and credit cards stay available in Razorpay.</p>}
+              {form.deliveryMethod === "Porter" && <p className="mt-2 text-xs text-gray-500">{quote?.delivery?.porter?.message}</p>}
             </div>
 
             <button
@@ -677,8 +705,8 @@ function ConnectedCheckout() {
                 </div>
               )}
               <div className="flex justify-between">
-                <span>Shipping</span>
-                <span>{amounts.shippingConfirmed ? formatCurrency(amounts.shippingAmount) : amounts.shippingLabel}</span>
+                <span>{form.deliveryMethod === "Porter" ? "Porter delivery" : "Shipping"}</span>
+                <span>{form.deliveryMethod === "Porter" ? "Paid by you to Porter" : amounts.shippingConfirmed ? formatCurrency(amounts.shippingAmount) : amounts.shippingLabel}</span>
               </div>
               <div className="flex justify-between border-b pb-2">
                 <span>GST</span>

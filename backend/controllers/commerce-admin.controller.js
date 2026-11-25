@@ -6,6 +6,7 @@ import {
   getConnection,
   rollback,
 } from "../services/commerce.service.js";
+import { PORTER_STATUSES } from "../services/payment-policy.js";
 
 function cleanString(value) {
   return String(value || "").trim();
@@ -264,6 +265,11 @@ export async function updatePaymentSettings(req, res) {
     Math.min(120, Number(req.body?.stock_hold_minutes ?? 30))
   );
   try {
+    const minAmount = Math.max(0, Number(req.body?.cod_min_amount) || 0);
+    const maxAmount = Math.max(0, Number(req.body?.cod_max_amount) || 0);
+    if (maxAmount > 0 && maxAmount < minAmount) {
+      return res.status(400).json({ message: "COD maximum must be at least the minimum" });
+    }
     await dbQuery(
       `UPDATE payment_settings
           SET full_online_enabled=?,
@@ -271,6 +277,13 @@ export async function updatePaymentSettings(req, res) {
               full_cod_enabled=?,
               default_partial_percent=?,
               stock_hold_minutes=?,
+              cod_min_amount=?,
+              cod_max_amount=?,
+              cod_pin_restricted=?,
+              cod_pins=?,
+              porter_enabled=?,
+              porter_pins=?,
+              porter_collects_cod=?,
               updated_by=?
         WHERE id=1`,
       [
@@ -279,6 +292,13 @@ export async function updatePaymentSettings(req, res) {
         req.body?.full_cod_enabled === false ? 0 : 1,
         percentage,
         holdMinutes,
+        minAmount,
+        maxAmount,
+        req.body?.cod_pin_restricted ? 1 : 0,
+        cleanString(req.body?.cod_pins).slice(0, 4000),
+        req.body?.porter_enabled ? 1 : 0,
+        cleanString(req.body?.porter_pins).slice(0, 4000),
+        req.body?.porter_collects_cod ? 1 : 0,
         Number(req.admin?.id) || null,
       ]
     );
@@ -320,6 +340,46 @@ export async function savePartialCodRule(req, res) {
     res.json({ message: "Partial COD rule saved" });
   } catch (error) {
     res.status(400).json({ message: error.message || "Failed to save Partial COD rule" });
+  }
+}
+
+export async function savePorterBooking(req, res) {
+  const id = Number(req.params.id);
+  const reference = cleanString(req.body?.porter_booking_reference || req.body?.reference).slice(0, 120);
+  const status = cleanString(req.body?.porter_status || req.body?.status) || "Booked";
+  if (!id) return res.status(400).json({ message: "Invalid order" });
+  if (!PORTER_STATUSES.includes(status)) {
+    return res.status(400).json({ message: "Choose a Porter delivery status" });
+  }
+  try {
+    const rows = await dbQuery(
+      "SELECT id, delivery_method, total_amount, amount_paid, cod_due FROM orders WHERE id = ? LIMIT 1",
+      [id]
+    );
+    const order = rows[0];
+    if (!order) return res.status(404).json({ message: "Order not found" });
+    if (order.delivery_method !== "Porter") {
+      return res.status(422).json({ message: "This order does not use Porter delivery" });
+    }
+    await dbQuery(
+      `UPDATE orders
+          SET porter_booking_reference = ?,
+              porter_status = ?,
+              logistics_provider = 'Porter'
+        WHERE id = ?`,
+      [reference || null, status, id]
+    );
+    await activity(req, "Saved Porter booking", `Order ${id}: ${reference || status}`);
+    res.json({
+      message: "Porter booking saved",
+      porter_booking_reference: reference,
+      porter_status: status,
+      total_amount: order.total_amount,
+      amount_paid: order.amount_paid,
+      cod_due: order.cod_due,
+    });
+  } catch (error) {
+    res.status(400).json({ message: error.message || "Failed to save Porter booking" });
   }
 }
 
