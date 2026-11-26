@@ -187,6 +187,8 @@ grep -q "schema_init_mode=real" "$ROOT/success.txt"
 grep -q "schema_init_finished=ensure-admin-modules-schema" "$ROOT/success.txt"
 grep -q "schema_init_exit=0" "$ROOT/success.txt"
 grep -q "schema_init_phase=closed" "$ROOT/success.txt"
+grep -q "schema_init_cwd=" "$ROOT/success.txt"
+grep -q "schema_init_script=" "$ROOT/success.txt"
 grep -q "production_recaptcha_site_key=present" "$ROOT/success.txt"
 test "$(cat "$GC_ROOT/current.link")" != "$GC_ROOT/releases/previous"
 test -s "$GC_ROOT/backups/db/"*.sql

@@ -304,6 +304,198 @@ finish() {
 }
 trap finish EXIT
 
+run_isolated() {
+  env -i \
+    PATH="$PATH" \
+    HOME="$ISOLATED_HOME" \
+    USER="${USER:-deploy}" \
+    NODE_ENV=development \
+    GC_ISOLATED_TEST=true \
+    DOTENV_CONFIG_PATH="$RUNTIME_ENV" \
+    PORT=5001 \
+    DB_HOST="$TEST_HOST" \
+    DB_PORT="$TEST_PORT" \
+    DB_USER="$TEST_USER" \
+    DB_PASSWORD="$TEST_PASSWORD" \
+    DB_NAME="$TEST_DB" \
+    RUN_STARTUP_JOBS=false \
+    MAILER_CLOUD_ENABLED=false \
+    NIMBUS_SMS_ENABLED=false \
+    RAZORPAY_KEY_ID= \
+    RAZORPAY_KEY_SECRET= \
+    RAZORPAY_WEBHOOK_SECRET= \
+    DO_SPACES_BUCKET= \
+    DO_SPACES_ACCESS_KEY_ID= \
+    DO_SPACES_SECRET_KEY= \
+    DO_SPACES_REGION= \
+    DO_SPACES_ENDPOINT= \
+    AWS_EC2_METADATA_DISABLED=true \
+    AWS_SHARED_CREDENTIALS_FILE="$ISOLATED_HOME/aws-credentials" \
+    AWS_CONFIG_FILE="$ISOLATED_HOME/aws-config" \
+    AWS_ACCESS_KEY_ID= \
+    AWS_SECRET_ACCESS_KEY= \
+    AWS_SESSION_TOKEN= \
+    AWS_PROFILE= \
+    AWS_CONTAINER_CREDENTIALS_RELATIVE_URI= \
+    AWS_CONTAINER_CREDENTIALS_FULL_URI= \
+    AWS_WEB_IDENTITY_TOKEN_FILE= \
+    S3_BUCKET= \
+    S3_ACCESS_KEY_ID= \
+    S3_SECRET_ACCESS_KEY= \
+    WHATSAPP_TOKEN= \
+    WHATSAPP_API_TOKEN= \
+    WHATSAPP_PHONE_NUMBER_ID= \
+    DELHIVERY_API_TOKEN= \
+    DELHIVERY_TOKEN= \
+    "$@"
+}
+
+stop_schema_process() {
+  local schema_pid="$1" wrapper_pid="$2"
+  kill "$schema_pid" 2>/dev/null || true
+  if command -v pkill >/dev/null 2>&1; then
+    pkill -P "$schema_pid" 2>/dev/null || true
+  fi
+  sleep 1
+  if kill -0 "$schema_pid" 2>/dev/null; then
+    kill -9 "$schema_pid" 2>/dev/null || true
+    if command -v pkill >/dev/null 2>&1; then
+      pkill -9 -P "$schema_pid" 2>/dev/null || true
+    fi
+  fi
+  if [ "$wrapper_pid" != "$schema_pid" ]; then
+    kill "$wrapper_pid" 2>/dev/null || true
+  fi
+  wait "$wrapper_pid" 2>/dev/null || true
+}
+
+run_schema_init() {
+  local seconds="${SCHEMA_INIT_TIMEOUT_SECONDS:-180}"
+  local schema_script="$CHECKOUT/backend/scripts/ensure-admin-modules-schema.js"
+  local pidfile schema_pid wrapper_pid deadline status
+  echo "schema_init_begin=ensure-admin-modules-schema timeout_s=${seconds}"
+  pidfile=$(mktemp)
+  if [ "${GC_SIMULATE:-}" = 1 ]; then
+    echo "schema_init_mode=real"
+    test -n "${GC_REAL_NODE:-}"
+    test -f "${GC_SCHEMA_SCRIPT:-}"
+    test -n "${GC_SCHEMA_DB_NAME:-}"
+    case "$GC_SCHEMA_DB_NAME" in
+      goldencreation_db|lekhanmart)
+        echo "STOP: schema init database is not isolated" >&2
+        exit 1
+        ;;
+    esac
+    echo "schema_init_script=$GC_SCHEMA_SCRIPT"
+    (
+      cd "$(dirname "$(dirname "$GC_SCHEMA_SCRIPT")")" || exit 97
+      export NODE_ENV=development
+      export DB_HOST="${GC_SCHEMA_DB_HOST:-127.0.0.1}"
+      export DB_PORT="${GC_SCHEMA_DB_PORT:-3307}"
+      export DB_USER="${GC_SCHEMA_DB_USER:-root}"
+      export DB_PASSWORD="${GC_SCHEMA_DB_PASSWORD:-}"
+      export DB_NAME="$GC_SCHEMA_DB_NAME"
+      export ALLOW_DATA_SEED=no
+      export SCHEMA_INIT_TIMEOUT_MS="$((seconds * 1000))"
+      exec "$GC_REAL_NODE" "$GC_SCHEMA_SCRIPT"
+    ) &
+    schema_pid=$!
+    wrapper_pid=$schema_pid
+  else
+    echo "schema_init_mode=isolated"
+    test -f "$schema_script"
+    echo "schema_init_script=$schema_script"
+    echo "schema_init_cwd=$CHECKOUT/backend"
+    (
+      cd "$CHECKOUT/backend" || exit 97
+      run_isolated node "$schema_script" &
+      echo $! > "$pidfile"
+      wait $!
+      exit $?
+    ) &
+    wrapper_pid=$!
+    local _try
+    for _try in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20; do
+      if [ -s "$pidfile" ]; then
+        break
+      fi
+      if ! kill -0 "$wrapper_pid" 2>/dev/null; then
+        break
+      fi
+      sleep 0.1
+    done
+    if [ ! -s "$pidfile" ]; then
+      echo "schema_init_failed status=1" >&2
+      wait "$wrapper_pid" 2>/dev/null || true
+      rm -f "$pidfile"
+      exit 1
+    fi
+    schema_pid=$(cat "$pidfile")
+  fi
+  rm -f "$pidfile"
+  deadline=$((SECONDS + seconds))
+  while kill -0 "$schema_pid" 2>/dev/null; do
+    if [ "$SECONDS" -ge "$deadline" ]; then
+      echo "schema_init TIMEOUT after ${seconds}s" >&2
+      stop_schema_process "$schema_pid" "$wrapper_pid"
+      echo "schema_init_failed status=124" >&2
+      exit 124
+    fi
+    sleep 1
+  done
+  set +e
+  wait "$wrapper_pid"
+  status=$?
+  set -e
+  if [ "$status" -ne 0 ]; then
+    echo "schema_init_failed status=$status" >&2
+    exit "$status"
+  fi
+  if kill -0 "$schema_pid" 2>/dev/null; then
+    stop_schema_process "$schema_pid" "$wrapper_pid"
+    echo "schema_init_failed status=1" >&2
+    exit 1
+  fi
+  echo "schema_init_finished=ensure-admin-modules-schema"
+}
+
+if [ "${GC_SCHEMA_INIT_ONLY:-}" = 1 ]; then
+  test -n "${GC_CHECKOUT:-}"
+  CHECKOUT="$GC_CHECKOUT"
+  test -d "$CHECKOUT/backend"
+  case "$TEST_DB" in
+    goldencreation_db|lekhanmart)
+      echo "STOP: schema init database is not isolated" >&2
+      exit 1
+      ;;
+  esac
+  TEST_PASSWORD="${GC_TEST_DB_PASSWORD:-}"
+  test -n "$TEST_PASSWORD"
+  ISOLATED_HOME=$(mktemp -d)
+  chmod 700 "$ISOLATED_HOME"
+  : > "$ISOLATED_HOME/aws-credentials"
+  : > "$ISOLATED_HOME/aws-config"
+  chmod 600 "$ISOLATED_HOME/aws-credentials" "$ISOLATED_HOME/aws-config"
+  RUNTIME_ENV=$(mktemp)
+  chmod 600 "$RUNTIME_ENV"
+  {
+    printf '%s\n' "GC_ISOLATED_TEST=true"
+    printf '%s\n' "NODE_ENV=development"
+    printf 'DB_HOST=%s\n' "$TEST_HOST"
+    printf 'DB_PORT=%s\n' "$TEST_PORT"
+    printf 'DB_USER=%s\n' "$TEST_USER"
+    printf 'DB_PASSWORD=%s\n' "$TEST_PASSWORD"
+    printf 'DB_NAME=%s\n' "$TEST_DB"
+    printf '%s\n' "RUN_STARTUP_JOBS=false"
+    printf '%s\n' "ALLOW_DATA_SEED=no"
+  } > "$RUNTIME_ENV"
+  chmod 600 "$RUNTIME_ENV"
+  echo "schema_init_launch_cwd=$(pwd)"
+  run_schema_init
+  echo "schema_init_only=ok"
+  exit 0
+fi
+
 preflight
 
 if [ "$DRY" = 1 ]; then
@@ -454,52 +646,6 @@ ASSET=$(grep -o 'assets/index-[^" ]*\.js' "$RELEASE/public/index.html" | head -1
 test -n "$ASSET"
 test -s "$RELEASE/public/$ASSET"
 
-run_isolated() {
-  env -i \
-    PATH="$PATH" \
-    HOME="$ISOLATED_HOME" \
-    USER="${USER:-deploy}" \
-    NODE_ENV=development \
-    GC_ISOLATED_TEST=true \
-    DOTENV_CONFIG_PATH="$RUNTIME_ENV" \
-    PORT=5001 \
-    DB_HOST="$TEST_HOST" \
-    DB_PORT="$TEST_PORT" \
-    DB_USER="$TEST_USER" \
-    DB_PASSWORD="$TEST_PASSWORD" \
-    DB_NAME="$TEST_DB" \
-    RUN_STARTUP_JOBS=false \
-    MAILER_CLOUD_ENABLED=false \
-    NIMBUS_SMS_ENABLED=false \
-    RAZORPAY_KEY_ID= \
-    RAZORPAY_KEY_SECRET= \
-    RAZORPAY_WEBHOOK_SECRET= \
-    DO_SPACES_BUCKET= \
-    DO_SPACES_ACCESS_KEY_ID= \
-    DO_SPACES_SECRET_KEY= \
-    DO_SPACES_REGION= \
-    DO_SPACES_ENDPOINT= \
-    AWS_EC2_METADATA_DISABLED=true \
-    AWS_SHARED_CREDENTIALS_FILE="$ISOLATED_HOME/aws-credentials" \
-    AWS_CONFIG_FILE="$ISOLATED_HOME/aws-config" \
-    AWS_ACCESS_KEY_ID= \
-    AWS_SECRET_ACCESS_KEY= \
-    AWS_SESSION_TOKEN= \
-    AWS_PROFILE= \
-    AWS_CONTAINER_CREDENTIALS_RELATIVE_URI= \
-    AWS_CONTAINER_CREDENTIALS_FULL_URI= \
-    AWS_WEB_IDENTITY_TOKEN_FILE= \
-    S3_BUCKET= \
-    S3_ACCESS_KEY_ID= \
-    S3_SECRET_ACCESS_KEY= \
-    WHATSAPP_TOKEN= \
-    WHATSAPP_API_TOKEN= \
-    WHATSAPP_PHONE_NUMBER_ID= \
-    DELHIVERY_API_TOKEN= \
-    DELHIVERY_TOKEN= \
-    "$@"
-}
-
 CHECKOUT="$WORK/src"
 test -d "$CHECKOUT/backend"
 test -d "$CHECKOUT/frontend"
@@ -515,62 +661,15 @@ echo "release_backend=$RELEASE"
 (cd "$CHECKOUT/backend" && npm ci)
 test -d "$CHECKOUT/backend/node_modules"
 test -d "$CHECKOUT/saas-panel/node_modules/jszip"
-run_schema_init() {
-  local seconds="${SCHEMA_INIT_TIMEOUT_SECONDS:-180}"
-  echo "schema_init_begin=ensure-admin-modules-schema timeout_s=${seconds}"
-  if [ "${GC_SIMULATE:-}" = 1 ]; then
-    echo "schema_init_mode=real"
-    test -n "${GC_REAL_NODE:-}"
-    test -f "${GC_SCHEMA_SCRIPT:-}"
-    test -n "${GC_SCHEMA_DB_NAME:-}"
-    case "$GC_SCHEMA_DB_NAME" in
-      goldencreation_db|lekhanmart)
-        echo "STOP: schema init database is not isolated" >&2
-        exit 1
-        ;;
-    esac
-    (
-      export NODE_ENV=development
-      export DB_HOST="${GC_SCHEMA_DB_HOST:-127.0.0.1}"
-      export DB_PORT="${GC_SCHEMA_DB_PORT:-3307}"
-      export DB_USER="${GC_SCHEMA_DB_USER:-root}"
-      export DB_PASSWORD="${GC_SCHEMA_DB_PASSWORD:-}"
-      export DB_NAME="$GC_SCHEMA_DB_NAME"
-      export ALLOW_DATA_SEED=no
-      export SCHEMA_INIT_TIMEOUT_MS="$((seconds * 1000))"
-      cd "$(dirname "$GC_SCHEMA_SCRIPT")"
-      exec "$GC_REAL_NODE" "$GC_SCHEMA_SCRIPT"
-    ) &
-  else
-    echo "schema_init_mode=isolated"
-    run_isolated node scripts/ensure-admin-modules-schema.js &
-  fi
-  local schema_pid=$!
-  (
-    sleep "$seconds"
-    if kill -0 "$schema_pid" 2>/dev/null; then
-      echo "schema_init TIMEOUT after ${seconds}s" >&2
-      kill "$schema_pid" 2>/dev/null || true
-    fi
-  ) &
-  local watch_pid=$!
-  set +e
-  wait "$schema_pid"
-  local status=$?
-  set -e
-  kill "$watch_pid" 2>/dev/null || true
-  wait "$watch_pid" 2>/dev/null || true
-  if [ "$status" -ne 0 ]; then
-    echo "schema_init_failed status=$status" >&2
-    exit "$status"
-  fi
-  echo "schema_init_finished=ensure-admin-modules-schema"
-}
-
 run_schema_init
 if [ "${GC_SIMULATE:-}" != 1 ]; then
   (
     cd "$CHECKOUT/backend"
+    test -f scripts/ensure-orders-schema.js
+    test -f scripts/ensure-customer-mobile-schema.js
+    test -f scripts/ensure-commerce-media-schema.js
+    test -f scripts/ensure-referral-affiliate-schema.js
+    test -f scripts/itest-fixtures.js
     run_isolated node scripts/ensure-orders-schema.js
     run_isolated node scripts/ensure-customer-mobile-schema.js
     run_isolated node scripts/ensure-commerce-media-schema.js

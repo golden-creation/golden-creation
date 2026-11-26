@@ -35,6 +35,7 @@ const baseConfig = {
 
 try {
 progress("connect");
+console.log(`schema_init_cwd=${process.cwd()}`);
 root = await mysql.createConnection(baseConfig);
 try {
   await root.query(
