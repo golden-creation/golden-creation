@@ -515,10 +515,62 @@ echo "release_backend=$RELEASE"
 (cd "$CHECKOUT/backend" && npm ci)
 test -d "$CHECKOUT/backend/node_modules"
 test -d "$CHECKOUT/saas-panel/node_modules/jszip"
+run_schema_init() {
+  local seconds="${SCHEMA_INIT_TIMEOUT_SECONDS:-180}"
+  echo "schema_init_begin=ensure-admin-modules-schema timeout_s=${seconds}"
+  if [ "${GC_SIMULATE:-}" = 1 ]; then
+    echo "schema_init_mode=real"
+    test -n "${GC_REAL_NODE:-}"
+    test -f "${GC_SCHEMA_SCRIPT:-}"
+    test -n "${GC_SCHEMA_DB_NAME:-}"
+    case "$GC_SCHEMA_DB_NAME" in
+      goldencreation_db|lekhanmart)
+        echo "STOP: schema init database is not isolated" >&2
+        exit 1
+        ;;
+    esac
+    (
+      export NODE_ENV=development
+      export DB_HOST="${GC_SCHEMA_DB_HOST:-127.0.0.1}"
+      export DB_PORT="${GC_SCHEMA_DB_PORT:-3307}"
+      export DB_USER="${GC_SCHEMA_DB_USER:-root}"
+      export DB_PASSWORD="${GC_SCHEMA_DB_PASSWORD:-}"
+      export DB_NAME="$GC_SCHEMA_DB_NAME"
+      export ALLOW_DATA_SEED=no
+      export SCHEMA_INIT_TIMEOUT_MS="$((seconds * 1000))"
+      cd "$(dirname "$GC_SCHEMA_SCRIPT")"
+      exec "$GC_REAL_NODE" "$GC_SCHEMA_SCRIPT"
+    ) &
+  else
+    echo "schema_init_mode=isolated"
+    run_isolated node scripts/ensure-admin-modules-schema.js &
+  fi
+  local schema_pid=$!
+  (
+    sleep "$seconds"
+    if kill -0 "$schema_pid" 2>/dev/null; then
+      echo "schema_init TIMEOUT after ${seconds}s" >&2
+      kill "$schema_pid" 2>/dev/null || true
+    fi
+  ) &
+  local watch_pid=$!
+  set +e
+  wait "$schema_pid"
+  local status=$?
+  set -e
+  kill "$watch_pid" 2>/dev/null || true
+  wait "$watch_pid" 2>/dev/null || true
+  if [ "$status" -ne 0 ]; then
+    echo "schema_init_failed status=$status" >&2
+    exit "$status"
+  fi
+  echo "schema_init_finished=ensure-admin-modules-schema"
+}
+
+run_schema_init
 if [ "${GC_SIMULATE:-}" != 1 ]; then
   (
     cd "$CHECKOUT/backend"
-    run_isolated node scripts/ensure-admin-modules-schema.js
     run_isolated node scripts/ensure-orders-schema.js
     run_isolated node scripts/ensure-customer-mobile-schema.js
     run_isolated node scripts/ensure-commerce-media-schema.js

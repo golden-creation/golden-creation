@@ -3,30 +3,51 @@ import mysql from "mysql2/promise";
 import { seedAdminModuleData } from "./admin-module-seed.js";
 import { ensureExpansionSchema } from "./ensure-expansion-schema.js";
 import { ensureSeoSchema } from "./ensure-seo-schema.js";
+import { promiseQueryRows } from "./admin-audit-schema.js";
 import { dataSeedAuthorized, dataSeedRefusalReason, refuseProductionSchemaTarget } from "./setup-safety.js";
 
 refuseProductionSchemaTarget();
 const dbName = process.env.DB_NAME || "lekhanmart";
+const startedAt = Date.now();
+const timeoutMs = Math.min(Math.max(Number(process.env.SCHEMA_INIT_TIMEOUT_MS) || 180000, 5000), 600000);
+let root;
+let db;
+const timer = setTimeout(() => {
+  console.error(`schema_init TIMEOUT after ${timeoutMs}ms`);
+  Promise.all([
+    db?.end().catch(() => {}),
+    root?.end().catch(() => {}),
+  ]).finally(() => process.exit(1));
+}, timeoutMs);
+
+function progress(phase) {
+  console.log(`schema_init_phase=${phase} elapsed_ms=${Date.now() - startedAt}`);
+}
 
 const baseConfig = {
   host: process.env.DB_HOST || "localhost",
   user: process.env.DB_USER || "root",
   password: process.env.DB_PASSWORD || "",
   port: Number(process.env.DB_PORT) || 3306,
+  connectTimeout: Number(process.env.DB_CONNECT_TIMEOUT_MS) || 10000,
   multipleStatements: true,
 };
 
-const root = await mysql.createConnection(baseConfig);
+try {
+progress("connect");
+root = await mysql.createConnection(baseConfig);
 try {
   await root.query(
     `CREATE DATABASE IF NOT EXISTS \`${dbName}\` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci`
   );
 } catch (error) {
   if (error.errno !== 1044 && error.code !== "ER_DBACCESS_DENIED_ERROR") throw error;
+} finally {
+  await root.end();
+  root = undefined;
 }
-await root.end();
 
-const db = await mysql.createConnection({
+db = await mysql.createConnection({
   ...baseConfig,
   database: dbName,
 });
@@ -80,6 +101,7 @@ async function constraintExists(table, constraintName) {
   return rows.length > 0;
 }
 
+progress("admin-modules");
 await db.query(`
   CREATE TABLE IF NOT EXISTS categories (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -1078,6 +1100,7 @@ if (allowDataSeed) {
 } else {
   console.log(dataSeedRefusalReason(process.env));
 }
+progress("remaining-modules");
 
 
 await db.query(`
@@ -1130,6 +1153,7 @@ await db.query(`
 `);
 
 
+progress("expansion");
 await ensureExpansionSchema({
   db,
   addColumnIfMissing,
@@ -1138,11 +1162,18 @@ await ensureExpansionSchema({
   allowDataWrites: allowDataSeed,
 });
 
+progress("seo");
 await ensureSeoSchema(db, { allowDataWrites: allowDataSeed });
+progress("audit");
 const { ensureAdminAuditSchema } = await import("./admin-audit-schema.js");
-await ensureAdminAuditSchema((sql, params = []) => new Promise((resolve, reject) => {
-  db.query(sql, params, (error, results) => (error ? reject(error) : resolve(results)));
-}));
-await db.end();
+await ensureAdminAuditSchema((sql, params = []) => promiseQueryRows(db, sql, params));
 
 console.log(`Admin module schema is ready in database '${dbName}'.`);
+console.log(`schema_init_ms=${Date.now() - startedAt}`);
+} finally {
+  clearTimeout(timer);
+  if (db) await db.end().catch((error) => console.error(`schema_init_close_failed=${error.message}`));
+  if (root) await root.end().catch((error) => console.error(`schema_init_close_failed=${error.message}`));
+  console.log(`schema_init_phase=closed elapsed_ms=${Date.now() - startedAt}`);
+}
+console.log("schema_init_exit=0");

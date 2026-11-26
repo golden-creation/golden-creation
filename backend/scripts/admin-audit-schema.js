@@ -1,3 +1,8 @@
+export async function promiseQueryRows(connection, sql, params = []) {
+  const [rows] = await connection.query(sql, params);
+  return rows;
+}
+
 export const ADMIN_AUDIT_COLUMNS = [
   "admin_id",
   "session_id",

@@ -2,6 +2,21 @@
 # Local simulation of deploy.sh. It does not contact the VPS or a real database.
 set -euo pipefail
 
+REAL_NODE="$(command -v node || true)"
+REPO="$(cd "$(dirname "$0")/.." && pwd)"
+export GC_REAL_NODE="${GC_REAL_NODE:-$REAL_NODE}"
+export GC_SCHEMA_SCRIPT="${GC_SCHEMA_SCRIPT:-$REPO/backend/scripts/ensure-admin-modules-schema.js}"
+if [ -z "${GC_SCHEMA_DB_NAME:-}" ]; then
+  echo "STOP: set GC_SCHEMA_DB_NAME to an isolated database before simulation" >&2
+  exit 1
+fi
+case "$GC_SCHEMA_DB_NAME" in
+  goldencreation_db|lekhanmart)
+    echo "STOP: schema init database is not isolated" >&2
+    exit 1
+    ;;
+esac
+
 ROOT=$(mktemp -d)
 BIN="$ROOT/bin"
 SOURCE="$ROOT/source"
@@ -168,6 +183,10 @@ grep -q "preflight_audit_outbox=ok" "$ROOT/success.txt"
 for column in cod_min_amount cod_max_amount cod_pin_restricted cod_pins porter_enabled porter_pins porter_collects_cod delivery_method partial_advance_percent porter_booking_reference porter_status; do
   grep -q "$column" "$SCRIPT"
 done
+grep -q "schema_init_mode=real" "$ROOT/success.txt"
+grep -q "schema_init_finished=ensure-admin-modules-schema" "$ROOT/success.txt"
+grep -q "schema_init_exit=0" "$ROOT/success.txt"
+grep -q "schema_init_phase=closed" "$ROOT/success.txt"
 grep -q "production_recaptcha_site_key=present" "$ROOT/success.txt"
 test "$(cat "$GC_ROOT/current.link")" != "$GC_ROOT/releases/previous"
 test -s "$GC_ROOT/backups/db/"*.sql
