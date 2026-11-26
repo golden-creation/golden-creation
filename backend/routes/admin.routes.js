@@ -1,6 +1,14 @@
 import express from "express";
 import jwt from "jsonwebtoken";
 import db from "../config/db.js";
+import { attachAdminAudit } from "../middleware/admin-audit.middleware.js";
+import {
+  exportAuditEvents,
+  listAuditEvents,
+  recordAuditObservations,
+  rejectAuditMutation,
+  requireAuditSuperAdmin,
+} from "../controllers/admin-audit.controller.js";
 
 import {
   changeAdminPassword,
@@ -253,6 +261,8 @@ import {
 } from "../controllers/removal-requests.controller.js";
 
 const router = express.Router();
+
+router.use(attachAdminAudit);
 
 function dbQuery(sql, values = []) {
   return new Promise((resolve, reject) => {
@@ -593,6 +603,16 @@ router.use((req, res, next) => {
 });
 
 router.use(requireModulePermission);
+
+router.get("/audit/events", requireAuditSuperAdmin, listAuditEvents);
+router.get("/audit/export", requireAuditSuperAdmin, exportAuditEvents);
+router.post("/audit/observations", recordAuditObservations);
+router.put("/audit/events", requireAuditSuperAdmin, rejectAuditMutation);
+router.put("/audit/events/:id", requireAuditSuperAdmin, rejectAuditMutation);
+router.patch("/audit/events", requireAuditSuperAdmin, rejectAuditMutation);
+router.patch("/audit/events/:id", requireAuditSuperAdmin, rejectAuditMutation);
+router.delete("/audit/events", requireAuditSuperAdmin, rejectAuditMutation);
+router.delete("/audit/events/:id", requireAuditSuperAdmin, rejectAuditMutation);
 
 router.get("/contact-enquiries", getAdminContactEnquiries);
 router.patch("/contact-enquiries/:id", updateAdminContactEnquiry);

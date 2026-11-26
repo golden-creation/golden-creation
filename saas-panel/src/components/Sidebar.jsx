@@ -83,6 +83,20 @@ function Sidebar({ admin }) {
           : []),
       ],
     },
+    ...(role === "super admin"
+      ? [{
+          title: "Super Admin",
+          items: [
+            { name: "Live Activity", icon: dashboardIcon, path: "/audit/live" },
+            { name: "Daily Activity History", icon: reportIcon, path: "/audit/daily" },
+            { name: "User Activity", icon: usersIcon, path: "/audit/users" },
+            { name: "Change History", icon: reportIcon, path: "/audit/changes" },
+            { name: "Login History", icon: usersIcon, path: "/audit/logins" },
+            { name: "Security Activity", icon: reportIcon, path: "/audit/security" },
+            { name: "Audit Reports", icon: reportIcon, path: "/audit/reports" },
+          ],
+        }]
+      : []),
   ];
   const menuGroups = isSalesman
     ? [

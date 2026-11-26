@@ -225,6 +225,23 @@ if ((env.DOTENV_CONFIG_PATH || "").includes(".env.test")) process.exit(1);
     fi
   done
   echo "preflight_payment_columns=ok"
+  local audit_column
+  for audit_column in admin_id session_id request_id source layer outcome changed_fields previous_hash row_hash; do
+    if ! schema_count "SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='${SOURCE_DB}' AND TABLE_NAME='admin_audit_events' AND COLUMN_NAME='${audit_column}'"; then
+      echo "STOP: missing production audit column admin_audit_events.${audit_column}" >&2
+      exit 1
+    fi
+  done
+  echo "preflight_audit=ok"
+  if ! schema_count "SELECT COUNT(*) FROM information_schema.TRIGGERS WHERE TRIGGER_SCHEMA='${SOURCE_DB}' AND TRIGGER_NAME='admin_audit_events_no_update'"; then
+    echo "STOP: missing append-only audit update trigger" >&2
+    exit 1
+  fi
+  if ! schema_count "SELECT COUNT(*) FROM information_schema.TRIGGERS WHERE TRIGGER_SCHEMA='${SOURCE_DB}' AND TRIGGER_NAME='admin_audit_events_no_delete'"; then
+    echo "STOP: missing append-only audit delete trigger" >&2
+    exit 1
+  fi
+  echo "preflight_audit_triggers=ok"
   echo "preflight_schema=ok"
   rm -f "$CLIENT_DEFAULTS"
   unset CLIENT_DEFAULTS

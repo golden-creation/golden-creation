@@ -51,6 +51,8 @@ import RemovalRequests from "./pages/RemovalRequests";
 import SeoMarketing from "./pages/SeoMarketing";
 import ReferralAffiliate from "./pages/ReferralAffiliate";
 import AffiliateDashboard from "./pages/AffiliateDashboard";
+import AuditCenter from "./pages/AuditCenter";
+import { startAdminAuditTracking } from "./lib/auditTracker";
 import { Navigate } from "react-router-dom";
 import { apiRequest, clearAdminSession, getAdminToken, getStoredAdmin } from "./lib/api";
 import { expandPermissionKeys } from "./lib/permissions";
@@ -61,6 +63,7 @@ function App() {
   const isAffiliate = role === "affiliate";
   const isSalesman = role === "salesman";
   const isPrivilegedAdmin = ["super admin", "technical developer"].includes(role);
+  const isSuperAdmin = role === "super admin";
   const permissions = expandPermissionKeys(admin?.permissions);
   const can = (permission) => isPrivilegedAdmin || !permission || permissions.includes(permission);
   const firstAllowedPath = (() => {
@@ -101,6 +104,11 @@ function App() {
     window.addEventListener("admin-session-updated", syncAdmin);
     return () => window.removeEventListener("admin-session-updated", syncAdmin);
   }, []);
+
+  useEffect(() => {
+    if (!isLoggedIn || isAffiliate) return undefined;
+    return startAdminAuditTracking();
+  }, [isLoggedIn, isAffiliate]);
 
   const handleLogout = async () => {
     try {
@@ -183,6 +191,13 @@ function App() {
               <Route path="/blog" element={guarded("blog", <AddBlog />)} />
               <Route path="/profile" element={<ProfileDetails />} />
               <Route path="/activity" element={isPrivilegedAdmin ? <ActivityLog admin={admin} /> : <Navigate to="/" replace />} />
+              <Route path="/audit/live" element={isSuperAdmin ? <AuditCenter view="live" /> : <Navigate to="/" replace />} />
+              <Route path="/audit/daily" element={isSuperAdmin ? <AuditCenter view="daily" /> : <Navigate to="/" replace />} />
+              <Route path="/audit/users" element={isSuperAdmin ? <AuditCenter view="user" /> : <Navigate to="/" replace />} />
+              <Route path="/audit/changes" element={isSuperAdmin ? <AuditCenter view="changes" /> : <Navigate to="/" replace />} />
+              <Route path="/audit/logins" element={isSuperAdmin ? <AuditCenter view="login" /> : <Navigate to="/" replace />} />
+              <Route path="/audit/security" element={isSuperAdmin ? <AuditCenter view="security" /> : <Navigate to="/" replace />} />
+              <Route path="/audit/reports" element={isSuperAdmin ? <AuditCenter view="reports" /> : <Navigate to="/" replace />} />
               <Route path="/staff" element={guarded("users", <StaffManagement />)} />
               <Route path="/staff/new" element={guarded("users", <StaffForm />)} />
               <Route path="/staff/:id" element={guarded("users", <StaffProfile />)} />

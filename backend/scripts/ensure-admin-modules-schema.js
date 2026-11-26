@@ -1139,6 +1139,10 @@ await ensureExpansionSchema({
 });
 
 await ensureSeoSchema(db, { allowDataWrites: allowDataSeed });
+const { ensureAdminAuditSchema } = await import("./admin-audit-schema.js");
+await ensureAdminAuditSchema((sql, params = []) => new Promise((resolve, reject) => {
+  db.query(sql, params, (error, results) => (error ? reject(error) : resolve(results)));
+}));
 await db.end();
 
 console.log(`Admin module schema is ready in database '${dbName}'.`);
