@@ -253,6 +253,17 @@ if ((env.DOTENV_CONFIG_PATH || "").includes(".env.test")) process.exit(1);
     exit 1
   fi
   echo "preflight_audit_chain=ok"
+  for outbox_column in idempotency_key next_attempt_at; do
+    if ! schema_count "SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='${SOURCE_DB}' AND TABLE_NAME='admin_audit_outbox' AND COLUMN_NAME='${outbox_column}'"; then
+      echo "STOP: missing production audit outbox column ${outbox_column}" >&2
+      exit 1
+    fi
+  done
+  if ! schema_count "SELECT COUNT(*) FROM information_schema.STATISTICS WHERE TABLE_SCHEMA='${SOURCE_DB}' AND TABLE_NAME='admin_audit_outbox' AND INDEX_NAME='uq_admin_audit_outbox_key'"; then
+    echo "STOP: missing production audit outbox idempotency index" >&2
+    exit 1
+  fi
+  echo "preflight_audit_outbox=ok"
   echo "preflight_schema=ok"
   rm -f "$CLIENT_DEFAULTS"
   unset CLIENT_DEFAULTS

@@ -21,6 +21,8 @@ CREATE TABLE IF NOT EXISTS admin_audit_outbox (
   status VARCHAR(20) NOT NULL DEFAULT 'pending',
   attempts INT NOT NULL DEFAULT 0,
   last_error VARCHAR(255) NULL,
+  idempotency_key CHAR(64) NULL,
+  next_attempt_at DATETIME NULL,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id),
   KEY idx_admin_audit_outbox_status (status, id)
@@ -60,6 +62,7 @@ CREATE TABLE IF NOT EXISTS admin_audit_events (
   user_agent VARCHAR(255) NULL,
   previous_hash CHAR(64) NOT NULL,
   row_hash CHAR(64) NOT NULL,
+  idempotency_key CHAR(64) NULL,
   PRIMARY KEY (id),
   KEY idx_admin_audit_created (created_at),
   KEY idx_admin_audit_admin (admin_id, created_at),
@@ -78,3 +81,58 @@ CREATE TRIGGER admin_audit_events_no_delete
 BEFORE DELETE ON admin_audit_events
 FOR EACH ROW
 SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Audit records are append-only';
+
+SET @audit_sql = (
+  SELECT IF(
+    (SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'admin_audit_outbox' AND COLUMN_NAME = 'idempotency_key') = 0,
+    'ALTER TABLE admin_audit_outbox ADD COLUMN idempotency_key CHAR(64) NULL',
+    'SELECT 1'
+  )
+);
+PREPARE audit_stmt FROM @audit_sql;
+EXECUTE audit_stmt;
+DEALLOCATE PREPARE audit_stmt;
+
+SET @audit_sql = (
+  SELECT IF(
+    (SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'admin_audit_outbox' AND COLUMN_NAME = 'next_attempt_at') = 0,
+    'ALTER TABLE admin_audit_outbox ADD COLUMN next_attempt_at DATETIME NULL',
+    'SELECT 1'
+  )
+);
+PREPARE audit_stmt FROM @audit_sql;
+EXECUTE audit_stmt;
+DEALLOCATE PREPARE audit_stmt;
+
+SET @audit_sql = (
+  SELECT IF(
+    (SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'admin_audit_events' AND COLUMN_NAME = 'idempotency_key') = 0,
+    'ALTER TABLE admin_audit_events ADD COLUMN idempotency_key CHAR(64) NULL',
+    'SELECT 1'
+  )
+);
+PREPARE audit_stmt FROM @audit_sql;
+EXECUTE audit_stmt;
+DEALLOCATE PREPARE audit_stmt;
+
+SET @audit_sql = (
+  SELECT IF(
+    (SELECT COUNT(*) FROM information_schema.STATISTICS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'admin_audit_outbox' AND INDEX_NAME = 'uq_admin_audit_outbox_key') = 0,
+    'CREATE UNIQUE INDEX uq_admin_audit_outbox_key ON admin_audit_outbox (idempotency_key)',
+    'SELECT 1'
+  )
+);
+PREPARE audit_stmt FROM @audit_sql;
+EXECUTE audit_stmt;
+DEALLOCATE PREPARE audit_stmt;
+
+SET @audit_sql = (
+  SELECT IF(
+    (SELECT COUNT(*) FROM information_schema.STATISTICS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'admin_audit_events' AND INDEX_NAME = 'uq_admin_audit_event_key') = 0,
+    'CREATE UNIQUE INDEX uq_admin_audit_event_key ON admin_audit_events (idempotency_key)',
+    'SELECT 1'
+  )
+);
+PREPARE audit_stmt FROM @audit_sql;
+EXECUTE audit_stmt;
+DEALLOCATE PREPARE audit_stmt;

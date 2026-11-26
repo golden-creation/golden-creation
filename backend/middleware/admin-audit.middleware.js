@@ -1,16 +1,21 @@
 import db from "../config/db.js";
 import {
   auditAction,
+  auditCoverageBucket,
+  auditIdempotencyKey,
   auditModule,
   auditOutcome,
   auditRecordTarget,
+  bulkAuditSummary,
   changedAuditFields,
   classifyAdminRoute,
   enqueueAuditOutbox,
   flushAuditOutbox,
+  instrumentAdminResponse,
   isCriticalAudit,
   loginActor,
   newRequestId,
+  redactRecordName,
   sanitizeAuditValue,
   sessionKey,
   shouldSkipDuplicateRead,
@@ -39,7 +44,7 @@ async function readRecord(target) {
       `SELECT * FROM \`${target.table}\` WHERE id = ? LIMIT 1`,
       [Number(target.id)]
     );
-    return rows[0] ? sanitizeAuditValue(rows[0]) : null;
+    return rows[0] ? sanitizeAuditValue(rows[0], 0, { redactNames: redactRecordName(target.table) }) : null;
   } catch {
     return null;
   }
@@ -90,7 +95,10 @@ function buildEvent(req, res, before, after) {
   const message = res.locals.auditMessage || "";
   const actor = req.admin?.id ? req.admin : loginActor(res.locals.auditBody);
   const target = auditRecordTarget(path);
-  const changedFields = changedAuditFields(before, after);
+  const fieldOptions = { redactNames: redactRecordName(target.table) };
+  const changedFields = changedAuditFields(before, after, fieldOptions);
+  const bulk = bulkAuditSummary(req.body);
+  const recordName = fieldOptions.redactNames ? "" : (after?.[target.nameColumn] || before?.[target.nameColumn] || "");
   return {
     adminId: actor?.id,
     actorName: actor?.name,
@@ -98,6 +106,13 @@ function buildEvent(req, res, before, after) {
     actorRole: actor?.role,
     sessionId: sessionKey(bearer(req)),
     requestId: req.auditRequestId,
+    idempotencyKey: auditIdempotencyKey({
+      requestId: req.auditRequestId,
+      method,
+      path,
+      action: status === 401 && /expired/i.test(message) ? "Session expiry" : auditAction(method, path, status, message),
+      recordId: target.id,
+    }),
     source: "backend",
     layer: "confirmed",
     module: auditModule(path),
@@ -107,16 +122,17 @@ function buildEvent(req, res, before, after) {
     method,
     path,
     recordId: target.id,
-    recordName: after?.[target.nameColumn] || before?.[target.nameColumn] || "",
+    recordName,
     previousValue: before,
     updatedValue: after,
     changedFields,
     detail: {
       status,
-      response: res.locals.auditResponse || null,
+      response: { message: String(message || "").slice(0, 180) },
       persistence: classifyAdminRoute(method, path).persistence,
-      diff: classifyAdminRoute(method, path).diff,
-      confirmed: false,
+      coverage: auditCoverageBucket(method, path),
+      bulk,
+      confirmed: Boolean(req.admin?.id || loginActor(res.locals.auditBody)?.id),
     },
     ip: clientIp(req),
     userAgent: req.headers["user-agent"],
@@ -124,7 +140,7 @@ function buildEvent(req, res, before, after) {
 }
 
 export function attachAdminAudit(req, res, next) {
-  if (req.path.startsWith("/audit/events") || req.path.startsWith("/audit/observations") || req.path.startsWith("/audit/export")) {
+  if (req.path.startsWith("/audit/observations")) {
     next();
     return;
   }
@@ -134,66 +150,32 @@ export function attachAdminAudit(req, res, next) {
   const method = req.method.toUpperCase();
   const target = auditRecordTarget(req.path);
   const captureBefore = ["PUT", "PATCH", "DELETE"].includes(method) ? readRecord(target) : Promise.resolve(null);
-  let persisted = false;
-  const originalJson = res.json.bind(res);
-  res.json = (body) => {
-    res.locals.auditBody = body;
-    res.locals.auditMessage = String(body?.message || "");
-    res.locals.auditResponse = sanitizeAuditValue(
-      body && typeof body === "object" ? { message: body.message, id: body.id } : {}
-    );
-    if (!["POST", "PUT", "PATCH", "DELETE"].includes(method)) return originalJson(body);
-    if (req.auditPersisted) {
-      res.setHeader("x-audit-persisted", "yes");
-      return originalJson(body);
+  const sensitiveReport = req.path.startsWith("/audit/events") || req.path.startsWith("/audit/export");
+  instrumentAdminResponse(req, res, async (snapshot) => {
+    res.locals.auditMessage = snapshot.message || "";
+    res.locals.auditBody = snapshot.kind === "json" ? { message: snapshot.message, id: snapshot.id } : null;
+    if (method === "GET" && !sensitiveReport && shouldSkipDuplicateRead(`${sessionKey(bearer(req))}|${req.path}|${JSON.stringify(req.query || {})}`)) {
+      return { "x-audit-persisted": "skipped" };
     }
-    captureBefore.then(async (before) => {
-      const after = ["PUT", "PATCH", "POST"].includes(method) ? await readRecord(target) : null;
-      const event = buildEvent(req, res, before, after);
-      try {
-        if (isCriticalAudit(method, req.path)) {
-          await withAuditConnection((database) => writeAuditEvent(event, database));
-          res.setHeader("x-audit-persisted", "yes");
-          persisted = true;
-        } else {
-          await withAuditConnection(async (database) => {
-            await enqueueAuditOutbox(event, database);
-            try {
-              await flushAuditOutbox(database);
-              res.setHeader("x-audit-persisted", "yes");
-            } catch (flushError) {
-              await alertAuditFailure(requestId, flushError);
-              res.setHeader("x-audit-persisted", "no");
-            }
-          });
-          res.setHeader("x-audit-durable", "yes");
-          persisted = true;
-        }
-      } catch (error) {
-        await alertAuditFailure(requestId, error);
-        res.setHeader("x-audit-persisted", "no");
-        res.setHeader("x-audit-durable", "no");
+    if (req.auditPersisted) return { "x-audit-persisted": "yes" };
+    const before = await captureBefore;
+    const after = ["PUT", "PATCH", "POST"].includes(method) ? await readRecord(target) : null;
+    const event = buildEvent(req, res, before, after);
+    if (sensitiveReport) event.action = req.path.startsWith("/audit/export") ? "Export audit report" : "View audit report";
+    try {
+      if (isCriticalAudit(method, req.path)) {
+        await withAuditConnection((database) => writeAuditEvent(event, database));
+        return { "x-audit-persisted": "yes" };
       }
-      return originalJson(body);
-    }).catch(async (error) => {
+      await withAuditConnection(async (database) => {
+        await enqueueAuditOutbox(event, database);
+        await flushAuditOutbox(database);
+      });
+      return { "x-audit-persisted": "yes", "x-audit-durable": "yes" };
+    } catch (error) {
       await alertAuditFailure(requestId, error);
-      res.setHeader("x-audit-persisted", "no");
-      return originalJson(body);
-    });
-    return res;
-  };
-
-  res.on("finish", () => {
-    if (persisted || method !== "GET") return;
-    if (shouldSkipDuplicateRead(`${sessionKey(bearer(req))}|${req.path}|${JSON.stringify(req.query || {})}`)) return;
-    const event = buildEvent(req, res, null, null);
-    withAuditConnection(async (database) => {
-      await enqueueAuditOutbox(event, database);
-      await flushAuditOutbox(database);
-    }).catch((error) => {
-      alertAuditFailure(requestId, error);
-    });
+      return { "x-audit-persisted": "no", "x-audit-durable": "no" };
+    }
   });
-
   next();
 }

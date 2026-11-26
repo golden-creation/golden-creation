@@ -10,6 +10,26 @@ export const ADMIN_AUDIT_COLUMNS = [
   "row_hash",
 ];
 
+async function addColumn(query, table, column, definition) {
+  const rows = await query(
+    `SELECT COUNT(*) AS total FROM information_schema.COLUMNS
+      WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = ? AND COLUMN_NAME = ?`,
+    [table, column]
+  );
+  if (Number(rows[0]?.total || rows[0]?.["COUNT(*)"] || 0) > 0) return;
+  await query(`ALTER TABLE \`${table}\` ADD COLUMN \`${column}\` ${definition}`);
+}
+
+async function addIndex(query, table, name, column, unique) {
+  const rows = await query(
+    `SELECT COUNT(*) AS total FROM information_schema.STATISTICS
+      WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = ? AND INDEX_NAME = ?`,
+    [table, name]
+  );
+  if (Number(rows[0]?.total || 0) > 0) return;
+  await query(`CREATE ${unique ? "UNIQUE " : ""}INDEX \`${name}\` ON \`${table}\` (\`${column}\`)`);
+}
+
 export async function ensureAdminAuditSchema(query) {
   await query(`
     CREATE TABLE IF NOT EXISTS admin_audit_events (
@@ -39,6 +59,7 @@ export async function ensureAdminAuditSchema(query) {
       user_agent VARCHAR(255) NULL,
       previous_hash CHAR(64) NOT NULL,
       row_hash CHAR(64) NOT NULL,
+      idempotency_key CHAR(64) NULL,
       PRIMARY KEY (id),
       KEY idx_admin_audit_created (created_at),
       KEY idx_admin_audit_admin (admin_id, created_at),
@@ -60,6 +81,8 @@ export async function ensureAdminAuditSchema(query) {
       status VARCHAR(20) NOT NULL DEFAULT 'pending',
       attempts INT NOT NULL DEFAULT 0,
       last_error VARCHAR(255) NULL,
+      idempotency_key CHAR(64) NULL,
+      next_attempt_at DATETIME NULL,
       created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
       PRIMARY KEY (id),
       KEY idx_admin_audit_outbox_status (status, id)
@@ -72,6 +95,11 @@ export async function ensureAdminAuditSchema(query) {
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
   `);
   await query("INSERT IGNORE INTO admin_audit_settings (id, retention_days) VALUES (1, 365)");
+  await addColumn(query, "admin_audit_outbox", "idempotency_key", "CHAR(64) NULL");
+  await addColumn(query, "admin_audit_outbox", "next_attempt_at", "DATETIME NULL");
+  await addColumn(query, "admin_audit_events", "idempotency_key", "CHAR(64) NULL");
+  await addIndex(query, "admin_audit_outbox", "uq_admin_audit_outbox_key", "idempotency_key", true);
+  await addIndex(query, "admin_audit_events", "uq_admin_audit_event_key", "idempotency_key", true);
   const triggers = await query(
     `SELECT TRIGGER_NAME AS name
        FROM information_schema.TRIGGERS

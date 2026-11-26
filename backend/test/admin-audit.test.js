@@ -7,15 +7,19 @@ import express from "express";
 import mysql from "mysql2/promise";
 import {
   AUDIT_COVERAGE_GAPS,
+  auditCoverageMatrix,
   auditRetentionDays,
   auditRowHash,
+  bulkAuditSummary,
   changedAuditFields,
   classifyAdminRoute,
   enqueueAuditOutbox,
   flushAuditOutbox,
+  instrumentAdminResponse,
   isAuditSuperAdmin,
   listAdminRoutes,
   loginActor,
+  processAuditOutbox,
   sanitizeAuditValue,
   verifyAuditChain,
   writeAuditEvent,
@@ -72,6 +76,24 @@ test("admin mutations are classified without claiming complete field coverage", 
   assert.equal(/DELETE\s+FROM\s+admin_audit_events/i.test(sql), false);
   assert.match(sql, /admin_audit_chain/);
   assert.match(sql, /encrypted copy/);
+  const matrix = auditCoverageMatrix(routes);
+  const totals = matrix.reduce((sum, row) => ({
+    fieldLevel: sum.fieldLevel + row.fieldLevel,
+    bulkSummary: sum.bulkSummary + row.bulkSummary,
+    outcomeOnly: sum.outcomeOnly + row.outcomeOnly,
+    unsupported: sum.unsupported + row.unsupported,
+  }), { fieldLevel: 0, bulkSummary: 0, outcomeOnly: 0, unsupported: 0 });
+  assert.equal(totals.fieldLevel + totals.bulkSummary + totals.outcomeOnly + totals.unsupported, mutations.length);
+  assert.ok(totals.fieldLevel > 0);
+  assert.ok(totals.bulkSummary > 0);
+  assert.ok(totals.outcomeOnly > 0);
+  assert.ok(totals.unsupported > 0);
+  assert.equal(auditCoverageMatrix([{ method: "POST", path: "/media/upload", module: "Media" }])[0].unsupported, 1);
+  assert.deepEqual(bulkAuditSummary({ ids: [4, 5], products: [{ id: 9, price: 12, email: "a@b.c" }] }).ids.includes("4"), true);
+  const hidden = sanitizeAuditValue({ name: "Buyer", status: "Active", phone: "999" }, 0, { redactNames: true });
+  assert.equal(hidden.name, "[redacted]");
+  assert.equal(hidden.status, "Active");
+  assert.equal(hidden.phone, "[redacted]");
 });
 
 test("audit details keep allowlisted changes and omit customer data and secrets", () => {
@@ -105,6 +127,46 @@ test("audit details keep allowlisted changes and omit customer data and secrets"
   assert.equal(verifyAuditChain([
     { previous_hash: "0".repeat(64), row_hash: first, payload },
   ]), true);
+});
+
+test("admin responses are logged once and the HTTP body stays unchanged", async () => {
+  const seen = [];
+  const app = express();
+  app.use((req, res, next) => {
+    instrumentAdminResponse(req, res, async (snapshot) => {
+      seen.push({ path: req.path, kind: snapshot.kind, message: snapshot.message });
+      return { "x-audit-persisted": "yes" };
+    });
+    next();
+  });
+  app.post("/save", (_req, res) => res.status(400).json({ message: "Rejected", password: "secret-pass" }));
+  app.get("/export", (_req, res) => res.send("phone,9999999999"));
+  app.get("/file", (_req, res) => res.end(Buffer.from("raw-file")));
+  app.get("/go", (_req, res) => res.redirect(302, "/next?token=abc"));
+  const server = await new Promise((resolve) => {
+    const listening = app.listen(0, "127.0.0.1", () => resolve(listening));
+  });
+  const port = server.address().port;
+  try {
+    const rejected = await fetch(`http://127.0.0.1:${port}/save`, { method: "POST" });
+    const exported = await fetch(`http://127.0.0.1:${port}/export`);
+    const file = await fetch(`http://127.0.0.1:${port}/file`);
+    const redirected = await fetch(`http://127.0.0.1:${port}/go`, { redirect: "manual" });
+    assert.equal(rejected.status, 400);
+    assert.match(await rejected.text(), /secret-pass/);
+    assert.equal(await exported.text(), "phone,9999999999");
+    assert.equal(await file.text(), "raw-file");
+    assert.equal(redirected.status, 302);
+    assert.equal(seen.filter((item) => item.path === "/save").length, 1);
+    assert.equal(seen.find((item) => item.path === "/save").message, "Rejected");
+    assert.equal(seen.find((item) => item.path === "/export").message, "");
+    assert.equal(seen.find((item) => item.path === "/file").kind, "body");
+    assert.match(seen.find((item) => item.path === "/go").message, /redirect/);
+    assert.equal(JSON.stringify(seen).includes("secret-pass"), false);
+    assert.equal(JSON.stringify(seen).includes("9999999999"), false);
+  } finally {
+    await new Promise((resolve) => server.close(resolve));
+  }
 });
 
 test("only a Super Admin can read audit records and nobody can edit them", async () => {
@@ -278,12 +340,80 @@ test("audit records are append-only on a fresh and an existing audit table", asy
           : [],
       },
     }))), true);
+    const replay = {
+      requestId: "replay-1",
+      adminId: 7,
+      source: "backend",
+      layer: "confirmed",
+      module: "Orders",
+      action: "Update",
+      outcome: "failure",
+      method: "PUT",
+      path: "/orders/11/status",
+      recordId: "11",
+      changedFields: [{ field: "order_status", before: "Pending", after: "Cancelled" }],
+    };
+    await enqueueAuditOutbox(replay, adapter);
+    await enqueueAuditOutbox(replay, adapter);
+    const queued = await run("SELECT COUNT(*) AS total FROM admin_audit_outbox WHERE status = 'pending'");
+    assert.equal(Number(queued[0].total), 1);
+    const beforeReplay = Number((await run("SELECT COUNT(*) AS total FROM admin_audit_events"))[0].total);
+    await processAuditOutbox(adapter);
+    await processAuditOutbox(adapter);
+    const afterReplay = Number((await run("SELECT COUNT(*) AS total FROM admin_audit_events"))[0].total);
+    assert.equal(afterReplay, beforeReplay + 1);
+    await connection.query(
+      "INSERT INTO admin_audit_outbox (payload, status, attempts, idempotency_key, next_attempt_at) VALUES (CAST('[]' AS JSON), 'pending', 0, 'bad-json', NOW())"
+    );
+    const firstRetry = await processAuditOutbox(adapter, { maxAttempts: 2 });
+    assert.equal(firstRetry.retried, 1);
+    await connection.query("UPDATE admin_audit_outbox SET next_attempt_at = NOW() WHERE idempotency_key = 'bad-json'");
+    const secondRetry = await processAuditOutbox(adapter, { maxAttempts: 2 });
+    assert.equal(secondRetry.exhausted, 1);
+    const parallelA = await mysql.createConnection({
+      host: process.env.DB_HOST || "127.0.0.1",
+      port: Number(process.env.DB_PORT) || 3306,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD || "",
+      database,
+      connectTimeout: 5000,
+    });
+    try {
+      const parallelAdapter = {
+        query: async (sql, params = []) => (await parallelA.query(sql, params))[0],
+        begin: () => parallelA.beginTransaction(),
+        commit: () => parallelA.commit(),
+        rollback: () => parallelA.rollback(),
+      };
+      await enqueueAuditOutbox({ ...replay, requestId: "parallel-a", path: "/orders/12/status", recordId: "12" }, adapter);
+      await enqueueAuditOutbox({ ...replay, requestId: "parallel-b", path: "/orders/13/status", recordId: "13" }, adapter);
+      await Promise.all([processAuditOutbox(adapter), processAuditOutbox(parallelAdapter)]);
+    } finally {
+      parallelA.destroy();
+    }
+    const parallelRows = await run("SELECT previous_hash, row_hash, admin_id, action_name, request_path, outcome, source, record_id, changed_fields FROM admin_audit_events ORDER BY id");
+    assert.equal(parallelRows.length, 7);
+    assert.equal(verifyAuditChain(parallelRows.map((row) => ({
+      previous_hash: row.previous_hash,
+      row_hash: row.row_hash,
+      payload: {
+        adminId: row.admin_id,
+        action: row.action_name,
+        path: row.request_path,
+        outcome: row.outcome,
+        source: row.source,
+        recordId: row.record_id || "",
+        changed: row.changed_fields
+          ? (typeof row.changed_fields === "string" ? JSON.parse(row.changed_fields) : row.changed_fields)
+          : [],
+      },
+    }))), true);
     if (fresh.triggersInstalled && existing.triggersInstalled) {
       await assert.rejects(() => connection.query("UPDATE admin_audit_events SET action_name = 'Edited'"));
       await assert.rejects(() => connection.query("DELETE FROM admin_audit_events"));
     }
     const remaining = await run("SELECT COUNT(*) AS total FROM admin_audit_events");
-    assert.equal(Number(remaining[0].total), 4);
+    assert.equal(Number(remaining[0].total), 7);
     const settings = await run("SELECT retention_days FROM admin_audit_settings WHERE id = 1");
     assert.equal(Number(settings[0].retention_days), 365);
   } catch (error) {

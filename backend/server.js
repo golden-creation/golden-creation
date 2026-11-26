@@ -4,6 +4,7 @@ import { recoverInterruptedCatalogGenerations } from "./controllers/sales.contro
 import { expirePendingPayments } from "./controllers/checkout.controller.js";
 import { releaseEligibleCommissions } from "./services/referral-affiliate.service.js";
 import { isIsolatedTest, listenHost, startupJobsEnabled } from "./config/runtime-safety.js";
+import { startAuditOutboxWorker } from "./services/admin-audit-worker.js";
 
 const PORT = Number(process.env.PORT) || 5000;
 
@@ -29,6 +30,8 @@ if (startupJobsEnabled(process.env)) {
       console.error("Commission release cleanup failed:", error.message);
     });
   }, 10 * 60 * 1000).unref();
+
+  startAuditOutboxWorker();
 }
 
 const host = listenHost(process.env);
