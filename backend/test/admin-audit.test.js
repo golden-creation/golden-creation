@@ -363,7 +363,8 @@ test("audit records are append-only on a fresh and an existing audit table", asy
     const afterReplay = Number((await run("SELECT COUNT(*) AS total FROM admin_audit_events"))[0].total);
     assert.equal(afterReplay, beforeReplay + 1);
     await connection.query(
-      "INSERT INTO admin_audit_outbox (payload, status, attempts, idempotency_key, next_attempt_at) VALUES (CAST('[]' AS JSON), 'pending', 0, 'bad-json', NOW())"
+      "INSERT INTO admin_audit_outbox (payload, status, attempts, idempotency_key, next_attempt_at) VALUES (?, 'pending', 0, 'bad-json', NOW())",
+      [JSON.stringify([])]
     );
     const firstRetry = await processAuditOutbox(adapter, { maxAttempts: 2 });
     assert.equal(firstRetry.retried, 1);

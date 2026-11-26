@@ -16,7 +16,13 @@ const pool = mysql.createPool({
   connectTimeout,
 });
 
+let poolClosed = false;
+
 pool.getConnection((error, connection) => {
+  if (poolClosed || (error && /Pool is closed/i.test(String(error.message)))) {
+    if (connection) connection.destroy();
+    return;
+  }
   if (error) {
     console.log("DB Error:", error);
     return;
@@ -67,6 +73,7 @@ const db = {
   },
 
   end(callback) {
+    poolClosed = true;
     pool.end(callback);
   },
 };

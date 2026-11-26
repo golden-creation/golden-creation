@@ -107,7 +107,7 @@ const pages = [
 for (const [slug, title, body] of pages) {
   await db.query(
     `INSERT INTO content_pages (slug, title, body, metadata)
-     VALUES (?, ?, ?, JSON_OBJECT())
+     VALUES (?, ?, ?, '{}')
      ON DUPLICATE KEY UPDATE title=VALUES(title), body=IF(body='', VALUES(body), body)`,
     [slug, title, body]
   );

@@ -8,13 +8,24 @@ on:
 
 jobs:
   backend:
+    name: backend (${{ matrix.engine }})
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - engine: mysql-8.0
+            image: mysql:8.0
+          - engine: mariadb-10.11
+            image: mariadb:10.11
     services:
-      mysql:
-        image: mysql:8.0
+      db:
+        image: ${{ matrix.image }}
         env:
           MYSQL_ROOT_PASSWORD: ci-only-password
           MYSQL_DATABASE: gc_ci
+          MARIADB_ROOT_PASSWORD: ci-only-password
+          MARIADB_DATABASE: gc_ci
         ports:
           - 3306:3306
         options: >-

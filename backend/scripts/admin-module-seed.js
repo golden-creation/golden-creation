@@ -312,7 +312,7 @@ export async function seedAdminModuleData(db, env = process.env) {
         'starter-picks',
         'manual',
         'A manually ordered set of starter products for homepage merchandising.',
-        JSON_OBJECT(),
+        '{}',
         'Active',
         'Starter Picks | Lekhanmart',
         'Browse Lekhanmart starter product picks.'
