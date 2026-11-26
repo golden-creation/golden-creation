@@ -1,12 +1,13 @@
 import db from "../config/db.js";
 import ExcelJS from "exceljs";
-import { auditFailureCount, writeAuditEvent } from "../middleware/admin-audit.middleware.js";
+import { auditFailureCount } from "../middleware/admin-audit.middleware.js";
 import {
   AUDIT_RETENTION_DAYS,
   csvCell,
   istDayRange,
   istTimestamp,
   isAuditSuperAdmin,
+  writeAuditEvent,
 } from "../services/admin-audit.js";
 
 function query(sql, params = []) {
@@ -173,7 +174,7 @@ export async function recordAuditObservations(req, res) {
         detail: { label: String(event.label || "").slice(0, 120), confirmed: false },
         ip: String(req.headers["x-forwarded-for"] || req.ip || "").split(",")[0].slice(0, 64),
         userAgent: req.headers["user-agent"],
-      });
+      }, query);
     }
     res.json({ recorded: true, confirmed: false });
   } catch (error) {

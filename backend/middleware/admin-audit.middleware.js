@@ -1,16 +1,15 @@
 import db from "../config/db.js";
 import {
-  AUDIT_GENESIS,
   auditAction,
   auditModule,
   auditOutcome,
   auditRecordTarget,
-  auditRowHash,
   changedAuditFields,
   newRequestId,
   sanitizeAuditValue,
   sessionKey,
   shouldSkipDuplicateRead,
+  writeAuditEvent,
 } from "../services/admin-audit.js";
 
 function query(sql, params = []) {
@@ -26,54 +25,6 @@ let failureCount = 0;
 
 export function auditFailureCount() {
   return failureCount;
-}
-
-export async function writeAuditEvent(event, runQuery = query) {
-  const payload = {
-    adminId: event.adminId || null,
-    action: event.action,
-    path: event.path || "",
-    outcome: event.outcome,
-    source: event.source,
-    recordId: event.recordId || "",
-    changed: event.changedFields || [],
-  };
-  const latest = await runQuery("SELECT row_hash FROM admin_audit_events ORDER BY id DESC LIMIT 1");
-  const previousHash = latest[0]?.row_hash || AUDIT_GENESIS;
-  const rowHash = auditRowHash(previousHash, payload);
-  await runQuery(
-    `INSERT INTO admin_audit_events
-      (admin_id, actor_name, actor_email, actor_role, session_id, request_id, source, layer,
-       module_name, page_name, action_name, outcome, http_method, request_path, record_id, record_name,
-       previous_value, updated_value, changed_fields, detail, ip_address, user_agent, previous_hash, row_hash)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-    [
-      event.adminId || null,
-      event.actorName || null,
-      event.actorEmail || null,
-      event.actorRole || null,
-      event.sessionId || null,
-      event.requestId || null,
-      event.source,
-      event.layer,
-      event.module,
-      event.page || null,
-      event.action,
-      event.outcome,
-      event.method || null,
-      String(event.path || "").slice(0, 255),
-      event.recordId || null,
-      event.recordName || null,
-      event.previousValue ? JSON.stringify(event.previousValue) : null,
-      event.updatedValue ? JSON.stringify(event.updatedValue) : null,
-      event.changedFields?.length ? JSON.stringify(event.changedFields) : null,
-      event.detail ? JSON.stringify(event.detail) : null,
-      event.ip || null,
-      String(event.userAgent || "").slice(0, 255) || null,
-      previousHash,
-      rowHash,
-    ]
-  );
 }
 
 async function readRecord(target) {
@@ -162,7 +113,7 @@ export function attachAdminAudit(req, res, next) {
         },
         ip: clientIp(req),
         userAgent: req.headers["user-agent"],
-      });
+      }, query);
     }).catch((error) => {
       failureCount += 1;
       console.error(`AUDIT_LOG_FAILURE ${requestId} ${error.message || "audit write failed"}`);

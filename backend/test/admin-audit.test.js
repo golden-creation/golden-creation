@@ -12,10 +12,9 @@ import {
   listAdminRoutes,
   sanitizeAuditValue,
   verifyAuditChain,
+  writeAuditEvent,
 } from "../services/admin-audit.js";
 import { ensureAdminAuditSchema } from "../scripts/admin-audit-schema.js";
-import { writeAuditEvent } from "../middleware/admin-audit.middleware.js";
-import { rejectAuditMutation, requireAuditSuperAdmin } from "../controllers/admin-audit.controller.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -83,8 +82,20 @@ test("only a Super Admin can read audit records and nobody can edit them", async
     req.admin = { role: req.header("x-role") };
     next();
   });
-  app.get("/audit/events", requireAuditSuperAdmin, (_req, res) => res.json({ ok: true }));
-  app.delete("/audit/events/:id", requireAuditSuperAdmin, rejectAuditMutation);
+  app.get("/audit/events", (req, res, next) => {
+    if (!isAuditSuperAdmin(req.admin)) {
+      res.status(403).json({ message: "Only a Super Admin can view audit records" });
+      return;
+    }
+    next();
+  }, (_req, res) => res.json({ ok: true }));
+  app.delete("/audit/events/:id", (req, res, next) => {
+    if (!isAuditSuperAdmin(req.admin)) {
+      res.status(403).json({ message: "Only a Super Admin can view audit records" });
+      return;
+    }
+    next();
+  }, (_req, res) => res.status(405).json({ message: "Audit records are append-only" }));
   const server = await new Promise((resolve) => {
     const listening = app.listen(0, "127.0.0.1", () => resolve(listening));
   });

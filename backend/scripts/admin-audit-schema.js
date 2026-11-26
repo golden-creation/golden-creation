@@ -57,6 +57,7 @@ export async function ensureAdminAuditSchema(query) {
   const install = async (name, timing) => {
     if (names.has(name)) return;
     try {
+      await query("SET SESSION lock_wait_timeout = 3");
       await query(`
         CREATE TRIGGER ${name}
         BEFORE ${timing} ON admin_audit_events
@@ -65,7 +66,9 @@ export async function ensureAdminAuditSchema(query) {
       `);
       triggersInstalled = true;
     } catch (error) {
-      if (error.code !== "ER_BINLOG_CREATE_ROUTINE_NEED_SUPER" && error.errno !== 1419) throw error;
+      const skipped = ["ER_BINLOG_CREATE_ROUTINE_NEED_SUPER", "ER_LOCK_WAIT_TIMEOUT"].includes(error.code)
+        || [1419, 1205].includes(error.errno);
+      if (!skipped) throw error;
       triggersInstalled = false;
     }
   };
