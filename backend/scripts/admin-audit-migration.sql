@@ -1,7 +1,37 @@
 -- Append-only Super Admin audit log.
 -- Does not change products, stock, orders, customers, payments, or admin accounts.
--- Proposed retention is 365 days. This script does not delete old rows.
+-- The application should receive INSERT and SELECT on admin_audit_events.
+-- UPDATE and DELETE on that table stay blocked by the triggers below.
+-- admin_audit_chain and admin_audit_outbox need INSERT, SELECT, and UPDATE for the lock row and retry state.
+-- This script does not GRANT privileges and does not delete audit rows.
+-- Keep an encrypted copy of the audit tables off this server for the retention period. A dump on the same VPS is not that copy.
 -- Run against production only after explicit approval.
+
+CREATE TABLE IF NOT EXISTS admin_audit_chain (
+  id TINYINT UNSIGNED NOT NULL PRIMARY KEY,
+  latest_hash CHAR(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT IGNORE INTO admin_audit_chain (id, latest_hash)
+VALUES (1, '0000000000000000000000000000000000000000000000000000000000000000');
+
+CREATE TABLE IF NOT EXISTS admin_audit_outbox (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  payload JSON NOT NULL,
+  status VARCHAR(20) NOT NULL DEFAULT 'pending',
+  attempts INT NOT NULL DEFAULT 0,
+  last_error VARCHAR(255) NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  KEY idx_admin_audit_outbox_status (status, id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS admin_audit_settings (
+  id TINYINT UNSIGNED NOT NULL PRIMARY KEY,
+  retention_days INT NOT NULL DEFAULT 365
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT IGNORE INTO admin_audit_settings (id, retention_days) VALUES (1, 365);
 
 CREATE TABLE IF NOT EXISTS admin_audit_events (
   id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,

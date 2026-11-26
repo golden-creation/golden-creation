@@ -7,6 +7,7 @@ import {
   rollback,
 } from "../services/commerce.service.js";
 import { PORTER_STATUSES } from "../services/payment-policy.js";
+import { changedAuditFields, joinedAuditDb, sanitizeAuditValue, writeAuditEvent } from "../services/admin-audit.js";
 
 function cleanString(value) {
   return String(value || "").trim();
@@ -270,8 +271,13 @@ export async function updatePaymentSettings(req, res) {
     if (maxAmount > 0 && maxAmount < minAmount) {
       return res.status(400).json({ message: "COD maximum must be at least the minimum" });
     }
-    await dbQuery(
-      `UPDATE payment_settings
+    const connection = await getConnection();
+    try {
+      await beginTransaction(connection);
+      const beforeRows = await connectionQuery(connection, "SELECT * FROM payment_settings WHERE id = 1 FOR UPDATE");
+      await connectionQuery(
+        connection,
+        `UPDATE payment_settings
           SET full_online_enabled=?,
               partial_cod_enabled=?,
               full_cod_enabled=?,
@@ -286,22 +292,50 @@ export async function updatePaymentSettings(req, res) {
               porter_collects_cod=?,
               updated_by=?
         WHERE id=1`,
-      [
-        req.body?.full_online_enabled ? 1 : 0,
-        req.body?.partial_cod_enabled ? 1 : 0,
-        req.body?.full_cod_enabled ? 1 : 0,
-        percentage,
-        holdMinutes,
-        minAmount,
-        maxAmount,
-        req.body?.cod_pin_restricted ? 1 : 0,
-        cleanString(req.body?.cod_pins).slice(0, 4000),
-        req.body?.porter_enabled ? 1 : 0,
-        cleanString(req.body?.porter_pins).slice(0, 4000),
-        req.body?.porter_collects_cod ? 1 : 0,
-        Number(req.admin?.id) || null,
-      ]
-    );
+        [
+          req.body?.full_online_enabled ? 1 : 0,
+          req.body?.partial_cod_enabled ? 1 : 0,
+          req.body?.full_cod_enabled ? 1 : 0,
+          percentage,
+          holdMinutes,
+          minAmount,
+          maxAmount,
+          req.body?.cod_pin_restricted ? 1 : 0,
+          cleanString(req.body?.cod_pins).slice(0, 4000),
+          req.body?.porter_enabled ? 1 : 0,
+          cleanString(req.body?.porter_pins).slice(0, 4000),
+          req.body?.porter_collects_cod ? 1 : 0,
+          Number(req.admin?.id) || null,
+        ]
+      );
+      const afterRows = await connectionQuery(connection, "SELECT * FROM payment_settings WHERE id = 1");
+      await writeAuditEvent({
+        adminId: req.admin?.id,
+        actorName: req.admin?.name,
+        actorEmail: req.admin?.email,
+        actorRole: req.admin?.role,
+        source: "backend",
+        layer: "confirmed",
+        module: "Payments",
+        page: "/payment-settings",
+        action: "Update",
+        outcome: "success",
+        method: "PUT",
+        path: "/payment-settings",
+        recordId: "1",
+        previousValue: sanitizeAuditValue(beforeRows[0] || {}),
+        updatedValue: sanitizeAuditValue(afterRows[0] || {}),
+        changedFields: changedAuditFields(beforeRows[0], afterRows[0]),
+        detail: { persistence: "same-transaction", confirmed: true },
+      }, joinedAuditDb((sql, params) => connectionQuery(connection, sql, params)));
+      await commit(connection);
+      req.auditPersisted = true;
+    } catch (error) {
+      await rollback(connection);
+      throw error;
+    } finally {
+      connection.release();
+    }
     await activity(req, "Updated payment settings", `Partial COD ${percentage}%`);
     res.json({ message: "Payment settings updated" });
   } catch (error) {

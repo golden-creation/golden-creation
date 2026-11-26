@@ -46,6 +46,32 @@ export async function ensureAdminAuditSchema(query) {
       KEY idx_admin_audit_outcome (outcome, created_at)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
   `);
+  await query(`
+    CREATE TABLE IF NOT EXISTS admin_audit_chain (
+      id TINYINT UNSIGNED NOT NULL PRIMARY KEY,
+      latest_hash CHAR(64) NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+  `);
+  await query("INSERT IGNORE INTO admin_audit_chain (id, latest_hash) VALUES (1, ?)", ["0".repeat(64)]);
+  await query(`
+    CREATE TABLE IF NOT EXISTS admin_audit_outbox (
+      id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+      payload JSON NOT NULL,
+      status VARCHAR(20) NOT NULL DEFAULT 'pending',
+      attempts INT NOT NULL DEFAULT 0,
+      last_error VARCHAR(255) NULL,
+      created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      PRIMARY KEY (id),
+      KEY idx_admin_audit_outbox_status (status, id)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+  `);
+  await query(`
+    CREATE TABLE IF NOT EXISTS admin_audit_settings (
+      id TINYINT UNSIGNED NOT NULL PRIMARY KEY,
+      retention_days INT NOT NULL DEFAULT 365
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+  `);
+  await query("INSERT IGNORE INTO admin_audit_settings (id, retention_days) VALUES (1, 365)");
   const triggers = await query(
     `SELECT TRIGGER_NAME AS name
        FROM information_schema.TRIGGERS

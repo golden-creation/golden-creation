@@ -15,6 +15,7 @@ import {
 } from "../services/referral-affiliate.service.js";
 import { cancelStoredOrder } from "../services/order-cancellation-store.js";
 import { statusTransitionAllowed } from "../services/order-cancellation.js";
+import { changedAuditFields, joinedAuditDb, sanitizeAuditValue, writeAuditEvent } from "../services/admin-audit.js";
 import {
   duplicateSkuInGroup,
   resolveImportBrand,
@@ -828,8 +829,17 @@ export async function updateAdminStaff(req, res) {
   }
 
   try {
-    await dbQuery(
-      `
+    const connection = await new Promise((resolve, reject) => {
+      db.getConnection((error, item) => (error ? reject(error) : resolve(item)));
+    });
+    const queryOn = (sql, params = []) => new Promise((resolve, reject) => {
+      connection.query(sql, params, (error, results) => (error ? reject(error) : resolve(results)));
+    });
+    try {
+      await new Promise((resolve, reject) => connection.beginTransaction((error) => (error ? reject(error) : resolve())));
+      const beforeRows = await queryOn("SELECT id, name, role, status, permissions FROM admins WHERE id = ? FOR UPDATE", [id]);
+      await queryOn(
+        `
         UPDATE admins
         SET
           name = COALESCE(NULLIF(?, ''), name),
@@ -839,16 +849,44 @@ export async function updateAdminStaff(req, res) {
           permissions = COALESCE(?, permissions)
         WHERE id = ?
       `,
-      [
-        name,
-        role,
-        status,
-        hasProfileImage ? 1 : 0,
-        profileImage,
-        permissions ? JSON.stringify(permissions) : null,
-        id,
-      ]
-    );
+        [
+          name,
+          role,
+          status,
+          hasProfileImage ? 1 : 0,
+          profileImage,
+          permissions ? JSON.stringify(permissions) : null,
+          id,
+        ]
+      );
+      const afterRows = await queryOn("SELECT id, name, role, status, permissions FROM admins WHERE id = ?", [id]);
+      await writeAuditEvent({
+        adminId: req.admin?.id,
+        actorName: req.admin?.name,
+        actorEmail: req.admin?.email,
+        actorRole: req.admin?.role,
+        source: "backend",
+        layer: "confirmed",
+        module: "Permissions",
+        page: `/staff/${id}`,
+        action: "Permission change",
+        outcome: "success",
+        method: "PUT",
+        path: `/staff/${id}`,
+        recordId: String(id),
+        previousValue: sanitizeAuditValue(beforeRows[0] || {}),
+        updatedValue: sanitizeAuditValue(afterRows[0] || {}),
+        changedFields: changedAuditFields(beforeRows[0], afterRows[0]),
+        detail: { persistence: "same-transaction", confirmed: true },
+      }, joinedAuditDb(queryOn));
+      await new Promise((resolve, reject) => connection.commit((error) => (error ? reject(error) : resolve())));
+      req.auditPersisted = true;
+    } catch (error) {
+      await new Promise((resolve) => connection.rollback(() => resolve()));
+      throw error;
+    } finally {
+      connection.release();
+    }
 
     await logActivity(req, "Updated staff account", "Users", `ADM-${id}`);
 

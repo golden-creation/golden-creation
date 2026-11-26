@@ -242,6 +242,17 @@ if ((env.DOTENV_CONFIG_PATH || "").includes(".env.test")) process.exit(1);
     exit 1
   fi
   echo "preflight_audit_triggers=ok"
+  for audit_table in admin_audit_chain admin_audit_outbox admin_audit_settings; do
+    if ! schema_count "SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA='${SOURCE_DB}' AND TABLE_NAME='${audit_table}'"; then
+      echo "STOP: missing production audit table ${audit_table}" >&2
+      exit 1
+    fi
+  done
+  if ! schema_count "SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='${SOURCE_DB}' AND TABLE_NAME='admin_audit_settings' AND COLUMN_NAME='retention_days'"; then
+    echo "STOP: missing production audit retention setting" >&2
+    exit 1
+  fi
+  echo "preflight_audit_chain=ok"
   echo "preflight_schema=ok"
   rm -f "$CLIENT_DEFAULTS"
   unset CLIENT_DEFAULTS

@@ -2,11 +2,11 @@ import db from "../config/db.js";
 import ExcelJS from "exceljs";
 import { auditFailureCount } from "../middleware/admin-audit.middleware.js";
 import {
-  AUDIT_RETENTION_DAYS,
   csvCell,
   istDayRange,
   istTimestamp,
   isAuditSuperAdmin,
+  auditRetentionDays,
   writeAuditEvent,
 } from "../services/admin-audit.js";
 
@@ -104,13 +104,21 @@ export async function listAuditEvents(req, res) {
         [new Date(Date.now() - 30 * 60 * 1000)]
       )
       : [];
+    let retentionDays = auditRetentionDays();
+    try {
+      const settingRows = await query("SELECT retention_days FROM admin_audit_settings WHERE id = 1");
+      if (settingRows[0]) retentionDays = auditRetentionDays(settingRows[0].retention_days);
+    } catch {
+      retentionDays = auditRetentionDays();
+    }
     res.json({
       events: rows.map(present),
       page,
       limit,
       total: Number(countRows[0]?.total || 0),
       date: range.day,
-      retentionDays: AUDIT_RETENTION_DAYS,
+      retentionDays,
+      retentionDeletesRows: false,
       loggingFailures: auditFailureCount(),
       sessions: sessions.map((session) => ({ ...session, last_activity_ist: istTimestamp(session.last_activity) })),
     });
@@ -156,25 +164,41 @@ export async function recordAuditObservations(req, res) {
       const page = String(event.page || "").slice(0, 160);
       const action = String(event.action || "View").slice(0, 80);
       if (!page || !["View", "Click", "Search", "Filter"].includes(action)) continue;
-      await writeAuditEvent({
-        adminId: req.admin?.id,
-        actorName: req.admin?.name,
-        actorEmail: req.admin?.email,
-        actorRole: req.admin?.role,
-        sessionId: null,
-        requestId: req.auditRequestId,
-        source: "frontend",
-        layer: "observed",
-        module: "Admin",
-        page,
-        action,
-        outcome: "observed",
-        method: "POST",
-        path: page,
-        detail: { label: String(event.label || "").slice(0, 120), confirmed: false },
-        ip: String(req.headers["x-forwarded-for"] || req.ip || "").split(",")[0].slice(0, 64),
-        userAgent: req.headers["user-agent"],
-      }, query);
+      await new Promise((resolve, reject) => {
+        db.getConnection((error, connection) => {
+          if (error) {
+            reject(error);
+            return;
+          }
+          const database = {
+            query: (sql, params = []) => new Promise((done, fail) => {
+              connection.query(sql, params, (queryError, results) => (queryError ? fail(queryError) : done(results)));
+            }),
+            begin: () => new Promise((done, fail) => connection.beginTransaction((queryError) => (queryError ? fail(queryError) : done()))),
+            commit: () => new Promise((done, fail) => connection.commit((queryError) => (queryError ? fail(queryError) : done()))),
+            rollback: () => new Promise((done) => connection.rollback(() => done())),
+          };
+          writeAuditEvent({
+            adminId: req.admin?.id,
+            actorName: req.admin?.name,
+            actorEmail: req.admin?.email,
+            actorRole: req.admin?.role,
+            sessionId: null,
+            requestId: req.auditRequestId,
+            source: "frontend",
+            layer: "observed",
+            module: "Admin",
+            page,
+            action,
+            outcome: "observed",
+            method: "POST",
+            path: page,
+            detail: { label: String(event.label || "").slice(0, 120), confirmed: false },
+            ip: String(req.headers["x-forwarded-for"] || req.ip || "").split(",")[0].slice(0, 64),
+            userAgent: req.headers["user-agent"],
+          }, database).then(resolve, reject).finally(() => connection.release());
+        });
+      });
     }
     res.json({ recorded: true, confirmed: false });
   } catch (error) {

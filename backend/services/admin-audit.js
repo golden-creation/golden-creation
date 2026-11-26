@@ -2,7 +2,6 @@ import { createHash, randomUUID } from "node:crypto";
 
 export const AUDIT_RETENTION_DAYS = 365;
 export const AUDIT_GENESIS = "0".repeat(64);
-const SECRET_KEY = /password|otp|token|secret|authorization|cookie|cvv|card|pan|razorpay|api[_-]?key|session/i;
 const MUTATIONS = new Set(["POST", "PUT", "PATCH", "DELETE"]);
 
 const MODULE_RULES = [
@@ -26,7 +25,6 @@ const MODULE_RULES = [
   ["/inventory", "Stock"],
   ["/warehouse", "Stock"],
   ["/godowns", "Stock"],
-  ["/catalogs", "Stock"],
   ["/catalogs", "Stock"],
   ["/store-settings", "Store"],
   ["/shipping", "Shipping"],
@@ -74,27 +72,80 @@ export function isAuditSuperAdmin(admin) {
   return String(admin?.role || "").trim().toLowerCase() === "super admin";
 }
 
+const ALLOWED_CHANGE_FIELDS = new Set([
+  "price", "selling_price", "mrp", "compare_price", "stock", "quantity", "shop_stock", "warehouse_stock",
+  "status", "order_status", "payment_status", "role", "permissions", "sku", "eligible", "percentage",
+  "full_online_enabled", "partial_cod_enabled", "full_cod_enabled", "default_partial_percent",
+  "cod_min_amount", "cod_max_amount", "porter_enabled", "porter_collects_cod", "cod_pin_restricted",
+]);
+const PII_KEY = /email|phone|mobile|address|street|city|state|zip|postal|customer|password|otp|token|secret|authorization|cookie|cvv|card|pan|razorpay|api[_-]?key|session|name/i;
+
+export const AUDIT_COVERAGE_GAPS = [
+  "Before and after values are limited to one row in an allowlisted table. Bulk imports, spreadsheet applies, and multi-row catalog saves are counted, not field-diffed.",
+  "File uploads and drive objects store only a file marker. File bytes are never stored.",
+  "Media migration and other background jobs are logged when their admin route returns, not once per asynchronous item.",
+  "The payment-settings update and the staff permission update commit in the same database transaction as their audit row. Stock changes and order-status changes are recorded before the HTTP response, on a separate connection, because those flows also call stock history, cancellation, and commission services.",
+  "HTTP success is not proof the hash-chain row exists. The x-audit-persisted response header is the persistence result.",
+  "Read requests are queued after the response and can be lost if the process stops first.",
+];
+
+export function isCriticalAudit(method, path = "") {
+  if (!MUTATIONS.has(String(method || "").toUpperCase())) return false;
+  const concrete = String(path).replace(/:[A-Za-z0-9_]+/g, "1");
+  return [
+    /^\/payment-settings(?:\/|$)/,
+    /^\/inventory\/products\/\d+\/stock$/,
+    /^\/orders\/\d+\/status$/,
+    /^\/orders\/\d+\/cod-collected$/,
+    /^\/staff(?:\/\d+)?$/,
+    /^\/roles(?:\/\d+)?$/,
+    /^\/catalogs\/(?:warehouse|store)\/products(?:\/|$)/,
+    /^\/products\/\d+$/,
+  ].some((pattern) => pattern.test(concrete));
+}
+
+export function classifyAdminRoute(method, path = "") {
+  const verb = String(method || "GET").toUpperCase();
+  const mutation = MUTATIONS.has(verb);
+  const concrete = String(path).replace(/:[A-Za-z0-9_]+/g, "1");
+  const singleRow = Boolean(auditRecordTarget(concrete).table);
+  let diff = "none";
+  if (mutation && /import|bulk|catalogs\/.+\/products$/.test(concrete)) diff = "multi-record";
+  else if (mutation && /upload|drive\/files|migration/.test(concrete)) diff = "file-or-job";
+  else if (mutation && singleRow) diff = "single-row-allowlist";
+  else if (mutation) diff = "outcome-only";
+  return {
+    method: verb,
+    path,
+    module: auditModule(path),
+    mutation,
+    diff,
+    persistence: !mutation ? "read-after-response" : isCriticalAudit(verb, path) ? "critical-before-response" : "outbox-before-response",
+  };
+}
+
 export function sanitizeAuditValue(value, depth = 0) {
+  if (depth > 2) return "[truncated]";
   if (value == null || ["number", "boolean"].includes(typeof value)) return value;
-  if (typeof value === "string") {
-    if (value.length > 500) return `[text ${value.length} characters]`;
-    return value;
-  }
-  if (depth > 4) return "[truncated]";
-  if (Array.isArray(value)) return value.slice(0, 30).map((item) => sanitizeAuditValue(item, depth + 1));
-  if (typeof value === "object") {
-    if (typeof Buffer !== "undefined" && Buffer.isBuffer(value)) return "[file omitted]";
-    const clean = {};
-    for (const [key, item] of Object.entries(value)) {
-      if (key === "file" || key === "buffer" || key === "data") {
-        clean[key] = "[file omitted]";
-        continue;
-      }
-      clean[key] = SECRET_KEY.test(key) ? "[redacted]" : sanitizeAuditValue(item, depth + 1);
+  if (typeof value === "string") return value.length > 80 ? "[text omitted]" : value;
+  if (Array.isArray(value)) return value.slice(0, 10).map((item) => sanitizeAuditValue(item, depth + 1));
+  if (typeof value !== "object" || (typeof Buffer !== "undefined" && Buffer.isBuffer(value))) return "[omitted]";
+  const clean = {};
+  for (const [key, item] of Object.entries(value)) {
+    if (PII_KEY.test(key) && key !== "name") {
+      clean[key] = "[redacted]";
+      continue;
     }
-    return clean;
+    if (!ALLOWED_CHANGE_FIELDS.has(key) && key !== "name") continue;
+    if (key === "name" && /@/.test(String(item || ""))) {
+      clean[key] = "[redacted]";
+      continue;
+    }
+    clean[key] = sanitizeAuditValue(item, depth + 1);
   }
-  return null;
+  const encoded = JSON.stringify(clean);
+  if (encoded.length > 1500) return { truncated: true };
+  return clean;
 }
 
 export function changedAuditFields(before, after) {
@@ -104,6 +155,7 @@ export function changedAuditFields(before, after) {
   const changes = [];
   for (const key of keys) {
     if (["updated_at", "created_at"].includes(key)) continue;
+    if ((PII_KEY.test(key) && key !== "name") || (!ALLOWED_CHANGE_FIELDS.has(key) && key !== "name")) continue;
     if (JSON.stringify(previous[key]) !== JSON.stringify(next[key])) {
       changes.push({
         field: key,
@@ -158,9 +210,20 @@ export function sessionKey(token) {
   return createHash("sha256").update(String(token)).digest("hex").slice(0, 32);
 }
 
+function stableJson(value) {
+  if (Array.isArray(value)) return value.map(stableJson);
+  if (value && typeof value === "object") {
+    return Object.keys(value).sort().reduce((sorted, key) => {
+      sorted[key] = stableJson(value[key]);
+      return sorted;
+    }, {});
+  }
+  return value;
+}
+
 export function auditRowHash(previousHash, payload) {
   return createHash("sha256")
-    .update(`${previousHash || AUDIT_GENESIS}\n${JSON.stringify(payload)}`)
+    .update(`${previousHash || AUDIT_GENESIS}\n${JSON.stringify(stableJson(payload))}`)
     .digest("hex");
 }
 
@@ -234,7 +297,34 @@ export function shouldSkipDuplicateRead(key, now = Date.now()) {
   return previous && now - previous < 3000;
 }
 
-export async function writeAuditEvent(event, runQuery) {
+export function auditRetentionDays(value = process.env.AUDIT_RETENTION_DAYS) {
+  const parsed = Number(value ?? 365);
+  if (!Number.isFinite(parsed) || parsed < 30) return 365;
+  return Math.min(3650, Math.floor(parsed));
+}
+
+export function loginActor(body) {
+  const admin = body?.admin;
+  if (!admin || typeof admin !== "object") return null;
+  return {
+    id: Number(admin.id) || null,
+    name: String(admin.name || "").slice(0, 160),
+    email: String(admin.email || "").slice(0, 190),
+    role: String(admin.role || "").slice(0, 80),
+  };
+}
+
+export function joinedAuditDb(query) {
+  return {
+    joined: true,
+    query,
+    begin: async () => {},
+    commit: async () => {},
+    rollback: async () => {},
+  };
+}
+
+export async function writeAuditEvent(event, db, attempt = 0) {
   const payload = {
     adminId: event.adminId || null,
     action: event.action,
@@ -244,42 +334,97 @@ export async function writeAuditEvent(event, runQuery) {
     recordId: event.recordId || "",
     changed: event.changedFields || [],
   };
-  const latest = await runQuery("SELECT row_hash FROM admin_audit_events ORDER BY id DESC LIMIT 1");
-  const previousHash = latest[0]?.row_hash || AUDIT_GENESIS;
-  const rowHash = auditRowHash(previousHash, payload);
-  await runQuery(
-    `INSERT INTO admin_audit_events
-      (admin_id, actor_name, actor_email, actor_role, session_id, request_id, source, layer,
-       module_name, page_name, action_name, outcome, http_method, request_path, record_id, record_name,
-       previous_value, updated_value, changed_fields, detail, ip_address, user_agent, previous_hash, row_hash)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-    [
-      event.adminId || null,
-      event.actorName || null,
-      event.actorEmail || null,
-      event.actorRole || null,
-      event.sessionId || null,
-      event.requestId || null,
-      event.source,
-      event.layer,
-      event.module,
-      event.page || null,
-      event.action,
-      event.outcome,
-      event.method || null,
-      String(event.path || "").slice(0, 255),
-      event.recordId || null,
-      event.recordName || null,
-      event.previousValue ? JSON.stringify(event.previousValue) : null,
-      event.updatedValue ? JSON.stringify(event.updatedValue) : null,
-      event.changedFields?.length ? JSON.stringify(event.changedFields) : null,
-      event.detail ? JSON.stringify(event.detail) : null,
-      event.ip || null,
-      String(event.userAgent || "").slice(0, 255) || null,
-      previousHash,
-      rowHash,
-    ]
+  if (!db.joined) await db.begin();
+  try {
+    const locked = await db.query("SELECT latest_hash FROM admin_audit_chain WHERE id = 1 FOR UPDATE");
+    if (!locked[0]) {
+      const missing = new Error("Audit chain row is missing");
+      missing.code = "AUDIT_CHAIN_MISSING";
+      throw missing;
+    }
+    const previousHash = locked[0].latest_hash;
+    const rowHash = auditRowHash(previousHash, payload);
+    await db.query(
+      `INSERT INTO admin_audit_events
+        (admin_id, actor_name, actor_email, actor_role, session_id, request_id, source, layer,
+         module_name, page_name, action_name, outcome, http_method, request_path, record_id, record_name,
+         previous_value, updated_value, changed_fields, detail, ip_address, user_agent, previous_hash, row_hash)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      [
+        event.adminId || null,
+        event.actorName || null,
+        event.actorEmail || null,
+        event.actorRole || null,
+        event.sessionId || null,
+        event.requestId || null,
+        event.source,
+        event.layer,
+        event.module,
+        event.page || null,
+        event.action,
+        event.outcome,
+        event.method || null,
+        String(event.path || "").slice(0, 255),
+        event.recordId || null,
+        event.recordName || null,
+        event.previousValue ? JSON.stringify(event.previousValue) : null,
+        event.updatedValue ? JSON.stringify(event.updatedValue) : null,
+        event.changedFields?.length ? JSON.stringify(event.changedFields) : null,
+        event.detail ? JSON.stringify(event.detail) : null,
+        event.ip || null,
+        String(event.userAgent || "").slice(0, 255) || null,
+        previousHash,
+        rowHash,
+      ]
+    );
+    await db.query("UPDATE admin_audit_chain SET latest_hash = ? WHERE id = 1", [rowHash]);
+    if (!db.joined) await db.commit();
+    return { persisted: true, rowHash, previousHash };
+  } catch (error) {
+    if (!db.joined) await db.rollback();
+    const retryable = error.code === "ER_LOCK_DEADLOCK" || error.errno === 1213 || error.code === "AUDIT_CHAIN_MISSING";
+    if (!db.joined && retryable && attempt < 1) {
+      if (error.code === "AUDIT_CHAIN_MISSING") {
+        await db.query(
+          "INSERT IGNORE INTO admin_audit_chain (id, latest_hash) VALUES (1, ?)",
+          [AUDIT_GENESIS]
+        );
+      }
+      return writeAuditEvent(event, db, attempt + 1);
+    }
+    throw error;
+  }
+}
+
+export async function enqueueAuditOutbox(event, db) {
+  await db.query(
+    "INSERT INTO admin_audit_outbox (payload, status, attempts) VALUES (?, 'pending', 0)",
+    [JSON.stringify(event)]
   );
+  return { durable: true, persisted: false };
+}
+
+export async function flushAuditOutbox(db, limit = 20) {
+  if (!db.joined) await db.begin();
+  try {
+    const rows = await db.query(
+      "SELECT id, payload FROM admin_audit_outbox WHERE status = 'pending' ORDER BY id LIMIT ? FOR UPDATE",
+      [limit]
+    );
+    for (const row of rows) {
+      const payload = typeof row.payload === "string" ? JSON.parse(row.payload) : row.payload;
+      await writeAuditEvent(payload, joinedAuditDb(db.query));
+      await db.query(
+        "UPDATE admin_audit_outbox SET status = 'stored', attempts = attempts + 1, last_error = NULL WHERE id = ?",
+        [row.id]
+      );
+    }
+    if (!db.joined) await db.commit();
+    return rows.length;
+  } catch (error) {
+    if (!db.joined) await db.rollback();
+    throw error;
+  }
 }
 
 export function csvCell(value) {
