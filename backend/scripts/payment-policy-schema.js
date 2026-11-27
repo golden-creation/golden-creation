@@ -6,6 +6,11 @@ export const PAYMENT_SETTINGS_POLICY_COLUMNS = [
   ["porter_enabled", "TINYINT(1) NOT NULL DEFAULT 0"],
   ["porter_pins", "TEXT NULL"],
   ["porter_collects_cod", "TINYINT(1) NOT NULL DEFAULT 0"],
+  ["cod_max_distance_km", "DECIMAL(8,2) NOT NULL DEFAULT 40"],
+  ["partial_cod_above", "DECIMAL(12,2) NOT NULL DEFAULT 3000"],
+  ["porter_max_distance_km", "DECIMAL(8,2) NOT NULL DEFAULT 40"],
+  ["porter_requires_full_payment", "TINYINT(1) NOT NULL DEFAULT 1"],
+  ["porter_customer_pays_delivery", "TINYINT(1) NOT NULL DEFAULT 1"],
 ];
 
 export const ORDER_POLICY_COLUMNS = [

@@ -4,12 +4,11 @@ import { validateDiscountCart } from "./discount.service.js";
 import {
   PORTER_DELIVERY_LABEL,
   PORTER_PICKUP,
-  evaluateFullCod,
-  porterAvailability,
-  resolvePartialCodAdvance,
-  restrictPorterPayments,
-  splitPartialAdvance,
+  allocateLineDiscount,
+  buildPaymentPlan,
+  effectiveUnitPrice,
 } from "./payment-policy.js";
+import { measureRoadDistance } from "./road-distance.js";
 
 export function dbQuery(sql, values = [], connection = db) {
   return new Promise((resolve, reject) => {
@@ -514,68 +513,47 @@ async function resolveTax(items, discountedSubtotal, subtotal, connection = db) 
   return taxed.total;
 }
 
-async function resolvePaymentOptions(items, finalTotal, connection = db, context = {}) {
+async function resolvePaymentOptions(items, connection = db, context = {}) {
   const settingsRows = await dbQuery("SELECT * FROM payment_settings WHERE id = 1", [], connection);
   const settings = settingsRows[0] || {};
   const configured =
     Boolean(cleanString(process.env.RAZORPAY_KEY_ID)) &&
     Boolean(cleanString(process.env.RAZORPAY_KEY_SECRET)) &&
     Boolean(cleanString(process.env.RAZORPAY_WEBHOOK_SECRET));
-  const targetProductIds = [...new Set(items.flatMap((item) => item.stockLines.map((line) => line.productId)))];
-  const targetCategoryIds = [...new Set(items.flatMap((item) => [
-    item.categoryId,
-    ...item.bundleItems.map((bundleItem) => bundleItem.categoryId),
-  ]).filter(Boolean))];
-  const targetCollectionIds = [...new Set(items.flatMap((item) => item.collectionIds))];
-  const rules = await dbQuery(
-    "SELECT * FROM partial_cod_rules WHERE status = 'Active' ORDER BY priority DESC, id",
-    [],
-    connection
-  );
-  const categoryMap = await categoryAncestorMap(targetCategoryIds, connection);
-  const categoryIds = new Set(targetCategoryIds.map(Number));
-  for (const categoryId of targetCategoryIds) {
-    for (const ancestor of categoryMap.get(categoryId) || []) categoryIds.add(Number(ancestor));
-  }
-  const partialDecision = resolvePartialCodAdvance(settings.default_partial_percent, rules, {
-    productIds: targetProductIds,
-    collectionIds: targetCollectionIds,
-    categoryIds: [...categoryIds],
+  const merchandise = toMoney(items.reduce((sum, item) => sum + Number(item.lineTotal || 0), 0));
+  const discount = toMoney(context.productDiscountAmount || 0);
+  let remainingDiscount = discount;
+  const lines = items.map((item, index) => {
+    const allocated = index === items.length - 1
+      ? remainingDiscount
+      : allocateLineDiscount(item.lineTotal, merchandise, discount);
+    remainingDiscount = toMoney(remainingDiscount - allocated);
+    const discountedLine = toMoney(Math.max(0, Number(item.lineTotal) - allocated));
+    return {
+      productId: item.productId,
+      name: item.productName,
+      quantity: item.quantity,
+      unitPrice: effectiveUnitPrice(item.lineTotal, item.quantity, allocated),
+      lineTotal: discountedLine,
+    };
   });
-  const partial = splitPartialAdvance(finalTotal, partialDecision.percentage);
-  const fullCod = evaluateFullCod({
-    enabled: Boolean(Number(settings.full_cod_enabled)),
-    total: finalTotal,
-    pin: context.pin,
-    minAmount: settings.cod_min_amount,
-    maxAmount: settings.cod_max_amount,
-    restricted: Boolean(Number(settings.cod_pin_restricted)),
-    pins: settings.cod_pins,
+  const distance = context.distance || await measureRoadDistance({
+    address: [context.address, context.city, context.state, context.pin].filter(Boolean).join(", "),
   });
-  const porter = porterAvailability({
-    enabled: settings.porter_enabled,
-    pin: context.pin,
-    pins: settings.porter_pins,
+  const plan = buildPaymentPlan({
+    lines,
+    shippingFee: context.shippingFee || 0,
+    taxAmount: context.taxAmount || 0,
+    settings,
+    distance,
+    razorpayConfigured: configured,
+    deliveryMethod: context.deliveryMethod,
   });
-  const options = {
-    fullCod,
-    partialCod: {
-      enabled: configured && Boolean(Number(settings.partial_cod_enabled)) && partialDecision.eligible,
-      ...partial,
-    },
-    fullOnline: {
-      enabled: configured && Boolean(Number(settings.full_online_enabled)),
-      amountOnline: toMoney(finalTotal),
-      amountCod: 0,
-    },
-    porter,
+  return {
+    ...plan,
     razorpayConfigured: configured,
     keyId: configured ? process.env.RAZORPAY_KEY_ID : "",
   };
-  return restrictPorterPayments(options, {
-    deliveryMethod: context.deliveryMethod,
-    porterCollectsCod: Boolean(Number(settings.porter_collects_cod)),
-  });
 }
 
 export async function buildCheckoutQuote(payload, connection = db) {
@@ -585,15 +563,18 @@ export async function buildCheckoutQuote(payload, connection = db) {
   const deliveryMethod = cleanString(payload.deliveryMethod || customer.deliveryMethod) === "Porter" ? "Porter" : "Standard";
   const pin = customer.zipCode || customer.zip_code || payload.zipCode || "";
   let shippingRule = await resolveShippingRule(items, subtotal, customer, connection);
-  const [paymentSettings] = await dbQuery("SELECT * FROM payment_settings WHERE id = 1", [], connection);
-  const porter = porterAvailability({
-    enabled: paymentSettings?.porter_enabled,
-    pin,
-    pins: paymentSettings?.porter_pins,
-  });
+  const address = [customer.streetAddress || customer.address, customer.city, customer.state, pin].filter(Boolean).join(", ");
+  const distance = await measureRoadDistance({ address });
   if (deliveryMethod === "Porter") {
-    if (!porter.available) {
-      const error = new Error("Local Porter delivery is not available for this PIN code");
+    const [paymentSettings] = await dbQuery("SELECT * FROM payment_settings WHERE id = 1", [], connection);
+    const porterLimit = Number(paymentSettings?.porter_max_distance_km ?? 40);
+    const porterAllowed = Boolean(Number(paymentSettings?.porter_enabled))
+      && distance.verified
+      && Number(distance.kilometers) <= porterLimit;
+    if (!porterAllowed) {
+      const error = new Error(distance.verified
+        ? "Local Porter delivery is not available beyond the road-distance limit"
+        : "Local Porter delivery is unavailable until the road distance can be verified");
       error.statusCode = 422;
       throw error;
     }
@@ -650,7 +631,17 @@ export async function buildCheckoutQuote(payload, connection = db) {
   shippingFee = priced.shippingFee;
   const taxAmount = priced.taxAmount;
   const totalAmount = priced.totalAmount;
-  const paymentOptions = await resolvePaymentOptions(items, totalAmount, connection, { pin, deliveryMethod });
+  const paymentOptions = await resolvePaymentOptions(items, connection, {
+    pin,
+    address,
+    city: customer.city,
+    state: customer.state,
+    deliveryMethod,
+    productDiscountAmount,
+    shippingFee,
+    taxAmount,
+    distance,
+  });
 
   return {
     items,
@@ -669,7 +660,7 @@ export async function buildCheckoutQuote(payload, connection = db) {
     deliveryMethod,
     delivery: {
       method: deliveryMethod,
-      porter,
+      porter: paymentOptions.porter,
       pickup: deliveryMethod === "Porter" ? PORTER_PICKUP : "",
       buyerPaysPorter: deliveryMethod === "Porter",
     },
@@ -789,8 +780,10 @@ export async function insertQuotedOrder(
         paymentOption: payload.paymentOption || paymentMethod,
         deliveryMethod: quote.deliveryMethod || "Standard",
         partialAdvancePercent: quote.paymentOptions?.partialCod?.percentage || null,
+        lines: quote.paymentOptions?.lines || [],
+        distance: quote.paymentOptions?.distance || null,
         amountOnline: paymentMethod === "Full Online"
-          ? quote.totalAmount
+          ? quote.paymentOptions?.fullOnline?.amountOnline
           : paymentMethod === "Partial COD"
             ? quote.paymentOptions?.partialCod?.amountOnline
             : 0,

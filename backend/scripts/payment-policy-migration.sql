@@ -11,7 +11,12 @@ ALTER TABLE payment_settings
   ADD COLUMN IF NOT EXISTS cod_pins TEXT NULL AFTER cod_pin_restricted,
   ADD COLUMN IF NOT EXISTS porter_enabled TINYINT(1) NOT NULL DEFAULT 0 AFTER cod_pins,
   ADD COLUMN IF NOT EXISTS porter_pins TEXT NULL AFTER porter_enabled,
-  ADD COLUMN IF NOT EXISTS porter_collects_cod TINYINT(1) NOT NULL DEFAULT 0 AFTER porter_pins;
+  ADD COLUMN IF NOT EXISTS porter_collects_cod TINYINT(1) NOT NULL DEFAULT 0 AFTER porter_pins,
+  ADD COLUMN IF NOT EXISTS cod_max_distance_km DECIMAL(8,2) NOT NULL DEFAULT 40 AFTER porter_collects_cod,
+  ADD COLUMN IF NOT EXISTS partial_cod_above DECIMAL(12,2) NOT NULL DEFAULT 3000 AFTER cod_max_distance_km,
+  ADD COLUMN IF NOT EXISTS porter_max_distance_km DECIMAL(8,2) NOT NULL DEFAULT 40 AFTER partial_cod_above,
+  ADD COLUMN IF NOT EXISTS porter_requires_full_payment TINYINT(1) NOT NULL DEFAULT 1 AFTER porter_max_distance_km,
+  ADD COLUMN IF NOT EXISTS porter_customer_pays_delivery TINYINT(1) NOT NULL DEFAULT 1 AFTER porter_requires_full_payment;
 
 ALTER TABLE orders
   ADD COLUMN IF NOT EXISTS quote_snapshot LONGTEXT NULL;

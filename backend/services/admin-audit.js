@@ -80,14 +80,14 @@ export function isAuditSuperAdmin(admin) {
   return String(admin?.role || "").trim().toLowerCase() === "super admin";
 }
 
-const ALLOWED_CHANGE_FIELDS = new Set([
+export const ALLOWED_CHANGE_FIELDS = new Set([
   "price", "selling_price", "mrp", "compare_price", "compare_at_price", "cost_price", "discount", "discount_type", "discount_value",
   "stock", "quantity", "shop_stock", "warehouse_stock", "stock_quantity", "stock_on_hand", "reorder_level",
   "status", "order_status", "payment_status", "fulfillment_status", "shipping_status", "visibility", "published", "active", "is_active", "featured",
   "role", "permissions", "sku", "barcode", "hsn", "eligible", "percentage", "code", "title", "slug", "category", "category_id", "brand_id",
   "sort_order", "position", "priority", "enabled", "weight", "tax_rate", "gst_rate", "charge", "delivery_days", "min_order_value", "region",
   "stock_hold_minutes", "full_online_enabled", "partial_cod_enabled", "full_cod_enabled", "default_partial_percent",
-  "cod_min_amount", "cod_max_amount", "porter_enabled", "porter_collects_cod", "cod_pin_restricted",
+  "cod_min_amount", "cod_max_amount", "cod_max_distance_km", "partial_cod_above", "porter_enabled", "porter_collects_cod", "porter_max_distance_km", "porter_requires_full_payment", "porter_customer_pays_delivery", "cod_pin_restricted",
 ]);
 const PII_KEY = /email|phone|mobile|address|street|city|state|zip|postal|customer|password|otp|token|secret|authorization|cookie|cvv|card|pan|razorpay|api[_-]?key|session|name/i;
 

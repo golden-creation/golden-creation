@@ -622,7 +622,20 @@ function ConnectedCheckout() {
                 {quote?.paymentOptions?.partialCod?.enabled && <option value="Partial COD">Partial COD ({quote.paymentOptions.partialCod.percentage}% online)</option>}
                 {quote?.paymentOptions?.fullOnline?.enabled && <option value="Full Online">Full Online Payment</option>}
               </select>
-              {form.paymentMethod === "Partial COD" && quote?.paymentOptions?.partialCod && <p className="mt-2 text-xs text-gray-500">Pay {formatCurrency(quote.paymentOptions.partialCod.amountOnline)} now ({quote.paymentOptions.partialCod.percentage}%) through Razorpay and {formatCurrency(quote.paymentOptions.partialCod.amountCod)} on delivery.</p>}
+              {quote?.paymentOptions?.lines?.length > 0 && (
+                <ul className="mt-2 space-y-1 text-xs text-gray-500">
+                  {quote.paymentOptions.lines.map((line) => (
+                    <li key={`${line.productId}-${line.unitPrice}`}>
+                      {line.name || "Product"}: {line.band === "full-cod" ? "Full Online or 100% COD" : line.band === "partial-cod" ? `Full Online or ${quote.paymentOptions.partialCod?.percentage || 20}% online` : "Full Online only"}
+                      . Online {formatCurrency(line.amountOnline)}, COD {formatCurrency(line.amountCod)}.
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {quote?.paymentOptions?.distance && !quote.paymentOptions.distance.verified && (
+                <p className="mt-2 text-xs text-gray-500">Cash on Delivery stays unavailable until the road distance from the shop is verified.</p>
+              )}
+              {form.paymentMethod === "Partial COD" && quote?.paymentOptions?.partialCod && <p className="mt-2 text-xs text-gray-500">Pay {formatCurrency(quote.paymentOptions.partialCod.amountOnline)} now through Razorpay and {formatCurrency(quote.paymentOptions.partialCod.amountCod)} on delivery. You can still choose Full Online for the entire amount.</p>}
               {form.paymentMethod === "Full COD" && <p className="mt-2 text-xs text-gray-500">No advance is collected. The full amount stays unpaid until it is collected on delivery.</p>}
               {form.paymentMethod === "Full Online" && <p className="mt-2 text-xs text-gray-500">Pay 100% now. RuPay, UPI, debit cards, and credit cards stay available in Razorpay.</p>}
               {form.deliveryMethod === "Porter" && <p className="mt-2 text-xs text-gray-500">{quote?.delivery?.porter?.message}</p>}

@@ -32,6 +32,7 @@ import {
   createCheckoutQuote,
   createRazorpayOrder,
   getPaymentStatus,
+  previewPaymentEligibility,
   verifyRazorpayPayment,
 } from "../controllers/checkout.controller.js";
 import {
@@ -142,6 +143,10 @@ router.post("/products/:id/reviews", (req, res) => {
     phone: req.customer.phone || "",
   };
   return createProductReview(req, res);
+});
+router.post("/checkout/payment-preview", (req, res) => {
+  attachCustomerToCheckout(req);
+  return previewPaymentEligibility(req, res);
 });
 router.post("/checkout/quote", (req, res) => {
   attachCustomerToCheckout(req);

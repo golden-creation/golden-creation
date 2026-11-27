@@ -1365,6 +1365,13 @@ export async function removeUserProfileImage() {
   return sanitiseUser(payload?.user || null);
 }
 
+export async function getPaymentPreview(payload) {
+  return request("/checkout/payment-preview", {
+    method: "POST",
+    body: JSON.stringify(payload),
+  });
+}
+
 export async function getCheckoutQuote(payload) {
   const response = await request("/customer/checkout/quote", {
     method: "POST",

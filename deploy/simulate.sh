@@ -180,7 +180,7 @@ grep -q "preflight_audit=ok" "$ROOT/success.txt"
 grep -q "preflight_audit_triggers=ok" "$ROOT/success.txt"
 grep -q "preflight_audit_chain=ok" "$ROOT/success.txt"
 grep -q "preflight_audit_outbox=ok" "$ROOT/success.txt"
-for column in cod_min_amount cod_max_amount cod_pin_restricted cod_pins porter_enabled porter_pins porter_collects_cod delivery_method partial_advance_percent porter_booking_reference porter_status; do
+for column in cod_min_amount cod_max_amount cod_pin_restricted cod_pins porter_enabled porter_pins porter_collects_cod cod_max_distance_km partial_cod_above porter_max_distance_km porter_requires_full_payment porter_customer_pays_delivery delivery_method partial_advance_percent porter_booking_reference porter_status; do
   grep -q "$column" "$SCRIPT"
 done
 grep -q "schema_init_mode=real" "$ROOT/success.txt"

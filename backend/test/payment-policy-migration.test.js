@@ -48,7 +48,8 @@ test("payment policy migration keeps quote_snapshot ahead of the new order colum
   assert.equal(/^\s*UPDATE\s+orders\b/im.test(sql), false);
   assert.equal(/full_cod_enabled\s*=\s*1/.test(sql), false);
   assert.equal(/porter_enabled\s*=\s*1/.test(sql), false);
-  assert.equal(PAYMENT_POLICY_COLUMNS.length, 11);
+  assert.equal(/CAST\s*\(/i.test(sql), false);
+  assert.equal(PAYMENT_POLICY_COLUMNS.length, 16);
 });
 
 test("payment policy columns migrate a fresh schema and an existing schema", async () => {
@@ -154,6 +155,11 @@ test("payment policy columns migrate a fresh schema and an existing schema", asy
     assert.equal(Number(freshSettings[0].default_partial_percent), 20);
     assert.equal(Number(freshSettings[0].full_cod_enabled), 0);
     assert.equal(Number(freshSettings[0].porter_enabled), 0);
+    assert.equal(Number(freshSettings[0].cod_max_distance_km), 40);
+    assert.equal(Number(freshSettings[0].partial_cod_above), 3000);
+    assert.equal(Number(freshSettings[0].porter_max_distance_km), 40);
+    assert.equal(Number(freshSettings[0].porter_requires_full_payment), 1);
+    assert.equal(Number(freshSettings[0].porter_customer_pays_delivery), 1);
     assert.equal(Number(freshOrder[0].amount_paid), 100);
     assert.equal(Number(freshOrder[0].cod_due), 900);
 

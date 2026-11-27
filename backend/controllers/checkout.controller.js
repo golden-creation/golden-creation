@@ -18,6 +18,9 @@ import {
   sendPaymentSuccessEmail,
 } from "../services/email.service.js";
 import { razorpayAmountPaise } from "../services/checkout-totals.js";
+import { buildPaymentPlan, describeUnitPayment, effectiveUnitPrice } from "../services/payment-policy.js";
+import { measureRoadDistance } from "../services/road-distance.js";
+import { normalizeCartItems } from "../services/commerce.service.js";
 import { placeRazorpayCheckout } from "../services/checkout-transaction.js";
 import {
   beginCheckoutAttempt,
@@ -715,6 +718,46 @@ export async function markCodCollected(req, res) {
     res.status(500).json({ message: error.message || "Unable to collect COD balance" });
   } finally {
     connection.release();
+  }
+}
+
+export async function previewPaymentEligibility(req, res) {
+  try {
+    const items = await normalizeCartItems(req.body?.items || []);
+    if (!items.length) {
+      return res.status(400).json({ message: "Add a product to preview payment eligibility" });
+    }
+    const [settings] = await dbQuery("SELECT * FROM payment_settings WHERE id = 1");
+    const customer = req.body?.customer || {};
+    const address = [customer.streetAddress || customer.address, customer.city, customer.state, customer.zipCode || customer.pin]
+      .filter(Boolean)
+      .join(", ");
+    const distance = address
+      ? await measureRoadDistance({ address })
+      : { verified: false, kilometers: null, reason: "Cash on Delivery is confirmed at checkout from the delivery address." };
+    const plan = buildPaymentPlan({
+      lines: items.map((item) => ({
+        productId: item.productId,
+        name: item.productName,
+        quantity: item.quantity,
+        unitPrice: effectiveUnitPrice(item.lineTotal, item.quantity, 0),
+      })),
+      settings: settings || {},
+      distance,
+      razorpayConfigured: Boolean(process.env.RAZORPAY_KEY_ID && process.env.RAZORPAY_KEY_SECRET),
+      deliveryMethod: req.body?.deliveryMethod === "Porter" ? "Porter" : "Standard",
+    });
+    res.json({
+      lines: plan.lines.map((line) => ({
+        ...line,
+        eligibility: describeUnitPayment(line.unitPrice, settings || {}),
+        distanceNote: "Cash on Delivery is confirmed at checkout only when the road distance from the shop is within the limit.",
+      })),
+      distance: plan.distance,
+      fullOnlineAvailable: true,
+    });
+  } catch (error) {
+    res.status(error.statusCode || 500).json({ message: error.message || "Unable to preview payment eligibility" });
   }
 }
 

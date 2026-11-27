@@ -10,6 +10,7 @@ import verify from "../assets/verify.png";
 import undo from "../assets/undo.png";
 import { useAppStore } from "../context/AppContext";
 import PriceOffer from "../components/PriceOffer";
+import PaymentEligibility from "../components/PaymentEligibility";
 import { formatCurrency } from "../lib/api";
 
 function ConnectedCart() {
@@ -162,6 +163,7 @@ function ConnectedCart() {
                     <p className="text-sm font-semibold text-black">
                       <PriceOffer price={item.price * item.quantity} comparePrice={item.comparePrice ? item.comparePrice * item.quantity : null} mrp={item.mrp ? item.mrp * item.quantity : null} percent={item.discountPercent} />
                     </p>
+                    <PaymentEligibility items={[{ productId: item.productId || item.id, variantId: item.variantId || 0, quantity: item.quantity }]} />
                   </div>
                 </div>
               </div>

@@ -27,11 +27,16 @@ function PaymentIntegrations() {
     full_cod_enabled: false,
     default_partial_percent: 20,
     stock_hold_minutes: 30,
-    cod_min_amount: 0,
-    cod_max_amount: 0,
+    cod_min_amount: 1000,
+    cod_max_amount: 3000,
+    partial_cod_above: 3000,
+    cod_max_distance_km: 40,
     cod_pin_restricted: false,
     cod_pins: "",
     porter_enabled: false,
+    porter_max_distance_km: 40,
+    porter_requires_full_payment: true,
+    porter_customer_pays_delivery: true,
     porter_pins: "",
     porter_collects_cod: false,
   });
@@ -152,20 +157,22 @@ function PaymentIntegrations() {
               </div>
             </div>
             <div className="mt-4 grid gap-3 sm:grid-cols-3">
-              <Field label="Partial COD advance %" type="number" value={paymentConfig.default_partial_percent} onChange={(value) => setPaymentConfig({ ...paymentConfig, default_partial_percent: value })} />
-              <Field label="COD minimum order amount" type="number" value={paymentConfig.cod_min_amount || 0} onChange={(value) => setPaymentConfig({ ...paymentConfig, cod_min_amount: value })} />
-              <Field label="COD maximum order amount (0 = no limit)" type="number" value={paymentConfig.cod_max_amount || 0} onChange={(value) => setPaymentConfig({ ...paymentConfig, cod_max_amount: value })} />
+              <Field label="Advance percentage" type="number" value={paymentConfig.default_partial_percent} onChange={(value) => setPaymentConfig({ ...paymentConfig, default_partial_percent: value })} />
+              <Field label="Full COD minimum product price" type="number" value={paymentConfig.cod_min_amount || 0} onChange={(value) => setPaymentConfig({ ...paymentConfig, cod_min_amount: value })} />
+              <Field label="Full COD maximum product price" type="number" value={paymentConfig.cod_max_amount || 0} onChange={(value) => setPaymentConfig({ ...paymentConfig, cod_max_amount: value })} />
+              <Field label="Partial COD product price threshold" type="number" value={paymentConfig.partial_cod_above || 0} onChange={(value) => setPaymentConfig({ ...paymentConfig, partial_cod_above: value })} />
+              <Field label="Maximum COD distance (km)" type="number" value={paymentConfig.cod_max_distance_km || 0} onChange={(value) => setPaymentConfig({ ...paymentConfig, cod_max_distance_km: value })} />
               <Field label="Stock hold minutes" type="number" value={paymentConfig.stock_hold_minutes} onChange={(value) => setPaymentConfig({ ...paymentConfig, stock_hold_minutes: value })} />
-              <label className="flex items-center gap-2 text-sm sm:col-span-2"><input type="checkbox" checked={Boolean(Number(paymentConfig.cod_pin_restricted))} onChange={(event) => setPaymentConfig({ ...paymentConfig, cod_pin_restricted: event.target.checked })} />Limit Cash on Delivery to listed PIN codes</label>
-              <label className="text-xs text-gray-500 sm:col-span-3">COD PIN codes<textarea value={paymentConfig.cod_pins || ""} onChange={(event) => setPaymentConfig({ ...paymentConfig, cod_pins: event.target.value })} placeholder="122001, 122011" className="mt-1 w-full rounded border px-3 py-2 text-sm" rows="2" /></label>
+              <p className="text-xs text-gray-500 sm:col-span-3">Eligibility uses each product's selling unit price. Full Online stays available for every product. Cash on Delivery also requires a verified road distance from the shop. PIN codes are not the distance check.</p>
             </div>
             <div className="mt-4 rounded-lg border p-3">
               <h3 className="text-sm font-semibold">Local Delivery via Porter — At Buyer's Cost</h3>
-              <p className="mt-1 text-xs text-gray-500">Pickup is the Golden Creation showroom in Sector 56, Gurugram. Porter's charge is paid by the buyer and is not added to the order. No Porter API is connected; bookings stay manual. Cash collection by Porter stays off until an approved arrangement exists.</p>
+              <p className="mt-1 text-xs text-gray-500">Pickup is Golden Creation, G-38, Baani The Address Shopping Arcade, Sector 56, Golf Course Road, Gurugram. Porter stays manual until an authorized API exists. The product amount must be paid in full before booking, and Porter does not collect cash.</p>
               <div className="mt-3 grid gap-3 sm:grid-cols-2">
-                <Toggle label="Porter delivery" checked={Boolean(Number(paymentConfig.porter_enabled))} onChange={(value) => setPaymentConfig({ ...paymentConfig, porter_enabled: value })} />
-                <Toggle label="Porter can collect the cash balance" checked={Boolean(Number(paymentConfig.porter_collects_cod))} onChange={(value) => setPaymentConfig({ ...paymentConfig, porter_collects_cod: value })} />
-                <label className="text-xs text-gray-500 sm:col-span-2">Eligible Gurugram PIN codes<textarea value={paymentConfig.porter_pins || ""} onChange={(event) => setPaymentConfig({ ...paymentConfig, porter_pins: event.target.value })} placeholder="122011, 122002" className="mt-1 w-full rounded border px-3 py-2 text-sm" rows="2" /></label>
+                <Toggle label="Porter Delivery" checked={Boolean(Number(paymentConfig.porter_enabled))} onChange={(value) => setPaymentConfig({ ...paymentConfig, porter_enabled: value })} />
+                <Field label="Maximum Porter distance (km)" type="number" value={paymentConfig.porter_max_distance_km || 0} onChange={(value) => setPaymentConfig({ ...paymentConfig, porter_max_distance_km: value })} />
+                <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={paymentConfig.porter_requires_full_payment !== false && Number(paymentConfig.porter_requires_full_payment) !== 0} onChange={(event) => setPaymentConfig({ ...paymentConfig, porter_requires_full_payment: event.target.checked })} />Payment confirmation before Porter dispatch</label>
+                <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={paymentConfig.porter_customer_pays_delivery !== false && Number(paymentConfig.porter_customer_pays_delivery) !== 0} onChange={(event) => setPaymentConfig({ ...paymentConfig, porter_customer_pays_delivery: event.target.checked })} />Customer-paid Porter delivery charges</label>
               </div>
             </div>
             <button onClick={savePaymentConfig} className="mt-4 rounded bg-[#A68B5B] px-4 py-2 text-sm text-white">Save payment settings</button>
@@ -173,7 +180,7 @@ function PaymentIntegrations() {
 
           <section className="mt-6 rounded-xl bg-white p-4 shadow">
             <h2 className="text-lg font-semibold">Partial COD Overrides</h2>
-            <p className="text-sm text-gray-500">An ineligible matching item disables Partial COD for the complete cart.</p>
+            <p className="text-sm text-gray-500">Saved overrides stay on record. Checkout uses the advance percentage and each product's selling price, not these overrides.</p>
             <div className="mt-4 grid gap-3 md:grid-cols-6">
               <label className="text-xs text-gray-500">Target type<select value={targetType} onChange={(event) => { setTargetType(event.target.value); setTarget(null); }} className="mt-1 w-full rounded border bg-white p-2 text-sm"><option>Product</option><option>Category</option><option>Collection</option></select></label>
               <div className="md:col-span-2"><span className="text-xs text-gray-500">Target</span><RemoteLookup type={`${targetType.toLowerCase()}s`} value={target} onChange={setTarget} placeholder={`Search ${targetType.toLowerCase()}...`} /></div>

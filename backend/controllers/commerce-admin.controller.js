@@ -6,7 +6,7 @@ import {
   getConnection,
   rollback,
 } from "../services/commerce.service.js";
-import { PORTER_STATUSES } from "../services/payment-policy.js";
+import { PORTER_STATUSES, porterDispatchAllowed } from "../services/payment-policy.js";
 import { changedAuditFields, joinedAuditDb, sanitizeAuditValue, writeAuditEvent } from "../services/admin-audit.js";
 
 function cleanString(value) {
@@ -268,6 +268,9 @@ export async function updatePaymentSettings(req, res) {
   try {
     const minAmount = Math.max(0, Number(req.body?.cod_min_amount) || 0);
     const maxAmount = Math.max(0, Number(req.body?.cod_max_amount) || 0);
+    const partialAbove = Math.max(0, Number(req.body?.partial_cod_above) || 0);
+    const codDistance = Math.max(0, Number(req.body?.cod_max_distance_km) || 0);
+    const porterDistance = Math.max(0, Number(req.body?.porter_max_distance_km) || 0);
     if (maxAmount > 0 && maxAmount < minAmount) {
       return res.status(400).json({ message: "COD maximum must be at least the minimum" });
     }
@@ -290,6 +293,11 @@ export async function updatePaymentSettings(req, res) {
               porter_enabled=?,
               porter_pins=?,
               porter_collects_cod=?,
+              cod_max_distance_km=?,
+              partial_cod_above=?,
+              porter_max_distance_km=?,
+              porter_requires_full_payment=?,
+              porter_customer_pays_delivery=?,
               updated_by=?
         WHERE id=1`,
         [
@@ -304,7 +312,12 @@ export async function updatePaymentSettings(req, res) {
           cleanString(req.body?.cod_pins).slice(0, 4000),
           req.body?.porter_enabled ? 1 : 0,
           cleanString(req.body?.porter_pins).slice(0, 4000),
-          req.body?.porter_collects_cod ? 1 : 0,
+          0,
+          codDistance,
+          partialAbove,
+          porterDistance,
+          req.body?.porter_requires_full_payment === false ? 0 : 1,
+          req.body?.porter_customer_pays_delivery === false ? 0 : 1,
           Number(req.admin?.id) || null,
         ]
       );
@@ -387,13 +400,17 @@ export async function savePorterBooking(req, res) {
   }
   try {
     const rows = await dbQuery(
-      "SELECT id, delivery_method, total_amount, amount_paid, cod_due FROM orders WHERE id = ? LIMIT 1",
+      "SELECT id, delivery_method, payment_status, total_amount, amount_paid, cod_due FROM orders WHERE id = ? LIMIT 1",
       [id]
     );
     const order = rows[0];
     if (!order) return res.status(404).json({ message: "Order not found" });
     if (order.delivery_method !== "Porter") {
       return res.status(422).json({ message: "This order does not use Porter delivery" });
+    }
+    const dispatch = porterDispatchAllowed(order, status);
+    if (!dispatch.allowed) {
+      return res.status(422).json({ message: dispatch.reason });
     }
     await dbQuery(
       `UPDATE orders
