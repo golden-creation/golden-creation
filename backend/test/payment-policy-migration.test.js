@@ -49,7 +49,10 @@ test("payment policy migration keeps quote_snapshot ahead of the new order colum
   assert.equal(/full_cod_enabled\s*=\s*1/.test(sql), false);
   assert.equal(/porter_enabled\s*=\s*1/.test(sql), false);
   assert.equal(/CAST\s*\(/i.test(sql), false);
-  assert.equal(PAYMENT_POLICY_COLUMNS.length, 16);
+  assert.equal(PAYMENT_POLICY_COLUMNS.length, 18);
+  assert.equal(sql.includes("eligibility_mode"), true);
+  assert.equal(sql.includes("122011"), true);
+  assert.equal(sql.includes("400001"), false);
 });
 
 test("payment policy columns migrate a fresh schema and an existing schema", async () => {
@@ -160,6 +163,9 @@ test("payment policy columns migrate a fresh schema and an existing schema", asy
     assert.equal(Number(freshSettings[0].porter_max_distance_km), 40);
     assert.equal(Number(freshSettings[0].porter_requires_full_payment), 1);
     assert.equal(Number(freshSettings[0].porter_customer_pays_delivery), 1);
+    assert.equal(freshSettings[0].eligibility_mode, "pin");
+    assert.equal(String(freshSettings[0].eligible_pins).includes("122011"), true);
+    assert.equal(String(freshSettings[0].eligible_pins).includes("400001"), false);
     assert.equal(Number(freshOrder[0].amount_paid), 100);
     assert.equal(Number(freshOrder[0].cod_due), 900);
 

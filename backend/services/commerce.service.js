@@ -9,8 +9,11 @@ import {
   allocateDiscountedLines,
   assertCapturedQuote,
   buildPaymentPlan,
+  normalizeEligibilityMode,
   rupeesToPaise,
+  shouldMeasureRoadDistance,
 } from "./payment-policy.js";
+import { eligiblePinSet, pinIsEligible } from "./ncr-pins.js";
 import { measureRoadDistance } from "./road-distance.js";
 
 export function dbQuery(sql, values = [], connection = db) {
@@ -524,19 +527,22 @@ async function resolvePaymentOptions(items, connection = db, context = {}) {
     Boolean(cleanString(process.env.RAZORPAY_KEY_SECRET)) &&
     Boolean(cleanString(process.env.RAZORPAY_WEBHOOK_SECRET));
   const lines = allocateDiscountedLines(items, context.productDiscountAmount || 0);
-  const distance = context.distance || await measureRoadDistance({
-    street: context.street || "",
-    city: context.city || "",
-    state: context.state || "",
-    pin: context.pin || "",
-    address: context.address || "",
-  });
+  const distance = context.distance || (shouldMeasureRoadDistance(settings.eligibility_mode)
+    ? await measureRoadDistance({
+      street: context.street || "",
+      city: context.city || "",
+      state: context.state || "",
+      pin: context.pin || "",
+      address: context.address || "",
+    })
+    : { verified: false, meters: null, kilometers: null, reason: "" });
   const plan = buildPaymentPlan({
     lines,
     shippingFee: context.shippingFee || 0,
     taxAmount: context.taxAmount || 0,
     settings,
     distance,
+    pin: context.pin || "",
     razorpayConfigured: configured,
     deliveryMethod: context.deliveryMethod,
     quoteTotal: context.quoteTotal,
@@ -557,24 +563,31 @@ export async function buildCheckoutQuote(payload, connection = db) {
   let shippingRule = await resolveShippingRule(items, subtotal, customer, connection);
   const street = customer.streetAddress || customer.address || "";
   const address = [street, customer.city, customer.state, pin].filter(Boolean).join(", ");
-  const distance = await measureRoadDistance({
-    street,
-    city: customer.city || "",
-    state: customer.state || "",
-    pin,
-    address,
-  });
+  const [paymentSettings] = await dbQuery("SELECT * FROM payment_settings WHERE id = 1", [], connection);
+  const eligibilityMode = normalizeEligibilityMode(paymentSettings?.eligibility_mode);
+  const distance = shouldMeasureRoadDistance(eligibilityMode)
+    ? await measureRoadDistance({
+      street,
+      city: customer.city || "",
+      state: customer.state || "",
+      pin,
+      address,
+    })
+    : { verified: false, meters: null, kilometers: null, reason: "" };
   if (deliveryMethod === "Porter") {
-    const [paymentSettings] = await dbQuery("SELECT * FROM payment_settings WHERE id = 1", [], connection);
     const porterMeters = acceptedRoadMeters(distance.meters);
-    const porterAllowed = Boolean(Number(paymentSettings?.porter_enabled))
-      && distance.verified === true
-      && porterMeters != null
-      && porterMeters <= APPROVED_DISTANCE_METERS;
+    const pinEligible = pinIsEligible(pin, eligiblePinSet(paymentSettings?.eligible_pins));
+    const porterAllowed = Boolean(Number(paymentSettings?.porter_enabled)) && (
+      eligibilityMode === "pin"
+        ? pinEligible
+        : distance.verified === true && porterMeters != null && porterMeters <= APPROVED_DISTANCE_METERS
+    );
     if (!porterAllowed) {
-      const error = new Error(porterMeters == null
-        ? "Local Porter delivery is unavailable until the road distance can be verified"
-        : "Local Porter delivery is not available beyond the road-distance limit");
+      const error = new Error(eligibilityMode === "pin"
+        ? "Local Porter delivery is available only for an approved Delhi-NCR PIN code"
+        : porterMeters == null
+          ? "Local Porter delivery is unavailable until the road distance can be verified"
+          : "Local Porter delivery is not available beyond the road-distance limit");
       error.statusCode = 422;
       throw error;
     }

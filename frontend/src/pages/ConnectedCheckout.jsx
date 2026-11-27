@@ -632,8 +632,8 @@ function ConnectedCheckout() {
                   ))}
                 </ul>
               )}
-              {quote?.paymentOptions?.distance && !quote.paymentOptions.distance.verified && (
-                <p className="mt-2 text-xs text-gray-500">Cash on Delivery stays unavailable until the road distance from the shop is verified.</p>
+              {quote?.paymentOptions?.eligibility?.message && (
+                <p className="mt-2 text-xs text-gray-500">{quote.paymentOptions.eligibility.message}</p>
               )}
               {form.paymentMethod === "Partial COD" && quote?.paymentOptions?.partialCod && <p className="mt-2 text-xs text-gray-500">Pay {formatCurrency(quote.paymentOptions.partialCod.amountOnline)} now through Razorpay and {formatCurrency(quote.paymentOptions.partialCod.amountCod)} on delivery. You can still choose Full Online for the entire amount.</p>}
               {form.paymentMethod === "Full COD" && <p className="mt-2 text-xs text-gray-500">No advance is collected. The full amount stays unpaid until it is collected on delivery.</p>}

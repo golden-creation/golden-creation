@@ -87,7 +87,7 @@ export const ALLOWED_CHANGE_FIELDS = new Set([
   "role", "permissions", "sku", "barcode", "hsn", "eligible", "percentage", "code", "title", "slug", "category", "category_id", "brand_id",
   "sort_order", "position", "priority", "enabled", "weight", "tax_rate", "gst_rate", "charge", "delivery_days", "min_order_value", "region",
   "stock_hold_minutes", "full_online_enabled", "partial_cod_enabled", "full_cod_enabled", "default_partial_percent",
-  "cod_min_amount", "cod_max_amount", "cod_max_distance_km", "partial_cod_above", "porter_enabled", "porter_collects_cod", "porter_max_distance_km", "porter_requires_full_payment", "porter_customer_pays_delivery", "cod_pin_restricted",
+  "cod_min_amount", "cod_max_amount", "cod_max_distance_km", "partial_cod_above", "porter_enabled", "porter_collects_cod", "porter_max_distance_km", "porter_requires_full_payment", "porter_customer_pays_delivery", "cod_pin_restricted", "eligibility_mode", "eligible_pins",
 ]);
 const PII_KEY = /email|phone|mobile|address|street|city|state|zip|postal|customer|password|otp|token|secret|authorization|cookie|cvv|card|pan|razorpay|api[_-]?key|session|name/i;
 

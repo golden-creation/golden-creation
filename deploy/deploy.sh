@@ -219,6 +219,8 @@ if ((env.DOTENV_CONFIG_PATH || "").includes(".env.test")) process.exit(1);
     payment_settings:porter_max_distance_km \
     payment_settings:porter_requires_full_payment \
     payment_settings:porter_customer_pays_delivery \
+    payment_settings:eligibility_mode \
+    payment_settings:eligible_pins \
     orders:delivery_method \
     orders:partial_advance_percent \
     orders:porter_booking_reference \

@@ -1,4 +1,5 @@
 import { toMoney } from "./checkout-totals.js";
+import { eligiblePinSet, pinIsEligible } from "./ncr-pins.js";
 
 export const DEFAULT_PARTIAL_ADVANCE_PERCENT = 20;
 export const DEFAULT_FULL_COD_MIN = 1000;
@@ -9,6 +10,14 @@ export const DEFAULT_PORTER_DISTANCE_KM = 40;
 export const SHOP_ADDRESS = "Golden Creation, G-38, Baani The Address Shopping Arcade, Sector 56, Golf Course Road, Gurugram, Haryana 122011";
 export const SHOP_LATITUDE = 28.42655;
 export const SHOP_LONGITUDE = 77.10345;
+
+export function normalizeEligibilityMode(value) {
+  return String(value || "").trim().toLowerCase() === "road" ? "road" : "pin";
+}
+
+export function shouldMeasureRoadDistance(value) {
+  return normalizeEligibilityMode(value) === "road";
+}
 
 export function acceptedRoadMeters(value) {
   if (typeof value === "string") {
@@ -204,15 +213,29 @@ export function buildPaymentPlan({
   taxAmount = 0,
   settings = {},
   distance = { verified: false, meters: null },
+  pin = "",
   razorpayConfigured = false,
   deliveryMethod = "Standard",
   quoteTotal = null,
 } = {}) {
+  const mode = normalizeEligibilityMode(settings.eligibility_mode);
   const meters = acceptedRoadMeters(distance.meters);
   const distanceVerified = distance.verified === true && meters != null;
   const withinDistance = distanceVerified && meters <= APPROVED_DISTANCE_METERS;
+  const allowlist = eligiblePinSet(settings.eligible_pins);
+  const pinEligible = pinIsEligible(pin, allowlist);
+  const areaEligible = mode === "road" ? withinDistance : pinEligible;
   const porterSelected = deliveryMethod === "Porter";
-  const codAllowed = withinDistance && !porterSelected;
+  const codAllowed = areaEligible && !porterSelected;
+  const areaReason = mode === "road"
+    ? (!distanceVerified
+      ? "Cash on Delivery is unavailable until the road distance from the shop can be verified."
+      : meters > APPROVED_DISTANCE_METERS
+        ? "Cash on Delivery is available only within 40 km by road."
+        : "")
+    : (pinEligible
+      ? ""
+      : "Cash on Delivery is available only for an approved Delhi-NCR PIN code. Full online payment remains available.");
   if (Number(shippingFee) < 0 || Number(taxAmount) < 0) {
     throw quoteError("Shipping and tax cannot be negative");
   }
@@ -261,14 +284,30 @@ export function buildPaymentPlan({
     throw quoteError("Payment allocation does not match the quoted total");
   }
   const displayLines = priced.map(({ onlinePaise: _online, codPaise: _cod, linePaise: _line, ...line }) => line);
-  const distanceReason = !distanceVerified
-    ? "Cash on Delivery is unavailable until the road distance from the shop can be verified."
-    : meters > APPROVED_DISTANCE_METERS
-      ? "Cash on Delivery is available only within 40 km by road."
-      : "";
   const orderTotal = paiseToRupees(totalPaise);
+  const porterAvailable = Boolean(Number(settings.porter_enabled)) && areaEligible;
+  const porterMessage = porterAvailable
+    ? (mode === "pin"
+      ? "Porter is available for this approved Delhi-NCR PIN code. Its delivery charge is paid by you to Porter and is not added to this order. The product amount must be paid in full before booking."
+      : "Porter is available within 40 km by road. Its delivery charge is paid by you to Porter and is not added to this order. The product amount must be paid in full before booking.")
+    : (mode === "pin"
+      ? "Porter is available only for an approved Delhi-NCR PIN code. The customer pays Porter separately, and Porter cannot collect cash."
+      : distanceVerified
+        ? "Porter is available only within 40 km by road, and it cannot collect cash."
+        : "Porter is unavailable until the road distance from the shop can be verified.");
   return {
     lines: displayLines,
+    eligibility: {
+      mode,
+      pinEligible: mode === "pin" ? pinEligible : null,
+      message: mode === "pin"
+        ? (pinEligible
+          ? "This PIN code is approved for Delhi-NCR Cash on Delivery and Porter."
+          : "Cash on Delivery and Porter are available only for an approved Delhi-NCR PIN code. Full online payment remains available.")
+        : (withinDistance
+          ? "This address is within 40 km by road."
+          : areaReason),
+    },
     distance: {
       verified: distanceVerified,
       meters: distanceVerified ? meters : null,
@@ -281,14 +320,14 @@ export function buildPaymentPlan({
       enabled: codAllowed && everyProductOnCod && Boolean(Number(settings.full_cod_enabled)),
       amountOnline: 0,
       amountCod: codAllowed && everyProductOnCod ? orderTotal : 0,
-      reason: codAllowed && everyProductOnCod ? "" : distanceReason || "Cash on Delivery applies only when every product is in the full COD price range.",
+      reason: codAllowed && everyProductOnCod ? "" : areaReason || "Cash on Delivery applies only when every product is in the full COD price range.",
     },
     partialCod: {
       enabled: Boolean(razorpayConfigured) && codAllowed && productCodPaise > 0 && !everyProductOnCod,
       percentage: APPROVED_ADVANCE_PERCENT,
       amountOnline: paiseToRupees(onlinePaise),
       amountCod: paiseToRupees(codPaise),
-      reason: codAllowed && productCodPaise > 0 ? "" : distanceReason || "No product in this cart has a Cash on Delivery balance.",
+      reason: codAllowed && productCodPaise > 0 ? "" : areaReason || "No product in this cart has a Cash on Delivery balance.",
       lines: displayLines,
     },
     fullOnline: {
@@ -297,18 +336,14 @@ export function buildPaymentPlan({
       amountCod: 0,
     },
     porter: {
-      available: Boolean(Number(settings.porter_enabled)) && withinDistance,
+      available: porterAvailable,
       label: PORTER_DELIVERY_LABEL,
       pickup: PORTER_PICKUP,
       shippingFee: 0,
       buyerPaysCarrier: true,
       collectsCod: false,
       requiresFullPayment: true,
-      message: Boolean(Number(settings.porter_enabled)) && withinDistance
-        ? "Porter is available within 40 km by road. Its delivery charge is paid by you to Porter and is not added to this order. The product amount must be paid in full before booking."
-        : distanceVerified
-          ? "Porter is available only within 40 km by road, and it cannot collect cash."
-          : "Porter is unavailable until the road distance from the shop can be verified.",
+      message: porterMessage,
     },
   };
 }

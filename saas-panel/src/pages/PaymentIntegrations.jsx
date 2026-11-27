@@ -36,6 +36,8 @@ function PaymentIntegrations() {
     porter_customer_pays_delivery: true,
     porter_pins: "",
     porter_collects_cod: false,
+    eligibility_mode: "pin",
+    eligible_pins: "",
   });
   const [partialRules, setPartialRules] = useState([]);
 
@@ -135,8 +137,18 @@ function PaymentIntegrations() {
             <div className="mt-4 grid gap-3 text-sm text-gray-600 sm:grid-cols-2">
               <p>Full Online stays available for every deliverable address.</p>
               <p>Below ₹1,000: online only. ₹1,000 to ₹3,000: full COD or online. Above ₹3,000: 20% online and 80% COD, or full online.</p>
-              <p>Cash on Delivery and Porter stop at 40.000 km. 40,001 metres is outside the limit.</p>
+              <label className="text-xs text-gray-500">Eligibility mode
+                <select value={paymentConfig.eligibility_mode === "road" ? "road" : "pin"} onChange={(event) => setPaymentConfig({ ...paymentConfig, eligibility_mode: event.target.value })} className="mt-1 w-full rounded border px-3 py-2 text-sm">
+                  <option value="pin">Delhi-NCR PIN Code</option>
+                  <option value="road">40 KM Road Distance</option>
+                </select>
+              </label>
               <Field label="Stock hold minutes" type="number" value={paymentConfig.stock_hold_minutes} onChange={(value) => setPaymentConfig({ ...paymentConfig, stock_hold_minutes: value })} />
+            </div>
+            <div className="mt-4 rounded-lg border p-3">
+              <h3 className="text-sm font-semibold">Eligible PIN codes</h3>
+              <p className="mt-1 text-xs text-gray-500">{paymentConfig.eligibility_mode === "road" ? "Road-distance mode checks a verified driving route of 40.000 km. 40,001 metres is outside the limit. The PIN list is kept for when Delhi-NCR PIN mode is selected again." : "Delhi-NCR PIN mode is active. Cash on Delivery and Porter use this exact post-office list. A city name or a PIN prefix is not enough. HeiGIT routing stays configured and is not called in this mode."}</p>
+              <textarea value={paymentConfig.eligible_pins || ""} onChange={(event) => setPaymentConfig({ ...paymentConfig, eligible_pins: event.target.value })} rows={8} className="mt-3 w-full rounded border px-3 py-2 font-mono text-xs" placeholder="One 6-digit PIN code on each line" />
             </div>
             <div className="mt-4 rounded-lg border p-3">
               <h3 className="text-sm font-semibold">Local Delivery via Porter — At Buyer's Cost</h3>

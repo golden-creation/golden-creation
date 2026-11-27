@@ -1,3 +1,5 @@
+import { defaultEligiblePinText } from "../services/ncr-pins.js";
+
 export const PAYMENT_SETTINGS_POLICY_COLUMNS = [
   ["cod_min_amount", "DECIMAL(12,2) NOT NULL DEFAULT 0"],
   ["cod_max_amount", "DECIMAL(12,2) NOT NULL DEFAULT 0"],
@@ -11,6 +13,8 @@ export const PAYMENT_SETTINGS_POLICY_COLUMNS = [
   ["porter_max_distance_km", "DECIMAL(8,2) NOT NULL DEFAULT 40"],
   ["porter_requires_full_payment", "TINYINT(1) NOT NULL DEFAULT 1"],
   ["porter_customer_pays_delivery", "TINYINT(1) NOT NULL DEFAULT 1"],
+  ["eligibility_mode", "VARCHAR(16) NOT NULL DEFAULT 'pin'"],
+  ["eligible_pins", "MEDIUMTEXT NULL"],
 ];
 
 export const ORDER_POLICY_COLUMNS = [
@@ -57,5 +61,16 @@ export async function ensurePaymentPolicyColumns(query, {
     `UPDATE \`${settingsTable}\`
         SET default_partial_percent = 20
       WHERE id = 1 AND default_partial_percent = 10`
+  );
+  await query(
+    `UPDATE \`${settingsTable}\`
+        SET eligibility_mode = 'pin'
+      WHERE id = 1 AND (eligibility_mode IS NULL OR eligibility_mode = '')`
+  );
+  await query(
+    `UPDATE \`${settingsTable}\`
+        SET eligible_pins = ?
+      WHERE id = 1 AND (eligible_pins IS NULL OR eligible_pins = '')`,
+    [defaultEligiblePinText()]
   );
 }

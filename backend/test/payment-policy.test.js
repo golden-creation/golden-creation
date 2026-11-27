@@ -11,6 +11,7 @@ import {
   roadDistanceCacheSnapshot,
   selectDeliveryCoordinate,
 } from "../services/road-distance.js";
+import { DEFAULT_NCR_PINS, pinIsEligible, sanitizeEligiblePinText } from "../services/ncr-pins.js";
 import {
   APPROVED_ADVANCE_PERCENT,
   DEFAULT_PARTIAL_ADVANCE_PERCENT,
@@ -37,6 +38,7 @@ const policySettings = {
   porter_enabled: 1,
   porter_max_distance_km: 40,
   porter_collects_cod: 0,
+  eligibility_mode: "road",
 };
 
 function planFor(unitPrice, quantity = 1, meters = 10000, extra = {}) {
@@ -292,6 +294,8 @@ test("payment setting changes are included in the Super Admin audit allowlist", 
     "porter_max_distance_km",
     "porter_requires_full_payment",
     "porter_customer_pays_delivery",
+    "eligibility_mode",
+    "eligible_pins",
   ]) {
     assert.equal(ALLOWED_CHANGE_FIELDS.has(field), true);
   }
@@ -496,4 +500,79 @@ test("identical routing requests are deduplicated without storing the address", 
   assert.equal(JSON.stringify(snapshot).includes("Sector"), false);
   assert.equal(JSON.stringify(snapshot).includes("secret-routing-key"), false);
   clearRoadDistanceCache();
+});
+
+test("Delhi-NCR PIN mode uses exact post-office codes and keeps full online available", () => {
+  const pins = new Set(DEFAULT_NCR_PINS.map((entry) => entry.pin));
+  assert.equal(pins.has("110001"), true);
+  assert.equal(pins.has("122011"), true);
+  assert.equal(pins.has("122051"), true);
+  assert.equal(pins.has("121001"), true);
+  assert.equal(pins.has("201301"), true);
+  assert.equal(pins.has("201310"), true);
+  assert.equal(pins.has("201001"), true);
+  assert.equal(pins.has("400001"), false);
+  assert.equal(pins.has("122"), false);
+  assert.throws(() => sanitizeEligiblePinText("Gurugram\n122"), /exact 6-digit/);
+  const pinSettings = { ...policySettings, eligibility_mode: "pin", porter_enabled: 1, eligible_pins: null };
+  const prices = { 999: "online-only", 1000: "full-cod", 1600: "full-cod", 3000: "full-cod", 4000: "partial-cod" };
+  for (const [price, band] of Object.entries(prices)) {
+    const inside = buildPaymentPlan({
+      lines: [{ unitPrice: Number(price), quantity: 1, lineTotal: Number(price) }],
+      settings: pinSettings,
+      distance: { verified: false, meters: null },
+      pin: "122011",
+      razorpayConfigured: true,
+    });
+    assert.equal(inside.lines[0].band, band);
+    assert.equal(inside.fullOnline.enabled, true);
+    assert.equal(inside.eligibility.mode, "pin");
+    assert.equal(inside.fullCod.enabled, band === "full-cod");
+    assert.equal(inside.partialCod.enabled, band === "partial-cod");
+    if (band === "partial-cod") {
+      assert.equal(inside.partialCod.amountOnline, 800);
+      assert.equal(inside.partialCod.amountCod, 3200);
+    }
+    assert.equal(inside.porter.available, true);
+  }
+  const mixed = buildPaymentPlan({
+    lines: [
+      { unitPrice: 999, quantity: 1, lineTotal: 999 },
+      { unitPrice: 1600, quantity: 1, lineTotal: 1600 },
+      { unitPrice: 4000, quantity: 1, lineTotal: 4000 },
+    ],
+    settings: pinSettings,
+    distance: { verified: false },
+    pin: "110001",
+    razorpayConfigured: true,
+  });
+  assert.deepEqual(mixed.lines.map((line) => [line.amountOnline, line.amountCod]), [
+    [999, 0],
+    [0, 1600],
+    [800, 3200],
+  ]);
+  assert.equal(mixed.fullOnline.amountOnline, 6599);
+  for (const pin of ["", "122", "12201", "Gurugram", "400001", "000000"]) {
+    const outside = buildPaymentPlan({
+      lines: [{ unitPrice: 1600, quantity: 1, lineTotal: 1600 }],
+      settings: pinSettings,
+      distance: { verified: true, meters: 1000 },
+      pin,
+      razorpayConfigured: true,
+    });
+    assert.equal(pinIsEligible(pin, pins), false);
+    assert.equal(outside.fullCod.enabled, false);
+    assert.equal(outside.partialCod.enabled, false);
+    assert.equal(outside.porter.available, false);
+    assert.equal(outside.fullOnline.enabled, true);
+    assert.equal(outside.fullOnline.amountOnline, 1600);
+  }
+  const removed = buildPaymentPlan({
+    lines: [{ unitPrice: 1600, quantity: 1, lineTotal: 1600 }],
+    settings: { ...pinSettings, eligible_pins: "110001" },
+    pin: "122011",
+    razorpayConfigured: true,
+  });
+  assert.equal(removed.fullCod.enabled, false);
+  assert.equal(removed.fullOnline.enabled, true);
 });

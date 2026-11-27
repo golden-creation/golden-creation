@@ -6,7 +6,8 @@ import {
   getConnection,
   rollback,
 } from "../services/commerce.service.js";
-import { PORTER_STATUSES, porterDispatchAllowed } from "../services/payment-policy.js";
+import { PORTER_STATUSES, normalizeEligibilityMode, porterDispatchAllowed } from "../services/payment-policy.js";
+import { sanitizeEligiblePinText } from "../services/ncr-pins.js";
 import { changedAuditFields, joinedAuditDb, sanitizeAuditValue, writeAuditEvent } from "../services/admin-audit.js";
 
 function cleanString(value) {
@@ -268,6 +269,8 @@ export async function updatePaymentSettings(req, res) {
     const partialAbove = 3000;
     const codDistance = 40;
     const porterDistance = 40;
+    const eligibilityMode = normalizeEligibilityMode(req.body?.eligibility_mode);
+    const eligiblePins = sanitizeEligiblePinText(req.body?.eligible_pins ?? "");
     const connection = await getConnection();
     try {
       await beginTransaction(connection);
@@ -292,6 +295,8 @@ export async function updatePaymentSettings(req, res) {
               porter_max_distance_km=?,
               porter_requires_full_payment=?,
               porter_customer_pays_delivery=?,
+              eligibility_mode=?,
+              eligible_pins=?,
               updated_by=?
         WHERE id=1`,
         [
@@ -312,6 +317,8 @@ export async function updatePaymentSettings(req, res) {
           porterDistance,
           1,
           1,
+          eligibilityMode,
+          eligiblePins,
           Number(req.admin?.id) || null,
         ]
       );
@@ -346,7 +353,7 @@ export async function updatePaymentSettings(req, res) {
     await activity(req, "Updated payment settings", `Partial COD ${percentage}%`);
     res.json({ message: "Payment settings updated" });
   } catch (error) {
-    res.status(400).json({ message: error.message || "Failed to update payment settings" });
+    res.status(error.statusCode || 400).json({ message: error.message || "Failed to update payment settings" });
   }
 }
 
