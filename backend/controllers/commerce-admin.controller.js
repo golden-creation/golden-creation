@@ -257,23 +257,17 @@ export async function getPaymentSettings(_req, res) {
 }
 
 export async function updatePaymentSettings(req, res) {
-  const percentage = Math.min(
-    100,
-    Math.max(1, Number(req.body?.default_partial_percent ?? 20))
-  );
+  const percentage = 20;
   const holdMinutes = Math.max(
     5,
     Math.min(120, Number(req.body?.stock_hold_minutes ?? 30))
   );
   try {
-    const minAmount = Math.max(0, Number(req.body?.cod_min_amount) || 0);
-    const maxAmount = Math.max(0, Number(req.body?.cod_max_amount) || 0);
-    const partialAbove = Math.max(0, Number(req.body?.partial_cod_above) || 0);
-    const codDistance = Math.max(0, Number(req.body?.cod_max_distance_km) || 0);
-    const porterDistance = Math.max(0, Number(req.body?.porter_max_distance_km) || 0);
-    if (maxAmount > 0 && maxAmount < minAmount) {
-      return res.status(400).json({ message: "COD maximum must be at least the minimum" });
-    }
+    const minAmount = 1000;
+    const maxAmount = 3000;
+    const partialAbove = 3000;
+    const codDistance = 40;
+    const porterDistance = 40;
     const connection = await getConnection();
     try {
       await beginTransaction(connection);
@@ -301,7 +295,7 @@ export async function updatePaymentSettings(req, res) {
               updated_by=?
         WHERE id=1`,
         [
-          req.body?.full_online_enabled ? 1 : 0,
+          1,
           req.body?.partial_cod_enabled ? 1 : 0,
           req.body?.full_cod_enabled ? 1 : 0,
           percentage,
@@ -316,8 +310,8 @@ export async function updatePaymentSettings(req, res) {
           codDistance,
           partialAbove,
           porterDistance,
-          req.body?.porter_requires_full_payment === false ? 0 : 1,
-          req.body?.porter_customer_pays_delivery === false ? 0 : 1,
+          1,
+          1,
           Number(req.admin?.id) || null,
         ]
       );
@@ -357,37 +351,9 @@ export async function updatePaymentSettings(req, res) {
 }
 
 export async function savePartialCodRule(req, res) {
-  const type = cleanString(req.body?.target_type || req.body?.targetType);
-  const targetId = Number(req.body?.target_id || req.body?.targetId);
-  if (!["Product", "Category", "Collection"].includes(type) || !targetId) {
-    return res.status(400).json({ message: "Choose a valid target" });
-  }
-  const percentage =
-    req.body?.percentage === null || req.body?.percentage === ""
-      ? null
-      : Math.min(100, Math.max(1, Number(req.body.percentage)));
-  try {
-    await dbQuery(
-      `INSERT INTO partial_cod_rules
-        (target_type, target_id, percentage, eligible, priority, status)
-       VALUES (?, ?, ?, ?, ?, ?)
-       ON DUPLICATE KEY UPDATE
-         percentage=VALUES(percentage), eligible=VALUES(eligible),
-         priority=VALUES(priority), status=VALUES(status)`,
-      [
-        type,
-        targetId,
-        percentage,
-        req.body?.eligible === false ? 0 : 1,
-        Number(req.body?.priority) || 0,
-        cleanString(req.body?.status) || "Active",
-      ]
-    );
-    await activity(req, "Saved Partial COD rule", `${type} ${targetId}`);
-    res.json({ message: "Partial COD rule saved" });
-  } catch (error) {
-    res.status(400).json({ message: error.message || "Failed to save Partial COD rule" });
-  }
+  return res.status(422).json({
+    message: "Partial COD overrides cannot change the approved 20% advance or the product price bands",
+  });
 }
 
 export async function savePorterBooking(req, res) {

@@ -1,4 +1,4 @@
-import { SHOP_ADDRESS, SHOP_LATITUDE, SHOP_LONGITUDE } from "./payment-policy.js";
+import { APPROVED_DISTANCE_METERS, SHOP_ADDRESS, SHOP_LATITUDE, SHOP_LONGITUDE } from "./payment-policy.js";
 
 export const SHOP_LOCATION = {
   address: SHOP_ADDRESS,
@@ -6,8 +6,64 @@ export const SHOP_LOCATION = {
   longitude: SHOP_LONGITUDE,
 };
 
+const MIN_CONFIDENCE = 0.8;
+const ACCEPTED_LAYERS = new Set(["address", "venue", "street", "locality"]);
+const REQUEST_TIMEOUT_MS = 8000;
+
 function unavailable(reason) {
-  return { verified: false, kilometers: null, reason };
+  return { verified: false, meters: null, kilometers: null, reason };
+}
+
+function displayKilometers(meters) {
+  return Number((Number(meters) / 1000).toFixed(2));
+}
+
+function withinIndia(longitude, latitude) {
+  return latitude >= 6 && latitude <= 37 && longitude >= 68 && longitude <= 98;
+}
+
+function separationMeters(left, right) {
+  const toRadians = (value) => (value * Math.PI) / 180;
+  const earth = 6371000;
+  const dLat = toRadians(right.latitude - left.latitude);
+  const dLon = toRadians(right.longitude - left.longitude);
+  const lat1 = toRadians(left.latitude);
+  const lat2 = toRadians(right.latitude);
+  const a = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2;
+  return 2 * earth * Math.asin(Math.min(1, Math.sqrt(a)));
+}
+
+export function selectDeliveryCoordinate(features = []) {
+  const candidates = [];
+  for (const feature of features) {
+    const coordinates = feature?.geometry?.coordinates;
+    const properties = feature?.properties || {};
+    const longitude = Number(coordinates?.[0]);
+    const latitude = Number(coordinates?.[1]);
+    const confidence = Number(properties.confidence);
+    const layer = String(properties.layer || "").toLowerCase();
+    const matchType = String(properties.match_type || properties.matchType || "").toLowerCase();
+    if (!Number.isFinite(longitude) || !Number.isFinite(latitude) || !withinIndia(longitude, latitude)) continue;
+    if (!ACCEPTED_LAYERS.has(layer) || matchType === "fallback") continue;
+    if (!Number.isFinite(confidence) || confidence < MIN_CONFIDENCE) continue;
+    candidates.push({ longitude, latitude, confidence });
+  }
+  candidates.sort((left, right) => right.confidence - left.confidence);
+  const best = candidates[0];
+  if (!best) return null;
+  const rival = candidates[1];
+  if (rival && best.confidence - rival.confidence < 0.05 && separationMeters(best, rival) > 500) return null;
+  return best;
+}
+
+async function requestJson(fetchImpl, url, options, timeoutMs) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await fetchImpl(url, { ...options, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 export async function measureRoadDistance({
@@ -15,39 +71,53 @@ export async function measureRoadDistance({
   apiKey = process.env.OPENROUTESERVICE_API_KEY || "",
   fetchImpl = globalThis.fetch,
   shop = SHOP_LOCATION,
+  timeoutMs = REQUEST_TIMEOUT_MS,
 } = {}) {
   const destination = String(address || "").trim();
   if (!destination) return unavailable("A delivery address is required to measure road distance.");
   if (!apiKey) return unavailable("Road-distance verification is not configured.");
   if (typeof fetchImpl !== "function") return unavailable("Road-distance verification is unavailable.");
   try {
-    const geocode = await fetchImpl(
-      `https://api.openrouteservice.org/geocode/search?api_key=${encodeURIComponent(apiKey)}&size=1&boundary.country=IN&text=${encodeURIComponent(destination)}`,
-      { headers: { Accept: "application/json" } }
+    const geocode = await requestJson(
+      fetchImpl,
+      `https://api.openrouteservice.org/geocode/search?size=5&boundary.country=IN&text=${encodeURIComponent(destination)}`,
+      { headers: { Accept: "application/json", Authorization: apiKey } },
+      timeoutMs
     );
-    if (!geocode.ok) return unavailable("The delivery address could not be located.");
+    if (!geocode?.ok) return unavailable("The delivery address could not be located.");
     const geocodeBody = await geocode.json();
-    const point = geocodeBody?.features?.[0]?.geometry?.coordinates;
-    if (!Array.isArray(point) || point.length < 2) return unavailable("The delivery address could not be located.");
-    const route = await fetchImpl("https://api.openrouteservice.org/v2/directions/driving-car/geojson", {
-      method: "POST",
-      headers: {
-        Authorization: apiKey,
-        "Content-Type": "application/json",
-        Accept: "application/json",
+    const point = selectDeliveryCoordinate(geocodeBody?.features);
+    if (!point) return unavailable("The delivery address could not be verified with enough confidence.");
+    const route = await requestJson(
+      fetchImpl,
+      "https://api.openrouteservice.org/v2/directions/driving-car/geojson",
+      {
+        method: "POST",
+        headers: {
+          Authorization: apiKey,
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          coordinates: [
+            [shop.longitude, shop.latitude],
+            [point.longitude, point.latitude],
+          ],
+        }),
       },
-      body: JSON.stringify({
-        coordinates: [
-          [shop.longitude, shop.latitude],
-          [Number(point[0]), Number(point[1])],
-        ],
-      }),
-    });
-    if (!route.ok) return unavailable("The road distance could not be verified.");
+      timeoutMs
+    );
+    if (!route?.ok) return unavailable("The road distance could not be verified.");
     const routeBody = await route.json();
     const meters = Number(routeBody?.features?.[0]?.properties?.summary?.distance);
     if (!Number.isFinite(meters) || meters < 0) return unavailable("The road distance could not be verified.");
-    return { verified: true, kilometers: Number((meters / 1000).toFixed(2)), reason: "" };
+    return {
+      verified: true,
+      meters,
+      kilometers: displayKilometers(meters),
+      withinLimit: meters <= APPROVED_DISTANCE_METERS,
+      reason: "",
+    };
   } catch {
     return unavailable("The road distance could not be verified.");
   }

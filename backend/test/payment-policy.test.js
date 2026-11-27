@@ -2,12 +2,12 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { razorpayAmountPaise } from "../services/checkout-totals.js";
 import { ALLOWED_CHANGE_FIELDS } from "../services/admin-audit.js";
-import { measureRoadDistance } from "../services/road-distance.js";
+import { measureRoadDistance, selectDeliveryCoordinate } from "../services/road-distance.js";
 import {
+  APPROVED_ADVANCE_PERCENT,
   DEFAULT_PARTIAL_ADVANCE_PERCENT,
-  allocateLineDiscount,
+  allocateDiscountedLines,
   buildPaymentPlan,
-  effectiveUnitPrice,
   paymentBand,
   porterDispatchAllowed,
   resolvePartialCodAdvance,
@@ -30,11 +30,11 @@ const policySettings = {
   porter_collects_cod: 0,
 };
 
-function planFor(unitPrice, quantity = 1, distance = { verified: true, kilometers: 10 }, extra = {}) {
+function planFor(unitPrice, quantity = 1, meters = 10000, extra = {}) {
   return buildPaymentPlan({
-    lines: [{ productId: 1, name: "Item", unitPrice, quantity }],
+    lines: [{ productId: 1, name: "Item", unitPrice, quantity, lineTotal: Number((unitPrice * quantity).toFixed(2)) }],
     settings: policySettings,
-    distance,
+    distance: { verified: true, meters },
     razorpayConfigured: true,
     ...extra,
   });
@@ -68,16 +68,21 @@ test("stored 10 percent product, category, and collection rules do not lower the
   });
 });
 
-test("an explicit higher partial COD rule still raises only that cart", () => {
-  const decision = resolvePartialCodAdvance(20, [
-    { target_type: "Product", target_id: 4, percentage: 40, eligible: 1, status: "Active" },
-  ], { productIds: [4], categoryIds: [], collectionIds: [] });
-  assert.equal(decision.percentage, 40);
-  const untouched = resolvePartialCodAdvance(20, [
+test("stored partial COD overrides cannot change the approved 20 percent advance", () => {
+  const raised = resolvePartialCodAdvance(10, [
     { target_type: "Product", target_id: 4, percentage: 40, eligible: 0, status: "Active" },
-  ], { productIds: [9], categoryIds: [], collectionIds: [] });
-  assert.equal(untouched.percentage, 20);
-  assert.equal(untouched.eligible, true);
+  ], { productIds: [4], categoryIds: [], collectionIds: [] });
+  assert.equal(raised.percentage, APPROVED_ADVANCE_PERCENT);
+  assert.equal(raised.eligible, true);
+  const result = buildPaymentPlan({
+    lines: [{ unitPrice: 5000, quantity: 1, lineTotal: 5000 }],
+    settings: { ...policySettings, default_partial_percent: 5, cod_min_amount: 0, cod_max_amount: 100000, partial_cod_above: 100, cod_max_distance_km: 100 },
+    distance: { verified: true, meters: 10000 },
+    razorpayConfigured: true,
+  });
+  assert.equal(result.partialCod.percentage, 20);
+  assert.equal(result.partialCod.amountOnline, 1000);
+  assert.equal(result.partialCod.amountCod, 4000);
 });
 
 test("a stored order keeps its original payment split", () => {
@@ -100,7 +105,7 @@ test("product eligibility follows the selling unit price and keeps full online a
   };
   for (const [price, band] of Object.entries(expected)) {
     const result = planFor(Number(price));
-    assert.equal(paymentBand(Number(price), policySettings), band);
+    assert.equal(paymentBand(Number(price)), band);
     assert.equal(result.lines[0].band, band);
     assert.equal(result.fullOnline.enabled, true);
     assert.equal(result.fullOnline.amountOnline, Number(price));
@@ -141,7 +146,7 @@ test("a mixed cart splits each product and still offers the full amount online",
       { productId: 3, name: "Large", unitPrice: 5000, quantity: 1 },
     ],
     settings: policySettings,
-    distance: { verified: true, kilometers: 39 },
+    distance: { verified: true, meters: 39000 },
     razorpayConfigured: true,
   });
   assert.deepEqual(result.lines.map((line) => [line.amountOnline, line.amountCod]), [
@@ -158,50 +163,81 @@ test("a mixed cart splits each product and still offers the full amount online",
 });
 
 test("a product discount and an allocated coupon use the effective unit price", () => {
-  assert.equal(effectiveUnitPrice(2000, 1, 1100), 900);
-  assert.equal(paymentBand(900, policySettings), "online-only");
-  const merchandise = 7000;
-  const coupon = 700;
-  const allocated = allocateLineDiscount(5000, merchandise, coupon);
-  const unit = effectiveUnitPrice(5000, 1, allocated);
-  const result = planFor(unit);
-  assert.equal(allocated, 500);
-  assert.equal(unit, 4500);
-  assert.equal(result.lines[0].band, "partial-cod");
-  assert.equal(result.partialCod.amountOnline, 900);
-  assert.equal(result.partialCod.amountCod, 3600);
-});
-
-test("COD and Porter follow verified road distance and fail closed", () => {
-  assert.equal(planFor(2000, 1, { verified: true, kilometers: 39 }).fullCod.enabled, true);
-  assert.equal(planFor(2000, 1, { verified: true, kilometers: 40 }).fullCod.enabled, true);
-  assert.equal(planFor(2000, 1, { verified: true, kilometers: 41 }).fullCod.enabled, false);
-  assert.equal(planFor(5000, 1, { verified: true, kilometers: 41 }).partialCod.enabled, false);
-  assert.equal(planFor(2000, 1, { verified: false, kilometers: null }).fullCod.enabled, false);
-  assert.equal(planFor(5000, 1, { verified: false, kilometers: null }).partialCod.enabled, false);
-  assert.equal(planFor(2000, 1, { verified: true, kilometers: 40 }).porter.available, true);
-  assert.equal(planFor(2000, 1, { verified: true, kilometers: 41 }).porter.available, false);
-  assert.equal(planFor(2000, 1, { verified: false, kilometers: null }).porter.available, false);
-  assert.equal(planFor(2000, 1, { verified: true, kilometers: 10 }, { deliveryMethod: "Porter" }).fullCod.enabled, false);
-  assert.equal(planFor(5000, 1, { verified: true, kilometers: 10 }, { deliveryMethod: "Porter" }).partialCod.enabled, false);
-});
-
-test("stored zero COD bounds do not treat the maximum as unlimited", () => {
-  const result = buildPaymentPlan({
-    lines: [{ unitPrice: 2000, quantity: 1 }],
-    settings: { ...policySettings, cod_min_amount: 0, cod_max_amount: 0 },
-    distance: { verified: true, kilometers: 10 },
+  const lines = allocateDiscountedLines(
+    [
+      { productId: 1, name: "Pen", lineTotal: 2000, quantity: 1 },
+      { productId: 2, name: "Set", lineTotal: 5000, quantity: 1 },
+    ],
+    700
+  );
+  const pen = buildPaymentPlan({
+    lines: [lines[0]],
+    settings: policySettings,
+    distance: { verified: true, meters: 10000 },
     razorpayConfigured: true,
   });
-  assert.equal(result.lines[0].band, "online-only");
-  assert.equal(result.fullCod.enabled, false);
-  assert.equal(result.fullOnline.enabled, true);
+  const set = buildPaymentPlan({
+    lines: [lines[1]],
+    settings: policySettings,
+    distance: { verified: true, meters: 10000 },
+    razorpayConfigured: true,
+    shippingFee: 49.5,
+    taxAmount: 12.34,
+    quoteTotal: 4561.84,
+  });
+  assert.equal(lines[0].lineTotal, 1800);
+  assert.equal(pen.lines[0].band, "full-cod");
+  assert.equal(lines[1].lineTotal, 4500);
+  assert.equal(set.lines[0].band, "partial-cod");
+  assert.equal(set.partialCod.amountOnline, 961.84);
+  assert.equal(set.partialCod.amountCod, 3600);
+  assert.equal(razorpayAmountPaise(set.partialCod.amountOnline) + razorpayAmountPaise(set.partialCod.amountCod), razorpayAmountPaise(set.fullOnline.amountOnline));
+});
+
+test("COD and Porter use raw metres and ignore a rounded 40 km display", () => {
+  for (const meters of [39999, 40000]) {
+    assert.equal(planFor(2000, 1, meters).fullCod.enabled, true);
+    assert.equal(planFor(5000, 1, meters).partialCod.enabled, true);
+    assert.equal(planFor(2000, 1, meters).porter.available, true);
+  }
+  const justOver = planFor(2000, 1, 40001);
+  assert.equal(justOver.distance.kilometers, 40);
+  assert.equal(justOver.fullCod.enabled, false);
+  assert.equal(planFor(5000, 1, 40001).partialCod.enabled, false);
+  assert.equal(justOver.porter.available, false);
+  assert.equal(planFor(2000, 1, 40000, {
+    settings: { ...policySettings, cod_max_distance_km: 100, porter_max_distance_km: 100, porter_collects_cod: 1 },
+  }).fullCod.enabled, true);
+  assert.equal(buildPaymentPlan({
+    lines: [{ unitPrice: 2000, quantity: 1, lineTotal: 2000 }],
+    settings: policySettings,
+    distance: { verified: true, kilometers: 40 },
+    razorpayConfigured: true,
+  }).fullCod.enabled, false);
+  assert.equal(planFor(2000, 1, 10000, { deliveryMethod: "Porter" }).fullCod.enabled, false);
+  assert.equal(planFor(5000, 1, 10000, { deliveryMethod: "Porter" }).partialCod.enabled, false);
+  assert.equal(planFor(2000, 1, 10000, { deliveryMethod: "Porter", settings: { ...policySettings, porter_collects_cod: 1 } }).fullOnline.enabled, true);
+});
+
+test("admin price bounds cannot move a product out of its approved band", () => {
+  const widened = buildPaymentPlan({
+    lines: [{ unitPrice: 499, quantity: 1, lineTotal: 499 }, { unitPrice: 5000, quantity: 1, lineTotal: 100 }],
+    settings: { ...policySettings, cod_min_amount: 0, cod_max_amount: 0, full_online_enabled: 0 },
+    distance: { verified: true, meters: 10000 },
+    razorpayConfigured: true,
+  });
+  assert.equal(widened.lines[0].band, "online-only");
+  assert.equal(widened.lines[1].band, "online-only");
+  assert.equal(widened.fullOnline.enabled, true);
+  assert.equal(widened.fullCod.enabled, false);
 });
 
 test("Porter cannot be booked before full payment and does not collect cash", () => {
   const unpaid = { payment_status: "Pending", total_amount: 5000, amount_paid: 1000, cod_due: 4000 };
   const paid = { payment_status: "Paid", total_amount: 5000, amount_paid: 5000, cod_due: 0 };
   assert.equal(porterDispatchAllowed(unpaid, "Booked").allowed, false);
+  assert.equal(porterDispatchAllowed(unpaid, "Booked", { porterRequiresFullPayment: false }).allowed, false);
+  assert.equal(porterDispatchAllowed({ ...paid, cod_due: 0.01 }, "Delivered").allowed, false);
   assert.equal(porterDispatchAllowed(paid, "Booked").allowed, true);
   assert.equal(porterDispatchAllowed(unpaid, "Not booked").allowed, true);
   const blocked = restrictPorterPayments(
@@ -225,7 +261,7 @@ test("a legacy Android COD request is rejected unless every product is full COD"
       { unitPrice: 2000, quantity: 1 },
     ],
     settings: policySettings,
-    distance: { verified: true, kilometers: 10 },
+    distance: { verified: true, meters: 10000 },
     razorpayConfigured: true,
   });
   assert.equal(low.fullCod.enabled, false);
@@ -252,24 +288,48 @@ test("payment setting changes are included in the Super Admin audit allowlist", 
   }
 });
 
-test("road distance uses the routing response and fails closed without calling a customer distance", async () => {
-  const fetchImpl = async (url) => {
-    if (String(url).includes("geocode")) {
-      return { ok: true, json: async () => ({ features: [{ geometry: { coordinates: [77.2, 28.5] } }] }) };
-    }
-    return { ok: true, json: async () => ({ features: [{ properties: { summary: { distance: 39000 } } }] }) };
+function locatedFeature(longitude, latitude, confidence = 0.92) {
+  return {
+    geometry: { coordinates: [longitude, latitude] },
+    properties: { layer: "address", confidence, match_type: "exact" },
   };
-  const result = await measureRoadDistance({ address: "Sector 14, Gurugram", apiKey: "test-key", fetchImpl });
+}
+
+test("road distance keeps raw metres, hides the API key, and fails closed", async () => {
+  const seen = [];
+  const fetchImpl = async (url, options = {}) => {
+    seen.push({ url, authorization: options.headers?.Authorization || "" });
+    if (String(url).includes("geocode")) {
+      return { ok: true, json: async () => ({ features: [locatedFeature(77.2, 28.5)] }) };
+    }
+    return { ok: true, json: async () => ({ features: [{ properties: { summary: { distance: 40000 } } }] }) };
+  };
+  const result = await measureRoadDistance({ address: "Sector 14, Gurugram", apiKey: "secret-routing-key", fetchImpl });
   assert.equal(result.verified, true);
-  assert.equal(result.kilometers, 39);
+  assert.equal(result.meters, 40000);
+  assert.equal(result.kilometers, 40);
+  assert.equal(seen.every((call) => !String(call.url).includes("secret-routing-key")), true);
+  assert.equal(seen.every((call) => call.authorization === "secret-routing-key"), true);
+  assert.equal(selectDeliveryCoordinate([locatedFeature(77.2, 28.5, 0.4)]), null);
+  assert.equal(selectDeliveryCoordinate([
+    locatedFeature(77.1, 28.4, 0.9),
+    locatedFeature(77.4, 28.7, 0.88),
+  ]), null);
   const missing = await measureRoadDistance({ address: "Sector 14, Gurugram", apiKey: "", fetchImpl });
   assert.equal(missing.verified, false);
   const failed = await measureRoadDistance({
     address: "Sector 14, Gurugram",
-    apiKey: "test-key",
-    fetchImpl: async () => {
-      throw new Error("routing unavailable");
-    },
+    apiKey: "secret-routing-key",
+    fetchImpl: async () => ({ ok: false, json: async () => ({}) }),
   });
   assert.equal(failed.verified, false);
+  const timedOut = await measureRoadDistance({
+    address: "Sector 14, Gurugram",
+    apiKey: "secret-routing-key",
+    timeoutMs: 20,
+    fetchImpl: (_url, options) => new Promise((_resolve, reject) => {
+      options.signal.addEventListener("abort", () => reject(new Error("aborted")));
+    }),
+  });
+  assert.equal(timedOut.verified, false);
 });

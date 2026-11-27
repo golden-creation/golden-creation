@@ -475,7 +475,7 @@ async function finalizePayment({
         ? Number(order.total_amount) - Number(order.cod_due)
         : order.total_amount
     );
-    if (amount !== null && Math.abs(toMoney(amount) - expected) > 0.01) {
+    if (amount !== null && razorpayAmountPaise(amount) !== razorpayAmountPaise(expected)) {
       throw new Error("Payment amount does not match the order");
     }
     const paymentStatus =

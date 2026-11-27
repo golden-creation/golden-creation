@@ -35,6 +35,12 @@ function quote() {
     discountCode: null,
     discountAmount: 0,
     totalAmount: 840,
+    paymentOptions: {
+      lines: [{ lineTotal: 800, amountOnline: 800, amountCod: 0 }],
+      fullOnline: { enabled: true, amountOnline: 840, amountCod: 0 },
+      fullCod: { enabled: false, amountCod: 0 },
+      partialCod: { enabled: false, amountOnline: 840, amountCod: 0 },
+    },
   };
 }
 
@@ -57,11 +63,11 @@ test("order items use the new order id and the catalog product name", async () =
   const created = await insertQuotedOrder(connection, {
     payload: { customer: { name: "Test" } },
     quote: quote(),
-    paymentMethod: "Full COD",
-    paymentStatus: "COD Due",
+    paymentMethod: "Full Online",
+    paymentStatus: "Pending",
     orderStatus: "Processing",
     amountPaid: 0,
-    codDue: 840,
+    codDue: 0,
   });
   assert.equal(created.orderId, 42);
   assert.match(created.orderNumber, /^GC-/);
@@ -131,11 +137,11 @@ test("an order-item failure leaves rollback to the caller and does not commit", 
   await assert.rejects(() => insertQuotedOrder(connection, {
     payload: {},
     quote: quote(),
-    paymentMethod: "Full COD",
-    paymentStatus: "COD Due",
+    paymentMethod: "Full Online",
+    paymentStatus: "Pending",
     orderStatus: "Processing",
     amountPaid: 0,
-    codDue: 840,
+    codDue: 0,
   }));
   assert.equal(state.committed, false);
   await new Promise((resolve) => connection.rollback(resolve));

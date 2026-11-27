@@ -24,38 +24,21 @@ export function parsePinList(value) {
 }
 
 export function resolvePartialCodAdvance(defaultPercent, rules = [], targets = {}) {
-  const baseline = Math.min(100, Math.max(1, Number(defaultPercent) || DEFAULT_PARTIAL_ADVANCE_PERCENT));
-  let percentage = baseline;
-  let eligible = true;
-  const idsByType = {
-    Product: new Set((targets.productIds || []).map(Number)),
-    Collection: new Set((targets.collectionIds || []).map(Number)),
-    Category: new Set((targets.categoryIds || []).map(Number)),
-  };
-  for (const rule of rules) {
-    if (rule.status && rule.status !== "Active") continue;
-    const ids = idsByType[rule.target_type];
-    if (!ids || !ids.has(Number(rule.target_id))) continue;
-    if (!Number(rule.eligible)) {
-      eligible = false;
-      continue;
-    }
-    if (rule.percentage === null || rule.percentage === undefined || rule.percentage === "") continue;
-    const rulePercent = Number(rule.percentage);
-    if (Number.isFinite(rulePercent) && rulePercent > percentage) {
-      percentage = Math.min(100, rulePercent);
-    }
-  }
-  return { eligible, percentage, baseline };
+  void defaultPercent;
+  void rules;
+  void targets;
+  return { eligible: true, percentage: APPROVED_ADVANCE_PERCENT, baseline: APPROVED_ADVANCE_PERCENT };
 }
 
-export function splitPartialAdvance(total, percentage = DEFAULT_PARTIAL_ADVANCE_PERCENT) {
-  const percent = Math.min(100, Math.max(1, Number(percentage) || DEFAULT_PARTIAL_ADVANCE_PERCENT));
-  const amountOnline = toMoney((Number(total) * percent) / 100);
+export function splitPartialAdvance(total) {
+  const percent = APPROVED_ADVANCE_PERCENT;
+  const totalPaise = rupeesToPaise(total);
+  const amountOnlinePaise = Math.round((totalPaise * percent) / 100);
+  const amountCodPaise = totalPaise - amountOnlinePaise;
   return {
     percentage: percent,
-    amountOnline,
-    amountCod: toMoney(Number(total) - amountOnline),
+    amountOnline: paiseToRupees(amountOnlinePaise),
+    amountCod: paiseToRupees(amountCodPaise),
   };
 }
 
@@ -109,15 +92,31 @@ export function porterAvailability({ enabled = false, pin = "", pins = "" } = {}
   };
 }
 
-export function paymentBand(unitPrice, settings = {}) {
-  const unit = toMoney(unitPrice);
-  const minimum = Number(settings.cod_min_amount ?? DEFAULT_FULL_COD_MIN);
-  const maximum = Number(settings.cod_max_amount ?? DEFAULT_FULL_COD_MAX);
-  const above = Number(settings.partial_cod_above ?? DEFAULT_PARTIAL_COD_ABOVE);
-  if (!(maximum > minimum) || unit < minimum) return "online-only";
-  if (unit <= maximum) return "full-cod";
-  if (unit > above) return "partial-cod";
-  return "online-only";
+export const APPROVED_ADVANCE_PERCENT = 20;
+export const APPROVED_DISTANCE_METERS = 40000;
+
+export function rupeesToPaise(value) {
+  return Math.round(toMoney(value) * 100);
+}
+
+export function paiseToRupees(paise) {
+  return toMoney(Number(paise) / 100);
+}
+
+export function paymentBand(unitPrice) {
+  const unitPaise = rupeesToPaise(unitPrice);
+  if (unitPaise < DEFAULT_FULL_COD_MIN * 100) return "online-only";
+  if (unitPaise <= DEFAULT_FULL_COD_MAX * 100) return "full-cod";
+  return "partial-cod";
+}
+
+export function linePaymentBand(linePaise, quantity) {
+  const qty = Number(quantity);
+  if (!Number.isInteger(qty) || qty < 1) return "online-only";
+  const unitTimesQuantity = Number(linePaise);
+  if (unitTimesQuantity < DEFAULT_FULL_COD_MIN * 100 * qty) return "online-only";
+  if (unitTimesQuantity <= DEFAULT_FULL_COD_MAX * 100 * qty) return "full-cod";
+  return "partial-cod";
 }
 
 export function effectiveUnitPrice(lineTotal, quantity, allocatedDiscount = 0) {
@@ -131,24 +130,23 @@ export function allocateLineDiscount(lineTotal, merchandise, discountAmount) {
   return toMoney((Number(lineTotal) / Number(merchandise)) * Number(discountAmount));
 }
 
-export function describeUnitPayment(unitPrice, settings = {}) {
-  const band = paymentBand(unitPrice, settings);
-  const advance = Math.min(100, Math.max(1, Number(settings.default_partial_percent) || DEFAULT_PARTIAL_ADVANCE_PERCENT));
+export function describeUnitPayment(unitPrice) {
+  const band = paymentBand(unitPrice);
   if (band === "full-cod") {
     return {
       band,
       label: "Full Online or 100% Cash on Delivery",
       fullOnline: true,
-      cod: Boolean(Number(settings.full_cod_enabled)),
+      cod: true,
     };
   }
   if (band === "partial-cod") {
     return {
       band,
-      label: `Full Online or ${advance}% online and ${100 - advance}% Cash on Delivery`,
+      label: "Full Online or 20% online and 80% Cash on Delivery",
       fullOnline: true,
-      cod: Boolean(Number(settings.partial_cod_enabled)),
-      advancePercent: advance,
+      cod: true,
+      advancePercent: APPROVED_ADVANCE_PERCENT,
     };
   }
   return {
@@ -159,113 +157,193 @@ export function describeUnitPayment(unitPrice, settings = {}) {
   };
 }
 
+export function allocateDiscountedLines(items = [], discountAmount = 0) {
+  const linePaise = items.map((item) => Math.max(0, rupeesToPaise(item.lineTotal)));
+  const merchandisePaise = linePaise.reduce((sum, paise) => sum + paise, 0);
+  const discountPaise = Math.min(merchandisePaise, Math.max(0, rupeesToPaise(discountAmount)));
+  const shares = linePaise.map((paise) => (
+    merchandisePaise > 0 ? Math.min(paise, Math.floor((paise * discountPaise) / merchandisePaise)) : 0
+  ));
+  let leftover = discountPaise - shares.reduce((sum, paise) => sum + paise, 0);
+  for (let index = items.length - 1; index >= 0 && leftover > 0; index -= 1) {
+    const room = linePaise[index] - shares[index];
+    const add = Math.min(room, leftover);
+    shares[index] += add;
+    leftover -= add;
+  }
+  return items.map((item, index) => {
+    const discountedPaise = linePaise[index] - shares[index];
+    const quantity = Number(item.quantity);
+    return {
+      productId: item.productId || null,
+      name: item.productName || item.name || "",
+      quantity,
+      lineTotal: paiseToRupees(discountedPaise),
+      unitPrice: Number.isInteger(quantity) && quantity > 0 ? paiseToRupees(discountedPaise / quantity) : 0,
+    };
+  });
+}
+
+function quoteError(message) {
+  return Object.assign(new Error(message), { statusCode: 422 });
+}
+
 export function buildPaymentPlan({
   lines = [],
   shippingFee = 0,
   taxAmount = 0,
   settings = {},
-  distance = { verified: false, kilometers: null },
+  distance = { verified: false, meters: null },
   razorpayConfigured = false,
   deliveryMethod = "Standard",
+  quoteTotal = null,
 } = {}) {
-  const advance = Math.min(100, Math.max(1, Number(settings.default_partial_percent) || DEFAULT_PARTIAL_ADVANCE_PERCENT));
-  const codDistance = Number(settings.cod_max_distance_km ?? DEFAULT_COD_DISTANCE_KM);
-  const porterDistance = Number(settings.porter_max_distance_km ?? DEFAULT_PORTER_DISTANCE_KM);
-  const kilometers = Number(distance.kilometers);
-  const distanceVerified = Boolean(distance.verified) && Number.isFinite(kilometers);
-  const withinCodDistance = distanceVerified && kilometers <= codDistance;
+  const meters = Number(distance.meters);
+  const distanceVerified = distance.verified === true && Number.isFinite(meters) && meters >= 0;
+  const withinDistance = distanceVerified && meters <= APPROVED_DISTANCE_METERS;
   const porterSelected = deliveryMethod === "Porter";
-  const codAllowed = withinCodDistance && !porterSelected;
+  const codAllowed = withinDistance && !porterSelected;
+  if (Number(shippingFee) < 0 || Number(taxAmount) < 0) {
+    throw quoteError("Shipping and tax cannot be negative");
+  }
   const priced = lines.map((line) => {
-    const quantity = Number(line.quantity) || 0;
-    const unitPrice = toMoney(line.unitPrice);
-    const lineTotal = line.lineTotal == null ? toMoney(unitPrice * quantity) : toMoney(line.lineTotal);
-    const band = paymentBand(unitPrice, settings);
-    let amountOnline = lineTotal;
-    let amountCod = 0;
+    const quantity = Number(line.quantity);
+    if (!Number.isInteger(quantity) || quantity < 1) throw quoteError("Each product quantity must be a whole number");
+    const linePaise = line.lineTotal == null
+      ? rupeesToPaise(Number(line.unitPrice) * quantity)
+      : rupeesToPaise(line.lineTotal);
+    if (linePaise < 0) throw quoteError("A product total cannot be negative");
+    const band = linePaymentBand(linePaise, quantity);
+    let onlinePaise = linePaise;
+    let codPaise = 0;
     if (codAllowed && band === "full-cod" && Number(settings.full_cod_enabled)) {
-      amountOnline = 0;
-      amountCod = lineTotal;
+      onlinePaise = 0;
+      codPaise = linePaise;
     } else if (codAllowed && band === "partial-cod" && Number(settings.partial_cod_enabled)) {
-      const split = splitPartialAdvance(lineTotal, advance);
-      amountOnline = split.amountOnline;
-      amountCod = split.amountCod;
+      onlinePaise = Math.round((linePaise * APPROVED_ADVANCE_PERCENT) / 100);
+      codPaise = linePaise - onlinePaise;
     }
     return {
       productId: line.productId || null,
       name: line.name || "",
       band,
-      unitPrice,
+      unitPrice: paiseToRupees(linePaise / quantity),
       quantity,
-      lineTotal,
-      amountOnline,
-      amountCod,
+      lineTotal: paiseToRupees(linePaise),
+      amountOnline: paiseToRupees(onlinePaise),
+      amountCod: paiseToRupees(codPaise),
+      onlinePaise,
+      codPaise,
+      linePaise,
     };
   });
-  const productOnline = toMoney(priced.reduce((sum, line) => sum + line.amountOnline, 0));
-  const productCod = toMoney(priced.reduce((sum, line) => sum + line.amountCod, 0));
-  const extras = toMoney(Number(shippingFee) + Number(taxAmount));
-  const everyProductOnCod = priced.length > 0 && priced.every((line) => line.amountOnline === 0 && line.amountCod > 0);
-  const codOnline = everyProductOnCod ? 0 : toMoney(productOnline + extras);
-  const codBalance = everyProductOnCod ? toMoney(productCod + extras) : productCod;
-  const orderTotal = toMoney(productOnline + productCod + extras);
+  const productOnlinePaise = priced.reduce((sum, line) => sum + line.onlinePaise, 0);
+  const productCodPaise = priced.reduce((sum, line) => sum + line.codPaise, 0);
+  const extrasPaise = rupeesToPaise(shippingFee) + rupeesToPaise(taxAmount);
+  const everyProductOnCod = priced.length > 0 && priced.every((line) => line.onlinePaise === 0 && line.codPaise > 0);
+  const onlinePaise = everyProductOnCod ? 0 : productOnlinePaise + extrasPaise;
+  const codPaise = everyProductOnCod ? productCodPaise + extrasPaise : productCodPaise;
+  const totalPaise = productOnlinePaise + productCodPaise + extrasPaise;
+  if (onlinePaise < 0 || codPaise < 0 || onlinePaise + codPaise !== totalPaise) {
+    throw quoteError("Payment allocation does not balance");
+  }
+  if (quoteTotal != null && rupeesToPaise(quoteTotal) !== totalPaise) {
+    throw quoteError("Payment allocation does not match the quoted total");
+  }
+  const displayLines = priced.map(({ onlinePaise: _online, codPaise: _cod, linePaise: _line, ...line }) => line);
   const distanceReason = !distanceVerified
     ? "Cash on Delivery is unavailable until the road distance from the shop can be verified."
-    : kilometers > codDistance
-      ? `Cash on Delivery is available only within ${codDistance} km by road.`
+    : meters > APPROVED_DISTANCE_METERS
+      ? "Cash on Delivery is available only within 40 km by road."
       : "";
-  const fullCod = {
-    enabled: codAllowed && everyProductOnCod && Boolean(Number(settings.full_cod_enabled)),
-    amountOnline: 0,
-    amountCod: codAllowed && everyProductOnCod ? orderTotal : 0,
-    reason: codAllowed && everyProductOnCod ? "" : distanceReason || "Cash on Delivery applies only when every product is in the full COD price range.",
-  };
-  const partialCod = {
-    enabled: Boolean(razorpayConfigured) && codAllowed && productCod > 0 && !everyProductOnCod,
-    percentage: advance,
-    amountOnline: codOnline,
-    amountCod: codBalance,
-    reason: codAllowed && productCod > 0 ? "" : distanceReason || "No product in this cart has a Cash on Delivery balance.",
-    lines: priced,
-  };
-  const porterAvailable = Boolean(Number(settings.porter_enabled)) && distanceVerified && kilometers <= porterDistance && !Number(settings.porter_collects_cod);
+  const orderTotal = paiseToRupees(totalPaise);
   return {
-    lines: priced,
+    lines: displayLines,
     distance: {
       verified: distanceVerified,
-      kilometers: distanceVerified ? toMoney(kilometers) : null,
-      codLimitKm: codDistance,
-      porterLimitKm: porterDistance,
-      withinCodDistance,
+      meters: distanceVerified ? meters : null,
+      kilometers: distanceVerified ? Number((meters / 1000).toFixed(2)) : null,
+      codLimitMeters: APPROVED_DISTANCE_METERS,
+      porterLimitMeters: APPROVED_DISTANCE_METERS,
+      withinCodDistance: withinDistance,
     },
-    fullCod,
-    partialCod,
+    fullCod: {
+      enabled: codAllowed && everyProductOnCod && Boolean(Number(settings.full_cod_enabled)),
+      amountOnline: 0,
+      amountCod: codAllowed && everyProductOnCod ? orderTotal : 0,
+      reason: codAllowed && everyProductOnCod ? "" : distanceReason || "Cash on Delivery applies only when every product is in the full COD price range.",
+    },
+    partialCod: {
+      enabled: Boolean(razorpayConfigured) && codAllowed && productCodPaise > 0 && !everyProductOnCod,
+      percentage: APPROVED_ADVANCE_PERCENT,
+      amountOnline: paiseToRupees(onlinePaise),
+      amountCod: paiseToRupees(codPaise),
+      reason: codAllowed && productCodPaise > 0 ? "" : distanceReason || "No product in this cart has a Cash on Delivery balance.",
+      lines: displayLines,
+    },
     fullOnline: {
-      enabled: Boolean(razorpayConfigured) && Boolean(Number(settings.full_online_enabled)),
+      enabled: Boolean(razorpayConfigured),
       amountOnline: orderTotal,
       amountCod: 0,
     },
     porter: {
-      available: porterAvailable,
+      available: Boolean(Number(settings.porter_enabled)) && withinDistance,
       label: PORTER_DELIVERY_LABEL,
       pickup: PORTER_PICKUP,
       shippingFee: 0,
       buyerPaysCarrier: true,
+      collectsCod: false,
       requiresFullPayment: true,
-      message: porterAvailable
-        ? "Porter is available within the road-distance limit. Its delivery charge is paid by you to Porter and is not added to this order. The product amount must be paid in full before booking."
+      message: Boolean(Number(settings.porter_enabled)) && withinDistance
+        ? "Porter is available within 40 km by road. Its delivery charge is paid by you to Porter and is not added to this order. The product amount must be paid in full before booking."
         : distanceVerified
-          ? `Porter is available only within ${porterDistance} km by road, and it cannot collect cash.`
+          ? "Porter is available only within 40 km by road, and it cannot collect cash."
           : "Porter is unavailable until the road distance from the shop can be verified.",
     },
   };
 }
 
+export function assertCapturedQuote({ quote, paymentMethod, codDue, amountPaid }) {
+  const options = quote?.paymentOptions;
+  if (!options?.fullOnline || !Array.isArray(options.lines)) {
+    throw quoteError("The quoted payment allocation is missing");
+  }
+  const totalPaise = rupeesToPaise(quote.totalAmount);
+  if (rupeesToPaise(options.fullOnline.amountOnline) !== totalPaise || rupeesToPaise(options.fullOnline.amountCod) !== 0) {
+    throw quoteError("The full online amount does not match the quoted total");
+  }
+  for (const line of options.lines) {
+    if (rupeesToPaise(line.amountOnline) < 0 || rupeesToPaise(line.amountCod) < 0) {
+      throw quoteError("A product payment allocation cannot be negative");
+    }
+    if (rupeesToPaise(line.amountOnline) + rupeesToPaise(line.amountCod) !== rupeesToPaise(line.lineTotal)) {
+      throw quoteError("A product payment allocation does not match its price");
+    }
+  }
+  if (paymentMethod === "Full Online") {
+    if (rupeesToPaise(codDue) !== 0) throw quoteError("Full online payment cannot leave a COD balance");
+  } else if (paymentMethod === "Partial COD") {
+    if (!options.partialCod?.enabled) throw quoteError("Partial COD is not available for this cart");
+    if (rupeesToPaise(options.partialCod.amountOnline) + rupeesToPaise(options.partialCod.amountCod) !== totalPaise) {
+      throw quoteError("The partial COD split does not match the quoted total");
+    }
+    if (rupeesToPaise(codDue) !== rupeesToPaise(options.partialCod.amountCod)) {
+      throw quoteError("The COD balance does not match the quoted split");
+    }
+  } else if (paymentMethod === "Full COD" || paymentMethod === "Cash on Delivery" || paymentMethod === "COD") {
+    if (!options.fullCod?.enabled) throw quoteError("Cash on Delivery is currently unavailable");
+    if (rupeesToPaise(codDue) !== totalPaise || rupeesToPaise(amountPaid) !== 0) {
+      throw quoteError("Cash on Delivery must leave the full quoted total unpaid");
+    }
+  }
+}
+
 export function porterDispatchAllowed(order = {}, status = "") {
   if (!PORTER_DISPATCH_STATUSES.includes(status)) return { allowed: true, reason: "" };
   const paid = ["Paid", "Captured"].includes(String(order.payment_status || ""))
-    && Number(order.cod_due || 0) === 0
-    && Number(order.amount_paid || 0) >= Number(order.total_amount || 0);
+    && rupeesToPaise(order.cod_due) === 0
+    && rupeesToPaise(order.amount_paid) >= rupeesToPaise(order.total_amount)
+    && rupeesToPaise(order.amount_paid) > 0;
   return {
     allowed: paid,
     reason: paid ? "" : "Confirm the full product payment before booking or dispatching Porter",

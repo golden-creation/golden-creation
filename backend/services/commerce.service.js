@@ -2,11 +2,13 @@ import db from "../config/db.js";
 import { categoryGstTotal, composeCheckoutTotal } from "./checkout-totals.js";
 import { validateDiscountCart } from "./discount.service.js";
 import {
+  APPROVED_DISTANCE_METERS,
   PORTER_DELIVERY_LABEL,
   PORTER_PICKUP,
-  allocateLineDiscount,
+  allocateDiscountedLines,
+  assertCapturedQuote,
   buildPaymentPlan,
-  effectiveUnitPrice,
+  rupeesToPaise,
 } from "./payment-policy.js";
 import { measureRoadDistance } from "./road-distance.js";
 
@@ -520,23 +522,7 @@ async function resolvePaymentOptions(items, connection = db, context = {}) {
     Boolean(cleanString(process.env.RAZORPAY_KEY_ID)) &&
     Boolean(cleanString(process.env.RAZORPAY_KEY_SECRET)) &&
     Boolean(cleanString(process.env.RAZORPAY_WEBHOOK_SECRET));
-  const merchandise = toMoney(items.reduce((sum, item) => sum + Number(item.lineTotal || 0), 0));
-  const discount = toMoney(context.productDiscountAmount || 0);
-  let remainingDiscount = discount;
-  const lines = items.map((item, index) => {
-    const allocated = index === items.length - 1
-      ? remainingDiscount
-      : allocateLineDiscount(item.lineTotal, merchandise, discount);
-    remainingDiscount = toMoney(remainingDiscount - allocated);
-    const discountedLine = toMoney(Math.max(0, Number(item.lineTotal) - allocated));
-    return {
-      productId: item.productId,
-      name: item.productName,
-      quantity: item.quantity,
-      unitPrice: effectiveUnitPrice(item.lineTotal, item.quantity, allocated),
-      lineTotal: discountedLine,
-    };
-  });
+  const lines = allocateDiscountedLines(items, context.productDiscountAmount || 0);
   const distance = context.distance || await measureRoadDistance({
     address: [context.address, context.city, context.state, context.pin].filter(Boolean).join(", "),
   });
@@ -548,6 +534,7 @@ async function resolvePaymentOptions(items, connection = db, context = {}) {
     distance,
     razorpayConfigured: configured,
     deliveryMethod: context.deliveryMethod,
+    quoteTotal: context.quoteTotal,
   });
   return {
     ...plan,
@@ -567,10 +554,11 @@ export async function buildCheckoutQuote(payload, connection = db) {
   const distance = await measureRoadDistance({ address });
   if (deliveryMethod === "Porter") {
     const [paymentSettings] = await dbQuery("SELECT * FROM payment_settings WHERE id = 1", [], connection);
-    const porterLimit = Number(paymentSettings?.porter_max_distance_km ?? 40);
+    const porterMeters = Number(distance.meters);
     const porterAllowed = Boolean(Number(paymentSettings?.porter_enabled))
-      && distance.verified
-      && Number(distance.kilometers) <= porterLimit;
+      && distance.verified === true
+      && Number.isFinite(porterMeters)
+      && porterMeters <= APPROVED_DISTANCE_METERS;
     if (!porterAllowed) {
       const error = new Error(distance.verified
         ? "Local Porter delivery is not available beyond the road-distance limit"
@@ -642,6 +630,10 @@ export async function buildCheckoutQuote(payload, connection = db) {
     taxAmount,
     distance,
   });
+  const allocatedTotal = paymentOptions.fullOnline.amountOnline;
+  if (rupeesToPaise(allocatedTotal) !== rupeesToPaise(priced.totalAmount)) {
+    priced = { ...priced, totalAmount: allocatedTotal };
+  }
 
   return {
     items,
@@ -655,7 +647,7 @@ export async function buildCheckoutQuote(payload, connection = db) {
     shippingFee,
     shippingRule,
     taxAmount,
-    totalAmount,
+    totalAmount: priced.totalAmount,
     paymentOptions,
     deliveryMethod,
     delivery: {
@@ -736,6 +728,7 @@ export async function insertQuotedOrder(
     checkoutItemName(item?.productName, item?.itemType === "Bundle" ? "bundle" : "product");
     checkoutVariantTitle(item?.variantTitle);
   }
+  assertCapturedQuote({ quote, paymentMethod, codDue, amountPaid });
   const customer = payload.customer || {};
   const customerName =
     cleanString(customer.name) ||
