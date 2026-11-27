@@ -2,7 +2,13 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { razorpayAmountPaise } from "../services/checkout-totals.js";
 import { ALLOWED_CHANGE_FIELDS } from "../services/admin-audit.js";
-import { measureRoadDistance, selectDeliveryCoordinate } from "../services/road-distance.js";
+import {
+  DRIVING_DIRECTIONS_URL,
+  GEOCODE_SEARCH_URL,
+  configuredShopLocation,
+  measureRoadDistance,
+  selectDeliveryCoordinate,
+} from "../services/road-distance.js";
 import {
   APPROVED_ADVANCE_PERCENT,
   DEFAULT_PARTIAL_ADVANCE_PERCENT,
@@ -299,7 +305,7 @@ test("road distance keeps raw metres, hides the API key, and fails closed", asyn
   const seen = [];
   const fetchImpl = async (url, options = {}) => {
     seen.push({ url, authorization: options.headers?.Authorization || "" });
-    if (String(url).includes("geocode")) {
+    if (String(url).startsWith(GEOCODE_SEARCH_URL)) {
       return { ok: true, json: async () => ({ features: [locatedFeature(77.2, 28.5)] }) };
     }
     return { ok: true, json: async () => ({ features: [{ properties: { summary: { distance: 40000 } } }] }) };
@@ -310,6 +316,15 @@ test("road distance keeps raw metres, hides the API key, and fails closed", asyn
   assert.equal(result.kilometers, 40);
   assert.equal(seen.every((call) => !String(call.url).includes("secret-routing-key")), true);
   assert.equal(seen.every((call) => call.authorization === "secret-routing-key"), true);
+  assert.equal(seen[0].url.startsWith(`${GEOCODE_SEARCH_URL}?`), true);
+  assert.equal(seen[1].url, DRIVING_DIRECTIONS_URL);
+  assert.equal(seen.some((call) => String(call.url).includes("openrouteservice.org")), false);
+  const shop = configuredShopLocation({
+    GOLDEN_CREATION_SHOP_LATITUDE: "28.43000",
+    GOLDEN_CREATION_SHOP_LONGITUDE: "not-a-coordinate",
+  });
+  assert.equal(shop.latitude, 28.43);
+  assert.equal(shop.longitude, 77.10345);
   assert.equal(selectDeliveryCoordinate([locatedFeature(77.2, 28.5, 0.4)]), null);
   assert.equal(selectDeliveryCoordinate([
     locatedFeature(77.1, 28.4, 0.9),

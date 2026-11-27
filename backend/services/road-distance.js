@@ -1,10 +1,19 @@
 import { APPROVED_DISTANCE_METERS, SHOP_ADDRESS, SHOP_LATITUDE, SHOP_LONGITUDE } from "./payment-policy.js";
 
-export const SHOP_LOCATION = {
-  address: SHOP_ADDRESS,
-  latitude: SHOP_LATITUDE,
-  longitude: SHOP_LONGITUDE,
-};
+export const GEOCODE_SEARCH_URL = "https://api.heigit.org/pelias/v1/search";
+export const DRIVING_DIRECTIONS_URL = "https://api.heigit.org/openrouteservice/v2/directions/driving-car/geojson";
+
+export function configuredShopLocation(env = process.env) {
+  const latitude = Number(env.GOLDEN_CREATION_SHOP_LATITUDE);
+  const longitude = Number(env.GOLDEN_CREATION_SHOP_LONGITUDE);
+  return {
+    address: SHOP_ADDRESS,
+    latitude: latitude >= 6 && latitude <= 37 ? latitude : SHOP_LATITUDE,
+    longitude: longitude >= 68 && longitude <= 98 ? longitude : SHOP_LONGITUDE,
+  };
+}
+
+export const SHOP_LOCATION = configuredShopLocation();
 
 const MIN_CONFIDENCE = 0.8;
 const ACCEPTED_LAYERS = new Set(["address", "venue", "street", "locality"]);
@@ -70,7 +79,7 @@ export async function measureRoadDistance({
   address = "",
   apiKey = process.env.OPENROUTESERVICE_API_KEY || "",
   fetchImpl = globalThis.fetch,
-  shop = SHOP_LOCATION,
+  shop = configuredShopLocation(),
   timeoutMs = REQUEST_TIMEOUT_MS,
 } = {}) {
   const destination = String(address || "").trim();
@@ -80,7 +89,7 @@ export async function measureRoadDistance({
   try {
     const geocode = await requestJson(
       fetchImpl,
-      `https://api.openrouteservice.org/geocode/search?size=5&boundary.country=IN&text=${encodeURIComponent(destination)}`,
+      `${GEOCODE_SEARCH_URL}?size=5&boundary.country=IN&text=${encodeURIComponent(destination)}`,
       { headers: { Accept: "application/json", Authorization: apiKey } },
       timeoutMs
     );
@@ -90,7 +99,7 @@ export async function measureRoadDistance({
     if (!point) return unavailable("The delivery address could not be verified with enough confidence.");
     const route = await requestJson(
       fetchImpl,
-      "https://api.openrouteservice.org/v2/directions/driving-car/geojson",
+      DRIVING_DIRECTIONS_URL,
       {
         method: "POST",
         headers: {
