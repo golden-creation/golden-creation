@@ -5,6 +5,7 @@ import {
   APPROVED_DISTANCE_METERS,
   PORTER_DELIVERY_LABEL,
   PORTER_PICKUP,
+  acceptedRoadMeters,
   allocateDiscountedLines,
   assertCapturedQuote,
   buildPaymentPlan,
@@ -524,7 +525,11 @@ async function resolvePaymentOptions(items, connection = db, context = {}) {
     Boolean(cleanString(process.env.RAZORPAY_WEBHOOK_SECRET));
   const lines = allocateDiscountedLines(items, context.productDiscountAmount || 0);
   const distance = context.distance || await measureRoadDistance({
-    address: [context.address, context.city, context.state, context.pin].filter(Boolean).join(", "),
+    street: context.street || "",
+    city: context.city || "",
+    state: context.state || "",
+    pin: context.pin || "",
+    address: context.address || "",
   });
   const plan = buildPaymentPlan({
     lines,
@@ -550,19 +555,26 @@ export async function buildCheckoutQuote(payload, connection = db) {
   const deliveryMethod = cleanString(payload.deliveryMethod || customer.deliveryMethod) === "Porter" ? "Porter" : "Standard";
   const pin = customer.zipCode || customer.zip_code || payload.zipCode || "";
   let shippingRule = await resolveShippingRule(items, subtotal, customer, connection);
-  const address = [customer.streetAddress || customer.address, customer.city, customer.state, pin].filter(Boolean).join(", ");
-  const distance = await measureRoadDistance({ address });
+  const street = customer.streetAddress || customer.address || "";
+  const address = [street, customer.city, customer.state, pin].filter(Boolean).join(", ");
+  const distance = await measureRoadDistance({
+    street,
+    city: customer.city || "",
+    state: customer.state || "",
+    pin,
+    address,
+  });
   if (deliveryMethod === "Porter") {
     const [paymentSettings] = await dbQuery("SELECT * FROM payment_settings WHERE id = 1", [], connection);
-    const porterMeters = Number(distance.meters);
+    const porterMeters = acceptedRoadMeters(distance.meters);
     const porterAllowed = Boolean(Number(paymentSettings?.porter_enabled))
       && distance.verified === true
-      && Number.isFinite(porterMeters)
+      && porterMeters != null
       && porterMeters <= APPROVED_DISTANCE_METERS;
     if (!porterAllowed) {
-      const error = new Error(distance.verified
-        ? "Local Porter delivery is not available beyond the road-distance limit"
-        : "Local Porter delivery is unavailable until the road distance can be verified");
+      const error = new Error(porterMeters == null
+        ? "Local Porter delivery is unavailable until the road distance can be verified"
+        : "Local Porter delivery is not available beyond the road-distance limit");
       error.statusCode = 422;
       throw error;
     }
@@ -621,6 +633,7 @@ export async function buildCheckoutQuote(payload, connection = db) {
   const totalAmount = priced.totalAmount;
   const paymentOptions = await resolvePaymentOptions(items, connection, {
     pin,
+    street,
     address,
     city: customer.city,
     state: customer.state,

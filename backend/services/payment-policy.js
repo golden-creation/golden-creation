@@ -9,6 +9,16 @@ export const DEFAULT_PORTER_DISTANCE_KM = 40;
 export const SHOP_ADDRESS = "Golden Creation, G-38, Baani The Address Shopping Arcade, Sector 56, Golf Course Road, Gurugram, Haryana 122011";
 export const SHOP_LATITUDE = 28.42655;
 export const SHOP_LONGITUDE = 77.10345;
+
+export function acceptedRoadMeters(value) {
+  if (typeof value === "string") {
+    const trimmed = value.trim();
+    if (!/^\d+(?:\.\d+)?$/.test(trimmed)) return null;
+    value = Number(trimmed);
+  }
+  if (typeof value !== "number" || !Number.isFinite(value) || value < 0) return null;
+  return value;
+}
 export const PORTER_DELIVERY_LABEL = "Local Delivery via Porter — At Buyer's Cost";
 export const PORTER_PICKUP = "Golden Creation showroom, Sector 56, Gurugram";
 export const PORTER_STATUSES = ["Not booked", "Booked", "Picked up", "Delivered", "Cancelled"];
@@ -198,8 +208,8 @@ export function buildPaymentPlan({
   deliveryMethod = "Standard",
   quoteTotal = null,
 } = {}) {
-  const meters = Number(distance.meters);
-  const distanceVerified = distance.verified === true && Number.isFinite(meters) && meters >= 0;
+  const meters = acceptedRoadMeters(distance.meters);
+  const distanceVerified = distance.verified === true && meters != null;
   const withinDistance = distanceVerified && meters <= APPROVED_DISTANCE_METERS;
   const porterSelected = deliveryMethod === "Porter";
   const codAllowed = withinDistance && !porterSelected;

@@ -733,8 +733,14 @@ export async function previewPaymentEligibility(req, res) {
       .filter(Boolean)
       .join(", ");
     const distance = address
-      ? await measureRoadDistance({ address })
-      : { verified: false, kilometers: null, reason: "Cash on Delivery is confirmed at checkout from the delivery address." };
+      ? await measureRoadDistance({
+        street: customer.streetAddress || customer.address || "",
+        city: customer.city || "",
+        state: customer.state || "",
+        pin: customer.zipCode || customer.pin || "",
+        address,
+      })
+      : { verified: false, meters: null, kilometers: null, reason: "Cash on Delivery is confirmed at checkout from the delivery address." };
     const plan = buildPaymentPlan({
       lines: items.map((item) => ({
         productId: item.productId,

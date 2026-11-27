@@ -5,13 +5,16 @@ import { ALLOWED_CHANGE_FIELDS } from "../services/admin-audit.js";
 import {
   DRIVING_DIRECTIONS_URL,
   GEOCODE_SEARCH_URL,
+  clearRoadDistanceCache,
   configuredShopLocation,
   measureRoadDistance,
+  roadDistanceCacheSnapshot,
   selectDeliveryCoordinate,
 } from "../services/road-distance.js";
 import {
   APPROVED_ADVANCE_PERCENT,
   DEFAULT_PARTIAL_ADVANCE_PERCENT,
+  acceptedRoadMeters,
   allocateDiscountedLines,
   buildPaymentPlan,
   paymentBand,
@@ -294,14 +297,25 @@ test("payment setting changes are included in the Super Admin audit allowlist", 
   }
 });
 
-function locatedFeature(longitude, latitude, confidence = 0.92) {
+function locatedFeature(longitude, latitude, confidence = 0.92, extra = {}) {
   return {
     geometry: { coordinates: [longitude, latitude] },
-    properties: { layer: "address", confidence, match_type: "exact" },
+    properties: {
+      layer: "address",
+      confidence,
+      match_type: "exact",
+      postalcode: "122001",
+      street: "Sector 14",
+      ...extra,
+    },
   };
 }
 
+const preciseAddress = "House 12, Sector 14, Gurugram, Haryana 122001";
+const preciseSelection = { pin: "122001", street: "House 12, Sector 14" };
+
 test("road distance keeps raw metres, hides the API key, and fails closed", async () => {
+  clearRoadDistanceCache();
   const seen = [];
   const fetchImpl = async (url, options = {}) => {
     seen.push({ url, authorization: options.headers?.Authorization || "" });
@@ -310,9 +324,10 @@ test("road distance keeps raw metres, hides the API key, and fails closed", asyn
     }
     return { ok: true, json: async () => ({ features: [{ properties: { summary: { distance: 40000 } } }] }) };
   };
-  const result = await measureRoadDistance({ address: "Sector 14, Gurugram", apiKey: "secret-routing-key", fetchImpl });
+  const result = await measureRoadDistance({ address: preciseAddress, apiKey: "secret-routing-key", fetchImpl });
   assert.equal(result.verified, true);
   assert.equal(result.meters, 40000);
+  assert.equal(result.withinLimit, true);
   assert.equal(result.kilometers, 40);
   assert.equal(seen.every((call) => !String(call.url).includes("secret-routing-key")), true);
   assert.equal(seen.every((call) => call.authorization === "secret-routing-key"), true);
@@ -325,21 +340,25 @@ test("road distance keeps raw metres, hides the API key, and fails closed", asyn
   });
   assert.equal(shop.latitude, 28.43);
   assert.equal(shop.longitude, 77.10345);
-  assert.equal(selectDeliveryCoordinate([locatedFeature(77.2, 28.5, 0.4)]), null);
+  assert.equal(selectDeliveryCoordinate([locatedFeature(77.2, 28.5, 0.4)], preciseSelection), null);
   assert.equal(selectDeliveryCoordinate([
     locatedFeature(77.1, 28.4, 0.9),
     locatedFeature(77.4, 28.7, 0.88),
-  ]), null);
-  const missing = await measureRoadDistance({ address: "Sector 14, Gurugram", apiKey: "", fetchImpl });
+  ], preciseSelection), null);
+  const missing = await measureRoadDistance({ address: preciseAddress, apiKey: "", fetchImpl });
   assert.equal(missing.verified, false);
+  assert.equal(missing.meters, null);
+  clearRoadDistanceCache();
   const failed = await measureRoadDistance({
-    address: "Sector 14, Gurugram",
+    address: preciseAddress,
     apiKey: "secret-routing-key",
     fetchImpl: async () => ({ ok: false, json: async () => ({}) }),
   });
   assert.equal(failed.verified, false);
+  assert.equal(failed.meters, null);
+  clearRoadDistanceCache();
   const timedOut = await measureRoadDistance({
-    address: "Sector 14, Gurugram",
+    address: preciseAddress,
     apiKey: "secret-routing-key",
     timeoutMs: 20,
     fetchImpl: (_url, options) => new Promise((_resolve, reject) => {
@@ -347,4 +366,134 @@ test("road distance keeps raw metres, hides the API key, and fails closed", asyn
     }),
   });
   assert.equal(timedOut.verified, false);
+  assert.equal(timedOut.meters, null);
+});
+
+test("missing, empty, negative, and non-numeric distances never become zero", () => {
+  for (const meters of [null, undefined, "", " ", "abc", -1, Number.NaN, Number.POSITIVE_INFINITY, false]) {
+    assert.equal(acceptedRoadMeters(meters), null);
+    const plan = buildPaymentPlan({
+      lines: [{ unitPrice: 2000, quantity: 1, lineTotal: 2000 }],
+      settings: policySettings,
+      distance: { verified: true, meters },
+      razorpayConfigured: true,
+    });
+    assert.equal(plan.distance.verified, false);
+    assert.equal(plan.distance.meters, null);
+    assert.equal(plan.fullCod.enabled, false);
+    assert.equal(plan.partialCod.enabled, false);
+    assert.equal(plan.porter.available, false);
+    assert.equal(plan.fullOnline.enabled, true);
+    assert.equal(plan.fullOnline.amountOnline, 2000);
+  }
+});
+
+test("ambiguous addresses, locality matches, and slow response bodies fail closed", async () => {
+  clearRoadDistanceCache();
+  const locality = await measureRoadDistance({
+    address: preciseAddress,
+    apiKey: "secret-routing-key",
+    fetchImpl: async () => ({
+      ok: true,
+      json: async () => ({ features: [locatedFeature(77.2, 28.5, 0.95, { layer: "locality" })] }),
+    }),
+  });
+  assert.equal(locality.verified, false);
+  assert.equal(locality.meters, null);
+  clearRoadDistanceCache();
+  const coarseStreet = await measureRoadDistance({
+    address: preciseAddress,
+    apiKey: "secret-routing-key",
+    fetchImpl: async () => ({
+      ok: true,
+      json: async () => ({ features: [locatedFeature(77.2, 28.5, 0.95, { layer: "street" })] }),
+    }),
+  });
+  assert.equal(coarseStreet.verified, false);
+  clearRoadDistanceCache();
+  const wrongPin = await measureRoadDistance({
+    address: preciseAddress,
+    apiKey: "secret-routing-key",
+    fetchImpl: async () => ({
+      ok: true,
+      json: async () => ({ features: [locatedFeature(77.2, 28.5, 0.95, { postalcode: "110001" })] }),
+    }),
+  });
+  assert.equal(wrongPin.verified, false);
+  clearRoadDistanceCache();
+  const imprecise = await measureRoadDistance({
+    address: "Gurugram 122001",
+    apiKey: "secret-routing-key",
+    fetchImpl: async () => {
+      throw new Error("routing should not run for an imprecise address");
+    },
+  });
+  assert.equal(imprecise.verified, false);
+  assert.equal(imprecise.meters, null);
+  clearRoadDistanceCache();
+  const blankDistance = await measureRoadDistance({
+    address: preciseAddress,
+    apiKey: "secret-routing-key",
+    fetchImpl: async (url) => {
+      if (String(url).startsWith(GEOCODE_SEARCH_URL)) {
+        return { ok: true, json: async () => ({ features: [locatedFeature(77.2, 28.5)] }) };
+      }
+      return { ok: true, json: async () => ({ features: [{ properties: { summary: { distance: null } } }] }) };
+    },
+  });
+  assert.equal(blankDistance.verified, false);
+  assert.equal(blankDistance.meters, null);
+  clearRoadDistanceCache();
+  const overLimit = await measureRoadDistance({
+    address: preciseAddress,
+    apiKey: "secret-routing-key",
+    fetchImpl: async (url) => {
+      if (String(url).startsWith(GEOCODE_SEARCH_URL)) {
+        return { ok: true, json: async () => ({ features: [locatedFeature(77.2, 28.5)] }) };
+      }
+      return { ok: true, json: async () => ({ features: [{ properties: { summary: { distance: 40001 } } }] }) };
+    },
+  });
+  assert.equal(overLimit.verified, true);
+  assert.equal(overLimit.meters, 40001);
+  assert.equal(overLimit.withinLimit, false);
+  assert.equal(planFor(2000, 1, 40000).fullCod.enabled, true);
+  assert.equal(planFor(2000, 1, 40001).fullCod.enabled, false);
+  clearRoadDistanceCache();
+  const slowBody = await measureRoadDistance({
+    address: preciseAddress,
+    apiKey: "secret-routing-key",
+    timeoutMs: 30,
+    fetchImpl: async () => ({ ok: true, json: () => new Promise(() => {}) }),
+  });
+  assert.equal(slowBody.verified, false);
+  assert.equal(slowBody.meters, null);
+});
+
+test("identical routing requests are deduplicated without storing the address", async () => {
+  clearRoadDistanceCache();
+  let calls = 0;
+  const fetchImpl = async (url) => {
+    calls += 1;
+    await new Promise((resolve) => setTimeout(resolve, 15));
+    if (String(url).startsWith(GEOCODE_SEARCH_URL)) {
+      return { ok: true, json: async () => ({ features: [locatedFeature(77.2, 28.5)] }) };
+    }
+    return { ok: true, json: async () => ({ features: [{ properties: { summary: { distance: 40000 } } }] }) };
+  };
+  const first = measureRoadDistance({ address: preciseAddress, apiKey: "secret-routing-key", fetchImpl });
+  const second = measureRoadDistance({ address: preciseAddress, apiKey: "secret-routing-key", fetchImpl });
+  const [left, right] = await Promise.all([first, second]);
+  assert.equal(left.meters, 40000);
+  assert.equal(right.meters, 40000);
+  assert.equal(calls, 2);
+  const repeated = await measureRoadDistance({ address: preciseAddress, apiKey: "secret-routing-key", fetchImpl });
+  assert.equal(repeated.meters, 40000);
+  assert.equal(calls, 2);
+  const snapshot = roadDistanceCacheSnapshot();
+  assert.equal(snapshot.length, 1);
+  assert.match(snapshot[0].key, /^[a-f0-9]{64}$/);
+  assert.equal(JSON.stringify(snapshot).includes("Sector"), false);
+  assert.equal(JSON.stringify(snapshot).includes("secret-routing-key"), false);
+  clearRoadDistanceCache();
 });
