@@ -622,15 +622,8 @@ function ConnectedCheckout() {
                 {quote?.paymentOptions?.partialCod?.enabled && <option value="Partial COD">Partial COD ({quote.paymentOptions.partialCod.percentage}% online)</option>}
                 {quote?.paymentOptions?.fullOnline?.enabled && <option value="Full Online">Full Online Payment</option>}
               </select>
-              {quote?.paymentOptions?.lines?.length > 0 && (
-                <ul className="mt-2 space-y-1 text-xs text-gray-500">
-                  {quote.paymentOptions.lines.map((line) => (
-                    <li key={`${line.productId}-${line.unitPrice}`}>
-                      {line.name || "Product"}: {line.band === "full-cod" ? "Full Online or 100% COD" : line.band === "partial-cod" ? `Full Online or ${quote.paymentOptions.partialCod?.percentage || 20}% online` : "Full Online only"}
-                      . Online {formatCurrency(line.amountOnline)}, COD {formatCurrency(line.amountCod)}.
-                    </li>
-                  ))}
-                </ul>
+              {quote?.paymentOptions?.cart?.label && (
+                <p className="mt-2 text-xs text-gray-500">{quote.paymentOptions.cart.label} Shipping and extra tax are added to the payable amounts.</p>
               )}
               {quote?.paymentOptions?.eligibility?.message && (
                 <p className="mt-2 text-xs text-gray-500">{quote.paymentOptions.eligibility.message}</p>

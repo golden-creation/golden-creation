@@ -359,7 +359,7 @@ export async function updatePaymentSettings(req, res) {
 
 export async function savePartialCodRule(req, res) {
   return res.status(422).json({
-    message: "Partial COD overrides cannot change the approved 20% advance or the product price bands",
+    message: "Partial COD overrides cannot change the approved 20% advance or the cart total bands",
   });
 }
 

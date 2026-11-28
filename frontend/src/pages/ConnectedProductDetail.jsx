@@ -2,7 +2,6 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import PriceOffer from "../components/PriceOffer";
-import PaymentEligibility from "../components/PaymentEligibility";
 import Navbar from "../components/Navbar";
 import heart from "../assets/heart.png";
 import share from "../assets/share.png";
@@ -659,7 +658,7 @@ function ConnectedProductDetail() {
                     percent={product.discountPercent}
                   />
                   <p className="mt-1 text-xs text-gray-500">Product discount is separate from a checkout coupon.</p>
-                  <PaymentEligibility items={[{ productId: product.id, variantId: selectedVariant?.id || 0, quantity: 1 }]} />
+                  <p className="mt-1 text-xs text-gray-500">Payment options are based on the cart total at checkout, not this product alone.</p>
                 </div>
                 {hasVariants && (
                   <div className="mb-6 space-y-5 rounded-lg border border-gray-100 bg-[#FBF8F2] p-4">

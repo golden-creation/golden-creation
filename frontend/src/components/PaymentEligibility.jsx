@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getPaymentPreview } from "../lib/api";
 
 export default function PaymentEligibility({ items = [] }) {
-  const [lines, setLines] = useState([]);
+  const [message, setMessage] = useState("");
   const key = JSON.stringify(
     items
       .filter((item) => item?.productId)
@@ -12,7 +12,7 @@ export default function PaymentEligibility({ items = [] }) {
   useEffect(() => {
     const payload = JSON.parse(key);
     if (!payload.length) {
-      setLines([]);
+      setMessage("");
       return undefined;
     }
     let cancelled = false;
@@ -20,24 +20,16 @@ export default function PaymentEligibility({ items = [] }) {
       items: payload.map(([productId, variantId, quantity]) => ({ productId, variantId, quantity })),
     })
       .then((preview) => {
-        if (!cancelled) setLines(preview?.lines || []);
+        if (!cancelled) setMessage(preview?.cart?.label || "");
       })
       .catch(() => {
-        if (!cancelled) setLines([]);
+        if (!cancelled) setMessage("");
       });
     return () => {
       cancelled = true;
     };
   }, [key]);
 
-  if (!lines.length) return null;
-  return (
-    <div className="mt-2 space-y-1 text-xs text-gray-500">
-      {lines.map((line) => (
-        <p key={`${line.productId}-${line.unitPrice}`}>
-          {line.eligibility?.label} {line.distanceNote}
-        </p>
-      ))}
-    </div>
-  );
+  if (!message) return null;
+  return <p className="mt-2 text-xs text-gray-500">{message} Coupons, shipping, and the delivery PIN are confirmed at checkout.</p>;
 }

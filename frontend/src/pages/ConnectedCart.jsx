@@ -163,7 +163,6 @@ function ConnectedCart() {
                     <p className="text-sm font-semibold text-black">
                       <PriceOffer price={item.price * item.quantity} comparePrice={item.comparePrice ? item.comparePrice * item.quantity : null} mrp={item.mrp ? item.mrp * item.quantity : null} percent={item.discountPercent} />
                     </p>
-                    <PaymentEligibility items={[{ productId: item.productId || item.id, variantId: item.variantId || 0, quantity: item.quantity }]} />
                   </div>
                 </div>
               </div>
@@ -197,6 +196,7 @@ function ConnectedCart() {
                 <span>Merchandise total</span>
                 <span className="text-[#C2863F]">{formatCurrency(discountedSubtotal)}</span>
               </div>
+              <PaymentEligibility items={cartItems.map((item) => ({ productId: item.productId || item.id, variantId: item.variantId || 0, quantity: item.quantity }))} />
             </div>
 
             <div className="mb-4 rounded-lg border border-gray-200 bg-[#FBF8F2] p-3">

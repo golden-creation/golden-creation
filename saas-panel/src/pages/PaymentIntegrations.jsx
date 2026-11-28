@@ -136,7 +136,7 @@ function PaymentIntegrations() {
             </div>
             <div className="mt-4 grid gap-3 text-sm text-gray-600 sm:grid-cols-2">
               <p>Full Online stays available for every deliverable address.</p>
-              <p>Below ₹1,000: online only. ₹1,000 to ₹3,000: full COD or online. Above ₹3,000: 20% online and 80% COD, or full online.</p>
+              <p>The cart merchandise total after product discounts and coupons decides the option, before shipping and extra tax. Below ₹1,000: online only. ₹1,000 to ₹3,000: full COD or online. Above ₹3,000: 20% online and 80% COD, or full online.</p>
               <label className="text-xs text-gray-500">Eligibility mode
                 <select value={paymentConfig.eligibility_mode === "road" ? "road" : "pin"} onChange={(event) => setPaymentConfig({ ...paymentConfig, eligibility_mode: event.target.value })} className="mt-1 w-full rounded border px-3 py-2 text-sm">
                   <option value="pin">Delhi-NCR PIN Code</option>
@@ -162,7 +162,7 @@ function PaymentIntegrations() {
 
           <section className="mt-6 rounded-xl bg-white p-4 shadow">
             <h2 className="text-lg font-semibold">Partial COD Overrides</h2>
-            <p className="text-sm text-gray-500">Older override rows stay on record and cannot change checkout. The advance is 20% for every product above ₹3,000.</p>
+            <p className="text-sm text-gray-500">Older override rows stay on record and cannot change checkout. The advance is 20% when the cart merchandise total is above ₹3,000.</p>
             <div className="mt-4 overflow-x-auto"><table className="w-full min-w-[620px] text-sm"><thead className="border-b text-left text-gray-500"><tr><th className="p-2">Target</th><th>Percentage</th><th>Eligible</th><th>Priority</th></tr></thead><tbody>{partialRules.map((rule) => <tr key={rule.id} className="border-b"><td className="p-2">{rule.target_type} #{rule.target_id}</td><td>{rule.percentage ?? "Default"}%</td><td>{Number(rule.eligible) ? "Yes" : "No"}</td><td>{rule.priority}</td></tr>)}</tbody></table></div>
           </section>
 

@@ -18,7 +18,7 @@ import {
   sendPaymentSuccessEmail,
 } from "../services/email.service.js";
 import { razorpayAmountPaise } from "../services/checkout-totals.js";
-import { buildPaymentPlan, describeUnitPayment, effectiveUnitPrice, normalizeEligibilityMode, shouldMeasureRoadDistance } from "../services/payment-policy.js";
+import { buildPaymentPlan, normalizeEligibilityMode, shouldMeasureRoadDistance } from "../services/payment-policy.js";
 import { measureRoadDistance } from "../services/road-distance.js";
 import { normalizeCartItems } from "../services/commerce.service.js";
 import { placeRazorpayCheckout } from "../services/checkout-transaction.js";
@@ -748,7 +748,7 @@ export async function previewPaymentEligibility(req, res) {
         productId: item.productId,
         name: item.productName,
         quantity: item.quantity,
-        unitPrice: effectiveUnitPrice(item.lineTotal, item.quantity, 0),
+        lineTotal: item.lineTotal,
       })),
       settings: settings || {},
       distance,
@@ -757,11 +757,8 @@ export async function previewPaymentEligibility(req, res) {
       deliveryMethod: req.body?.deliveryMethod === "Porter" ? "Porter" : "Standard",
     });
     res.json({
-      lines: plan.lines.map((line) => ({
-        ...line,
-        eligibility: describeUnitPayment(line.unitPrice, settings || {}),
-        distanceNote: plan.eligibility?.message || "",
-      })),
+      cart: plan.cart,
+      lines: plan.lines,
       distance: plan.distance,
       fullOnlineAvailable: true,
       eligibility: plan.eligibility,

@@ -17,6 +17,7 @@ import {
   DEFAULT_PARTIAL_ADVANCE_PERCENT,
   acceptedRoadMeters,
   allocateDiscountedLines,
+  assertCapturedQuote,
   buildPaymentPlan,
   paymentBand,
   porterDispatchAllowed,
@@ -102,7 +103,7 @@ test("a stored order keeps its original payment split", () => {
   assert.notEqual(historical.amountPaid, splitPartialAdvance(historical.totalAmount, 20).amountOnline);
 });
 
-test("product eligibility follows the selling unit price and keeps full online available", () => {
+test("cart eligibility follows the discounted merchandise total and keeps full online available", () => {
   const expected = {
     499: "online-only",
     999: "online-only",
@@ -139,17 +140,23 @@ test("product eligibility follows the selling unit price and keeps full online a
   }
 });
 
-test("quantity does not move a low-priced product into a COD band", () => {
-  const result = planFor(500, 10);
-  assert.equal(result.lines[0].unitPrice, 500);
-  assert.equal(result.lines[0].lineTotal, 5000);
-  assert.equal(result.lines[0].band, "online-only");
-  assert.equal(result.fullCod.enabled, false);
-  assert.equal(result.partialCod.amountOnline, 5000);
-  assert.equal(result.partialCod.enabled, false);
+test("quantity is included and can move the cart across a payment threshold", () => {
+  const below = planFor(400, 2);
+  const fullCod = planFor(400, 3);
+  const partial = planFor(500, 10);
+  assert.equal(below.cart.merchandise, 800);
+  assert.equal(below.cart.band, "online-only");
+  assert.equal(below.partialCod.enabled, false);
+  assert.equal(fullCod.cart.merchandise, 1200);
+  assert.equal(fullCod.fullCod.enabled, true);
+  assert.equal(partial.cart.merchandise, 5000);
+  assert.equal(partial.cart.band, "partial-cod");
+  assert.equal(partial.partialCod.amountOnline, 1000);
+  assert.equal(partial.partialCod.amountCod, 4000);
+  assert.equal(partial.fullCod.enabled, false);
 });
 
-test("a mixed cart splits each product and still offers the full amount online", () => {
+test("several low-priced products use one cart band when their total exceeds 3000", () => {
   const result = buildPaymentPlan({
     lines: [
       { productId: 1, name: "Small", unitPrice: 500, quantity: 1 },
@@ -160,9 +167,11 @@ test("a mixed cart splits each product and still offers the full amount online",
     distance: { verified: true, meters: 39000 },
     razorpayConfigured: true,
   });
+  assert.equal(result.cart.merchandise, 7500);
+  assert.equal(result.cart.band, "partial-cod");
   assert.deepEqual(result.lines.map((line) => [line.amountOnline, line.amountCod]), [
-    [500, 0],
-    [0, 2000],
+    [100, 400],
+    [400, 1600],
     [1000, 4000],
   ]);
   assert.equal(result.partialCod.amountOnline, 1500);
@@ -173,36 +182,32 @@ test("a mixed cart splits each product and still offers the full amount online",
   assert.equal(razorpayAmountPaise(result.fullOnline.amountOnline), 750000);
 });
 
-test("a product discount and an allocated coupon use the effective unit price", () => {
-  const lines = allocateDiscountedLines(
-    [
-      { productId: 1, name: "Pen", lineTotal: 2000, quantity: 1 },
-      { productId: 2, name: "Set", lineTotal: 5000, quantity: 1 },
-    ],
-    700
-  );
-  const pen = buildPaymentPlan({
-    lines: [lines[0]],
+test("a coupon can move the cart total across a payment threshold", () => {
+  const before = buildPaymentPlan({
+    lines: [{ name: "Set", lineTotal: 3200, quantity: 1 }],
     settings: policySettings,
     distance: { verified: true, meters: 10000 },
     razorpayConfigured: true,
   });
-  const set = buildPaymentPlan({
-    lines: [lines[1]],
+  const lines = allocateDiscountedLines(
+    [{ productId: 1, name: "Set", lineTotal: 3200, quantity: 1 }],
+    400
+  );
+  const after = buildPaymentPlan({
+    lines,
     settings: policySettings,
     distance: { verified: true, meters: 10000 },
     razorpayConfigured: true,
     shippingFee: 49.5,
     taxAmount: 12.34,
-    quoteTotal: 4561.84,
+    quoteTotal: 2861.84,
   });
-  assert.equal(lines[0].lineTotal, 1800);
-  assert.equal(pen.lines[0].band, "full-cod");
-  assert.equal(lines[1].lineTotal, 4500);
-  assert.equal(set.lines[0].band, "partial-cod");
-  assert.equal(set.partialCod.amountOnline, 961.84);
-  assert.equal(set.partialCod.amountCod, 3600);
-  assert.equal(razorpayAmountPaise(set.partialCod.amountOnline) + razorpayAmountPaise(set.partialCod.amountCod), razorpayAmountPaise(set.fullOnline.amountOnline));
+  assert.equal(before.cart.band, "partial-cod");
+  assert.equal(lines[0].lineTotal, 2800);
+  assert.equal(after.cart.band, "full-cod");
+  assert.equal(after.fullCod.amountCod, 2861.84);
+  assert.equal(after.partialCod.enabled, false);
+  assert.equal(razorpayAmountPaise(after.fullOnline.amountOnline), razorpayAmountPaise(2861.84));
 });
 
 test("COD and Porter use raw metres and ignore a rounded 40 km display", () => {
@@ -264,9 +269,9 @@ test("Porter cannot be booked before full payment and does not collect cash", ()
   assert.equal(blocked.fullOnline.enabled, true);
 });
 
-test("a legacy Android COD request is rejected unless every product is full COD", () => {
+test("a legacy Android COD request is accepted only for a full-COD cart total", () => {
   const low = planFor(499);
-  const mixed = buildPaymentPlan({
+  const combined = buildPaymentPlan({
     lines: [
       { unitPrice: 500, quantity: 1 },
       { unitPrice: 2000, quantity: 1 },
@@ -276,8 +281,10 @@ test("a legacy Android COD request is rejected unless every product is full COD"
     razorpayConfigured: true,
   });
   assert.equal(low.fullCod.enabled, false);
-  assert.equal(mixed.fullCod.enabled, false);
-  assert.equal(planFor(2000).fullCod.enabled, true);
+  assert.equal(combined.cart.merchandise, 2500);
+  assert.equal(combined.fullCod.enabled, true);
+  assert.equal(planFor(4000).fullCod.enabled, false);
+  assert.equal(planFor(4000).partialCod.enabled, true);
 });
 
 test("payment setting changes are included in the Super Admin audit allowlist", () => {
@@ -515,7 +522,7 @@ test("Delhi-NCR PIN mode uses exact post-office codes and keeps full online avai
   assert.equal(pins.has("122"), false);
   assert.throws(() => sanitizeEligiblePinText("Gurugram\n122"), /exact 6-digit/);
   const pinSettings = { ...policySettings, eligibility_mode: "pin", porter_enabled: 1, eligible_pins: null };
-  const prices = { 999: "online-only", 1000: "full-cod", 1600: "full-cod", 3000: "full-cod", 4000: "partial-cod" };
+  const prices = { 999: "online-only", 1000: "full-cod", 1600: "full-cod", 3000: "full-cod", 3001: "partial-cod", 4000: "partial-cod" };
   for (const [price, band] of Object.entries(prices)) {
     const inside = buildPaymentPlan({
       lines: [{ unitPrice: Number(price), quantity: 1, lineTotal: Number(price) }],
@@ -529,7 +536,11 @@ test("Delhi-NCR PIN mode uses exact post-office codes and keeps full online avai
     assert.equal(inside.eligibility.mode, "pin");
     assert.equal(inside.fullCod.enabled, band === "full-cod");
     assert.equal(inside.partialCod.enabled, band === "partial-cod");
-    if (band === "partial-cod") {
+    if (Number(price) === 3001) {
+      assert.equal(inside.partialCod.amountOnline, 600.2);
+      assert.equal(inside.partialCod.amountCod, 2400.8);
+    }
+    if (Number(price) === 4000) {
       assert.equal(inside.partialCod.amountOnline, 800);
       assert.equal(inside.partialCod.amountCod, 3200);
     }
@@ -546,12 +557,12 @@ test("Delhi-NCR PIN mode uses exact post-office codes and keeps full online avai
     pin: "110001",
     razorpayConfigured: true,
   });
-  assert.deepEqual(mixed.lines.map((line) => [line.amountOnline, line.amountCod]), [
-    [999, 0],
-    [0, 1600],
-    [800, 3200],
-  ]);
+  assert.equal(mixed.cart.merchandise, 6599);
+  assert.equal(mixed.cart.band, "partial-cod");
+  assert.equal(mixed.partialCod.amountOnline, 1319.8);
+  assert.equal(mixed.partialCod.amountCod, 5279.2);
   assert.equal(mixed.fullOnline.amountOnline, 6599);
+  assert.equal(mixed.fullCod.enabled, false);
   for (const pin of ["", "122", "12201", "Gurugram", "400001", "000000"]) {
     const outside = buildPaymentPlan({
       lines: [{ unitPrice: 1600, quantity: 1, lineTotal: 1600 }],
@@ -575,4 +586,73 @@ test("Delhi-NCR PIN mode uses exact post-office codes and keeps full online avai
   });
   assert.equal(removed.fullCod.enabled, false);
   assert.equal(removed.fullOnline.enabled, true);
+});
+
+test("shipping and extra tax do not change the cart band and still reconcile in paise", () => {
+  const below = buildPaymentPlan({
+    lines: [{ lineTotal: 900, quantity: 1 }],
+    shippingFee: 200,
+    taxAmount: 0,
+    settings: policySettings,
+    distance: { verified: true, meters: 10000 },
+    razorpayConfigured: true,
+    quoteTotal: 1100,
+  });
+  const full = buildPaymentPlan({
+    lines: [{ lineTotal: 2900, quantity: 1 }],
+    shippingFee: 80,
+    taxAmount: 20,
+    settings: policySettings,
+    distance: { verified: true, meters: 10000 },
+    razorpayConfigured: true,
+    quoteTotal: 3000,
+  });
+  assert.equal(below.cart.band, "online-only");
+  assert.equal(below.fullCod.enabled, false);
+  assert.equal(below.fullOnline.amountOnline, 1100);
+  assert.equal(full.cart.band, "full-cod");
+  assert.equal(full.fullCod.amountCod, 3000);
+  assert.equal(full.partialCod.enabled, false);
+});
+
+test("a manipulated advance amount is rejected", () => {
+  const plan = planFor(4000);
+  const quote = {
+    totalAmount: 4000,
+    shippingFee: 0,
+    taxAmount: 0,
+    paymentOptions: {
+      ...plan,
+      partialCod: { ...plan.partialCod, amountOnline: 100, amountCod: 3900 },
+    },
+  };
+  assert.throws(
+    () => assertCapturedQuote({ quote, paymentMethod: "Partial COD", codDue: 3900, amountPaid: 0 }),
+    /advance amount does not match/
+  );
+  assert.doesNotThrow(() => assertCapturedQuote({
+    quote: { totalAmount: 4000, shippingFee: 0, taxAmount: 0, paymentOptions: plan },
+    paymentMethod: "Partial COD",
+    codDue: plan.partialCod.amountCod,
+    amountPaid: 0,
+  }));
+});
+
+test("Porter keeps full online payment and historical amounts stay unchanged", () => {
+  const porter = planFor(4000, 1, 10000, {
+    deliveryMethod: "Porter",
+    settings: { ...policySettings, eligibility_mode: "pin", eligible_pins: null },
+    pin: "122011",
+  });
+  assert.equal(porter.fullCod.enabled, false);
+  assert.equal(porter.partialCod.enabled, false);
+  assert.equal(porter.fullOnline.enabled, true);
+  assert.equal(porter.fullOnline.amountOnline, 4000);
+  assert.equal(porter.porter.requiresFullPayment, true);
+  assert.equal(porter.porter.collectsCod, false);
+  assert.deepEqual(storedOrderAmounts({ total_amount: 1000, amount_paid: 100, cod_due: 900 }), {
+    totalAmount: 1000,
+    amountPaid: 100,
+    codDue: 900,
+  });
 });
